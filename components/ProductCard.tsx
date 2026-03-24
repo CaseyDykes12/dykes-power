@@ -19,7 +19,7 @@ export default function ProductCard({ product }: { product: Product }) {
           className="max-h-full max-w-full object-contain"
           onError={(e) => {
             const img = e.target as HTMLImageElement;
-            img.src = '/placeholder-mower.png';
+            img.src = '/placeholder-mower.svg';
           }}
         />
       </div>

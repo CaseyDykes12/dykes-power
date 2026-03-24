@@ -327,6 +327,75 @@ export const products: Product[] = [
       'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/stand-on-mowers/srsz3x/SRSZ3X_PDP_HERO.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
+  // WALK-BEHIND MOWERS
+  {
+    sku: '5902050',
+    name: 'Ferris FW25 Walk-Behind',
+    category: 'Walk-Behind Mowers',
+    engine: 'Kawasaki FJ',
+    horsepower: '9 hp',
+    deckSizes: ['21"'],
+    price: null,
+    msrp: null,
+    description:
+      'The FW25 is a commercial-grade walk-behind built for detail trimming, slopes, and areas a ride-on cannot reach.',
+    features: [
+      'Kawasaki commercial engine',
+      'Self-propelled hydrostatic drive',
+      '21" steel deck',
+      'Mulch / bag / side discharge',
+      'Adjustable handle height',
+    ],
+    imageUrl:
+      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/walk-behind-mowers/fw25/FW25_PDP_HERO.jpg',
+    status: 'AVAILABLE_TO_ORDER',
+  },
+  {
+    sku: '5902051',
+    name: 'Ferris FW45 Walk-Behind',
+    category: 'Walk-Behind Mowers',
+    engine: 'Kawasaki FJ',
+    horsepower: '13 hp',
+    deckSizes: ['21"'],
+    price: null,
+    msrp: null,
+    description:
+      'The FW45 is the top-of-the-line Ferris walk-behind — commercial build quality for operators who demand the best from every machine.',
+    features: [
+      'High-output Kawasaki engine',
+      'Heavy-duty commercial transmission',
+      '21" fabricated deck',
+      'Dual-lever blade control',
+      'Mulch / bag / side discharge',
+    ],
+    imageUrl:
+      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/walk-behind-mowers/fw45/FW45_PDP_HERO.jpg',
+    status: 'AVAILABLE_TO_ORDER',
+    tag: 'Commercial Grade',
+  },
+  // STAND-ON BLOWERS
+  {
+    sku: '5901950',
+    name: 'Ferris FB1000 Hurricane™',
+    category: 'Stand-On Blowers',
+    engine: 'Kawasaki FX',
+    horsepower: '25 hp',
+    deckSizes: ['N/A'],
+    price: null,
+    msrp: null,
+    description:
+      'The FB1000 Hurricane stand-on blower clears debris fast — built for commercial landscape crews that need maximum productivity on large properties.',
+    features: [
+      '25 HP Kawasaki FX engine',
+      'Stand-on operator platform',
+      'High-velocity blower system',
+      'Hydrostatic drive',
+      'Commercial-grade construction',
+    ],
+    imageUrl:
+      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/blowers/fb1000/FB1000_PDP_HERO.jpg',
+    status: 'AVAILABLE_TO_ORDER',
+  },
 ];
 
 export function getProductsBySku(sku: string): Product | undefined {
