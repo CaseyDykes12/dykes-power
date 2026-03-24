@@ -107,7 +107,7 @@ export const products: Product[] = [
     price: 8964,
     msrp: 8964,
     description:
-      'The IS 600 features Ferris's patented independent suspension system for a smooth, comfortable ride and consistent cut quality on uneven terrain.',
+      "The IS 600 features Ferris's patented independent suspension system for a smooth, comfortable ride and consistent cut quality on uneven terrain.",
     features: [
       'Ferris patented suspension system',
       'Kawasaki FR engine',
