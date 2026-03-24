@@ -7,8 +7,9 @@ export async function generateStaticParams() {
   return products.map((p) => ({ sku: p.sku }));
 }
 
-export default function ProductPage({ params }: { params: { sku: string } }) {
-  const product = getProductsBySku(params.sku);
+export default async function ProductPage({ params }: { params: Promise<{ sku: string }> }) {
+  const { sku } = await params;
+  const product = getProductsBySku(sku);
   if (!product) notFound();
 
   const status = statusLabels[product.status];
@@ -32,6 +33,7 @@ export default function ProductPage({ params }: { params: { sku: string } }) {
       <div className="grid md:grid-cols-2 gap-12">
         {/* Image */}
         <div className="bg-gray-50 rounded-xl flex items-center justify-center p-8 min-h-80">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={product.imageUrl}
             alt={product.name}
@@ -48,7 +50,6 @@ export default function ProductPage({ params }: { params: { sku: string } }) {
           )}
           <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
 
-          {/* Status badge */}
           <div className="flex items-center gap-2 mb-4">
             <span className={`text-white text-xs font-semibold px-3 py-1 rounded-full ${status.color}`}>
               {status.label}
@@ -56,7 +57,6 @@ export default function ProductPage({ params }: { params: { sku: string } }) {
             <span className="text-gray-400 text-sm">SKU: {product.sku}</span>
           </div>
 
-          {/* Price */}
           <div className="mb-6">
             {product.price ? (
               <p className="text-3xl font-bold">${product.price.toLocaleString()}</p>
@@ -65,7 +65,6 @@ export default function ProductPage({ params }: { params: { sku: string } }) {
             )}
           </div>
 
-          {/* Specs */}
           <div className="grid grid-cols-2 gap-3 mb-6 bg-gray-50 rounded-lg p-4">
             <div>
               <p className="text-xs text-gray-400 uppercase tracking-wider">Engine</p>
@@ -87,7 +86,6 @@ export default function ProductPage({ params }: { params: { sku: string } }) {
 
           <p className="text-gray-600 mb-6">{product.description}</p>
 
-          {/* Features */}
           <ul className="space-y-2 mb-8">
             {product.features.map((f) => (
               <li key={f} className="flex items-start gap-2 text-sm text-gray-700">
@@ -97,14 +95,12 @@ export default function ProductPage({ params }: { params: { sku: string } }) {
             ))}
           </ul>
 
-          {/* Disclosure for non-stock items */}
           {showDisclosure && (
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6 text-sm text-blue-800">
               <strong>Note:</strong> {NOT_ON_LOT_DISCLOSURE}
             </div>
           )}
 
-          {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-3">
             <AddToCartButton product={product} />
             <Link href="/contact" className="btn-outline text-center">
