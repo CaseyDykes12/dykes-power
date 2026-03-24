@@ -2,6 +2,7 @@ import { products, getProductsBySku, statusLabels, NOT_ON_LOT_DISCLOSURE } from 
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import AddToCartButton from '@/components/AddToCartButton';
+import ProductImage from '@/components/ProductImage';
 
 export async function generateStaticParams() {
   return products.map((p) => ({ sku: p.sku }));
@@ -33,12 +34,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
       <div className="grid md:grid-cols-2 gap-12">
         {/* Image */}
         <div className="bg-gray-50 rounded-xl flex items-center justify-center p-8 min-h-80">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={product.imageUrl}
-            alt={product.name}
-            className="max-h-72 max-w-full object-contain"
-          />
+          <ProductImage src={product.imageUrl} alt={product.name} />
         </div>
 
         {/* Details */}

@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import { Product, statusLabels } from '@/lib/products';
 

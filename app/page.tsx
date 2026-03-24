@@ -33,7 +33,8 @@ export default function HomePage() {
             </div>
           </div>
           <div className="hidden md:flex items-center justify-center">
-            <img
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
               src="https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/zero-turn-mowers/isx2200/ISX2200_PDP_HERO.jpg"
               alt="Ferris ISX 2200 Zero Turn Mower"
               className="rounded-xl shadow-2xl max-h-80 object-contain"
