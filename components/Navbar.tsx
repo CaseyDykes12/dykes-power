@@ -10,11 +10,15 @@ export default function Navbar() {
     <header className="bg-black text-white sticky top-0 z-50 shadow-md">
       <div className="max-w-[1280px] mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex flex-col leading-tight">
-          <span className="font-bold text-xl tracking-wide" style={{ fontFamily: 'var(--font-montserrat)', color: '#00CFD7' }}>
-            DYKES POWER
-          </span>
-          <span className="text-xs text-gray-400 tracking-widest uppercase">Equipment</span>
+        <Link href="/" className="flex items-center gap-3">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/df-logo.png" alt="Dykes Family Logo" className="h-10 w-auto" />
+          <div className="flex flex-col leading-tight">
+            <span className="font-bold text-lg tracking-wide" style={{ fontFamily: 'var(--font-montserrat)', color: '#00CFD7' }}>
+              DYKES POWER
+            </span>
+            <span className="text-xs text-gray-400 tracking-widest uppercase">Equipment</span>
+          </div>
         </Link>
 
         {/* Desktop nav */}

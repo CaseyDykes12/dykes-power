@@ -5,7 +5,9 @@ export default function Footer() {
     <footer className="bg-black text-gray-400 mt-16">
       <div className="max-w-[1280px] mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-          <p className="font-bold text-white text-lg mb-2" style={{ fontFamily: 'var(--font-montserrat)', color: '#00CFD7' }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/df-logo.png" alt="Dykes Family Logo" className="h-10 w-auto mb-2" />
+          <p className="font-bold text-white text-lg mb-1" style={{ fontFamily: 'var(--font-montserrat)', color: '#00CFD7' }}>
             DYKES POWER
           </p>
           <p className="text-sm text-gray-400">Authorized Ferris Dealer<br />Collins, Mississippi</p>
