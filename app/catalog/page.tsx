@@ -35,15 +35,15 @@ function CatalogContent() {
           placeholder="Search mowers..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="bg-[#1a1a1a] border border-gray-600 text-white rounded-lg px-4 py-2 text-sm w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-[#00CFD7] placeholder-gray-500"
+          className="bg-[#1a1a1a] border border-gray-600 text-white rounded-lg px-4 py-2 text-sm w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-[#C8C8C8] placeholder-gray-500"
         />
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setActiveCategory(null)}
             className={`px-4 py-2 rounded-full text-sm font-semibold border transition-colors ${
               !activeCategory
-                ? 'bg-[#00CFD7] text-black border-[#00CFD7]'
-                : 'bg-[#1a1a1a] text-gray-300 border-gray-600 hover:border-[#00CFD7]'
+                ? 'bg-[#C8C8C8] text-black border-[#C8C8C8]'
+                : 'bg-[#1a1a1a] text-gray-300 border-gray-600 hover:border-[#C8C8C8]'
             }`}
           >
             All
@@ -54,8 +54,8 @@ function CatalogContent() {
               onClick={() => setActiveCategory(cat === activeCategory ? null : cat)}
               className={`px-4 py-2 rounded-full text-sm font-semibold border transition-colors ${
                 activeCategory === cat
-                  ? 'bg-[#00CFD7] text-black border-[#00CFD7]'
-                  : 'bg-[#1a1a1a] text-gray-300 border-gray-600 hover:border-[#00CFD7]'
+                  ? 'bg-[#C8C8C8] text-black border-[#C8C8C8]'
+                  : 'bg-[#1a1a1a] text-gray-300 border-gray-600 hover:border-[#C8C8C8]'
               }`}
             >
               {cat}

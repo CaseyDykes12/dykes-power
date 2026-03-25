@@ -20,11 +20,11 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
     <div className="max-w-[1280px] mx-auto px-4 py-10">
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-400 mb-6">
-        <Link href="/" className="hover:text-[#00CFD7]">Home</Link>
+        <Link href="/" className="hover:text-[#C8C8C8]">Home</Link>
         <span className="mx-2">›</span>
-        <Link href="/catalog" className="hover:text-[#00CFD7]">Catalog</Link>
+        <Link href="/catalog" className="hover:text-[#C8C8C8]">Catalog</Link>
         <span className="mx-2">›</span>
-        <Link href={`/catalog?category=${encodeURIComponent(product.category)}`} className="hover:text-[#00CFD7]">
+        <Link href={`/catalog?category=${encodeURIComponent(product.category)}`} className="hover:text-[#C8C8C8]">
           {product.category}
         </Link>
         <span className="mx-2">›</span>
@@ -57,7 +57,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
             {product.price ? (
               <p className="text-3xl font-bold">${product.price.toLocaleString()}</p>
             ) : (
-              <p className="text-xl font-semibold text-[#00CFD7]">Contact us for pricing</p>
+              <p className="text-xl font-semibold text-[#C8C8C8]">Contact us for pricing</p>
             )}
           </div>
 
@@ -85,7 +85,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
           <ul className="space-y-2 mb-8">
             {product.features.map((f) => (
               <li key={f} className="flex items-start gap-2 text-sm text-gray-700">
-                <span className="text-[#00CFD7] font-bold mt-0.5">✓</span>
+                <span className="text-[#C8C8C8] font-bold mt-0.5">✓</span>
                 {f}
               </li>
             ))}
@@ -106,7 +106,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
 
           <p className="text-xs text-gray-400 mt-4">
             Questions? Call us at{' '}
-            <a href="tel:6016062095" className="text-[#00CFD7]">(601) 606-2095</a>
+            <a href="tel:6016062095" className="text-[#C8C8C8]">(601) 606-2095</a>
           </p>
         </div>
       </div>

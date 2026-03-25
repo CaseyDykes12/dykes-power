@@ -41,7 +41,7 @@ export default function ContactPage() {
         <h1 className="text-3xl font-bold mb-3">We got your message!</h1>
         <p className="text-gray-600 mb-6">
           Casey or one of our team will reach out to you shortly. If you need to talk now,
-          call us at <a href="tel:6016062095" className="text-[#00CFD7] font-semibold">(601) 606-2095</a>.
+          call us at <a href="tel:6016062095" className="text-[#C8C8C8] font-semibold">(601) 606-2095</a>.
         </p>
       </div>
     );
@@ -66,7 +66,7 @@ export default function ContactPage() {
                   name="name"
                   value={form.name}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00CFD7]"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
                   placeholder="John Smith"
                 />
               </div>
@@ -76,7 +76,7 @@ export default function ContactPage() {
                   name="phone"
                   value={form.phone}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00CFD7]"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
                   placeholder="(601) 555-0123"
                 />
               </div>
@@ -90,7 +90,7 @@ export default function ContactPage() {
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00CFD7]"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
                 placeholder="john@example.com"
               />
             </div>
@@ -101,7 +101,7 @@ export default function ContactPage() {
                 name="interest"
                 value={form.interest}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00CFD7]"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
               >
                 <option value="">Select a category</option>
                 <option>Zero Turn Mowers</option>
@@ -118,7 +118,7 @@ export default function ContactPage() {
                 name="propertySize"
                 value={form.propertySize}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00CFD7]"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
                 placeholder="e.g. 2 acres, 10+ acres, commercial"
               />
             </div>
@@ -130,7 +130,7 @@ export default function ContactPage() {
                 value={form.message}
                 onChange={handleChange}
                 rows={4}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00CFD7]"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
                 placeholder="Tell us more about what you're looking for..."
               />
             </div>
@@ -144,11 +144,11 @@ export default function ContactPage() {
         {/* Info */}
         <div className="space-y-8">
           <div className="bg-black text-white rounded-xl p-6">
-            <h2 className="text-xl font-bold mb-4 text-[#00CFD7]">Dykes Motors Power Equipment</h2>
+            <h2 className="text-xl font-bold mb-4 text-[#C8C8C8]">Dykes Motors Power Equipment</h2>
             <div className="space-y-3 text-sm text-gray-300">
               <p>📍 Collins, Mississippi 39428</p>
-              <p>📞 <a href="tel:6016062095" className="text-[#00CFD7]">(601) 606-2095</a></p>
-              <p>✉️ <a href="mailto:Casey@dykesmotors.com" className="text-[#00CFD7]">Casey@dykesmotors.com</a></p>
+              <p>📞 <a href="tel:6016062095" className="text-[#C8C8C8]">(601) 606-2095</a></p>
+              <p>✉️ <a href="mailto:Casey@dykesmotors.com" className="text-[#C8C8C8]">Casey@dykesmotors.com</a></p>
             </div>
             <div className="mt-6 pt-6 border-t border-gray-700">
               <p className="text-sm font-semibold text-white mb-2">Hours</p>
@@ -163,10 +163,10 @@ export default function ContactPage() {
           <div className="bg-gray-50 rounded-xl p-6">
             <h3 className="font-bold mb-3">Why buy local?</h3>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li className="flex gap-2"><span className="text-[#00CFD7]">✓</span> See the machines in person before you buy</li>
-              <li className="flex gap-2"><span className="text-[#00CFD7]">✓</span> Local service and support after the sale</li>
-              <li className="flex gap-2"><span className="text-[#00CFD7]">✓</span> Real advice from people who know the machines</li>
-              <li className="flex gap-2"><span className="text-[#00CFD7]">✓</span> Financing options available</li>
+              <li className="flex gap-2"><span className="text-[#C8C8C8]">✓</span> See the machines in person before you buy</li>
+              <li className="flex gap-2"><span className="text-[#C8C8C8]">✓</span> Local service and support after the sale</li>
+              <li className="flex gap-2"><span className="text-[#C8C8C8]">✓</span> Real advice from people who know the machines</li>
+              <li className="flex gap-2"><span className="text-[#C8C8C8]">✓</span> Financing options available</li>
             </ul>
           </div>
         </div>

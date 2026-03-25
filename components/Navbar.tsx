@@ -22,7 +22,7 @@ export default function Navbar() {
             </span>
             <span
               className="text-sm tracking-widest uppercase leading-tight"
-              style={{ fontFamily: 'var(--font-bebas)', color: '#00CFD7', letterSpacing: '0.12em' }}
+              style={{ fontFamily: 'var(--font-bebas)', color: '#C8C8C8', letterSpacing: '0.12em' }}
             >
               Power Equipment
             </span>
@@ -31,11 +31,11 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-semibold">
-          <Link href="/catalog" className="hover:text-[#00CFD7] transition-colors">Shop</Link>
-          <Link href="/catalog?category=Zero+Turn+Mowers" className="hover:text-[#00CFD7] transition-colors">Zero Turn</Link>
-          <Link href="/catalog?category=Stand-On+Mowers" className="hover:text-[#00CFD7] transition-colors">Stand-On</Link>
-          <Link href="/service" className="hover:text-[#00CFD7] transition-colors">Service</Link>
-          <Link href="/contact" className="hover:text-[#00CFD7] transition-colors">Contact</Link>
+          <Link href="/catalog" className="hover:text-[#C8C8C8] transition-colors">Shop</Link>
+          <Link href="/catalog?category=Zero+Turn+Mowers" className="hover:text-[#C8C8C8] transition-colors">Zero Turn</Link>
+          <Link href="/catalog?category=Stand-On+Mowers" className="hover:text-[#C8C8C8] transition-colors">Stand-On</Link>
+          <Link href="/service" className="hover:text-[#C8C8C8] transition-colors">Service</Link>
+          <Link href="/contact" className="hover:text-[#C8C8C8] transition-colors">Contact</Link>
         </nav>
 
         {/* Right side */}
@@ -64,11 +64,11 @@ export default function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-black border-t border-gray-800 px-4 py-4 flex flex-col gap-4 text-sm font-semibold">
-          <Link href="/catalog" onClick={() => setOpen(false)} className="hover:text-[#00CFD7]">Shop All</Link>
-          <Link href="/catalog?category=Zero+Turn+Mowers" onClick={() => setOpen(false)} className="hover:text-[#00CFD7]">Zero Turn Mowers</Link>
-          <Link href="/catalog?category=Stand-On+Mowers" onClick={() => setOpen(false)} className="hover:text-[#00CFD7]">Stand-On Mowers</Link>
-          <Link href="/service" onClick={() => setOpen(false)} className="hover:text-[#00CFD7]">Service</Link>
-          <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#00CFD7]">Contact</Link>
+          <Link href="/catalog" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Shop All</Link>
+          <Link href="/catalog?category=Zero+Turn+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Zero Turn Mowers</Link>
+          <Link href="/catalog?category=Stand-On+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Stand-On Mowers</Link>
+          <Link href="/service" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Service</Link>
+          <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Contact</Link>
           <Link href="/contact" onClick={() => setOpen(false)} className="btn-primary text-center">Get a Quote</Link>
         </div>
       )}

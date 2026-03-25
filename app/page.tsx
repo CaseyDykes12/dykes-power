@@ -14,24 +14,14 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="relative bg-[#0a0a0a] text-white overflow-hidden min-h-[88vh] flex items-center">
-        {/* Watermark background text */}
-        <div
-          className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none overflow-hidden"
+        {/* Watermark — actual DF logo at large scale, low opacity */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/df-logo.png"
+          alt=""
           aria-hidden="true"
-        >
-          <span
-            className="text-[18vw] font-black leading-none text-white opacity-[0.04] tracking-tighter whitespace-nowrap"
-            style={{ fontFamily: 'var(--font-bebas)' }}
-          >
-            +DF
-          </span>
-          <span
-            className="text-[12vw] font-black leading-none text-white opacity-[0.04] tracking-widest whitespace-nowrap"
-            style={{ fontFamily: 'var(--font-bebas)' }}
-          >
-            DYKES MOTORS
-          </span>
-        </div>
+          className="absolute right-0 top-1/2 -translate-y-1/2 w-[70vw] max-w-4xl opacity-[0.06] pointer-events-none select-none object-contain"
+        />
 
         {/* Hero content */}
         <div className="relative z-10 max-w-[1280px] mx-auto px-4 py-20 w-full">
@@ -48,7 +38,7 @@ export default function HomePage() {
                 </p>
                 <p
                   className="text-sm tracking-widest uppercase leading-tight"
-                  style={{ fontFamily: 'var(--font-bebas)', color: '#00CFD7', letterSpacing: '0.14em' }}
+                  style={{ fontFamily: 'var(--font-bebas)', color: '#C8C8C8', letterSpacing: '0.14em' }}
                 >
                   Collins, Mississippi
                 </p>
@@ -60,7 +50,7 @@ export default function HomePage() {
               style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.02em' }}
             >
               Power Equipment —<br />
-              <span className="text-[#00CFD7]">Commercial Mowers</span>
+              <span className="text-[#C8C8C8]">Commercial Mowers</span>
             </h1>
 
             <p className="text-gray-300 text-lg mb-10 max-w-xl leading-relaxed">
@@ -133,7 +123,7 @@ export default function HomePage() {
                 'Industry-leading dealer support',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="text-[#00CFD7] font-bold mt-0.5">✓</span>
+                  <span className="text-[#C8C8C8] font-bold mt-0.5">✓</span>
                   <span className="text-gray-300">{item}</span>
                 </li>
               ))}
@@ -143,7 +133,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="bg-black rounded-xl p-8 text-white text-center border border-gray-800">
-            <p className="text-[#00CFD7] font-semibold mb-2 tracking-widest uppercase text-sm">Local Dealer</p>
+            <p className="text-[#C8C8C8] font-semibold mb-2 tracking-widest uppercase text-sm">Local Dealer</p>
             <h3 className="text-2xl font-bold mb-4">Dykes Motors Power Equipment</h3>
             <p className="text-gray-400 mb-6">
               We carry the full Ferris lineup with hands-on support from our team in Collins, MS.

@@ -6,7 +6,7 @@ export default function ProductCard({ product }: { product: Product }) {
   const status = statusLabels[product.status];
 
   return (
-    <div className="bg-[#1a1a1a] border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:border-[#00CFD7] transition-all flex flex-col">
+    <div className="bg-[#1a1a1a] border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:border-[#C8C8C8] transition-all flex flex-col">
       {/* Image */}
       <div className="bg-[#111] h-52 flex items-center justify-center p-4 relative">
         {product.tag && (
@@ -46,7 +46,7 @@ export default function ProductCard({ product }: { product: Product }) {
             {product.price ? (
               <p className="font-bold text-lg">${product.price.toLocaleString()}</p>
             ) : (
-              <p className="font-semibold text-[#00CFD7]">Contact for price</p>
+              <p className="font-semibold text-[#C8C8C8]">Contact for price</p>
             )}
           </div>
           <Link

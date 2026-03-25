@@ -47,7 +47,7 @@ export default function CartPage() {
               <div className="flex-1">
                 <p className="font-bold">{item.name}</p>
                 {item.deckSize && <p className="text-sm text-gray-500">Deck: {item.deckSize}</p>}
-                <p className="text-[#00CFD7] font-bold mt-1">${item.price.toLocaleString()}</p>
+                <p className="text-[#C8C8C8] font-bold mt-1">${item.price.toLocaleString()}</p>
                 <div className="flex items-center gap-3 mt-3">
                   <div className="flex items-center border border-gray-300 rounded-lg">
                     <button
@@ -99,7 +99,7 @@ export default function CartPage() {
           </Link>
           <p className="text-xs text-gray-400 text-center mt-4">
             Online checkout coming soon. Call us at{' '}
-            <a href="tel:6016062095" className="text-[#00CFD7]">(601) 606-2095</a>
+            <a href="tel:6016062095" className="text-[#C8C8C8]">(601) 606-2095</a>
           </p>
         </div>
       </div>

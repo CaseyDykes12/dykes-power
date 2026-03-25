@@ -35,7 +35,7 @@ export default function ServicePage() {
             <ul className="space-y-2">
               {section.items.map((item) => (
                 <li key={item} className="flex gap-2 text-sm text-gray-600">
-                  <span className="text-[#00CFD7]">✓</span> {item}
+                  <span className="text-[#C8C8C8]">✓</span> {item}
                 </li>
               ))}
             </ul>

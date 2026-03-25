@@ -10,34 +10,34 @@ export default function Footer() {
           <p className="text-2xl text-white leading-tight tracking-widest" style={{ fontFamily: 'var(--font-bebas)', WebkitTextStroke: '0.5px #888' }}>
             DYKES MOTORS
           </p>
-          <p className="text-sm tracking-widest uppercase leading-tight mb-1" style={{ fontFamily: 'var(--font-bebas)', color: '#00CFD7', letterSpacing: '0.12em' }}>
+          <p className="text-sm tracking-widest uppercase leading-tight mb-1" style={{ fontFamily: 'var(--font-bebas)', color: '#C8C8C8', letterSpacing: '0.12em' }}>
             Power Equipment
           </p>
           <p className="text-sm text-gray-400">Authorized Ferris Dealer<br />Collins, Mississippi</p>
           <p className="text-sm mt-3">
-            <a href="tel:6016062095" className="hover:text-[#00CFD7]">(601) 606-2095</a>
+            <a href="tel:6016062095" className="hover:text-[#C8C8C8]">(601) 606-2095</a>
           </p>
           <p className="text-sm">
-            <a href="mailto:Casey@dykesmotors.com" className="hover:text-[#00CFD7]">Casey@dykesmotors.com</a>
+            <a href="mailto:Casey@dykesmotors.com" className="hover:text-[#C8C8C8]">Casey@dykesmotors.com</a>
           </p>
         </div>
 
         <div>
           <p className="font-semibold text-white mb-3">Shop</p>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/catalog?category=Zero+Turn+Mowers" className="hover:text-[#00CFD7]">Zero Turn Mowers</Link></li>
-            <li><Link href="/catalog?category=Stand-On+Mowers" className="hover:text-[#00CFD7]">Stand-On Mowers</Link></li>
-            <li><Link href="/catalog?category=Walk-Behind+Mowers" className="hover:text-[#00CFD7]">Walk-Behind Mowers</Link></li>
-            <li><Link href="/catalog" className="hover:text-[#00CFD7]">All Products</Link></li>
+            <li><Link href="/catalog?category=Zero+Turn+Mowers" className="hover:text-[#C8C8C8]">Zero Turn Mowers</Link></li>
+            <li><Link href="/catalog?category=Stand-On+Mowers" className="hover:text-[#C8C8C8]">Stand-On Mowers</Link></li>
+            <li><Link href="/catalog?category=Walk-Behind+Mowers" className="hover:text-[#C8C8C8]">Walk-Behind Mowers</Link></li>
+            <li><Link href="/catalog" className="hover:text-[#C8C8C8]">All Products</Link></li>
           </ul>
         </div>
 
         <div>
           <p className="font-semibold text-white mb-3">Support</p>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/service" className="hover:text-[#00CFD7]">Service & Repairs</Link></li>
-            <li><Link href="/contact" className="hover:text-[#00CFD7]">Get a Quote</Link></li>
-            <li><Link href="/contact" className="hover:text-[#00CFD7]">Contact Us</Link></li>
+            <li><Link href="/service" className="hover:text-[#C8C8C8]">Service & Repairs</Link></li>
+            <li><Link href="/contact" className="hover:text-[#C8C8C8]">Get a Quote</Link></li>
+            <li><Link href="/contact" className="hover:text-[#C8C8C8]">Contact Us</Link></li>
           </ul>
         </div>
 
