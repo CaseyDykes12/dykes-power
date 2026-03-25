@@ -7,8 +7,11 @@ export default function Footer() {
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/df-logo.png" alt="Dykes Family Logo" className="h-10 w-auto mb-2" />
-          <p className="font-bold text-white text-lg mb-1" style={{ fontFamily: 'var(--font-montserrat)', color: '#00CFD7' }}>
-            DYKES POWER
+          <p className="text-2xl text-white leading-tight tracking-widest" style={{ fontFamily: 'var(--font-bebas)', WebkitTextStroke: '0.5px #888' }}>
+            DYKES MOTORS
+          </p>
+          <p className="text-sm tracking-widest uppercase leading-tight mb-1" style={{ fontFamily: 'var(--font-bebas)', color: '#00CFD7', letterSpacing: '0.12em' }}>
+            Power Equipment
           </p>
           <p className="text-sm text-gray-400">Authorized Ferris Dealer<br />Collins, Mississippi</p>
           <p className="text-sm mt-3">

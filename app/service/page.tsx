@@ -6,7 +6,7 @@ export default function ServicePage() {
       <div className="max-w-2xl mx-auto text-center mb-12">
         <h1 className="text-3xl font-bold mb-3">Service & Repairs</h1>
         <p className="text-gray-500">
-          Dykes Power Equipment services all Ferris mowers and most major brands.
+          Dykes Motors Power Equipment services all Ferris mowers and most major brands.
           Our technicians are trained to keep your equipment running at peak performance.
         </p>
       </div>

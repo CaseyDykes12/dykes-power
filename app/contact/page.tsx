@@ -144,7 +144,7 @@ export default function ContactPage() {
         {/* Info */}
         <div className="space-y-8">
           <div className="bg-black text-white rounded-xl p-6">
-            <h2 className="text-xl font-bold mb-4 text-[#00CFD7]">Dykes Power Equipment</h2>
+            <h2 className="text-xl font-bold mb-4 text-[#00CFD7]">Dykes Motors Power Equipment</h2>
             <div className="space-y-3 text-sm text-gray-300">
               <p>📍 Collins, Mississippi 39428</p>
               <p>📞 <a href="tel:6016062095" className="text-[#00CFD7]">(601) 606-2095</a></p>

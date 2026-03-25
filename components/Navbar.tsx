@@ -13,11 +13,19 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/df-logo.png" alt="Dykes Family Logo" className="h-10 w-auto" />
-          <div className="flex flex-col leading-tight">
-            <span className="font-bold text-lg tracking-wide" style={{ fontFamily: 'var(--font-montserrat)', color: '#00CFD7' }}>
-              DYKES POWER
+          <div className="flex flex-col leading-none">
+            <span
+              className="text-2xl tracking-widest text-white leading-tight"
+              style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.08em', WebkitTextStroke: '0.5px #888' }}
+            >
+              DYKES MOTORS
             </span>
-            <span className="text-xs text-gray-400 tracking-widest uppercase">Equipment</span>
+            <span
+              className="text-sm tracking-widest uppercase leading-tight"
+              style={{ fontFamily: 'var(--font-bebas)', color: '#00CFD7', letterSpacing: '0.12em' }}
+            >
+              Power Equipment
+            </span>
           </div>
         </Link>
 

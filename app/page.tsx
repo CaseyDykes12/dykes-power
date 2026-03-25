@@ -20,7 +20,7 @@ export default function HomePage() {
               Built to Work
             </h1>
             <p className="text-gray-300 text-lg mb-8 max-w-lg">
-              Dykes Power Equipment carries the full Ferris lineup — zero-turn, stand-on,
+              Dykes Motors Power Equipment carries the full Ferris lineup — zero-turn, stand-on,
               and walk-behind mowers for homeowners and commercial operators in Mississippi.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -107,7 +107,7 @@ export default function HomePage() {
           </div>
           <div className="bg-black rounded-xl p-8 text-white text-center">
             <p className="text-[#00CFD7] font-semibold mb-2 tracking-widest uppercase text-sm">Local Dealer</p>
-            <h3 className="text-2xl font-bold mb-4">Dykes Power Equipment</h3>
+            <h3 className="text-2xl font-bold mb-4">Dykes Motors Power Equipment</h3>
             <p className="text-gray-300 mb-6">
               We carry the full Ferris lineup with hands-on support from our team in Collins, MS.
               Come see the machines in person before you buy.
