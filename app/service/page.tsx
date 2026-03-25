@@ -49,8 +49,8 @@ export default function ServicePage() {
           Contact us to schedule a service appointment or drop your equipment off at our Collins, MS location.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:6016062095" className="btn-primary">
-            Call (601) 606-2095
+          <a href="tel:6013362541" className="btn-primary">
+            Call Service — (601) 336-2541
           </a>
           <Link href="/contact" className="btn-outline">
             Request Service Online

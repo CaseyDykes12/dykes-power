@@ -106,7 +106,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
 
           <p className="text-xs text-gray-400 mt-4">
             Questions? Call us at{' '}
-            <a href="tel:6016062095" className="text-[#C8C8C8]">(601) 606-2095</a>
+            <a href="tel:6016415475" className="text-[#C8C8C8]">(601) 641-5475</a>
           </p>
         </div>
       </div>

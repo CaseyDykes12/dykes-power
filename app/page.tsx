@@ -142,7 +142,7 @@ export default function HomePage() {
             <Link href="/contact" className="btn-primary inline-block">
               Visit Us or Call
             </Link>
-            <p className="text-gray-500 mt-4 text-sm">(601) 606-2095</p>
+            <p className="text-gray-500 mt-4 text-sm">Sales: (601) 641-5475</p>
           </div>
         </div>
       </section>

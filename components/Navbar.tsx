@@ -34,6 +34,7 @@ export default function Navbar() {
           <Link href="/catalog" className="hover:text-[#C8C8C8] transition-colors">Shop</Link>
           <Link href="/catalog?category=Zero+Turn+Mowers" className="hover:text-[#C8C8C8] transition-colors">Zero Turn</Link>
           <Link href="/catalog?category=Stand-On+Mowers" className="hover:text-[#C8C8C8] transition-colors">Stand-On</Link>
+          <Link href="/parts" className="hover:text-[#C8C8C8] transition-colors">Parts</Link>
           <Link href="/service" className="hover:text-[#C8C8C8] transition-colors">Service</Link>
           <Link href="/contact" className="hover:text-[#C8C8C8] transition-colors">Contact</Link>
         </nav>
@@ -67,6 +68,7 @@ export default function Navbar() {
           <Link href="/catalog" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Shop All</Link>
           <Link href="/catalog?category=Zero+Turn+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Zero Turn Mowers</Link>
           <Link href="/catalog?category=Stand-On+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Stand-On Mowers</Link>
+          <Link href="/parts" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Parts</Link>
           <Link href="/service" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Service</Link>
           <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Contact</Link>
           <Link href="/contact" onClick={() => setOpen(false)} className="btn-primary text-center">Get a Quote</Link>

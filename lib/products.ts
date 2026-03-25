@@ -93,7 +93,7 @@ export const products: Product[] = [
       'Residential/light commercial use',
       'Easy operator controls',
     ],
-    imageUrl: '/images/ferris/300r.jpg',
+    imageUrl: '/images/ferris/300r-hero.jpg',
     status: 'IN_STOCK',
     tag: 'Best Value',
   },
@@ -115,7 +115,7 @@ export const products: Product[] = [
       'Residential/light commercial use',
       'Easy operator controls',
     ],
-    imageUrl: '/images/ferris/300r.jpg',
+    imageUrl: '/images/ferris/300r-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -136,7 +136,7 @@ export const products: Product[] = [
       'Commercial-grade fabricated deck',
       'Tool-free deck height adjustment',
     ],
-    imageUrl: '/images/ferris/300s.jpg',
+    imageUrl: '/images/ferris/300s-hero.webp',
     status: 'IN_STOCK',
   },
   {
@@ -157,7 +157,7 @@ export const products: Product[] = [
       'Commercial-grade fabricated deck',
       'Tool-free deck height adjustment',
     ],
-    imageUrl: '/images/ferris/300s.jpg',
+    imageUrl: '/images/ferris/300s-hero.webp',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -178,7 +178,7 @@ export const products: Product[] = [
       'Commercial-grade fabricated deck',
       'Tool-free deck height adjustment',
     ],
-    imageUrl: '/images/ferris/300s.jpg',
+    imageUrl: '/images/ferris/300s-hero.webp',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -199,7 +199,7 @@ export const products: Product[] = [
       '52" commercial-grade deck',
       'Tool-free deck height adjustment',
     ],
-    imageUrl: '/images/ferris/300s.jpg',
+    imageUrl: '/images/ferris/300s-hero.webp',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -220,7 +220,7 @@ export const products: Product[] = [
       '52" commercial-grade deck',
       'Tool-free deck height adjustment',
     ],
-    imageUrl: '/images/ferris/300s.jpg',
+    imageUrl: '/images/ferris/300s-hero.webp',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -241,7 +241,7 @@ export const products: Product[] = [
       '48" fabricated deck',
       'Up to 8.5 mph ground speed',
     ],
-    imageUrl: '/images/ferris/is500s.webp',
+    imageUrl: '/images/ferris/is500s-hero.webp',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -262,7 +262,7 @@ export const products: Product[] = [
       '52" fabricated deck',
       'Up to 8.5 mph ground speed',
     ],
-    imageUrl: '/images/ferris/is500s.webp',
+    imageUrl: '/images/ferris/is500s-hero.webp',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -283,7 +283,7 @@ export const products: Product[] = [
       '61" wide-cut deck',
       'Up to 8.5 mph ground speed',
     ],
-    imageUrl: '/images/ferris/is500s.webp',
+    imageUrl: '/images/ferris/is500s-hero.webp',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -304,7 +304,7 @@ export const products: Product[] = [
       '61" wide-cut deck',
       'Up to 8.5 mph ground speed',
     ],
-    imageUrl: '/images/ferris/is500s.webp',
+    imageUrl: '/images/ferris/is500s-hero.webp',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -346,7 +346,7 @@ export const products: Product[] = [
       'iCD™ cutting system',
       '48" fabricated deck',
     ],
-    imageUrl: '/images/ferris/is600.jpg',
+    imageUrl: '/images/ferris/is600-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -367,7 +367,7 @@ export const products: Product[] = [
       'iCD™ cutting system',
       '52" fabricated deck',
     ],
-    imageUrl: '/images/ferris/is600.jpg',
+    imageUrl: '/images/ferris/is600-hero.jpg',
     status: 'IN_STOCK',
     tag: 'Popular',
   },
@@ -389,7 +389,7 @@ export const products: Product[] = [
       'iCD™ cutting system',
       '48" fabricated deck',
     ],
-    imageUrl: '/images/ferris/is600.jpg',
+    imageUrl: '/images/ferris/is600-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -410,7 +410,7 @@ export const products: Product[] = [
       'iCD™ cutting system',
       '52" fabricated deck',
     ],
-    imageUrl: '/images/ferris/is600.jpg',
+    imageUrl: '/images/ferris/is600-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -431,7 +431,7 @@ export const products: Product[] = [
       'iCD™ cutting system',
       '52" fabricated deck',
     ],
-    imageUrl: '/images/ferris/is700.jpg',
+    imageUrl: '/images/ferris/is700-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -452,7 +452,7 @@ export const products: Product[] = [
       'iCD™ cutting system',
       '60" fabricated deck',
     ],
-    imageUrl: '/images/ferris/is700.jpg',
+    imageUrl: '/images/ferris/is700-hero.jpg',
     status: 'IN_STOCK',
   },
   {
@@ -474,7 +474,7 @@ export const products: Product[] = [
       '52" fabricated deck',
       'Up to 10 mph ground speed',
     ],
-    imageUrl: '/images/ferris/isx800.jpg',
+    imageUrl: '/images/ferris/isx800-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -496,7 +496,7 @@ export const products: Product[] = [
       '60" fabricated deck',
       'Up to 10 mph ground speed',
     ],
-    imageUrl: '/images/ferris/isx800.jpg',
+    imageUrl: '/images/ferris/isx800-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -518,7 +518,7 @@ export const products: Product[] = [
       '52" fabricated deck',
       'Up to 10 mph ground speed',
     ],
-    imageUrl: '/images/ferris/isx800.jpg',
+    imageUrl: '/images/ferris/isx800-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -540,7 +540,7 @@ export const products: Product[] = [
       '60" fabricated deck',
       'Up to 10 mph ground speed',
     ],
-    imageUrl: '/images/ferris/isx800.jpg',
+    imageUrl: '/images/ferris/isx800-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -562,7 +562,7 @@ export const products: Product[] = [
       '60" fabricated deck',
       'Electronic Fuel Injection',
     ],
-    imageUrl: '/images/ferris/isx800.jpg',
+    imageUrl: '/images/ferris/isx800-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -584,7 +584,7 @@ export const products: Product[] = [
       '60" fabricated deck',
       'Extended oil change intervals',
     ],
-    imageUrl: '/images/ferris/isx800.jpg',
+    imageUrl: '/images/ferris/isx800-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -606,7 +606,7 @@ export const products: Product[] = [
       '52" fabricated deck',
       'Up to 12 mph ground speed',
     ],
-    imageUrl: '/images/ferris/isx2200.jpg',
+    imageUrl: '/images/ferris/isx2200-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -628,7 +628,7 @@ export const products: Product[] = [
       '60" fabricated deck',
       'Up to 12 mph ground speed',
     ],
-    imageUrl: '/images/ferris/isx2200.jpg',
+    imageUrl: '/images/ferris/isx2200-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -650,7 +650,7 @@ export const products: Product[] = [
       '52" fabricated deck',
       'Up to 12 mph ground speed',
     ],
-    imageUrl: '/images/ferris/isx2200.jpg',
+    imageUrl: '/images/ferris/isx2200-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -672,7 +672,7 @@ export const products: Product[] = [
       '60" fabricated deck',
       'Up to 12 mph ground speed',
     ],
-    imageUrl: '/images/ferris/isx2200.jpg',
+    imageUrl: '/images/ferris/isx2200-hero.jpg',
     status: 'IN_STOCK',
     tag: 'Best Seller',
   },
@@ -695,7 +695,7 @@ export const products: Product[] = [
       '60" fabricated deck',
       'Electronic Fuel Injection',
     ],
-    imageUrl: '/images/ferris/isx3300.jpg',
+    imageUrl: '/images/ferris/isx3300-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
     tag: 'Top of the Line',
   },
@@ -718,7 +718,7 @@ export const products: Product[] = [
       '60" fabricated deck',
       'Oil Guard extended intervals',
     ],
-    imageUrl: '/images/ferris/isx3300.jpg',
+    imageUrl: '/images/ferris/isx3300-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -740,7 +740,7 @@ export const products: Product[] = [
       '72" wide-cut deck',
       'Electronic Fuel Injection',
     ],
-    imageUrl: '/images/ferris/isx3300.jpg',
+    imageUrl: '/images/ferris/isx3300-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -762,7 +762,7 @@ export const products: Product[] = [
       '72" wide-cut deck',
       'Oil Guard extended intervals',
     ],
-    imageUrl: '/images/ferris/isx3300.jpg',
+    imageUrl: '/images/ferris/isx3300-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -784,7 +784,7 @@ export const products: Product[] = [
       '61" commercial deck',
       'Diesel fuel efficiency',
     ],
-    imageUrl: '/images/ferris/isx2600.jpg',
+    imageUrl: '/images/ferris/isx2600-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
     tag: 'Commercial Grade',
   },
@@ -807,7 +807,7 @@ export const products: Product[] = [
       'Diesel fuel efficiency',
       'Built for large acreage operations',
     ],
-    imageUrl: '/images/ferris/is6200.jpg',
+    imageUrl: '/images/ferris/is6200-hero.jpg',
     status: 'AVAILABLE_TO_ORDER',
     tag: 'Commercial Grade',
   },

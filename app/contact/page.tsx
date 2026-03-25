@@ -28,7 +28,7 @@ export default function ContactPage() {
       });
       if (res.ok) setSubmitted(true);
     } catch {
-      alert('Something went wrong. Please call us directly at (601) 606-2095.');
+      alert('Something went wrong. Please call us directly at (601) 641-5475.');
     } finally {
       setLoading(false);
     }
@@ -41,7 +41,7 @@ export default function ContactPage() {
         <h1 className="text-3xl font-bold mb-3">We got your message!</h1>
         <p className="text-gray-600 mb-6">
           Casey or one of our team will reach out to you shortly. If you need to talk now,
-          call us at <a href="tel:6016062095" className="text-[#C8C8C8] font-semibold">(601) 606-2095</a>.
+          call us at <a href="tel:6016415475" className="text-[#C8C8C8] font-semibold">(601) 641-5475</a>.
         </p>
       </div>
     );
@@ -147,14 +147,21 @@ export default function ContactPage() {
             <h2 className="text-xl font-bold mb-4 text-[#C8C8C8]">Dykes Motors Power Equipment</h2>
             <div className="space-y-3 text-sm text-gray-300">
               <p>📍 Collins, Mississippi 39428</p>
-              <p>📞 <a href="tel:6016062095" className="text-[#C8C8C8]">(601) 606-2095</a></p>
-              <p>✉️ <a href="mailto:Casey@dykesmotors.com" className="text-[#C8C8C8]">Casey@dykesmotors.com</a></p>
+              <p>📞 Sales: <a href="tel:6016415475" className="text-[#C8C8C8]">(601) 641-5475</a></p>
+              <p>📞 Service &amp; Parts: <a href="tel:6013362541" className="text-[#C8C8C8]">(601) 336-2541</a></p>
+              <p>✉️ <a href="mailto:info@dykesmotors.com" className="text-[#C8C8C8]">info@dykesmotors.com</a></p>
             </div>
             <div className="mt-6 pt-6 border-t border-gray-700">
-              <p className="text-sm font-semibold text-white mb-2">Hours</p>
+              <p className="text-sm font-semibold text-white mb-2">Sales Hours</p>
               <div className="text-sm text-gray-300 space-y-1">
-                <p>Mon–Fri: 8:00am – 5:00pm</p>
-                <p>Saturday: 8:00am – 12:00pm</p>
+                <p>Mon–Fri: 9:00am – 6:00pm</p>
+                <p>Saturday: 9:00am – 2:00pm</p>
+                <p>Sunday: Closed</p>
+              </div>
+              <p className="text-sm font-semibold text-white mt-4 mb-2">Service &amp; Parts Hours</p>
+              <div className="text-sm text-gray-300 space-y-1">
+                <p>Mon–Fri: 9:00am – 7:00pm</p>
+                <p>Saturday: 9:00am – 2:00pm</p>
                 <p>Sunday: Closed</p>
               </div>
             </div>

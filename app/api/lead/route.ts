@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
 
   // Send notification email via Resend (or fallback to mailto)
   const RESEND_API_KEY = process.env.RESEND_API_KEY;
-  const TO_EMAIL = 'Casey@dykesmotors.com';
+  const TO_EMAIL = 'info@dykesmotors.com';
 
   const emailBody = `
 New lead from dykespower.com

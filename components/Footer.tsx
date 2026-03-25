@@ -15,10 +15,13 @@ export default function Footer() {
           </p>
           <p className="text-sm text-gray-400">Authorized Ferris Dealer<br />Collins, Mississippi</p>
           <p className="text-sm mt-3">
-            <a href="tel:6016062095" className="hover:text-[#C8C8C8]">(601) 606-2095</a>
+            Sales: <a href="tel:6016415475" className="hover:text-[#C8C8C8]">(601) 641-5475</a>
           </p>
           <p className="text-sm">
-            <a href="mailto:Casey@dykesmotors.com" className="hover:text-[#C8C8C8]">Casey@dykesmotors.com</a>
+            Service: <a href="tel:6013362541" className="hover:text-[#C8C8C8]">(601) 336-2541</a>
+          </p>
+          <p className="text-sm mt-1">
+            <a href="mailto:info@dykesmotors.com" className="hover:text-[#C8C8C8]">info@dykesmotors.com</a>
           </p>
         </div>
 
@@ -42,10 +45,16 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="font-semibold text-white mb-3">Hours</p>
+          <p className="font-semibold text-white mb-2">Sales Hours</p>
+          <ul className="space-y-1 text-sm mb-3">
+            <li>Mon–Fri: 9am – 6pm</li>
+            <li>Sat: 9am – 2pm</li>
+            <li>Sun: Closed</li>
+          </ul>
+          <p className="font-semibold text-white mb-2">Service Hours</p>
           <ul className="space-y-1 text-sm">
-            <li>Mon–Fri: 8am – 5pm</li>
-            <li>Sat: 8am – 12pm</li>
+            <li>Mon–Fri: 9am – 7pm</li>
+            <li>Sat: 9am – 2pm</li>
             <li>Sun: Closed</li>
           </ul>
           <p className="text-sm mt-4 text-gray-500">Collins, MS 39428</p>
