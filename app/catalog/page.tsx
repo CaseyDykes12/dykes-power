@@ -25,8 +25,8 @@ function CatalogContent() {
 
   return (
     <div className="max-w-[1280px] mx-auto px-4 py-10">
-      <h1 className="text-3xl font-bold mb-2">Ferris Equipment Catalog</h1>
-      <p className="text-gray-500 mb-8">Authorized dealer for the complete Ferris lineup — mowers, blowers, and spreader/sprayers. Collins, Mississippi.</p>
+      <h1 className="text-3xl font-bold mb-2 text-white">Ferris Equipment Catalog</h1>
+      <p className="text-gray-400 mb-8">Authorized dealer for the complete Ferris lineup — mowers, blowers, and spreader/sprayers. Collins, Mississippi.</p>
 
       {/* Filters */}
       <div className="flex flex-col md:flex-row gap-4 mb-8">
@@ -35,7 +35,7 @@ function CatalogContent() {
           placeholder="Search mowers..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="border border-gray-300 rounded-lg px-4 py-2 text-sm w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-[#00CFD7]"
+          className="bg-[#1a1a1a] border border-gray-600 text-white rounded-lg px-4 py-2 text-sm w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-[#00CFD7] placeholder-gray-500"
         />
         <div className="flex flex-wrap gap-2">
           <button
@@ -43,7 +43,7 @@ function CatalogContent() {
             className={`px-4 py-2 rounded-full text-sm font-semibold border transition-colors ${
               !activeCategory
                 ? 'bg-[#00CFD7] text-black border-[#00CFD7]'
-                : 'bg-white text-gray-700 border-gray-300 hover:border-[#00CFD7]'
+                : 'bg-[#1a1a1a] text-gray-300 border-gray-600 hover:border-[#00CFD7]'
             }`}
           >
             All
@@ -55,7 +55,7 @@ function CatalogContent() {
               className={`px-4 py-2 rounded-full text-sm font-semibold border transition-colors ${
                 activeCategory === cat
                   ? 'bg-[#00CFD7] text-black border-[#00CFD7]'
-                  : 'bg-white text-gray-700 border-gray-300 hover:border-[#00CFD7]'
+                  : 'bg-[#1a1a1a] text-gray-300 border-gray-600 hover:border-[#00CFD7]'
               }`}
             >
               {cat}

@@ -7,44 +7,81 @@ export default function HomePage() {
 
   return (
     <>
+      {/* Financing banner */}
+      <div className="bg-red-600 text-white text-center text-xs md:text-sm font-semibold tracking-widest uppercase py-2 px-4">
+        Deals from 2.9% financing up to 48 months on select models — <Link href="/contact" className="underline hover:no-underline">Get pre-approved</Link>
+      </div>
+
       {/* Hero */}
-      <section className="bg-black text-white py-20 px-4">
-        <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-[#00CFD7] font-semibold tracking-widest uppercase text-sm mb-3">
-              Authorized Ferris Dealer — Collins, MS
-            </p>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Commercial-Grade<br />
-              <span className="text-[#00CFD7]">Ferris Mowers</span><br />
-              Built to Work
+      <section className="relative bg-[#0a0a0a] text-white overflow-hidden min-h-[88vh] flex items-center">
+        {/* Watermark background text */}
+        <div
+          className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none overflow-hidden"
+          aria-hidden="true"
+        >
+          <span
+            className="text-[18vw] font-black leading-none text-white opacity-[0.04] tracking-tighter whitespace-nowrap"
+            style={{ fontFamily: 'var(--font-bebas)' }}
+          >
+            +DF
+          </span>
+          <span
+            className="text-[12vw] font-black leading-none text-white opacity-[0.04] tracking-widest whitespace-nowrap"
+            style={{ fontFamily: 'var(--font-bebas)' }}
+          >
+            DYKES MOTORS
+          </span>
+        </div>
+
+        {/* Hero content */}
+        <div className="relative z-10 max-w-[1280px] mx-auto px-4 py-20 w-full">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-4 mb-8">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/df-logo.png" alt="Dykes Family Logo" className="h-14 w-auto" />
+              <div>
+                <p
+                  className="text-3xl text-white leading-tight tracking-widest"
+                  style={{ fontFamily: 'var(--font-bebas)', WebkitTextStroke: '0.5px #666' }}
+                >
+                  DYKES MOTORS
+                </p>
+                <p
+                  className="text-sm tracking-widest uppercase leading-tight"
+                  style={{ fontFamily: 'var(--font-bebas)', color: '#00CFD7', letterSpacing: '0.14em' }}
+                >
+                  Collins, Mississippi
+                </p>
+              </div>
+            </div>
+
+            <h1
+              className="text-5xl md:text-7xl font-black leading-tight mb-6 text-white"
+              style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.02em' }}
+            >
+              Power Equipment —<br />
+              <span className="text-[#00CFD7]">Commercial Mowers</span>
             </h1>
-            <p className="text-gray-300 text-lg mb-8 max-w-lg">
-              Dykes Motors Power Equipment carries the full Ferris lineup — zero-turn, stand-on,
-              and walk-behind mowers for homeowners and commercial operators in Mississippi.
+
+            <p className="text-gray-300 text-lg mb-10 max-w-xl leading-relaxed">
+              In-stock, inbound, or available to order through our manufacturer network.
+              Local service and warranty support.
             </p>
+
             <div className="flex flex-wrap gap-4">
-              <Link href="/catalog" className="btn-primary text-lg px-8 py-3">
-                Shop Mowers
+              <Link href="/contact" className="btn-primary text-base px-8 py-3">
+                Finance a Mower
               </Link>
-              <Link href="/contact" className="btn-outline text-lg px-8 py-3">
-                Get a Quote
+              <Link href="/catalog" className="btn-outline text-base px-8 py-3">
+                Browse Inventory
               </Link>
             </div>
-          </div>
-          <div className="hidden md:flex items-center justify-center">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-              src="https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/zero-turn-mowers/isx2200/ISX2200_PDP_HERO.jpg"
-              alt="Ferris ISX 2200 Zero Turn Mower"
-              className="rounded-xl shadow-2xl max-h-80 object-contain"
-            />
           </div>
         </div>
       </section>
 
       {/* Value props */}
-      <section className="bg-white py-10 px-4 border-b border-gray-100">
+      <section className="bg-[#111] py-10 px-4 border-b border-gray-800">
         <div className="max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { icon: '🏆', label: 'Authorized Ferris Dealer' },
@@ -54,17 +91,17 @@ export default function HomePage() {
           ].map((item) => (
             <div key={item.label} className="flex flex-col items-center gap-2 py-2">
               <span className="text-3xl">{item.icon}</span>
-              <p className="font-semibold text-sm">{item.label}</p>
+              <p className="font-semibold text-sm text-gray-200">{item.label}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Featured products */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-[#111]">
         <div className="max-w-[1280px] mx-auto">
-          <h2 className="text-3xl font-bold mb-2">Popular Models</h2>
-          <p className="text-gray-500 mb-8">Our most requested Ferris mowers — in stock and ready to go.</p>
+          <h2 className="text-3xl font-bold mb-2 text-white">Popular Models</h2>
+          <p className="text-gray-400 mb-8">Our most requested Ferris mowers — in stock and ready to go.</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featured.map((p) => (
               <ProductCard key={p.sku} product={p} />
@@ -79,11 +116,11 @@ export default function HomePage() {
       </section>
 
       {/* Why Ferris */}
-      <section className="bg-gray-50 py-16 px-4">
+      <section className="bg-[#0a0a0a] py-16 px-4">
         <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-4">Why Ferris?</h2>
-            <p className="text-gray-600 mb-6">
+            <h2 className="text-3xl font-bold mb-4 text-white">Why Ferris?</h2>
+            <p className="text-gray-400 mb-6">
               Ferris invented the suspension mower. Their patented independent suspension system
               means a smoother ride, less fatigue, and a better cut — on any terrain.
             </p>
@@ -97,7 +134,7 @@ export default function HomePage() {
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <span className="text-[#00CFD7] font-bold mt-0.5">✓</span>
-                  <span className="text-gray-700">{item}</span>
+                  <span className="text-gray-300">{item}</span>
                 </li>
               ))}
             </ul>
@@ -105,26 +142,26 @@ export default function HomePage() {
               Shop the Lineup
             </Link>
           </div>
-          <div className="bg-black rounded-xl p-8 text-white text-center">
+          <div className="bg-black rounded-xl p-8 text-white text-center border border-gray-800">
             <p className="text-[#00CFD7] font-semibold mb-2 tracking-widest uppercase text-sm">Local Dealer</p>
             <h3 className="text-2xl font-bold mb-4">Dykes Motors Power Equipment</h3>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-400 mb-6">
               We carry the full Ferris lineup with hands-on support from our team in Collins, MS.
               Come see the machines in person before you buy.
             </p>
             <Link href="/contact" className="btn-primary inline-block">
               Visit Us or Call
             </Link>
-            <p className="text-gray-400 mt-4 text-sm">(601) 606-2095</p>
+            <p className="text-gray-500 mt-4 text-sm">(601) 606-2095</p>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-black text-white py-16 px-4">
+      <section className="bg-black text-white py-16 px-4 border-t border-gray-800">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-3">Not sure which mower is right for you?</h2>
-          <p className="text-gray-300 mb-8">
+          <p className="text-gray-400 mb-8">
             Tell us about your property and we'll recommend the right machine with a real price — no runaround.
           </p>
           <Link href="/contact" className="btn-primary text-lg px-10 py-4">
