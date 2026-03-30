@@ -26,7 +26,14 @@ export default function ContactPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       });
-      if (res.ok) setSubmitted(true);
+      if (res.ok) {
+        setSubmitted(true);
+        if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+          (window as any).gtag('event', 'conversion', {
+            send_to: 'AW-17992871675/lLmOCKH-gpAcEPvd1YND',
+          });
+        }
+      }
     } catch {
       alert('Something went wrong. Please call us directly at (601) 641-5475.');
     } finally {

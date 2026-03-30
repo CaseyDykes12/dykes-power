@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Montserrat, Bebas_Neue } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -11,14 +12,107 @@ const bebasNeue = Bebas_Neue({ subsets: ['latin'], weight: '400', variable: '--f
 export const metadata: Metadata = {
   title: 'Dykes Motors Power Equipment | Authorized Ferris Dealer — Collins, MS',
   description:
-    'Dykes Motors Power Equipment is an authorized Ferris mower dealer in Collins, Mississippi. Shop zero-turn, stand-on, and walk-behind mowers. Contact us for pricing and financing.',
-  keywords: 'Ferris mowers, zero turn mower, Collins MS, Dykes Motors, lawn mower dealer Mississippi',
+    'Authorized Ferris mower dealer in Collins, Mississippi. Sales, service, repairs, and OEM parts. Zero-turn, stand-on, and walk-behind mowers. Financing available.',
+  keywords: 'Ferris mowers, zero turn mower, Collins MS, Dykes Motors, lawn mower dealer Mississippi, mower repair Collins MS, Ferris parts Mississippi',
+};
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Dykes Motors Power Equipment',
+  description:
+    'Authorized Ferris mower dealer in Collins, Mississippi offering sales, service, repairs, and OEM parts.',
+  url: 'https://dykespower.com',
+  logo: 'https://dykespower.com/df-logo.png',
+  image: 'https://dykespower.com/df-logo.png',
+  telephone: ['+16016415475', '+16013362541'],
+  email: 'info@dykesmotors.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '3069 Hwy 49',
+    addressLocality: 'Collins',
+    addressRegion: 'MS',
+    postalCode: '39428',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    // TODO: Add exact lat/lng from Google Business Profile
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00',
+      name: 'Sales',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: 'Saturday',
+      opens: '09:00',
+      closes: '14:00',
+      name: 'Sales',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '19:00',
+      name: 'Service & Parts',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: 'Saturday',
+      opens: '09:00',
+      closes: '14:00',
+      name: 'Service & Parts',
+    },
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Services',
+    itemListElement: [
+      'Mower Service & Repair',
+      'Ferris OEM Parts',
+      'Blade Sharpening & Replacement',
+      'Engine Diagnostics & Repair',
+      'Hydrostatic Drive Service',
+      'Seasonal Tune-Ups',
+      'Zero Turn Mower Sales',
+      'Financing Available',
+    ],
+  },
+  areaServed: {
+    '@type': 'State',
+    name: 'Mississippi',
+  },
+  sameAs: [],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${montserrat.variable} ${bebasNeue.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col bg-white text-gray-900">
+        {/* Google Ads Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17992871675"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17992871675');
+          `}
+        </Script>
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
