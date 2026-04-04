@@ -98,6 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
+                <meta name="google-site-verification" content="qW0oAxSqngP7GBmf8rXxdZs1GK14mbymF1StHZnrcQ4" />
       </head>
       <body className="min-h-screen flex flex-col bg-white text-gray-900">
         {/* Google Ads Tag */}
