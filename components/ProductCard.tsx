@@ -6,7 +6,7 @@ export default function ProductCard({ product }: { product: Product }) {
   const status = statusLabels[product.status];
 
   return (
-    <div className="bg-[#1a1a1a] border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:border-[#C8C8C8] transition-all flex flex-col">
+    <Link href={`/product/${product.sku}`} className="bg-[#1a1a1a] border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:border-[#C8C8C8] transition-all flex flex-col cursor-pointer">
       {/* Image */}
       <div className="bg-[#111] h-52 flex items-center justify-center p-4 relative">
         {product.tag && (
@@ -44,19 +44,19 @@ export default function ProductCard({ product }: { product: Product }) {
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-700">
           <div>
             {product.price ? (
-              <p className="font-bold text-lg">${product.price.toLocaleString()}</p>
+              <>
+                <p className="font-bold text-lg">${product.price.toLocaleString()}</p>
+                <p className="text-gray-500 text-xs">from ${Math.ceil(product.price * 0.002417 * Math.pow(1.002417, 48) / (Math.pow(1.002417, 48) - 1)).toLocaleString()}/mo</p>
+              </>
             ) : (
               <p className="font-semibold text-[#C8C8C8]">Contact for price</p>
             )}
           </div>
-          <Link
-            href={`/product/${product.sku}`}
-            className="btn-primary text-sm py-2 px-4"
-          >
+          <span className="btn-primary text-sm py-2 px-4">
             View Details
-          </Link>
+          </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

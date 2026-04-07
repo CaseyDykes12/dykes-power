@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import AddToCartButton from '@/components/AddToCartButton';
 import ProductGallery from '@/components/ProductGallery';
+import FinancingOptions from '@/components/FinancingOptions';
 
 export async function generateStaticParams() {
   return products.map((p) => ({ sku: p.sku }));
@@ -73,8 +74,8 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
             <div className="mb-6">
               {product.price ? (
                 <div>
-                  <p className="text-4xl font-black text-white">${product.price.toLocaleString()}</p>
-                  <p className="text-gray-500 text-sm mt-1">MSRP · Financing available from 2.9%</p>
+                  <p className="text-4xl font-black text-white mb-1">${product.price.toLocaleString()}</p>
+                  <p className="text-gray-500 text-sm">MSRP · Cash or finance — your choice</p>
                 </div>
               ) : (
                 <div>
@@ -83,6 +84,9 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                 </div>
               )}
             </div>
+
+            {/* Financing options */}
+            {product.price && <FinancingOptions price={product.price} />}
 
             {/* Spec grid */}
             <div className="grid grid-cols-2 gap-3 mb-6">
@@ -134,7 +138,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                 📞 Sales: (601) 641-5475
               </a>
               <Link href="/contact" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg">
-                💳 Financing from 2.9% — Get Pre-Approved
+                💬 Request a Quote
               </Link>
             </div>
           </div>
