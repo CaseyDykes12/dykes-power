@@ -30,7 +30,7 @@ export default function ContactPage() {
         setSubmitted(true);
         if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
           (window as any).gtag('event', 'conversion', {
-            send_to: 'AW-17992871675/lLmOCKH-gpAcEPvd1YND',
+            send_to: 'AW-17992871675/pNOLCL2li48cEPvd1YND',
           });
         }
       }
