@@ -34,16 +34,20 @@ export default function Navbar() {
           <Link href="/catalog" className="hover:text-[#C8C8C8] transition-colors">Shop</Link>
           <Link href="/catalog?category=Zero+Turn+Mowers" className="hover:text-[#C8C8C8] transition-colors">Zero Turn</Link>
           <Link href="/catalog?category=Stand-On+Mowers" className="hover:text-[#C8C8C8] transition-colors">Stand-On</Link>
+          <Link href="/trailers" className="hover:text-[#C8C8C8] transition-colors">Trailers</Link>
           <Link href="/parts" className="hover:text-[#C8C8C8] transition-colors">Parts</Link>
           <Link href="/service" className="hover:text-[#C8C8C8] transition-colors">Service</Link>
+          <Link href="/financing" className="hover:text-[#C8C8C8] transition-colors">Financing</Link>
+          <Link href="/blog" className="hover:text-[#C8C8C8] transition-colors">Blog</Link>
           <Link href="/contact" className="hover:text-[#C8C8C8] transition-colors">Contact</Link>
+          <a href="https://www.dykesmotors.com/inventory" target="_blank" rel="noopener noreferrer" className="hover:text-[#C8C8C8] transition-colors">Auto Inventory</a>
         </nav>
 
         {/* Right side */}
         <div className="flex items-center gap-4">
           <CartIcon />
-          <Link href="/contact" className="hidden md:inline-block btn-primary text-sm py-2 px-4">
-            Get a Quote
+          <Link href="/cart" className="hidden md:inline-block btn-primary text-sm py-2 px-4">
+            Checkout
           </Link>
           {/* Mobile menu button */}
           <button
@@ -68,10 +72,14 @@ export default function Navbar() {
           <Link href="/catalog" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Shop All</Link>
           <Link href="/catalog?category=Zero+Turn+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Zero Turn Mowers</Link>
           <Link href="/catalog?category=Stand-On+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Stand-On Mowers</Link>
+          <Link href="/trailers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Trailers</Link>
           <Link href="/parts" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Parts</Link>
           <Link href="/service" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Service</Link>
+          <Link href="/financing" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Financing</Link>
+          <Link href="/blog" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Blog</Link>
           <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Contact</Link>
-          <Link href="/contact" onClick={() => setOpen(false)} className="btn-primary text-center">Get a Quote</Link>
+          <a href="https://www.dykesmotors.com/inventory" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Auto Inventory</a>
+          <Link href="/cart" onClick={() => setOpen(false)} className="btn-primary text-center">Checkout</Link>
         </div>
       )}
     </header>

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-400 mt-16">
+    <footer className="bg-black text-gray-400">
       <div className="max-w-[1280px] mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -31,6 +31,7 @@ export default function Footer() {
             <li><Link href="/catalog?category=Zero+Turn+Mowers" className="hover:text-[#C8C8C8]">Zero Turn Mowers</Link></li>
             <li><Link href="/catalog?category=Stand-On+Mowers" className="hover:text-[#C8C8C8]">Stand-On Mowers</Link></li>
             <li><Link href="/catalog?category=Walk-Behind+Mowers" className="hover:text-[#C8C8C8]">Walk-Behind Mowers</Link></li>
+            <li><Link href="/trailers" className="hover:text-[#C8C8C8]">Utility Trailers</Link></li>
             <li><Link href="/catalog" className="hover:text-[#C8C8C8]">All Products</Link></li>
           </ul>
         </div>
@@ -41,6 +42,9 @@ export default function Footer() {
             <li><Link href="/service" className="hover:text-[#C8C8C8]">Service & Repairs</Link></li>
             <li><Link href="/contact" className="hover:text-[#C8C8C8]">Get a Quote</Link></li>
             <li><Link href="/contact" className="hover:text-[#C8C8C8]">Contact Us</Link></li>
+            <li><Link href="/shipping" className="hover:text-[#C8C8C8]">Shipping & Returns</Link></li>
+            <li><Link href="/privacy" className="hover:text-[#C8C8C8]">Privacy Policy</Link></li>
+            <li><Link href="/terms" className="hover:text-[#C8C8C8]">Terms of Service</Link></li>
           </ul>
         </div>
 
@@ -57,7 +61,7 @@ export default function Footer() {
             <li>Sat: 9am – 2pm</li>
             <li>Sun: Closed</li>
           </ul>
-          <p className="text-sm mt-4 text-gray-500">Collins, MS 39428</p>
+          <p className="text-sm mt-4 text-gray-500">3069 Hwy 49, Collins, MS 39428</p>
         </div>
       </div>
       <div className="border-t border-gray-800 text-center text-xs text-gray-600 py-4">
