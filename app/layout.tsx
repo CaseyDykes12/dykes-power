@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': ['LocalBusiness', 'Store'],
   name: 'Dykes Motors Power Equipment',
   description:
-    'Authorized Ferris mower dealer in Collins, Mississippi offering sales, service, repairs, and OEM parts.',
-  url: 'https://dykespower.com',
+    'Authorized Ferris mower dealer in Collins, Mississippi offering sales, service, repairs, and OEM parts. A division of Dykes Motors.',
+  url: 'https://www.dykespower.com',
   logo: 'https://dykespower.com/df-logo.png',
   image: 'https://dykespower.com/df-logo.png',
   telephone: ['+16016415475', '+16013362541'],
@@ -37,7 +37,26 @@ const localBusinessSchema = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    // TODO: Add exact lat/lng from Google Business Profile
+    latitude: 31.6454,
+    longitude: -89.5548,
+  },
+  parentOrganization: {
+    '@type': 'AutoDealer',
+    name: 'Dykes Motors',
+    url: 'https://www.dykesmotors.com',
+    telephone: '+16016415475',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '3069 Hwy 49',
+      addressLocality: 'Collins',
+      addressRegion: 'MS',
+      postalCode: '39428',
+      addressCountry: 'US',
+    },
+    sameAs: [
+      'https://www.dykesmotors.com',
+      'https://www.facebook.com/DykesMotors',
+    ],
   },
   openingHoursSpecification: [
     {
@@ -87,7 +106,10 @@ const localBusinessSchema = {
     '@type': 'State',
     name: 'Mississippi',
   },
-  sameAs: [],
+  sameAs: [
+    'https://www.dykesmotors.com',
+    'https://www.facebook.com/DykesMotors',
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -98,7 +120,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
-                <meta name="google-site-verification" content="qW0oAxSqngP7GBmf8rXxdZs1GK14mbymF1StHZnrcQ4" />
+        <meta name="google-site-verification" content="qW0oAxSqngP7GBmf8rXxdZs1GK14mbymF1StHZnrcQ4" />
       </head>
       <body className="min-h-screen flex flex-col bg-white text-gray-900">
         {/* Google Ads Tag */}
