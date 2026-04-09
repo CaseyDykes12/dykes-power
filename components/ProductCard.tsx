@@ -45,7 +45,11 @@ export default function ProductCard({ product }: { product: Product }) {
           <div>
             {product.price ? (
               <>
-                <p className="font-bold text-lg">${product.price.toLocaleString()}</p>
+                {product.msrp && product.msrp !== product.price && (
+                  <p className="text-gray-500 text-xs line-through">MSRP ${product.msrp.toLocaleString()}</p>
+                )}
+                <p className="font-bold text-lg text-white">${product.price.toLocaleString()}</p>
+                <p className="text-[#C8C8C8] text-xs font-semibold">Dykes Motors Price</p>
                 <p className="text-gray-500 text-xs">from ${Math.ceil(product.price * 0.002417 * Math.pow(1.002417, 48) / (Math.pow(1.002417, 48) - 1)).toLocaleString()}/mo</p>
               </>
             ) : (

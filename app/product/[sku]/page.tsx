@@ -74,8 +74,14 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
             <div className="mb-6">
               {product.price ? (
                 <div>
+                  {product.msrp && product.msrp !== product.price && (
+                    <p className="text-gray-500 text-base line-through mb-0.5">
+                      MSRP: ${product.msrp.toLocaleString()}
+                    </p>
+                  )}
+                  <p className="text-xs font-semibold text-[#C8C8C8] uppercase tracking-widest mb-1">Dykes Motors Price</p>
                   <p className="text-4xl font-black text-white mb-1">${product.price.toLocaleString()}</p>
-                  <p className="text-gray-500 text-sm">MSRP · Cash or finance — your choice</p>
+                  <p className="text-gray-500 text-sm">Cash or finance — your choice</p>
                 </div>
               ) : (
                 <div>
