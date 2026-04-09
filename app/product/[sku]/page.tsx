@@ -1,4 +1,4 @@
-import { products, getProductsBySku, statusLabels, NOT_ON_LOT_DISCLOSURE } from '@/lib/products';
+import { products, getProductsBySku } from '@/lib/products';
 import { getProductImages } from '@/lib/productImages';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -15,8 +15,6 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
   const product = getProductsBySku(sku);
   if (!product) notFound();
 
-  const status = statusLabels[product.status];
-  const showDisclosure = product.status !== 'IN_STOCK';
   const images = getProductImages(product);
 
   return (
@@ -53,16 +51,13 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
           {/* ── Details ─────────────────────────────────────────────── */}
           <div>
             {/* Badges */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {product.tag && (
+            {product.tag && (
+              <div className="flex flex-wrap gap-2 mb-4">
                 <span className="bg-[#D4AF37] text-black text-xs font-bold px-3 py-1 rounded">
                   {product.tag}
                 </span>
-              )}
-              <span className={`text-white text-xs font-semibold px-3 py-1 rounded-full ${status.color}`}>
-                {status.label}
-              </span>
-            </div>
+              </div>
+            )}
 
             <h1 className="text-3xl md:text-4xl font-black text-white mb-1 leading-tight"
               style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.03em' }}>
@@ -124,13 +119,6 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                 ))}
               </ul>
             </div>
-
-            {/* Disclosure */}
-            {showDisclosure && (
-              <div className="bg-[#111] border border-gray-700 rounded-lg p-4 mb-6 text-sm text-gray-400">
-                <strong className="text-gray-300">Note:</strong> {NOT_ON_LOT_DISCLOSURE}
-              </div>
-            )}
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3 mb-4">

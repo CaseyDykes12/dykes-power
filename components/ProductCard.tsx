@@ -1,10 +1,8 @@
 'use client';
 import Link from 'next/link';
-import { Product, statusLabels } from '@/lib/products';
+import { Product } from '@/lib/products';
 
 export default function ProductCard({ product }: { product: Product }) {
-  const status = statusLabels[product.status];
-
   return (
     <Link href={`/product/${product.sku}`} className="bg-[#1a1a1a] border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:border-[#C8C8C8] transition-all flex flex-col cursor-pointer">
       {/* Image */}
@@ -29,9 +27,6 @@ export default function ProductCard({ product }: { product: Product }) {
       <div className="p-5 flex flex-col flex-1">
         <div className="flex items-start justify-between gap-2 mb-1">
           <h3 className="font-bold text-base leading-tight text-white">{product.name}</h3>
-          <span className={`text-white text-xs font-semibold px-2 py-0.5 rounded-full shrink-0 ${status.color}`}>
-            {status.label}
-          </span>
         </div>
 
         <p className="text-gray-400 text-sm mb-1">{product.engine} · {product.horsepower}</p>
