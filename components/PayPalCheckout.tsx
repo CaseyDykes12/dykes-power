@@ -79,7 +79,7 @@ export default function PayPalCheckout({ total, items }: PayPalCheckoutProps) {
 
     const script = document.createElement('script');
     script.id = scriptId;
-    script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}&currency=USD`;
+    script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}&currency=USD&disable-funding=card`;
     script.async = true;
     script.onload = renderButtons;
     script.onerror = () => setError('Failed to load PayPal. Please refresh or call us.');
