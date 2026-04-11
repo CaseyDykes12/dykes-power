@@ -59,7 +59,7 @@ export default function HomePage() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="btn-primary text-base px-8 py-3">
+              <Link href="/financing" className="btn-primary text-base px-8 py-3">
                 Finance a Mower
               </Link>
               <Link href="/catalog" className="btn-outline text-base px-8 py-3">
@@ -73,17 +73,23 @@ export default function HomePage() {
       {/* Value props */}
       <section className="bg-[#111] py-10 px-4 border-b border-gray-800">
         <div className="max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {[
-            { icon: '🏆', label: 'Authorized Ferris Dealer' },
-            { icon: '🔧', label: 'Service & Repairs' },
-            { icon: '💳', label: 'Financing Available' },
-            { icon: '📍', label: 'Collins, Mississippi' },
-          ].map((item) => (
-            <div key={item.label} className="flex flex-col items-center gap-2 py-2">
-              <span className="text-3xl">{item.icon}</span>
-              <p className="font-semibold text-sm text-gray-200">{item.label}</p>
-            </div>
-          ))}
+          <Link href="/catalog" className="flex flex-col items-center gap-2 py-2 hover:opacity-80 transition-opacity">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/ferris-logo.png" alt="Ferris Mowers" className="h-8 w-auto object-contain" />
+            <p className="font-semibold text-sm text-gray-200">Authorized Ferris Dealer</p>
+          </Link>
+          <Link href="/service" className="flex flex-col items-center gap-2 py-2 hover:opacity-80 transition-opacity">
+            <span className="text-3xl">🔧</span>
+            <p className="font-semibold text-sm text-gray-200">Service &amp; Repairs</p>
+          </Link>
+          <Link href="/financing" className="flex flex-col items-center gap-2 py-2 hover:opacity-80 transition-opacity">
+            <span className="text-3xl">💳</span>
+            <p className="font-semibold text-sm text-gray-200">Financing Available</p>
+          </Link>
+          <div className="flex flex-col items-center gap-2 py-2">
+            <span className="text-3xl">📍</span>
+            <p className="font-semibold text-sm text-gray-200">Collins, Mississippi</p>
+          </div>
         </div>
       </section>
 

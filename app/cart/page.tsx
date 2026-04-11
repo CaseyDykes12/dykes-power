@@ -2,6 +2,9 @@
 import { useEffect, useState } from 'react';
 import { getCart, removeFromCart, updateQuantity, cartTotal, Cart } from '@/lib/cart';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+const PayPalCheckout = dynamic(() => import('@/components/PayPalCheckout'), { ssr: false });
 
 export default function CartPage() {
   const [cart, setCart] = useState<Cart>({ items: [] });
@@ -91,16 +94,29 @@ export default function CartPage() {
             </div>
             <p className="text-xs text-gray-400 mt-1">Taxes and fees calculated at checkout</p>
           </div>
-          <Link href="/contact" className="btn-primary w-full text-center block mb-3">
+          <PayPalCheckout
+            total={cartTotal(cart)}
+            items={cart.items.map((item) => ({
+              name: item.name,
+              sku: item.sku,
+              price: item.price,
+              quantity: item.quantity,
+            }))}
+          />
+          <div className="flex items-center gap-2 my-3">
+            <div className="flex-1 border-t border-gray-200" />
+            <span className="text-xs text-gray-400">or</span>
+            <div className="flex-1 border-t border-gray-200" />
+          </div>
+          <Link href="/financing" className="btn-primary w-full text-center block mb-3">
+            Apply for Financing
+          </Link>
+          <Link href="/contact" className="btn-outline w-full text-center block text-sm mb-3">
             Request a Quote
           </Link>
-          <Link href="/catalog" className="btn-outline w-full text-center block text-sm">
+          <Link href="/catalog" className="w-full text-center block text-sm text-gray-300 hover:text-white underline underline-offset-2">
             Continue Shopping
           </Link>
-          <p className="text-xs text-gray-400 text-center mt-4">
-            Online checkout coming soon. Call us at{' '}
-            <a href="tel:6016415475" className="text-[#C8C8C8]">(601) 641-5475</a>
-          </p>
         </div>
       </div>
     </div>

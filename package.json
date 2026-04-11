@@ -9,7 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@paypal/react-paypal-js": "^9.1.1",
     "caniuse-lite": "^1.0.30001781",
+    "gray-matter": "^4.0.3",
+    "marked": "^17.0.5",
     "next": "16.2.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
