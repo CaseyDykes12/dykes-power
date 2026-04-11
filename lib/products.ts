@@ -38,8 +38,8 @@ export const products: Product[] = [
     engine: 'Vanguard® Lithium-Ion Electric',
     horsepower: '48V',
     deckSizes: ['42"'],
-    price: null,
-    msrp: null,
+    price: 10449,
+    msrp: 10449,
     description:
       'The 300e is Ferris\'s all-electric zero-turn — zero emissions, zero oil changes, and up to 3.5 acres per charge with a whisper-quiet ride.',
     features: [
@@ -60,8 +60,8 @@ export const products: Product[] = [
     engine: 'Vanguard® Lithium-Ion Electric',
     horsepower: '48V',
     deckSizes: ['48"'],
-    price: null,
-    msrp: null,
+    price: 11109,
+    msrp: 11109,
     description:
       'The 300e 48" delivers wider electric coverage — zero emissions, zero oil changes, and up to 3.5 acres per charge.',
     features: [

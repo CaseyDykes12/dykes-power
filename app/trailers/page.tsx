@@ -61,9 +61,17 @@ export default function TrailersPage() {
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={trailer.imageUrl} alt={trailer.name} className="w-full h-full object-cover" />
               ) : (
-                <div className="text-center text-gray-600 p-8">
-                  <p className="text-6xl mb-3">🚜</p>
-                  <p className="text-sm">Photos coming soon — call (601) 641-5475</p>
+                <div className="text-center p-8 w-full">
+                  <div className="inline-block bg-[#0a0a0a] border border-gray-700 rounded-xl p-6">
+                    <p className="text-5xl mb-2">🚜</p>
+                    <p className="text-xs text-gray-500 uppercase tracking-widest mb-3">In-Person Viewing</p>
+                    <p className="text-sm text-gray-300 mb-4 max-w-xs mx-auto">
+                      This trailer is on our lot in Collins, MS — come see it in person or call for current details.
+                    </p>
+                    <a href="tel:6016415475" className="text-[#C8C8C8] text-sm font-semibold">
+                      (601) 641-5475
+                    </a>
+                  </div>
                 </div>
               )}
             </div>

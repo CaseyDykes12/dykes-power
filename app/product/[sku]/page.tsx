@@ -163,12 +163,12 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
           </div>
         )}
 
-        {/* ── Video placeholder ────────────────────────────────────── */}
+        {/* ── See more / Talk to team ──────────────────────────────── */}
         <div className="mt-16 bg-[#111] border border-gray-800 rounded-2xl p-8 md:p-12 text-center">
           <p className="text-[#C8C8C8] text-xs font-semibold uppercase tracking-widest mb-3">See It In Action</p>
-          <h2 className="text-2xl font-bold text-white mb-3">Watch the {product.name}</h2>
+          <h2 className="text-2xl font-bold text-white mb-3">Watch the {product.name} on Ferris</h2>
           <p className="text-gray-400 text-sm mb-6 max-w-lg mx-auto">
-            Official Ferris product videos coming soon. In the meantime, visit the Ferris YouTube channel or call us — we know these machines inside and out.
+            Visit the official Ferris YouTube channel for in-action footage, or call our team in Collins, MS — we know every machine we sell inside and out.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <a
@@ -177,7 +177,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
               rel="noopener noreferrer"
               className="btn-outline text-sm px-6 py-2"
             >
-              ▶ Watch on YouTube
+              ▶ Ferris YouTube Channel
             </a>
             <a href="tel:6016415475" className="btn-primary text-sm px-6 py-2">
               Talk to Our Team

@@ -88,8 +88,17 @@ export default function PayPalCheckout({ total, items }: PayPalCheckoutProps) {
 
   if (!clientId) {
     return (
-      <div className="text-xs text-gray-400 text-center py-2">
-        Online checkout coming soon
+      <div className="bg-[#111] border border-gray-800 rounded-lg p-4 text-center">
+        <p className="text-white font-semibold text-sm mb-1">Complete your purchase by phone</p>
+        <p className="text-gray-400 text-xs mb-3">
+          Call our sales team — we accept debit, credit, check, and financing. Pickup at our Collins, MS location.
+        </p>
+        <a
+          href="tel:6016415475"
+          className="inline-block bg-[#D4AF37] text-black font-bold text-sm px-6 py-2.5 rounded-lg hover:bg-[#C8A830] transition-colors"
+        >
+          Call (601) 641-5475
+        </a>
       </div>
     );
   }
