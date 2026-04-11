@@ -18,7 +18,7 @@ export default function PayPalCheckout({ total, items }: PayPalCheckoutProps) {
   const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
   const [error, setError] = useState<string | null>(null);
-  const clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID;
+  const clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID?.trim();
   const rendered = useRef(false);
 
   useEffect(() => {
