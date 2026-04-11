@@ -1394,7 +1394,7 @@ export const products: Product[] = [
     category: 'Stand-On Blowers',
     engine: 'Vanguard® V-Twin',
     horsepower: '18 hp',
-    deckSizes: ['N/A'],
+    deckSizes: [],
     price: 10299,
     msrp: 11329,
     description:
@@ -1416,7 +1416,7 @@ export const products: Product[] = [
     category: 'Stand-On Blowers',
     engine: 'Vanguard® V-Twin',
     horsepower: '23 hp',
-    deckSizes: ['N/A'],
+    deckSizes: [],
     price: 13199,
     msrp: 14519,
     description:
@@ -1438,7 +1438,7 @@ export const products: Product[] = [
     category: 'Stand-On Blowers',
     engine: 'Vanguard® V-Twin',
     horsepower: '35 hp',
-    deckSizes: ['N/A'],
+    deckSizes: [],
     price: 14850,
     msrp: 16335,
     description:
@@ -1487,8 +1487,8 @@ export const products: Product[] = [
     name: 'Ferris Venture XC™ FS3200',
     category: 'Ride-On Spreader/Sprayers',
     engine: 'Kawasaki®',
-    horsepower: 'N/A',
-    deckSizes: ['N/A'],
+    horsepower: '',
+    deckSizes: [],
     price: 13849,
     msrp: 15234,
     description:
@@ -1510,7 +1510,7 @@ export const products: Product[] = [
     category: 'Ride-On Spreader/Sprayers',
     engine: 'Vanguard® V-Twin',
     horsepower: '18 hp',
-    deckSizes: ['N/A'],
+    deckSizes: [],
     price: 16499,
     msrp: 18149,
     description:
@@ -1532,7 +1532,7 @@ export const products: Product[] = [
     category: 'Ride-On Spreader/Sprayers',
     engine: 'Honda® GX200',
     horsepower: '6.5 hp',
-    deckSizes: ['N/A'],
+    deckSizes: [],
     price: 11249,
     msrp: null,
     description:
@@ -1542,7 +1542,6 @@ export const products: Product[] = [
       '16 gallon liquid capacity',
       'Granular spread capability',
       'Compact ride-on design',
-      'See dealer for pricing',
     ],
     imageUrl:
       'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/spreadersprayers/pathfinderxcfs2200/PathfinderXC_PDP_HERO.jpg',
@@ -1553,8 +1552,8 @@ export const products: Product[] = [
     name: 'Ferris Pathfinder™ FS2100',
     category: 'Ride-On Spreader/Sprayers',
     engine: 'Honda®',
-    horsepower: 'N/A',
-    deckSizes: ['N/A'],
+    horsepower: '',
+    deckSizes: [],
     price: 10449,
     msrp: null,
     description:
@@ -1564,7 +1563,6 @@ export const products: Product[] = [
       'Ride-on operator platform',
       'Granular and liquid application',
       'Compact design',
-      'See dealer for pricing',
     ],
     imageUrl:
       'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/spreadersprayers/pathfinderfs2100/PathfinderFS2100_PDP_HERO.jpg',
@@ -1575,8 +1573,8 @@ export const products: Product[] = [
     name: 'Ferris Rover XC™ FS1200',
     category: 'Ride-On Spreader/Sprayers',
     engine: 'Vanguard® 160',
-    horsepower: 'N/A',
-    deckSizes: ['N/A'],
+    horsepower: '',
+    deckSizes: [],
     price: 8249,
     msrp: null,
     description:

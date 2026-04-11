@@ -29,10 +29,14 @@ export default function ProductCard({ product }: { product: Product }) {
           <h3 className="font-bold text-base leading-tight text-white">{product.name}</h3>
         </div>
 
-        <p className="text-gray-400 text-sm mb-1">{product.engine} · {product.horsepower}</p>
-        <p className="text-gray-400 text-sm mb-3">
-          Deck: {product.deckSizes.join(', ')}
+        <p className="text-gray-400 text-sm mb-1">
+          {[product.engine, product.horsepower].filter(Boolean).join(' · ')}
         </p>
+        {product.deckSizes.length > 0 && (
+          <p className="text-gray-400 text-sm mb-3">
+            Deck: {product.deckSizes.join(', ')}
+          </p>
+        )}
 
         <p className="text-gray-500 text-sm line-clamp-2 mb-4 flex-1">{product.description}</p>
 

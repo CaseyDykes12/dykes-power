@@ -96,12 +96,14 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                 { label: 'Horsepower', value: product.horsepower },
                 { label: 'Deck Size(s)', value: product.deckSizes.join(', ') },
                 { label: 'Category', value: product.category },
-              ].map(({ label, value }) => (
-                <div key={label} className="bg-[#111] rounded-lg p-3 border border-gray-800">
-                  <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">{label}</p>
-                  <p className="text-white font-semibold text-sm">{value}</p>
-                </div>
-              ))}
+              ]
+                .filter(({ value }) => value && value.trim() !== '' && value !== 'N/A')
+                .map(({ label, value }) => (
+                  <div key={label} className="bg-[#111] rounded-lg p-3 border border-gray-800">
+                    <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">{label}</p>
+                    <p className="text-white font-semibold text-sm">{value}</p>
+                  </div>
+                ))}
             </div>
 
             {/* Description */}

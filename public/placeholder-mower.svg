@@ -1,6 +1,7 @@
 <svg width='400' height='300' xmlns='http://www.w3.org/2000/svg'>
-  <rect width='400' height='300' fill='#f3f4f6'/>
-  <text x='200' y='130' font-family='Arial' font-size='48' text-anchor='middle' fill='#d1d5db'>🌿</text>
-  <text x='200' y='185' font-family='Arial' font-size='16' text-anchor='middle' fill='#9ca3af'>Ferris Mower</text>
-  <text x='200' y='210' font-family='Arial' font-size='13' text-anchor='middle' fill='#d1d5db'>Image Coming Soon</text>
+  <rect width='400' height='300' fill='#0f0f0f'/>
+  <rect x='60' y='80' width='280' height='140' rx='12' fill='none' stroke='#2a2a2a' stroke-width='2'/>
+  <circle cx='200' cy='150' r='34' fill='none' stroke='#3a3a3a' stroke-width='3'/>
+  <circle cx='200' cy='150' r='10' fill='#3a3a3a'/>
+  <text x='200' y='220' font-family='Arial, sans-serif' font-size='14' font-weight='700' letter-spacing='4' text-anchor='middle' fill='#6b6b6b'>DYKES POWER</text>
 </svg>

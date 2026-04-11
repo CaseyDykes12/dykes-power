@@ -8,7 +8,9 @@ const OLD  = 'https://www.ferrismowers.com/hs-fs/hubfs/Website%20Migration%20202
 const galleryMap: Record<string, string[]> = {
 
   '300s': [
-    `${BASE}/Zero%20Turn%20Mowers/300S/Hero%20Images/FER_300S_FL-PDP_v2.jpg`,
+    '/images/ferris/300s-dykes-hero.jpg',
+    '/images/ferris/300s-dykes-rear.jpg',
+    '/images/ferris/300s-dykes-engine.jpg',
     `${BASE}/Zero%20Turn%20Mowers/300S/Features%20and%20Benefits/Premium%20Features.jpg`,
     `${BASE}/Zero%20Turn%20Mowers/300S/Features%20and%20Benefits/Commercial%20Grade%20Power.jpg`,
     `${BASE}/Zero%20Turn%20Mowers/300S/Features%20and%20Benefits/Fab%20Mowing%20Deck.jpg`,
