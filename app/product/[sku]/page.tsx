@@ -2,12 +2,41 @@ import { products, getProductsBySku } from '@/lib/products';
 import { getProductImages } from '@/lib/productImages';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import AddToCartButton from '@/components/AddToCartButton';
 import ProductGallery from '@/components/ProductGallery';
 import FinancingOptions from '@/components/FinancingOptions';
 
 export async function generateStaticParams() {
   return products.map((p) => ({ sku: p.sku }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ sku: string }> }): Promise<Metadata> {
+  const { sku } = await params;
+  const product = getProductsBySku(sku);
+  if (!product) return {};
+
+  const title = `${product.name} | Dykes Motors Power Equipment — Collins, MS`;
+  const description = `${product.name} — ${product.engine}, ${product.deckSizes.join('/')} deck. ${product.price ? `$${product.price.toLocaleString()} at` : 'Available at'} Dykes Motors Power Equipment, authorized Ferris dealer in Collins, Mississippi.`;
+  const images = getProductImages(product);
+
+  return {
+    title,
+    description,
+    openGraph: {
+      type: 'website',
+      title,
+      description,
+      url: `https://www.dykespower.com/product/${sku}`,
+      images: images.length > 0 ? [{ url: images[0], alt: product.name }] : undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: images.length > 0 ? [images[0]] : undefined,
+    },
+  };
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ sku: string }> }) {
@@ -17,8 +46,47 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
 
   const images = getProductImages(product);
 
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.name,
+    description: product.description,
+    sku: product.sku,
+    image: images,
+    brand: { '@type': 'Brand', name: 'Ferris' },
+    category: product.category,
+    ...(product.price && {
+      offers: {
+        '@type': 'Offer',
+        url: `https://www.dykespower.com/product/${product.sku}`,
+        priceCurrency: 'USD',
+        price: product.price,
+        availability: product.status === 'IN_STOCK'
+          ? 'https://schema.org/InStock'
+          : product.status === 'INBOUND'
+            ? 'https://schema.org/PreOrder'
+            : 'https://schema.org/MadeToOrder',
+        seller: {
+          '@type': 'LocalBusiness',
+          name: 'Dykes Motors Power Equipment',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '3069 Hwy 49',
+            addressLocality: 'Collins',
+            addressRegion: 'MS',
+            postalCode: '39428',
+          },
+        },
+      },
+    }),
+  };
+
   return (
     <div className="bg-[#0f0f0f] min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       {/* Breadcrumb */}
       <div className="bg-[#0a0a0a] border-b border-gray-800 px-4 py-3">
         <nav className="max-w-[1280px] mx-auto text-sm text-gray-500">

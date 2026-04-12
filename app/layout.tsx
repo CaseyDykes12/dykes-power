@@ -10,10 +10,25 @@ const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat
 const bebasNeue = Bebas_Neue({ subsets: ['latin'], weight: '400', variable: '--font-bebas' });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.dykespower.com'),
   title: 'Dykes Motors Power Equipment | Authorized Ferris Dealer — Collins, MS',
   description:
     'Authorized Ferris mower dealer in Collins, Mississippi. Sales, service, repairs, and OEM parts. Zero-turn, stand-on, and walk-behind mowers. Financing available.',
   keywords: 'Ferris mowers, zero turn mower, Collins MS, Dykes Motors, lawn mower dealer Mississippi, mower repair Collins MS, Ferris parts Mississippi',
+  openGraph: {
+    type: 'website',
+    siteName: 'Dykes Motors Power Equipment',
+    title: 'Dykes Motors Power Equipment | Authorized Ferris Dealer — Collins, MS',
+    description: 'Authorized Ferris mower dealer in Collins, Mississippi. Sales, service, repairs, and OEM parts. Zero-turn, stand-on, and walk-behind mowers.',
+    url: 'https://www.dykespower.com',
+    images: [{ url: '/df-logo.png', width: 800, height: 600, alt: 'Dykes Motors Power Equipment' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dykes Motors Power Equipment | Authorized Ferris Dealer — Collins, MS',
+    description: 'Authorized Ferris mower dealer in Collins, Mississippi. Sales, service, repairs, and OEM parts.',
+    images: ['/df-logo.png'],
+  },
 };
 
 const localBusinessSchema = {
@@ -23,8 +38,8 @@ const localBusinessSchema = {
   description:
     'Authorized Ferris mower dealer in Collins, Mississippi offering sales, service, repairs, and OEM parts. A division of Dykes Motors.',
   url: 'https://www.dykespower.com',
-  logo: 'https://dykespower.com/df-logo.png',
-  image: 'https://dykespower.com/df-logo.png',
+  logo: 'https://www.dykespower.com/df-logo.png',
+  image: 'https://www.dykespower.com/df-logo.png',
   telephone: ['+16016415475', '+16013362541'],
   email: 'info@dykesmotors.com',
   address: {

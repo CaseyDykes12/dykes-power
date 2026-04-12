@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { products } from '@/lib/products';
 import { getAllPosts } from '@/lib/blog';
 
-const BASE = 'https://dykespower.com';
+const BASE = 'https://www.dykespower.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/financing`, priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${BASE}/blog`, priority: 0.8, changeFrequency: 'daily' as const },
     { url: `${BASE}/contact`, priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: `${BASE}/trailers`, priority: 0.7, changeFrequency: 'weekly' as const },
     { url: `${BASE}/shipping`, priority: 0.5, changeFrequency: 'yearly' as const },
     { url: `${BASE}/privacy`, priority: 0.5, changeFrequency: 'yearly' as const },
     { url: `${BASE}/terms`, priority: 0.5, changeFrequency: 'yearly' as const },
