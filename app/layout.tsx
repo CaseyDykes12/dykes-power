@@ -162,7 +162,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window,document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1533582374610733');
+            fbq('init', '1199932965362268');
             fbq('track', 'PageView');
           `}
         </Script>
@@ -171,7 +171,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             height="1"
             width="1"
             style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=1533582374610733&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=1199932965362268&ev=PageView&noscript=1"
             alt=""
           />
         </noscript>
