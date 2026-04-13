@@ -106,20 +106,13 @@ Submitted: ${timestamp}
       }),
     });
 
-    try {
-      const [adfRes, backupRes] = await Promise.all([adfPromise, backupPromise]);
-
-      if (!adfRes.ok) {
-        const errBody = await adfRes.text();
-        console.error('ADF email to Tecobi failed:', errBody);
-      }
-      if (!backupRes.ok) {
-        const errBody = await backupRes.text();
-        console.error('Backup email send failed:', errBody);
-      }
-    } catch (err) {
-      console.error('Email send failed:', err);
-    }
+    // Start sending but don't await — respond to the user immediately
+    Promise.all([adfPromise, backupPromise])
+      .then(async ([adfRes, backupRes]) => {
+        if (!adfRes.ok) console.error('ADF email to Tecobi failed:', await adfRes.text());
+        if (!backupRes.ok) console.error('Backup email send failed:', await backupRes.text());
+      })
+      .catch((err) => console.error('Email send failed:', err));
   } else {
     console.log('LEAD RECEIVED (no email provider configured):\n', plainBody);
     console.log('ADF/XML:\n', adfXml);
