@@ -70,7 +70,9 @@ const localBusinessSchema = {
     },
     sameAs: [
       'https://www.dykesmotors.com',
+      'https://www.facebook.com/DykesMotor',
       'https://www.facebook.com/DykesMotors',
+      'https://maps.google.com/?cid=3714816284108870885',
     ],
   },
   openingHoursSpecification: [
@@ -123,7 +125,9 @@ const localBusinessSchema = {
   },
   sameAs: [
     'https://www.dykesmotors.com',
+    'https://www.facebook.com/DykesMotor',
     'https://www.facebook.com/DykesMotors',
+    'https://maps.google.com/?cid=3714816284108870885',
   ],
 };
 
