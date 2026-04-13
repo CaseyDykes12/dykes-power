@@ -192,7 +192,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3 mb-4">
-              <AddToCartButton product={product} />
+              <AddToCartButton />
               <Link href="/contact" className="btn-outline text-center py-3 px-6">
                 Request a Quote
               </Link>

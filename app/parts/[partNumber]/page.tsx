@@ -82,7 +82,7 @@ export default async function PartDetailPage({ params }: { params: Promise<{ par
             {/* CTAs */}
             <div className="mb-8">
               {part.price !== null ? (
-                <AddPartToCartButton part={part} />
+                <AddPartToCartButton />
               ) : (
                 <a href="tel:6013362541" className="btn-primary px-6 py-3 inline-block">
                   Call to Order — (601) 336-2541

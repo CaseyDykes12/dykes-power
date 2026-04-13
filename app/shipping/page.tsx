@@ -55,6 +55,27 @@ export default function ShippingPage() {
       </section>
 
       <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">Refunds</h2>
+        <p className="text-gray-300 mb-4">
+          Once your return is received and inspected, we will process your refund within 5-7 business days.
+        </p>
+        <ul className="space-y-3 text-gray-300">
+          <li>
+            <span className="font-semibold text-white">Refund Method:</span> Refunds are issued to the original payment method. If you paid by credit or debit card, the refund will appear on your statement within 5-10 business days after processing. If you paid by cash or check, a refund check will be mailed to the address on file.
+          </li>
+          <li>
+            <span className="font-semibold text-white">Processing Time:</span> Please allow up to 7 business days from the date we receive the returned item for the refund to be processed. You will be notified by phone or email once your refund has been issued.
+          </li>
+          <li>
+            <span className="font-semibold text-white">Return Shipping:</span> The customer is responsible for all return shipping costs unless the item was received damaged or defective. For equipment returns, please contact us to arrange pickup or delivery — do not ship large equipment without prior authorization.
+          </li>
+          <li>
+            <span className="font-semibold text-white">Restocking Fees:</span> Restocking fees (up to 15% for equipment) will be deducted from the refund amount where applicable.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mb-10">
         <h2 className="text-xl font-bold mb-3">Warranty</h2>
         <p className="text-gray-300 mb-4">
           All new Ferris equipment is sold with the manufacturer's warranty. Warranty service is performed at our dealership by our certified technicians. Contact our service department at{' '}

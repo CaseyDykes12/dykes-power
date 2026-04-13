@@ -1,21 +1,9 @@
 'use client';
-import { Product } from '@/lib/products';
-import { addToCart } from '@/lib/cart';
-import { useState } from 'react';
 
-export default function AddToCartButton({ product }: { product: Product }) {
-  const [added, setAdded] = useState(false);
-
-  const handleAdd = () => {
-    addToCart(product);
-    window.dispatchEvent(new Event('cart-updated'));
-    setAdded(true);
-    setTimeout(() => setAdded(false), 2000);
-  };
-
+export default function AddToCartButton() {
   return (
-    <button onClick={handleAdd} className="btn-primary flex-1 text-center">
-      {added ? '✓ Added to Cart' : 'Add to Cart'}
-    </button>
+    <a href="tel:6016415475" className="btn-primary flex-1 text-center py-3">
+      Call to Order: (601) 641-5475
+    </a>
   );
 }

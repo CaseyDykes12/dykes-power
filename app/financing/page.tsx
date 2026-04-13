@@ -1,6 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
-import { getCart, cartTotal } from '@/lib/cart';
+import { useState } from 'react';
 import { products } from '@/lib/products';
 
 const US_STATES = [
@@ -68,15 +67,6 @@ export default function FinancingPage() {
   const [error, setError] = useState('');
   const [prequalResult, setPrequalResult] = useState<PrequalResult>(null);
   const [submitted, setSubmitted] = useState(false);
-
-  useEffect(() => {
-    const cart = getCart();
-    if (cart.items.length > 0) {
-      const cartItem = cart.items[0];
-      const match = FINANCEABLE_PRODUCTS.find((p) => p.sku === cartItem.sku);
-      if (match) setSelectedSku(match.sku);
-    }
-  }, []);
 
   const fieldOf = (
     obj: Record<string, string>,

@@ -45,10 +45,9 @@ export default function Navbar() {
 
         {/* Right side */}
         <div className="flex items-center gap-4">
-          <CartIcon />
-          <Link href="/cart" className="hidden md:inline-block btn-primary text-sm py-2 px-4">
-            Checkout
-          </Link>
+          <a href="tel:6016415475" className="hidden md:inline-block btn-primary text-sm py-2 px-4">
+            Call (601) 641-5475
+          </a>
           {/* Mobile menu button */}
           <button
             className="md:hidden text-white"
@@ -79,7 +78,7 @@ export default function Navbar() {
           <Link href="/blog" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Blog</Link>
           <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Contact</Link>
           <a href="https://www.dykesmotors.com/inventory" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Auto Inventory</a>
-          <Link href="/cart" onClick={() => setOpen(false)} className="btn-primary text-center">Checkout</Link>
+          <a href="tel:6016415475" onClick={() => setOpen(false)} className="btn-primary text-center">Call (601) 641-5475</a>
         </div>
       )}
     </header>
