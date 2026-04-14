@@ -11,22 +11,23 @@ const bebasNeue = Bebas_Neue({ subsets: ['latin'], weight: '400', variable: '--f
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.dykespower.com'),
-  title: 'Dykes Motors Power Equipment | Authorized Ferris Dealer — Collins, MS',
+  title: 'Ferris Mower Dealer | Collins MS | Dykes Motors',
   description:
-    'Authorized Ferris mower dealer in Collins, Mississippi. Sales, service, repairs, and OEM parts. Zero-turn, stand-on, and walk-behind mowers. Financing available.',
+    'Authorized Ferris mower dealer in Collins, MS. Zero-turns, stand-ons, parts, and service. Call (601) 641-5475.',
   keywords: 'Ferris mowers, zero turn mower, Collins MS, Dykes Motors, lawn mower dealer Mississippi, mower repair Collins MS, Ferris parts Mississippi',
   openGraph: {
     type: 'website',
     siteName: 'Dykes Motors Power Equipment',
-    title: 'Dykes Motors Power Equipment | Authorized Ferris Dealer — Collins, MS',
-    description: 'Authorized Ferris mower dealer in Collins, Mississippi. Sales, service, repairs, and OEM parts. Zero-turn, stand-on, and walk-behind mowers.',
+    title: 'Ferris Mower Dealer | Collins MS | Dykes Motors',
+    description:
+      'Authorized Ferris mower dealer in Collins, MS. Zero-turns, stand-ons, parts, and service. Call (601) 641-5475.',
     url: 'https://www.dykespower.com',
     images: [{ url: '/df-logo.png', width: 800, height: 600, alt: 'Dykes Motors Power Equipment' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dykes Motors Power Equipment | Authorized Ferris Dealer — Collins, MS',
-    description: 'Authorized Ferris mower dealer in Collins, Mississippi. Sales, service, repairs, and OEM parts.',
+    title: 'Ferris Mower Dealer | Collins MS | Dykes Motors',
+    description: 'Authorized Ferris mower dealer in Collins, MS. Call (601) 641-5475.',
     images: ['/df-logo.png'],
   },
 };

@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { getAllPosts } from '@/lib/blog';
 
 export const metadata: Metadata = {
-  title: 'Mower Tips, Guides & News | Dykes Motors Power Equipment Blog',
+  title: 'Ferris Mower Tips & Guides | Dykes Motors, Collins MS',
   description:
-    'Expert advice on Ferris mowers, maintenance tips, buying guides, and lawn care from your authorized Ferris dealer in Collins, Mississippi.',
+    'Buying advice, maintenance tips, and Ferris mower guides from your authorized dealer in Collins, MS.',
   keywords: 'Ferris mower tips, zero turn mower guide, lawn care Mississippi, mower maintenance, Collins MS',
 };
 

@@ -44,9 +44,18 @@ export default function Navbar() {
         </nav>
 
         {/* Right side */}
-        <div className="flex items-center gap-4">
-          <a href="tel:6016415475" className="hidden md:inline-block btn-primary text-sm py-2 px-4">
-            Call (601) 641-5475
+        <div className="flex items-center gap-3">
+          {/* Call button — visible on ALL sizes (mobile shows phone icon only, desktop shows full number) */}
+          <a
+            href="tel:6016415475"
+            aria-label="Call Dykes Motors Power Equipment at (601) 641-5475"
+            className="btn-primary text-sm py-2 px-3 md:px-4 inline-flex items-center gap-2"
+          >
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+            <span className="hidden md:inline">Call (601) 641-5475</span>
+            <span className="md:hidden">Call</span>
           </a>
           {/* Mobile menu button */}
           <button

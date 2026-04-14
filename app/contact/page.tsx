@@ -70,39 +70,48 @@ export default function ContactPage() {
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold mb-1">Name *</label>
+                <label className="block text-sm font-semibold mb-1" htmlFor="contact-name">Name *</label>
                 <input
                   required
+                  id="contact-name"
                   name="name"
+                  autoComplete="name"
                   value={form.name}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-base focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
                   placeholder="John Smith"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold mb-1">Phone</label>
+                <label className="block text-sm font-semibold mb-1" htmlFor="contact-phone">Phone</label>
                 <input
+                  id="contact-phone"
+                  type="tel"
+                  inputMode="tel"
                   name="phone"
+                  autoComplete="tel"
                   value={form.phone}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-base focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
                   placeholder="(601) 555-0123"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-semibold mb-1">Email *</label>
+              <label className="block text-sm font-semibold mb-1" htmlFor="contact-email">Email *</label>
               <input
                 required
+                id="contact-email"
                 type="email"
+                inputMode="email"
                 name="email"
+                autoComplete="email"
                 value={form.email}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-base focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
                 placeholder="john@example.com"
               />
             </div>
