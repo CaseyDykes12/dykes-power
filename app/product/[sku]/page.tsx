@@ -61,20 +61,43 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
         url: `https://www.dykespower.com/product/${product.sku}`,
         priceCurrency: 'USD',
         price: product.price,
+        itemCondition: 'https://schema.org/NewCondition',
         availability: product.status === 'IN_STOCK'
           ? 'https://schema.org/InStock'
           : product.status === 'INBOUND'
             ? 'https://schema.org/PreOrder'
             : 'https://schema.org/MadeToOrder',
+        hasMerchantReturnPolicy: {
+          '@type': 'MerchantReturnPolicy',
+          applicableCountry: 'US',
+          returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+          merchantReturnDays: 7,
+          returnMethod: 'https://schema.org/ReturnAtKiosk',
+          returnFees: 'https://schema.org/RestockingFees',
+        },
+        shippingDetails: {
+          '@type': 'OfferShippingDetails',
+          shippingDestination: {
+            '@type': 'DefinedRegion',
+            addressCountry: 'US',
+          },
+          deliveryTime: {
+            '@type': 'ShippingDeliveryTime',
+            handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 3, unitCode: 'DAY' },
+            transitTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 7, unitCode: 'DAY' },
+          },
+        },
         seller: {
           '@type': 'LocalBusiness',
           name: 'Dykes Motors Power Equipment',
+          telephone: '+16016415475',
           address: {
             '@type': 'PostalAddress',
             streetAddress: '3069 Hwy 49',
             addressLocality: 'Collins',
             addressRegion: 'MS',
             postalCode: '39428',
+            addressCountry: 'US',
           },
         },
       },
@@ -204,6 +227,19 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
               <Link href="/contact" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg">
                 💬 Request a Quote
               </Link>
+            </div>
+
+            {/* Trust & Policy Links */}
+            <div className="mt-6 pt-4 border-t border-gray-800">
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500">
+                <Link href="/shipping" className="hover:text-gray-300">Shipping & Returns</Link>
+                <Link href="/financing" className="hover:text-gray-300">Financing Options</Link>
+                <Link href="/service" className="hover:text-gray-300">Service & Warranty</Link>
+                <Link href="/privacy" className="hover:text-gray-300">Privacy Policy</Link>
+              </div>
+              <p className="text-xs text-gray-600 mt-2">
+                Authorized Ferris dealer · Collins, MS · All manufacturer warranties honored
+              </p>
             </div>
           </div>
         </div>
