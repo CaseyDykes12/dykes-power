@@ -70,10 +70,8 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
         hasMerchantReturnPolicy: {
           '@type': 'MerchantReturnPolicy',
           applicableCountry: 'US',
-          returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
-          merchantReturnDays: 7,
-          returnMethod: 'https://schema.org/ReturnAtKiosk',
-          returnFees: 'https://schema.org/RestockingFees',
+          returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+          merchantReturnLink: 'https://www.dykespower.com/shipping-returns',
         },
         shippingDetails: {
           '@type': 'OfferShippingDetails',
@@ -232,7 +230,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
             {/* Trust & Policy Links */}
             <div className="mt-6 pt-4 border-t border-gray-800">
               <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500">
-                <Link href="/shipping" className="hover:text-gray-300">Shipping & Returns</Link>
+                <Link href="/shipping-returns" className="hover:text-gray-300">Shipping & Returns</Link>
                 <Link href="/financing" className="hover:text-gray-300">Financing Options</Link>
                 <Link href="/service" className="hover:text-gray-300">Service & Warranty</Link>
                 <Link href="/privacy" className="hover:text-gray-300">Privacy Policy</Link>

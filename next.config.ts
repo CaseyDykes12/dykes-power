@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         destination: '/catalog',
         permanent: true,
       },
+      {
+        source: '/shipping',
+        destination: '/shipping-returns',
+        permanent: true,
+      },
     ];
   },
   images: {
