@@ -81,13 +81,7 @@ export default async function PartDetailPage({ params }: { params: Promise<{ par
 
             {/* CTAs */}
             <div className="mb-8">
-              {part.price !== null ? (
-                <AddPartToCartButton />
-              ) : (
-                <a href="tel:6013362541" className="btn-primary px-6 py-3 inline-block">
-                  Call to Order — (601) 336-2541
-                </a>
-              )}
+              <AddPartToCartButton part={part} />
               <p className="text-gray-600 text-xs mt-3">
                 Questions? Call{' '}
                 <a href="tel:6013362541" className="hover:text-[#C8C8C8] transition-colors">

@@ -238,11 +238,24 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3 mb-4">
-              <AddToCartButton />
+              <AddToCartButton product={product} />
               <Link href="/contact" className="btn-outline text-center py-3 px-6">
                 Request a Quote
               </Link>
             </div>
+            {product.price && product.price >= 5000 && (
+              <div className="mb-4">
+                <Link
+                  href={`/checkout/deposit?sku=${product.sku}`}
+                  className="block w-full text-center bg-[#1a1a1a] border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black font-bold py-3 px-6 rounded-lg transition-colors"
+                >
+                  Reserve with $1,000 Deposit →
+                </Link>
+                <p className="text-xs text-gray-500 mt-2 text-center">
+                  Holds your machine. Balance due at pickup or delivery.
+                </p>
+              </div>
+            )}
             <div className="flex flex-col sm:flex-row gap-3">
               <a href="tel:6016415475" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg flex-1">
                 📞 Sales: (601) 641-5475
