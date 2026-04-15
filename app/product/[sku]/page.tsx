@@ -3,7 +3,6 @@ import { getProductImages } from '@/lib/productImages';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import AddToCartButton from '@/components/AddToCartButton';
 import ProductGallery from '@/components/ProductGallery';
 import FinancingOptions from '@/components/FinancingOptions';
 
@@ -45,6 +44,27 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
   if (!product) notFound();
 
   const images = getProductImages(product);
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.dykespower.com' },
+      { '@type': 'ListItem', position: 2, name: 'Catalog', item: 'https://www.dykespower.com/catalog' },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: product.category,
+        item: `https://www.dykespower.com/catalog?category=${encodeURIComponent(product.category)}`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: product.name,
+        item: `https://www.dykespower.com/product/${product.sku}`,
+      },
+    ],
+  };
 
   const productSchema = {
     '@context': 'https://schema.org',
@@ -107,6 +127,10 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* Breadcrumb */}
       <div className="bg-[#0a0a0a] border-b border-gray-800 px-4 py-3">
@@ -213,17 +237,19 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3 mb-4">
-              <AddToCartButton />
-              <Link href="/contact" className="btn-outline text-center py-3 px-6">
+              <a href="tel:6016415475" className="btn-primary text-center py-3 px-6 flex-1">
+                📞 Call (601) 641-5475
+              </a>
+              <Link href="/contact" className="btn-outline text-center py-3 px-6 flex-1">
                 Request a Quote
               </Link>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="tel:6016415475" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg">
-                📞 Sales: (601) 641-5475
-              </a>
-              <Link href="/contact" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg">
-                💬 Request a Quote
+              <Link href="/financing" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg flex-1">
+                💳 Apply for Financing
+              </Link>
+              <Link href="/contact" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg flex-1">
+                📍 Visit Our Showroom
               </Link>
             </div>
 
@@ -258,7 +284,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={img}
-                    alt={`${product.name} — detail ${i + 2}`}
+                    alt={`${product.name} — ${product.deckSizes.join('/')} deck, ${product.engine} — view ${i + 2}`}
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>

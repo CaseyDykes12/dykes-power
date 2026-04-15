@@ -1,7 +1,6 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
-import CartIcon from './CartIcon';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

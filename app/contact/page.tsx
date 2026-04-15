@@ -167,10 +167,20 @@ export default function ContactPage() {
           <div className="bg-black text-white rounded-xl p-6">
             <h2 className="text-xl font-bold mb-4 text-[#C8C8C8]">Dykes Motors Power Equipment</h2>
             <div className="space-y-3 text-sm text-gray-300">
-              <p>📍 Collins, Mississippi 39428</p>
+              <p>📍 3069 Hwy 49, Collins, MS 39428</p>
               <p>📞 Sales: <a href="tel:6016415475" className="text-[#C8C8C8]">(601) 641-5475</a></p>
               <p>📞 Service &amp; Parts: <a href="tel:6013362541" className="text-[#C8C8C8]">(601) 336-2541</a></p>
               <p>✉️ <a href="mailto:info@dykesmotors.com" className="text-[#C8C8C8]">info@dykesmotors.com</a></p>
+              <p>
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=3069+Hwy+49+Collins+MS+39428"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#C8C8C8] underline"
+                >
+                  Get directions →
+                </a>
+              </p>
             </div>
             <div className="mt-6 pt-6 border-t border-gray-700">
               <p className="text-sm font-semibold text-white mb-2">Sales Hours</p>
@@ -186,6 +196,19 @@ export default function ContactPage() {
                 <p>Sunday: Closed</p>
               </div>
             </div>
+          </div>
+
+          <div className="rounded-xl overflow-hidden border border-gray-200">
+            <iframe
+              title="Dykes Motors Power Equipment location map"
+              src="https://maps.google.com/maps?q=3069+Hwy+49+Collins+MS+39428&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="300"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </div>
 
           <div className="bg-gray-50 rounded-xl p-6">
