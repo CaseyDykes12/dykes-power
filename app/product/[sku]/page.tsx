@@ -3,6 +3,7 @@ import { getProductImages } from '@/lib/productImages';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import AddToCartButton from '@/components/AddToCartButton';
 import ProductGallery from '@/components/ProductGallery';
 import FinancingOptions from '@/components/FinancingOptions';
 
@@ -237,19 +238,17 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3 mb-4">
-              <a href="tel:6016415475" className="btn-primary text-center py-3 px-6 flex-1">
-                📞 Call (601) 641-5475
-              </a>
-              <Link href="/contact" className="btn-outline text-center py-3 px-6 flex-1">
+              <AddToCartButton />
+              <Link href="/contact" className="btn-outline text-center py-3 px-6">
                 Request a Quote
               </Link>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
+              <a href="tel:6016415475" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg flex-1">
+                📞 Sales: (601) 641-5475
+              </a>
               <Link href="/financing" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg flex-1">
                 💳 Apply for Financing
-              </Link>
-              <Link href="/contact" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg flex-1">
-                📍 Visit Our Showroom
               </Link>
             </div>
 

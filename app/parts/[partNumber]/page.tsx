@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { parts, getPartByNumber } from '@/lib/parts';
+import AddPartToCartButton from '@/components/AddPartToCartButton';
 
 export function generateStaticParams() {
   return parts.map((p) => ({ partNumber: p.partNumber }));
@@ -80,13 +81,18 @@ export default async function PartDetailPage({ params }: { params: Promise<{ par
 
             {/* CTAs */}
             <div className="mb-8">
-              <a href="tel:6013362541" className="btn-primary px-6 py-3 inline-block">
-                📞 Call to Order — (601) 336-2541
-              </a>
+              {part.price !== null ? (
+                <AddPartToCartButton />
+              ) : (
+                <a href="tel:6013362541" className="btn-primary px-6 py-3 inline-block">
+                  Call to Order — (601) 336-2541
+                </a>
+              )}
               <p className="text-gray-600 text-xs mt-3">
-                {part.inStock
-                  ? 'In stock — call the parts desk to confirm and reserve.'
-                  : 'Call the parts desk for availability and ordering.'}
+                Questions? Call{' '}
+                <a href="tel:6013362541" className="hover:text-[#C8C8C8] transition-colors">
+                  (601) 336-2541
+                </a>
               </p>
             </div>
 

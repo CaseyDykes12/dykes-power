@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
+import CartIcon from './CartIcon';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -44,6 +45,7 @@ export default function Navbar() {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
+          <CartIcon />
           {/* Call button — visible on ALL sizes (mobile shows phone icon only, desktop shows full number) */}
           <a
             href="tel:6016415475"
