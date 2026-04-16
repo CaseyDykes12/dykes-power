@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { parts, getPartByNumber } from '@/lib/parts';
 import AddPartToCartButton from '@/components/AddPartToCartButton';
 
@@ -7,13 +8,71 @@ export function generateStaticParams() {
   return parts.map((p) => ({ partNumber: p.partNumber }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ partNumber: string }> }): Promise<Metadata> {
+  const { partNumber } = await params;
+  const part = getPartByNumber(partNumber);
+  if (!part) return {};
+  const title = `${part.name} — Ferris OEM Part #${part.partNumber} | Dykes Motors`;
+  const description = `${part.name} (Part #${part.partNumber}). ${part.description} Fits: ${part.fits.slice(0, 4).join(', ')}. ${part.inStock ? 'In stock' : 'Available to order'} at Dykes Motors Power Equipment, Collins, MS.`;
+  return {
+    title,
+    description,
+    alternates: { canonical: `https://www.dykespower.com/parts/${partNumber}` },
+    openGraph: {
+      title,
+      description,
+      url: `https://www.dykespower.com/parts/${partNumber}`,
+      type: 'website',
+    },
+  };
+}
+
 export default async function PartDetailPage({ params }: { params: Promise<{ partNumber: string }> }) {
   const { partNumber } = await params;
   const part = getPartByNumber(partNumber);
   if (!part) notFound();
 
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: part.name,
+    description: part.description,
+    sku: part.partNumber,
+    image: part.imageUrl.startsWith('/') ? `https://www.dykespower.com${part.imageUrl}` : part.imageUrl,
+    brand: { '@type': 'Brand', name: 'Ferris' },
+    category: part.category,
+    ...(part.price !== null && {
+      offers: {
+        '@type': 'Offer',
+        url: `https://www.dykespower.com/parts/${part.partNumber}`,
+        priceCurrency: 'USD',
+        price: part.price,
+        itemCondition: 'https://schema.org/NewCondition',
+        availability: part.inStock ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
+        seller: {
+          '@type': 'LocalBusiness',
+          name: 'Dykes Motors Power Equipment',
+          telephone: '+16013362541',
+        },
+      },
+    }),
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.dykespower.com' },
+      { '@type': 'ListItem', position: 2, name: 'Parts', item: 'https://www.dykespower.com/parts' },
+      { '@type': 'ListItem', position: 3, name: part.category, item: `https://www.dykespower.com/parts?category=${encodeURIComponent(part.category)}` },
+      { '@type': 'ListItem', position: 4, name: part.name, item: `https://www.dykespower.com/parts/${part.partNumber}` },
+    ],
+  };
+
   return (
     <div className="bg-[#0f0f0f] min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Breadcrumb */}
       <div className="bg-[#0a0a0a] border-b border-gray-800 px-4 py-4">
         <div className="max-w-[1280px] mx-auto text-sm text-gray-500">

@@ -17,6 +17,44 @@ export const metadata: Metadata = {
   },
 };
 
+const geoSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Dykes Motors Power Equipment',
+  description: 'Authorized Ferris mower dealer serving Hattiesburg, Petal, Oak Grove, Purvis, and the Pine Belt region. Located 45 minutes north on Highway 49 in Collins, MS.',
+  url: 'https://www.dykespower.com/ferris-mowers-hattiesburg-ms',
+  telephone: '+16016415475',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '3069 Hwy 49',
+    addressLocality: 'Collins',
+    addressRegion: 'MS',
+    postalCode: '39428',
+    addressCountry: 'US',
+  },
+  geo: { '@type': 'GeoCoordinates', latitude: 31.6454, longitude: -89.5548 },
+  areaServed: [
+    { '@type': 'City', name: 'Hattiesburg' },
+    { '@type': 'City', name: 'Petal' },
+    { '@type': 'City', name: 'Oak Grove' },
+    { '@type': 'City', name: 'Purvis' },
+    { '@type': 'AdministrativeArea', name: 'Pine Belt Region' },
+  ],
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '18:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '09:00', closes: '14:00' },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.dykespower.com' },
+    { '@type': 'ListItem', position: 2, name: 'Ferris Mowers Near Hattiesburg, MS', item: 'https://www.dykespower.com/ferris-mowers-hattiesburg-ms' },
+  ],
+};
+
 export default function FerrisMowersHattiesburgPage() {
   const featured = products
     .filter((p) => p.tag === 'Best Seller' || p.tag === 'Popular')
@@ -24,6 +62,8 @@ export default function FerrisMowersHattiesburgPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(geoSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <section className="bg-[#0a0a0a] text-white px-4 py-12 sm:py-16 border-b border-gray-800">
         <div className="max-w-3xl mx-auto">

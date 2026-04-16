@@ -27,10 +27,11 @@ export function getAllPosts(): BlogPost[] {
         date: data.date ?? '',
         description: data.description ?? '',
         category: data.category ?? 'General',
-        keywords: data.keywords ?? '',
+        keywords: Array.isArray(data.keywords) ? data.keywords.join(', ') : (data.keywords ?? ''),
         content,
       } as BlogPost;
     })
+    .filter((post) => post.title && post.date && !isNaN(new Date(post.date).getTime()))
     .sort((a, b) => (a.date > b.date ? -1 : 1));
 }
 

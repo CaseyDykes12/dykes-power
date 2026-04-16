@@ -8,9 +8,46 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.dykespower.com/about' },
 };
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Dykes Motors Power Equipment',
+  url: 'https://www.dykespower.com',
+  logo: 'https://www.dykespower.com/df-logo.png',
+  description: 'Authorized Ferris mower dealer in Collins, Mississippi. Family-owned and operated — sales, service, parts, and financing for commercial and residential mowers.',
+  foundingDate: '2025-09',
+  telephone: '+16016415475',
+  email: 'info@dykesmotors.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '3069 Hwy 49',
+    addressLocality: 'Collins',
+    addressRegion: 'MS',
+    postalCode: '39428',
+    addressCountry: 'US',
+  },
+  sameAs: ['https://www.facebook.com/DykesMotor'],
+  parentOrganization: {
+    '@type': 'AutoDealer',
+    name: 'Dykes Motors',
+    url: 'https://www.dykesmotors.com',
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.dykespower.com' },
+    { '@type': 'ListItem', position: 2, name: 'About Us', item: 'https://www.dykespower.com/about' },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <div className="bg-[#0f0f0f] min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="max-w-3xl mx-auto px-4 py-16">
         <h1 className="text-3xl font-bold mb-2 text-white">About Dykes Motors Power Equipment</h1>
         <p className="text-gray-400 mb-10">Authorized Ferris Dealer — Collins, Mississippi</p>
