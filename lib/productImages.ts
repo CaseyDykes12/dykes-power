@@ -8,6 +8,8 @@ const OLD  = 'https://www.ferrismowers.com/hs-fs/hubfs/Website%20Migration%20202
 const galleryMap: Record<string, string[]> = {
 
   '300s': [
+    '/images/ferris/lot/300s-lot.jpg',
+    '/images/ferris/lot/300s-lot-2.jpg',
     '/images/ferris/300s-dykes-hero.jpg',
     '/images/ferris/300s-dykes-rear.jpg',
     '/images/ferris/300s-dykes-engine.jpg',
@@ -38,6 +40,8 @@ const galleryMap: Record<string, string[]> = {
   ],
 
   '500s': [
+    '/images/ferris/lot/500s-lot.jpg',
+    '/images/ferris/lot/500s-lot-2.jpg',
     `${BASE}/Zero%20Turn%20Mowers/500/Product%20Images/FER_Products_500S.jpg`,
     `${OLD}/Zero%20Turn%20Mowers/500S/Features%20and%20Benefits/FER_500S_FB-Suspension.jpg`,
     `${OLD}/Zero%20Turn%20Mowers/500S/Features%20and%20Benefits/FER_500S_FB-Engine.jpg`,
@@ -49,6 +53,8 @@ const galleryMap: Record<string, string[]> = {
   ],
 
   'is600': [
+    '/images/ferris/lot/is600-lot.jpg',
+    '/images/ferris/lot/is600-lot-2.jpg',
     `${BASE}/Zero%20Turn%20Mowers/IS600/Product%20Images/FER_PDP_IS600_Hero_FR.jpg`,
     `${BASE}/Zero%20Turn%20Mowers/IS600/Features%20and%20Benefits/FER_600_FB-Engine.jpeg`,
     `${OLD}/Zero%20Turn%20Mowers/IS600/Features%20and%20Benefits/FER_PDP_IS600_FB-Operator.jpg`,
@@ -74,6 +80,9 @@ const galleryMap: Record<string, string[]> = {
   ],
 
   'isx800': [
+    '/images/ferris/lot/isx800-lot.jpg',
+    '/images/ferris/lot/isx800-lot-2.jpg',
+    '/images/ferris/lot/isx800-lot-3.jpg',
     `${BASE}/Zero%20Turn%20Mowers/ISX800/Product%20Images/FER_ISX800_FL-PDP.jpg`,
     `${BASE}/Zero%20Turn%20Mowers/ISX800/Features%20and%20Benefits/FER_PDP_IS800_FB-Oil.jpeg`,
     `${BASE}/Zero%20Turn%20Mowers/ISX800/Features%20and%20Benefits/FER_PDP_IS800_FB-CuttingSystem.jpeg`,
@@ -95,6 +104,8 @@ const galleryMap: Record<string, string[]> = {
   ],
 
   'isx3300': [
+    '/images/ferris/lot/isx3300-lot.jpg',
+    '/images/ferris/lot/isx3300-lot-2.jpg',
     `${BASE}/Zero%20Turn%20Mowers/ISX3300/Product%20Images/FER_3300_FR.jpeg`,
     `${BASE}/Zero%20Turn%20Mowers/ISX3300/Features%20and%20Benefits/FER_PDP_ISX3300_FB-CuttingSystem.jpeg`,
     `${BASE}/Zero%20Turn%20Mowers/ISX3300/Features%20and%20Benefits/FER_PDP_ISX3300_FB-USB.jpeg`,
@@ -145,6 +156,8 @@ const galleryMap: Record<string, string[]> = {
   ],
 
   'srsz2': [
+    '/images/ferris/lot/srsz2-lot.jpg',
+    '/images/ferris/lot/srsz2-lot-2.jpg',
     `${BASE}/Stand-On%20Mowers/Z2/Product%20Images/FER_PDP_SRSZ2_Hero_FL.jpg`,
     `${BASE}/Stand-On%20Mowers/Z2/Product%20Images/FER_PDP_Z2_Hero-FR.jpg`,
     `${BASE}/Stand-On%20Mowers/Z2/Product%20Images/FER_PDP_Z2_Hero-L.jpg`,
@@ -160,6 +173,8 @@ const galleryMap: Record<string, string[]> = {
   ],
 
   'srsz3x': [
+    '/images/ferris/lot/srsz3-lot.jpg',
+    '/images/ferris/lot/srsz3-lot-2.jpg',
     `${BASE}/Stand-On%20Mowers/Z3/Product%20Images/FER_PDP_SRSZ3X_Hero_FL.jpg`,
     `${BASE}/Stand-On%20Mowers/Z3/Product%20Images/FER_PDP_Z3X_Hero-FR.jpg`,
     `${BASE}/Stand-On%20Mowers/Z3/Product%20Images/FER_PDP_Z3X_Hero-L.jpg`,

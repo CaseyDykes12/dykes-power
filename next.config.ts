@@ -21,6 +21,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'www.ferrismowers.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'imagescdn.dealercarsearch.com',
+      },
     ],
   },
 };

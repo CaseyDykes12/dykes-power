@@ -2,6 +2,7 @@ import { products, getProductsBySku } from '@/lib/products';
 import { getProductImages } from '@/lib/productImages';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import AddToCartButton from '@/components/AddToCartButton';
 import ProductGallery from '@/components/ProductGallery';
@@ -292,12 +293,13 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
               {images.slice(1).map((img, i) => (
-                <div key={i} className="bg-[#111] rounded-xl overflow-hidden border border-gray-800 aspect-[4/3] flex items-center justify-center p-3 hover:border-[#C8C8C8] transition-colors">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                <div key={i} className="bg-[#111] rounded-xl overflow-hidden border border-gray-800 aspect-[4/3] relative hover:border-[#C8C8C8] transition-colors">
+                  <Image
                     src={img}
                     alt={`${product.name} — ${product.deckSizes.join('/')} deck, ${product.engine} — view ${i + 2}`}
-                    className="max-h-full max-w-full object-contain"
+                    fill
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-contain p-3"
                   />
                 </div>
               ))}
