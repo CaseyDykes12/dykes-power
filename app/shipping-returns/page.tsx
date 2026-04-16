@@ -49,6 +49,24 @@ export default function ShippingReturnsPage() {
       </section>
 
       <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">Refunds</h2>
+        <p className="text-gray-300 mb-4">
+          If a product is confirmed defective and cannot be repaired or replaced under warranty, a refund will be issued to the original payment method within 5–7 business days after our service department completes the inspection.
+        </p>
+        <ul className="space-y-2 text-gray-300">
+          <li>
+            <span className="font-semibold text-white">Credit/debit card purchases:</span> Refund issued to the original card. Allow 5–7 business days for the refund to appear on your statement.
+          </li>
+          <li>
+            <span className="font-semibold text-white">Financed purchases:</span> Refund coordinated with the financing provider (Sheffield Financial, Synchrony, or Octane). Timeline depends on the lender.
+          </li>
+          <li>
+            <span className="font-semibold text-white">Cash or check purchases:</span> Refund issued by company check within 5–7 business days.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mb-10">
         <h2 className="text-xl font-bold mb-3">Shipping</h2>
         <ul className="space-y-3 text-gray-300">
           <li>

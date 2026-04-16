@@ -172,9 +172,33 @@ export default function FinancingPage() {
         We work with Sheffield Financial, Synchrony, and Octane to get you the best rate.
         Fill out the form below and you&apos;ll receive an instant pre-qualification decision.
       </p>
-      <div className="flex items-center gap-2 mb-8 text-sm text-green-400">
+      <div className="flex items-center gap-2 mb-6 text-sm text-green-400">
         <span>✓</span>
         <span>No credit impact — pre-qualification uses a soft check only</span>
+      </div>
+
+      <div className="bg-[#1a1a1a] border border-gray-800 rounded-xl p-6 mb-8">
+        <h2 className="text-lg font-bold text-[#C8C8C8] mb-3">Financing Options</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+          <div className="border border-gray-700 rounded-lg p-4">
+            <p className="font-bold text-white mb-1">Promotional Rate</p>
+            <p className="text-2xl font-bold text-green-400">2.9% APR</p>
+            <p className="text-gray-400 mt-1">Up to 48 months on select models</p>
+          </div>
+          <div className="border border-gray-700 rounded-lg p-4">
+            <p className="font-bold text-white mb-1">Standard Rate</p>
+            <p className="text-2xl font-bold text-[#C8C8C8]">5.9–8.9% APR</p>
+            <p className="text-gray-400 mt-1">Up to 60 months, credit dependent</p>
+          </div>
+          <div className="border border-gray-700 rounded-lg p-4">
+            <p className="font-bold text-white mb-1">Extended Terms</p>
+            <p className="text-2xl font-bold text-[#C8C8C8]">Up to 84 mo</p>
+            <p className="text-gray-400 mt-1">Lower monthly payments on $10K+</p>
+          </div>
+        </div>
+        <p className="text-xs text-gray-500 mt-3">
+          Rates shown are examples and may vary based on creditworthiness, loan amount, and lender. Actual terms are determined after full credit review. All financing is subject to credit approval.
+        </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-8">
