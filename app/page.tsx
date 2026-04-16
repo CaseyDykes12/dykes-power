@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import { products } from '@/lib/products';
+import { getAllPosts } from '@/lib/blog';
 import ProductCard from '@/components/ProductCard';
 
 export default function HomePage() {
   const featured = products.filter((p) => p.tag === 'Best Seller' || p.tag === 'Popular').slice(0, 3);
+  const recentPosts = getAllPosts().slice(0, 3);
 
   return (
     <>
@@ -152,6 +154,38 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Latest from the blog */}
+      {recentPosts.length > 0 && (
+        <section className="bg-[#111] py-16 px-4 border-t border-gray-800">
+          <div className="max-w-[1280px] mx-auto">
+            <h2 className="text-3xl font-bold mb-2 text-white">Mower Tips &amp; Guides</h2>
+            <p className="text-gray-400 mb-8">Buying advice and maintenance tips from our team in Collins, MS.</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {recentPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="bg-[#1a1a1a] border border-gray-700 rounded-xl p-6 hover:border-[#C8C8C8] transition-all flex flex-col"
+                >
+                  <span className="text-xs text-[#C8C8C8] font-semibold uppercase tracking-widest mb-3">
+                    {post.category}
+                  </span>
+                  <h3 className="text-white font-bold text-lg leading-snug mb-3 flex-1">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm line-clamp-2">{post.description}</p>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Link href="/blog" className="text-[#C8C8C8] font-semibold hover:text-white transition-colors">
+                View All Posts →
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="bg-black text-white py-16 px-4 border-t border-gray-800">

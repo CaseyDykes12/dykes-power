@@ -7,6 +7,7 @@ export const metadata: Metadata = {
     'Utility trailers in stock at Dykes Motors Power Equipment in Collins, MS. Single axle trailers for hauling mowers, equipment, and farm supplies across South Mississippi and the Pine Belt.',
   keywords:
     'utility trailer Collins MS, utility trailer for sale Mississippi, single axle trailer South Mississippi, trailer dealer Collins MS, landscape trailer Mississippi, utility trailer Hattiesburg, utility trailer Laurel MS',
+  alternates: { canonical: 'https://www.dykespower.com/trailers' },
 };
 
 const trailers = [
@@ -34,9 +35,60 @@ const trailers = [
   },
 ];
 
+const trailerSchemas = trailers.map((trailer) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: trailer.name,
+  description: trailer.description,
+  sku: trailer.id,
+  brand: { '@type': 'Brand', name: 'Dykes Motors Power Equipment' },
+  category: 'Utility Trailers',
+  offers: {
+    '@type': 'Offer',
+    url: 'https://www.dykespower.com/trailers',
+    priceCurrency: 'USD',
+    price: trailer.price,
+    itemCondition: 'https://schema.org/NewCondition',
+    availability: trailer.status === 'IN_STOCK'
+      ? 'https://schema.org/InStock'
+      : 'https://schema.org/OutOfStock',
+    seller: {
+      '@type': 'LocalBusiness',
+      name: 'Dykes Motors Power Equipment',
+      telephone: '+16016415475',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '3069 Hwy 49',
+        addressLocality: 'Collins',
+        addressRegion: 'MS',
+        postalCode: '39428',
+        addressCountry: 'US',
+      },
+    },
+  },
+  additionalProperty: [
+    { '@type': 'PropertyValue', name: 'Capacity', value: trailer.capacity },
+    { '@type': 'PropertyValue', name: 'Dimensions', value: trailer.dimensions },
+    { '@type': 'PropertyValue', name: 'Axle', value: trailer.axle },
+  ],
+}));
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.dykespower.com' },
+    { '@type': 'ListItem', position: 2, name: 'Utility Trailers', item: 'https://www.dykespower.com/trailers' },
+  ],
+};
+
 export default function TrailersPage() {
   return (
     <div className="max-w-[1280px] mx-auto px-4 py-12">
+      {trailerSchemas.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Header */}
       <div className="mb-10">

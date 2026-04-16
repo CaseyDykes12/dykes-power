@@ -7,11 +7,91 @@ export const metadata: Metadata = {
     'Expert mower service and repairs in Collins, Mississippi. Authorized Ferris service center. Oil changes, blade sharpening, engine repair, hydrostatic service, and OEM parts. Call (601) 336-2541.',
   keywords:
     'mower repair Collins MS, Ferris service center Mississippi, lawn mower service Covington County, mower tune-up Collins MS',
+  alternates: { canonical: 'https://www.dykespower.com/service' },
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AutoRepair',
+  name: 'Dykes Motors Power Equipment — Service & Repairs',
+  description:
+    'Expert mower service and repairs in Collins, Mississippi. Authorized Ferris service center offering oil changes, blade sharpening, engine repair, hydrostatic service, and OEM parts.',
+  url: 'https://www.dykespower.com/service',
+  telephone: '+16013362541',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '3069 Hwy 49',
+    addressLocality: 'Collins',
+    addressRegion: 'MS',
+    postalCode: '39428',
+    addressCountry: 'US',
+  },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '09:00', closes: '19:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '09:00', closes: '14:00' },
+  ],
+  areaServed: [
+    { '@type': 'City', name: 'Collins' },
+    { '@type': 'City', name: 'Hattiesburg' },
+    { '@type': 'City', name: 'Laurel' },
+    { '@type': 'AdministrativeArea', name: 'Covington County' },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What brands do you service?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We are an authorized Ferris service center and also service Husqvarna, Scag, Exmark, Toro, Gravely, Bad Boy, Snapper, and most other major mower brands.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does mower service take?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most routine maintenance like oil changes, blade sharpening, and tune-ups are completed within 1-3 business days. Larger repairs depend on parts availability — call (601) 336-2541 for an estimate.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you use OEM parts?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. As an authorized Ferris dealer we stock genuine Ferris OEM parts and also carry Briggs & Stratton parts. Aftermarket options are available when requested.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need an appointment for mower service?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No appointment needed. You can drop off your equipment at our Collins, MS location during service hours (Mon-Fri 9am-7pm, Sat 9am-2pm) or call ahead at (601) 336-2541.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.dykespower.com' },
+    { '@type': 'ListItem', position: 2, name: 'Service & Repairs', item: 'https://www.dykespower.com/service' },
+  ],
 };
 
 export default function ServicePage() {
   return (
     <div className="max-w-[1280px] mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Page header */}
       <div className="mb-10">
@@ -130,7 +210,7 @@ export default function ServicePage() {
       </div>
 
       {/* Brands we service */}
-      <div className="bg-[#1a1a1a] border border-gray-700 rounded-xl p-6">
+      <div className="bg-[#1a1a1a] border border-gray-700 rounded-xl p-6 mb-10">
         <h3 className="font-bold text-white mb-3">Brands We Service</h3>
         <p className="text-gray-400 text-sm">
           Ferris (authorized) &nbsp;·&nbsp; Husqvarna &nbsp;·&nbsp; Scag &nbsp;·&nbsp; Exmark &nbsp;·&nbsp;
@@ -139,6 +219,36 @@ export default function ServicePage() {
         <p className="text-gray-500 text-xs mt-3">
           Not sure if we service your machine? Call us at (601) 336-2541 and we&apos;ll let you know.
         </p>
+      </div>
+
+      {/* FAQ */}
+      <div className="border-t border-gray-800 pt-10">
+        <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+        <div className="space-y-6">
+          {[
+            {
+              q: 'What brands do you service?',
+              a: 'We are an authorized Ferris service center and also service Husqvarna, Scag, Exmark, Toro, Gravely, Bad Boy, Snapper, and most other major mower brands.',
+            },
+            {
+              q: 'How long does mower service take?',
+              a: 'Most routine maintenance like oil changes, blade sharpening, and tune-ups are completed within 1-3 business days. Larger repairs depend on parts availability — call (601) 336-2541 for an estimate.',
+            },
+            {
+              q: 'Do you use OEM parts?',
+              a: 'Yes. As an authorized Ferris dealer we stock genuine Ferris OEM parts and also carry Briggs & Stratton parts. Aftermarket options are available when requested.',
+            },
+            {
+              q: 'Do I need an appointment for mower service?',
+              a: 'No appointment needed. You can drop off your equipment at our Collins, MS location during service hours (Mon-Fri 9am-7pm, Sat 9am-2pm) or call ahead at (601) 336-2541.',
+            },
+          ].map(({ q, a }) => (
+            <div key={q}>
+              <h3 className="font-semibold text-white mb-2">{q}</h3>
+              <p className="text-gray-400 text-sm">{a}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
     </div>

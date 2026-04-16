@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'About Us | Dykes Motors Power Equipment — Collins, MS',
   description:
     'Dykes Motors Power Equipment is an authorized Ferris mower dealer in Collins, Mississippi. Family-owned and operated — sales, service, parts, and financing for commercial and residential mowers.',
+  alternates: { canonical: 'https://www.dykespower.com/about' },
 };
 
 export default function AboutPage() {

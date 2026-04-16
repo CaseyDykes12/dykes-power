@@ -14,10 +14,29 @@ export async function generateMetadata(
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
+  const title = `${post.title} | Dykes Motors Power Equipment`;
+  const url = `https://www.dykespower.com/blog/${slug}`;
   return {
-    title: `${post.title} | Dykes Motors Power Equipment`,
+    title,
     description: post.description,
     keywords: post.keywords,
+    alternates: { canonical: url },
+    openGraph: {
+      type: 'article',
+      title,
+      description: post.description,
+      url,
+      siteName: 'Dykes Motors Power Equipment',
+      publishedTime: post.date ? new Date(post.date).toISOString() : undefined,
+      authors: ['Dykes Motors Power Equipment'],
+      images: [{ url: '/df-logo.png', width: 800, height: 600, alt: 'Dykes Motors Power Equipment' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: post.description,
+      images: ['/df-logo.png'],
+    },
   };
 }
 
@@ -30,8 +49,48 @@ export default async function BlogPostPage(
 
   const html = await marked(post.content);
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date ? new Date(post.date).toISOString() : undefined,
+    dateModified: post.date ? new Date(post.date).toISOString() : undefined,
+    author: {
+      '@type': 'Organization',
+      name: 'Dykes Motors Power Equipment',
+      url: 'https://www.dykespower.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Dykes Motors Power Equipment',
+      logo: { '@type': 'ImageObject', url: 'https://www.dykespower.com/df-logo.png' },
+    },
+    mainEntityOfPage: `https://www.dykespower.com/blog/${slug}`,
+    image: 'https://www.dykespower.com/df-logo.png',
+    keywords: post.keywords,
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.dykespower.com' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.dykespower.com/blog' },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `https://www.dykespower.com/blog/${slug}` },
+    ],
+  };
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Breadcrumb */}
       <p className="text-sm text-gray-500 mb-6">
         <Link href="/" className="hover:text-[#C8C8C8]">Home</Link>

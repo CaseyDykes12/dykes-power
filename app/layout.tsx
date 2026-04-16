@@ -120,13 +120,44 @@ const localBusinessSchema = {
       'Financing Available',
     ],
   },
-  areaServed: {
-    '@type': 'State',
-    name: 'Mississippi',
-  },
+  areaServed: [
+    { '@type': 'State', name: 'Mississippi' },
+    { '@type': 'City', name: 'Collins', containedInPlace: { '@type': 'State', name: 'Mississippi' } },
+    { '@type': 'City', name: 'Hattiesburg', containedInPlace: { '@type': 'State', name: 'Mississippi' } },
+    { '@type': 'City', name: 'Laurel', containedInPlace: { '@type': 'State', name: 'Mississippi' } },
+    { '@type': 'City', name: 'Petal', containedInPlace: { '@type': 'State', name: 'Mississippi' } },
+    { '@type': 'City', name: 'Seminary', containedInPlace: { '@type': 'State', name: 'Mississippi' } },
+    { '@type': 'City', name: 'Mendenhall', containedInPlace: { '@type': 'State', name: 'Mississippi' } },
+    { '@type': 'City', name: 'Magee', containedInPlace: { '@type': 'State', name: 'Mississippi' } },
+    { '@type': 'City', name: 'Columbia', containedInPlace: { '@type': 'State', name: 'Mississippi' } },
+    { '@type': 'City', name: 'Brookhaven', containedInPlace: { '@type': 'State', name: 'Mississippi' } },
+    { '@type': 'City', name: 'Sumrall', containedInPlace: { '@type': 'State', name: 'Mississippi' } },
+    { '@type': 'City', name: 'Bassfield', containedInPlace: { '@type': 'State', name: 'Mississippi' } },
+    { '@type': 'AdministrativeArea', name: 'Covington County, Mississippi' },
+    { '@type': 'AdministrativeArea', name: 'Pine Belt Region, Mississippi' },
+  ],
   sameAs: [
     'https://www.facebook.com/DykesMotor',
   ],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Dykes Motors Power Equipment',
+  url: 'https://www.dykespower.com',
+  publisher: {
+    '@type': 'LocalBusiness',
+    name: 'Dykes Motors Power Equipment',
+  },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://www.dykespower.com/catalog?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -136,6 +167,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <meta name="google-site-verification" content="qW0oAxSqngP7GBmf8rXxdZs1GK14mbymF1StHZnrcQ4" />
       </head>
