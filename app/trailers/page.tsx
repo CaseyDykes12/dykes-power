@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -31,7 +32,12 @@ const trailers = [
       'Safety chains included',
       'Standard ball hitch',
     ],
-    imageUrl: null as string | null,
+    imageUrl: '/images/trailers/trailer-side.webp',
+    images: [
+      '/images/trailers/trailer-side.webp',
+      '/images/trailers/trailer-front.webp',
+      '/images/trailers/trailer-gate.webp',
+    ],
   },
 ];
 
@@ -40,6 +46,7 @@ const trailerSchemas = trailers.map((trailer) => ({
   '@type': 'Product',
   name: trailer.name,
   description: trailer.description,
+  image: trailer.images.map((img) => `https://www.dykespower.com${img}`),
   sku: trailer.id,
   brand: { '@type': 'Brand', name: 'Dykes Motors Power Equipment' },
   category: 'Utility Trailers',
@@ -108,22 +115,30 @@ export default function TrailersPage() {
           <div className="grid md:grid-cols-2 gap-0">
 
             {/* Image */}
-            <div className="bg-[#111] flex items-center justify-center h-72 md:h-auto border-b md:border-b-0 md:border-r border-gray-700">
-              {trailer.imageUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={trailer.imageUrl} alt={trailer.name} className="w-full h-full object-cover" />
-              ) : (
-                <div className="text-center p-8 w-full">
-                  <div className="inline-block bg-[#0a0a0a] border border-gray-700 rounded-xl p-6">
-                    <p className="text-5xl mb-2">🚜</p>
-                    <p className="text-xs text-gray-500 uppercase tracking-widest mb-3">In-Person Viewing</p>
-                    <p className="text-sm text-gray-300 mb-4 max-w-xs mx-auto">
-                      This trailer is on our lot in Collins, MS — come see it in person or call for current details.
-                    </p>
-                    <a href="tel:6016415475" className="text-[#C8C8C8] text-sm font-semibold">
-                      (601) 641-5475
-                    </a>
-                  </div>
+            <div className="bg-[#111] border-b md:border-b-0 md:border-r border-gray-700">
+              <div className="relative h-72 md:h-80">
+                <Image
+                  src={trailer.imageUrl}
+                  alt={trailer.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+              {trailer.images.length > 1 && (
+                <div className="flex gap-1 p-2 bg-[#0a0a0a]">
+                  {trailer.images.map((img, idx) => (
+                    <div key={idx} className="relative h-16 flex-1 rounded overflow-hidden">
+                      <Image
+                        src={img}
+                        alt={`${trailer.name} — view ${idx + 1}`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 33vw, 16vw"
+                      />
+                    </div>
+                  ))}
                 </div>
               )}
             </div>
