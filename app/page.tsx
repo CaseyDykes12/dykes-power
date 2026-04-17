@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { products } from '@/lib/products';
 import { getAllPosts } from '@/lib/blog';
 import ProductCard from '@/components/ProductCard';
@@ -16,13 +17,19 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="relative bg-[#0a0a0a] text-white overflow-hidden min-h-[88vh] flex items-center">
-        {/* Watermark — actual DF logo at large scale, low opacity */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/df-logo.png"
-          alt=""
+        {/* Real lot photo background */}
+        <Image
+          src="/images/ferris/lot/isx800-lot-3.jpg"
+          alt="Ferris mowers on the Dykes Motors lot in Collins, Mississippi"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center opacity-40"
+        />
+        {/* Dark gradient for text legibility */}
+        <div
           aria-hidden="true"
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-[70vw] max-w-4xl opacity-[0.06] pointer-events-none select-none object-contain"
+          className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30 md:to-transparent"
         />
 
         {/* Hero content */}
@@ -192,11 +199,15 @@ export default function HomePage() {
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-3">Not sure which mower is right for you?</h2>
           <p className="text-gray-400 mb-8">
-            Tell us about your property and we'll recommend the right machine with a real price — no runaround.
+            Answer 4 quick questions — we'll match you to the Ferris machine that fits your property,
+            your work, and your budget.
           </p>
-          <Link href="/contact" className="btn-primary text-lg px-10 py-4">
-            Get a Free Recommendation
+          <Link href="/quiz" className="btn-primary text-lg px-10 py-4">
+            Take the Quiz
           </Link>
+          <p className="text-gray-500 text-sm mt-4">
+            Prefer to talk? Call (601) 641-5475.
+          </p>
         </div>
       </section>
     </>

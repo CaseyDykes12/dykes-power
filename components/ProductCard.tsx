@@ -2,10 +2,17 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Product } from '@/lib/products';
+import { Product, InventoryStatus } from '@/lib/products';
+
+const STATUS_STYLE: Record<InventoryStatus, { label: string; className: string }> = {
+  IN_STOCK: { label: 'On Our Lot', className: 'bg-green-600 text-white' },
+  INBOUND: { label: 'Arriving Soon', className: 'bg-yellow-500 text-black' },
+  AVAILABLE_TO_ORDER: { label: 'Order from Factory', className: 'bg-gray-600 text-white' },
+};
 
 export default function ProductCard({ product }: { product: Product }) {
   const [imgError, setImgError] = useState(false);
+  const status = STATUS_STYLE[product.status];
 
   return (
     <Link href={`/product/${product.sku}`} className="bg-[#1a1a1a] border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:border-[#C8C8C8] transition-all flex flex-col cursor-pointer">
@@ -16,6 +23,9 @@ export default function ProductCard({ product }: { product: Product }) {
             {product.tag}
           </span>
         )}
+        <span className={`absolute top-3 right-3 z-10 ${status.className} text-xs font-bold px-2 py-1 rounded`}>
+          {status.label}
+        </span>
         {imgError ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
