@@ -29,10 +29,22 @@ Message: ${message || 'No message'}
 Submitted: ${timestamp}
 `.trim();
 
+  // ALWAYS dump the full lead into server logs so a lead is never truly lost,
+  // even if Resend is down or mis-configured. These show up in Vercel runtime logs.
+  console.warn('[LEAD-INCOMING]', JSON.stringify({ name, email, phone, interest, propertySize, message, timestamp }));
+
   const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
-  if (RESEND_API_KEY) {
-    const sendPromise = fetch('https://api.resend.com/emails', {
+  if (!RESEND_API_KEY) {
+    console.error('[LEAD-FAIL] RESEND_API_KEY is not set in Vercel environment. Lead captured above but email NOT sent.');
+    return NextResponse.json(
+      { success: false, error: 'email_not_configured' },
+      { status: 500 }
+    );
+  }
+
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${RESEND_API_KEY}`,
@@ -52,14 +64,23 @@ Submitted: ${timestamp}
       }),
     });
 
-    sendPromise
-      .then(async (res) => {
-        if (!res.ok) console.error('Lead email send failed:', await res.text());
-      })
-      .catch((err) => console.error('Lead email send failed:', err));
-  } else {
-    console.log('LEAD RECEIVED (no email provider configured):\n', plainBody);
-  }
+    if (!res.ok) {
+      const errText = await res.text().catch(() => '(no body)');
+      console.error('[LEAD-FAIL] Resend returned', res.status, errText);
+      return NextResponse.json(
+        { success: false, error: 'email_send_failed', status: res.status },
+        { status: 500 }
+      );
+    }
 
-  return NextResponse.json({ success: true });
+    const data = await res.json().catch(() => null);
+    console.log('[LEAD-OK] Resend accepted, id:', data?.id ?? '(unknown)');
+    return NextResponse.json({ success: true, id: data?.id });
+  } catch (err) {
+    console.error('[LEAD-FAIL] Resend fetch threw:', err instanceof Error ? err.message : String(err));
+    return NextResponse.json(
+      { success: false, error: 'email_exception' },
+      { status: 500 }
+    );
+  }
 }

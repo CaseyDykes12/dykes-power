@@ -29,15 +29,18 @@ export default function ContactPage() {
       if (res.ok) {
         setSubmitted(true);
         if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
-                    // Enhanced conversions: send user-provided data for better conversion matching
-                    (window as any).gtag('set', 'user_data', {
-                                  email: form.email,
-                                  phone_number: form.phone,
-                    });
+          (window as any).gtag('set', 'user_data', {
+            email: form.email,
+            phone_number: form.phone,
+          });
           (window as any).gtag('event', 'conversion', {
             send_to: 'AW-17992871675/pNOLCL2li48cEPvd1YND',
           });
         }
+      } else {
+        alert(
+          "We got your info, but our email system hit a snag. Please call us at (601) 641-5475 so we don't miss you — sorry about that."
+        );
       }
     } catch {
       alert('Something went wrong. Please call us directly at (601) 641-5475.');
