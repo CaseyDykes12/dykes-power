@@ -55,7 +55,7 @@ Submitted: ${timestamp}
         to: [
           'Casey@dykesmotors.com',
           'michaelbrooks@dykesmotors.com',
-          'Nathanpace@dykesmotoros.com',
+          'Nathanpace@dykesmotors.com',
           'Justinpatterson@dykesmotors.com',
         ],
         reply_to: email,
