@@ -92,7 +92,7 @@ Reply to this email or call the applicant directly to follow up.
         to: [
           'Casey@dykesmotors.com',
           'michaelbrooks@dykesmotors.com',
-          'Nathanpace@dykesmotoros.com',
+          'Nathanpace@dykesmotors.com',
           'Justinpatterson@dykesmotors.com',
         ],
         reply_to: applicant.email,
@@ -102,9 +102,87 @@ Reply to this email or call the applicant directly to follow up.
     });
 
     if (!result.ok) console.error('Financing email send failed:', await result.text());
+
+    // Also push to Tecobi as ADF XML (credit apps always include a phone)
+    try {
+      const adfXml = buildFinancingAdfXml({
+        applicant,
+        employment,
+        equipment,
+        prequalLabel,
+      });
+      const tec = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          from: 'financing@dykespower.com',
+          to: ['adf_xml_2692@tecobirobot.com'],
+          reply_to: applicant.email,
+          subject: `ADF Lead - ${applicant.firstName} ${applicant.lastName} - Financing App`,
+          text: adfXml,
+        }),
+      });
+      if (!tec.ok) console.error('[FIN-TECOBI-FAIL]', tec.status, await tec.text().catch(() => ''));
+      else console.log('[FIN-TECOBI-OK] ADF XML accepted for Tecobi');
+    } catch (e) {
+      console.error('[FIN-TECOBI-FAIL] threw:', e instanceof Error ? e.message : String(e));
+    }
   } else {
     console.log('FINANCING APPLICATION (no email provider):\n', emailBody);
   }
 
   return NextResponse.json({ success: true });
+}
+
+function xmlEscape(v: unknown): string {
+  return String(v ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+function buildFinancingAdfXml(p: {
+  applicant: any;
+  employment: any;
+  equipment?: string;
+  prequalLabel: string;
+}): string {
+  const a = p.applicant || {};
+  const e = p.employment || {};
+  const commentsParts = [
+    `Credit app via dykespower.com financing form`,
+    `Prequal: ${p.prequalLabel}`,
+    p.equipment ? `Equipment: ${p.equipment}` : '',
+    a.address ? `Address: ${a.address}, ${a.city || ''} ${a.state || ''} ${a.zip || ''}` : '',
+    e.status ? `Employment: ${e.status}${e.employerName ? ` at ${e.employerName}` : ''}` : '',
+    e.monthlyIncome ? `Monthly income: $${e.monthlyIncome}` : '',
+  ].filter(Boolean);
+  return `<?xml version="1.0"?>
+<?adf version="1.0"?>
+<adf>
+  <prospect>
+    <requestdate>${xmlEscape(new Date().toISOString())}</requestdate>
+    <customer>
+      <contact>
+        <name part="first">${xmlEscape(a.firstName)}</name>
+        <name part="last">${xmlEscape(a.lastName)}</name>
+        <email>${xmlEscape(a.email)}</email>
+        <phone>${xmlEscape(a.phone)}</phone>
+      </contact>
+      <comments>${xmlEscape(commentsParts.join(' | '))}</comments>
+    </customer>
+    <vendor>
+      <vendorname>Dykes Motors Power Equipment</vendorname>
+      <contact>
+        <name part="full">Dykes Motors Power Equipment</name>
+      </contact>
+    </vendor>
+    <provider>
+      <name part="full">dykespower.com</name>
+      <service>Financing Application</service>
+    </provider>
+  </prospect>
+</adf>`;
 }

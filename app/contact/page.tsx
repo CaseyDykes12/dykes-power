@@ -68,9 +68,25 @@ export default function ContactPage() {
         {/* Form */}
         <div>
           <h1 className="text-3xl font-bold mb-2">Get a Quote</h1>
-          <p className="text-gray-500 mb-8">
+          <p className="text-gray-500 mb-6">
             Tell us what you need and we'll get back to you with real pricing — no pressure, no runaround.
           </p>
+
+          {/* Tecobi quick-action buttons (open chat widget) */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            <button
+              type="button"
+              className="tecobi-contact-us-toggle text-sm font-semibold px-4 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-50"
+            >
+              Text Us Instead
+            </button>
+            <button
+              type="button"
+              className="tecobi-quick-qualify-toggle text-sm font-semibold px-4 py-2 rounded-lg bg-[#D4AF37] text-black hover:bg-[#C8A830]"
+            >
+              Quick Qualify for Financing
+            </button>
+          </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -215,6 +215,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        {/* Tecobi SMS Widget (clientId 2692 — Dykes Motors) */}
+        <Script
+          id="tecobi-widget-include"
+          src="https://widget.tecobi.com/widget.js?clientId=2692"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

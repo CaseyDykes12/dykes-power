@@ -335,7 +335,7 @@ export const products: Product[] = [
     engine: 'Kawasaki® FS600V',
     horsepower: '18.5 hp',
     deckSizes: ['48"'],
-    price: 7899,
+    price: 8449,
     msrp: 9294,
     description:
       "The IS 600 features Ferris's patented independent suspension for a smooth ride and consistent cut on any terrain.",
@@ -356,7 +356,7 @@ export const products: Product[] = [
     engine: 'Kawasaki® FS691V',
     horsepower: '25 hp',
     deckSizes: ['52"'],
-    price: 8449,
+    price: 8749,
     msrp: 9624,
     description:
       "The IS 600 52\" features Ferris's patented independent suspension for a smooth, comfortable ride and consistent cut quality on uneven terrain.",
@@ -378,7 +378,7 @@ export const products: Product[] = [
     engine: 'Briggs & Stratton® CXi',
     horsepower: '25 hp',
     deckSizes: ['48"'],
-    price: 8099,
+    price: 7899,
     msrp: 8689,
     description:
       'IS 600 with Briggs & Stratton CXi and 48" deck — suspension comfort at a lower entry price.',
@@ -399,7 +399,7 @@ export const products: Product[] = [
     engine: 'Briggs & Stratton® CXi',
     horsepower: '25 hp',
     deckSizes: ['52"'],
-    price: 8749,
+    price: 8099,
     msrp: 8909,
     description:
       'IS 600 with the Briggs & Stratton CXi engine — same legendary suspension, lower price point.',
@@ -1080,15 +1080,15 @@ export const products: Product[] = [
     sku: '5902071',
     name: 'Ferris SRS™ Z3X Series',
     category: 'Stand-On Mowers',
-    engine: 'Vanguard™ EFI-ETC w/ Oil Guard',
-    horsepower: '40 hp',
+    engine: 'Vanguard® Big Block EFI w/ Oil Guard',
+    horsepower: '37 hp',
     deckSizes: ['60"'],
-    price: 15249,
-    msrp: 16774,
+    price: 14999,
+    msrp: 16499,
     description:
-      'The 60" SRS Z3X Vanguard — built for large commercial properties demanding stand-on efficiency with premium power.',
+      'The 60" SRS Z3X Vanguard Big Block — built for large commercial properties demanding stand-on efficiency with premium power.',
     features: [
-      '40 HP Vanguard EFI-ETC with Oil Guard',
+      '37 HP Vanguard Big Block EFI with Oil Guard',
       'Ferris suspension platform',
       '60" commercial deck',
       'Heavy-duty commercial drive',

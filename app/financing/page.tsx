@@ -172,9 +172,25 @@ export default function FinancingPage() {
         We work with Sheffield Financial, Synchrony, and Octane to get you the best rate.
         Fill out the form below and you&apos;ll receive an instant pre-qualification decision.
       </p>
-      <div className="flex items-center gap-2 mb-6 text-sm text-green-400">
+      <div className="flex items-center gap-2 mb-4 text-sm text-green-400">
         <span>✓</span>
         <span>No credit impact — pre-qualification uses a soft check only</span>
+      </div>
+
+      {/* Tecobi quick-action buttons */}
+      <div className="flex flex-wrap gap-2 mb-6">
+        <button
+          type="button"
+          className="tecobi-quick-qualify-toggle text-sm font-semibold px-4 py-2 rounded-lg bg-[#D4AF37] text-black hover:bg-[#C8A830]"
+        >
+          Quick Qualify (30 seconds)
+        </button>
+        <button
+          type="button"
+          className="tecobi-full-credit-toggle text-sm font-semibold px-4 py-2 rounded-lg border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10"
+        >
+          Full Credit App
+        </button>
       </div>
 
       <div className="bg-[#1a1a1a] border border-gray-800 rounded-xl p-6 mb-8">
