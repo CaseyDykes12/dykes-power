@@ -6,7 +6,6 @@ import {
   hoursFor,
   formatHours,
   topRecommendedFor,
-  type FerrisSpec,
 } from '@/lib/mow-calculator/ferris-specs';
 
 declare global {
