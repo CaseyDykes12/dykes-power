@@ -96,9 +96,9 @@ export default function AboutPage() {
               and Briggs & Stratton parts in-house. If we don't have it, we'll get it ordered fast.
             </li>
             <li>
-              <span className="font-semibold text-white">Financing:</span> We work with Sheffield
-              Financial, Synchrony, and Octane to offer competitive rates — including promotional
-              financing on qualifying Ferris models. Rates start as low as 2.9% APR on select units.
+              <span className="font-semibold text-white">Financing:</span> We work with top national
+              lenders to offer competitive rates — including promotional financing on qualifying
+              Ferris models. Rates as low as 4.9% APR for qualified credit.
             </li>
           </ul>
         </section>

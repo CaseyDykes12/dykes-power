@@ -149,10 +149,10 @@ export default function FerrisMowersHattiesburgPage() {
 
           <h2>Financing That Works</h2>
           <p>
-            A commercial Ferris usually runs $8K–$16K depending on the model.{' '}
-            <Link href="/financing">Sheffield Financial and Octane</Link> both offer competitive
-            rates — often under $300/month on a full commercial machine. Apply online, get a
-            decision fast, and we&apos;ll hold the mower until you&apos;re ready to pick up.
+            A commercial Ferris usually runs $8K–$16K depending on the model. We work with{' '}
+            <Link href="/financing">top national lenders</Link> for competitive rates — often
+            under $300/month on a full commercial machine. Apply online, get a decision fast, and
+            we&apos;ll hold the mower until you&apos;re ready to pick up.
           </p>
 
           <h2>Getting Here from Hattiesburg</h2>

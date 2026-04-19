@@ -12,7 +12,7 @@ export default function HomePage() {
     <>
       {/* Financing banner */}
       <div className="bg-red-600 text-white text-center text-xs md:text-sm font-semibold tracking-widest uppercase py-2 px-4">
-        Financing from 5.9% APR up to 84 months on select models — <Link href="/contact" className="underline hover:no-underline">Get pre-approved</Link>
+        Financing as low as 4.9% APR up to 84 months for qualified credit — <Link href="/contact" className="underline hover:no-underline">Get pre-approved</Link>
       </div>
 
       {/* Hero */}

@@ -44,7 +44,7 @@ If you're hauling your mower between different parts of the property or to anoth
 
 ## Financing Makes the Math Work
 
-A commercial Ferris mower is a capital expense, but it's one that pays back in labor savings. [Sheffield Financial and Octane](/financing) both offer competitive ag-equipment financing. Monthly payments on a $10,000–$14,000 mower often run well under $300, which most farms recover in reduced labor hours within the first season.
+A commercial Ferris mower is a capital expense, but it's one that pays back in labor savings. We work with [top national lenders](/financing) for competitive ag-equipment financing. Monthly payments on a $10,000–$14,000 mower often run well under $300, which most farms recover in reduced labor hours within the first season.
 
 We've had farmers from Laurel, Brookhaven, and across Lincoln and Jones Counties come in specifically because they could finance here without going through a big-box equipment chain or waiting on a dealer hours away.
 

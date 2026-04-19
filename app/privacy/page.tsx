@@ -60,7 +60,7 @@ export default function PrivacyPage() {
         </p>
         <ul className="space-y-3 text-gray-300">
           <li>
-            <span className="font-semibold text-white">Service Providers:</span> Third-party vendors who assist us in operating our website, processing payments, and conducting business (e.g., Google, Meta, Stripe, Sheffield Financial).
+            <span className="font-semibold text-white">Service Providers:</span> Third-party vendors who assist us in operating our website, processing payments, and conducting business (e.g., Google, Meta, Stripe, financing partners).
           </li>
           <li>
             <span className="font-semibold text-white">Legal Requirements:</span> We may disclose information when required by law or to protect the rights and safety of our business and customers.

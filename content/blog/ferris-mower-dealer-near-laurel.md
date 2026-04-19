@@ -46,7 +46,7 @@ Our [service shop](/service) is on-site. Warranty work, tune-ups, hydro service,
 
 ## Financing
 
-[Sheffield Financial and Octane](/financing) both run financing on the Ferris lineup. Competitive rates, quick decisions, apply online before you drive up. Most commercial Ferris payments land under $300/month. We'll tell you straight what's realistic for the mower you're looking at.
+We work with [top national lenders](/financing) on the Ferris lineup. Competitive rates — as low as 4.9% APR for qualified credit — quick decisions, apply online before you drive up. Most commercial Ferris payments land under $300/month. We'll tell you straight what's realistic for the mower you're looking at.
 
 ---
 

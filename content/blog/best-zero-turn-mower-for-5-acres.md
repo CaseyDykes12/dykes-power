@@ -46,4 +46,4 @@ We have Ferris mowers in stock at our Collins, MS location. You can see them run
 
 **Call us at (601) 641-5475 or stop by 3069 Hwy 49, Collins, MS.**
 
-Financing is available through Sheffield Financial, Synchrony, and Octane — most approvals same day.
+Financing is available through our top national lending partners — rates as low as 4.9% APR for qualified credit, most approvals same day.

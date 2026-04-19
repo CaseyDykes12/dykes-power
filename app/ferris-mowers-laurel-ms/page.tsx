@@ -150,10 +150,10 @@ export default function FerrisMowersLaurelPage() {
 
           <h2>Financing for Qualified Buyers</h2>
           <p>
-            <Link href="/financing">Sheffield Financial and Octane</Link> both run financing on
-            the Ferris lineup — competitive rates, quick decisions, apply online. Monthly
-            payments on most commercial models run under $300. We&apos;ll walk you through
-            what&apos;s realistic for what you&apos;re trying to mow.
+            We work with <Link href="/financing">top national lenders</Link> on the Ferris
+            lineup — competitive rates, quick decisions, apply online. Monthly payments on most
+            commercial models run under $300. We&apos;ll walk you through what&apos;s realistic
+            for what you&apos;re trying to mow.
           </p>
 
           <h2>How to Get Here From Laurel</h2>

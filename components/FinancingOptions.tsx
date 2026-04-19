@@ -9,9 +9,9 @@ function calcMonthly(principal: number, aprPercent: number, months: number): num
 }
 
 const TERMS: { months: number; apr: number }[] = [
-  { months: 60, apr: 5.9 },
-  { months: 72, apr: 5.9 },
-  { months: 84, apr: 5.9 },
+  { months: 60, apr: 4.9 },
+  { months: 72, apr: 4.9 },
+  { months: 84, apr: 4.9 },
 ];
 
 export default function FinancingOptions({ price }: { price: number }) {
@@ -20,7 +20,7 @@ export default function FinancingOptions({ price }: { price: number }) {
 
   const maxDown = Math.floor(price * 0.5);
   const principal = Math.max(0, price - down);
-  const apr = TERMS.find((t) => t.months === months)?.apr ?? 5.9;
+  const apr = TERMS.find((t) => t.months === months)?.apr ?? 4.9;
   const monthly = Math.ceil(calcMonthly(principal, apr, months));
 
   return (
@@ -33,9 +33,9 @@ export default function FinancingOptions({ price }: { price: number }) {
             ${monthly.toLocaleString()}
             <span className="text-base font-semibold text-gray-400">/mo</span>
           </span>
-          <span className="text-gray-500 text-sm">at {apr}% APR · {months} months</span>
+          <span className="text-gray-500 text-sm">as low as {apr}% APR · {months} months</span>
         </div>
-        <p className="text-[#D4AF37] text-xs mt-1 font-semibold">Sheffield Financial · Synchrony · Octane</p>
+        <p className="text-[#D4AF37] text-xs mt-1 font-semibold">For qualified credit</p>
       </div>
 
       <div className="p-5 space-y-5">
@@ -93,7 +93,7 @@ export default function FinancingOptions({ price }: { price: number }) {
         </div>
 
         <p className="text-gray-600 text-xs">
-          Rates shown are estimates for qualified buyers. Actual terms subject to lender approval.
+          Rates as low as 4.9% APR for qualified credit. Actual terms subject to lender approval.
         </p>
 
         <Link

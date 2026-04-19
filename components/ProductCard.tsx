@@ -71,7 +71,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 )}
                 <p className="font-bold text-lg text-white">${product.price.toLocaleString()}</p>
                 <p className="text-[#C8C8C8] text-xs font-semibold">Dykes Motors Price</p>
-                <p className="text-gray-500 text-xs">from ${Math.ceil(product.price * 0.00491667 * Math.pow(1.00491667, 72) / (Math.pow(1.00491667, 72) - 1)).toLocaleString()}/mo</p>
+                <p className="text-gray-500 text-xs">from ${Math.ceil(product.price * 0.00408333 * Math.pow(1.00408333, 72) / (Math.pow(1.00408333, 72) - 1)).toLocaleString()}/mo*</p>
               </>
             ) : (
               <p className="font-semibold text-[#C8C8C8]">Contact for price</p>

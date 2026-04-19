@@ -48,7 +48,7 @@ Hattiesburg customers especially: if you're running commercial and can't be down
 
 ## One Last Thing — Financing
 
-We work with Sheffield Financial and Octane on [mower financing](/financing). Quick decisions, competitive rates. Most commercial Ferris payments land under $300/month. Apply online before you drive up if you want to walk out with the mower that day.
+We work with top national lenders on [mower financing](/financing). Quick decisions, competitive rates — as low as 4.9% APR for qualified credit. Most commercial Ferris payments land under $300/month. Apply online before you drive up if you want to walk out with the mower that day.
 
 ---
 

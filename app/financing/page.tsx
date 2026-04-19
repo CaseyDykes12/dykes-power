@@ -169,7 +169,7 @@ export default function FinancingPage() {
     <div className="max-w-3xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-2">Apply for Financing</h1>
       <p className="text-gray-400 mb-2">
-        We work with Sheffield Financial, Synchrony, and Octane to get you the best rate.
+        We work with top national lenders to get you the best rate.
         Fill out the form below and you&apos;ll receive an instant pre-qualification decision.
       </p>
       <div className="flex items-center gap-2 mb-4 text-sm text-green-400">
@@ -198,22 +198,22 @@ export default function FinancingPage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
           <div className="border border-gray-700 rounded-lg p-4">
             <p className="font-bold text-white mb-1">60 Months</p>
-            <p className="text-2xl font-bold text-green-400">5.9% APR</p>
+            <p className="text-2xl font-bold text-green-400">As low as 4.9% APR</p>
             <p className="text-gray-400 mt-1">Shorter term · less interest paid</p>
           </div>
           <div className="border border-gray-700 rounded-lg p-4">
             <p className="font-bold text-white mb-1">72 Months</p>
-            <p className="text-2xl font-bold text-green-400">5.9% APR</p>
+            <p className="text-2xl font-bold text-green-400">As low as 4.9% APR</p>
             <p className="text-gray-400 mt-1">Most popular · balanced payment</p>
           </div>
           <div className="border border-gray-700 rounded-lg p-4">
             <p className="font-bold text-white mb-1">84 Months</p>
-            <p className="text-2xl font-bold text-green-400">5.9% APR</p>
+            <p className="text-2xl font-bold text-green-400">As low as 4.9% APR</p>
             <p className="text-gray-400 mt-1">Lowest monthly payment</p>
           </div>
         </div>
         <p className="text-xs text-gray-500 mt-3">
-          Rates shown are examples and may vary based on creditworthiness, loan amount, and lender. Actual terms are determined after full credit review. All financing is subject to credit approval.
+          Rates shown are promotional rates available to qualified buyers and may vary based on creditworthiness, loan amount, and lender. Actual terms are determined after full credit review. All financing is subject to credit approval.
         </p>
       </div>
 

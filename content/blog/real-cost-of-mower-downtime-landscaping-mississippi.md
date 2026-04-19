@@ -44,6 +44,6 @@ When you buy from a dealer you can drive to, you're not waiting a week for a par
 
 ## A Second Machine Is Insurance, Not a Luxury
 
-If you're running a two- or three-crew operation, having a backup zero turn isn't overhead — it's how you protect your accounts when the unexpected happens. Between [financing options through Sheffield Financial and Octane](/financing) and the fact that a commercial Ferris holds its value well, adding a second unit pencils out faster than most operators expect.
+If you're running a two- or three-crew operation, having a backup zero turn isn't overhead — it's how you protect your accounts when the unexpected happens. Between [financing options for qualified buyers](/financing) and the fact that a commercial Ferris holds its value well, adding a second unit pencils out faster than most operators expect.
 
 Call us at (601) 641-5475 or stop by 3069 Hwy 49 in Collins. If you want to talk through what makes sense for your operation, use our [contact page](/contact) to reach the sales team directly.

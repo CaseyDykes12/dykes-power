@@ -38,7 +38,7 @@ export default function TermsPage() {
             <span className="font-semibold text-white">MAP Pricing:</span> Ferris equipment is subject to Minimum Advertised Price (MAP) policies set by the manufacturer. Prices shown are consistent with MAP requirements.
           </li>
           <li>
-            <span className="font-semibold text-white">Financing:</span> Financing offers are subject to credit approval through Sheffield Financial or other financing partners. Rates and terms are subject to change.
+            <span className="font-semibold text-white">Financing:</span> Financing offers are subject to credit approval through our financing partners. Rates and terms are subject to change.
           </li>
         </ul>
       </section>

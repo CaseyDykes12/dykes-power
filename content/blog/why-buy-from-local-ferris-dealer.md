@@ -26,7 +26,7 @@ A new mower needs to be properly assembled, the deck needs to be leveled, and ce
 
 ## 4. Financing Is Easier In Person
 
-We work directly with Sheffield Financial, Synchrony, and Octane. You apply once, we handle the paperwork, and you drive away with your mower. Online purchases through third-party sites often don't include dealer financing options.
+We work directly with top national lenders. You apply once, we handle the paperwork, and you drive away with your mower. Online purchases through third-party sites often don't include dealer financing options.
 
 ## 5. Ongoing Parts and Service Support
 
