@@ -15,8 +15,7 @@ const TERMS: { months: number; apr: number }[] = [
 ];
 
 export default function FinancingOptions({ price }: { price: number }) {
-  const defaultDown = Math.round((price * 0.1) / 100) * 100;
-  const [down, setDown] = useState<number>(defaultDown);
+  const [down, setDown] = useState<number>(0);
   const [months, setMonths] = useState<number>(72);
 
   const maxDown = Math.floor(price * 0.5);
