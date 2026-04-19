@@ -168,28 +168,13 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
           {/* ── Details ─────────────────────────────────────────────── */}
           <div>
             {/* Badges */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {product.tag && (
+            {product.tag && (
+              <div className="flex flex-wrap gap-2 mb-4">
                 <span className="bg-[#D4AF37] text-black text-xs font-bold px-3 py-1 rounded">
                   {product.tag}
                 </span>
-              )}
-              {product.status === 'IN_STOCK' && (
-                <span className="bg-green-600 text-white text-xs font-bold px-3 py-1 rounded">
-                  On Our Lot
-                </span>
-              )}
-              {product.status === 'INBOUND' && (
-                <span className="bg-yellow-500 text-black text-xs font-bold px-3 py-1 rounded">
-                  Arriving Soon
-                </span>
-              )}
-              {product.status === 'AVAILABLE_TO_ORDER' && (
-                <span className="bg-gray-600 text-white text-xs font-bold px-3 py-1 rounded">
-                  Order from Factory
-                </span>
-              )}
-            </div>
+              </div>
+            )}
 
             <h1 className="text-3xl md:text-4xl font-black text-white mb-1 leading-tight"
               style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.03em' }}>
