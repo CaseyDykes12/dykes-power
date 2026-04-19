@@ -5,7 +5,9 @@ import { getAllPosts } from '@/lib/blog';
 import ProductCard from '@/components/ProductCard';
 
 export default function HomePage() {
-  const featured = products.filter((p) => p.tag === 'Best Seller' || p.tag === 'Popular').slice(0, 3);
+  const featured = products
+    .filter((p) => p.tag && p.imageUrl.includes('/basco/'))
+    .slice(0, 3);
   const recentPosts = getAllPosts().slice(0, 3);
 
   return (

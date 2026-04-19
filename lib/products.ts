@@ -20,6 +20,7 @@ export interface Product {
   description: string;
   features: string[];
   imageUrl: string;
+  images?: string[];
   status: InventoryStatus;
   tag?: string;
 }
@@ -49,7 +50,8 @@ export const products: Product[] = [
       '8-year battery warranty (consumer)',
       'Cutting height 1.5–4.5 inches',
     ],
-    imageUrl: '/images/ferris/300e.jpg',
+    imageUrl: '/images/ferris/basco/5902093/5902093_FER_300e_Render_FL_Final.jpg',
+    images: ["/images/ferris/basco/5902093/5902093_FER_300e_Render_FL_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_F_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_FR_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_L_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_R_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_T_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_B_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_BR_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_BL_Final.jpg"],
     status: 'AVAILABLE_TO_ORDER',
     tag: 'Electric',
   },
@@ -93,7 +95,8 @@ export const products: Product[] = [
       'Residential/light commercial use',
       'Easy operator controls',
     ],
-    imageUrl: '/images/ferris/300r-hero.jpg',
+    imageUrl: '/images/ferris/basco/5902204/5902204_FER_300R_FL_Final.jpg',
+    images: ["/images/ferris/basco/5902204/5902204_FER_300R_FL_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_F_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_FR_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_L_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_R_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_K_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_KL_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_KR_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_T_Final.jpg"],
     status: 'IN_STOCK',
     tag: 'Best Value',
   },
@@ -199,7 +202,8 @@ export const products: Product[] = [
       '52" commercial-grade deck',
       'Tool-free deck height adjustment',
     ],
-    imageUrl: '/images/ferris/lot/300s-lot.jpg',
+    imageUrl: '/images/ferris/basco/5902207/5902207_FER_300S_FL_FINAL.jpg',
+    images: ["/images/ferris/basco/5902207/5902207_FER_300S_FL_FINAL.jpg","/images/ferris/basco/5902207/5902207_FER_300S_F_Final.jpg","/images/ferris/basco/5902207/5902207_FER_300S_FR_FINAL.jpg","/images/ferris/basco/5902207/5902207_FER_300S_L_Final.jpg","/images/ferris/basco/5902207/5902207_FER_300S_R_Final.jpg","/images/ferris/basco/5902207/5902207_FER_300S_K_Final.jpg","/images/ferris/basco/5902207/5902207_FER_300S_KL_Final.jpg","/images/ferris/basco/5902207/5902207_FER_300S_KR_Final.jpg","/images/ferris/basco/5902207/5902207_FER_300S_T_Final.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -241,7 +245,8 @@ export const products: Product[] = [
       '48" fabricated deck',
       'Up to 8.5 mph ground speed',
     ],
-    imageUrl: '/images/ferris/lot/500s-lot.jpg',
+    imageUrl: '/images/ferris/basco/5902101/5902101_FER_500S_FL_FINAL.jpg',
+    images: ["/images/ferris/basco/5902101/5902101_FER_500S_FL_FINAL.jpg","/images/ferris/basco/5902101/5902101_FER_500S_F_Final_.jpg","/images/ferris/basco/5902101/5902101_FER_500S_FR_FINAL.jpg","/images/ferris/basco/5902101/5902101_FER_500S_L_Final_.jpg","/images/ferris/basco/5902101/5902101_FER_500S_R_Final_.jpg","/images/ferris/basco/5902101/5902101_FER_500S_K_Final_.jpg","/images/ferris/basco/5902101/5902101_FER_500S_KL_Final_.jpg","/images/ferris/basco/5902101/5902101_FER_500S_KR_Final_.jpg","/images/ferris/basco/5902101/5902101_FER_500S_T_Final_.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -325,7 +330,8 @@ export const products: Product[] = [
       'Zero-turn maneuverability',
       'Durable commercial construction',
     ],
-    imageUrl: '/images/ferris/f60.webp',
+    imageUrl: '/images/ferris/basco/5901895/5901895_FER_F60_Studio_FL.jpg',
+    images: ["/images/ferris/basco/5901895/5901895_FER_F60_Studio_FL.jpg","/images/ferris/basco/5901895/5901895_FER_F60_Studio_FR.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -346,7 +352,8 @@ export const products: Product[] = [
       'iCD™ cutting system',
       '48" fabricated deck',
     ],
-    imageUrl: '/images/ferris/lot/is600-lot.jpg',
+    imageUrl: '/images/ferris/basco/5901908/5901908_FER_IS600Z_Studio_FL.jpg',
+    images: ["/images/ferris/basco/5901908/5901908_FER_IS600Z_Studio_FL.jpg","/images/ferris/basco/5901908/5901908_FER_IS600_Studio_FR.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -369,7 +376,6 @@ export const products: Product[] = [
     ],
     imageUrl: '/images/ferris/lot/is600-lot.jpg',
     status: 'IN_STOCK',
-    tag: 'Popular',
   },
   {
     sku: '5902110',
@@ -431,7 +437,8 @@ export const products: Product[] = [
       'iCD™ cutting system',
       '52" fabricated deck',
     ],
-    imageUrl: '/images/ferris/is700-hero.jpg',
+    imageUrl: '/images/ferris/basco/5902107/5902107_FER_IS700_Studio_FL.jpg',
+    images: ["/images/ferris/basco/5902107/5902107_FER_IS700_Studio_FL.jpg","/images/ferris/basco/5902107/5902107_FER_IS700_Studio_FR.jpg","/images/ferris/basco/5902107/5902107_FER_IS700_Studio_K.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -474,7 +481,8 @@ export const products: Product[] = [
       '52" fabricated deck',
       'Up to 10 mph ground speed',
     ],
-    imageUrl: '/images/ferris/lot/isx800-lot.jpg',
+    imageUrl: '/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg',
+    images: ["/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_L_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_R_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_K_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_KL_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_KR_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_T_Final.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -628,7 +636,8 @@ export const products: Product[] = [
       '60" fabricated deck',
       'Up to 12 mph ground speed',
     ],
-    imageUrl: '/images/ferris/isx2200-hero.jpg',
+    imageUrl: '/images/ferris/basco/5902078/5902078_FER_ISX2200_FL_FINAL.jpg',
+    images: ["/images/ferris/basco/5902078/5902078_FER_ISX2200_FL_FINAL.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_F_Final_.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_FR_FINAL.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_L_Final_.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_R_Final_.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_K_Final_.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_KL_Final_.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_KR_Final_.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_T_Final_.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -674,7 +683,6 @@ export const products: Product[] = [
     ],
     imageUrl: '/images/ferris/isx2200-hero.jpg',
     status: 'IN_STOCK',
-    tag: 'Best Seller',
   },
   {
     sku: '5902065',
@@ -718,7 +726,8 @@ export const products: Product[] = [
       '60" fabricated deck',
       'Oil Guard extended intervals',
     ],
-    imageUrl: '/images/ferris/lot/isx3300-lot.jpg',
+    imageUrl: '/images/ferris/basco/5902064/5902064_FER_ISX3300_FL_FINAL.jpg',
+    images: ["/images/ferris/basco/5902064/5902064_FER_ISX3300_FL_FINAL.jpg","/images/ferris/basco/5902064/5902064_FER_ISX3300_F_Final_.jpg","/images/ferris/basco/5902064/5902064_FER_ISX3300_FR_FINAL_with_Tweel.jpg","/images/ferris/basco/5902064/5902064_FER_ISX3300_L_Final_.jpg","/images/ferris/basco/5902064/5902064_FER_ISX3300_R_Final_.jpg","/images/ferris/basco/5902064/5902064_FER_ISX3300_K_Final_.jpg","/images/ferris/basco/5902064/5902064_FER_ISX3300_KL_Final_.jpg","/images/ferris/basco/5902064/5902064_FER_ISX3300_KR_Final_.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -784,7 +793,8 @@ export const products: Product[] = [
       '61" commercial deck',
       'Diesel fuel efficiency',
     ],
-    imageUrl: '/images/ferris/isx2600-hero.jpg',
+    imageUrl: '/images/ferris/basco/5901929/5901929_FER_IS2600_Studio_FL.jpg',
+    images: ["/images/ferris/basco/5901929/5901929_FER_IS2600_Studio_FL.jpg","/images/ferris/basco/5901929/5901929_FER_IS2600_Studio_FR.jpg","/images/ferris/basco/5901929/5901929_FER_IS2600_Studio_KL-Engine.jpg"],
     status: 'AVAILABLE_TO_ORDER',
     tag: 'Commercial Grade',
   },
@@ -807,7 +817,8 @@ export const products: Product[] = [
       'Diesel fuel efficiency',
       'Built for large acreage operations',
     ],
-    imageUrl: '/images/ferris/is6200-hero.jpg',
+    imageUrl: '/images/ferris/basco/5902162/5902162_FER_IS6200_FL_FINAL.jpg',
+    images: ["/images/ferris/basco/5902162/5902162_FER_IS6200_FL_FINAL.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_F_Final.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_FR.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_L_Final.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_R_Final.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_K_Final.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_KL_Final.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_KR_Final.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_T_Final.jpg"],
     status: 'AVAILABLE_TO_ORDER',
     tag: 'Commercial Grade',
   },
@@ -833,7 +844,8 @@ export const products: Product[] = [
       'Low center of gravity',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/stand-on-mowers/srsz1/SRSZ1_PDP_HERO.jpg',
+      '/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_FL.jpg',
+    images: ["/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_FL.jpg","/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_FR.jpg","/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_K.jpg","/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_KR.jpg","/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_Tank.jpg","/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_FL-low.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -855,7 +867,8 @@ export const products: Product[] = [
       'Operator comfort platform',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/stand-on-mowers/srsz1/SRSZ1_PDP_HERO.jpg',
+      '/images/ferris/basco/5901940/5901940_FER_SRSZ1_Studio_FL.jpg',
+    images: ["/images/ferris/basco/5901940/5901940_FER_SRSZ1_Studio_FL.jpg","/images/ferris/basco/5901940/5901940_FER_SRSZ1_Studio_FR.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -943,7 +956,8 @@ export const products: Product[] = [
       'Extended oil change intervals',
     ],
     imageUrl:
-      '/images/ferris/lot/srsz2-lot.jpg',
+      '/images/ferris/basco/5902165/5902165_FER_Z2_F_Final.jpg',
+    images: ["/images/ferris/basco/5902165/5902165_FER_Z2_F_Final.jpg","/images/ferris/basco/5902165/5902165_FER_Z2_L_Final.jpg","/images/ferris/basco/5902165/5902165_FER_Z2_R_Final.jpg","/images/ferris/basco/5902165/5902165_FER_Z2_K_Final.jpg","/images/ferris/basco/5902165/5902165_FER_Z2_KL_Final.jpg","/images/ferris/basco/5902165/5902165_FER_Z2_KR_Final.jpg","/images/ferris/basco/5902165/5902165_FER_Z2_T_Final.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1032,7 +1046,6 @@ export const products: Product[] = [
     ],
     imageUrl: '/images/ferris/lot/srsz3-lot.jpg',
     status: 'IN_STOCK',
-    tag: 'Best Seller',
   },
   {
     sku: '5902233',
@@ -1182,7 +1195,8 @@ export const products: Product[] = [
       'Commercial 2-year warranty',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/walk-behind-mowers/fw15/FW15_PDP_HERO.jpg',
+      '/images/ferris/basco/5901737/5901737_FER_FW15_FRONT.jpg',
+    images: ["/images/ferris/basco/5901737/5901737_FER_FW15_FRONT.jpg","/images/ferris/basco/5901737/5901737_FER_FW15_LFRONT.jpg","/images/ferris/basco/5901737/5901737_FER_FW15_RFRONT.jpg","/images/ferris/basco/5901737/5901737_FER_FW15_LSIDE.jpg","/images/ferris/basco/5901737/5901737_FER_FW15_BACK.jpg","/images/ferris/basco/5901737/5901737_FER_FW15_RBACK.jpg","/images/ferris/basco/5901737/5901737_FER_FW15_PIVOTWHEELS.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1204,7 +1218,8 @@ export const products: Product[] = [
       'Mulch / bag / side discharge',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/walk-behind-mowers/fw25/FW25_PDP_HERO.jpg',
+      '/images/ferris/basco/5901886/5901886_FER_FW25_36-CC_Studio_FL.jpg',
+    images: ["/images/ferris/basco/5901886/5901886_FER_FW25_36-CC_Studio_FL.jpg","/images/ferris/basco/5901886/5901886_FER_FW25_36-CC_Studio_FR.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1226,7 +1241,8 @@ export const products: Product[] = [
       'Mulch / bag / side discharge',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/walk-behind-mowers/fw25/FW25_PDP_HERO.jpg',
+      '/images/ferris/basco/5901887/5901887_FER_FW25_48-Std_Studio_FL.jpg',
+    images: ["/images/ferris/basco/5901887/5901887_FER_FW25_48-Std_Studio_FL.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1248,7 +1264,8 @@ export const products: Product[] = [
       'Mulch / bag / side discharge',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/walk-behind-mowers/fw25/FW25_PDP_HERO.jpg',
+      '/images/ferris/basco/5901888/5901888_FER_FW25_48-CC_Studio_FL.jpg',
+    images: ["/images/ferris/basco/5901888/5901888_FER_FW25_48-CC_Studio_FL.jpg","/images/ferris/basco/5901888/5901888_FER_FW25_48-CC_Studio_FR.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1381,7 +1398,8 @@ export const products: Product[] = [
       'Extended oil change intervals',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/walk-behind-mowers/fw45/FW45_PDP_HERO.jpg',
+      '/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FL.jpg',
+    images: ["/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FL.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FR.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_L.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_R.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_KL.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_KR.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_HOC.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FL-low.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FR-low.jpg"],
     status: 'AVAILABLE_TO_ORDER',
     tag: 'Commercial Grade',
   },
@@ -1407,7 +1425,8 @@ export const products: Product[] = [
       '35.5" overall width',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/blowers/fb1000/FB1000_PDP_HERO.jpg',
+      '/images/ferris/basco/5902012/5902012_FER_FB1000_FL_TN.jpg',
+    images: ["/images/ferris/basco/5902012/5902012_FER_FB1000_FL_TN.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_F_BR_v2_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_FR_TN_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_FR-Chute_BR_v2_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_FR-Top_TN_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_R_BR_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_KR_BR_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_DeflectorControl-L_TN_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_Engine_BR_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_KL-AccessPanel_BR_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_KR-Controls_BR_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_PlatformFoldedUp_TN_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_F-Lifestyle_EB.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_FL-Lifestyle_EB.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_FR-Lifestyle_EB.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_R-Lifestyle_EB.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1523,7 +1542,8 @@ export const products: Product[] = [
       'Precision application system',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/spreadersprayers/venturex/VentureX_PDP_HERO.jpg',
+      '/images/ferris/basco/5902195/5902195_FER_VentureX_FL_Final.jpg',
+    images: ["/images/ferris/basco/5902195/5902195_FER_VentureX_FL_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_F_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_FR_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_L_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_R_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_K_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_KL_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_KR_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_T_Final.jpg"],
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1588,6 +1608,108 @@ export const products: Product[] = [
     ],
     imageUrl:
       'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/spreadersprayers/roverxcfs1200/RoverXC_PDP_HERO.jpg',
+    status: 'AVAILABLE_TO_ORDER',
+  },
+
+  // ─── BASCO-ONLY SKUS (added from Basco Digital product catalog) ──────────────
+
+  {
+    sku: '5901948',
+    name: 'Ferris SRS™ Z2 Series',
+    category: 'Stand-On Mowers',
+    engine: 'Kawasaki® FT730V',
+    horsepower: '24 hp',
+    deckSizes: ['52"'],
+    price: 10749,
+    msrp: 11824,
+    description:
+      'The SRS Z2 with Kawasaki FT730V power pairs Ferris suspension technology with a reliable 24 HP commercial engine for all-day comfort and productivity.',
+    features: [
+      '24 HP Kawasaki FT730V engine',
+      'Ferris suspension platform',
+      '52" commercial deck',
+      'Heavy-duty commercial drive',
+      'High-capacity grass management',
+    ],
+    imageUrl: '/images/ferris/basco/5901948/5901948_FER_Z2_FL_FINAL.jpg',
+    images: ['/images/ferris/basco/5901948/5901948_FER_Z2_FL_FINAL.jpg'],
+    status: 'AVAILABLE_TO_ORDER',
+  },
+  {
+    sku: '5901955',
+    name: 'Ferris SRS™ Z3X Series',
+    category: 'Stand-On Mowers',
+    engine: 'Vanguard® Big Block EFI w/ Oil Guard',
+    horsepower: '37 hp',
+    deckSizes: ['52"'],
+    price: 13699,
+    msrp: 15069,
+    description:
+      'The SRS Z3X 52" with Vanguard Big Block EFI delivers maximum stand-on productivity — premium suspension, electronic fuel injection, and commercial-grade build quality.',
+    features: [
+      '37 HP Vanguard Big Block EFI with Oil Guard',
+      'Ferris suspension platform',
+      '52" commercial deck',
+      'Heavy-duty commercial drive',
+      'Electronic Fuel Injection',
+    ],
+    imageUrl: '/images/ferris/basco/5901955/5901955_FER_Z3X_FL_FINAL.jpg',
+    images: [
+      '/images/ferris/basco/5901955/5901955_FER_Z3X_FL_FINAL.jpg',
+      '/images/ferris/basco/5901955/5901955_FER_Z3X_FR_FINAL.jpg',
+    ],
+    status: 'AVAILABLE_TO_ORDER',
+  },
+  {
+    sku: '5902084',
+    name: 'Ferris ISX™ 800 Series',
+    category: 'Zero Turn Mowers',
+    engine: 'Briggs & Stratton® Commercial Series',
+    horsepower: '27 hp',
+    deckSizes: ['52"'],
+    price: 10149,
+    msrp: 11164,
+    description:
+      'The ISX 800 pairs Ferris ForeFront suspension with Briggs & Stratton Commercial Series power — a proven all-day zero-turn for professional crews.',
+    features: [
+      '27 HP Briggs & Stratton Commercial Series',
+      'ForeFront suspension system',
+      '52" iCD cutting system',
+      'Suspension seat',
+      'Commercial-grade drive',
+    ],
+    imageUrl: '/images/ferris/basco/5902084/5902084_FER_ISX800_FR_FINAL.jpg',
+    images: ['/images/ferris/basco/5902084/5902084_FER_ISX800_FR_FINAL.jpg'],
+    status: 'AVAILABLE_TO_ORDER',
+  },
+  {
+    sku: '5902169',
+    name: 'Ferris SRS™ Z3X Series',
+    category: 'Stand-On Mowers',
+    engine: 'Kawasaki® FX850V',
+    horsepower: '27 hp',
+    deckSizes: ['52"'],
+    price: 12449,
+    msrp: 13694,
+    description:
+      'The SRS Z3X 52" with Kawasaki FX850V brings premium stand-on performance and Ferris suspension technology at a commercial-grade value.',
+    features: [
+      '27 HP Kawasaki FX850V engine',
+      'Ferris suspension platform',
+      '52" commercial deck',
+      'Heavy-duty commercial drive',
+      'High-capacity grass management',
+    ],
+    imageUrl: '/images/ferris/basco/5902169/5902169_FER_Z3X_F_Final.jpg',
+    images: [
+      '/images/ferris/basco/5902169/5902169_FER_Z3X_F_Final.jpg',
+      '/images/ferris/basco/5902169/5902169_FER_Z3X_L_Final.jpg',
+      '/images/ferris/basco/5902169/5902169_FER_Z3X_R_Final.jpg',
+      '/images/ferris/basco/5902169/5902169_FER_Z3X_K_Final.jpg',
+      '/images/ferris/basco/5902169/5902169_FER_Z3X_KL_Final.jpg',
+      '/images/ferris/basco/5902169/5902169_FER_Z3X_KR_Final.jpg',
+      '/images/ferris/basco/5902169/5902169_FER_Z3X_T_Final.jpg',
+    ],
     status: 'AVAILABLE_TO_ORDER',
   },
 ];
