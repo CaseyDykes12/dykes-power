@@ -349,7 +349,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
         {/* ── Bottom CTA ───────────────────────────────────────────── */}
         <div className="mt-10 grid md:grid-cols-3 gap-4">
           {[
-            { icon: '💳', title: 'Financing Available', body: 'From 2.9% up to 48 months on select models. Get pre-approved today.', href: '/contact', cta: 'Get Pre-Approved' },
+            { icon: '💳', title: 'Financing Available', body: 'From 5.9% APR up to 84 months on select models. Get pre-approved today.', href: '/contact', cta: 'Get Pre-Approved' },
             { icon: '🔧', title: 'Local Service & Support', body: 'Our team in Collins, MS services every machine we sell — before and after the sale.', href: '/service', cta: 'Service Info' },
             { icon: '📍', title: 'See It In Person', body: 'Come to our Collins, MS location and walk the lot. No pressure, real advice.', href: '/contact', cta: 'Get Directions' },
           ].map(({ icon, title, body, href, cta }) => (

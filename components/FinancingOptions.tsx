@@ -9,21 +9,20 @@ function calcMonthly(principal: number, aprPercent: number, months: number): num
 }
 
 const TERMS: { months: number; apr: number }[] = [
-  { months: 36, apr: 2.9 },
-  { months: 48, apr: 2.9 },
-  { months: 60, apr: 3.9 },
+  { months: 60, apr: 5.9 },
+  { months: 72, apr: 5.9 },
+  { months: 84, apr: 5.9 },
 ];
 
 export default function FinancingOptions({ price }: { price: number }) {
   const defaultDown = Math.round((price * 0.1) / 100) * 100;
   const [down, setDown] = useState<number>(defaultDown);
-  const [months, setMonths] = useState<number>(48);
+  const [months, setMonths] = useState<number>(72);
 
   const maxDown = Math.floor(price * 0.5);
   const principal = Math.max(0, price - down);
-  const apr = TERMS.find((t) => t.months === months)?.apr ?? 2.9;
+  const apr = TERMS.find((t) => t.months === months)?.apr ?? 5.9;
   const monthly = Math.ceil(calcMonthly(principal, apr, months));
-  const totalInterest = Math.round(monthly * months - principal);
 
   return (
     <div className="bg-[#111] border border-gray-800 rounded-xl overflow-hidden mb-6">
@@ -91,22 +90,6 @@ export default function FinancingOptions({ price }: { price: number }) {
                 </span>
               </button>
             ))}
-          </div>
-        </div>
-
-        {/* Breakdown */}
-        <div className="bg-[#1a1a1a] rounded-lg border border-gray-800 divide-y divide-gray-800">
-          <div className="flex items-center justify-between px-4 py-2.5 text-sm">
-            <span className="text-gray-400">Amount financed</span>
-            <span className="text-white font-semibold">${principal.toLocaleString()}</span>
-          </div>
-          <div className="flex items-center justify-between px-4 py-2.5 text-sm">
-            <span className="text-gray-400">Total interest</span>
-            <span className="text-white font-semibold">${totalInterest.toLocaleString()}</span>
-          </div>
-          <div className="flex items-center justify-between px-4 py-2.5 text-sm">
-            <span className="text-gray-400">Total paid</span>
-            <span className="text-white font-semibold">${(down + principal + totalInterest).toLocaleString()}</span>
           </div>
         </div>
 

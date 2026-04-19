@@ -197,19 +197,19 @@ export default function FinancingPage() {
         <h2 className="text-lg font-bold text-[#C8C8C8] mb-3">Financing Options</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
           <div className="border border-gray-700 rounded-lg p-4">
-            <p className="font-bold text-white mb-1">Promotional Rate</p>
-            <p className="text-2xl font-bold text-green-400">2.9% APR</p>
-            <p className="text-gray-400 mt-1">Up to 48 months on select models</p>
+            <p className="font-bold text-white mb-1">60 Months</p>
+            <p className="text-2xl font-bold text-green-400">5.9% APR</p>
+            <p className="text-gray-400 mt-1">Shorter term · less interest paid</p>
           </div>
           <div className="border border-gray-700 rounded-lg p-4">
-            <p className="font-bold text-white mb-1">Standard Rate</p>
-            <p className="text-2xl font-bold text-[#C8C8C8]">5.9–8.9% APR</p>
-            <p className="text-gray-400 mt-1">Up to 60 months, credit dependent</p>
+            <p className="font-bold text-white mb-1">72 Months</p>
+            <p className="text-2xl font-bold text-green-400">5.9% APR</p>
+            <p className="text-gray-400 mt-1">Most popular · balanced payment</p>
           </div>
           <div className="border border-gray-700 rounded-lg p-4">
-            <p className="font-bold text-white mb-1">Extended Terms</p>
-            <p className="text-2xl font-bold text-[#C8C8C8]">Up to 84 mo</p>
-            <p className="text-gray-400 mt-1">Lower monthly payments on $10K+</p>
+            <p className="font-bold text-white mb-1">84 Months</p>
+            <p className="text-2xl font-bold text-green-400">5.9% APR</p>
+            <p className="text-gray-400 mt-1">Lowest monthly payment</p>
           </div>
         </div>
         <p className="text-xs text-gray-500 mt-3">
