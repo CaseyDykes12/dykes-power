@@ -105,7 +105,7 @@ export default function FinancingPage() {
       setPrequalResult(result);
       setSubmitted(true);
     } catch {
-      setError('Something went wrong. Please call us at (601) 641-5475.');
+      setError('Something went wrong. Please call us at (601) 909-5380.');
     } finally {
       setLoading(false);
     }
@@ -132,7 +132,7 @@ export default function FinancingPage() {
           </div>
           <p className="text-gray-400 mb-8">
             Questions? Call us at{' '}
-            <a href="tel:6016415475" className="text-[#C8C8C8] font-semibold">(601) 641-5475</a>
+            <a href="tel:6019095380" className="text-[#C8C8C8] font-semibold">(601) 909-5380</a>
             {' '}or email{' '}
             <a href="mailto:info@dykesmotors.com" className="text-[#C8C8C8] font-semibold">info@dykesmotors.com</a>
           </p>
@@ -158,7 +158,7 @@ export default function FinancingPage() {
         </div>
         <p className="text-gray-400 mb-8">
           Prefer to speak with someone now? Call{' '}
-          <a href="tel:6016415475" className="text-[#C8C8C8] font-semibold">(601) 641-5475</a>
+          <a href="tel:6019095380" className="text-[#C8C8C8] font-semibold">(601) 909-5380</a>
         </p>
         <a href="/catalog" className="btn-primary">Continue Browsing</a>
       </div>

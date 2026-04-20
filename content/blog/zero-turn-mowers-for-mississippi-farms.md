@@ -54,6 +54,6 @@ If you're hauling a mower to multiple properties or need a work truck to go with
 
 ---
 
-We're at 3069 Hwy 49 in Collins. If you've got a property that needs a better mowing solution, come by and we'll walk you through what fits your acreage and terrain. Or call us at **(601) 641-5475**.
+We're at 3069 Hwy 49 in Collins. If you've got a property that needs a better mowing solution, come by and we'll walk you through what fits your acreage and terrain. Or call us at **(601) 909-5380**.
 
 [Browse the Ferris lineup →](/catalog)

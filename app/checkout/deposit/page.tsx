@@ -162,8 +162,8 @@ function DepositContent() {
 
           <p className="text-xs text-gray-500 mt-4 text-center">
             Secure payment via PayPal · Questions? Call{' '}
-            <a href="tel:6016415475" className="text-[#D4AF37] hover:underline">
-              (601) 641-5475
+            <a href="tel:6019095380" className="text-[#D4AF37] hover:underline">
+              (601) 909-5380
             </a>
           </p>
         </div>

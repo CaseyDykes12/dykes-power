@@ -130,7 +130,7 @@ What happens next:
 
 Reservation total paid today: $${total.toFixed(2)}
 
-Questions? Call (601) 641-5475.
+Questions? Call (601) 909-5380.
 
 — Dykes Motors Power Equipment
 3069 Hwy 49, Collins MS 39428
@@ -148,7 +148,7 @@ ${itemsBlock}
 
 Subtotal (before freight + tax): $${subtotal.toFixed(2)}
 
-Questions? Call (601) 641-5475.
+Questions? Call (601) 909-5380.
 
 — Dykes Motors Power Equipment
 3069 Hwy 49, Collins MS 39428
@@ -176,7 +176,7 @@ ${
       : `SHIPPING — Your order ships within 1–3 business days via UPS/FedEx Ground. You'll get tracking by email.`
 }
 
-Questions? Call (601) 641-5475.
+Questions? Call (601) 909-5380.
 
 — Dykes Motors Power Equipment
 3069 Hwy 49, Collins MS 39428

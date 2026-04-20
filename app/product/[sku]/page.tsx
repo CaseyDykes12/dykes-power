@@ -111,7 +111,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
         seller: {
           '@type': 'LocalBusiness',
           name: 'Dykes Motors Power Equipment',
-          telephone: '+16016415475',
+          telephone: '+16019095380',
           address: {
             '@type': 'PostalAddress',
             streetAddress: '3069 Hwy 49',
@@ -270,8 +270,8 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
               </div>
             )}
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="tel:6016415475" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg flex-1">
-                📞 Sales: (601) 641-5475
+              <a href="tel:6019095380" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg flex-1">
+                📞 Sales: (601) 909-5380
               </a>
               <Link href="/financing" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg flex-1">
                 💳 Apply for Financing
@@ -335,7 +335,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
             >
               ▶ Ferris YouTube Channel
             </a>
-            <a href="tel:6016415475" className="btn-primary text-sm px-6 py-2">
+            <a href="tel:6019095380" className="btn-primary text-sm px-6 py-2">
               Talk to Our Team
             </a>
           </div>

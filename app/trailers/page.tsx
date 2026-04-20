@@ -62,7 +62,7 @@ const trailerSchemas = trailers.map((trailer) => ({
     seller: {
       '@type': 'LocalBusiness',
       name: 'Dykes Motors Power Equipment',
-      telephone: '+16016415475',
+      telephone: '+16019095380',
       address: {
         '@type': 'PostalAddress',
         streetAddress: '3069 Hwy 49',
@@ -185,8 +185,8 @@ export default function TrailersPage() {
 
               {/* CTAs */}
               <div className="flex flex-col gap-3">
-                <a href="tel:6016415475" className="btn-primary text-center">
-                  Call to Purchase — (601) 641-5475
+                <a href="tel:6019095380" className="btn-primary text-center">
+                  Call to Purchase — (601) 909-5380
                 </a>
                 <Link href="/contact" className="btn-outline text-center">
                   Ask a Question
@@ -232,7 +232,7 @@ export default function TrailersPage() {
           customers from Hattiesburg, Laurel, Brookhaven, Columbia, Magee, Mendenhall, Bassfield, Seminary, Sumrall,
           and across Covington County and the Pine Belt. Whether you&apos;re hauling a zero-turn mower, farm
           equipment, or building supplies, our single axle utility trailers are ready to work.
-          Call <a href="tel:6016415475" className="text-[#C8C8C8] hover:underline">(601) 641-5475</a> or stop by.
+          Call <a href="tel:6019095380" className="text-[#C8C8C8] hover:underline">(601) 909-5380</a> or stop by.
         </p>
       </div>
 

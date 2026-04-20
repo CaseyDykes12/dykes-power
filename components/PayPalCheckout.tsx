@@ -146,13 +146,13 @@ export default function PayPalCheckout({
             } catch (err) {
               console.error('Order capture / save failed:', err);
               setError(
-                'Payment was processed but order save failed. Please call (601) 641-5475 with your PayPal confirmation.'
+                'Payment was processed but order save failed. Please call (601) 909-5380 with your PayPal confirmation.'
               );
             }
           },
           onError: (err: unknown) => {
             console.error('PayPal error:', err);
-            setError('Payment failed. Please try again or call (601) 641-5475.');
+            setError('Payment failed. Please try again or call (601) 909-5380.');
           },
         })
         .render(containerRef.current);
@@ -186,10 +186,10 @@ export default function PayPalCheckout({
           Online card processing is being finalized. Call our team — we accept debit, credit, check, and financing. Pickup at our Collins, MS location.
         </p>
         <a
-          href="tel:6016415475"
+          href="tel:6019095380"
           className="inline-block bg-[#D4AF37] text-black font-bold text-sm px-6 py-2.5 rounded-lg hover:bg-[#C8A830] transition-colors"
         >
-          Call (601) 641-5475
+          Call (601) 909-5380
         </a>
       </div>
     );

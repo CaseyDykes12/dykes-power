@@ -41,4 +41,4 @@ Mississippi terrain, grass types, and humidity are different from the Mid-Atlant
 We're not the biggest dealership in the country. We're a local family business in Collins, MS, and we stand behind what we sell.
 
 **Come see us at 3069 Hwy 49, Collins, MS 39428**
-**Sales: (601) 641-5475 | Service: (601) 336-2541**
+**Sales: (601) 909-5380 | Service: (601) 336-2541**

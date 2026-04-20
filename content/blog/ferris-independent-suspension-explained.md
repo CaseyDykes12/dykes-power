@@ -52,4 +52,4 @@ If you're mowing professionally, it's not optional. The fatigue difference betwe
 
 We carry the full Ferris IS suspension lineup at our Collins, MS dealership. Come out and sit on one — the difference is something you have to feel to fully appreciate.
 
-**3069 Hwy 49, Collins, MS 39428 | (601) 641-5475**
+**3069 Hwy 49, Collins, MS 39428 | (601) 909-5380**

@@ -50,6 +50,6 @@ We work with [top national lenders](/financing) on the Ferris lineup. Competitiv
 
 ---
 
-If you're in Laurel, Ellisville, Sandersville, or anywhere around Jones County and shopping Ferris, come see us. 3069 Hwy 49 in Collins, about 20 minutes up the road. Or call **(601) 641-5475** and we'll answer anything I didn't cover here.
+If you're in Laurel, Ellisville, Sandersville, or anywhere around Jones County and shopping Ferris, come see us. 3069 Hwy 49 in Collins, about 20 minutes up the road. Or call **(601) 909-5380** and we'll answer anything I didn't cover here.
 
 [See the Laurel-area landing page →](/ferris-mowers-laurel-ms)

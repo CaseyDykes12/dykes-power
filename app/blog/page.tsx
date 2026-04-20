@@ -36,7 +36,7 @@ export default function BlogPage() {
       </div>
 
       {posts.length === 0 ? (
-        <p className="text-gray-500">No posts yet — call (601) 641-5475 or <Link href="/contact" className="text-[#C8C8C8] underline">contact our team</Link> for Ferris buying and maintenance advice.</p>
+        <p className="text-gray-500">No posts yet — call (601) 909-5380 or <Link href="/contact" className="text-[#C8C8C8] underline">contact our team</Link> for Ferris buying and maintenance advice.</p>
       ) : (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((post) => (

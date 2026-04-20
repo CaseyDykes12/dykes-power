@@ -33,8 +33,8 @@ function OrderConfirmedContent() {
         )}
         <p className="text-gray-300 my-8">
           Questions? Call{' '}
-          <a href="tel:6016415475" className="text-[#D4AF37] underline">
-            (601) 641-5475
+          <a href="tel:6019095380" className="text-[#D4AF37] underline">
+            (601) 909-5380
           </a>{' '}
           or email{' '}
           <a href="mailto:Casey@dykesmotors.com" className="text-[#D4AF37] underline">

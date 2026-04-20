@@ -2,7 +2,7 @@
 
 ## About the Business
 Authorized Ferris mower dealership at 3069 Hwy 49, Collins, Mississippi 39428.
-Sales: (601) 641-5475 | Service & Parts: (601) 336-2541 | info@dykesmotors.com | dykespower.com
+Sales: (601) 909-5380 | Service & Parts: (601) 336-2541 | info@dykesmotors.com | dykespower.com
 
 ---
 

@@ -52,6 +52,6 @@ We work with top national lenders on [mower financing](/financing). Quick decisi
 
 ---
 
-If you're in the Pine Belt and looking at Ferris, come see us. 3069 Hwy 49 in Collins, about 45 minutes up from Hattiesburg. Or call **(601) 641-5475** and we'll answer whatever didn't get covered here.
+If you're in the Pine Belt and looking at Ferris, come see us. 3069 Hwy 49 in Collins, about 45 minutes up from Hattiesburg. Or call **(601) 909-5380** and we'll answer whatever didn't get covered here.
 
 [See the Hattiesburg-area landing page →](/ferris-mowers-hattiesburg-ms)

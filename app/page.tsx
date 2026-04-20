@@ -215,7 +215,7 @@ export default function HomePage() {
             Take the Quiz
           </Link>
           <p className="text-dykes-gray-500 text-sm mt-4">
-            Prefer to talk? Call Casey in Collins: <a href="tel:6016415475" className="underline hover:text-white">(601) 641-5475</a>.
+            Prefer to talk? Call Casey in Collins: <a href="tel:6019095380" className="underline hover:text-white">(601) 909-5380</a>.
           </p>
         </div>
       </section>

@@ -22,7 +22,7 @@ export default function Footer() {
           </p>
           <p className="text-sm text-gray-400">Authorized Ferris Dealer<br />Collins, Mississippi</p>
           <p className="text-sm mt-3">
-            Sales: <a href="tel:6016415475" className="hover:text-[#C8C8C8]">(601) 641-5475</a>
+            Sales: <a href="tel:6019095380" className="hover:text-[#C8C8C8]">(601) 909-5380</a>
           </p>
           <p className="text-sm">
             Service: <a href="tel:6013362541" className="hover:text-[#C8C8C8]">(601) 336-2541</a>
