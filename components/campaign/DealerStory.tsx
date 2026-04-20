@@ -11,8 +11,8 @@ export default function DealerStory() {
         <div className="relative aspect-[4/3] md:aspect-square rounded-xl overflow-hidden bg-dykes-black border border-dykes-gray-700">
           {/* TODO: replace with team photo once shot */}
           <Image
-            src="/images/ferris/lot/isx800-lot-2.jpg"
-            alt="The Dykes Motors Power Equipment lot in Collins, Mississippi"
+            src="/images/ferris/campaign/lifestyle-landscaper-1.webp"
+            alt="Landscaper at work on a Ferris zero turn"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
