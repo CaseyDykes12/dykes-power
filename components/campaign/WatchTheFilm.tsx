@@ -1,13 +1,17 @@
 'use client';
 
-import { useState } from 'react';
-
-const FILM_YOUTUBE_ID = ''; // TODO: paste unlisted YouTube ID once Casey uploads the 30-sec spot
+import { useRef, useState } from 'react';
 
 export default function WatchTheFilm() {
   const [playing, setPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-  const hasFilm = FILM_YOUTUBE_ID.length > 0;
+  const handlePlay = () => {
+    setPlaying(true);
+    requestAnimationFrame(() => {
+      videoRef.current?.play().catch(() => {});
+    });
+  };
 
   return (
     <section
@@ -31,32 +35,32 @@ export default function WatchTheFilm() {
         </p>
 
         <div className="relative aspect-video rounded-xl overflow-hidden bg-dykes-gray-900 border border-dykes-gray-700 max-w-5xl mx-auto">
-          {hasFilm && playing ? (
-            <iframe
-              src={`https://www.youtube-nocookie.com/embed/${FILM_YOUTUBE_ID}?autoplay=1&rel=0`}
-              title="Feels Like a Ferris — 30-second national spot"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full"
-            />
-          ) : (
+          <video
+            ref={videoRef}
+            src="/videos/ferris/campaign/dealer-30s.mp4"
+            poster="/images/ferris/campaign/lifestyle-confidence.webp"
+            controls={playing}
+            playsInline
+            preload="metadata"
+            className={`absolute inset-0 w-full h-full object-cover ${playing ? '' : 'pointer-events-none'}`}
+            aria-label="Feels Like a Ferris — 30-second national spot"
+          />
+          {!playing && (
             <button
               type="button"
-              onClick={() => hasFilm && setPlaying(true)}
-              disabled={!hasFilm}
-              className="absolute inset-0 w-full h-full flex items-center justify-center bg-cover bg-center disabled:cursor-not-allowed"
-              style={{ backgroundImage: 'url(/images/ferris/lot/isx800-lot-3.jpg)' }}
-              aria-label={hasFilm ? 'Play the Feels Like a Ferris 30-second film' : 'Film coming soon'}
+              onClick={handlePlay}
+              className="absolute inset-0 w-full h-full flex items-center justify-center"
+              aria-label="Play the Feels Like a Ferris 30-second film"
             >
-              <span className="absolute inset-0 bg-black/60" />
+              <span className="absolute inset-0 bg-black/50" />
               <span className="relative z-10 flex flex-col items-center gap-3">
-                <span className="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <span className="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center transition-transform hover:scale-110">
                   <svg className="w-8 h-8 md:w-10 md:h-10 text-dykes-black ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </span>
                 <span className="text-white text-sm font-semibold tracking-widest uppercase">
-                  {hasFilm ? 'Play the Film · 0:30' : 'Film coming soon'}
+                  Play the Film · 0:30
                 </span>
               </span>
             </button>
