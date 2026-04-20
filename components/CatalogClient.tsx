@@ -80,7 +80,7 @@ export default function CatalogClient({ products, categories }: { products: Prod
       <section className="relative overflow-hidden border-b border-dykes-gray-700">
         <div className="absolute inset-0">
           <Image
-            src="/images/ferris/lot/isx800-lot-2.jpg"
+            src="/images/ferris/campaign/lifestyle-landscaper-1.webp"
             alt=""
             fill
             sizes="100vw"

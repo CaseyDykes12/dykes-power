@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import StatTile from './StatTile';
 
 export default function WhyWeCarryFerris() {
@@ -33,18 +34,13 @@ export default function WhyWeCarryFerris() {
           </div>
 
           <div className="relative aspect-video rounded-xl overflow-hidden bg-dykes-gray-900 border border-dykes-gray-700">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              poster="/images/ferris/lot/isx800-lot-2.jpg"
-              className="absolute inset-0 w-full h-full object-cover"
-              aria-label="Ferris independent suspension detail"
-            >
-              <source src="/videos/ferris/campaign/suspension-detail.webm" type="video/webm" />
-              <source src="/videos/ferris/campaign/suspension-detail.mp4" type="video/mp4" />
-            </video>
+            <Image
+              src="/images/ferris/campaign/lifestyle-landscaper-1.webp"
+              alt="Landscaper running a Ferris zero turn"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
           </div>
         </div>
 
