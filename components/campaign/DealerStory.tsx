@@ -11,8 +11,8 @@ export default function DealerStory() {
         <div className="relative aspect-[4/3] md:aspect-square rounded-xl overflow-hidden bg-dykes-black border border-dykes-gray-700">
           {/* TODO: replace with team photo once shot */}
           <Image
-            src="/images/ferris/campaign/lifestyle-landscaper-1.webp"
-            alt="Landscaper at work on a Ferris zero turn"
+            src="/images/ferris/campaign/lifestyle-homeowner.webp"
+            alt="Ferris zero-turn outside a Mississippi home at golden hour"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"

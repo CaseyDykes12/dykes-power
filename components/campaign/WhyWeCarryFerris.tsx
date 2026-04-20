@@ -35,8 +35,8 @@ export default function WhyWeCarryFerris() {
 
           <div className="relative aspect-video rounded-xl overflow-hidden bg-dykes-gray-900 border border-dykes-gray-700">
             <Image
-              src="/images/ferris/campaign/lifestyle-landscaper-1.webp"
-              alt="Landscaper running a Ferris zero turn"
+              src="/images/ferris/campaign/lifestyle-confidence.webp"
+              alt="Full Ferris lineup — commercial zero-turn, stand-on, and walk-behind"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"

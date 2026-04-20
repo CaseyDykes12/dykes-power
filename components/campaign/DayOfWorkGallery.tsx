@@ -9,8 +9,8 @@ type Shot = {
 
 const SHOTS: Shot[] = [
   {
-    src: '/images/ferris/campaign/lifestyle-landscaper-1.webp',
-    alt: 'Landscaper on a Ferris commercial zero-turn in an open field',
+    src: '/images/ferris/campaign/lifestyle-crew.webp',
+    alt: 'Ferris zero-turn at sunset with operator walking up',
     caption: 'Dawn to dusk. Every day.',
     span: 'col-span-2 row-span-2',
   },
@@ -26,13 +26,13 @@ const SHOTS: Shot[] = [
   },
   {
     src: '/images/ferris/campaign/lifestyle-confidence.webp',
-    alt: 'Landscape crew confident in their Ferris equipment',
-    caption: 'Equipment that backs you up.',
+    alt: 'Full Ferris lineup — zero-turn, stand-on, walk-behind',
+    caption: 'The full lineup.',
   },
   {
-    src: '/images/ferris/campaign/lifestyle-crew.webp',
-    alt: 'Ferris commercial crew working a large property',
-    caption: 'Built for the long haul.',
+    src: '/images/ferris/campaign/section-background.webp',
+    alt: 'Ferris independent suspension shock detail',
+    caption: 'Shock by shock.',
   },
   {
     src: '/images/ferris/campaign/lifestyle-homeowner.webp',
