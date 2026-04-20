@@ -270,6 +270,57 @@ const galleryMap: Record<string, string[]> = {
     `${BASE}/Front%20Mount%20Mowers/Procut%20S/Features%20and%20Benefits/FER_ProcutS_FB-FuelTank.jpeg`,
   ],
 
+  'fs3200': [
+    `${BASE}/Spreader%20Sprayers/FS3200/Product%20Images/FER_VentureXC-FS3200_Updated.jpg`,
+    `${BASE}/Spreader%20Sprayers/FS3200/Product%20Images/VentureXC_FS3200_LF.jpg`,
+    `${BASE}/Spreader%20Sprayers/FS3200/Product%20Images/VentureXC_FS3200_PDP_R.jpg`,
+    `${BASE}/Spreader%20Sprayers/FS3200/Features%20and%20Benefits/FER_FS3100_FB-CommercialPower.png`,
+    `${BASE}/Spreader%20Sprayers/FS3200/Features%20and%20Benefits/FER_FS3100_FB-Hopper.png`,
+    `${BASE}/Spreader%20Sprayers/FS3200/Features%20and%20Benefits/FER_FS3100_FB-Capacity.png`,
+    `${BASE}/Spreader%20Sprayers/FS3200/Features%20and%20Benefits/FER_FS3100_FB-Boom.png`,
+    `${BASE}/Spreader%20Sprayers/FS3200/Features%20and%20Benefits/FER_FS3100_FB-SprayWand.png`,
+    `${BASE}/Spreader%20Sprayers/FS3200/Features%20and%20Benefits/FER_FS3100_FB-Frame.png`,
+    `${BASE}/Spreader%20Sprayers/FS3200/Features%20and%20Benefits/FER_FS3100_FB-Maneuverability.png`,
+  ],
+
+  'fs2200': [
+    `${BASE}/Spreader%20Sprayers/FS2200/Product%20Images/FER_PathfinderXC-FS2200_Updated.jpg`,
+    `${BASE}/Spreader%20Sprayers/FS2200/Product%20Images/PathfinderXC_FS2200_PDP_LF.jpg`,
+    `${BASE}/Spreader%20Sprayers/FS2200/Product%20Images/PathfinderXC_FS2200_R.jpg`,
+    `${BASE}/Spreader%20Sprayers/FS2200/Product%20Images/Pathfinder_PDP_GateEntrance.png`,
+    `${BASE}/Spreader%20Sprayers/FS2200/Features%20and%20Benefits/FER_FS2200_FB-Hopper.png`,
+    `${BASE}/Spreader%20Sprayers/FS2200/Features%20and%20Benefits/FER_FS2200_FB-Capacity.png`,
+    `${BASE}/Spreader%20Sprayers/FS2200/Features%20and%20Benefits/FER_FS2200_FB-SprayWidth.png`,
+    `${BASE}/Spreader%20Sprayers/FS2200/Features%20and%20Benefits/FER_FS2200_FB-CompactSize.png`,
+    `${BASE}/Spreader%20Sprayers/FS2200/Features%20and%20Benefits/FER_FS2200_FB-Frame.png`,
+    `${BASE}/Spreader%20Sprayers/FS2200/Features%20and%20Benefits/FER_FS2200_FB-Maneuverability.png`,
+  ],
+
+  'fs2100': [
+    `${BASE}/Spreader%20Sprayers/FS2100/Product%20Images/FER_Pathfinder-FS2100_Updated.jpg`,
+    `${BASE}/Spreader%20Sprayers/FS2100/Product%20Images/PathfinderFS2100_PDP_LF.jpg`,
+    `${BASE}/Spreader%20Sprayers/FS2100/Product%20Images/PathfinderFS2100_PDP_R.jpg`,
+    `${BASE}/Spreader%20Sprayers/FS2100/Product%20Images/PathfinderFS2100_PDP_App1.jpeg`,
+    `${BASE}/Spreader%20Sprayers/FS2100/Product%20Images/Pathfinder_PDP_SprayRes.png`,
+    `${BASE}/Spreader%20Sprayers/FS2100/Features%20and%20Benefits/FER_FS2100_FB-Hopper.png`,
+    `${BASE}/Spreader%20Sprayers/FS2100/Features%20and%20Benefits/FER_FS2100_FB-Capacity.png`,
+    `${BASE}/Spreader%20Sprayers/FS2100/Features%20and%20Benefits/FER_FS2100_FB-SprayWidth.png`,
+    `${BASE}/Spreader%20Sprayers/FS2100/Features%20and%20Benefits/FER_FS2100_FB-Frame.png`,
+    `${BASE}/Spreader%20Sprayers/FS2100/Features%20and%20Benefits/FER_FS2100_FB-Maneuverability.png`,
+  ],
+
+  'fs1200': [
+    `${BASE}/Spreader%20Sprayers/FS1200/Product%20Images/FER_RoverXC-FS1200_Updated.jpg`,
+    `${BASE}/Spreader%20Sprayers/FS1200/Product%20Images/RoverXC_FS1200_PDP_LF.jpg`,
+    `${BASE}/Spreader%20Sprayers/FS1200/Product%20Images/RoverXC_FS1200_PDP_R.jpg`,
+    `${BASE}/Spreader%20Sprayers/FS1200/Product%20Images/RoverXC_FS1200_PDP_Application.jpg`,
+    `${BASE}/Spreader%20Sprayers/FS1200/Features%20and%20Benefits/FER_FS1200_FB-Hopper.png`,
+    `${BASE}/Spreader%20Sprayers/FS1200/Features%20and%20Benefits/FER_FS1200_FB-Controls.png`,
+    `${BASE}/Spreader%20Sprayers/FS1200/Features%20and%20Benefits/FER_FS1200_FB-CompactSize.png`,
+    `${BASE}/Spreader%20Sprayers/FS1200/Features%20and%20Benefits/FER_FS1200_FB-Frame.png`,
+    `${BASE}/Spreader%20Sprayers/FS1200/Features%20and%20Benefits/FER_FS1200_FB-Manueverability.png`,
+  ],
+
   'f60': [
     `${BASE}/Zero%20Turn%20Mowers/F60Z/Hero%20Images/FER_PDP_F60_Hero_FL.jpg`,
     `${BASE}/Zero%20Turn%20Mowers/F60Z/Hero%20Images/FER_F60_DeckAccess_Web-FB.png`,
@@ -306,6 +357,10 @@ const namePatterns: [RegExp, string][] = [
   [/FB[^\d]*3000\b/i,      'fb3000'],
   [/FB[^\d]*2000\b/i,      'fb2000'],
   [/FB[^\d]*1000\b/i,      'fb1000'],
+  [/FS[^\d]*3200\b/i,      'fs3200'],
+  [/FS[^\d]*2200\b/i,      'fs2200'],
+  [/FS[^\d]*2100\b/i,      'fs2100'],
+  [/FS[^\d]*1200\b/i,      'fs1200'],
   [/ProCut/i,              'procuts'],
   [/F60/i,                 'f60'],
 ];

@@ -1520,7 +1520,7 @@ export const products: Product[] = [
       'Precision application system',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/spreadersprayers/venturexcfs3200/VentureXC_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS3200/Product%20Images/FER_VentureXC-FS3200_Updated.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1564,7 +1564,7 @@ export const products: Product[] = [
       'Compact ride-on design',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/spreadersprayers/pathfinderxcfs2200/PathfinderXC_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS2200/Product%20Images/FER_PathfinderXC-FS2200_Updated.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1585,7 +1585,7 @@ export const products: Product[] = [
       'Compact design',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/spreadersprayers/pathfinderfs2100/PathfinderFS2100_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS2100/Product%20Images/FER_Pathfinder-FS2100_Updated.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1607,7 +1607,7 @@ export const products: Product[] = [
       'Precision granular application',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/spreadersprayers/roverxcfs1200/RoverXC_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS1200/Product%20Images/FER_RoverXC-FS1200_Updated.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
 
