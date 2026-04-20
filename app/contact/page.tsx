@@ -231,6 +231,40 @@ export default function ContactPage() {
           </div>
 
           <div className="bg-gray-50 rounded-xl p-6">
+            <h3 className="font-bold mb-4">What to expect</h3>
+            <ol className="space-y-4 text-sm text-gray-700">
+              <li className="flex gap-3">
+                <span className="shrink-0 w-7 h-7 rounded-full bg-black text-white font-bold text-xs flex items-center justify-center">1</span>
+                <div>
+                  <p className="font-semibold text-black">You send us your info.</p>
+                  <p className="text-gray-600">Form, text, or a phone call — whichever&apos;s easiest for you.</p>
+                </div>
+              </li>
+              <li className="flex gap-3">
+                <span className="shrink-0 w-7 h-7 rounded-full bg-black text-white font-bold text-xs flex items-center justify-center">2</span>
+                <div>
+                  <p className="font-semibold text-black">We call you back within 1 business hour.</p>
+                  <p className="text-gray-600">Real person from the Collins shop — not a call center.</p>
+                </div>
+              </li>
+              <li className="flex gap-3">
+                <span className="shrink-0 w-7 h-7 rounded-full bg-black text-white font-bold text-xs flex items-center justify-center">3</span>
+                <div>
+                  <p className="font-semibold text-black">You get a straight quote.</p>
+                  <p className="text-gray-600">Out-the-door price, financing options if you want them — no runaround.</p>
+                </div>
+              </li>
+              <li className="flex gap-3">
+                <span className="shrink-0 w-7 h-7 rounded-full bg-black text-white font-bold text-xs flex items-center justify-center">4</span>
+                <div>
+                  <p className="font-semibold text-black">Demo it, if you want.</p>
+                  <p className="text-gray-600">Come sit on the machine. Ride the suspension. Then decide.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div className="bg-gray-50 rounded-xl p-6">
             <h3 className="font-bold mb-3">Why buy local?</h3>
             <ul className="space-y-2 text-sm text-gray-600">
               <li className="flex gap-2"><span className="text-[#C8C8C8]">✓</span> See the machines in person before you buy</li>

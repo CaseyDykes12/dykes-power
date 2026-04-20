@@ -1,5 +1,6 @@
 'use client';
 import { useState, Suspense } from 'react';
+import Image from 'next/image';
 import { Product, ProductCategory } from '@/lib/products';
 import ProductCard from '@/components/ProductCard';
 import { useSearchParams } from 'next/navigation';
@@ -74,19 +75,47 @@ function CatalogFilters({ products, categories }: { products: Product[]; categor
 
 export default function CatalogClient({ products, categories }: { products: Product[]; categories: ProductCategory[] }) {
   return (
-    <div className="max-w-[1280px] mx-auto px-4 py-10">
-      <h1 className="text-3xl font-bold mb-2 text-white">Ferris Equipment Catalog</h1>
-      <p className="text-gray-400 mb-8">Authorized dealer for the complete Ferris lineup — mowers, blowers, and spreader/sprayers. Collins, Mississippi.</p>
-
-      <Suspense fallback={
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map((p) => (
-            <ProductCard key={p.sku} product={p} />
-          ))}
+    <>
+      {/* Campaign hero banner */}
+      <section className="relative overflow-hidden border-b border-dykes-gray-700">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/ferris/lot/isx800-lot-2.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover object-center opacity-35"
+            priority
+          />
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-dykes-black" />
         </div>
-      }>
-        <CatalogFilters products={products} categories={categories} />
-      </Suspense>
-    </div>
+        <div className="relative z-10 max-w-[1280px] mx-auto px-4 py-16 md:py-20">
+          <p className="text-ferris-yellow text-sm font-semibold tracking-widest uppercase mb-3">
+            Dykes Motors · Authorized Ferris<sup className="text-[9px]">®</sup> Dealer
+          </p>
+          <h1
+            className="text-4xl md:text-6xl font-black leading-[0.95] text-white mb-4"
+            style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.02em' }}
+          >
+            The Full Lineup.
+          </h1>
+          <p className="text-dykes-gray-300 text-base md:text-lg max-w-2xl leading-relaxed">
+            Every Ferris we carry — zero-turn, stand-on, walk-behind. Built for Mississippi acres.
+          </p>
+        </div>
+      </section>
+
+      <div className="max-w-[1280px] mx-auto px-4 py-10">
+        <Suspense fallback={
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {products.map((p) => (
+              <ProductCard key={p.sku} product={p} />
+            ))}
+          </div>
+        }>
+          <CatalogFilters products={products} categories={categories} />
+        </Suspense>
+      </div>
+    </>
   );
 }
