@@ -8,6 +8,7 @@ import WhyWeCarryFerris from '@/components/campaign/WhyWeCarryFerris';
 import MowCalculator from '@/components/MowCalculator';
 import WatchTheFilm from '@/components/campaign/WatchTheFilm';
 import DealerStory from '@/components/campaign/DealerStory';
+import DayOfWorkGallery from '@/components/campaign/DayOfWorkGallery';
 
 export default function HomePage() {
   const featured = products
@@ -139,6 +140,9 @@ export default function HomePage() {
 
       {/* 5. Your Property — mow-time calculator */}
       <MowCalculator />
+
+      {/* 5b. Feels Like a Day of Work */}
+      <DayOfWorkGallery />
 
       {/* 6. Watch the Film */}
       <WatchTheFilm />

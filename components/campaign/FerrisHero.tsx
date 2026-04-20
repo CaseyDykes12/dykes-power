@@ -41,17 +41,16 @@ export default function FerrisHero() {
           loop
           muted
           playsInline
-          poster="/images/ferris/lot/isx800-lot-3.jpg"
+          poster="/images/ferris/campaign/lifestyle-landscaper-1.webp"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-40"
           aria-hidden="true"
         >
-          <source src="/videos/ferris/campaign/hero-15s.webm" type="video/webm" />
           <source src="/videos/ferris/campaign/hero-15s.mp4" type="video/mp4" />
         </video>
       )}
       {reducedMotion && (
         <Image
-          src="/images/ferris/lot/isx800-lot-3.jpg"
+          src="/images/ferris/campaign/lifestyle-landscaper-1.webp"
           alt=""
           fill
           preload
