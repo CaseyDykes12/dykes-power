@@ -75,6 +75,24 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile category strip — horizontal scroll, always visible on phones */}
+      <nav
+        aria-label="Shop categories"
+        className="md:hidden border-t border-gray-800 overflow-x-auto no-scrollbar"
+      >
+        <div className="flex items-center gap-1 px-3 py-2 text-xs font-semibold whitespace-nowrap">
+          <Link href="/catalog" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Shop All</Link>
+          <Link href="/catalog?category=Zero+Turn+Mowers" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Zero Turn</Link>
+          <Link href="/catalog?category=Stand-On+Mowers" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Stand-On</Link>
+          <Link href="/trailers" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Trailers</Link>
+          <Link href="/parts" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Parts</Link>
+          <Link href="/service" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Service</Link>
+          <Link href="/financing" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Financing</Link>
+          <Link href="/blog" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Blog</Link>
+          <Link href="/contact" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Contact</Link>
+        </div>
+      </nav>
+
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-black border-t border-gray-800 px-4 py-4 flex flex-col gap-4 text-sm font-semibold">
