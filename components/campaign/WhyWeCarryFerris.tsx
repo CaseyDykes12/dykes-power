@@ -20,17 +20,13 @@ export default function WhyWeCarryFerris() {
             >
               Why We Carry Ferris.
             </h2>
-            <blockquote className="text-dykes-gray-100 text-lg md:text-xl leading-relaxed border-l-2 border-ferris-yellow pl-4">
-              <p className="mb-3">
-                We&apos;ve spent years in Collins picking the lines we&apos;ll put our name behind.
-                Ferris invented the suspension mower — independent shocks on all four corners — and
-                nobody else comes close. That&apos;s why every commercial crew we sell to goes home
-                on a Ferris.
+            <div className="text-dykes-gray-100 text-lg md:text-xl leading-relaxed border-l-2 border-ferris-yellow pl-4">
+              <p>
+                Ferris invented the suspension mower — independent shocks on all four corners.
+                Nobody else comes close. That&apos;s why we carry them. When you&apos;re running
+                a crew in Mississippi heat, your mower has to work as hard as you do.
               </p>
-              <footer className="text-dykes-gray-300 text-base not-italic">
-                — Casey Dykes
-              </footer>
-            </blockquote>
+            </div>
           </div>
 
           <div className="relative aspect-video rounded-xl overflow-hidden bg-dykes-gray-900 border border-dykes-gray-700">
