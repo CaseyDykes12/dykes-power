@@ -282,38 +282,49 @@ const galleryMap: Record<string, string[]> = {
   ],
 };
 
-// Keyword patterns to match product names → gallery key
+// Keyword patterns to match product names → gallery key.
+// [^\d]* between prefix and number tolerates ® / ™ / whitespace.
+// \b after the number prevents 600 from matching 6200 (order also reinforces this).
 const namePatterns: [RegExp, string][] = [
-  [/300e/i,    '300e'],
-  [/300S/i,    '300s'],
-  [/300R/i,    '300r'],
-  [/500S/i,    '500s'],
-  [/IS\s*600/i,  'is600'],
-  [/IS\s*700/i,  'is700'],
-  [/ISX\s*800/i, 'isx800'],
-  [/ISX\s*2200/i,'isx2200'],
-  [/ISX\s*3300/i,'isx3300'],
-  [/IS\s*2600/i, 'is2600'],
-  [/IS\s*6200/i, 'is6200'],
-  [/SRS.*Z3X/i,  'srsz3x'],
-  [/SRS.*Z2/i,   'srsz2'],
-  [/SRS.*Z1/i,   'srsz1'],
-  [/FW\s*45/i,   'fw45'],
-  [/FW\s*25/i,   'fw25'],
-  [/FW\s*15/i,   'fw15'],
-  [/FB\s*3000/i, 'fb3000'],
-  [/FB\s*2000/i, 'fb2000'],
-  [/FB\s*1000/i, 'fb1000'],
-  [/ProCut/i,    'procuts'],
-  [/F60/i,       'f60'],
+  [/300e/i,                '300e'],
+  [/300S/i,                '300s'],
+  [/300R/i,                '300r'],
+  [/500S/i,                '500s'],
+  [/IS[^\d]*6200\b/i,      'is6200'],
+  [/IS[^\d]*2600\b/i,      'is2600'],
+  [/ISX[^\d]*3300\b/i,     'isx3300'],
+  [/ISX[^\d]*2200\b/i,     'isx2200'],
+  [/ISX[^\d]*800\b/i,      'isx800'],
+  [/IS[^\d]*700\b/i,       'is700'],
+  [/IS[^\d]*600\b/i,       'is600'],
+  [/SRS.*Z3X/i,            'srsz3x'],
+  [/SRS.*Z2/i,             'srsz2'],
+  [/SRS.*Z1/i,             'srsz1'],
+  [/FW[^\d]*45\b/i,        'fw45'],
+  [/FW[^\d]*25\b/i,        'fw25'],
+  [/FW[^\d]*15\b/i,        'fw15'],
+  [/FB[^\d]*3000\b/i,      'fb3000'],
+  [/FB[^\d]*2000\b/i,      'fb2000'],
+  [/FB[^\d]*1000\b/i,      'fb1000'],
+  [/ProCut/i,              'procuts'],
+  [/F60/i,                 'f60'],
 ];
 
 export function getProductImages(product: Product): string[] {
+  const sku = product.images ?? [];
+
+  // Find the matching model-line gallery (if any).
+  let lineup: string[] = [];
   for (const [pattern, key] of namePatterns) {
     if (pattern.test(product.name)) {
-      const imgs = galleryMap[key];
-      if (imgs && imgs.length > 0) return imgs;
+      lineup = galleryMap[key] ?? [];
+      break;
     }
   }
-  return [product.imageUrl];
+
+  // SKU photos first (they're keyed to the exact model), then the shared
+  // model-line library. Dedup preserves order. Fall back to imageUrl only
+  // if neither source yielded anything.
+  const merged = Array.from(new Set([...sku, ...lineup]));
+  return merged.length > 0 ? merged : [product.imageUrl];
 }
