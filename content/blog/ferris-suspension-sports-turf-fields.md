@@ -44,4 +44,4 @@ We stock OEM [parts](/parts) at our Collins location and our [service department
 
 If you manage athletic fields and you're evaluating a commercial zero turn, don't test it on a flat surface. Test it on the kind of terrain you actually maintain — crowned fields, sideline slopes, access ramps, infield transitions. The machines that perform on a lot demo often reveal their limitations on a real field.
 
-Browse our current [Ferris mower lineup](/catalog) for models, specs, and deck configurations. If you want to talk through what fits your specific property, [reach out to us](/contact) or call (601) 641-5475. We're at 3069 Hwy 49 in Collins and we work with school districts, parks departments, and athletic programs throughout the region.
+Browse our current [Ferris mower lineup](/catalog) for models, specs, and deck configurations. If you want to talk through what fits your specific property, [reach out to us](/contact) or call (601) 909-5380. We're at 3069 Hwy 49 in Collins and we work with school districts, parks departments, and athletic programs throughout the region.

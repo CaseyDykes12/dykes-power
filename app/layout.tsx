@@ -13,21 +13,21 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.dykespower.com'),
   title: 'Ferris Mower Dealer | Collins MS | Dykes Motors',
   description:
-    'Authorized Ferris mower dealer in Collins, MS. Zero-turns, stand-ons, parts, and service. Call (601) 641-5475.',
+    'Authorized Ferris mower dealer in Collins, MS. Zero-turns, stand-ons, parts, and service. Call (601) 909-5380.',
   keywords: 'Ferris mowers, zero turn mower, Collins MS, Dykes Motors, lawn mower dealer Mississippi, mower repair Collins MS, Ferris parts Mississippi',
   openGraph: {
     type: 'website',
     siteName: 'Dykes Motors Power Equipment',
     title: 'Ferris Mower Dealer | Collins MS | Dykes Motors',
     description:
-      'Authorized Ferris mower dealer in Collins, MS. Zero-turns, stand-ons, parts, and service. Call (601) 641-5475.',
+      'Authorized Ferris mower dealer in Collins, MS. Zero-turns, stand-ons, parts, and service. Call (601) 909-5380.',
     url: 'https://www.dykespower.com',
     images: [{ url: '/df-logo.png', width: 800, height: 600, alt: 'Dykes Motors Power Equipment' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Ferris Mower Dealer | Collins MS | Dykes Motors',
-    description: 'Authorized Ferris mower dealer in Collins, MS. Call (601) 641-5475.',
+    description: 'Authorized Ferris mower dealer in Collins, MS. Call (601) 909-5380.',
     images: ['/df-logo.png'],
   },
 };
@@ -41,7 +41,7 @@ const localBusinessSchema = {
   url: 'https://www.dykespower.com',
   logo: 'https://www.dykespower.com/df-logo.png',
   image: 'https://www.dykespower.com/df-logo.png',
-  telephone: ['+16016415475', '+16013362541'],
+  telephone: ['+16019095380', '+16013362541'],
   email: 'info@dykesmotors.com',
   address: {
     '@type': 'PostalAddress',
@@ -60,7 +60,7 @@ const localBusinessSchema = {
     '@type': 'AutoDealer',
     name: 'Dykes Motors',
     url: 'https://www.dykesmotors.com',
-    telephone: '+16016415475',
+    telephone: '+16019095380',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '3069 Hwy 49',

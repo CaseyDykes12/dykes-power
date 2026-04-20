@@ -64,4 +64,4 @@ Both are real commercial machines built to last in Mississippi heat and humidity
 
 We're an authorized Ferris dealer at 3069 Hwy 49, Collins, MS. Customers from all over Smith County, Covington County, and the Pine Belt region make the drive because we carry the full lineup and actually know these machines.
 
-**Call (601) 641-5475** or [browse the full Ferris catalog](/catalog). Financing available — rates as low as 4.9% APR for qualified credit.
+**Call (601) 909-5380** or [browse the full Ferris catalog](/catalog). Financing available — rates as low as 4.9% APR for qualified credit.

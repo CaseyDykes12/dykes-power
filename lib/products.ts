@@ -890,7 +890,7 @@ export const products: Product[] = [
       'Low center of gravity',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/stand-on-mowers/srsz1/SRSZ1_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z1/Product%20Images/FER_PDP_SRSZ1_Hero_FL.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -912,7 +912,7 @@ export const products: Product[] = [
       'Operator comfort platform',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/stand-on-mowers/srsz1/SRSZ1_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z1/Product%20Images/FER_PDP_SRSZ1_Hero_FL.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1287,7 +1287,7 @@ export const products: Product[] = [
       'Mulch / bag / side discharge',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/walk-behind-mowers/fw45/FW45_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1309,7 +1309,7 @@ export const products: Product[] = [
       'Mulch / bag / side discharge',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/walk-behind-mowers/fw45/FW45_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1331,7 +1331,7 @@ export const products: Product[] = [
       'Mulch / bag / side discharge',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/walk-behind-mowers/fw45/FW45_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1353,7 +1353,7 @@ export const products: Product[] = [
       'Mulch / bag / side discharge',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/walk-behind-mowers/fw45/FW45_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1375,7 +1375,7 @@ export const products: Product[] = [
       'Extended oil change intervals',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/walk-behind-mowers/fw45/FW45_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg',
     status: 'AVAILABLE_TO_ORDER',
     tag: 'Commercial Grade',
   },
@@ -1448,7 +1448,7 @@ export const products: Product[] = [
       'Joystick-controlled dual deflector',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/blowers/fb2000/FB2000_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Blowers/FB2000/Product%20Images/FER_PDP_FB2000_Hero_FL.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1470,7 +1470,7 @@ export const products: Product[] = [
       'Joystick-controlled dual deflector',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/blowers/fb3000/FB3000_PDP_HERO.jpg',
+      '/images/ferris/basco/5901810/5901810_FER_FB3000_FRONT.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
 
@@ -1495,7 +1495,7 @@ export const products: Product[] = [
       'Commercial-grade construction',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/mowers/front-mount-mowers/procuts/ProCutS_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Front%20Mount%20Mowers/Procut%20S/Product%20Images/FER_ProCutS_ProductImage.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
 
@@ -1520,7 +1520,7 @@ export const products: Product[] = [
       'Precision application system',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/spreadersprayers/venturexcfs3200/VentureXC_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS3200/Product%20Images/FER_VentureXC-FS3200_Updated.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1564,7 +1564,7 @@ export const products: Product[] = [
       'Compact ride-on design',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/spreadersprayers/pathfinderxcfs2200/PathfinderXC_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS2200/Product%20Images/FER_PathfinderXC-FS2200_Updated.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1585,7 +1585,7 @@ export const products: Product[] = [
       'Compact design',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/spreadersprayers/pathfinderfs2100/PathfinderFS2100_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS2100/Product%20Images/FER_Pathfinder-FS2100_Updated.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
   {
@@ -1607,7 +1607,7 @@ export const products: Product[] = [
       'Precision granular application',
     ],
     imageUrl:
-      'https://www.ferrismowers.com/content/dam/ferrismowers/en_US/products/spreadersprayers/roverxcfs1200/RoverXC_PDP_HERO.jpg',
+      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS1200/Product%20Images/FER_RoverXC-FS1200_Updated.jpg',
     status: 'AVAILABLE_TO_ORDER',
   },
 

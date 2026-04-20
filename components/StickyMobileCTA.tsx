@@ -22,7 +22,7 @@ export default function StickyMobileCTA({ product }: { product: Product }) {
   return (
     <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-[#0a0a0a]/95 backdrop-blur border-t border-gray-800 px-3 py-2.5 flex gap-2 pb-[max(0.625rem,env(safe-area-inset-bottom))]">
       <a
-        href="tel:6016415475"
+        href="tel:6019095380"
         className="flex-1 bg-[#1a1a1a] border border-gray-700 text-white font-semibold text-sm py-3 rounded-lg text-center flex items-center justify-center gap-1.5"
         aria-label="Call Dykes Motors Sales"
       >
@@ -47,7 +47,7 @@ export default function StickyMobileCTA({ product }: { product: Product }) {
         )
       ) : (
         <a
-          href="tel:6016415475"
+          href="tel:6019095380"
           className="flex-[2] btn-primary text-sm py-3 rounded-lg text-center"
         >
           Call for Pricing

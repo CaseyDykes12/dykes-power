@@ -18,10 +18,10 @@ export default function AddToCartButton({ product, deckSize }: Props) {
   if (!product.price) {
     return (
       <a
-        href="tel:6016415475"
+        href="tel:6019095380"
         className="btn-primary flex-1 text-center py-3"
       >
-        Call for Pricing: (601) 641-5475
+        Call for Pricing: (601) 909-5380
       </a>
     );
   }

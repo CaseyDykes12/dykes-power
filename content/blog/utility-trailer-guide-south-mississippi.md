@@ -47,4 +47,4 @@ For parts, service, and mower questions, check out our full [Ferris mower catalo
 
 **Dykes Motors Power Equipment**
 3069 Hwy 49, Collins, MS 39428
-(601) 641-5475 | [dykespower.com](https://dykespower.com)
+(601) 909-5380 | [dykespower.com](https://dykespower.com)

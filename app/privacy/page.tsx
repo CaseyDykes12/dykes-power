@@ -126,7 +126,7 @@ export default function PrivacyPage() {
         <ul className="mt-3 space-y-1 text-gray-300">
           <li>Dykes Motors Power Equipment</li>
           <li>3069 Hwy 49, Collins, MS 39428</li>
-          <li>Phone: <a href="tel:6016415475" className="text-white underline">(601) 641-5475</a></li>
+          <li>Phone: <a href="tel:6019095380" className="text-white underline">(601) 909-5380</a></li>
           <li>Email: <a href="mailto:info@dykesmotors.com" className="text-white underline">info@dykesmotors.com</a></li>
         </ul>
       </section>

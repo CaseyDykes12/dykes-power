@@ -166,14 +166,14 @@ export default function QuizPage() {
           </h1>
           <p className="text-gray-400 mb-10 max-w-2xl">
             Based on what you told us, these are the Ferris machines worth looking at first. Not sure?
-            Call us at (601) 641-5475 — we'll talk it through.
+            Call us at (601) 909-5380 — we'll talk it through.
           </p>
 
           {picks.length === 0 ? (
             <div className="bg-[#111] border border-gray-800 rounded-xl p-8 text-center">
               <p className="text-gray-300 mb-4">We couldn't find a perfect fit in that budget range — but we can still help.</p>
-              <a href="tel:6016415475" className="btn-primary inline-block">
-                Call (601) 641-5475
+              <a href="tel:6019095380" className="btn-primary inline-block">
+                Call (601) 909-5380
               </a>
             </div>
           ) : (
@@ -190,7 +190,7 @@ export default function QuizPage() {
               <p className="text-gray-400 text-sm">Talk to our team — we'll match you to the right machine and give you a real price.</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <a href="tel:6016415475" className="btn-primary text-sm px-6 py-3">Call Sales</a>
+              <a href="tel:6019095380" className="btn-primary text-sm px-6 py-3">Call Sales</a>
               <Link href="/catalog" className="btn-outline text-sm px-6 py-3">Browse Catalog</Link>
               <button onClick={reset} className="text-sm text-gray-400 hover:text-white px-4 py-3">
                 Start over

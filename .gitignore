@@ -36,8 +36,14 @@ yarn-error.log*
 # vercel
 .vercel
 
+# raw campaign assets (exported from Ferris/Basco portals — never committed)
+/incoming-assets/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
 
 .vercel
+
+# raw campaign assets (exported from Ferris/Basco portals — never committed)
+/incoming-assets/

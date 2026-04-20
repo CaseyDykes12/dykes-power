@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+@theme {
+  --color-dykes-black: #0A0A0A;
+  --color-dykes-white: #FFFFFF;
+  --color-dykes-offwhite: #F5F5F4;
+  --color-dykes-gray-100: #E7E5E4;
+  --color-dykes-gray-300: #A8A29E;
+  --color-dykes-gray-500: #57534E;
+  --color-dykes-gray-700: #292524;
+  --color-dykes-gray-900: #1C1917;
+  --color-ferris-yellow: #FDB913;
+  --color-ferris-yellow-dark: #E5A310;
+}
+
 :root {
   --accent: #C8C8C8;
   --gold: #D4AF37;

@@ -44,6 +44,6 @@ A 52" deck is the sweet spot for most 5-acre Mississippi properties — wide eno
 
 We have Ferris mowers in stock at our Collins, MS location. You can see them running, compare deck sizes side by side, and get real answers — not commission-driven upsells.
 
-**Call us at (601) 641-5475 or stop by 3069 Hwy 49, Collins, MS.**
+**Call us at (601) 909-5380 or stop by 3069 Hwy 49, Collins, MS.**
 
 Financing is available through our top national lending partners — rates as low as 4.9% APR for qualified credit, most approvals same day.

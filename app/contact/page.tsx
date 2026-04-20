@@ -39,11 +39,11 @@ export default function ContactPage() {
         }
       } else {
         alert(
-          "We got your info, but our email system hit a snag. Please call us at (601) 641-5475 so we don't miss you — sorry about that."
+          "We got your info, but our email system hit a snag. Please call us at (601) 909-5380 so we don't miss you — sorry about that."
         );
       }
     } catch {
-      alert('Something went wrong. Please call us directly at (601) 641-5475.');
+      alert('Something went wrong. Please call us directly at (601) 909-5380.');
     } finally {
       setLoading(false);
     }
@@ -56,7 +56,7 @@ export default function ContactPage() {
         <h1 className="text-3xl font-bold mb-3">We got your message!</h1>
         <p className="text-gray-600 mb-6">
           Casey or one of our team will reach out to you shortly. If you need to talk now,
-          call us at <a href="tel:6016415475" className="text-[#C8C8C8] font-semibold">(601) 641-5475</a>.
+          call us at <a href="tel:6019095380" className="text-[#C8C8C8] font-semibold">(601) 909-5380</a>.
         </p>
       </div>
     );
@@ -187,7 +187,7 @@ export default function ContactPage() {
             <h2 className="text-xl font-bold mb-4 text-[#C8C8C8]">Dykes Motors Power Equipment</h2>
             <div className="space-y-3 text-sm text-gray-300">
               <p>📍 3069 Hwy 49, Collins, MS 39428</p>
-              <p>📞 Sales: <a href="tel:6016415475" className="text-[#C8C8C8]">(601) 641-5475</a></p>
+              <p>📞 Sales: <a href="tel:6019095380" className="text-[#C8C8C8]">(601) 909-5380</a></p>
               <p>📞 Service &amp; Parts: <a href="tel:6013362541" className="text-[#C8C8C8]">(601) 336-2541</a></p>
               <p>✉️ <a href="mailto:info@dykesmotors.com" className="text-[#C8C8C8]">info@dykesmotors.com</a></p>
               <p>
@@ -228,6 +228,40 @@ export default function ContactPage() {
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen
             />
+          </div>
+
+          <div className="bg-gray-50 rounded-xl p-6">
+            <h3 className="font-bold mb-4">What to expect</h3>
+            <ol className="space-y-4 text-sm text-gray-700">
+              <li className="flex gap-3">
+                <span className="shrink-0 w-7 h-7 rounded-full bg-black text-white font-bold text-xs flex items-center justify-center">1</span>
+                <div>
+                  <p className="font-semibold text-black">You send us your info.</p>
+                  <p className="text-gray-600">Form, text, or a phone call — whichever&apos;s easiest for you.</p>
+                </div>
+              </li>
+              <li className="flex gap-3">
+                <span className="shrink-0 w-7 h-7 rounded-full bg-black text-white font-bold text-xs flex items-center justify-center">2</span>
+                <div>
+                  <p className="font-semibold text-black">We call you back within 1 business hour.</p>
+                  <p className="text-gray-600">Real person from the Collins shop — not a call center.</p>
+                </div>
+              </li>
+              <li className="flex gap-3">
+                <span className="shrink-0 w-7 h-7 rounded-full bg-black text-white font-bold text-xs flex items-center justify-center">3</span>
+                <div>
+                  <p className="font-semibold text-black">You get a straight quote.</p>
+                  <p className="text-gray-600">Out-the-door price, financing options if you want them — no runaround.</p>
+                </div>
+              </li>
+              <li className="flex gap-3">
+                <span className="shrink-0 w-7 h-7 rounded-full bg-black text-white font-bold text-xs flex items-center justify-center">4</span>
+                <div>
+                  <p className="font-semibold text-black">Demo it, if you want.</p>
+                  <p className="text-gray-600">Come sit on the machine. Ride the suspension. Then decide.</p>
+                </div>
+              </li>
+            </ol>
           </div>
 
           <div className="bg-gray-50 rounded-xl p-6">

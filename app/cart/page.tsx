@@ -179,8 +179,8 @@ export default function CartPage() {
                 <div className="mt-5 pt-5 border-t border-gray-800 text-xs text-gray-500 space-y-2">
                   <p>
                     <strong className="text-gray-300">Questions?</strong>{' '}
-                    <a href="tel:6016415475" className="hover:text-white">
-                      Call (601) 641-5475
+                    <a href="tel:6019095380" className="hover:text-white">
+                      Call (601) 909-5380
                     </a>
                   </p>
                   <p>

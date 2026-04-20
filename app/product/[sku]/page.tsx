@@ -111,7 +111,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
         seller: {
           '@type': 'LocalBusiness',
           name: 'Dykes Motors Power Equipment',
-          telephone: '+16016415475',
+          telephone: '+16019095380',
           address: {
             '@type': 'PostalAddress',
             streetAddress: '3069 Hwy 49',
@@ -157,7 +157,17 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
 
           {/* ── Gallery ─────────────────────────────────────────────── */}
           <div className="lg:sticky lg:top-24">
-            <ProductGallery images={images} alt={product.name} />
+            <div className="relative">
+              <ProductGallery images={images} alt={product.name} />
+
+              {/* "Feels Like a Ferris" campaign sash */}
+              <div
+                aria-label="Feels Like a Ferris campaign"
+                className="absolute top-3 left-3 z-20 bg-ferris-yellow text-dykes-black text-[10px] md:text-xs font-bold uppercase tracking-widest px-2.5 py-1 rounded shadow-lg pointer-events-none"
+              >
+                Feels Like a Ferris<sup className="text-[8px]">®</sup>
+              </div>
+            </div>
 
             {/* Photo count badge */}
             <p className="text-center text-gray-600 text-xs mt-3">
@@ -260,8 +270,8 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
               </div>
             )}
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="tel:6016415475" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg flex-1">
-                📞 Sales: (601) 641-5475
+              <a href="tel:6019095380" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg flex-1">
+                📞 Sales: (601) 909-5380
               </a>
               <Link href="/financing" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg flex-1">
                 💳 Apply for Financing
@@ -325,7 +335,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
             >
               ▶ Ferris YouTube Channel
             </a>
-            <a href="tel:6016415475" className="btn-primary text-sm px-6 py-2">
+            <a href="tel:6019095380" className="btn-primary text-sm px-6 py-2">
               Talk to Our Team
             </a>
           </div>

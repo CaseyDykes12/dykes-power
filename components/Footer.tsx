@@ -2,8 +2,15 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-400">
-      <div className="max-w-[1280px] mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="relative bg-black text-gray-400 overflow-hidden">
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 flex items-start justify-center text-[22vw] md:text-[14vw] font-black text-white/[0.03] leading-none tracking-tighter select-none"
+        style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.02em' }}
+      >
+        DYKES MOTORS
+      </span>
+      <div className="relative max-w-[1280px] mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/df-logo.png" alt="Dykes Family Logo" className="h-10 w-auto mb-2" />
@@ -15,7 +22,7 @@ export default function Footer() {
           </p>
           <p className="text-sm text-gray-400">Authorized Ferris Dealer<br />Collins, Mississippi</p>
           <p className="text-sm mt-3">
-            Sales: <a href="tel:6016415475" className="hover:text-[#C8C8C8]">(601) 641-5475</a>
+            Sales: <a href="tel:6019095380" className="hover:text-[#C8C8C8]">(601) 909-5380</a>
           </p>
           <p className="text-sm">
             Service: <a href="tel:6013362541" className="hover:text-[#C8C8C8]">(601) 336-2541</a>
@@ -66,8 +73,29 @@ export default function Footer() {
           <p className="text-sm mt-4 text-gray-500">3069 Hwy 49, Collins, MS 39428</p>
         </div>
       </div>
-      <div className="border-t border-gray-800 text-center text-xs text-gray-600 py-4">
-        © {new Date().getFullYear()} Dykes Power Equipment. All rights reserved. Authorized Ferris Dealer.
+      <div className="relative border-t border-gray-800 max-w-[1280px] mx-auto px-4 py-6 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+        <div className="flex items-center gap-4">
+          <a
+            href="https://www.facebook.com/DykesMotor"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Dykes Motors on Facebook"
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/>
+            </svg>
+          </a>
+          <p className="text-xs text-gray-600">Built in Mississippi. Backed by Dykes.</p>
+        </div>
+        <p className="text-xs text-gray-600">
+          © {new Date().getFullYear()} Dykes Power Equipment. All rights reserved.
+        </p>
+      </div>
+      <div className="relative border-t border-gray-900 max-w-[1280px] mx-auto px-4 py-4 flex items-center justify-center gap-3 text-xs text-gray-600">
+        <span>Proudly an Authorized Ferris<sup className="text-[0.6rem]">®</sup> Dealer. Participating in the &ldquo;Feels Like a Ferris&rdquo; national campaign.</span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/ferris-logo.png" alt="Ferris" className="h-4 w-auto opacity-60" />
       </div>
     </footer>
   );

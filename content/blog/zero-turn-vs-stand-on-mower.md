@@ -57,4 +57,4 @@ Stand-on mowers put the operator in a standing position on a platform at the rea
 
 If you're still not sure, come out to our Collins, MS location and we'll walk you through both. We'd rather spend 20 minutes helping you pick the right machine than sell you the wrong one.
 
-**Call (601) 641-5475 or visit us at 3069 Hwy 49, Collins, MS.**
+**Call (601) 909-5380 or visit us at 3069 Hwy 49, Collins, MS.**

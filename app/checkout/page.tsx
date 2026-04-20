@@ -103,7 +103,7 @@ export default function CheckoutPage() {
       if (!res.ok) throw new Error('Request failed');
       router.push('/order-confirmed?mode=quote');
     } catch {
-      setSubmitError('Could not submit. Please call (601) 641-5475.');
+      setSubmitError('Could not submit. Please call (601) 909-5380.');
       setSubmitting(false);
     }
   };
