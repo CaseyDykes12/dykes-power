@@ -41,7 +41,7 @@ export default function FerrisHero() {
           loop
           muted
           playsInline
-          poster="/images/ferris/campaign/lifestyle-crew.webp"
+          poster="/images/ferris/campaign/isx3300-fr.webp"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-40"
           aria-hidden="true"
         >
@@ -50,7 +50,7 @@ export default function FerrisHero() {
       )}
       {reducedMotion && (
         <Image
-          src="/images/ferris/campaign/lifestyle-crew.webp"
+          src="/images/ferris/campaign/isx3300-fr.webp"
           alt=""
           fill
           preload

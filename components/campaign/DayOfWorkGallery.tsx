@@ -30,9 +30,9 @@ const SHOTS: Shot[] = [
     caption: 'The full lineup.',
   },
   {
-    src: '/images/ferris/campaign/section-background.webp',
-    alt: 'Ferris independent suspension shock detail',
-    caption: 'Shock by shock.',
+    src: '/images/ferris/campaign/isx3300-fl.webp',
+    alt: 'Ferris ISX3300 zero-turn front-left angle showing suspension travel',
+    caption: 'Four corners. Full suspension.',
   },
   {
     src: '/images/ferris/campaign/lifestyle-homeowner.webp',

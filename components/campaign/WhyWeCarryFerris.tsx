@@ -31,8 +31,8 @@ export default function WhyWeCarryFerris() {
 
           <div className="relative aspect-video rounded-xl overflow-hidden bg-dykes-gray-900 border border-dykes-gray-700">
             <Image
-              src="/images/ferris/campaign/lifestyle-confidence.webp"
-              alt="Full Ferris lineup — commercial zero-turn, stand-on, and walk-behind"
+              src="/images/ferris/campaign/isx3300-r.webp"
+              alt="Ferris ISX3300 zero-turn — flagship 4-wheel independent suspension mower"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
