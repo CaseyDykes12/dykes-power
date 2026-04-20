@@ -19,8 +19,17 @@ export default function StickyMobileCTA({ product }: { product: Product }) {
     setTimeout(() => setAdding(false), 600);
   };
 
+  const handleQuote = () => {
+    const el = document.getElementById('quick-quote');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      router.push('/contact#quick-quote');
+    }
+  };
+
   return (
-    <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-[#0a0a0a]/95 backdrop-blur border-t border-gray-800 px-3 py-2.5 flex gap-2 pb-[max(0.625rem,env(safe-area-inset-bottom))]">
+    <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-[#0a0a0a]/95 backdrop-blur border-t border-gray-800 px-2 py-2.5 flex gap-2 pb-[max(0.625rem,env(safe-area-inset-bottom))]">
       <a
         href="tel:6019095380"
         className="flex-1 bg-[#1a1a1a] border border-gray-700 text-white font-semibold text-sm py-3 rounded-lg text-center flex items-center justify-center gap-1.5"
@@ -28,6 +37,13 @@ export default function StickyMobileCTA({ product }: { product: Product }) {
       >
         📞 Call
       </a>
+      <button
+        onClick={handleQuote}
+        className="flex-1 bg-[#1a1a1a] border border-[#C8C8C8] text-[#C8C8C8] font-semibold text-sm py-3 rounded-lg text-center flex items-center justify-center gap-1"
+        aria-label="Get a quick quote"
+      >
+        💬 Quote
+      </button>
       {product.price ? (
         added ? (
           <button

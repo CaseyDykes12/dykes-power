@@ -2,13 +2,20 @@
 import { useState } from 'react';
 import type { Product } from '@/lib/products';
 
-export default function ProductLeadForm({ product }: { product: Product }) {
-  const interestLabel = `${product.name} (SKU ${product.sku})`;
+type Props = {
+  product?: Product;
+  heading?: string;
+  anchorId?: string;
+};
+
+export default function ProductLeadForm({ product, heading, anchorId }: Props) {
+  const interestLabel = product ? `${product.name} (SKU ${product.sku})` : '';
   const [form, setForm] = useState({
     name: '',
     email: '',
     phone: '',
     timing: '',
+    interest: '',
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
@@ -28,7 +35,7 @@ export default function ProductLeadForm({ product }: { product: Product }) {
         name: form.name,
         email: form.email,
         phone: form.phone,
-        interest: interestLabel,
+        interest: product ? interestLabel : form.interest || 'Quick Quote',
         propertySize: '',
         message: [
           form.timing ? `When needed: ${form.timing}` : '',
@@ -67,7 +74,7 @@ export default function ProductLeadForm({ product }: { product: Product }) {
 
   if (submitted) {
     return (
-      <div className="bg-[#111] border border-[#C8C8C8] rounded-xl p-6 text-center">
+      <div id={anchorId ?? 'quick-quote'} className="bg-[#111] border border-[#C8C8C8] rounded-xl p-6 text-center scroll-mt-24">
         <p className="text-3xl mb-2">✅</p>
         <h3 className="text-lg font-bold text-white mb-2">Got it — we'll reach out fast.</h3>
         <p className="text-sm text-gray-400">
@@ -78,20 +85,22 @@ export default function ProductLeadForm({ product }: { product: Product }) {
     );
   }
 
+  const defaultHeading = product
+    ? `Get pricing on this ${product.name}`
+    : 'Get a real quote in one hour';
+  const ctaLabel = product ? `Get My Quote on the ${product.name}` : 'Send My Quick Quote';
+
   return (
-    <div className="bg-[#111] border border-gray-800 rounded-xl p-5 mb-4">
+    <div id={anchorId ?? 'quick-quote'} className="bg-[#111] border border-gray-800 rounded-xl p-5 mb-4 scroll-mt-24">
       <p className="text-xs font-semibold text-[#C8C8C8] uppercase tracking-widest mb-1">
         Quick Quote
       </p>
-      <h3 className="text-lg font-bold text-white mb-3">
-        Get pricing on this {product.name}
-      </h3>
+      <h3 className="text-lg font-bold text-white mb-3">{heading ?? defaultHeading}</h3>
 
       <form onSubmit={handleSubmit} className="space-y-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <input
             required
-            id={`pf-name-${product.sku}`}
             name="name"
             autoComplete="name"
             value={form.name}
@@ -100,7 +109,6 @@ export default function ProductLeadForm({ product }: { product: Product }) {
             className="w-full bg-black border border-gray-700 text-white rounded-lg px-3 py-2 text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
           />
           <input
-            id={`pf-phone-${product.sku}`}
             type="tel"
             inputMode="tel"
             name="phone"
@@ -114,7 +122,6 @@ export default function ProductLeadForm({ product }: { product: Product }) {
 
         <input
           required
-          id={`pf-email-${product.sku}`}
           type="email"
           inputMode="email"
           name="email"
@@ -124,6 +131,16 @@ export default function ProductLeadForm({ product }: { product: Product }) {
           placeholder="Email *"
           className="w-full bg-black border border-gray-700 text-white rounded-lg px-3 py-2 text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
         />
+
+        {!product && (
+          <input
+            name="interest"
+            value={form.interest}
+            onChange={handleChange}
+            placeholder="What model or category are you looking at?"
+            className="w-full bg-black border border-gray-700 text-white rounded-lg px-3 py-2 text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
+          />
+        )}
 
         <select
           name="timing"
@@ -152,7 +169,7 @@ export default function ProductLeadForm({ product }: { product: Product }) {
           disabled={loading}
           className="btn-primary w-full py-3 text-base disabled:opacity-60"
         >
-          {loading ? 'Sending...' : `Get My Quote on the ${product.name}`}
+          {loading ? 'Sending...' : ctaLabel}
         </button>
 
         <p className="text-xs text-gray-500 text-center">

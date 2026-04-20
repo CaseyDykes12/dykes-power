@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { products } from '@/lib/products';
 import ProductCard from '@/components/ProductCard';
+import ProductLeadForm from '@/components/ProductLeadForm';
 
 export const metadata: Metadata = {
   title: 'Ferris Mowers Near Laurel, MS | Dykes Motors',
@@ -194,28 +195,23 @@ export default function FerrisMowersLaurelPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA + Quick Quote */}
       <section className="bg-black text-white py-12 px-4 border-t border-gray-800">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-3">20 Minutes Up Hwy 49</h2>
-          <p className="text-gray-400 mb-6">
-            Give us a call or come by. We&apos;ll help you figure out the right mower for your
-            ground — no pressure, no runaround.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+        <div className="max-w-2xl mx-auto">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3">20 Minutes Up Hwy 49</h2>
+            <p className="text-gray-400 mb-6">
+              Give us a call or come by. We&apos;ll help you figure out the right mower for your
+              ground — no pressure, no runaround.
+            </p>
             <a
               href="tel:6019095380"
               className="btn-primary text-center text-base px-8 py-3 inline-block"
             >
               Call (601) 909-5380
             </a>
-            <Link
-              href="/contact"
-              className="btn-outline text-center text-base px-8 py-3 inline-block"
-            >
-              Send a Message
-            </Link>
           </div>
+          <ProductLeadForm heading="Prefer we call you? Get a real quote from Collins." />
         </div>
       </section>
     </>
