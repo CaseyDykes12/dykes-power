@@ -90,7 +90,7 @@ export default function CatalogClient({ products, categories }: { products: Prod
           <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-dykes-black" />
         </div>
         <div className="relative z-10 max-w-[1280px] mx-auto px-4 py-16 md:py-20">
-          <p className="text-ferris-yellow text-sm font-semibold tracking-widest uppercase mb-3">
+          <p className="text-dykes-silver text-sm font-semibold tracking-widest uppercase mb-3">
             Dykes Motors · Authorized Ferris<sup className="text-[9px]">®</sup> Dealer
           </p>
           <h1

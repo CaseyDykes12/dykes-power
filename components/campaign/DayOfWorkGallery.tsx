@@ -49,7 +49,7 @@ export default function DayOfWorkGallery() {
       aria-labelledby="day-of-work-heading"
     >
       <div className="max-w-[1280px] mx-auto">
-        <p className="text-ferris-yellow text-sm font-semibold tracking-widest uppercase mb-2">
+        <p className="text-dykes-silver text-sm font-semibold tracking-widest uppercase mb-2">
           Feels like a day of work
         </p>
         <h2

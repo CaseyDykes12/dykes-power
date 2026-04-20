@@ -65,7 +65,7 @@ export default function AboutPage() {
           <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-dykes-black" />
         </div>
         <div className="relative z-10 max-w-[1280px] mx-auto px-4 py-20 md:py-28">
-          <p className="text-ferris-yellow text-sm font-semibold tracking-widest uppercase mb-3">
+          <p className="text-dykes-silver text-sm font-semibold tracking-widest uppercase mb-3">
             About Dykes Motors Power Equipment
           </p>
           <h1
@@ -119,7 +119,7 @@ export default function AboutPage() {
         </h2>
         <ul className="space-y-4 text-dykes-gray-300 mb-12">
           <li className="flex gap-3">
-            <span className="text-ferris-yellow font-bold shrink-0 mt-1">✓</span>
+            <span className="text-dykes-silver font-bold shrink-0 mt-1">✓</span>
             <span>
               <span className="font-semibold text-white">Sales.</span>{' '}
               The full Ferris lineup — zero-turn, stand-on, and walk-behind mowers, plus utility
@@ -127,7 +127,7 @@ export default function AboutPage() {
             </span>
           </li>
           <li className="flex gap-3">
-            <span className="text-ferris-yellow font-bold shrink-0 mt-1">✓</span>
+            <span className="text-dykes-silver font-bold shrink-0 mt-1">✓</span>
             <span>
               <span className="font-semibold text-white">Service &amp; repair.</span>{' '}
               Factory-trained techs who work on every brand, not just what we sell. Oil changes,
@@ -135,7 +135,7 @@ export default function AboutPage() {
             </span>
           </li>
           <li className="flex gap-3">
-            <span className="text-ferris-yellow font-bold shrink-0 mt-1">✓</span>
+            <span className="text-dykes-silver font-bold shrink-0 mt-1">✓</span>
             <span>
               <span className="font-semibold text-white">Genuine OEM parts.</span>{' '}
               Ferris and Briggs &amp; Stratton stocked in-house. What&apos;s not on the shelf, we
@@ -143,7 +143,7 @@ export default function AboutPage() {
             </span>
           </li>
           <li className="flex gap-3">
-            <span className="text-ferris-yellow font-bold shrink-0 mt-1">✓</span>
+            <span className="text-dykes-silver font-bold shrink-0 mt-1">✓</span>
             <span>
               <span className="font-semibold text-white">Local financing.</span>{' '}
               Top national lenders, competitive rates — as low as 4.9% APR for qualified credit —
@@ -162,7 +162,7 @@ export default function AboutPage() {
           Dykes Motors Power Equipment operates alongside{' '}
           <a
             href="https://www.dykesmotors.com"
-            className="text-white underline hover:text-ferris-yellow transition-colors"
+            className="text-white underline hover:text-dykes-silver transition-colors"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -175,7 +175,7 @@ export default function AboutPage() {
         {/* Authorized dealer badge + address */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <div className="bg-dykes-gray-900 border border-dykes-gray-700 rounded-xl p-6">
-            <p className="text-ferris-yellow text-xs font-bold tracking-widest uppercase mb-3">
+            <p className="text-dykes-silver text-xs font-bold tracking-widest uppercase mb-3">
               Authorized Ferris<sup className="text-[9px]">®</sup> Dealer
             </p>
             <p className="text-white font-semibold mb-1">Dykes Motors Power Equipment</p>
@@ -187,13 +187,13 @@ export default function AboutPage() {
             <p className="text-white font-semibold mb-2">3069 Hwy 49, Collins, MS 39428</p>
             <p className="text-dykes-gray-300 text-sm">
               Sales:{' '}
-              <a href="tel:6019095380" className="text-white hover:text-ferris-yellow transition-colors">
+              <a href="tel:6019095380" className="text-white hover:text-dykes-silver transition-colors">
                 (601) 909-5380
               </a>
             </p>
             <p className="text-dykes-gray-300 text-sm">
               Service &amp; Parts:{' '}
-              <a href="tel:6013362541" className="text-white hover:text-ferris-yellow transition-colors">
+              <a href="tel:6013362541" className="text-white hover:text-dykes-silver transition-colors">
                 (601) 336-2541
               </a>
             </p>

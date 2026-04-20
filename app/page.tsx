@@ -55,7 +55,7 @@ export default function HomePage() {
       {/* 3. Popular Models */}
       <section id="popular-models" className="py-16 px-4 bg-dykes-gray-900 scroll-mt-20">
         <div className="max-w-[1280px] mx-auto">
-          <p className="text-ferris-yellow text-sm font-semibold tracking-widest uppercase mb-2">
+          <p className="text-dykes-silver text-sm font-semibold tracking-widest uppercase mb-2">
             Popular Models
           </p>
           <h2
@@ -84,7 +84,7 @@ export default function HomePage() {
       <section className="bg-dykes-black py-16 md:py-24 px-4">
         <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-ferris-yellow text-sm font-semibold tracking-widest uppercase mb-2">
+            <p className="text-dykes-silver text-sm font-semibold tracking-widest uppercase mb-2">
               Why Ferris
             </p>
             <h2
@@ -107,7 +107,7 @@ export default function HomePage() {
                 'The only authorized Ferris dealer between Jackson and the Gulf',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="text-ferris-yellow font-bold mt-0.5">✓</span>
+                  <span className="text-dykes-silver font-bold mt-0.5">✓</span>
                   <span className="text-dykes-gray-100">{item}</span>
                 </li>
               ))}
@@ -154,7 +154,7 @@ export default function HomePage() {
       {recentPosts.length > 0 && (
         <section className="bg-dykes-gray-900 py-16 px-4 border-t border-dykes-gray-700">
           <div className="max-w-[1280px] mx-auto">
-            <p className="text-ferris-yellow text-sm font-semibold tracking-widest uppercase mb-2">
+            <p className="text-dykes-silver text-sm font-semibold tracking-widest uppercase mb-2">
               Mower Tips &amp; Guides
             </p>
             <h2
@@ -171,7 +171,7 @@ export default function HomePage() {
                   href={`/blog/${post.slug}`}
                   className="bg-dykes-black border border-dykes-gray-700 rounded-xl p-6 hover:border-ferris-yellow hover:-translate-y-0.5 transition-all flex flex-col"
                 >
-                  <span className="text-xs text-ferris-yellow font-semibold uppercase tracking-widest mb-3">
+                  <span className="text-xs text-dykes-silver font-semibold uppercase tracking-widest mb-3">
                     {post.category}
                   </span>
                   <h3 className="text-white font-bold text-lg leading-snug mb-3 flex-1">
@@ -182,7 +182,7 @@ export default function HomePage() {
               ))}
             </div>
             <div className="mt-8 text-center">
-              <Link href="/blog" className="text-white font-semibold hover:text-ferris-yellow transition-colors">
+              <Link href="/blog" className="text-white font-semibold hover:text-dykes-silver transition-colors">
                 View All Posts →
               </Link>
             </div>

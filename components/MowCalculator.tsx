@@ -53,7 +53,7 @@ export default function MowCalculator() {
       aria-labelledby="your-property-heading"
     >
       <div className="max-w-5xl mx-auto">
-        <p className="text-ferris-yellow text-sm font-semibold tracking-widest uppercase mb-2">
+        <p className="text-dykes-silver text-sm font-semibold tracking-widest uppercase mb-2">
           Your Property
         </p>
         <h2
@@ -72,7 +72,7 @@ export default function MowCalculator() {
             <span className="text-white text-lg md:text-xl font-semibold block mb-1">
               Property size
             </span>
-            <span className="text-ferris-yellow text-4xl md:text-5xl font-bold tabular-nums">
+            <span className="text-dykes-silver text-4xl md:text-5xl font-bold tabular-nums">
               {acres.toFixed(1)}
             </span>
             <span className="text-dykes-gray-300 text-lg ml-2">acres</span>
@@ -109,7 +109,7 @@ export default function MowCalculator() {
             <div className="mt-2">
               <p className="text-white text-lg mb-6">
                 Your property is approximately{' '}
-                <strong className="text-ferris-yellow">{acres.toFixed(1)} acres</strong>.
+                <strong className="text-dykes-silver">{acres.toFixed(1)} acres</strong>.
                 Here&apos;s how each Ferris stacks up:
               </p>
 
@@ -129,7 +129,7 @@ export default function MowCalculator() {
                         <p className="text-white font-semibold truncate">
                           {spec.name}
                           {isTop && (
-                            <span className="ml-2 text-ferris-yellow text-xs font-bold tracking-wider uppercase">
+                            <span className="ml-2 text-dykes-silver text-xs font-bold tracking-wider uppercase">
                               Best Match
                             </span>
                           )}

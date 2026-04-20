@@ -24,7 +24,7 @@ export default function DealerStory() {
         </div>
 
         <div>
-          <p className="text-ferris-yellow text-sm font-semibold tracking-widest uppercase mb-2">
+          <p className="text-dykes-silver text-sm font-semibold tracking-widest uppercase mb-2">
             The Dealer Story
           </p>
           <h2
