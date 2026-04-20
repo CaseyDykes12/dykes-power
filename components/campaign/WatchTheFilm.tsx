@@ -1,10 +1,19 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function WatchTheFilm() {
   const [playing, setPlaying] = useState(false);
+  const [isPortrait, setIsPortrait] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const mql = window.matchMedia('(max-width: 767px)');
+    const sync = () => setIsPortrait(mql.matches);
+    sync();
+    mql.addEventListener('change', sync);
+    return () => mql.removeEventListener('change', sync);
+  }, []);
 
   const handlePlay = () => {
     setPlaying(true);
@@ -12,6 +21,12 @@ export default function WatchTheFilm() {
       videoRef.current?.play().catch(() => {});
     });
   };
+
+  const src = isPortrait
+    ? '/videos/ferris/campaign/dealer-30s-portrait.mp4'
+    : '/videos/ferris/campaign/dealer-30s.mp4';
+
+  const aspect = isPortrait ? 'aspect-[9/16] max-w-sm' : 'aspect-video max-w-5xl';
 
   return (
     <section
@@ -34,10 +49,11 @@ export default function WatchTheFilm() {
           Campaign by Ferris Commercial Mowers · Proudly shown by Dykes Motors
         </p>
 
-        <div className="relative aspect-video rounded-xl overflow-hidden bg-dykes-gray-900 border border-dykes-gray-700 max-w-5xl mx-auto">
+        <div className={`relative ${aspect} rounded-xl overflow-hidden bg-dykes-gray-900 border border-dykes-gray-700 mx-auto`}>
           <video
             ref={videoRef}
-            src="/videos/ferris/campaign/dealer-30s.mp4"
+            key={src}
+            src={src}
             poster="/images/ferris/campaign/lifestyle-confidence.webp"
             controls={playing}
             playsInline
