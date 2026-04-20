@@ -76,34 +76,32 @@ Submitted: ${timestamp}
     const data = await res.json().catch(() => null);
     console.log('[LEAD-OK] Resend accepted, id:', data?.id ?? '(unknown)');
 
-    // If the lead included a phone number, also fire an ADF XML lead to Tecobi.
-    // Tecobi's ADF endpoint (clientId 2692) ingests leads by email.
-    if (phone && String(phone).trim().length > 0) {
-      try {
-        const adfXml = buildAdfXml({ name, email, phone, interest, propertySize, message });
-        const tecobiRes = await fetch('https://api.resend.com/emails', {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${RESEND_API_KEY}`,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            from: 'leads@dykespower.com',
-            to: ['adf_xml_2692@tecobirobot.com'],
-            reply_to: email,
-            subject: `ADF Lead - ${name} - ${interest || 'Dykes Power'}`,
-            text: adfXml,
-          }),
-        });
-        if (!tecobiRes.ok) {
-          const errText = await tecobiRes.text().catch(() => '(no body)');
-          console.error('[LEAD-TECOBI-FAIL]', tecobiRes.status, errText);
-        } else {
-          console.log('[LEAD-TECOBI-OK] ADF XML accepted by Resend for Tecobi');
-        }
-      } catch (tecErr) {
-        console.error('[LEAD-TECOBI-FAIL] threw:', tecErr instanceof Error ? tecErr.message : String(tecErr));
+    // Fire an ADF XML lead to Tecobi (clientId 2692) for every lead, phone or not.
+    // Phone is optional per ADF spec; Tecobi will follow up via email when phone is missing.
+    try {
+      const adfXml = buildAdfXml({ name, email, phone: phone || '', interest, propertySize, message });
+      const tecobiRes = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${RESEND_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from: 'leads@dykespower.com',
+          to: ['adf_xml_2692@tecobirobot.com'],
+          reply_to: email,
+          subject: `ADF Lead - ${name} - ${interest || 'Dykes Power'}`,
+          text: adfXml,
+        }),
+      });
+      if (!tecobiRes.ok) {
+        const errText = await tecobiRes.text().catch(() => '(no body)');
+        console.error('[LEAD-TECOBI-FAIL]', tecobiRes.status, errText);
+      } else {
+        console.log('[LEAD-TECOBI-OK] ADF XML accepted by Resend for Tecobi');
       }
+    } catch (tecErr) {
+      console.error('[LEAD-TECOBI-FAIL] threw:', tecErr instanceof Error ? tecErr.message : String(tecErr));
     }
 
     return NextResponse.json({ success: true, id: data?.id });
@@ -141,6 +139,9 @@ function buildAdfXml(p: {
   ]
     .filter(Boolean)
     .join(' | ');
+  const phoneLine = p.phone && p.phone.trim().length > 0
+    ? `        <phone>${xmlEscape(p.phone)}</phone>\n`
+    : '';
   return `<?xml version="1.0"?>
 <?adf version="1.0"?>
 <adf>
@@ -150,8 +151,7 @@ function buildAdfXml(p: {
       <contact>
         <name part="full">${xmlEscape(p.name)}</name>
         <email>${xmlEscape(p.email)}</email>
-        <phone>${xmlEscape(p.phone)}</phone>
-      </contact>
+${phoneLine}      </contact>
       <comments>${xmlEscape(comments)}</comments>
     </customer>
     <vendor>

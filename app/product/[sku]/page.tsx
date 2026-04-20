@@ -8,6 +8,7 @@ import AddToCartButton from '@/components/AddToCartButton';
 import ProductGallery from '@/components/ProductGallery';
 import FinancingOptions from '@/components/FinancingOptions';
 import StickyMobileCTA from '@/components/StickyMobileCTA';
+import ProductLeadForm from '@/components/ProductLeadForm';
 
 export async function generateStaticParams() {
   return products.map((p) => ({ sku: p.sku }));
@@ -250,12 +251,13 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3 mb-4">
+            <div className="mb-4">
               <AddToCartButton product={product} />
-              <Link href="/contact" className="btn-outline text-center py-3 px-6">
-                Request a Quote
-              </Link>
             </div>
+
+            {/* Inline lead form — captures every shopper, phone or not */}
+            <ProductLeadForm product={product} />
+
             {product.price && product.price >= 5000 && (
               <div className="mb-4">
                 <Link
