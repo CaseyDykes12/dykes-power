@@ -1,9 +1,11 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 type Shot = {
   src: string;
   alt: string;
   caption: string;
+  href: string;
   span?: 'col-span-2' | 'row-span-2' | 'col-span-2 row-span-2';
 };
 
@@ -11,33 +13,39 @@ const SHOTS: Shot[] = [
   {
     src: '/images/ferris/campaign/lifestyle-crew.webp',
     alt: 'Ferris zero-turn at sunset with operator walking up',
-    caption: 'Dawn to dusk. Every day.',
+    caption: 'See the full lineup →',
+    href: '/catalog',
     span: 'col-span-2 row-span-2',
   },
   {
     src: '/images/ferris/campaign/lifestyle-precision.webp',
     alt: 'Clean stripe lines left by a Ferris mower',
-    caption: 'Lines like a ruler.',
+    caption: 'iCD cut quality →',
+    href: '/product/5902078',
   },
   {
     src: '/images/ferris/campaign/lifestyle-comfort.webp',
     alt: 'Operator comfort on rough terrain with Ferris suspension',
-    caption: 'Rough ground, smooth ride.',
+    caption: 'How long on your acres? →',
+    href: '/#your-property',
   },
   {
     src: '/images/ferris/campaign/lifestyle-confidence.webp',
     alt: 'Full Ferris lineup — zero-turn, stand-on, walk-behind',
-    caption: 'The full lineup.',
+    caption: 'Financing as low as 4.9% →',
+    href: '/financing',
   },
   {
     src: '/images/ferris/campaign/isx3300-fl.webp',
     alt: 'Ferris ISX3300 zero-turn front-left angle showing suspension travel',
-    caption: 'Four corners. Full suspension.',
+    caption: 'Meet the ISX3300 →',
+    href: '/product/5902065',
   },
   {
     src: '/images/ferris/campaign/lifestyle-homeowner.webp',
     alt: 'Homeowner on a Ferris mowing a private acreage',
-    caption: 'From your yard to their property.',
+    caption: 'Schedule a demo →',
+    href: '/contact',
   },
 ];
 
@@ -65,11 +73,13 @@ export default function DayOfWorkGallery() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[150px] md:auto-rows-[180px] gap-3 md:gap-4">
           {SHOTS.map((shot, i) => (
-            <figure
+            <Link
               key={shot.src}
-              className={`relative overflow-hidden rounded-xl border border-dykes-gray-700 group ${
+              href={shot.href}
+              className={`relative overflow-hidden rounded-xl border border-dykes-gray-700 group block focus:outline-none focus-visible:ring-2 focus-visible:ring-ferris-yellow ${
                 shot.span ?? ''
               }`}
+              aria-label={shot.caption}
             >
               <Image
                 src={shot.src}
@@ -85,12 +95,12 @@ export default function DayOfWorkGallery() {
               />
               <div
                 aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"
+                className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"
               />
-              <figcaption className="absolute bottom-2 left-3 right-3 text-white text-xs md:text-sm font-semibold drop-shadow-lg">
+              <span className="absolute bottom-2 left-3 right-3 text-white text-xs md:text-sm font-semibold drop-shadow-lg">
                 {shot.caption}
-              </figcaption>
-            </figure>
+              </span>
+            </Link>
           ))}
         </div>
 

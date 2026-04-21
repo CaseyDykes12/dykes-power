@@ -45,8 +45,8 @@ Rule of thumb I use: under 1 acre, 48. One to 2 acres, 52. Two to 5 acres, 60. M
 
 ## Still not sure
 
-Honestly, just come by. It's easier to figure out in person when you can tell me what the property looks like, where the gates are, and how your back's feeling about another hour on the mower. We've got most of these sizes sitting on the lot and you can see the difference. We're at 3069 Hwy 49 in Collins — give us a call at (601) 909-5380 if you want me to set time aside.
+Honestly, just come by. It's easier to figure out in person when you can tell us what the property looks like, where the gates are, and how your back's feeling about another hour on the mower. We've got most of these sizes sitting on the lot and you can see the difference. We're at 3069 Hwy 49 in Collins — give us a call at (601) 909-5380 if you want us to set time aside.
 
 If you want to see the lineup first, [our Ferris catalog](/catalog) has every model we carry with pricing, and [this post breaks down the 500S vs ISX800](/blog/ferris-500s-vs-isx800-which-one-do-you-need) if you're deciding between those two.
 
-— Casey
+— Dykes Motors Power Equipment

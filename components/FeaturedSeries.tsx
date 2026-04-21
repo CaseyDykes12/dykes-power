@@ -56,12 +56,12 @@ const SERIES: Series[] = [
     },
     variants: {
       briggs: [
-        { sku: '5902154', deck: '52"', price: 10699, msrp: 11769, hp: '24 hp', image: '/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg' },
-        { sku: '5902075', deck: '60"', price: 10899, msrp: 11989, hp: '24 hp', image: '/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg' },
+        { sku: '5902154', deck: '52"', price: 10699, msrp: 11769, hp: '24 hp', image: '/images/ferris/basco/5902154/5902154_FER_ISX800_L_Final.jpg' },
+        { sku: '5902075', deck: '60"', price: 10899, msrp: 11989, hp: '24 hp', image: '/images/ferris/basco/5902154/5902154_FER_ISX800_L_Final.jpg' },
       ],
       kawasaki: [
-        { sku: '5902155', deck: '52"', price: 10899, msrp: 11989, hp: '24 hp', image: '/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg' },
-        { sku: '5902073', deck: '60"', price: 11499, msrp: 12648, hp: '24 hp', image: '/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg' },
+        { sku: '5902155', deck: '52"', price: 10899, msrp: 11989, hp: '24 hp', image: '/images/ferris/basco/5902154/5902154_FER_ISX800_L_Final.jpg' },
+        { sku: '5902073', deck: '60"', price: 11499, msrp: 12648, hp: '24 hp', image: '/images/ferris/basco/5902154/5902154_FER_ISX800_L_Final.jpg' },
       ],
     },
   },
@@ -76,12 +76,12 @@ const SERIES: Series[] = [
     },
     variants: {
       briggs: [
-        { sku: '5902157', deck: '52"', price: 13699, msrp: 15069, hp: '31 hp', image: '/images/ferris/basco/5902078/5902078_FER_ISX2200_F_Final_.jpg' },
-        { sku: '5902078', deck: '60"', price: 14499, msrp: 15949, hp: '31 hp', image: '/images/ferris/basco/5902078/5902078_FER_ISX2200_F_Final_.jpg' },
+        { sku: '5902157', deck: '52"', price: 13699, msrp: 15069, hp: '31 hp', image: '/images/ferris/basco/5902078/5902078_FER_ISX2200_FL_FINAL.jpg' },
+        { sku: '5902078', deck: '60"', price: 14499, msrp: 15949, hp: '31 hp', image: '/images/ferris/basco/5902078/5902078_FER_ISX2200_FL_FINAL.jpg' },
       ],
       kawasaki: [
-        { sku: '5902159', deck: '52"', price: 13449, msrp: 14794, hp: '27 hp', image: '/images/ferris/basco/5902078/5902078_FER_ISX2200_F_Final_.jpg' },
-        { sku: '5902180', deck: '60"', price: 14099, msrp: 15509, hp: '27 hp', image: '/images/ferris/basco/5902078/5902078_FER_ISX2200_F_Final_.jpg' },
+        { sku: '5902159', deck: '52"', price: 13449, msrp: 14794, hp: '27 hp', image: '/images/ferris/basco/5902078/5902078_FER_ISX2200_FL_FINAL.jpg' },
+        { sku: '5902180', deck: '60"', price: 14099, msrp: 15509, hp: '27 hp', image: '/images/ferris/basco/5902078/5902078_FER_ISX2200_FL_FINAL.jpg' },
       ],
     },
   },
