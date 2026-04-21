@@ -20,11 +20,20 @@ export default function WhyWeCarryFerris() {
             >
               Why We Carry Ferris.
             </h2>
-            <div className="text-dykes-gray-100 text-lg md:text-xl leading-relaxed border-l-2 border-ferris-yellow pl-4">
+            <div className="text-dykes-gray-100 text-lg md:text-xl leading-relaxed border-l-2 border-ferris-yellow pl-4 space-y-4">
               <p>
-                Ferris invented the suspension mower — independent shocks on all four corners.
-                Nobody else comes close. That&apos;s why we carry them. When you&apos;re running
-                a crew in Mississippi heat, your mower has to work as hard as you do.
+                Ferris invented the suspension mower over twenty years ago, patenting the
+                system with Todd Gordon, who went on to be a winning NASCAR crew chief.
+                Racing-inspired engineering, refined across more than two decades.
+                That&apos;s what separates a Ferris from everything else in the cut.
+              </p>
+              <p className="text-dykes-gray-500 text-sm italic">
+                From the Ferris 2026 Product Catalog.
+              </p>
+              <p>
+                Independent shocks on all four corners. Nobody else comes close. That&apos;s
+                why we carry them. When you&apos;re running a crew in Mississippi heat, your
+                mower has to work as hard as you do.
               </p>
             </div>
           </div>

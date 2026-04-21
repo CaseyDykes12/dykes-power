@@ -10,6 +10,7 @@ import FinancingOptions from '@/components/FinancingOptions';
 import StickyMobileCTA from '@/components/StickyMobileCTA';
 import ProductLeadForm from '@/components/ProductLeadForm';
 import { SuspensionWarrantyBadge, isWarrantyEligible } from '@/components/SuspensionWarrantyBadge';
+import { getFamilyTagline, FAMILY_TAGLINE_ATTRIBUTION } from '@/lib/familyTaglines';
 
 export async function generateStaticParams() {
   return products.map((p) => ({ sku: p.sku }));
@@ -49,6 +50,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
   if (!product) notFound();
 
   const images = getProductImages(product);
+  const familyTagline = getFamilyTagline(product.name);
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -238,8 +240,15 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                 ))}
             </div>
 
-            {/* Description */}
-            <p className="text-gray-300 mb-5 leading-relaxed">{product.description}</p>
+            {/* Description — family tagline from catalog when available */}
+            {familyTagline ? (
+              <div className="mb-5">
+                <p className="text-gray-300 leading-relaxed">{familyTagline}</p>
+                <p className="text-gray-500 text-xs mt-2 italic">{FAMILY_TAGLINE_ATTRIBUTION}</p>
+              </div>
+            ) : (
+              <p className="text-gray-300 mb-5 leading-relaxed">{product.description}</p>
+            )}
 
             {/* Features */}
             <div className="mb-6">
