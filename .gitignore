@@ -38,6 +38,7 @@ yarn-error.log*
 
 # raw campaign assets (exported from Ferris/Basco portals — never committed)
 /incoming-assets/
+/public/videos/ferris/campaign/downloads/
 
 # typescript
 *.tsbuildinfo

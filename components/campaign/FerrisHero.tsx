@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
+const PORTRAIT_QUERY = '(max-width: 767px)';
 
 function subscribeReducedMotion(callback: () => void) {
   const mq = window.matchMedia(REDUCED_MOTION_QUERY);
@@ -16,7 +17,17 @@ function getReducedMotionSnapshot() {
   return window.matchMedia(REDUCED_MOTION_QUERY).matches;
 }
 
-function getReducedMotionServerSnapshot() {
+function subscribePortrait(callback: () => void) {
+  const mq = window.matchMedia(PORTRAIT_QUERY);
+  mq.addEventListener('change', callback);
+  return () => mq.removeEventListener('change', callback);
+}
+
+function getPortraitSnapshot() {
+  return window.matchMedia(PORTRAIT_QUERY).matches;
+}
+
+function serverSnapshotFalse() {
   return false;
 }
 
@@ -24,8 +35,17 @@ export default function FerrisHero() {
   const reducedMotion = useSyncExternalStore(
     subscribeReducedMotion,
     getReducedMotionSnapshot,
-    getReducedMotionServerSnapshot
+    serverSnapshotFalse
   );
+  const isPortrait = useSyncExternalStore(
+    subscribePortrait,
+    getPortraitSnapshot,
+    serverSnapshotFalse
+  );
+
+  const videoBase = isPortrait
+    ? '/videos/ferris/campaign/landscaper-15s-portrait'
+    : '/videos/ferris/campaign/landscaper-15s';
 
   const scrollToFilm = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -37,6 +57,7 @@ export default function FerrisHero() {
     <section className="relative bg-dykes-black text-white overflow-hidden min-h-[88vh] flex items-center">
       {!reducedMotion && (
         <video
+          key={videoBase}
           autoPlay
           loop
           muted
@@ -45,7 +66,8 @@ export default function FerrisHero() {
           className="absolute inset-0 w-full h-full object-cover object-center opacity-40"
           aria-hidden="true"
         >
-          <source src="/videos/ferris/campaign/hero-15s.mp4" type="video/mp4" />
+          <source src={`${videoBase}.webm`} type="video/webm" />
+          <source src={`${videoBase}.mp4`} type="video/mp4" />
         </video>
       )}
       {reducedMotion && (
