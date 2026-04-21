@@ -1,21 +1,9 @@
 'use client';
 
-import { useSyncExternalStore } from 'react';
-import Image from 'next/image';
+import { useEffect, useRef, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 
-const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
 const PORTRAIT_QUERY = '(max-width: 767px)';
-
-function subscribeReducedMotion(callback: () => void) {
-  const mq = window.matchMedia(REDUCED_MOTION_QUERY);
-  mq.addEventListener('change', callback);
-  return () => mq.removeEventListener('change', callback);
-}
-
-function getReducedMotionSnapshot() {
-  return window.matchMedia(REDUCED_MOTION_QUERY).matches;
-}
 
 function subscribePortrait(callback: () => void) {
   const mq = window.matchMedia(PORTRAIT_QUERY);
@@ -32,11 +20,6 @@ function serverSnapshotFalse() {
 }
 
 export default function FerrisHero() {
-  const reducedMotion = useSyncExternalStore(
-    subscribeReducedMotion,
-    getReducedMotionSnapshot,
-    serverSnapshotFalse
-  );
   const isPortrait = useSyncExternalStore(
     subscribePortrait,
     getPortraitSnapshot,
@@ -47,6 +30,24 @@ export default function FerrisHero() {
     ? '/videos/ferris/campaign/landscaper-15s-portrait'
     : '/videos/ferris/campaign/landscaper-15s';
 
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    const tryPlay = () => {
+      const p = v.play();
+      if (p && typeof p.catch === 'function') p.catch(() => {});
+    };
+    tryPlay();
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') tryPlay();
+    };
+    document.addEventListener('visibilitychange', onVisible);
+    return () => document.removeEventListener('visibilitychange', onVisible);
+  }, [videoBase]);
+
   const scrollToFilm = (e: React.MouseEvent) => {
     e.preventDefault();
     const el = document.getElementById('watch-the-film');
@@ -55,31 +56,21 @@ export default function FerrisHero() {
 
   return (
     <section className="relative bg-dykes-black text-white overflow-hidden min-h-[88vh] flex items-center">
-      {!reducedMotion && (
-        <video
-          key={videoBase}
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="/images/ferris/campaign/isx3300-fr.webp"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-40"
-          aria-hidden="true"
-        >
-          <source src={`${videoBase}.webm`} type="video/webm" />
-          <source src={`${videoBase}.mp4`} type="video/mp4" />
-        </video>
-      )}
-      {reducedMotion && (
-        <Image
-          src="/images/ferris/campaign/isx3300-fr.webp"
-          alt=""
-          fill
-          preload
-          sizes="100vw"
-          className="object-cover object-center opacity-40"
-        />
-      )}
+      <video
+        key={videoBase}
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        poster="/images/ferris/campaign/isx3300-fr.webp"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-40"
+        aria-hidden="true"
+      >
+        <source src={`${videoBase}.webm`} type="video/webm" />
+        <source src={`${videoBase}.mp4`} type="video/mp4" />
+      </video>
 
       <div
         aria-hidden="true"
