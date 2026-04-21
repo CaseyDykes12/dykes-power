@@ -9,6 +9,7 @@ import ProductGallery from '@/components/ProductGallery';
 import FinancingOptions from '@/components/FinancingOptions';
 import StickyMobileCTA from '@/components/StickyMobileCTA';
 import ProductLeadForm from '@/components/ProductLeadForm';
+import { SuspensionWarrantyBadge, isWarrantyEligible } from '@/components/SuspensionWarrantyBadge';
 
 export async function generateStaticParams() {
   return products.map((p) => ({ sku: p.sku }));
@@ -213,6 +214,9 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                 </div>
               )}
             </div>
+
+            {/* 10-Year Suspension Warranty */}
+            {isWarrantyEligible(product.name) && <SuspensionWarrantyBadge variant="detail" />}
 
             {/* Financing options */}
             {product.price && <FinancingOptions price={product.price} />}

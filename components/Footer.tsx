@@ -51,6 +51,7 @@ export default function Footer() {
             <li><Link href="/contact" className="hover:text-[#C8C8C8]">Get a Quote</Link></li>
             <li><Link href="/contact" className="hover:text-[#C8C8C8]">Contact Us</Link></li>
             <li><Link href="/blog" className="hover:text-[#C8C8C8]">Blog</Link></li>
+            <li><a href="/downloads/ferris-2026-catalog.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-[#C8C8C8]">2026 Ferris Catalog (PDF)</a></li>
             <li><Link href="/shipping-returns" className="hover:text-[#C8C8C8]">Shipping & Returns</Link></li>
             <li><Link href="/privacy" className="hover:text-[#C8C8C8]">Privacy Policy</Link></li>
             <li><Link href="/terms" className="hover:text-[#C8C8C8]">Terms of Service</Link></li>

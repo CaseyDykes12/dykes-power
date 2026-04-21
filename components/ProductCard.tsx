@@ -3,9 +3,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Product } from '@/lib/products';
+import { SuspensionWarrantyBadge, isWarrantyEligible } from './SuspensionWarrantyBadge';
 
 export default function ProductCard({ product }: { product: Product }) {
   const [imgError, setImgError] = useState(false);
+  const warrantyEligible = isWarrantyEligible(product.name);
 
   return (
     <Link href={`/product/${product.sku}`} className="bg-[#1a1a1a] border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:border-[#C8C8C8] transition-all flex flex-col cursor-pointer">
@@ -48,6 +50,12 @@ export default function ProductCard({ product }: { product: Product }) {
           <p className="text-gray-400 text-sm mb-3">
             Deck: {product.deckSizes.join(', ')}
           </p>
+        )}
+
+        {warrantyEligible && (
+          <div className="mb-3">
+            <SuspensionWarrantyBadge />
+          </div>
         )}
 
         <p className="text-gray-500 text-sm line-clamp-2 mb-4 flex-1">{product.description}</p>
