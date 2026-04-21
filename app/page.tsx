@@ -31,6 +31,17 @@ export default function HomePage() {
       {/* 1. Hero */}
       <FerrisHero />
 
+      {/* 10-year suspension warranty band */}
+      <Link
+        href="/warranty"
+        className="block bg-ferris-yellow text-dykes-black text-center text-sm md:text-base font-bold py-3 px-4 hover:bg-ferris-yellow-dark transition-colors"
+      >
+        <span className="tracking-widest uppercase">10-Year Suspension Warranty</span>
+        <span className="mx-2 opacity-60">·</span>
+        <span className="font-semibold">Standard on our core Ferris lineup</span>
+        <span className="ml-2 underline decoration-dotted">See coverage →</span>
+      </Link>
+
       {/* Value props row */}
       <section className="bg-dykes-gray-900 py-10 px-4 border-b border-dykes-gray-700">
         <div className="max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
