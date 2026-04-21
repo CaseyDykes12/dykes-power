@@ -36,6 +36,7 @@ export default function Navbar() {
           <Link href="/catalog?category=Stand-On+Mowers" className="hover:text-[#C8C8C8] transition-colors">Stand-On</Link>
           <Link href="/trailers" className="hover:text-[#C8C8C8] transition-colors">Trailers</Link>
           <Link href="/parts" className="hover:text-[#C8C8C8] transition-colors">Parts</Link>
+          <Link href="/accessories" className="hover:text-[#C8C8C8] transition-colors">Accessories</Link>
           <Link href="/service" className="hover:text-[#C8C8C8] transition-colors">Service</Link>
           <Link href="/financing" className="hover:text-[#C8C8C8] transition-colors">Financing</Link>
           <Link href="/blog" className="hover:text-[#C8C8C8] transition-colors">Blog</Link>
@@ -87,6 +88,7 @@ export default function Navbar() {
           <Link href="/catalog?category=Stand-On+Mowers" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Stand-On</Link>
           <Link href="/trailers" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Trailers</Link>
           <Link href="/parts" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Parts</Link>
+          <Link href="/accessories" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Accessories</Link>
           <Link href="/service" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Service</Link>
           <Link href="/financing" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Financing</Link>
           <Link href="/blog" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Blog</Link>
@@ -103,6 +105,7 @@ export default function Navbar() {
           <Link href="/catalog?category=Stand-On+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Stand-On Mowers</Link>
           <Link href="/trailers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Trailers</Link>
           <Link href="/parts" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Parts</Link>
+          <Link href="/accessories" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Accessories</Link>
           <Link href="/service" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Service</Link>
           <Link href="/financing" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Financing</Link>
           <Link href="/blog" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Blog</Link>
