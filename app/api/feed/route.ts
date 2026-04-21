@@ -59,11 +59,12 @@ export async function GET() {
       const deckLabel = p.deckSizes.length > 0 ? ` ${p.deckSizes[0]} deck` : '';
       const title = `${p.name} ${p.engine}${deckLabel}`;
 
+      const landingSku = p.canonicalSku ?? p.sku;
       return `  <item>
     <g:id>${escapeXml(p.sku)}</g:id>
     <g:title>${escapeXml(title)}</g:title>
     <g:description>${escapeXml(p.description)}</g:description>
-    <g:link>${SITE}/product/${p.sku}</g:link>
+    <g:link>${SITE}/product/${landingSku}</g:link>
     <g:image_link>${escapeXml(imageUrl)}</g:image_link>
 ${additionalImages}
     <g:availability>${mapAvailability(p.status)}</g:availability>

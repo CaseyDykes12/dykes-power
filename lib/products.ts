@@ -8,6 +8,16 @@ export type ProductCategory =
 
 export type InventoryStatus = 'IN_STOCK' | 'INBOUND' | 'AVAILABLE_TO_ORDER';
 
+export interface ProductVariant {
+  sku: string;
+  engine: string;
+  horsepower: string;
+  deckSize: string;
+  price: number | null;
+  msrp: number | null;
+  status: InventoryStatus;
+}
+
 export interface Product {
   sku: string;
   name: string;
@@ -23,6 +33,12 @@ export interface Product {
   images?: string[];
   status: InventoryStatus;
   tag?: string;
+  // Engine + deck variants for this family. When present, the detail page
+  // renders a compatibility table; the canonical SKU acts as the landing page.
+  variants?: ProductVariant[];
+  // When set, this entry is a non-canonical alias of another SKU. The catalog
+  // listing skips it and the product detail route redirects to the canonical.
+  canonicalSku?: string;
 }
 
 export const NOT_ON_LOT_DISCLOSURE =
@@ -484,10 +500,19 @@ export const products: Product[] = [
     imageUrl: '/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg',
     images: ["/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_L_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_R_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_K_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_KL_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_KR_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_T_Final.jpg"],
     status: 'AVAILABLE_TO_ORDER',
+    variants: [
+      { sku: '5902154', engine: 'Briggs & Stratton® CXi', horsepower: '24 hp', deckSize: '52"', price: 10699, msrp: 11769, status: 'AVAILABLE_TO_ORDER' },
+      { sku: '5902075', engine: 'Briggs & Stratton® CXi', horsepower: '24 hp', deckSize: '60"', price: 10899, msrp: 11989, status: 'AVAILABLE_TO_ORDER' },
+      { sku: '5902172', engine: 'B&S CXi EFI-ETC w/ OilXtend™', horsepower: '25 hp', deckSize: '60"', price: 11249, msrp: 12374, status: 'AVAILABLE_TO_ORDER' },
+      { sku: '5902155', engine: 'Kawasaki® FT730V', horsepower: '24 hp', deckSize: '52"', price: 10899, msrp: 11989, status: 'AVAILABLE_TO_ORDER' },
+      { sku: '5902073', engine: 'Kawasaki® FT730V', horsepower: '24 hp', deckSize: '60"', price: 11499, msrp: 12648, status: 'AVAILABLE_TO_ORDER' },
+      { sku: '5902074', engine: 'Kawasaki® FT730V EFI', horsepower: '24 hp', deckSize: '60"', price: 11949, msrp: 13143, status: 'AVAILABLE_TO_ORDER' },
+    ],
   },
   {
     sku: '5902075',
     name: 'Ferris ISX™ 800 Series',
+    canonicalSku: '5902154',
     category: 'Zero Turn Mowers',
     engine: 'Briggs & Stratton® CXi',
     horsepower: '24 hp',
@@ -510,6 +535,7 @@ export const products: Product[] = [
   {
     sku: '5902155',
     name: 'Ferris ISX™ 800 Series',
+    canonicalSku: '5902154',
     category: 'Zero Turn Mowers',
     engine: 'Kawasaki® FT730V',
     horsepower: '24 hp',
@@ -532,6 +558,7 @@ export const products: Product[] = [
   {
     sku: '5902073',
     name: 'Ferris ISX™ 800 Series',
+    canonicalSku: '5902154',
     category: 'Zero Turn Mowers',
     engine: 'Kawasaki® FT730V',
     horsepower: '24 hp',
@@ -554,6 +581,7 @@ export const products: Product[] = [
   {
     sku: '5902074',
     name: 'Ferris ISX™ 800 Series',
+    canonicalSku: '5902154',
     category: 'Zero Turn Mowers',
     engine: 'Kawasaki® FT730V EFI',
     horsepower: '24 hp',
@@ -576,6 +604,7 @@ export const products: Product[] = [
   {
     sku: '5902172',
     name: 'Ferris ISX™ 800 Series',
+    canonicalSku: '5902154',
     category: 'Zero Turn Mowers',
     engine: 'Briggs & Stratton® CXi EFI-ETC w/ OilXtend™',
     horsepower: '25 hp',
@@ -1719,11 +1748,16 @@ export function getProductsBySku(sku: string): Product | undefined {
 }
 
 export function getProductsByCategory(category: ProductCategory): Product[] {
-  return products.filter((p) => p.category === category);
+  return products.filter((p) => p.category === category && !p.canonicalSku);
 }
 
 export function getAllCategories(): ProductCategory[] {
-  return [...new Set(products.map((p) => p.category))];
+  return [...new Set(products.filter((p) => !p.canonicalSku).map((p) => p.category))];
+}
+
+// Catalog listing: one card per family. Excludes non-canonical variant aliases.
+export function getCatalogProducts(): Product[] {
+  return products.filter((p) => !p.canonicalSku);
 }
 
 export const statusLabels: Record<InventoryStatus, { label: string; color: string }> = {

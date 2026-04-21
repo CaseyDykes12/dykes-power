@@ -1,6 +1,6 @@
 import { products, getProductsBySku } from '@/lib/products';
 import { getProductImages } from '@/lib/productImages';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
@@ -20,6 +20,9 @@ export async function generateMetadata({ params }: { params: Promise<{ sku: stri
   const { sku } = await params;
   const product = getProductsBySku(sku);
   if (!product) return {};
+  if (product.canonicalSku) {
+    return { alternates: { canonical: `https://www.dykespower.com/product/${product.canonicalSku}` } };
+  }
 
   const title = `${product.name} | Dykes Motors Power Equipment — Collins, MS`;
   const description = `${product.name} — ${product.engine}, ${product.deckSizes.join('/')} deck. ${product.price ? `$${product.price.toLocaleString()} at` : 'Available at'} Dykes Motors Power Equipment, authorized Ferris dealer in Collins, Mississippi.`;
@@ -48,6 +51,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
   const { sku } = await params;
   const product = getProductsBySku(sku);
   if (!product) notFound();
+  if (product.canonicalSku) permanentRedirect(`/product/${product.canonicalSku}`);
 
   const images = getProductImages(product);
   const familyTagline = getFamilyTagline(product.name);
@@ -239,6 +243,46 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                   </div>
                 ))}
             </div>
+
+            {/* Engine + deck options table — shown when this family has variants */}
+            {product.variants && product.variants.length > 1 && (
+              <div className="mb-6 rounded-lg border border-gray-800 bg-[#0c0c0c] overflow-hidden">
+                <div className="px-4 py-3 border-b border-gray-800 flex items-baseline justify-between">
+                  <p className="text-xs font-bold text-[#C8C8C8] uppercase tracking-widest">Engine and deck options</p>
+                  <p className="text-xs text-gray-500">{product.variants.length} configurations</p>
+                </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="text-left text-xs uppercase tracking-wider text-gray-500 border-b border-gray-800">
+                        <th className="px-4 py-2 font-semibold">Engine</th>
+                        <th className="px-4 py-2 font-semibold">HP</th>
+                        <th className="px-4 py-2 font-semibold">Deck</th>
+                        <th className="px-4 py-2 font-semibold text-right">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {product.variants.map((v) => (
+                        <tr
+                          key={v.sku}
+                          className={`border-b border-gray-900 last:border-b-0 ${v.sku === product.sku ? 'bg-[#1a1a1a]' : ''}`}
+                        >
+                          <td className="px-4 py-2.5 text-gray-200">{v.engine}</td>
+                          <td className="px-4 py-2.5 text-gray-400">{v.horsepower}</td>
+                          <td className="px-4 py-2.5 text-gray-400">{v.deckSize}</td>
+                          <td className="px-4 py-2.5 text-right text-white font-semibold">
+                            {v.price ? `$${v.price.toLocaleString()}` : '—'}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="px-4 py-3 text-xs text-gray-500 border-t border-gray-800">
+                  Use the quote form below to lock in the exact engine and deck you want. We can pull any of these from the Ferris factory.
+                </p>
+              </div>
+            )}
 
             {/* Description — family tagline from catalog when available */}
             {familyTagline ? (

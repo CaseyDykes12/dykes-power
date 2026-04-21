@@ -29,12 +29,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ferris-mowers-laurel-ms`, lastModified: now, priority: 0.8, changeFrequency: 'monthly' as const },
   ];
 
-  const productPages = products.map((p) => ({
-    url: `${BASE}/product/${p.sku}`,
-    lastModified: now,
-    priority: 0.8,
-    changeFrequency: 'weekly' as const,
-  }));
+  const productPages = products
+    .filter((p) => !p.canonicalSku)
+    .map((p) => ({
+      url: `${BASE}/product/${p.sku}`,
+      lastModified: now,
+      priority: 0.8,
+      changeFrequency: 'weekly' as const,
+    }));
 
   // Individual OEM parts pages
   const partPages = parts.map((p) => ({
