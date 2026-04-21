@@ -55,7 +55,7 @@ export default function ContactPage() {
         <p className="text-5xl mb-4">✅</p>
         <h1 className="text-3xl font-bold mb-3">We got your message!</h1>
         <p className="text-gray-600 mb-6">
-          Casey or one of our team will reach out to you shortly. If you need to talk now,
+          Someone from our team will reach out to you shortly. If you need to talk now,
           call us at <a href="tel:6019095380" className="text-[#C8C8C8] font-semibold">(601) 909-5380</a>.
         </p>
       </div>

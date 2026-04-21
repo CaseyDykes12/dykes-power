@@ -159,8 +159,7 @@ export default function MowCalculator() {
               <p className="text-dykes-gray-500 text-xs mt-6 max-w-xl">
                 Estimates use standard industry math: deck width × ground speed × 80–85%
                 overlap efficiency. Real-world time varies with terrain, grass height, and
-                obstacles. Call Casey at <a href="tel:6019095380" className="underline">(601)
-                641-5475</a> for a property walk-through.
+                obstacles. Call sales at <a href="tel:6019095380" className="underline">(601) 909-5380</a> for a property walk-through.
               </p>
             </div>
           )}

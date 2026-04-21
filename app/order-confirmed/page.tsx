@@ -37,8 +37,8 @@ function OrderConfirmedContent() {
             (601) 909-5380
           </a>{' '}
           or email{' '}
-          <a href="mailto:Casey@dykesmotors.com" className="text-[#D4AF37] underline">
-            Casey@dykesmotors.com
+          <a href="mailto:info@dykesmotors.com" className="text-[#D4AF37] underline">
+            info@dykesmotors.com
           </a>
         </p>
         <div className="flex flex-wrap gap-3 justify-center">
