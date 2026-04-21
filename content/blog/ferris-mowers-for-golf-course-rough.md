@@ -1,9 +1,9 @@
 ---
-title: Ferris Mowers for Golf Course Rough: What Actually Works
-date: 2026-04-21
-description: Ferris commercial zero turns handle golf course rough and surrounds in Mississippi's heat. Here's what golf supers in Covington County and beyond are running.
-category: Commercial
-keywords: Ferris mowers golf course, golf course rough mower Mississippi, commercial zero turn golf course, Ferris ISX800, Ferris IS3100Z, golf turf management Mississippi, Covington County, Magee Mississippi, Columbia Mississippi, golf course grounds equipment
+title: "Ferris Mowers for Golf Course Rough: What Actually Works"
+date: "2026-04-21"
+description: "Ferris commercial zero turns handle golf course rough and surrounds in Mississippi's heat. Here's what golf supers in Covington County and beyond are running."
+category: "Commercial"
+keywords: "Ferris mowers golf course, golf course rough mower Mississippi, commercial zero turn golf course, Ferris ISX800, Ferris IS3100Z, golf turf management Mississippi, Covington County, Magee Mississippi, Columbia Mississippi, golf course grounds equipment"
 ---
 
 Golf course rough is harder on equipment than most people realize. It's not just grass — it's uneven terrain, wet patches near cart paths, Bermuda or fescue that's grown up for effect, and banks that'll shake a machine apart in a season. If you're managing rough on a Mississippi course, you need equipment that's built differently from what most people picture when they think "zero turn."
