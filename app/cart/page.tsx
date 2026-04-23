@@ -9,6 +9,12 @@ import {
   cartTotal,
   type Cart,
 } from '@/lib/cart';
+import {
+  calculatePartsShipping,
+  hasLargeEquipment,
+  FLAT_SHIPPING_RATE,
+  FREE_SHIPPING_THRESHOLD,
+} from '@/lib/checkout';
 
 export default function CartPage() {
   const [cart, setCart] = useState<Cart>({ items: [] });
@@ -44,6 +50,9 @@ export default function CartPage() {
 
   const empty = cart.items.length === 0;
   const subtotal = cartTotal(cart);
+  const large = hasLargeEquipment(cart);
+  const shippingEstimate = large ? null : calculatePartsShipping(cart);
+  const amountToFree = Math.max(0, FREE_SHIPPING_THRESHOLD - subtotal);
 
   return (
     <div className="bg-[#0f0f0f] min-h-screen">
@@ -152,15 +161,34 @@ export default function CartPage() {
                     <span>Tax (7% MS)</span>
                     <span>Calculated at checkout</span>
                   </div>
-                  <div className="flex justify-between text-gray-500 text-xs">
-                    <span>Shipping</span>
-                    <span>Calculated at checkout</span>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-400">Shipping</span>
+                    {large ? (
+                      <span className="text-gray-500 text-xs">Freight quote at checkout</span>
+                    ) : shippingEstimate === 0 ? (
+                      <span className="text-[#C8C8C8] font-semibold">FREE</span>
+                    ) : (
+                      <span className="text-gray-300">${shippingEstimate?.toFixed(2)}</span>
+                    )}
                   </div>
                 </div>
+                {!large && amountToFree > 0 && (
+                  <div className="bg-[#0a0a0a] border border-gray-800 rounded-lg px-3 py-2 mb-4 text-xs text-gray-400">
+                    Add <span className="text-[#C8C8C8] font-semibold">${amountToFree.toFixed(2)}</span> more to unlock free shipping.
+                  </div>
+                )}
+                {!large && amountToFree === 0 && subtotal > 0 && (
+                  <div className="bg-[#0a0a0a] border border-[#C8C8C8] rounded-lg px-3 py-2 mb-4 text-xs text-[#C8C8C8] font-semibold">
+                    ✓ Your order qualifies for free shipping.
+                  </div>
+                )}
                 <div className="border-t border-gray-800 pt-3 mb-5">
                   <div className="flex justify-between text-white font-bold">
                     <span>Estimated Total</span>
-                    <span>${subtotal.toLocaleString(undefined, { minimumFractionDigits: 2 })}+</span>
+                    <span>
+                      ${(subtotal + (shippingEstimate ?? 0)).toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                      {large && '+'}
+                    </span>
                   </div>
                 </div>
                 <Link
