@@ -8,6 +8,7 @@ import AddToCartButton from '@/components/AddToCartButton';
 import ProductGallery from '@/components/ProductGallery';
 import FinancingOptions from '@/components/FinancingOptions';
 import VariantDeckSelector from '@/components/VariantDeckSelector';
+import { getRichContent } from '@/lib/productRichContent';
 import StickyMobileCTA from '@/components/StickyMobileCTA';
 import ProductLeadForm from '@/components/ProductLeadForm';
 import { SuspensionWarrantyBadge, isWarrantyEligible } from '@/components/SuspensionWarrantyBadge';
@@ -299,9 +300,9 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
               <p className="text-gray-300 mb-5 leading-relaxed">{product.description}</p>
             )}
 
-            {/* Features */}
+            {/* Features — compact list (rich feature cards render below the fold) */}
             <div className="mb-6">
-              <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3">Key Features</p>
+              <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3">At a Glance</p>
               <ul className="space-y-2">
                 {product.features.map((f) => (
                   <li key={f} className="flex items-start gap-3 text-sm text-gray-300">
@@ -356,6 +357,134 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
             </div>
           </div>
         </div>
+
+        {/* ── Rich content: Quick stats / Key features / Specs ─────── */}
+        {(() => {
+          const rich = getRichContent(product.name);
+          if (!rich) return null;
+          const { keyFeatures, specs } = rich;
+
+          // Quick stats pulled from canonical specs for the hero sub-bar.
+          const quickStats = [
+            { label: 'Deck', value: product.deckSizes?.join(' · ') || '' },
+            { label: 'HP', value: product.horsepower },
+            { label: 'Top Speed', value: specs.groundSpeedFwd || '' },
+            { label: 'Warranty', value: specs.warrantySuspension ? `${specs.warrantySuspension} suspension` : specs.warrantyMachine || '' },
+          ].filter((s) => s.value && s.value !== 'N/A');
+
+          const specRows: Array<[string, string | undefined]> = [
+            ['Engine', specs.engineBrand],
+            ['Horsepower', product.horsepower],
+            ['Engine Displacement', specs.engineDisplacement],
+            ['Cylinders', specs.engineCylinders],
+            ['Starter', specs.starter],
+            ['Fuel Type', specs.fuelType],
+            ['Fuel Capacity', specs.fuelCapacity],
+            ['Transmission', specs.transmission],
+            ['Ground Speed Forward', specs.groundSpeedFwd],
+            ['Ground Speed Reverse', specs.groundSpeedRev],
+            ['Parking Brake', specs.parkingBrake],
+            ['Suspension', specs.suspension],
+            ['Operator Seat', specs.seat],
+            ['Instrumentation', specs.instrumentation],
+            ['Deck Construction', specs.deckConstruction],
+            ['Cutting Height', specs.cuttingHeight],
+            ['Spindles', specs.spindles],
+            ['Drive Tires', specs.driveTires],
+            ['Caster Tires', specs.casterTires],
+            ['Overall Length', specs.overallLength],
+            ['Overall Height', specs.overallHeight],
+            ['Overall Width', specs.overallWidth],
+            ['Dry Weight', specs.dryWeight],
+            ['Machine Warranty', specs.warrantyMachine],
+            ['Suspension Warranty', specs.warrantySuspension],
+            ['Engine Warranty', specs.warrantyEngine],
+          ].filter((r): r is [string, string] => !!r[1]);
+
+          return (
+            <div className="mt-16 space-y-12">
+              {/* Quick stats strip */}
+              {quickStats.length > 0 && (
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  {quickStats.map(({ label, value }) => (
+                    <div key={label} className="bg-[#111] border border-gray-800 rounded-xl p-4">
+                      <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">{label}</p>
+                      <p className="text-white text-lg font-bold" style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.03em' }}>{value}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Key features grid */}
+              {keyFeatures && keyFeatures.length > 0 && (
+                <div>
+                  <p className="text-xs text-[#C8C8C8] uppercase tracking-[0.25em] mb-2 font-semibold">Why This Machine</p>
+                  <h2 className="text-3xl md:text-4xl font-black text-white mb-6" style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.02em' }}>
+                    What sets the {product.name.replace('Ferris ', '')} apart
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {keyFeatures.map((kf) => (
+                      <div key={kf.title} className="bg-[#111] border border-gray-800 rounded-xl p-5 hover:border-gray-600 transition-colors">
+                        <h3 className="text-white font-bold mb-2">{kf.title}</h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">{kf.body}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Tech callout */}
+              <div className="bg-gradient-to-br from-[#1a1a1a] to-black border border-gray-800 rounded-2xl p-6 md:p-8">
+                <p className="text-xs text-[#C8C8C8] uppercase tracking-[0.25em] mb-2 font-semibold">Built On Real Tech</p>
+                <h3 className="text-2xl md:text-3xl font-black text-white mb-4" style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.02em' }}>
+                  Ferris doesn&rsquo;t cut corners — and we don&rsquo;t sell anyone who does.
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4 max-w-2xl">
+                  Every Ferris model is built around four engineering choices that separate them from the rest: full suspension, the iCD+ cutting deck, commercial-grade EFI engines, and Oil Guard extended-interval protection.
+                </p>
+                <div className="flex flex-wrap gap-3 text-sm">
+                  <Link href="/why-ferris#suspension" className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full transition-colors">
+                    10-Year Suspension Warranty →
+                  </Link>
+                  <Link href="/why-ferris#icd-cutting" className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full transition-colors">
+                    iCD+ Cutting System →
+                  </Link>
+                  <Link href="/why-ferris#engines" className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full transition-colors">
+                    Vanguard EFI Engines →
+                  </Link>
+                  <Link href="/why-ferris#oil-guard" className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full transition-colors">
+                    Oil Guard Protection →
+                  </Link>
+                </div>
+              </div>
+
+              {/* Full specs table */}
+              {specRows.length > 0 && (
+                <div>
+                  <p className="text-xs text-[#C8C8C8] uppercase tracking-[0.25em] mb-2 font-semibold">Specifications</p>
+                  <h2 className="text-3xl md:text-4xl font-black text-white mb-6" style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.02em' }}>
+                    Full spec sheet
+                  </h2>
+                  <div className="bg-[#0c0c0c] border border-gray-800 rounded-2xl overflow-hidden">
+                    <table className="w-full text-sm">
+                      <tbody>
+                        {specRows.map(([label, value], i) => (
+                          <tr key={label} className={i % 2 === 0 ? 'bg-[#111]' : ''}>
+                            <th scope="row" className="text-left font-semibold text-gray-400 px-5 py-3 align-top w-1/3">{label}</th>
+                            <td className="text-gray-200 px-5 py-3">{value}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-3">
+                    Specifications reflect Ferris factory data for this family. Variants (engine choice, deck size) may vary slightly — the exact spec sheet for your configuration is available at our Collins, MS location or by text to Addison at <a href="sms:+16013362541" className="text-[#C8C8C8] hover:text-white">(601) 336-2541</a>.
+                  </p>
+                </div>
+              )}
+            </div>
+          );
+        })()}
 
         {/* ── Feature photo strip ──────────────────────────────────── */}
         {images.length > 3 && (

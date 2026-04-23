@@ -18,6 +18,48 @@ export interface ProductVariant {
   status: InventoryStatus;
 }
 
+export interface KeyFeature {
+  title: string;
+  body: string;
+  icon?: string; // optional emoji or keyword ('suspension', 'deck', 'engine', 'transaxle', 'seat', 'warranty')
+}
+
+export interface ProductSpecs {
+  // Quick-stat bar fields (shown prominently under the hero)
+  groundSpeedFwd?: string; // e.g., "0–8 mph"
+  groundSpeedRev?: string;
+  deckConstruction?: string; // e.g., "10-gauge fabricated steel"
+  cuttingHeight?: string;
+  // Engine detail
+  engineBrand?: string;
+  engineModel?: string;
+  engineDisplacement?: string; // "726 cc"
+  engineCylinders?: string;
+  starter?: string;
+  fuelType?: string;
+  fuelCapacity?: string;
+  // Drive
+  transmission?: string; // e.g., "Dual Hydro-Gear ZT-2800 with 7in cooling fans"
+  parkingBrake?: string;
+  suspension?: string; // e.g., "Front and Rear independent"
+  // Comfort
+  seat?: string;
+  instrumentation?: string;
+  // Deck + wear
+  spindles?: string;
+  driveTires?: string;
+  casterTires?: string;
+  // Dimensions
+  overallLength?: string;
+  overallHeight?: string;
+  overallWidth?: string;
+  dryWeight?: string;
+  // Warranty
+  warrantyMachine?: string;
+  warrantySuspension?: string;
+  warrantyEngine?: string;
+}
+
 export interface Product {
   sku: string;
   name: string;
@@ -39,6 +81,9 @@ export interface Product {
   // When set, this entry is a non-canonical alias of another SKU. The catalog
   // listing skips it and the product detail route redirects to the canonical.
   canonicalSku?: string;
+  // Optional: rich content for the Ferris-style product page sections.
+  keyFeatures?: KeyFeature[];
+  specs?: ProductSpecs;
 }
 
 export const NOT_ON_LOT_DISCLOSURE =
