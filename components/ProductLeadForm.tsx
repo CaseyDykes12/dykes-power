@@ -86,16 +86,19 @@ export default function ProductLeadForm({ product, heading, anchorId }: Props) {
   }
 
   const defaultHeading = product
-    ? `Get pricing on this ${product.name}`
-    : 'Get a real quote in one hour';
-  const ctaLabel = product ? `Get My Quote on the ${product.name}` : 'Send My Quick Quote';
+    ? 'Need to speak with a representative?'
+    : 'Need to speak with a representative?';
+  const ctaLabel = product ? 'Have Someone Contact Me' : 'Have Someone Contact Me';
 
   return (
     <div id={anchorId ?? 'quick-quote'} className="bg-[#111] border border-gray-800 rounded-xl p-5 mb-4 scroll-mt-24">
       <p className="text-xs font-semibold text-[#C8C8C8] uppercase tracking-widest mb-1">
-        Quick Quote
+        Talk to a Human
       </p>
-      <h3 className="text-lg font-bold text-white mb-3">{heading ?? defaultHeading}</h3>
+      <h3 className="text-lg font-bold text-white mb-1">{heading ?? defaultHeading}</h3>
+      <p className="text-sm text-gray-400 mb-4">
+        Drop your info below and someone from our Collins shop will reach out shortly.
+      </p>
 
       <form onSubmit={handleSubmit} className="space-y-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

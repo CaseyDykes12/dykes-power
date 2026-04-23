@@ -45,1702 +45,2627 @@ export const NOT_ON_LOT_DISCLOSURE =
   'This unit is not currently in our on-site inventory. It is available to order from the manufacturer. Lead times and availability are subject to change. Contact us for current pricing and estimated delivery.';
 
 export const products: Product[] = [
-
-  // ─── ZERO TURN MOWERS ────────────────────────────────────────────────────────
-
-  {
-    sku: '5902093',
-    name: 'Ferris 300e Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Vanguard® Lithium-Ion Electric',
-    horsepower: '48V',
-    deckSizes: ['42"'],
-    price: 10449,
-    msrp: 10449,
-    description:
-      'The 300e is Ferris\'s all-electric zero-turn — zero emissions, zero oil changes, and up to 3.5 acres per charge with a whisper-quiet ride.',
-    features: [
-      'Vanguard® 48V Lithium-Ion battery (3.5 kWh)',
-      'Up to 3.5 acres per charge',
-      'Zero emissions — no fuel, no oil',
-      '8-year battery warranty (consumer)',
-      'Cutting height 1.5–4.5 inches',
-    ],
-    imageUrl: '/images/ferris/basco/5902093/5902093_FER_300e_Render_FL_Final.jpg',
-    images: ["/images/ferris/basco/5902093/5902093_FER_300e_Render_FL_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_F_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_FR_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_L_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_R_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_T_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_B_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_BR_Final.jpg","/images/ferris/basco/5902093/5902093_FER_300e_Render_BL_Final.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-    tag: 'Electric',
-  },
-  {
-    sku: '5902094',
-    name: 'Ferris 300e Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Vanguard® Lithium-Ion Electric',
-    horsepower: '48V',
-    deckSizes: ['48"'],
-    price: 11109,
-    msrp: 11109,
-    description:
-      'The 300e 48" delivers wider electric coverage — zero emissions, zero oil changes, and up to 3.5 acres per charge.',
-    features: [
-      'Vanguard® 48V Lithium-Ion battery (3.5 kWh)',
-      'Up to 3.5 acres per charge',
-      'Zero emissions — no fuel, no oil',
-      '8-year battery warranty (consumer)',
-      '48" commercial deck',
-    ],
-    imageUrl: '/images/ferris/300e.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-    tag: 'Electric',
-  },
-  {
-    sku: '5902204',
-    name: 'Ferris 300R Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Briggs & Stratton® PXi',
-    horsepower: '23 hp',
-    deckSizes: ['42"'],
-    price: 4499,
-    msrp: 4949,
-    description:
-      'The 300R brings residential-grade reliability with commercial construction at an accessible price point.',
-    features: [
-      '23 HP Briggs & Stratton PXi engine',
-      'Dual hydrostatic drive',
-      'Electric start',
-      'Residential/light commercial use',
-      'Easy operator controls',
-    ],
-    imageUrl: '/images/ferris/basco/5902204/5902204_FER_300R_FL_Final.jpg',
-    images: ["/images/ferris/basco/5902204/5902204_FER_300R_FL_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_F_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_FR_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_L_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_R_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_K_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_KL_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_KR_Final.jpg","/images/ferris/basco/5902204/5902204_FER_300R_T_Final.jpg"],
-    status: 'IN_STOCK',
-    tag: 'Best Value',
-  },
-  {
-    sku: '5902205',
-    name: 'Ferris 300R Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Kawasaki®',
-    horsepower: '21.5 hp',
-    deckSizes: ['42"'],
-    price: 4699,
-    msrp: 5169,
-    description:
-      'The 300R with Kawasaki power — reliable, easy to operate, and built for residential and light commercial use.',
-    features: [
-      '21.5 HP Kawasaki engine',
-      'Dual hydrostatic drive',
-      'Electric start',
-      'Residential/light commercial use',
-      'Easy operator controls',
-    ],
-    imageUrl: '/images/ferris/300r-hero.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902144',
-    name: 'Ferris 300S Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Briggs & Stratton® PXi',
-    horsepower: '23 hp',
-    deckSizes: ['42"'],
-    price: 4299,
-    msrp: 4729,
-    description:
-      'The entry-level commercial zero-turn built for durability and ease of use. Perfect for smaller properties and first-time commercial operators.',
-    features: [
-      'Briggs & Stratton PXi engine',
-      'Hydro-Gear 2800 drive system',
-      'Electric start',
-      'Commercial-grade fabricated deck',
-      'Tool-free deck height adjustment',
-    ],
-    imageUrl: '/images/ferris/lot/300s-lot.jpg',
-    status: 'IN_STOCK',
-  },
-  {
-    sku: '5902206',
-    name: 'Ferris 300S Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Kawasaki® FR651V',
-    horsepower: '21.5 hp',
-    deckSizes: ['48"'],
-    price: 5299,
-    msrp: 5829,
-    description:
-      'The 48" 300S delivers reliable commercial performance with a wider cut for increased productivity.',
-    features: [
-      'Kawasaki FR651V engine',
-      'Hydro-Gear 2800 drive system',
-      'Electric start',
-      'Commercial-grade fabricated deck',
-      'Tool-free deck height adjustment',
-    ],
-    imageUrl: '/images/ferris/lot/300s-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902211',
-    name: 'Ferris 300S Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Briggs & Stratton® PXi',
-    horsepower: '21.5 hp',
-    deckSizes: ['48"'],
-    price: 5199,
-    msrp: 5719,
-    description:
-      'The 48" 300S with Briggs & Stratton PXi — commercial-grade construction with easy maintenance.',
-    features: [
-      'Briggs & Stratton PXi engine',
-      'Hydro-Gear 2800 drive system',
-      'Electric start',
-      'Commercial-grade fabricated deck',
-      'Tool-free deck height adjustment',
-    ],
-    imageUrl: '/images/ferris/lot/300s-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902207',
-    name: 'Ferris 300S Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Kawasaki® FR651V',
-    horsepower: '21.5 hp',
-    deckSizes: ['52"'],
-    price: 5699,
-    msrp: 6269,
-    description:
-      'The 52" 300S maximizes cutting width for larger residential and light commercial properties.',
-    features: [
-      'Kawasaki FR651V engine',
-      'Hydro-Gear 2800 drive system',
-      'Electric start',
-      '52" commercial-grade deck',
-      'Tool-free deck height adjustment',
-    ],
-    imageUrl: '/images/ferris/basco/5902207/5902207_FER_300S_FL_FINAL.jpg',
-    images: ["/images/ferris/basco/5902207/5902207_FER_300S_FL_FINAL.jpg","/images/ferris/basco/5902207/5902207_FER_300S_F_Final.jpg","/images/ferris/basco/5902207/5902207_FER_300S_FR_FINAL.jpg","/images/ferris/basco/5902207/5902207_FER_300S_L_Final.jpg","/images/ferris/basco/5902207/5902207_FER_300S_R_Final.jpg","/images/ferris/basco/5902207/5902207_FER_300S_K_Final.jpg","/images/ferris/basco/5902207/5902207_FER_300S_KL_Final.jpg","/images/ferris/basco/5902207/5902207_FER_300S_KR_Final.jpg","/images/ferris/basco/5902207/5902207_FER_300S_T_Final.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902212',
-    name: 'Ferris 300S Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Briggs & Stratton® PXi',
-    horsepower: '21.5 hp',
-    deckSizes: ['52"'],
-    price: 5599,
-    msrp: 6159,
-    description:
-      'The 52" 300S with Briggs & Stratton — wide-cut commercial performance at an accessible price.',
-    features: [
-      'Briggs & Stratton PXi engine',
-      'Hydro-Gear 2800 drive system',
-      'Electric start',
-      '52" commercial-grade deck',
-      'Tool-free deck height adjustment',
-    ],
-    imageUrl: '/images/ferris/lot/300s-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902101',
-    name: 'Ferris 500S Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Briggs & Stratton® CXi',
-    horsepower: '25 hp',
-    deckSizes: ['48"'],
-    price: 6799,
-    msrp: 7478,
-    description:
-      'The 500S bridges the gap between residential and full commercial — delivering suspension comfort and commercial construction at a mid-range price.',
-    features: [
-      '25 HP Briggs & Stratton CXi engine',
-      'Dual Hydro-Gear® transaxles',
-      'iCD™ cutting system',
-      '48" fabricated deck',
-      'Up to 8.5 mph ground speed',
-    ],
-    imageUrl: '/images/ferris/basco/5902101/5902101_FER_500S_FL_FINAL.jpg',
-    images: ["/images/ferris/basco/5902101/5902101_FER_500S_FL_FINAL.jpg","/images/ferris/basco/5902101/5902101_FER_500S_F_Final_.jpg","/images/ferris/basco/5902101/5902101_FER_500S_FR_FINAL.jpg","/images/ferris/basco/5902101/5902101_FER_500S_L_Final_.jpg","/images/ferris/basco/5902101/5902101_FER_500S_R_Final_.jpg","/images/ferris/basco/5902101/5902101_FER_500S_K_Final_.jpg","/images/ferris/basco/5902101/5902101_FER_500S_KL_Final_.jpg","/images/ferris/basco/5902101/5902101_FER_500S_KR_Final_.jpg","/images/ferris/basco/5902101/5902101_FER_500S_T_Final_.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902102',
-    name: 'Ferris 500S Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Briggs & Stratton® CXi',
-    horsepower: '25 hp',
-    deckSizes: ['52"'],
-    price: 6899,
-    msrp: 7588,
-    description:
-      'The 52" 500S adds more cutting width to Ferris\'s mid-range commercial platform.',
-    features: [
-      '25 HP Briggs & Stratton CXi engine',
-      'Dual Hydro-Gear® transaxles',
-      'iCD™ cutting system',
-      '52" fabricated deck',
-      'Up to 8.5 mph ground speed',
-    ],
-    imageUrl: '/images/ferris/lot/500s-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902103',
-    name: 'Ferris 500S Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Briggs & Stratton® CXi',
-    horsepower: '25 hp',
-    deckSizes: ['61"'],
-    price: 7349,
-    msrp: 8084,
-    description:
-      'The 61" 500S delivers maximum productivity for larger properties with Ferris commercial construction.',
-    features: [
-      '25 HP Briggs & Stratton CXi engine',
-      'Dual Hydro-Gear® transaxles',
-      'iCD™ cutting system',
-      '61" wide-cut deck',
-      'Up to 8.5 mph ground speed',
-    ],
-    imageUrl: '/images/ferris/lot/500s-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902056',
-    name: 'Ferris 500S Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Kawasaki® FR730V',
-    horsepower: '24 hp',
-    deckSizes: ['61"'],
-    price: 7549,
-    msrp: 8304,
-    description:
-      'The 500S with Kawasaki power and a 61" deck — proven commercial reliability for larger properties.',
-    features: [
-      '24 HP Kawasaki FR730V engine',
-      'Dual Hydro-Gear® transaxles',
-      'iCD™ cutting system',
-      '61" wide-cut deck',
-      'Up to 8.5 mph ground speed',
-    ],
-    imageUrl: '/images/ferris/lot/500s-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5901895',
-    name: 'Ferris F60 Zero Turn',
-    category: 'Zero Turn Mowers',
-    engine: 'Kawasaki®',
-    horsepower: '18.5 hp',
-    deckSizes: ['36"'],
-    price: 7499,
-    msrp: 8249,
-    description:
-      'The F60 is Ferris\'s compact zero-turn built for tight spaces — ideal for gated backyards and detailed trimming in residential properties.',
-    features: [
-      '18.5 HP Kawasaki engine',
-      'Commercial hydrostatic transmission',
-      '36" deck for tight access',
-      'Zero-turn maneuverability',
-      'Durable commercial construction',
-    ],
-    imageUrl: '/images/ferris/basco/5901895/5901895_FER_F60_Studio_FL.jpg',
-    images: ["/images/ferris/basco/5901895/5901895_FER_F60_Studio_FL.jpg","/images/ferris/basco/5901895/5901895_FER_F60_Studio_FR.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5901908',
-    name: 'Ferris IS® 600 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Kawasaki® FS600V',
-    horsepower: '18.5 hp',
-    deckSizes: ['48"'],
-    price: 8449,
-    msrp: 9294,
-    description:
-      "The IS 600 features Ferris's patented independent suspension for a smooth ride and consistent cut on any terrain.",
-    features: [
-      'Ferris patented suspension system',
-      'Kawasaki FS600V engine',
-      'Dual Hydro-Gear® ZT-3200® transaxles',
-      'iCD™ cutting system',
-      '48" fabricated deck',
-    ],
-    imageUrl: '/images/ferris/basco/5901908/5901908_FER_IS600Z_Studio_FL.jpg',
-    images: ["/images/ferris/basco/5901908/5901908_FER_IS600Z_Studio_FL.jpg","/images/ferris/basco/5901908/5901908_FER_IS600_Studio_FR.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5901911',
-    name: 'Ferris IS® 600 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Kawasaki® FS691V',
-    horsepower: '25 hp',
-    deckSizes: ['52"'],
-    price: 8749,
-    msrp: 9624,
-    description:
-      "The IS 600 52\" features Ferris's patented independent suspension for a smooth, comfortable ride and consistent cut quality on uneven terrain.",
-    features: [
-      'Ferris patented suspension system',
-      'Kawasaki FS691V engine',
-      'Dual Hydro-Gear® ZT-3200® transaxles',
-      'iCD™ cutting system',
-      '52" fabricated deck',
-    ],
-    imageUrl: '/images/ferris/lot/is600-lot.jpg',
-    status: 'IN_STOCK',
-  },
-  {
-    sku: '5902110',
-    name: 'Ferris IS® 600 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Briggs & Stratton® CXi',
-    horsepower: '25 hp',
-    deckSizes: ['48"'],
-    price: 7899,
-    msrp: 8689,
-    description:
-      'IS 600 with Briggs & Stratton CXi and 48" deck — suspension comfort at a lower entry price.',
-    features: [
-      'Ferris patented suspension system',
-      'Briggs & Stratton CXi engine',
-      'Dual Hydro-Gear® ZT-3200® transaxles',
-      'iCD™ cutting system',
-      '48" fabricated deck',
-    ],
-    imageUrl: '/images/ferris/lot/is600-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902109',
-    name: 'Ferris IS® 600 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Briggs & Stratton® CXi',
-    horsepower: '25 hp',
-    deckSizes: ['52"'],
-    price: 8099,
-    msrp: 8909,
-    description:
-      'IS 600 with the Briggs & Stratton CXi engine — same legendary suspension, lower price point.',
-    features: [
-      'Ferris patented suspension system',
-      'Briggs & Stratton CXi engine',
-      'Dual Hydro-Gear® ZT-3200® transaxles',
-      'iCD™ cutting system',
-      '52" fabricated deck',
-    ],
-    imageUrl: '/images/ferris/lot/is600-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902107',
-    name: 'Ferris IS® 700 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Briggs & Stratton® CXi',
-    horsepower: '27 hp',
-    deckSizes: ['52"'],
-    price: 9049,
-    msrp: 9954,
-    description:
-      'The IS 700 52" steps up productivity with commercial suspension and a 27 HP engine for demanding work.',
-    features: [
-      '27 HP Briggs & Stratton CXi engine',
-      'Ferris independent suspension',
-      'Dual Hydro-Gear® ZT-3200® transaxles',
-      'iCD™ cutting system',
-      '52" fabricated deck',
-    ],
-    imageUrl: '/images/ferris/basco/5902107/5902107_FER_IS700_Studio_FL.jpg',
-    images: ["/images/ferris/basco/5902107/5902107_FER_IS700_Studio_FL.jpg","/images/ferris/basco/5902107/5902107_FER_IS700_Studio_FR.jpg","/images/ferris/basco/5902107/5902107_FER_IS700_Studio_K.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902061',
-    name: 'Ferris IS® 700 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Briggs & Stratton® CXi',
-    horsepower: '27 hp',
-    deckSizes: ['60"'],
-    price: 9499,
-    msrp: 10449,
-    description:
-      'The IS 700 60" delivers maximum suspension comfort and productivity for large commercial properties.',
-    features: [
-      '27 HP Briggs & Stratton CXi engine',
-      'Ferris independent suspension',
-      'Dual Hydro-Gear® ZT-3200® transaxles',
-      'iCD™ cutting system',
-      '60" fabricated deck',
-    ],
-    imageUrl: '/images/ferris/is700-hero.jpg',
-    status: 'IN_STOCK',
-  },
-  {
-    sku: '5902154',
-    name: 'Ferris ISX™ 800 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Briggs & Stratton® CXi',
-    horsepower: '24 hp',
-    deckSizes: ['52"'],
-    price: 10699,
-    msrp: 11769,
-    description:
-      'The ISX 800 upgrades to Hydro-Gear ZT-3400 transaxles and advanced suspension for demanding commercial routes.',
-    features: [
-      'Briggs & Stratton CXi engine',
-      'Ferris suspension system',
-      'Dual Hydro-Gear® ZT-3400® transaxles',
-      'iCD™ cutting system',
-      '52" fabricated deck',
-      'Up to 10 mph ground speed',
-    ],
-    imageUrl: '/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg',
-    images: ["/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_L_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_R_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_K_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_KL_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_KR_Final.jpg","/images/ferris/basco/5902154/5902154_FER_ISX800_T_Final.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-    variants: [
-      { sku: '5902154', engine: 'Briggs & Stratton® CXi', horsepower: '24 hp', deckSize: '52"', price: 10699, msrp: 11769, status: 'AVAILABLE_TO_ORDER' },
-      { sku: '5902075', engine: 'Briggs & Stratton® CXi', horsepower: '24 hp', deckSize: '60"', price: 10899, msrp: 11989, status: 'AVAILABLE_TO_ORDER' },
-      { sku: '5902172', engine: 'B&S CXi EFI-ETC w/ OilXtend™', horsepower: '25 hp', deckSize: '60"', price: 11249, msrp: 12374, status: 'AVAILABLE_TO_ORDER' },
-      { sku: '5902155', engine: 'Kawasaki® FT730V', horsepower: '24 hp', deckSize: '52"', price: 10899, msrp: 11989, status: 'AVAILABLE_TO_ORDER' },
-      { sku: '5902073', engine: 'Kawasaki® FT730V', horsepower: '24 hp', deckSize: '60"', price: 11499, msrp: 12648, status: 'AVAILABLE_TO_ORDER' },
-      { sku: '5902074', engine: 'Kawasaki® FT730V EFI', horsepower: '24 hp', deckSize: '60"', price: 11949, msrp: 13143, status: 'AVAILABLE_TO_ORDER' },
-    ],
-  },
-  {
-    sku: '5902075',
-    name: 'Ferris ISX™ 800 Series',
-    canonicalSku: '5902154',
-    category: 'Zero Turn Mowers',
-    engine: 'Briggs & Stratton® CXi',
-    horsepower: '24 hp',
-    deckSizes: ['60"'],
-    price: 10899,
-    msrp: 11989,
-    description:
-      'The ISX 800 60" with B&S CXi — wide-cut commercial performance with upgraded ZT-3400 drive.',
-    features: [
-      'Briggs & Stratton CXi engine',
-      'Ferris suspension system',
-      'Dual Hydro-Gear® ZT-3400® transaxles',
-      'iCD™ cutting system',
-      '60" fabricated deck',
-      'Up to 10 mph ground speed',
-    ],
-    imageUrl: '/images/ferris/lot/isx800-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902155',
-    name: 'Ferris ISX™ 800 Series',
-    canonicalSku: '5902154',
-    category: 'Zero Turn Mowers',
-    engine: 'Kawasaki® FT730V',
-    horsepower: '24 hp',
-    deckSizes: ['52"'],
-    price: 10899,
-    msrp: 11989,
-    description:
-      'The ISX 800 52" with Kawasaki FT730V — commercial suspension and proven Kawasaki reliability.',
-    features: [
-      'Kawasaki FT730V engine',
-      'Ferris suspension system',
-      'Dual Hydro-Gear® ZT-3400® transaxles',
-      'iCD™ cutting system',
-      '52" fabricated deck',
-      'Up to 10 mph ground speed',
-    ],
-    imageUrl: '/images/ferris/lot/isx800-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902073',
-    name: 'Ferris ISX™ 800 Series',
-    canonicalSku: '5902154',
-    category: 'Zero Turn Mowers',
-    engine: 'Kawasaki® FT730V',
-    horsepower: '24 hp',
-    deckSizes: ['60"'],
-    price: 11499,
-    msrp: 12648,
-    description:
-      'The ISX 800 60" with Kawasaki power — serious commercial capability with Ferris suspension comfort.',
-    features: [
-      'Kawasaki FT730V engine',
-      'Ferris suspension system',
-      'Dual Hydro-Gear® ZT-3400® transaxles',
-      'iCD™ cutting system',
-      '60" fabricated deck',
-      'Up to 10 mph ground speed',
-    ],
-    imageUrl: '/images/ferris/lot/isx800-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902074',
-    name: 'Ferris ISX™ 800 Series',
-    canonicalSku: '5902154',
-    category: 'Zero Turn Mowers',
-    engine: 'Kawasaki® FT730V EFI',
-    horsepower: '24 hp',
-    deckSizes: ['60"'],
-    price: 11949,
-    msrp: 13143,
-    description:
-      'The ISX 800 EFI delivers fuel-injected Kawasaki efficiency with Ferris suspension on a 60" platform.',
-    features: [
-      'Kawasaki FT730V EFI engine',
-      'Ferris suspension system',
-      'Dual Hydro-Gear® ZT-3400® transaxles',
-      'iCD™ cutting system',
-      '60" fabricated deck',
-      'Electronic Fuel Injection',
-    ],
-    imageUrl: '/images/ferris/lot/isx800-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902172',
-    name: 'Ferris ISX™ 800 Series',
-    canonicalSku: '5902154',
-    category: 'Zero Turn Mowers',
-    engine: 'Briggs & Stratton® CXi EFI-ETC w/ OilXtend™',
-    horsepower: '25 hp',
-    deckSizes: ['60"'],
-    price: 11249,
-    msrp: 12374,
-    description:
-      'The ISX 800 with B&S EFI-ETC and OilXtend technology — extended oil intervals and fuel injection for maximum uptime.',
-    features: [
-      'B&S CXi EFI-ETC with OilXtend™',
-      'Ferris suspension system',
-      'Dual Hydro-Gear® ZT-3400® transaxles',
-      'iCD™ cutting system',
-      '60" fabricated deck',
-      'Extended oil change intervals',
-    ],
-    imageUrl: '/images/ferris/lot/isx800-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902157',
-    name: 'Ferris ISX™ 2200 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Vanguard™ 810cc EFI w/ Oil Guard',
-    horsepower: '31 hp',
-    deckSizes: ['52"'],
-    price: 13699,
-    msrp: 15069,
-    description:
-      'The ISX 2200 52" with Vanguard EFI combines ForeFront™ suspension with premium power and extended oil intervals.',
-    features: [
-      'Vanguard 810cc EFI with Oil Guard',
-      'ForeFront™ suspension system',
-      'Dual Hydro-Gear® ZT-5400 drive',
-      '2-belt iCD™+ cutting system',
-      '52" fabricated deck',
-      'Up to 12 mph ground speed',
-    ],
-    imageUrl: '/images/ferris/isx2200-hero.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902078',
-    name: 'Ferris ISX™ 2200 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Vanguard™ 810cc EFI w/ Oil Guard',
-    horsepower: '31 hp',
-    deckSizes: ['60"'],
-    price: 14499,
-    msrp: 15949,
-    description:
-      'The ISX 2200 60" Vanguard — Ferris\'s premium suspension platform with maximum power for commercial operators.',
-    features: [
-      'Vanguard 810cc EFI with Oil Guard',
-      'ForeFront™ suspension system',
-      'Dual Hydro-Gear® ZT-5400 drive',
-      '2-belt iCD™+ cutting system',
-      '60" fabricated deck',
-      'Up to 12 mph ground speed',
-    ],
-    imageUrl: '/images/ferris/basco/5902078/5902078_FER_ISX2200_FL_FINAL.jpg',
-    images: ["/images/ferris/basco/5902078/5902078_FER_ISX2200_FL_FINAL.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_F_Final_.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_FR_FINAL.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_L_Final_.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_R_Final_.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_K_Final_.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_KL_Final_.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_KR_Final_.jpg","/images/ferris/basco/5902078/5902078_FER_ISX2200_T_Final_.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902159',
-    name: 'Ferris ISX™ 2200 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Kawasaki® FX781V EVO',
-    horsepower: '27 hp',
-    deckSizes: ['52"'],
-    price: 13449,
-    msrp: 14794,
-    description:
-      'The ISX 2200 52" Kawasaki delivers ForeFront™ suspension comfort with proven Kawasaki EVO reliability.',
-    features: [
-      'Kawasaki FX781V EVO engine',
-      'ForeFront™ suspension system',
-      'Dual Hydro-Gear® ZT-5400 drive',
-      '2-belt iCD™+ cutting system',
-      '52" fabricated deck',
-      'Up to 12 mph ground speed',
-    ],
-    imageUrl: '/images/ferris/isx2200-hero.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902180',
-    name: 'Ferris ISX™ 2200 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Kawasaki® FX781V EVO',
-    horsepower: '27 hp',
-    deckSizes: ['60"'],
-    price: 14099,
-    msrp: 15509,
-    description:
-      'The ISX 2200 combines ForeFront™ suspension technology with serious cutting power for demanding commercial operations.',
-    features: [
-      'Kawasaki FX781V EVO engine',
-      'ForeFront™ suspension system',
-      'Dual Hydro-Gear® ZT-5400 drive',
-      '2-belt iCD™+ cutting system',
-      '60" fabricated deck',
-      'Up to 12 mph ground speed',
-    ],
-    imageUrl: '/images/ferris/isx2200-hero.jpg',
-    status: 'IN_STOCK',
-  },
-  {
-    sku: '5902065',
-    name: 'Ferris ISX™ 3300 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Kawasaki® FX1000V EFI',
-    horsepower: '35 hp',
-    deckSizes: ['60"'],
-    price: 18649,
-    msrp: 20514,
-    description:
-      "The ISX 3300 Kawasaki EFI delivers maximum suspension performance with fuel-injected reliability for professional commercial crews.",
-    features: [
-      '35 HP Kawasaki FX1000V EFI engine',
-      'Next-gen ForeFront™ suspension',
-      'Dual Hydro-Gear® ZT-5400 drive',
-      '2-belt iCD™+ cutting system',
-      '60" fabricated deck',
-      'Electronic Fuel Injection',
-    ],
-    imageUrl: '/images/ferris/lot/isx3300-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-    tag: 'Top of the Line',
-  },
-  {
-    sku: '5902064',
-    name: 'Ferris ISX™ 3300 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Vanguard® Big Block EFI ETC',
-    horsepower: '40 hp',
-    deckSizes: ['60"'],
-    price: 18299,
-    msrp: 20129,
-    description:
-      "The flagship ISX 3300 delivers Ferris's most advanced suspension and Vanguard™ Big Block EFI power for the most demanding commercial work.",
-    features: [
-      '40 HP Vanguard® Big Block EFI ETC',
-      'Next-gen ForeFront™ suspension',
-      'Dual Hydro-Gear® ZT-5400 drive',
-      '2-belt iCD™+ cutting system',
-      '60" fabricated deck',
-      'Oil Guard extended intervals',
-    ],
-    imageUrl: '/images/ferris/basco/5902064/5902064_FER_ISX3300_FL_FINAL.jpg',
-    images: ["/images/ferris/basco/5902064/5902064_FER_ISX3300_FL_FINAL.jpg","/images/ferris/basco/5902064/5902064_FER_ISX3300_F_Final_.jpg","/images/ferris/basco/5902064/5902064_FER_ISX3300_FR_FINAL_with_Tweel.jpg","/images/ferris/basco/5902064/5902064_FER_ISX3300_L_Final_.jpg","/images/ferris/basco/5902064/5902064_FER_ISX3300_R_Final_.jpg","/images/ferris/basco/5902064/5902064_FER_ISX3300_K_Final_.jpg","/images/ferris/basco/5902064/5902064_FER_ISX3300_KL_Final_.jpg","/images/ferris/basco/5902064/5902064_FER_ISX3300_KR_Final_.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902160',
-    name: 'Ferris ISX™ 3300 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Kawasaki® FX1000V EFI',
-    horsepower: '35 hp',
-    deckSizes: ['72"'],
-    price: 19349,
-    msrp: 21284,
-    description:
-      'The ISX 3300 72" Kawasaki — maximum deck coverage for large commercial operations with full ForeFront™ suspension.',
-    features: [
-      '35 HP Kawasaki FX1000V EFI engine',
-      'Next-gen ForeFront™ suspension',
-      'Dual Hydro-Gear® ZT-5400 drive',
-      '2-belt iCD™+ cutting system',
-      '72" wide-cut deck',
-      'Electronic Fuel Injection',
-    ],
-    imageUrl: '/images/ferris/lot/isx3300-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902145',
-    name: 'Ferris ISX™ 3300 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Vanguard® Big Block EFI ETC',
-    horsepower: '40 hp',
-    deckSizes: ['72"'],
-    price: 18999,
-    msrp: 20899,
-    description:
-      'The ISX 3300 72" Vanguard — the widest-cutting zero-turn in the Ferris lineup with premium suspension and EFI power.',
-    features: [
-      '40 HP Vanguard® Big Block EFI ETC',
-      'Next-gen ForeFront™ suspension',
-      'Dual Hydro-Gear® ZT-5400 drive',
-      '2-belt iCD™+ cutting system',
-      '72" wide-cut deck',
-      'Oil Guard extended intervals',
-    ],
-    imageUrl: '/images/ferris/lot/isx3300-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5901929',
-    name: 'Ferris IS® 2600 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Yanmar Diesel',
-    horsepower: '23 hp',
-    deckSizes: ['61"'],
-    price: 22199,
-    msrp: 24419,
-    description:
-      'The IS 2600 is Ferris\'s diesel-powered commercial workhorse — built for operators who demand fuel efficiency and full-day runtime on large properties.',
-    features: [
-      '23 HP Yanmar diesel engine',
-      'Ferris independent suspension',
-      'Dual Hydro-Gear® transaxles',
-      'iCD™ cutting system',
-      '61" commercial deck',
-      'Diesel fuel efficiency',
-    ],
-    imageUrl: '/images/ferris/basco/5901929/5901929_FER_IS2600_Studio_FL.jpg',
-    images: ["/images/ferris/basco/5901929/5901929_FER_IS2600_Studio_FL.jpg","/images/ferris/basco/5901929/5901929_FER_IS2600_Studio_FR.jpg","/images/ferris/basco/5901929/5901929_FER_IS2600_Studio_KL-Engine.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-    tag: 'Commercial Grade',
-  },
-  {
-    sku: '5902162',
-    name: 'Ferris IS® 6200 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Kubota Diesel',
-    horsepower: '48 hp',
-    deckSizes: ['72"'],
-    price: 38049,
-    msrp: 41854,
-    description:
-      "The IS 6200 is Ferris's most powerful zero-turn — a 48 HP diesel machine built for large-scale commercial operations where nothing else will do.",
-    features: [
-      '48 HP Kubota diesel engine',
-      'Ferris independent suspension',
-      'Heavy-duty commercial drive system',
-      '72" commercial deck',
-      'Diesel fuel efficiency',
-      'Built for large acreage operations',
-    ],
-    imageUrl: '/images/ferris/basco/5902162/5902162_FER_IS6200_FL_FINAL.jpg',
-    images: ["/images/ferris/basco/5902162/5902162_FER_IS6200_FL_FINAL.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_F_Final.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_FR.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_L_Final.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_R_Final.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_K_Final.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_KL_Final.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_KR_Final.jpg","/images/ferris/basco/5902162/5902162_FER_IS6200_T_Final.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-    tag: 'Commercial Grade',
-  },
-
-  // ─── STAND-ON MOWERS ─────────────────────────────────────────────────────────
-
-  {
-    sku: '5901939',
-    name: 'Ferris SRS™ Z1 Series',
-    category: 'Stand-On Mowers',
-    engine: 'Kawasaki® FX600V',
-    horsepower: '18.5 hp',
-    deckSizes: ['36"'],
-    price: 9499,
-    msrp: 10449,
-    description:
-      'The SRS Z1 stand-on mower is compact, maneuverable, and built for gated properties and tight spaces.',
-    features: [
-      '18.5 HP Kawasaki FX600V engine',
-      'Stand-on platform design',
-      'Compact 36" deck for tight areas',
-      'Commercial hydrostatic drive',
-      'Low center of gravity',
-    ],
-    imageUrl:
-      '/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_FL.jpg',
-    images: ["/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_FL.jpg","/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_FR.jpg","/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_K.jpg","/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_KR.jpg","/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_Tank.jpg","/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_FL-low.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5901940',
-    name: 'Ferris SRS™ Z1 Series',
-    category: 'Stand-On Mowers',
-    engine: 'Kawasaki® FX691V',
-    horsepower: '22 hp',
-    deckSizes: ['48"'],
-    price: 10349,
-    msrp: 11384,
-    description:
-      'The 48" SRS Z1 balances productivity with maneuverability — ideal for medium-size commercial routes.',
-    features: [
-      '22 HP Kawasaki FX691V engine',
-      'Stand-on platform design',
-      '48" productivity deck',
-      'Commercial hydrostatic drive',
-      'Operator comfort platform',
-    ],
-    imageUrl:
-      '/images/ferris/basco/5901940/5901940_FER_SRSZ1_Studio_FL.jpg',
-    images: ["/images/ferris/basco/5901940/5901940_FER_SRSZ1_Studio_FL.jpg","/images/ferris/basco/5901940/5901940_FER_SRSZ1_Studio_FR.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5901941',
-    name: 'Ferris SRS™ Z1 Series',
-    category: 'Stand-On Mowers',
-    engine: 'Vanguard®',
-    horsepower: '23 hp',
-    deckSizes: ['36"'],
-    price: 9299,
-    msrp: 10229,
-    description:
-      'The SRS Z1 36" with Vanguard power — compact, reliable, and built for tight access properties.',
-    features: [
-      '23 HP Vanguard engine',
-      'Stand-on platform design',
-      'Compact 36" deck',
-      'Commercial hydrostatic drive',
-      'Low center of gravity',
-    ],
-    imageUrl:
-      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z1/Product%20Images/FER_PDP_SRSZ1_Hero_FL.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5901942',
-    name: 'Ferris SRS™ Z1 Series',
-    category: 'Stand-On Mowers',
-    engine: 'Vanguard®',
-    horsepower: '23 hp',
-    deckSizes: ['48"'],
-    price: 10149,
-    msrp: 11164,
-    description:
-      'The SRS Z1 48" Vanguard — wider stand-on coverage for commercial routes with proven Vanguard reliability.',
-    features: [
-      '23 HP Vanguard engine',
-      'Stand-on platform design',
-      '48" productivity deck',
-      'Commercial hydrostatic drive',
-      'Operator comfort platform',
-    ],
-    imageUrl:
-      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z1/Product%20Images/FER_PDP_SRSZ1_Hero_FL.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902164',
-    name: 'Ferris SRS™ Z2 Series',
-    category: 'Stand-On Mowers',
-    engine: 'Vanguard™ 810 EFI w/ Oil Guard',
-    horsepower: '25.5 hp',
-    deckSizes: ['52"'],
-    price: 11649,
-    msrp: 12814,
-    description:
-      'The SRS Z2 upgrades the stand-on experience with suspension and Vanguard EFI power for serious commercial operators.',
-    features: [
-      'Vanguard 810 EFI with Oil Guard',
-      'SoftRide™ suspension platform',
-      '52" commercial deck',
-      'Heavy-duty commercial drive',
-      'Extended oil change intervals',
-    ],
-    imageUrl:
-      '/images/ferris/lot/srsz2-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902165',
-    name: 'Ferris SRS™ Z2 Series',
-    category: 'Stand-On Mowers',
-    engine: 'Vanguard™ 810 EFI w/ Oil Guard',
-    horsepower: '25.5 hp',
-    deckSizes: ['52"'],
-    price: 11949,
-    msrp: 13144,
-    description:
-      'The SRS Z2 52" Vanguard EFI — premium stand-on performance with Ferris suspension and extended service intervals.',
-    features: [
-      'Vanguard 810 EFI with Oil Guard',
-      'SoftRide™ suspension platform',
-      '52" commercial deck',
-      'Heavy-duty commercial drive',
-      'Extended oil change intervals',
-    ],
-    imageUrl:
-      '/images/ferris/basco/5902165/5902165_FER_Z2_F_Final.jpg',
-    images: ["/images/ferris/basco/5902165/5902165_FER_Z2_F_Final.jpg","/images/ferris/basco/5902165/5902165_FER_Z2_L_Final.jpg","/images/ferris/basco/5902165/5902165_FER_Z2_R_Final.jpg","/images/ferris/basco/5902165/5902165_FER_Z2_K_Final.jpg","/images/ferris/basco/5902165/5902165_FER_Z2_KL_Final.jpg","/images/ferris/basco/5902165/5902165_FER_Z2_KR_Final.jpg","/images/ferris/basco/5902165/5902165_FER_Z2_T_Final.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902070',
-    name: 'Ferris SRS™ Z2 Series',
-    category: 'Stand-On Mowers',
-    engine: 'Vanguard™ 810 EFI w/ Oil Guard',
-    horsepower: '25.5 hp',
-    deckSizes: ['60"'],
-    price: 12399,
-    msrp: 13639,
-    description:
-      'The SRS Z2 60" delivers wide-cut stand-on efficiency with Ferris suspension and Vanguard EFI power.',
-    features: [
-      'Vanguard 810 EFI with Oil Guard',
-      'SoftRide™ suspension platform',
-      '60" commercial deck',
-      'Heavy-duty commercial drive',
-      'Maximum productivity design',
-    ],
-    imageUrl:
-      '/images/ferris/lot/srsz2-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902235',
-    name: 'Ferris SRS™ Z2 Series',
-    category: 'Stand-On Mowers',
-    engine: 'Kawasaki® FX781V EVO',
-    horsepower: '27 hp',
-    deckSizes: ['52"'],
-    price: 11849,
-    msrp: 13034,
-    description:
-      'The SRS Z2 Kawasaki EVO — stand-on suspension comfort with proven Kawasaki EVO reliability.',
-    features: [
-      'Kawasaki FX781V EVO engine',
-      'SoftRide™ suspension platform',
-      '52" commercial deck',
-      'Heavy-duty commercial drive',
-      'Proven Kawasaki reliability',
-    ],
-    imageUrl:
-      '/images/ferris/lot/srsz2-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902236',
-    name: 'Ferris SRS™ Z2 Series',
-    category: 'Stand-On Mowers',
-    engine: 'Kawasaki® FX781V EVO',
-    horsepower: '27 hp',
-    deckSizes: ['60"'],
-    price: 12599,
-    msrp: 13859,
-    description:
-      'The SRS Z2 60" Kawasaki — maximum stand-on productivity with EVO reliability across large commercial properties.',
-    features: [
-      'Kawasaki FX781V EVO engine',
-      'SoftRide™ suspension platform',
-      '60" commercial deck',
-      'Heavy-duty commercial drive',
-      'Up to 8 mph ground speed',
-    ],
-    imageUrl:
-      '/images/ferris/lot/srsz2-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902168',
-    name: 'Ferris SRS™ Z3X Series',
-    category: 'Stand-On Mowers',
-    engine: 'Kawasaki® FX850V',
-    horsepower: '27 hp',
-    deckSizes: ['52"'],
-    price: 12899,
-    msrp: 14189,
-    description:
-      'The SRS Z3X is the premium stand-on mower with Ferris suspension technology — maximum productivity and operator comfort combined.',
-    features: [
-      '27 HP Kawasaki FX850V engine',
-      'Ferris suspension platform',
-      '52" commercial deck',
-      'Heavy-duty commercial drive',
-      'High-capacity grass management',
-    ],
-    imageUrl: '/images/ferris/lot/srsz3-lot.jpg',
-    status: 'IN_STOCK',
-  },
-  {
-    sku: '5902233',
-    name: 'Ferris SRS™ Z3X Series',
-    category: 'Stand-On Mowers',
-    engine: 'Kawasaki® FX1000 EFI',
-    horsepower: '38.5 hp',
-    deckSizes: ['52"'],
-    price: 13899,
-    msrp: 15289,
-    description:
-      'The SRS Z3X EFI 52" brings fuel-injected Kawasaki power to the premium stand-on platform.',
-    features: [
-      '38.5 HP Kawasaki FX1000 EFI engine',
-      'Ferris suspension platform',
-      '52" commercial deck',
-      'Heavy-duty commercial drive',
-      'Electronic Fuel Injection',
-    ],
-    imageUrl: '/images/ferris/lot/srsz3-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902234',
-    name: 'Ferris SRS™ Z3X Series',
-    category: 'Stand-On Mowers',
-    engine: 'Kawasaki® FX1000 EFI',
-    horsepower: '38.5 hp',
-    deckSizes: ['60"'],
-    price: 14699,
-    msrp: 16169,
-    description:
-      'The SRS Z3X 60" EFI — wide-cut premium stand-on with Kawasaki EFI power and full Ferris suspension.',
-    features: [
-      '38.5 HP Kawasaki FX1000 EFI engine',
-      'Ferris suspension platform',
-      '60" commercial deck',
-      'Heavy-duty commercial drive',
-      'Electronic Fuel Injection',
-    ],
-    imageUrl: '/images/ferris/lot/srsz3-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902071',
-    name: 'Ferris SRS™ Z3X Series',
-    category: 'Stand-On Mowers',
-    engine: 'Vanguard® Big Block EFI w/ Oil Guard',
-    horsepower: '37 hp',
-    deckSizes: ['60"'],
-    price: 14999,
-    msrp: 16499,
-    description:
-      'The 60" SRS Z3X Vanguard Big Block — built for large commercial properties demanding stand-on efficiency with premium power.',
-    features: [
-      '37 HP Vanguard Big Block EFI with Oil Guard',
-      'Ferris suspension platform',
-      '60" commercial deck',
-      'Heavy-duty commercial drive',
-      'Extended oil change intervals',
-    ],
-    imageUrl: '/images/ferris/lot/srsz3-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902215',
-    name: 'Ferris SRS™ Z3X Series',
-    category: 'Stand-On Mowers',
-    engine: 'Vanguard™ EFI-ETC w/ Oil Guard',
-    horsepower: '40 hp',
-    deckSizes: ['72"'],
-    price: 16149,
-    msrp: 17764,
-    description:
-      'The SRS Z3X 72" is the widest stand-on in the Ferris lineup — built for maximum commercial productivity.',
-    features: [
-      '40 HP Vanguard EFI-ETC with Oil Guard',
-      'Ferris suspension platform',
-      '72" wide-cut commercial deck',
-      'Heavy-duty commercial drive',
-      'Maximum stand-on productivity',
-    ],
-    imageUrl: '/images/ferris/lot/srsz3-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902216',
-    name: 'Ferris SRS™ Z3X Series',
-    category: 'Stand-On Mowers',
-    engine: 'Vanguard™ EFI-ETC w/ Oil Guard',
-    horsepower: '40 hp',
-    deckSizes: ['60"'],
-    price: 15249,
-    msrp: 16774,
-    description:
-      'The SRS Z3X 60" Vanguard EFI with Oil Guard — premium power and minimal downtime for commercial crews.',
-    features: [
-      '40 HP Vanguard EFI-ETC with Oil Guard',
-      'Ferris suspension platform',
-      '60" commercial deck',
-      'Heavy-duty commercial drive',
-      'Extended oil change intervals',
-    ],
-    imageUrl: '/images/ferris/lot/srsz3-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902217',
-    name: 'Ferris SRS™ Z3X Series',
-    category: 'Stand-On Mowers',
-    engine: 'Vanguard™ EFI-ETC w/ Oil Guard',
-    horsepower: '40 hp',
-    deckSizes: ['52"'],
-    price: 14499,
-    msrp: 15949,
-    description:
-      'The SRS Z3X 52" Vanguard — premium stand-on performance with EFI power and Oil Guard convenience.',
-    features: [
-      '40 HP Vanguard EFI-ETC with Oil Guard',
-      'Ferris suspension platform',
-      '52" commercial deck',
-      'Heavy-duty commercial drive',
-      'Extended oil change intervals',
-    ],
-    imageUrl: '/images/ferris/lot/srsz3-lot.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-
-  // ─── WALK-BEHIND MOWERS ──────────────────────────────────────────────────────
-
-  {
-    sku: '5901737',
-    name: 'Ferris FW15 Walk-Behind',
-    category: 'Walk-Behind Mowers',
-    engine: 'Honda® GXV390',
-    horsepower: '10.2 hp',
-    deckSizes: ['32"'],
-    price: 3949,
-    msrp: 4343,
-    description:
-      'The FW15 is Ferris\'s entry-level commercial walk-behind — compact, hydrostatic, and built for precision trimming and tight areas.',
-    features: [
-      'Honda GXV390 engine',
-      'Hydro-Gear® RT-310 hydrostatic drive',
-      '32" commercial deck',
-      '0–4 MPH variable ground speed',
-      'Commercial 2-year warranty',
-    ],
-    imageUrl:
-      '/images/ferris/basco/5901737/5901737_FER_FW15_FRONT.jpg',
-    images: ["/images/ferris/basco/5901737/5901737_FER_FW15_FRONT.jpg","/images/ferris/basco/5901737/5901737_FER_FW15_LFRONT.jpg","/images/ferris/basco/5901737/5901737_FER_FW15_RFRONT.jpg","/images/ferris/basco/5901737/5901737_FER_FW15_LSIDE.jpg","/images/ferris/basco/5901737/5901737_FER_FW15_BACK.jpg","/images/ferris/basco/5901737/5901737_FER_FW15_RBACK.jpg","/images/ferris/basco/5901737/5901737_FER_FW15_PIVOTWHEELS.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5901886',
-    name: 'Ferris FW25 Walk-Behind',
-    category: 'Walk-Behind Mowers',
-    engine: 'Kawasaki® FS600V',
-    horsepower: '18.5 hp',
-    deckSizes: ['36"'],
-    price: 7399,
-    msrp: 8139,
-    description:
-      'The FW25 is a commercial-grade walk-behind built for detail trimming, slopes, and areas a ride-on cannot reach.',
-    features: [
-      '18.5 HP Kawasaki FS600V engine',
-      'Hydro-Gear® dual transaxle drive',
-      '36" fabricated steel deck',
-      'Variable speed hydrostatic control',
-      'Mulch / bag / side discharge',
-    ],
-    imageUrl:
-      '/images/ferris/basco/5901886/5901886_FER_FW25_36-CC_Studio_FL.jpg',
-    images: ["/images/ferris/basco/5901886/5901886_FER_FW25_36-CC_Studio_FL.jpg","/images/ferris/basco/5901886/5901886_FER_FW25_36-CC_Studio_FR.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5901887',
-    name: 'Ferris FW25 Walk-Behind',
-    category: 'Walk-Behind Mowers',
-    engine: 'Kawasaki® FS600V',
-    horsepower: '18.5 hp',
-    deckSizes: ['48"'],
-    price: 7799,
-    msrp: 8579,
-    description:
-      'The FW25 48" walk-behind delivers commercial productivity in a walk-behind format for tight or sloped terrain.',
-    features: [
-      '18.5 HP Kawasaki FS600V engine',
-      'Hydro-Gear® dual transaxle drive',
-      '48" fabricated steel deck',
-      'Variable speed hydrostatic control',
-      'Mulch / bag / side discharge',
-    ],
-    imageUrl:
-      '/images/ferris/basco/5901887/5901887_FER_FW25_48-Std_Studio_FL.jpg',
-    images: ["/images/ferris/basco/5901887/5901887_FER_FW25_48-Std_Studio_FL.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5901888',
-    name: 'Ferris FW25 Walk-Behind',
-    category: 'Walk-Behind Mowers',
-    engine: 'Kawasaki® FS600V',
-    horsepower: '18.5 hp',
-    deckSizes: ['48"'],
-    price: 7799,
-    msrp: 8579,
-    description:
-      'The FW25 48" — commercial walk-behind performance for properties where ride-ons can\'t go.',
-    features: [
-      '18.5 HP Kawasaki FS600V engine',
-      'Hydro-Gear® dual transaxle drive',
-      '48" fabricated steel deck',
-      'Variable speed hydrostatic control',
-      'Mulch / bag / side discharge',
-    ],
-    imageUrl:
-      '/images/ferris/basco/5901888/5901888_FER_FW25_48-CC_Studio_FL.jpg',
-    images: ["/images/ferris/basco/5901888/5901888_FER_FW25_48-CC_Studio_FL.jpg","/images/ferris/basco/5901888/5901888_FER_FW25_48-CC_Studio_FR.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902014',
-    name: 'Ferris FW45 Walk-Behind',
-    category: 'Walk-Behind Mowers',
-    engine: 'Kawasaki® FX651V',
-    horsepower: '21.5 hp',
-    deckSizes: ['48"'],
-    price: 9399,
-    msrp: 10339,
-    description:
-      'The FW45 is the top-of-the-line Ferris walk-behind — commercial build quality with dual ZT-3400 drive for operators who demand the best.',
-    features: [
-      'Kawasaki FX651V engine',
-      'Dual Hydro-Gear® ZT-3400® transaxles',
-      '48" fabricated deck',
-      'Dual-lever blade control',
-      'Mulch / bag / side discharge',
-    ],
-    imageUrl:
-      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5901891',
-    name: 'Ferris FW45 Walk-Behind',
-    category: 'Walk-Behind Mowers',
-    engine: 'Kawasaki® FX651',
-    horsepower: '21.5 hp',
-    deckSizes: ['52"'],
-    price: 9749,
-    msrp: 10723,
-    description:
-      'The FW45 52" Kawasaki — premium walk-behind with dual ZT-3400 transaxles for commercial crews.',
-    features: [
-      'Kawasaki FX651 engine',
-      'Dual Hydro-Gear® ZT-3400® transaxles',
-      '52" fabricated deck',
-      'Dual-lever blade control',
-      'Mulch / bag / side discharge',
-    ],
-    imageUrl:
-      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902015',
-    name: 'Ferris FW45 Walk-Behind',
-    category: 'Walk-Behind Mowers',
-    engine: 'Kawasaki® FX651V',
-    horsepower: '21.5 hp',
-    deckSizes: ['52"'],
-    price: 9749,
-    msrp: 10723,
-    description:
-      'The FW45 52" — top-of-line commercial walk-behind for sloped terrain and precision trimming.',
-    features: [
-      'Kawasaki FX651V engine',
-      'Dual Hydro-Gear® ZT-3400® transaxles',
-      '52" fabricated deck',
-      'Dual-lever blade control',
-      'Mulch / bag / side discharge',
-    ],
-    imageUrl:
-      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902016',
-    name: 'Ferris FW45 Walk-Behind',
-    category: 'Walk-Behind Mowers',
-    engine: 'Kawasaki® FX730V',
-    horsepower: '24 hp',
-    deckSizes: ['61"'],
-    price: 10349,
-    msrp: 11384,
-    description:
-      'The FW45 61" — the widest Ferris walk-behind, delivering maximum coverage for large commercial walk-behind applications.',
-    features: [
-      'Kawasaki FX730V engine',
-      'Dual Hydro-Gear® ZT-3400® transaxles',
-      '61" wide-cut fabricated deck',
-      'Dual-lever blade control',
-      'Mulch / bag / side discharge',
-    ],
-    imageUrl:
-      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5901892',
-    name: 'Ferris FW45 Walk-Behind',
-    category: 'Walk-Behind Mowers',
-    engine: 'Vanguard® 810cc EFI w/ Oil Guard',
-    horsepower: '28 hp',
-    deckSizes: ['52"'],
-    price: 10449,
-    msrp: 11494,
-    description:
-      'The FW45 Vanguard EFI — premium walk-behind with fuel injection and Oil Guard for minimal downtime.',
-    features: [
-      'Vanguard 810cc EFI with Oil Guard',
-      'Dual Hydro-Gear® ZT-3400® transaxles',
-      '52" fabricated deck',
-      'Electronic Fuel Injection',
-      'Extended oil change intervals',
-    ],
-    imageUrl:
-      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-    tag: 'Commercial Grade',
-  },
-  {
-    sku: '5901893',
-    name: 'Ferris FW45 Walk-Behind',
-    category: 'Walk-Behind Mowers',
-    engine: 'Vanguard® 810cc EFI w/ Oil Guard',
-    horsepower: '28 hp',
-    deckSizes: ['52"'],
-    price: 10449,
-    msrp: 11494,
-    description:
-      'The FW45 Vanguard EFI 52" — top-of-line commercial walk-behind with Oil Guard extended service intervals.',
-    features: [
-      'Vanguard 810cc EFI with Oil Guard',
-      'Dual Hydro-Gear® ZT-3400® transaxles',
-      '52" fabricated deck',
-      'Electronic Fuel Injection',
-      'Extended oil change intervals',
-    ],
-    imageUrl:
-      '/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FL.jpg',
-    images: ["/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FL.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FR.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_L.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_R.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_KL.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_KR.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_HOC.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FL-low.jpg","/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FR-low.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-    tag: 'Commercial Grade',
-  },
-
-  // ─── STAND-ON BLOWERS ────────────────────────────────────────────────────────
-
-  {
-    sku: '5902012',
-    name: 'Ferris FB1000 Hurricane™',
-    category: 'Stand-On Blowers',
-    engine: 'Vanguard® V-Twin',
-    horsepower: '18 hp',
-    deckSizes: [],
-    price: 10299,
-    msrp: 11329,
-    description:
-      'The FB1000 Hurricane stand-on blower clears debris fast — built for commercial landscape crews that need maximum productivity on large properties.',
-    features: [
-      '18 HP Vanguard V-Twin engine',
-      'Stand-on operator platform',
-      '3,500 CFM blowing power',
-      'Hydrostatic dual drive',
-      '35.5" overall width',
-    ],
-    imageUrl:
-      '/images/ferris/basco/5902012/5902012_FER_FB1000_FL_TN.jpg',
-    images: ["/images/ferris/basco/5902012/5902012_FER_FB1000_FL_TN.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_F_BR_v2_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_FR_TN_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_FR-Chute_BR_v2_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_FR-Top_TN_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_R_BR_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_KR_BR_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_DeflectorControl-L_TN_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_Engine_BR_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_KL-AccessPanel_BR_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_KR-Controls_BR_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_PlatformFoldedUp_TN_Final.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_F-Lifestyle_EB.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_FL-Lifestyle_EB.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_FR-Lifestyle_EB.jpg","/images/ferris/basco/5902012/5902012_FER_FB1000_R-Lifestyle_EB.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902132',
-    name: 'Ferris FB2000 Hurricane™',
-    category: 'Stand-On Blowers',
-    engine: 'Vanguard® V-Twin',
-    horsepower: '23 hp',
-    deckSizes: [],
-    price: 13199,
-    msrp: 14519,
-    description:
-      'The FB2000 steps up with 4,500 CFM and 165+ mph velocity — serious debris clearing power for large commercial routes.',
-    features: [
-      '23 HP Vanguard V-Twin engine',
-      'Stand-on operator platform',
-      '4,500 CFM airflow',
-      '165+ mph air velocity',
-      'Joystick-controlled dual deflector',
-    ],
-    imageUrl:
-      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Blowers/FB2000/Product%20Images/FER_PDP_FB2000_Hero_FL.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902194',
-    name: 'Ferris FB3000 Hurricane™',
-    category: 'Stand-On Blowers',
-    engine: 'Vanguard® V-Twin',
-    horsepower: '35 hp',
-    deckSizes: [],
-    price: 14850,
-    msrp: 16335,
-    description:
-      'The FB3000 is the most powerful stand-on blower Ferris makes — 7,500 CFM and up to 190 mph for maximum fall cleanup efficiency.',
-    features: [
-      '35 HP Vanguard V-Twin engine',
-      'Stand-on operator platform',
-      '7,500 CFM maximum airflow',
-      'Up to 190 mph air velocity',
-      'Joystick-controlled dual deflector',
-    ],
-    imageUrl:
-      '/images/ferris/basco/5901810/5901810_FER_FB3000_FRONT.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-
-  // ─── FRONT MOUNT MOWERS ──────────────────────────────────────────────────────
-
-  {
-    sku: '5900533',
-    name: 'Ferris ProCut S',
-    category: 'Front Mount Mowers',
-    engine: 'Kawasaki® FS730V',
-    horsepower: '24 hp',
-    deckSizes: ['61"'],
-    price: 13598,
-    msrp: 14958,
-    description:
-      'The ProCut S front-mount mower is built for municipalities and large-property operators who need a wide cut with rear-discharge capability.',
-    features: [
-      '24 HP Kawasaki FS730V engine',
-      'Front-mount commercial deck',
-      '61" cutting width',
-      'Rear-discharge cutting system',
-      'Commercial-grade construction',
-    ],
-    imageUrl:
-      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Front%20Mount%20Mowers/Procut%20S/Product%20Images/FER_ProCutS_ProductImage.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-
-  // ─── RIDE-ON SPREADER/SPRAYERS ───────────────────────────────────────────────
-
-  {
-    sku: '5901755',
-    name: 'Ferris Venture XC™ FS3200',
-    category: 'Ride-On Spreader/Sprayers',
-    engine: 'Kawasaki®',
-    horsepower: '',
-    deckSizes: [],
-    price: 13849,
-    msrp: 15234,
-    description:
-      'The Venture XC FS3200 handles both granular and liquid applications in one machine — 200 lb hopper and dual liquid spray tanks for over 1 acre of coverage.',
-    features: [
-      '200 lb granular hopper capacity',
-      'Dual liquid spray tanks',
-      'Zero-turn maneuverability',
-      'Over 1 acre dry / 2.2 acres liquid per fill',
-      'Precision application system',
-    ],
-    imageUrl:
-      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS3200/Product%20Images/FER_VentureXC-FS3200_Updated.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902195',
-    name: 'Ferris Venture X',
-    category: 'Ride-On Spreader/Sprayers',
-    engine: 'Vanguard® V-Twin',
-    horsepower: '18 hp',
-    deckSizes: [],
-    price: 16499,
-    msrp: 18149,
-    description:
-      'The Venture X is Ferris\'s premium ride-on spreader/sprayer with 24 gallons of liquid capacity and zero-turn precision.',
-    features: [
-      '18 HP Vanguard V-Twin engine',
-      '24 gallon liquid capacity',
-      'Zero-turn maneuverability',
-      'Up to 8 mph ground speed',
-      'Precision application system',
-    ],
-    imageUrl:
-      '/images/ferris/basco/5902195/5902195_FER_VentureX_FL_Final.jpg',
-    images: ["/images/ferris/basco/5902195/5902195_FER_VentureX_FL_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_F_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_FR_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_L_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_R_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_K_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_KL_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_KR_Final.jpg","/images/ferris/basco/5902195/5902195_FER_VentureX_T_Final.jpg"],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5901753',
-    name: 'Ferris Pathfinder XC™ FS2200',
-    category: 'Ride-On Spreader/Sprayers',
-    engine: 'Honda® GX200',
-    horsepower: '6.5 hp',
-    deckSizes: [],
-    price: 11249,
-    msrp: null,
-    description:
-      'The Pathfinder XC FS2200 delivers precision granular and liquid application in a compact ride-on platform.',
-    features: [
-      'Honda GX200 engine',
-      '16 gallon liquid capacity',
-      'Granular spread capability',
-      'Compact ride-on design',
-    ],
-    imageUrl:
-      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS2200/Product%20Images/FER_PathfinderXC-FS2200_Updated.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5901752',
-    name: 'Ferris Pathfinder™ FS2100',
-    category: 'Ride-On Spreader/Sprayers',
-    engine: 'Honda®',
-    horsepower: '',
-    deckSizes: [],
-    price: 10449,
-    msrp: null,
-    description:
-      'The Pathfinder FS2100 is Ferris\'s entry-level ride-on spreader/sprayer — precise, compact, and built for residential lawn care routes.',
-    features: [
-      'Honda engine',
-      'Ride-on operator platform',
-      'Granular and liquid application',
-      'Compact design',
-    ],
-    imageUrl:
-      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS2100/Product%20Images/FER_Pathfinder-FS2100_Updated.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902000',
-    name: 'Ferris Rover XC™ FS1200',
-    category: 'Ride-On Spreader/Sprayers',
-    engine: 'Vanguard® 160',
-    horsepower: '',
-    deckSizes: [],
-    price: 8249,
-    msrp: null,
-    description:
-      'The Rover XC FS1200 is the most compact Ferris spreader — fits through 36" gates with a 200 lb stainless steel hopper for precise granular applications.',
-    features: [
-      'Vanguard 160 engine',
-      '200 lb granular hopper',
-      'Stainless steel frame',
-      'Fits through 36" gates',
-      'Precision granular application',
-    ],
-    imageUrl:
-      'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS1200/Product%20Images/FER_RoverXC-FS1200_Updated.jpg',
-    status: 'AVAILABLE_TO_ORDER',
-  },
-
-  // ─── BASCO-ONLY SKUS (added from Basco Digital product catalog) ──────────────
-
-  {
-    sku: '5901948',
-    name: 'Ferris SRS™ Z2 Series',
-    category: 'Stand-On Mowers',
-    engine: 'Kawasaki® FT730V',
-    horsepower: '24 hp',
-    deckSizes: ['52"'],
-    price: 10749,
-    msrp: 11824,
-    description:
-      'The SRS Z2 with Kawasaki FT730V power pairs Ferris suspension technology with a reliable 24 HP commercial engine for all-day comfort and productivity.',
-    features: [
-      '24 HP Kawasaki FT730V engine',
-      'Ferris suspension platform',
-      '52" commercial deck',
-      'Heavy-duty commercial drive',
-      'High-capacity grass management',
-    ],
-    imageUrl: '/images/ferris/basco/5901948/5901948_FER_Z2_FL_FINAL.jpg',
-    images: ['/images/ferris/basco/5901948/5901948_FER_Z2_FL_FINAL.jpg'],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5901955',
-    name: 'Ferris SRS™ Z3X Series',
-    category: 'Stand-On Mowers',
-    engine: 'Vanguard® Big Block EFI w/ Oil Guard',
-    horsepower: '37 hp',
-    deckSizes: ['52"'],
-    price: 13699,
-    msrp: 15069,
-    description:
-      'The SRS Z3X 52" with Vanguard Big Block EFI delivers maximum stand-on productivity — premium suspension, electronic fuel injection, and commercial-grade build quality.',
-    features: [
-      '37 HP Vanguard Big Block EFI with Oil Guard',
-      'Ferris suspension platform',
-      '52" commercial deck',
-      'Heavy-duty commercial drive',
-      'Electronic Fuel Injection',
-    ],
-    imageUrl: '/images/ferris/basco/5901955/5901955_FER_Z3X_FL_FINAL.jpg',
-    images: [
-      '/images/ferris/basco/5901955/5901955_FER_Z3X_FL_FINAL.jpg',
-      '/images/ferris/basco/5901955/5901955_FER_Z3X_FR_FINAL.jpg',
-    ],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902084',
-    name: 'Ferris ISX™ 800 Series',
-    category: 'Zero Turn Mowers',
-    engine: 'Briggs & Stratton® Commercial Series',
-    horsepower: '27 hp',
-    deckSizes: ['52"'],
-    price: 10149,
-    msrp: 11164,
-    description:
-      'The ISX 800 pairs Ferris ForeFront suspension with Briggs & Stratton Commercial Series power — a proven all-day zero-turn for professional crews.',
-    features: [
-      '27 HP Briggs & Stratton Commercial Series',
-      'ForeFront suspension system',
-      '52" iCD cutting system',
-      'Suspension seat',
-      'Commercial-grade drive',
-    ],
-    imageUrl: '/images/ferris/basco/5902084/5902084_FER_ISX800_FR_FINAL.jpg',
-    images: ['/images/ferris/basco/5902084/5902084_FER_ISX800_FR_FINAL.jpg'],
-    status: 'AVAILABLE_TO_ORDER',
-  },
-  {
-    sku: '5902169',
-    name: 'Ferris SRS™ Z3X Series',
-    category: 'Stand-On Mowers',
-    engine: 'Vanguard® Big Block EFI w/ Oil Guard',
-    horsepower: '37 hp',
-    deckSizes: ['52"'],
-    price: 14249,
-    msrp: 15674,
-    description:
-      'The 52" SRS Z3X with Vanguard Big Block EFI — premium stand-on power for demanding commercial properties with Ferris suspension and Oil Guard extended service intervals.',
-    features: [
-      '37 HP Vanguard Big Block EFI with Oil Guard',
-      'Ferris suspension platform',
-      '52" commercial deck',
-      'Heavy-duty commercial drive',
-      'Extended oil change intervals',
-    ],
-    imageUrl: '/images/ferris/basco/5902169/5902169_FER_Z3X_F_Final.jpg',
-    images: [
-      '/images/ferris/basco/5902169/5902169_FER_Z3X_F_Final.jpg',
-      '/images/ferris/basco/5902169/5902169_FER_Z3X_L_Final.jpg',
-      '/images/ferris/basco/5902169/5902169_FER_Z3X_R_Final.jpg',
-      '/images/ferris/basco/5902169/5902169_FER_Z3X_K_Final.jpg',
-      '/images/ferris/basco/5902169/5902169_FER_Z3X_KL_Final.jpg',
-      '/images/ferris/basco/5902169/5902169_FER_Z3X_KR_Final.jpg',
-      '/images/ferris/basco/5902169/5902169_FER_Z3X_T_Final.jpg',
-    ],
-    status: 'AVAILABLE_TO_ORDER',
-  },
+  {
+    "sku": "5902093",
+    "name": "Ferris 300e Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Vanguard® Lithium-Ion Electric",
+    "horsepower": "48V",
+    "deckSizes": [
+      "42\"",
+      "48\""
+    ],
+    "price": 10449,
+    "msrp": 10449,
+    "description": "The 300e is Ferris's all-electric zero-turn — zero emissions, zero oil changes, and up to 3.5 acres per charge with a whisper-quiet ride.",
+    "features": [
+      "Vanguard® 48V Lithium-Ion battery (3.5 kWh)",
+      "Up to 3.5 acres per charge",
+      "Zero emissions — no fuel, no oil",
+      "8-year battery warranty (consumer)",
+      "Cutting height 1.5–4.5 inches"
+    ],
+    "imageUrl": "/images/ferris/basco/5902093/5902093_FER_300e_Render_FL_Final.jpg",
+    "images": [
+      "/images/ferris/basco/5902093/5902093_FER_300e_Render_FL_Final.jpg",
+      "/images/ferris/basco/5902093/5902093_FER_300e_Render_F_Final.jpg",
+      "/images/ferris/basco/5902093/5902093_FER_300e_Render_FR_Final.jpg",
+      "/images/ferris/basco/5902093/5902093_FER_300e_Render_L_Final.jpg",
+      "/images/ferris/basco/5902093/5902093_FER_300e_Render_R_Final.jpg",
+      "/images/ferris/basco/5902093/5902093_FER_300e_Render_T_Final.jpg",
+      "/images/ferris/basco/5902093/5902093_FER_300e_Render_B_Final.jpg",
+      "/images/ferris/basco/5902093/5902093_FER_300e_Render_BR_Final.jpg",
+      "/images/ferris/basco/5902093/5902093_FER_300e_Render_BL_Final.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "tag": "Electric",
+    "variants": [
+      {
+        "sku": "5902093",
+        "engine": "Vanguard® Lithium-Ion Electric",
+        "horsepower": "48V",
+        "deckSize": "42\"",
+        "price": 10449,
+        "msrp": 10449,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902094",
+        "engine": "Vanguard® Lithium-Ion Electric",
+        "horsepower": "48V",
+        "deckSize": "48\"",
+        "price": 11109,
+        "msrp": 11109,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5902094",
+    "name": "Ferris 300e Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Vanguard® Lithium-Ion Electric",
+    "horsepower": "48V",
+    "deckSizes": [
+      "48\""
+    ],
+    "price": 11109,
+    "msrp": 11109,
+    "description": "The 300e 48\" delivers wider electric coverage — zero emissions, zero oil changes, and up to 3.5 acres per charge.",
+    "features": [
+      "Vanguard® 48V Lithium-Ion battery (3.5 kWh)",
+      "Up to 3.5 acres per charge",
+      "Zero emissions — no fuel, no oil",
+      "8-year battery warranty (consumer)",
+      "48\" commercial deck"
+    ],
+    "imageUrl": "/images/ferris/300e.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "tag": "Electric",
+    "canonicalSku": "5902093"
+  },
+  {
+    "sku": "5902204",
+    "name": "Ferris 300R Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Briggs & Stratton® PXi",
+    "horsepower": "23 hp",
+    "deckSizes": [
+      "42\""
+    ],
+    "price": 4499,
+    "msrp": 4949,
+    "description": "The 300R brings residential-grade reliability with commercial construction at an accessible price point.",
+    "features": [
+      "23 HP Briggs & Stratton PXi engine",
+      "Dual hydrostatic drive",
+      "Electric start",
+      "Residential/light commercial use",
+      "Easy operator controls"
+    ],
+    "imageUrl": "/images/ferris/basco/5902204/5902204_FER_300R_FL_Final.jpg",
+    "images": [
+      "/images/ferris/basco/5902204/5902204_FER_300R_FL_Final.jpg",
+      "/images/ferris/basco/5902204/5902204_FER_300R_F_Final.jpg",
+      "/images/ferris/basco/5902204/5902204_FER_300R_FR_Final.jpg",
+      "/images/ferris/basco/5902204/5902204_FER_300R_L_Final.jpg",
+      "/images/ferris/basco/5902204/5902204_FER_300R_R_Final.jpg",
+      "/images/ferris/basco/5902204/5902204_FER_300R_K_Final.jpg",
+      "/images/ferris/basco/5902204/5902204_FER_300R_KL_Final.jpg",
+      "/images/ferris/basco/5902204/5902204_FER_300R_KR_Final.jpg",
+      "/images/ferris/basco/5902204/5902204_FER_300R_T_Final.jpg"
+    ],
+    "status": "IN_STOCK",
+    "tag": "Best Value",
+    "variants": [
+      {
+        "sku": "5902204",
+        "engine": "Briggs & Stratton® PXi",
+        "horsepower": "23 hp",
+        "deckSize": "42\"",
+        "price": 4499,
+        "msrp": 4949,
+        "status": "IN_STOCK"
+      },
+      {
+        "sku": "5902205",
+        "engine": "Kawasaki®",
+        "horsepower": "21.5 hp",
+        "deckSize": "42\"",
+        "price": 4699,
+        "msrp": 5169,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5902205",
+    "name": "Ferris 300R Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Kawasaki®",
+    "horsepower": "21.5 hp",
+    "deckSizes": [
+      "42\""
+    ],
+    "price": 4699,
+    "msrp": 5169,
+    "description": "The 300R with Kawasaki power — reliable, easy to operate, and built for residential and light commercial use.",
+    "features": [
+      "21.5 HP Kawasaki engine",
+      "Dual hydrostatic drive",
+      "Electric start",
+      "Residential/light commercial use",
+      "Easy operator controls"
+    ],
+    "imageUrl": "/images/ferris/300r-hero.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902204"
+  },
+  {
+    "sku": "5902144",
+    "name": "Ferris 300S Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Briggs & Stratton® PXi",
+    "horsepower": "23 hp",
+    "deckSizes": [
+      "42\"",
+      "48\"",
+      "52\""
+    ],
+    "price": 4299,
+    "msrp": 4729,
+    "description": "The entry-level commercial zero-turn built for durability and ease of use. Perfect for smaller properties and first-time commercial operators.",
+    "features": [
+      "Briggs & Stratton PXi engine",
+      "Hydro-Gear 2800 drive system",
+      "Electric start",
+      "Commercial-grade fabricated deck",
+      "Tool-free deck height adjustment"
+    ],
+    "imageUrl": "/images/ferris/lot/300s-lot.jpg",
+    "status": "IN_STOCK",
+    "variants": [
+      {
+        "sku": "5902144",
+        "engine": "Briggs & Stratton® PXi",
+        "horsepower": "23 hp",
+        "deckSize": "42\"",
+        "price": 4299,
+        "msrp": 4729,
+        "status": "IN_STOCK"
+      },
+      {
+        "sku": "5902211",
+        "engine": "Briggs & Stratton® PXi",
+        "horsepower": "21.5 hp",
+        "deckSize": "48\"",
+        "price": 5199,
+        "msrp": 5719,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902206",
+        "engine": "Kawasaki® FR651V",
+        "horsepower": "21.5 hp",
+        "deckSize": "48\"",
+        "price": 5299,
+        "msrp": 5829,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902212",
+        "engine": "Briggs & Stratton® PXi",
+        "horsepower": "21.5 hp",
+        "deckSize": "52\"",
+        "price": 5599,
+        "msrp": 6159,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902207",
+        "engine": "Kawasaki® FR651V",
+        "horsepower": "21.5 hp",
+        "deckSize": "52\"",
+        "price": 5699,
+        "msrp": 6269,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5902211",
+    "name": "Ferris 300S Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Briggs & Stratton® PXi",
+    "horsepower": "21.5 hp",
+    "deckSizes": [
+      "48\""
+    ],
+    "price": 5199,
+    "msrp": 5719,
+    "description": "The 48\" 300S with Briggs & Stratton PXi — commercial-grade construction with easy maintenance.",
+    "features": [
+      "Briggs & Stratton PXi engine",
+      "Hydro-Gear 2800 drive system",
+      "Electric start",
+      "Commercial-grade fabricated deck",
+      "Tool-free deck height adjustment"
+    ],
+    "imageUrl": "/images/ferris/lot/300s-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902144"
+  },
+  {
+    "sku": "5902206",
+    "name": "Ferris 300S Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Kawasaki® FR651V",
+    "horsepower": "21.5 hp",
+    "deckSizes": [
+      "48\""
+    ],
+    "price": 5299,
+    "msrp": 5829,
+    "description": "The 48\" 300S delivers reliable commercial performance with a wider cut for increased productivity.",
+    "features": [
+      "Kawasaki FR651V engine",
+      "Hydro-Gear 2800 drive system",
+      "Electric start",
+      "Commercial-grade fabricated deck",
+      "Tool-free deck height adjustment"
+    ],
+    "imageUrl": "/images/ferris/lot/300s-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902144"
+  },
+  {
+    "sku": "5902212",
+    "name": "Ferris 300S Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Briggs & Stratton® PXi",
+    "horsepower": "21.5 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 5599,
+    "msrp": 6159,
+    "description": "The 52\" 300S with Briggs & Stratton — wide-cut commercial performance at an accessible price.",
+    "features": [
+      "Briggs & Stratton PXi engine",
+      "Hydro-Gear 2800 drive system",
+      "Electric start",
+      "52\" commercial-grade deck",
+      "Tool-free deck height adjustment"
+    ],
+    "imageUrl": "/images/ferris/lot/300s-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902144"
+  },
+  {
+    "sku": "5902207",
+    "name": "Ferris 300S Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Kawasaki® FR651V",
+    "horsepower": "21.5 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 5699,
+    "msrp": 6269,
+    "description": "The 52\" 300S maximizes cutting width for larger residential and light commercial properties.",
+    "features": [
+      "Kawasaki FR651V engine",
+      "Hydro-Gear 2800 drive system",
+      "Electric start",
+      "52\" commercial-grade deck",
+      "Tool-free deck height adjustment"
+    ],
+    "imageUrl": "/images/ferris/basco/5902207/5902207_FER_300S_FL_FINAL.jpg",
+    "images": [
+      "/images/ferris/basco/5902207/5902207_FER_300S_FL_FINAL.jpg",
+      "/images/ferris/basco/5902207/5902207_FER_300S_F_Final.jpg",
+      "/images/ferris/basco/5902207/5902207_FER_300S_FR_FINAL.jpg",
+      "/images/ferris/basco/5902207/5902207_FER_300S_L_Final.jpg",
+      "/images/ferris/basco/5902207/5902207_FER_300S_R_Final.jpg",
+      "/images/ferris/basco/5902207/5902207_FER_300S_K_Final.jpg",
+      "/images/ferris/basco/5902207/5902207_FER_300S_KL_Final.jpg",
+      "/images/ferris/basco/5902207/5902207_FER_300S_KR_Final.jpg",
+      "/images/ferris/basco/5902207/5902207_FER_300S_T_Final.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902144"
+  },
+  {
+    "sku": "5902101",
+    "name": "Ferris 500S Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Briggs & Stratton® CXi",
+    "horsepower": "25 hp",
+    "deckSizes": [
+      "48\"",
+      "52\"",
+      "61\""
+    ],
+    "price": 6799,
+    "msrp": 7478,
+    "description": "The 500S bridges the gap between residential and full commercial — delivering suspension comfort and commercial construction at a mid-range price.",
+    "features": [
+      "25 HP Briggs & Stratton CXi engine",
+      "Dual Hydro-Gear® transaxles",
+      "iCD™ cutting system",
+      "48\" fabricated deck",
+      "Up to 8.5 mph ground speed"
+    ],
+    "imageUrl": "/images/ferris/basco/5902101/5902101_FER_500S_FL_FINAL.jpg",
+    "images": [
+      "/images/ferris/basco/5902101/5902101_FER_500S_FL_FINAL.jpg",
+      "/images/ferris/basco/5902101/5902101_FER_500S_F_Final_.jpg",
+      "/images/ferris/basco/5902101/5902101_FER_500S_FR_FINAL.jpg",
+      "/images/ferris/basco/5902101/5902101_FER_500S_L_Final_.jpg",
+      "/images/ferris/basco/5902101/5902101_FER_500S_R_Final_.jpg",
+      "/images/ferris/basco/5902101/5902101_FER_500S_K_Final_.jpg",
+      "/images/ferris/basco/5902101/5902101_FER_500S_KL_Final_.jpg",
+      "/images/ferris/basco/5902101/5902101_FER_500S_KR_Final_.jpg",
+      "/images/ferris/basco/5902101/5902101_FER_500S_T_Final_.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "variants": [
+      {
+        "sku": "5902101",
+        "engine": "Briggs & Stratton® CXi",
+        "horsepower": "25 hp",
+        "deckSize": "48\"",
+        "price": 6799,
+        "msrp": 7478,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902102",
+        "engine": "Briggs & Stratton® CXi",
+        "horsepower": "25 hp",
+        "deckSize": "52\"",
+        "price": 6899,
+        "msrp": 7588,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902103",
+        "engine": "Briggs & Stratton® CXi",
+        "horsepower": "25 hp",
+        "deckSize": "61\"",
+        "price": 7349,
+        "msrp": 8084,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902056",
+        "engine": "Kawasaki® FR730V",
+        "horsepower": "24 hp",
+        "deckSize": "61\"",
+        "price": 7549,
+        "msrp": 8304,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5902102",
+    "name": "Ferris 500S Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Briggs & Stratton® CXi",
+    "horsepower": "25 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 6899,
+    "msrp": 7588,
+    "description": "The 52\" 500S adds more cutting width to Ferris's mid-range commercial platform.",
+    "features": [
+      "25 HP Briggs & Stratton CXi engine",
+      "Dual Hydro-Gear® transaxles",
+      "iCD™ cutting system",
+      "52\" fabricated deck",
+      "Up to 8.5 mph ground speed"
+    ],
+    "imageUrl": "/images/ferris/lot/500s-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902101"
+  },
+  {
+    "sku": "5902103",
+    "name": "Ferris 500S Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Briggs & Stratton® CXi",
+    "horsepower": "25 hp",
+    "deckSizes": [
+      "61\""
+    ],
+    "price": 7349,
+    "msrp": 8084,
+    "description": "The 61\" 500S delivers maximum productivity for larger properties with Ferris commercial construction.",
+    "features": [
+      "25 HP Briggs & Stratton CXi engine",
+      "Dual Hydro-Gear® transaxles",
+      "iCD™ cutting system",
+      "61\" wide-cut deck",
+      "Up to 8.5 mph ground speed"
+    ],
+    "imageUrl": "/images/ferris/lot/500s-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902101"
+  },
+  {
+    "sku": "5902056",
+    "name": "Ferris 500S Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Kawasaki® FR730V",
+    "horsepower": "24 hp",
+    "deckSizes": [
+      "61\""
+    ],
+    "price": 7549,
+    "msrp": 8304,
+    "description": "The 500S with Kawasaki power and a 61\" deck — proven commercial reliability for larger properties.",
+    "features": [
+      "24 HP Kawasaki FR730V engine",
+      "Dual Hydro-Gear® transaxles",
+      "iCD™ cutting system",
+      "61\" wide-cut deck",
+      "Up to 8.5 mph ground speed"
+    ],
+    "imageUrl": "/images/ferris/lot/500s-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902101"
+  },
+  {
+    "sku": "5901895",
+    "name": "Ferris F60 Zero Turn",
+    "category": "Zero Turn Mowers",
+    "engine": "Kawasaki®",
+    "horsepower": "18.5 hp",
+    "deckSizes": [
+      "36\""
+    ],
+    "price": 7499,
+    "msrp": 8249,
+    "description": "The F60 is Ferris's compact zero-turn built for tight spaces — ideal for gated backyards and detailed trimming in residential properties.",
+    "features": [
+      "18.5 HP Kawasaki engine",
+      "Commercial hydrostatic transmission",
+      "36\" deck for tight access",
+      "Zero-turn maneuverability",
+      "Durable commercial construction"
+    ],
+    "imageUrl": "/images/ferris/basco/5901895/5901895_FER_F60_Studio_FL.jpg",
+    "images": [
+      "/images/ferris/basco/5901895/5901895_FER_F60_Studio_FL.jpg",
+      "/images/ferris/basco/5901895/5901895_FER_F60_Studio_FR.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "variants": [
+      {
+        "sku": "5901895",
+        "engine": "Kawasaki®",
+        "horsepower": "18.5 hp",
+        "deckSize": "36\"",
+        "price": 7499,
+        "msrp": 8249,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5902110",
+    "name": "Ferris IS® 600 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Briggs & Stratton® CXi",
+    "horsepower": "25 hp",
+    "deckSizes": [
+      "48\"",
+      "52\""
+    ],
+    "price": 7899,
+    "msrp": 8689,
+    "description": "IS 600 with Briggs & Stratton CXi and 48\" deck — suspension comfort at a lower entry price.",
+    "features": [
+      "Ferris patented suspension system",
+      "Briggs & Stratton CXi engine",
+      "Dual Hydro-Gear® ZT-3200® transaxles",
+      "iCD™ cutting system",
+      "48\" fabricated deck"
+    ],
+    "imageUrl": "/images/ferris/lot/is600-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "variants": [
+      {
+        "sku": "5902110",
+        "engine": "Briggs & Stratton® CXi",
+        "horsepower": "25 hp",
+        "deckSize": "48\"",
+        "price": 7899,
+        "msrp": 8689,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5901908",
+        "engine": "Kawasaki® FS600V",
+        "horsepower": "18.5 hp",
+        "deckSize": "48\"",
+        "price": 8449,
+        "msrp": 9294,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902109",
+        "engine": "Briggs & Stratton® CXi",
+        "horsepower": "25 hp",
+        "deckSize": "52\"",
+        "price": 8099,
+        "msrp": 8909,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5901911",
+        "engine": "Kawasaki® FS691V",
+        "horsepower": "25 hp",
+        "deckSize": "52\"",
+        "price": 8749,
+        "msrp": 9624,
+        "status": "IN_STOCK"
+      }
+    ]
+  },
+  {
+    "sku": "5901908",
+    "name": "Ferris IS® 600 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Kawasaki® FS600V",
+    "horsepower": "18.5 hp",
+    "deckSizes": [
+      "48\""
+    ],
+    "price": 8449,
+    "msrp": 9294,
+    "description": "The IS 600 features Ferris's patented independent suspension for a smooth ride and consistent cut on any terrain.",
+    "features": [
+      "Ferris patented suspension system",
+      "Kawasaki FS600V engine",
+      "Dual Hydro-Gear® ZT-3200® transaxles",
+      "iCD™ cutting system",
+      "48\" fabricated deck"
+    ],
+    "imageUrl": "/images/ferris/basco/5901908/5901908_FER_IS600Z_Studio_FL.jpg",
+    "images": [
+      "/images/ferris/basco/5901908/5901908_FER_IS600Z_Studio_FL.jpg",
+      "/images/ferris/basco/5901908/5901908_FER_IS600_Studio_FR.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902110"
+  },
+  {
+    "sku": "5902109",
+    "name": "Ferris IS® 600 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Briggs & Stratton® CXi",
+    "horsepower": "25 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 8099,
+    "msrp": 8909,
+    "description": "IS 600 with the Briggs & Stratton CXi engine — same legendary suspension, lower price point.",
+    "features": [
+      "Ferris patented suspension system",
+      "Briggs & Stratton CXi engine",
+      "Dual Hydro-Gear® ZT-3200® transaxles",
+      "iCD™ cutting system",
+      "52\" fabricated deck"
+    ],
+    "imageUrl": "/images/ferris/lot/is600-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902110"
+  },
+  {
+    "sku": "5901911",
+    "name": "Ferris IS® 600 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Kawasaki® FS691V",
+    "horsepower": "25 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 8749,
+    "msrp": 9624,
+    "description": "The IS 600 52\" features Ferris's patented independent suspension for a smooth, comfortable ride and consistent cut quality on uneven terrain.",
+    "features": [
+      "Ferris patented suspension system",
+      "Kawasaki FS691V engine",
+      "Dual Hydro-Gear® ZT-3200® transaxles",
+      "iCD™ cutting system",
+      "52\" fabricated deck"
+    ],
+    "imageUrl": "/images/ferris/lot/is600-lot.jpg",
+    "status": "IN_STOCK",
+    "canonicalSku": "5902110"
+  },
+  {
+    "sku": "5902107",
+    "name": "Ferris IS® 700 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Briggs & Stratton® CXi",
+    "horsepower": "27 hp",
+    "deckSizes": [
+      "52\"",
+      "60\""
+    ],
+    "price": 9049,
+    "msrp": 9954,
+    "description": "The IS 700 52\" steps up productivity with commercial suspension and a 27 HP engine for demanding work.",
+    "features": [
+      "27 HP Briggs & Stratton CXi engine",
+      "Ferris independent suspension",
+      "Dual Hydro-Gear® ZT-3200® transaxles",
+      "iCD™ cutting system",
+      "52\" fabricated deck"
+    ],
+    "imageUrl": "/images/ferris/basco/5902107/5902107_FER_IS700_Studio_FL.jpg",
+    "images": [
+      "/images/ferris/basco/5902107/5902107_FER_IS700_Studio_FL.jpg",
+      "/images/ferris/basco/5902107/5902107_FER_IS700_Studio_FR.jpg",
+      "/images/ferris/basco/5902107/5902107_FER_IS700_Studio_K.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "variants": [
+      {
+        "sku": "5902107",
+        "engine": "Briggs & Stratton® CXi",
+        "horsepower": "27 hp",
+        "deckSize": "52\"",
+        "price": 9049,
+        "msrp": 9954,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902061",
+        "engine": "Briggs & Stratton® CXi",
+        "horsepower": "27 hp",
+        "deckSize": "60\"",
+        "price": 9499,
+        "msrp": 10449,
+        "status": "IN_STOCK"
+      }
+    ]
+  },
+  {
+    "sku": "5902061",
+    "name": "Ferris IS® 700 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Briggs & Stratton® CXi",
+    "horsepower": "27 hp",
+    "deckSizes": [
+      "60\""
+    ],
+    "price": 9499,
+    "msrp": 10449,
+    "description": "The IS 700 60\" delivers maximum suspension comfort and productivity for large commercial properties.",
+    "features": [
+      "27 HP Briggs & Stratton CXi engine",
+      "Ferris independent suspension",
+      "Dual Hydro-Gear® ZT-3200® transaxles",
+      "iCD™ cutting system",
+      "60\" fabricated deck"
+    ],
+    "imageUrl": "/images/ferris/is700-hero.jpg",
+    "status": "IN_STOCK",
+    "canonicalSku": "5902107"
+  },
+  {
+    "sku": "5902084",
+    "name": "Ferris ISX™ 800 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Briggs & Stratton® Commercial Series",
+    "horsepower": "27 hp",
+    "deckSizes": [
+      "52\"",
+      "60\""
+    ],
+    "price": 10149,
+    "msrp": 11164,
+    "description": "The ISX 800 pairs Ferris ForeFront suspension with Briggs & Stratton Commercial Series power — a proven all-day zero-turn for professional crews.",
+    "features": [
+      "27 HP Briggs & Stratton Commercial Series",
+      "ForeFront suspension system",
+      "52\" iCD cutting system",
+      "Suspension seat",
+      "Commercial-grade drive"
+    ],
+    "imageUrl": "/images/ferris/basco/5902084/5902084_FER_ISX800_FR_FINAL.jpg",
+    "images": [
+      "/images/ferris/basco/5902084/5902084_FER_ISX800_FR_FINAL.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "variants": [
+      {
+        "sku": "5902084",
+        "engine": "Briggs & Stratton® Commercial Series",
+        "horsepower": "27 hp",
+        "deckSize": "52\"",
+        "price": 10149,
+        "msrp": 11164,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902154",
+        "engine": "Briggs & Stratton® CXi",
+        "horsepower": "24 hp",
+        "deckSize": "52\"",
+        "price": 10699,
+        "msrp": 11769,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902155",
+        "engine": "Kawasaki® FT730V",
+        "horsepower": "24 hp",
+        "deckSize": "52\"",
+        "price": 10899,
+        "msrp": 11989,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902075",
+        "engine": "Briggs & Stratton® CXi",
+        "horsepower": "24 hp",
+        "deckSize": "60\"",
+        "price": 10899,
+        "msrp": 11989,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902172",
+        "engine": "Briggs & Stratton® CXi EFI-ETC w/ OilXtend™",
+        "horsepower": "25 hp",
+        "deckSize": "60\"",
+        "price": 11249,
+        "msrp": 12374,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902073",
+        "engine": "Kawasaki® FT730V",
+        "horsepower": "24 hp",
+        "deckSize": "60\"",
+        "price": 11499,
+        "msrp": 12648,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902074",
+        "engine": "Kawasaki® FT730V EFI",
+        "horsepower": "24 hp",
+        "deckSize": "60\"",
+        "price": 11949,
+        "msrp": 13143,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5902154",
+    "name": "Ferris ISX™ 800 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Briggs & Stratton® CXi",
+    "horsepower": "24 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 10699,
+    "msrp": 11769,
+    "description": "The ISX 800 upgrades to Hydro-Gear ZT-3400 transaxles and advanced suspension for demanding commercial routes.",
+    "features": [
+      "Briggs & Stratton CXi engine",
+      "Ferris suspension system",
+      "Dual Hydro-Gear® ZT-3400® transaxles",
+      "iCD™ cutting system",
+      "52\" fabricated deck",
+      "Up to 10 mph ground speed"
+    ],
+    "imageUrl": "/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg",
+    "images": [
+      "/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg",
+      "/images/ferris/basco/5902154/5902154_FER_ISX800_L_Final.jpg",
+      "/images/ferris/basco/5902154/5902154_FER_ISX800_R_Final.jpg",
+      "/images/ferris/basco/5902154/5902154_FER_ISX800_K_Final.jpg",
+      "/images/ferris/basco/5902154/5902154_FER_ISX800_KL_Final.jpg",
+      "/images/ferris/basco/5902154/5902154_FER_ISX800_KR_Final.jpg",
+      "/images/ferris/basco/5902154/5902154_FER_ISX800_T_Final.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "variants": [
+      {
+        "sku": "5902154",
+        "engine": "Briggs & Stratton® CXi",
+        "horsepower": "24 hp",
+        "deckSize": "52\"",
+        "price": 10699,
+        "msrp": 11769,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902075",
+        "engine": "Briggs & Stratton® CXi",
+        "horsepower": "24 hp",
+        "deckSize": "60\"",
+        "price": 10899,
+        "msrp": 11989,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902172",
+        "engine": "B&S CXi EFI-ETC w/ OilXtend™",
+        "horsepower": "25 hp",
+        "deckSize": "60\"",
+        "price": 11249,
+        "msrp": 12374,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902155",
+        "engine": "Kawasaki® FT730V",
+        "horsepower": "24 hp",
+        "deckSize": "52\"",
+        "price": 10899,
+        "msrp": 11989,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902073",
+        "engine": "Kawasaki® FT730V",
+        "horsepower": "24 hp",
+        "deckSize": "60\"",
+        "price": 11499,
+        "msrp": 12648,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902074",
+        "engine": "Kawasaki® FT730V EFI",
+        "horsepower": "24 hp",
+        "deckSize": "60\"",
+        "price": 11949,
+        "msrp": 13143,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ],
+    "canonicalSku": "5902084"
+  },
+  {
+    "sku": "5902155",
+    "name": "Ferris ISX™ 800 Series",
+    "canonicalSku": "5902084",
+    "category": "Zero Turn Mowers",
+    "engine": "Kawasaki® FT730V",
+    "horsepower": "24 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 10899,
+    "msrp": 11989,
+    "description": "The ISX 800 52\" with Kawasaki FT730V — commercial suspension and proven Kawasaki reliability.",
+    "features": [
+      "Kawasaki FT730V engine",
+      "Ferris suspension system",
+      "Dual Hydro-Gear® ZT-3400® transaxles",
+      "iCD™ cutting system",
+      "52\" fabricated deck",
+      "Up to 10 mph ground speed"
+    ],
+    "imageUrl": "/images/ferris/lot/isx800-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER"
+  },
+  {
+    "sku": "5902075",
+    "name": "Ferris ISX™ 800 Series",
+    "canonicalSku": "5902084",
+    "category": "Zero Turn Mowers",
+    "engine": "Briggs & Stratton® CXi",
+    "horsepower": "24 hp",
+    "deckSizes": [
+      "60\""
+    ],
+    "price": 10899,
+    "msrp": 11989,
+    "description": "The ISX 800 60\" with B&S CXi — wide-cut commercial performance with upgraded ZT-3400 drive.",
+    "features": [
+      "Briggs & Stratton CXi engine",
+      "Ferris suspension system",
+      "Dual Hydro-Gear® ZT-3400® transaxles",
+      "iCD™ cutting system",
+      "60\" fabricated deck",
+      "Up to 10 mph ground speed"
+    ],
+    "imageUrl": "/images/ferris/lot/isx800-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER"
+  },
+  {
+    "sku": "5902172",
+    "name": "Ferris ISX™ 800 Series",
+    "canonicalSku": "5902084",
+    "category": "Zero Turn Mowers",
+    "engine": "Briggs & Stratton® CXi EFI-ETC w/ OilXtend™",
+    "horsepower": "25 hp",
+    "deckSizes": [
+      "60\""
+    ],
+    "price": 11249,
+    "msrp": 12374,
+    "description": "The ISX 800 with B&S EFI-ETC and OilXtend technology — extended oil intervals and fuel injection for maximum uptime.",
+    "features": [
+      "B&S CXi EFI-ETC with OilXtend™",
+      "Ferris suspension system",
+      "Dual Hydro-Gear® ZT-3400® transaxles",
+      "iCD™ cutting system",
+      "60\" fabricated deck",
+      "Extended oil change intervals"
+    ],
+    "imageUrl": "/images/ferris/lot/isx800-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER"
+  },
+  {
+    "sku": "5902073",
+    "name": "Ferris ISX™ 800 Series",
+    "canonicalSku": "5902084",
+    "category": "Zero Turn Mowers",
+    "engine": "Kawasaki® FT730V",
+    "horsepower": "24 hp",
+    "deckSizes": [
+      "60\""
+    ],
+    "price": 11499,
+    "msrp": 12648,
+    "description": "The ISX 800 60\" with Kawasaki power — serious commercial capability with Ferris suspension comfort.",
+    "features": [
+      "Kawasaki FT730V engine",
+      "Ferris suspension system",
+      "Dual Hydro-Gear® ZT-3400® transaxles",
+      "iCD™ cutting system",
+      "60\" fabricated deck",
+      "Up to 10 mph ground speed"
+    ],
+    "imageUrl": "/images/ferris/lot/isx800-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER"
+  },
+  {
+    "sku": "5902074",
+    "name": "Ferris ISX™ 800 Series",
+    "canonicalSku": "5902084",
+    "category": "Zero Turn Mowers",
+    "engine": "Kawasaki® FT730V EFI",
+    "horsepower": "24 hp",
+    "deckSizes": [
+      "60\""
+    ],
+    "price": 11949,
+    "msrp": 13143,
+    "description": "The ISX 800 EFI delivers fuel-injected Kawasaki efficiency with Ferris suspension on a 60\" platform.",
+    "features": [
+      "Kawasaki FT730V EFI engine",
+      "Ferris suspension system",
+      "Dual Hydro-Gear® ZT-3400® transaxles",
+      "iCD™ cutting system",
+      "60\" fabricated deck",
+      "Electronic Fuel Injection"
+    ],
+    "imageUrl": "/images/ferris/lot/isx800-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER"
+  },
+  {
+    "sku": "5902159",
+    "name": "Ferris ISX™ 2200 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Kawasaki® FX781V EVO",
+    "horsepower": "27 hp",
+    "deckSizes": [
+      "52\"",
+      "60\""
+    ],
+    "price": 13449,
+    "msrp": 14794,
+    "description": "The ISX 2200 52\" Kawasaki delivers ForeFront™ suspension comfort with proven Kawasaki EVO reliability.",
+    "features": [
+      "Kawasaki FX781V EVO engine",
+      "ForeFront™ suspension system",
+      "Dual Hydro-Gear® ZT-5400 drive",
+      "2-belt iCD™+ cutting system",
+      "52\" fabricated deck",
+      "Up to 12 mph ground speed"
+    ],
+    "imageUrl": "/images/ferris/isx2200-hero.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "variants": [
+      {
+        "sku": "5902159",
+        "engine": "Kawasaki® FX781V EVO",
+        "horsepower": "27 hp",
+        "deckSize": "52\"",
+        "price": 13449,
+        "msrp": 14794,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902157",
+        "engine": "Vanguard™ 810cc EFI w/ Oil Guard",
+        "horsepower": "31 hp",
+        "deckSize": "52\"",
+        "price": 13699,
+        "msrp": 15069,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902180",
+        "engine": "Kawasaki® FX781V EVO",
+        "horsepower": "27 hp",
+        "deckSize": "60\"",
+        "price": 14099,
+        "msrp": 15509,
+        "status": "IN_STOCK"
+      },
+      {
+        "sku": "5902078",
+        "engine": "Vanguard™ 810cc EFI w/ Oil Guard",
+        "horsepower": "31 hp",
+        "deckSize": "60\"",
+        "price": 14499,
+        "msrp": 15949,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5902157",
+    "name": "Ferris ISX™ 2200 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Vanguard™ 810cc EFI w/ Oil Guard",
+    "horsepower": "31 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 13699,
+    "msrp": 15069,
+    "description": "The ISX 2200 52\" with Vanguard EFI combines ForeFront™ suspension with premium power and extended oil intervals.",
+    "features": [
+      "Vanguard 810cc EFI with Oil Guard",
+      "ForeFront™ suspension system",
+      "Dual Hydro-Gear® ZT-5400 drive",
+      "2-belt iCD™+ cutting system",
+      "52\" fabricated deck",
+      "Up to 12 mph ground speed"
+    ],
+    "imageUrl": "/images/ferris/isx2200-hero.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902159"
+  },
+  {
+    "sku": "5902180",
+    "name": "Ferris ISX™ 2200 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Kawasaki® FX781V EVO",
+    "horsepower": "27 hp",
+    "deckSizes": [
+      "60\""
+    ],
+    "price": 14099,
+    "msrp": 15509,
+    "description": "The ISX 2200 combines ForeFront™ suspension technology with serious cutting power for demanding commercial operations.",
+    "features": [
+      "Kawasaki FX781V EVO engine",
+      "ForeFront™ suspension system",
+      "Dual Hydro-Gear® ZT-5400 drive",
+      "2-belt iCD™+ cutting system",
+      "60\" fabricated deck",
+      "Up to 12 mph ground speed"
+    ],
+    "imageUrl": "/images/ferris/isx2200-hero.jpg",
+    "status": "IN_STOCK",
+    "canonicalSku": "5902159"
+  },
+  {
+    "sku": "5902078",
+    "name": "Ferris ISX™ 2200 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Vanguard™ 810cc EFI w/ Oil Guard",
+    "horsepower": "31 hp",
+    "deckSizes": [
+      "60\""
+    ],
+    "price": 14499,
+    "msrp": 15949,
+    "description": "The ISX 2200 60\" Vanguard — Ferris's premium suspension platform with maximum power for commercial operators.",
+    "features": [
+      "Vanguard 810cc EFI with Oil Guard",
+      "ForeFront™ suspension system",
+      "Dual Hydro-Gear® ZT-5400 drive",
+      "2-belt iCD™+ cutting system",
+      "60\" fabricated deck",
+      "Up to 12 mph ground speed"
+    ],
+    "imageUrl": "/images/ferris/basco/5902078/5902078_FER_ISX2200_FL_FINAL.jpg",
+    "images": [
+      "/images/ferris/basco/5902078/5902078_FER_ISX2200_FL_FINAL.jpg",
+      "/images/ferris/basco/5902078/5902078_FER_ISX2200_F_Final_.jpg",
+      "/images/ferris/basco/5902078/5902078_FER_ISX2200_FR_FINAL.jpg",
+      "/images/ferris/basco/5902078/5902078_FER_ISX2200_L_Final_.jpg",
+      "/images/ferris/basco/5902078/5902078_FER_ISX2200_R_Final_.jpg",
+      "/images/ferris/basco/5902078/5902078_FER_ISX2200_K_Final_.jpg",
+      "/images/ferris/basco/5902078/5902078_FER_ISX2200_KL_Final_.jpg",
+      "/images/ferris/basco/5902078/5902078_FER_ISX2200_KR_Final_.jpg",
+      "/images/ferris/basco/5902078/5902078_FER_ISX2200_T_Final_.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902159"
+  },
+  {
+    "sku": "5902064",
+    "name": "Ferris ISX™ 3300 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Vanguard® Big Block EFI ETC",
+    "horsepower": "40 hp",
+    "deckSizes": [
+      "60\"",
+      "72\""
+    ],
+    "price": 18299,
+    "msrp": 20129,
+    "description": "The flagship ISX 3300 delivers Ferris's most advanced suspension and Vanguard™ Big Block EFI power for the most demanding commercial work.",
+    "features": [
+      "40 HP Vanguard® Big Block EFI ETC",
+      "Next-gen ForeFront™ suspension",
+      "Dual Hydro-Gear® ZT-5400 drive",
+      "2-belt iCD™+ cutting system",
+      "60\" fabricated deck",
+      "Oil Guard extended intervals"
+    ],
+    "imageUrl": "/images/ferris/basco/5902064/5902064_FER_ISX3300_FL_FINAL.jpg",
+    "images": [
+      "/images/ferris/basco/5902064/5902064_FER_ISX3300_FL_FINAL.jpg",
+      "/images/ferris/basco/5902064/5902064_FER_ISX3300_F_Final_.jpg",
+      "/images/ferris/basco/5902064/5902064_FER_ISX3300_FR_FINAL_with_Tweel.jpg",
+      "/images/ferris/basco/5902064/5902064_FER_ISX3300_L_Final_.jpg",
+      "/images/ferris/basco/5902064/5902064_FER_ISX3300_R_Final_.jpg",
+      "/images/ferris/basco/5902064/5902064_FER_ISX3300_K_Final_.jpg",
+      "/images/ferris/basco/5902064/5902064_FER_ISX3300_KL_Final_.jpg",
+      "/images/ferris/basco/5902064/5902064_FER_ISX3300_KR_Final_.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "variants": [
+      {
+        "sku": "5902064",
+        "engine": "Vanguard® Big Block EFI ETC",
+        "horsepower": "40 hp",
+        "deckSize": "60\"",
+        "price": 18299,
+        "msrp": 20129,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902065",
+        "engine": "Kawasaki® FX1000V EFI",
+        "horsepower": "35 hp",
+        "deckSize": "60\"",
+        "price": 18649,
+        "msrp": 20514,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902145",
+        "engine": "Vanguard® Big Block EFI ETC",
+        "horsepower": "40 hp",
+        "deckSize": "72\"",
+        "price": 18999,
+        "msrp": 20899,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902160",
+        "engine": "Kawasaki® FX1000V EFI",
+        "horsepower": "35 hp",
+        "deckSize": "72\"",
+        "price": 19349,
+        "msrp": 21284,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5902065",
+    "name": "Ferris ISX™ 3300 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Kawasaki® FX1000V EFI",
+    "horsepower": "35 hp",
+    "deckSizes": [
+      "60\""
+    ],
+    "price": 18649,
+    "msrp": 20514,
+    "description": "The ISX 3300 Kawasaki EFI delivers maximum suspension performance with fuel-injected reliability for professional commercial crews.",
+    "features": [
+      "35 HP Kawasaki FX1000V EFI engine",
+      "Next-gen ForeFront™ suspension",
+      "Dual Hydro-Gear® ZT-5400 drive",
+      "2-belt iCD™+ cutting system",
+      "60\" fabricated deck",
+      "Electronic Fuel Injection"
+    ],
+    "imageUrl": "/images/ferris/lot/isx3300-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "tag": "Top of the Line",
+    "canonicalSku": "5902064"
+  },
+  {
+    "sku": "5902145",
+    "name": "Ferris ISX™ 3300 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Vanguard® Big Block EFI ETC",
+    "horsepower": "40 hp",
+    "deckSizes": [
+      "72\""
+    ],
+    "price": 18999,
+    "msrp": 20899,
+    "description": "The ISX 3300 72\" Vanguard — the widest-cutting zero-turn in the Ferris lineup with premium suspension and EFI power.",
+    "features": [
+      "40 HP Vanguard® Big Block EFI ETC",
+      "Next-gen ForeFront™ suspension",
+      "Dual Hydro-Gear® ZT-5400 drive",
+      "2-belt iCD™+ cutting system",
+      "72\" wide-cut deck",
+      "Oil Guard extended intervals"
+    ],
+    "imageUrl": "/images/ferris/lot/isx3300-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902064"
+  },
+  {
+    "sku": "5902160",
+    "name": "Ferris ISX™ 3300 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Kawasaki® FX1000V EFI",
+    "horsepower": "35 hp",
+    "deckSizes": [
+      "72\""
+    ],
+    "price": 19349,
+    "msrp": 21284,
+    "description": "The ISX 3300 72\" Kawasaki — maximum deck coverage for large commercial operations with full ForeFront™ suspension.",
+    "features": [
+      "35 HP Kawasaki FX1000V EFI engine",
+      "Next-gen ForeFront™ suspension",
+      "Dual Hydro-Gear® ZT-5400 drive",
+      "2-belt iCD™+ cutting system",
+      "72\" wide-cut deck",
+      "Electronic Fuel Injection"
+    ],
+    "imageUrl": "/images/ferris/lot/isx3300-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902064"
+  },
+  {
+    "sku": "5901929",
+    "name": "Ferris IS® 2600 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Yanmar Diesel",
+    "horsepower": "23 hp",
+    "deckSizes": [
+      "61\""
+    ],
+    "price": 22199,
+    "msrp": 24419,
+    "description": "The IS 2600 is Ferris's diesel-powered commercial workhorse — built for operators who demand fuel efficiency and full-day runtime on large properties.",
+    "features": [
+      "23 HP Yanmar diesel engine",
+      "Ferris independent suspension",
+      "Dual Hydro-Gear® transaxles",
+      "iCD™ cutting system",
+      "61\" commercial deck",
+      "Diesel fuel efficiency"
+    ],
+    "imageUrl": "/images/ferris/basco/5901929/5901929_FER_IS2600_Studio_FL.jpg",
+    "images": [
+      "/images/ferris/basco/5901929/5901929_FER_IS2600_Studio_FL.jpg",
+      "/images/ferris/basco/5901929/5901929_FER_IS2600_Studio_FR.jpg",
+      "/images/ferris/basco/5901929/5901929_FER_IS2600_Studio_KL-Engine.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "tag": "Commercial Grade",
+    "variants": [
+      {
+        "sku": "5901929",
+        "engine": "Yanmar Diesel",
+        "horsepower": "23 hp",
+        "deckSize": "61\"",
+        "price": 22199,
+        "msrp": 24419,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5902162",
+    "name": "Ferris IS® 6200 Series",
+    "category": "Zero Turn Mowers",
+    "engine": "Kubota Diesel",
+    "horsepower": "48 hp",
+    "deckSizes": [
+      "72\""
+    ],
+    "price": 38049,
+    "msrp": 41854,
+    "description": "The IS 6200 is Ferris's most powerful zero-turn — a 48 HP diesel machine built for large-scale commercial operations where nothing else will do.",
+    "features": [
+      "48 HP Kubota diesel engine",
+      "Ferris independent suspension",
+      "Heavy-duty commercial drive system",
+      "72\" commercial deck",
+      "Diesel fuel efficiency",
+      "Built for large acreage operations"
+    ],
+    "imageUrl": "/images/ferris/basco/5902162/5902162_FER_IS6200_FL_FINAL.jpg",
+    "images": [
+      "/images/ferris/basco/5902162/5902162_FER_IS6200_FL_FINAL.jpg",
+      "/images/ferris/basco/5902162/5902162_FER_IS6200_F_Final.jpg",
+      "/images/ferris/basco/5902162/5902162_FER_IS6200_FR.jpg",
+      "/images/ferris/basco/5902162/5902162_FER_IS6200_L_Final.jpg",
+      "/images/ferris/basco/5902162/5902162_FER_IS6200_R_Final.jpg",
+      "/images/ferris/basco/5902162/5902162_FER_IS6200_K_Final.jpg",
+      "/images/ferris/basco/5902162/5902162_FER_IS6200_KL_Final.jpg",
+      "/images/ferris/basco/5902162/5902162_FER_IS6200_KR_Final.jpg",
+      "/images/ferris/basco/5902162/5902162_FER_IS6200_T_Final.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "tag": "Commercial Grade",
+    "variants": [
+      {
+        "sku": "5902162",
+        "engine": "Kubota Diesel",
+        "horsepower": "48 hp",
+        "deckSize": "72\"",
+        "price": 38049,
+        "msrp": 41854,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5901941",
+    "name": "Ferris SRS™ Z1 Series",
+    "category": "Stand-On Mowers",
+    "engine": "Vanguard®",
+    "horsepower": "23 hp",
+    "deckSizes": [
+      "36\"",
+      "48\""
+    ],
+    "price": 9299,
+    "msrp": 10229,
+    "description": "The SRS Z1 36\" with Vanguard power — compact, reliable, and built for tight access properties.",
+    "features": [
+      "23 HP Vanguard engine",
+      "Stand-on platform design",
+      "Compact 36\" deck",
+      "Commercial hydrostatic drive",
+      "Low center of gravity"
+    ],
+    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z1/Product%20Images/FER_PDP_SRSZ1_Hero_FL.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "variants": [
+      {
+        "sku": "5901941",
+        "engine": "Vanguard®",
+        "horsepower": "23 hp",
+        "deckSize": "36\"",
+        "price": 9299,
+        "msrp": 10229,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5901939",
+        "engine": "Kawasaki® FX600V",
+        "horsepower": "18.5 hp",
+        "deckSize": "36\"",
+        "price": 9499,
+        "msrp": 10449,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5901942",
+        "engine": "Vanguard®",
+        "horsepower": "23 hp",
+        "deckSize": "48\"",
+        "price": 10149,
+        "msrp": 11164,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5901940",
+        "engine": "Kawasaki® FX691V",
+        "horsepower": "22 hp",
+        "deckSize": "48\"",
+        "price": 10349,
+        "msrp": 11384,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5901939",
+    "name": "Ferris SRS™ Z1 Series",
+    "category": "Stand-On Mowers",
+    "engine": "Kawasaki® FX600V",
+    "horsepower": "18.5 hp",
+    "deckSizes": [
+      "36\""
+    ],
+    "price": 9499,
+    "msrp": 10449,
+    "description": "The SRS Z1 stand-on mower is compact, maneuverable, and built for gated properties and tight spaces.",
+    "features": [
+      "18.5 HP Kawasaki FX600V engine",
+      "Stand-on platform design",
+      "Compact 36\" deck for tight areas",
+      "Commercial hydrostatic drive",
+      "Low center of gravity"
+    ],
+    "imageUrl": "/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_FL.jpg",
+    "images": [
+      "/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_FL.jpg",
+      "/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_FR.jpg",
+      "/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_K.jpg",
+      "/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_KR.jpg",
+      "/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_Tank.jpg",
+      "/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_FL-low.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5901941"
+  },
+  {
+    "sku": "5901942",
+    "name": "Ferris SRS™ Z1 Series",
+    "category": "Stand-On Mowers",
+    "engine": "Vanguard®",
+    "horsepower": "23 hp",
+    "deckSizes": [
+      "48\""
+    ],
+    "price": 10149,
+    "msrp": 11164,
+    "description": "The SRS Z1 48\" Vanguard — wider stand-on coverage for commercial routes with proven Vanguard reliability.",
+    "features": [
+      "23 HP Vanguard engine",
+      "Stand-on platform design",
+      "48\" productivity deck",
+      "Commercial hydrostatic drive",
+      "Operator comfort platform"
+    ],
+    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z1/Product%20Images/FER_PDP_SRSZ1_Hero_FL.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5901941"
+  },
+  {
+    "sku": "5901940",
+    "name": "Ferris SRS™ Z1 Series",
+    "category": "Stand-On Mowers",
+    "engine": "Kawasaki® FX691V",
+    "horsepower": "22 hp",
+    "deckSizes": [
+      "48\""
+    ],
+    "price": 10349,
+    "msrp": 11384,
+    "description": "The 48\" SRS Z1 balances productivity with maneuverability — ideal for medium-size commercial routes.",
+    "features": [
+      "22 HP Kawasaki FX691V engine",
+      "Stand-on platform design",
+      "48\" productivity deck",
+      "Commercial hydrostatic drive",
+      "Operator comfort platform"
+    ],
+    "imageUrl": "/images/ferris/basco/5901940/5901940_FER_SRSZ1_Studio_FL.jpg",
+    "images": [
+      "/images/ferris/basco/5901940/5901940_FER_SRSZ1_Studio_FL.jpg",
+      "/images/ferris/basco/5901940/5901940_FER_SRSZ1_Studio_FR.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5901941"
+  },
+  {
+    "sku": "5901948",
+    "name": "Ferris SRS™ Z2 Series",
+    "category": "Stand-On Mowers",
+    "engine": "Kawasaki® FT730V",
+    "horsepower": "24 hp",
+    "deckSizes": [
+      "52\"",
+      "60\""
+    ],
+    "price": 10749,
+    "msrp": 11824,
+    "description": "The SRS Z2 with Kawasaki FT730V power pairs Ferris suspension technology with a reliable 24 HP commercial engine for all-day comfort and productivity.",
+    "features": [
+      "24 HP Kawasaki FT730V engine",
+      "Ferris suspension platform",
+      "52\" commercial deck",
+      "Heavy-duty commercial drive",
+      "High-capacity grass management"
+    ],
+    "imageUrl": "/images/ferris/basco/5901948/5901948_FER_Z2_FL_FINAL.jpg",
+    "images": [
+      "/images/ferris/basco/5901948/5901948_FER_Z2_FL_FINAL.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "variants": [
+      {
+        "sku": "5901948",
+        "engine": "Kawasaki® FT730V",
+        "horsepower": "24 hp",
+        "deckSize": "52\"",
+        "price": 10749,
+        "msrp": 11824,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902164",
+        "engine": "Vanguard™ 810 EFI w/ Oil Guard",
+        "horsepower": "25.5 hp",
+        "deckSize": "52\"",
+        "price": 11649,
+        "msrp": 12814,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902235",
+        "engine": "Kawasaki® FX781V EVO",
+        "horsepower": "27 hp",
+        "deckSize": "52\"",
+        "price": 11849,
+        "msrp": 13034,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902165",
+        "engine": "Vanguard™ 810 EFI w/ Oil Guard",
+        "horsepower": "25.5 hp",
+        "deckSize": "52\"",
+        "price": 11949,
+        "msrp": 13144,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902070",
+        "engine": "Vanguard™ 810 EFI w/ Oil Guard",
+        "horsepower": "25.5 hp",
+        "deckSize": "60\"",
+        "price": 12399,
+        "msrp": 13639,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902236",
+        "engine": "Kawasaki® FX781V EVO",
+        "horsepower": "27 hp",
+        "deckSize": "60\"",
+        "price": 12599,
+        "msrp": 13859,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5902164",
+    "name": "Ferris SRS™ Z2 Series",
+    "category": "Stand-On Mowers",
+    "engine": "Vanguard™ 810 EFI w/ Oil Guard",
+    "horsepower": "25.5 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 11649,
+    "msrp": 12814,
+    "description": "The SRS Z2 upgrades the stand-on experience with suspension and Vanguard EFI power for serious commercial operators.",
+    "features": [
+      "Vanguard 810 EFI with Oil Guard",
+      "SoftRide™ suspension platform",
+      "52\" commercial deck",
+      "Heavy-duty commercial drive",
+      "Extended oil change intervals"
+    ],
+    "imageUrl": "/images/ferris/lot/srsz2-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5901948"
+  },
+  {
+    "sku": "5902235",
+    "name": "Ferris SRS™ Z2 Series",
+    "category": "Stand-On Mowers",
+    "engine": "Kawasaki® FX781V EVO",
+    "horsepower": "27 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 11849,
+    "msrp": 13034,
+    "description": "The SRS Z2 Kawasaki EVO — stand-on suspension comfort with proven Kawasaki EVO reliability.",
+    "features": [
+      "Kawasaki FX781V EVO engine",
+      "SoftRide™ suspension platform",
+      "52\" commercial deck",
+      "Heavy-duty commercial drive",
+      "Proven Kawasaki reliability"
+    ],
+    "imageUrl": "/images/ferris/lot/srsz2-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5901948"
+  },
+  {
+    "sku": "5902165",
+    "name": "Ferris SRS™ Z2 Series",
+    "category": "Stand-On Mowers",
+    "engine": "Vanguard™ 810 EFI w/ Oil Guard",
+    "horsepower": "25.5 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 11949,
+    "msrp": 13144,
+    "description": "The SRS Z2 52\" Vanguard EFI — premium stand-on performance with Ferris suspension and extended service intervals.",
+    "features": [
+      "Vanguard 810 EFI with Oil Guard",
+      "SoftRide™ suspension platform",
+      "52\" commercial deck",
+      "Heavy-duty commercial drive",
+      "Extended oil change intervals"
+    ],
+    "imageUrl": "/images/ferris/basco/5902165/5902165_FER_Z2_F_Final.jpg",
+    "images": [
+      "/images/ferris/basco/5902165/5902165_FER_Z2_F_Final.jpg",
+      "/images/ferris/basco/5902165/5902165_FER_Z2_L_Final.jpg",
+      "/images/ferris/basco/5902165/5902165_FER_Z2_R_Final.jpg",
+      "/images/ferris/basco/5902165/5902165_FER_Z2_K_Final.jpg",
+      "/images/ferris/basco/5902165/5902165_FER_Z2_KL_Final.jpg",
+      "/images/ferris/basco/5902165/5902165_FER_Z2_KR_Final.jpg",
+      "/images/ferris/basco/5902165/5902165_FER_Z2_T_Final.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5901948"
+  },
+  {
+    "sku": "5902070",
+    "name": "Ferris SRS™ Z2 Series",
+    "category": "Stand-On Mowers",
+    "engine": "Vanguard™ 810 EFI w/ Oil Guard",
+    "horsepower": "25.5 hp",
+    "deckSizes": [
+      "60\""
+    ],
+    "price": 12399,
+    "msrp": 13639,
+    "description": "The SRS Z2 60\" delivers wide-cut stand-on efficiency with Ferris suspension and Vanguard EFI power.",
+    "features": [
+      "Vanguard 810 EFI with Oil Guard",
+      "SoftRide™ suspension platform",
+      "60\" commercial deck",
+      "Heavy-duty commercial drive",
+      "Maximum productivity design"
+    ],
+    "imageUrl": "/images/ferris/lot/srsz2-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5901948"
+  },
+  {
+    "sku": "5902236",
+    "name": "Ferris SRS™ Z2 Series",
+    "category": "Stand-On Mowers",
+    "engine": "Kawasaki® FX781V EVO",
+    "horsepower": "27 hp",
+    "deckSizes": [
+      "60\""
+    ],
+    "price": 12599,
+    "msrp": 13859,
+    "description": "The SRS Z2 60\" Kawasaki — maximum stand-on productivity with EVO reliability across large commercial properties.",
+    "features": [
+      "Kawasaki FX781V EVO engine",
+      "SoftRide™ suspension platform",
+      "60\" commercial deck",
+      "Heavy-duty commercial drive",
+      "Up to 8 mph ground speed"
+    ],
+    "imageUrl": "/images/ferris/lot/srsz2-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5901948"
+  },
+  {
+    "sku": "5902168",
+    "name": "Ferris SRS™ Z3X Series",
+    "category": "Stand-On Mowers",
+    "engine": "Kawasaki® FX850V",
+    "horsepower": "27 hp",
+    "deckSizes": [
+      "52\"",
+      "60\"",
+      "72\""
+    ],
+    "price": 12899,
+    "msrp": 14189,
+    "description": "The SRS Z3X is the premium stand-on mower with Ferris suspension technology — maximum productivity and operator comfort combined.",
+    "features": [
+      "27 HP Kawasaki FX850V engine",
+      "Ferris suspension platform",
+      "52\" commercial deck",
+      "Heavy-duty commercial drive",
+      "High-capacity grass management"
+    ],
+    "imageUrl": "/images/ferris/lot/srsz3-lot.jpg",
+    "status": "IN_STOCK",
+    "variants": [
+      {
+        "sku": "5902168",
+        "engine": "Kawasaki® FX850V",
+        "horsepower": "27 hp",
+        "deckSize": "52\"",
+        "price": 12899,
+        "msrp": 14189,
+        "status": "IN_STOCK"
+      },
+      {
+        "sku": "5901955",
+        "engine": "Vanguard® Big Block EFI w/ Oil Guard",
+        "horsepower": "37 hp",
+        "deckSize": "52\"",
+        "price": 13699,
+        "msrp": 15069,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902233",
+        "engine": "Kawasaki® FX1000 EFI",
+        "horsepower": "38.5 hp",
+        "deckSize": "52\"",
+        "price": 13899,
+        "msrp": 15289,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902169",
+        "engine": "Vanguard® Big Block EFI w/ Oil Guard",
+        "horsepower": "37 hp",
+        "deckSize": "52\"",
+        "price": 14249,
+        "msrp": 15674,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902217",
+        "engine": "Vanguard™ EFI-ETC w/ Oil Guard",
+        "horsepower": "40 hp",
+        "deckSize": "52\"",
+        "price": 14499,
+        "msrp": 15949,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902234",
+        "engine": "Kawasaki® FX1000 EFI",
+        "horsepower": "38.5 hp",
+        "deckSize": "60\"",
+        "price": 14699,
+        "msrp": 16169,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902071",
+        "engine": "Vanguard® Big Block EFI w/ Oil Guard",
+        "horsepower": "37 hp",
+        "deckSize": "60\"",
+        "price": 14999,
+        "msrp": 16499,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902216",
+        "engine": "Vanguard™ EFI-ETC w/ Oil Guard",
+        "horsepower": "40 hp",
+        "deckSize": "60\"",
+        "price": 15249,
+        "msrp": 16774,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902215",
+        "engine": "Vanguard™ EFI-ETC w/ Oil Guard",
+        "horsepower": "40 hp",
+        "deckSize": "72\"",
+        "price": 16149,
+        "msrp": 17764,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5901955",
+    "name": "Ferris SRS™ Z3X Series",
+    "category": "Stand-On Mowers",
+    "engine": "Vanguard® Big Block EFI w/ Oil Guard",
+    "horsepower": "37 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 13699,
+    "msrp": 15069,
+    "description": "The SRS Z3X 52\" with Vanguard Big Block EFI delivers maximum stand-on productivity — premium suspension, electronic fuel injection, and commercial-grade build quality.",
+    "features": [
+      "37 HP Vanguard Big Block EFI with Oil Guard",
+      "Ferris suspension platform",
+      "52\" commercial deck",
+      "Heavy-duty commercial drive",
+      "Electronic Fuel Injection"
+    ],
+    "imageUrl": "/images/ferris/basco/5901955/5901955_FER_Z3X_FL_FINAL.jpg",
+    "images": [
+      "/images/ferris/basco/5901955/5901955_FER_Z3X_FL_FINAL.jpg",
+      "/images/ferris/basco/5901955/5901955_FER_Z3X_FR_FINAL.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902168"
+  },
+  {
+    "sku": "5902233",
+    "name": "Ferris SRS™ Z3X Series",
+    "category": "Stand-On Mowers",
+    "engine": "Kawasaki® FX1000 EFI",
+    "horsepower": "38.5 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 13899,
+    "msrp": 15289,
+    "description": "The SRS Z3X EFI 52\" brings fuel-injected Kawasaki power to the premium stand-on platform.",
+    "features": [
+      "38.5 HP Kawasaki FX1000 EFI engine",
+      "Ferris suspension platform",
+      "52\" commercial deck",
+      "Heavy-duty commercial drive",
+      "Electronic Fuel Injection"
+    ],
+    "imageUrl": "/images/ferris/lot/srsz3-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902168"
+  },
+  {
+    "sku": "5902169",
+    "name": "Ferris SRS™ Z3X Series",
+    "category": "Stand-On Mowers",
+    "engine": "Vanguard® Big Block EFI w/ Oil Guard",
+    "horsepower": "37 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 14249,
+    "msrp": 15674,
+    "description": "The 52\" SRS Z3X with Vanguard Big Block EFI — premium stand-on power for demanding commercial properties with Ferris suspension and Oil Guard extended service intervals.",
+    "features": [
+      "37 HP Vanguard Big Block EFI with Oil Guard",
+      "Ferris suspension platform",
+      "52\" commercial deck",
+      "Heavy-duty commercial drive",
+      "Extended oil change intervals"
+    ],
+    "imageUrl": "/images/ferris/basco/5902169/5902169_FER_Z3X_F_Final.jpg",
+    "images": [
+      "/images/ferris/basco/5902169/5902169_FER_Z3X_F_Final.jpg",
+      "/images/ferris/basco/5902169/5902169_FER_Z3X_L_Final.jpg",
+      "/images/ferris/basco/5902169/5902169_FER_Z3X_R_Final.jpg",
+      "/images/ferris/basco/5902169/5902169_FER_Z3X_K_Final.jpg",
+      "/images/ferris/basco/5902169/5902169_FER_Z3X_KL_Final.jpg",
+      "/images/ferris/basco/5902169/5902169_FER_Z3X_KR_Final.jpg",
+      "/images/ferris/basco/5902169/5902169_FER_Z3X_T_Final.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902168"
+  },
+  {
+    "sku": "5902217",
+    "name": "Ferris SRS™ Z3X Series",
+    "category": "Stand-On Mowers",
+    "engine": "Vanguard™ EFI-ETC w/ Oil Guard",
+    "horsepower": "40 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 14499,
+    "msrp": 15949,
+    "description": "The SRS Z3X 52\" Vanguard — premium stand-on performance with EFI power and Oil Guard convenience.",
+    "features": [
+      "40 HP Vanguard EFI-ETC with Oil Guard",
+      "Ferris suspension platform",
+      "52\" commercial deck",
+      "Heavy-duty commercial drive",
+      "Extended oil change intervals"
+    ],
+    "imageUrl": "/images/ferris/lot/srsz3-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902168"
+  },
+  {
+    "sku": "5902234",
+    "name": "Ferris SRS™ Z3X Series",
+    "category": "Stand-On Mowers",
+    "engine": "Kawasaki® FX1000 EFI",
+    "horsepower": "38.5 hp",
+    "deckSizes": [
+      "60\""
+    ],
+    "price": 14699,
+    "msrp": 16169,
+    "description": "The SRS Z3X 60\" EFI — wide-cut premium stand-on with Kawasaki EFI power and full Ferris suspension.",
+    "features": [
+      "38.5 HP Kawasaki FX1000 EFI engine",
+      "Ferris suspension platform",
+      "60\" commercial deck",
+      "Heavy-duty commercial drive",
+      "Electronic Fuel Injection"
+    ],
+    "imageUrl": "/images/ferris/lot/srsz3-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902168"
+  },
+  {
+    "sku": "5902071",
+    "name": "Ferris SRS™ Z3X Series",
+    "category": "Stand-On Mowers",
+    "engine": "Vanguard® Big Block EFI w/ Oil Guard",
+    "horsepower": "37 hp",
+    "deckSizes": [
+      "60\""
+    ],
+    "price": 14999,
+    "msrp": 16499,
+    "description": "The 60\" SRS Z3X Vanguard Big Block — built for large commercial properties demanding stand-on efficiency with premium power.",
+    "features": [
+      "37 HP Vanguard Big Block EFI with Oil Guard",
+      "Ferris suspension platform",
+      "60\" commercial deck",
+      "Heavy-duty commercial drive",
+      "Extended oil change intervals"
+    ],
+    "imageUrl": "/images/ferris/lot/srsz3-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902168"
+  },
+  {
+    "sku": "5902216",
+    "name": "Ferris SRS™ Z3X Series",
+    "category": "Stand-On Mowers",
+    "engine": "Vanguard™ EFI-ETC w/ Oil Guard",
+    "horsepower": "40 hp",
+    "deckSizes": [
+      "60\""
+    ],
+    "price": 15249,
+    "msrp": 16774,
+    "description": "The SRS Z3X 60\" Vanguard EFI with Oil Guard — premium power and minimal downtime for commercial crews.",
+    "features": [
+      "40 HP Vanguard EFI-ETC with Oil Guard",
+      "Ferris suspension platform",
+      "60\" commercial deck",
+      "Heavy-duty commercial drive",
+      "Extended oil change intervals"
+    ],
+    "imageUrl": "/images/ferris/lot/srsz3-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902168"
+  },
+  {
+    "sku": "5902215",
+    "name": "Ferris SRS™ Z3X Series",
+    "category": "Stand-On Mowers",
+    "engine": "Vanguard™ EFI-ETC w/ Oil Guard",
+    "horsepower": "40 hp",
+    "deckSizes": [
+      "72\""
+    ],
+    "price": 16149,
+    "msrp": 17764,
+    "description": "The SRS Z3X 72\" is the widest stand-on in the Ferris lineup — built for maximum commercial productivity.",
+    "features": [
+      "40 HP Vanguard EFI-ETC with Oil Guard",
+      "Ferris suspension platform",
+      "72\" wide-cut commercial deck",
+      "Heavy-duty commercial drive",
+      "Maximum stand-on productivity"
+    ],
+    "imageUrl": "/images/ferris/lot/srsz3-lot.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902168"
+  },
+  {
+    "sku": "5901737",
+    "name": "Ferris FW15 Walk-Behind",
+    "category": "Walk-Behind Mowers",
+    "engine": "Honda® GXV390",
+    "horsepower": "10.2 hp",
+    "deckSizes": [
+      "32\""
+    ],
+    "price": 3949,
+    "msrp": 4343,
+    "description": "The FW15 is Ferris's entry-level commercial walk-behind — compact, hydrostatic, and built for precision trimming and tight areas.",
+    "features": [
+      "Honda GXV390 engine",
+      "Hydro-Gear® RT-310 hydrostatic drive",
+      "32\" commercial deck",
+      "0–4 MPH variable ground speed",
+      "Commercial 2-year warranty"
+    ],
+    "imageUrl": "/images/ferris/basco/5901737/5901737_FER_FW15_FRONT.jpg",
+    "images": [
+      "/images/ferris/basco/5901737/5901737_FER_FW15_FRONT.jpg",
+      "/images/ferris/basco/5901737/5901737_FER_FW15_LFRONT.jpg",
+      "/images/ferris/basco/5901737/5901737_FER_FW15_RFRONT.jpg",
+      "/images/ferris/basco/5901737/5901737_FER_FW15_LSIDE.jpg",
+      "/images/ferris/basco/5901737/5901737_FER_FW15_BACK.jpg",
+      "/images/ferris/basco/5901737/5901737_FER_FW15_RBACK.jpg",
+      "/images/ferris/basco/5901737/5901737_FER_FW15_PIVOTWHEELS.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "variants": [
+      {
+        "sku": "5901737",
+        "engine": "Honda® GXV390",
+        "horsepower": "10.2 hp",
+        "deckSize": "32\"",
+        "price": 3949,
+        "msrp": 4343,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5901886",
+    "name": "Ferris FW25 Walk-Behind",
+    "category": "Walk-Behind Mowers",
+    "engine": "Kawasaki® FS600V",
+    "horsepower": "18.5 hp",
+    "deckSizes": [
+      "36\"",
+      "48\""
+    ],
+    "price": 7399,
+    "msrp": 8139,
+    "description": "The FW25 is a commercial-grade walk-behind built for detail trimming, slopes, and areas a ride-on cannot reach.",
+    "features": [
+      "18.5 HP Kawasaki FS600V engine",
+      "Hydro-Gear® dual transaxle drive",
+      "36\" fabricated steel deck",
+      "Variable speed hydrostatic control",
+      "Mulch / bag / side discharge"
+    ],
+    "imageUrl": "/images/ferris/basco/5901886/5901886_FER_FW25_36-CC_Studio_FL.jpg",
+    "images": [
+      "/images/ferris/basco/5901886/5901886_FER_FW25_36-CC_Studio_FL.jpg",
+      "/images/ferris/basco/5901886/5901886_FER_FW25_36-CC_Studio_FR.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "variants": [
+      {
+        "sku": "5901886",
+        "engine": "Kawasaki® FS600V",
+        "horsepower": "18.5 hp",
+        "deckSize": "36\"",
+        "price": 7399,
+        "msrp": 8139,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5901887",
+        "engine": "Kawasaki® FS600V",
+        "horsepower": "18.5 hp",
+        "deckSize": "48\"",
+        "price": 7799,
+        "msrp": 8579,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5901888",
+        "engine": "Kawasaki® FS600V",
+        "horsepower": "18.5 hp",
+        "deckSize": "48\"",
+        "price": 7799,
+        "msrp": 8579,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5901887",
+    "name": "Ferris FW25 Walk-Behind",
+    "category": "Walk-Behind Mowers",
+    "engine": "Kawasaki® FS600V",
+    "horsepower": "18.5 hp",
+    "deckSizes": [
+      "48\""
+    ],
+    "price": 7799,
+    "msrp": 8579,
+    "description": "The FW25 48\" walk-behind delivers commercial productivity in a walk-behind format for tight or sloped terrain.",
+    "features": [
+      "18.5 HP Kawasaki FS600V engine",
+      "Hydro-Gear® dual transaxle drive",
+      "48\" fabricated steel deck",
+      "Variable speed hydrostatic control",
+      "Mulch / bag / side discharge"
+    ],
+    "imageUrl": "/images/ferris/basco/5901887/5901887_FER_FW25_48-Std_Studio_FL.jpg",
+    "images": [
+      "/images/ferris/basco/5901887/5901887_FER_FW25_48-Std_Studio_FL.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5901886"
+  },
+  {
+    "sku": "5901888",
+    "name": "Ferris FW25 Walk-Behind",
+    "category": "Walk-Behind Mowers",
+    "engine": "Kawasaki® FS600V",
+    "horsepower": "18.5 hp",
+    "deckSizes": [
+      "48\""
+    ],
+    "price": 7799,
+    "msrp": 8579,
+    "description": "The FW25 48\" — commercial walk-behind performance for properties where ride-ons can't go.",
+    "features": [
+      "18.5 HP Kawasaki FS600V engine",
+      "Hydro-Gear® dual transaxle drive",
+      "48\" fabricated steel deck",
+      "Variable speed hydrostatic control",
+      "Mulch / bag / side discharge"
+    ],
+    "imageUrl": "/images/ferris/basco/5901888/5901888_FER_FW25_48-CC_Studio_FL.jpg",
+    "images": [
+      "/images/ferris/basco/5901888/5901888_FER_FW25_48-CC_Studio_FL.jpg",
+      "/images/ferris/basco/5901888/5901888_FER_FW25_48-CC_Studio_FR.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5901886"
+  },
+  {
+    "sku": "5902014",
+    "name": "Ferris FW45 Walk-Behind",
+    "category": "Walk-Behind Mowers",
+    "engine": "Kawasaki® FX651V",
+    "horsepower": "21.5 hp",
+    "deckSizes": [
+      "48\"",
+      "52\"",
+      "61\""
+    ],
+    "price": 9399,
+    "msrp": 10339,
+    "description": "The FW45 is the top-of-the-line Ferris walk-behind — commercial build quality with dual ZT-3400 drive for operators who demand the best.",
+    "features": [
+      "Kawasaki FX651V engine",
+      "Dual Hydro-Gear® ZT-3400® transaxles",
+      "48\" fabricated deck",
+      "Dual-lever blade control",
+      "Mulch / bag / side discharge"
+    ],
+    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "variants": [
+      {
+        "sku": "5902014",
+        "engine": "Kawasaki® FX651V",
+        "horsepower": "21.5 hp",
+        "deckSize": "48\"",
+        "price": 9399,
+        "msrp": 10339,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5901891",
+        "engine": "Kawasaki® FX651",
+        "horsepower": "21.5 hp",
+        "deckSize": "52\"",
+        "price": 9749,
+        "msrp": 10723,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902015",
+        "engine": "Kawasaki® FX651V",
+        "horsepower": "21.5 hp",
+        "deckSize": "52\"",
+        "price": 9749,
+        "msrp": 10723,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5901892",
+        "engine": "Vanguard® 810cc EFI w/ Oil Guard",
+        "horsepower": "28 hp",
+        "deckSize": "52\"",
+        "price": 10449,
+        "msrp": 11494,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5901893",
+        "engine": "Vanguard® 810cc EFI w/ Oil Guard",
+        "horsepower": "28 hp",
+        "deckSize": "52\"",
+        "price": 10449,
+        "msrp": 11494,
+        "status": "AVAILABLE_TO_ORDER"
+      },
+      {
+        "sku": "5902016",
+        "engine": "Kawasaki® FX730V",
+        "horsepower": "24 hp",
+        "deckSize": "61\"",
+        "price": 10349,
+        "msrp": 11384,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5901891",
+    "name": "Ferris FW45 Walk-Behind",
+    "category": "Walk-Behind Mowers",
+    "engine": "Kawasaki® FX651",
+    "horsepower": "21.5 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 9749,
+    "msrp": 10723,
+    "description": "The FW45 52\" Kawasaki — premium walk-behind with dual ZT-3400 transaxles for commercial crews.",
+    "features": [
+      "Kawasaki FX651 engine",
+      "Dual Hydro-Gear® ZT-3400® transaxles",
+      "52\" fabricated deck",
+      "Dual-lever blade control",
+      "Mulch / bag / side discharge"
+    ],
+    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902014"
+  },
+  {
+    "sku": "5902015",
+    "name": "Ferris FW45 Walk-Behind",
+    "category": "Walk-Behind Mowers",
+    "engine": "Kawasaki® FX651V",
+    "horsepower": "21.5 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 9749,
+    "msrp": 10723,
+    "description": "The FW45 52\" — top-of-line commercial walk-behind for sloped terrain and precision trimming.",
+    "features": [
+      "Kawasaki FX651V engine",
+      "Dual Hydro-Gear® ZT-3400® transaxles",
+      "52\" fabricated deck",
+      "Dual-lever blade control",
+      "Mulch / bag / side discharge"
+    ],
+    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902014"
+  },
+  {
+    "sku": "5901892",
+    "name": "Ferris FW45 Walk-Behind",
+    "category": "Walk-Behind Mowers",
+    "engine": "Vanguard® 810cc EFI w/ Oil Guard",
+    "horsepower": "28 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 10449,
+    "msrp": 11494,
+    "description": "The FW45 Vanguard EFI — premium walk-behind with fuel injection and Oil Guard for minimal downtime.",
+    "features": [
+      "Vanguard 810cc EFI with Oil Guard",
+      "Dual Hydro-Gear® ZT-3400® transaxles",
+      "52\" fabricated deck",
+      "Electronic Fuel Injection",
+      "Extended oil change intervals"
+    ],
+    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "tag": "Commercial Grade",
+    "canonicalSku": "5902014"
+  },
+  {
+    "sku": "5901893",
+    "name": "Ferris FW45 Walk-Behind",
+    "category": "Walk-Behind Mowers",
+    "engine": "Vanguard® 810cc EFI w/ Oil Guard",
+    "horsepower": "28 hp",
+    "deckSizes": [
+      "52\""
+    ],
+    "price": 10449,
+    "msrp": 11494,
+    "description": "The FW45 Vanguard EFI 52\" — top-of-line commercial walk-behind with Oil Guard extended service intervals.",
+    "features": [
+      "Vanguard 810cc EFI with Oil Guard",
+      "Dual Hydro-Gear® ZT-3400® transaxles",
+      "52\" fabricated deck",
+      "Electronic Fuel Injection",
+      "Extended oil change intervals"
+    ],
+    "imageUrl": "/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FL.jpg",
+    "images": [
+      "/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FL.jpg",
+      "/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FR.jpg",
+      "/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_L.jpg",
+      "/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_R.jpg",
+      "/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_KL.jpg",
+      "/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_KR.jpg",
+      "/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_HOC.jpg",
+      "/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FL-low.jpg",
+      "/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FR-low.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER",
+    "tag": "Commercial Grade",
+    "canonicalSku": "5902014"
+  },
+  {
+    "sku": "5902016",
+    "name": "Ferris FW45 Walk-Behind",
+    "category": "Walk-Behind Mowers",
+    "engine": "Kawasaki® FX730V",
+    "horsepower": "24 hp",
+    "deckSizes": [
+      "61\""
+    ],
+    "price": 10349,
+    "msrp": 11384,
+    "description": "The FW45 61\" — the widest Ferris walk-behind, delivering maximum coverage for large commercial walk-behind applications.",
+    "features": [
+      "Kawasaki FX730V engine",
+      "Dual Hydro-Gear® ZT-3400® transaxles",
+      "61\" wide-cut fabricated deck",
+      "Dual-lever blade control",
+      "Mulch / bag / side discharge"
+    ],
+    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "canonicalSku": "5902014"
+  },
+  {
+    "sku": "5902012",
+    "name": "Ferris FB1000 Hurricane™",
+    "category": "Stand-On Blowers",
+    "engine": "Vanguard® V-Twin",
+    "horsepower": "18 hp",
+    "deckSizes": [],
+    "price": 10299,
+    "msrp": 11329,
+    "description": "The FB1000 Hurricane stand-on blower clears debris fast — built for commercial landscape crews that need maximum productivity on large properties.",
+    "features": [
+      "18 HP Vanguard V-Twin engine",
+      "Stand-on operator platform",
+      "3,500 CFM blowing power",
+      "Hydrostatic dual drive",
+      "35.5\" overall width"
+    ],
+    "imageUrl": "/images/ferris/basco/5902012/5902012_FER_FB1000_FL_TN.jpg",
+    "images": [
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_FL_TN.jpg",
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_F_BR_v2_Final.jpg",
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_FR_TN_Final.jpg",
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_FR-Chute_BR_v2_Final.jpg",
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_FR-Top_TN_Final.jpg",
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_R_BR_Final.jpg",
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_KR_BR_Final.jpg",
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_DeflectorControl-L_TN_Final.jpg",
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_Engine_BR_Final.jpg",
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_KL-AccessPanel_BR_Final.jpg",
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_KR-Controls_BR_Final.jpg",
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_PlatformFoldedUp_TN_Final.jpg",
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_F-Lifestyle_EB.jpg",
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_FL-Lifestyle_EB.jpg",
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_FR-Lifestyle_EB.jpg",
+      "/images/ferris/basco/5902012/5902012_FER_FB1000_R-Lifestyle_EB.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER"
+  },
+  {
+    "sku": "5902132",
+    "name": "Ferris FB2000 Hurricane™",
+    "category": "Stand-On Blowers",
+    "engine": "Vanguard® V-Twin",
+    "horsepower": "23 hp",
+    "deckSizes": [],
+    "price": 13199,
+    "msrp": 14519,
+    "description": "The FB2000 steps up with 4,500 CFM and 165+ mph velocity — serious debris clearing power for large commercial routes.",
+    "features": [
+      "23 HP Vanguard V-Twin engine",
+      "Stand-on operator platform",
+      "4,500 CFM airflow",
+      "165+ mph air velocity",
+      "Joystick-controlled dual deflector"
+    ],
+    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Blowers/FB2000/Product%20Images/FER_PDP_FB2000_Hero_FL.jpg",
+    "status": "AVAILABLE_TO_ORDER"
+  },
+  {
+    "sku": "5902194",
+    "name": "Ferris FB3000 Hurricane™",
+    "category": "Stand-On Blowers",
+    "engine": "Vanguard® V-Twin",
+    "horsepower": "35 hp",
+    "deckSizes": [],
+    "price": 14850,
+    "msrp": 16335,
+    "description": "The FB3000 is the most powerful stand-on blower Ferris makes — 7,500 CFM and up to 190 mph for maximum fall cleanup efficiency.",
+    "features": [
+      "35 HP Vanguard V-Twin engine",
+      "Stand-on operator platform",
+      "7,500 CFM maximum airflow",
+      "Up to 190 mph air velocity",
+      "Joystick-controlled dual deflector"
+    ],
+    "imageUrl": "/images/ferris/basco/5901810/5901810_FER_FB3000_FRONT.jpg",
+    "status": "AVAILABLE_TO_ORDER"
+  },
+  {
+    "sku": "5900533",
+    "name": "Ferris ProCut S",
+    "category": "Front Mount Mowers",
+    "engine": "Kawasaki® FS730V",
+    "horsepower": "24 hp",
+    "deckSizes": [
+      "61\""
+    ],
+    "price": 13598,
+    "msrp": 14958,
+    "description": "The ProCut S front-mount mower is built for municipalities and large-property operators who need a wide cut with rear-discharge capability.",
+    "features": [
+      "24 HP Kawasaki FS730V engine",
+      "Front-mount commercial deck",
+      "61\" cutting width",
+      "Rear-discharge cutting system",
+      "Commercial-grade construction"
+    ],
+    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Front%20Mount%20Mowers/Procut%20S/Product%20Images/FER_ProCutS_ProductImage.jpg",
+    "status": "AVAILABLE_TO_ORDER",
+    "variants": [
+      {
+        "sku": "5900533",
+        "engine": "Kawasaki® FS730V",
+        "horsepower": "24 hp",
+        "deckSize": "61\"",
+        "price": 13598,
+        "msrp": 14958,
+        "status": "AVAILABLE_TO_ORDER"
+      }
+    ]
+  },
+  {
+    "sku": "5901755",
+    "name": "Ferris Venture XC™ FS3200",
+    "category": "Ride-On Spreader/Sprayers",
+    "engine": "Kawasaki®",
+    "horsepower": "",
+    "deckSizes": [],
+    "price": 13849,
+    "msrp": 15234,
+    "description": "The Venture XC FS3200 handles both granular and liquid applications in one machine — 200 lb hopper and dual liquid spray tanks for over 1 acre of coverage.",
+    "features": [
+      "200 lb granular hopper capacity",
+      "Dual liquid spray tanks",
+      "Zero-turn maneuverability",
+      "Over 1 acre dry / 2.2 acres liquid per fill",
+      "Precision application system"
+    ],
+    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS3200/Product%20Images/FER_VentureXC-FS3200_Updated.jpg",
+    "status": "AVAILABLE_TO_ORDER"
+  },
+  {
+    "sku": "5902195",
+    "name": "Ferris Venture X",
+    "category": "Ride-On Spreader/Sprayers",
+    "engine": "Vanguard® V-Twin",
+    "horsepower": "18 hp",
+    "deckSizes": [],
+    "price": 16499,
+    "msrp": 18149,
+    "description": "The Venture X is Ferris's premium ride-on spreader/sprayer with 24 gallons of liquid capacity and zero-turn precision.",
+    "features": [
+      "18 HP Vanguard V-Twin engine",
+      "24 gallon liquid capacity",
+      "Zero-turn maneuverability",
+      "Up to 8 mph ground speed",
+      "Precision application system"
+    ],
+    "imageUrl": "/images/ferris/basco/5902195/5902195_FER_VentureX_FL_Final.jpg",
+    "images": [
+      "/images/ferris/basco/5902195/5902195_FER_VentureX_FL_Final.jpg",
+      "/images/ferris/basco/5902195/5902195_FER_VentureX_F_Final.jpg",
+      "/images/ferris/basco/5902195/5902195_FER_VentureX_FR_Final.jpg",
+      "/images/ferris/basco/5902195/5902195_FER_VentureX_L_Final.jpg",
+      "/images/ferris/basco/5902195/5902195_FER_VentureX_R_Final.jpg",
+      "/images/ferris/basco/5902195/5902195_FER_VentureX_K_Final.jpg",
+      "/images/ferris/basco/5902195/5902195_FER_VentureX_KL_Final.jpg",
+      "/images/ferris/basco/5902195/5902195_FER_VentureX_KR_Final.jpg",
+      "/images/ferris/basco/5902195/5902195_FER_VentureX_T_Final.jpg"
+    ],
+    "status": "AVAILABLE_TO_ORDER"
+  },
+  {
+    "sku": "5901753",
+    "name": "Ferris Pathfinder XC™ FS2200",
+    "category": "Ride-On Spreader/Sprayers",
+    "engine": "Honda® GX200",
+    "horsepower": "6.5 hp",
+    "deckSizes": [],
+    "price": 11249,
+    "msrp": null,
+    "description": "The Pathfinder XC FS2200 delivers precision granular and liquid application in a compact ride-on platform.",
+    "features": [
+      "Honda GX200 engine",
+      "16 gallon liquid capacity",
+      "Granular spread capability",
+      "Compact ride-on design"
+    ],
+    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS2200/Product%20Images/FER_PathfinderXC-FS2200_Updated.jpg",
+    "status": "AVAILABLE_TO_ORDER"
+  },
+  {
+    "sku": "5901752",
+    "name": "Ferris Pathfinder™ FS2100",
+    "category": "Ride-On Spreader/Sprayers",
+    "engine": "Honda®",
+    "horsepower": "",
+    "deckSizes": [],
+    "price": 10449,
+    "msrp": null,
+    "description": "The Pathfinder FS2100 is Ferris's entry-level ride-on spreader/sprayer — precise, compact, and built for residential lawn care routes.",
+    "features": [
+      "Honda engine",
+      "Ride-on operator platform",
+      "Granular and liquid application",
+      "Compact design"
+    ],
+    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS2100/Product%20Images/FER_Pathfinder-FS2100_Updated.jpg",
+    "status": "AVAILABLE_TO_ORDER"
+  },
+  {
+    "sku": "5902000",
+    "name": "Ferris Rover XC™ FS1200",
+    "category": "Ride-On Spreader/Sprayers",
+    "engine": "Vanguard® 160",
+    "horsepower": "",
+    "deckSizes": [],
+    "price": 8249,
+    "msrp": null,
+    "description": "The Rover XC FS1200 is the most compact Ferris spreader — fits through 36\" gates with a 200 lb stainless steel hopper for precise granular applications.",
+    "features": [
+      "Vanguard 160 engine",
+      "200 lb granular hopper",
+      "Stainless steel frame",
+      "Fits through 36\" gates",
+      "Precision granular application"
+    ],
+    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS1200/Product%20Images/FER_RoverXC-FS1200_Updated.jpg",
+    "status": "AVAILABLE_TO_ORDER"
+  }
 ];
 
 export function getProductsBySku(sku: string): Product | undefined {

@@ -7,6 +7,7 @@ import type { Metadata } from 'next';
 import AddToCartButton from '@/components/AddToCartButton';
 import ProductGallery from '@/components/ProductGallery';
 import FinancingOptions from '@/components/FinancingOptions';
+import VariantDeckSelector from '@/components/VariantDeckSelector';
 import StickyMobileCTA from '@/components/StickyMobileCTA';
 import ProductLeadForm from '@/components/ProductLeadForm';
 import { SuspensionWarrantyBadge, isWarrantyEligible } from '@/components/SuspensionWarrantyBadge';
@@ -200,26 +201,30 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
             </h1>
             <p className="text-gray-500 text-sm mb-5">SKU: {product.sku}</p>
 
-            {/* Price */}
-            <div className="mb-6">
-              {product.price ? (
-                <div>
-                  {product.msrp && product.msrp !== product.price && (
-                    <p className="text-gray-500 text-base line-through mb-0.5">
-                      MSRP: ${product.msrp.toLocaleString()}
-                    </p>
-                  )}
-                  <p className="text-xs font-semibold text-[#C8C8C8] uppercase tracking-widest mb-1">Dykes Motors Price</p>
-                  <p className="text-4xl font-black text-white mb-1">${product.price.toLocaleString()}</p>
-                  <p className="text-gray-500 text-sm">Cash or finance — your choice</p>
-                </div>
-              ) : (
-                <div>
-                  <p className="text-2xl font-bold text-[#C8C8C8]">Contact us for pricing</p>
-                  <p className="text-gray-500 text-sm mt-1">Call or message us for a real quote</p>
-                </div>
-              )}
-            </div>
+            {/* Interactive deck + engine selector with live price (when variants exist) */}
+            {product.variants && product.variants.length > 0 && (product.deckSizes?.length ?? 0) > 0 ? (
+              <VariantDeckSelector product={product} />
+            ) : (
+              <div className="mb-6">
+                {product.price ? (
+                  <div>
+                    {product.msrp && product.msrp !== product.price && (
+                      <p className="text-gray-500 text-base line-through mb-0.5">
+                        MSRP: ${product.msrp.toLocaleString()}
+                      </p>
+                    )}
+                    <p className="text-xs font-semibold text-[#C8C8C8] uppercase tracking-widest mb-1">Dykes Motors Price</p>
+                    <p className="text-4xl font-black text-white mb-1">${product.price.toLocaleString()}</p>
+                    <p className="text-gray-500 text-sm">Cash or finance — your choice</p>
+                  </div>
+                ) : (
+                  <div>
+                    <p className="text-2xl font-bold text-[#C8C8C8]">Contact us for pricing</p>
+                    <p className="text-gray-500 text-sm mt-1">Call or message us for a real quote</p>
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* 10-Year Suspension Warranty */}
             {isWarrantyEligible(product.name) && <SuspensionWarrantyBadge variant="detail" />}
@@ -227,12 +232,11 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
             {/* Financing options */}
             {product.price && <FinancingOptions price={product.price} />}
 
-            {/* Spec grid */}
+            {/* Spec grid — excludes deck sizes (covered by selector) */}
             <div className="grid grid-cols-2 gap-3 mb-6">
               {[
                 { label: 'Engine', value: product.engine },
                 { label: 'Horsepower', value: product.horsepower },
-                { label: 'Deck Size(s)', value: product.deckSizes.join(', ') },
                 { label: 'Category', value: product.category },
               ]
                 .filter(({ value }) => value && value.trim() !== '' && value !== 'N/A')
@@ -244,8 +248,9 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                 ))}
             </div>
 
-            {/* Engine + deck options table — shown when this family has variants */}
-            {product.variants && product.variants.length > 1 && (
+            {/* Old-style read-only variants table — kept only when the selector can't
+                show the full picture (non-deck products with multiple variants). */}
+            {product.variants && product.variants.length > 1 && (product.deckSizes?.length ?? 0) === 0 && (
               <div className="mb-6 rounded-lg border border-gray-800 bg-[#0c0c0c] overflow-hidden">
                 <div className="px-4 py-3 border-b border-gray-800 flex items-baseline justify-between">
                   <p className="text-xs font-bold text-[#C8C8C8] uppercase tracking-widest">Engine and deck options</p>
