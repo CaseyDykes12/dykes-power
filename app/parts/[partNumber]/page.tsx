@@ -141,11 +141,27 @@ export default async function PartDetailPage({ params }: { params: Promise<{ par
             {/* CTAs */}
             <div className="mb-8">
               <AddPartToCartButton part={part} />
-              <p className="text-gray-600 text-xs mt-3">
-                Questions? Call{' '}
-                <a href="tel:6013362541" className="hover:text-[#C8C8C8] transition-colors">
-                  (601) 336-2541
+
+              {/* Text Addison + install CTAs */}
+              <div className="grid grid-cols-2 gap-2 mt-3">
+                <a
+                  href={`sms:+16013362541?body=${encodeURIComponent(`Hey Addison — question about part #${part.partNumber} (${part.name}).`)}`}
+                  className="flex items-center justify-center gap-2 border border-gray-700 hover:border-[#C8C8C8] text-gray-300 hover:text-white text-sm py-2 rounded-md transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                  Text Addison
                 </a>
+                <Link
+                  href="/service"
+                  className="flex items-center justify-center gap-2 border border-gray-700 hover:border-[#C8C8C8] text-gray-300 hover:text-white text-sm py-2 rounded-md transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
+                  Book Install
+                </Link>
+              </div>
+
+              <p className="text-gray-600 text-xs mt-3 text-center">
+                Not sure about the swap? <Link href="/service" className="underline hover:text-[#C8C8C8]">Bring it by the shop</Link> — we&rsquo;ll install it for you.
               </p>
             </div>
 

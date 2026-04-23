@@ -30,19 +30,16 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-semibold">
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-sm font-semibold whitespace-nowrap">
           <Link href="/catalog" className="hover:text-[#C8C8C8] transition-colors">Shop</Link>
-          <Link href="/catalog?category=Zero+Turn+Mowers" className="hover:text-[#C8C8C8] transition-colors">Zero Turn</Link>
-          <Link href="/catalog?category=Stand-On+Mowers" className="hover:text-[#C8C8C8] transition-colors">Stand-On</Link>
           <Link href="/trailers" className="hover:text-[#C8C8C8] transition-colors">Trailers</Link>
           <Link href="/parts" className="hover:text-[#C8C8C8] transition-colors">Parts</Link>
           <Link href="/accessories" className="hover:text-[#C8C8C8] transition-colors">Accessories</Link>
           <Link href="/service" className="hover:text-[#C8C8C8] transition-colors">Service</Link>
           <Link href="/financing" className="hover:text-[#C8C8C8] transition-colors">Financing</Link>
           <Link href="/blog" className="hover:text-[#C8C8C8] transition-colors">Blog</Link>
-          <a href="/downloads/ferris-2026-catalog.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-[#C8C8C8] transition-colors">Catalog</a>
           <Link href="/contact" className="hover:text-[#C8C8C8] transition-colors">Contact</Link>
-          <a href="https://www.dykesmotors.com/inventory" target="_blank" rel="noopener noreferrer" className="hover:text-[#C8C8C8] transition-colors">Auto Inventory</a>
+          <a href="https://www.dykesmotors.com/inventory" target="_blank" rel="noopener noreferrer" className="hover:text-[#C8C8C8] transition-colors">Autos</a>
         </nav>
 
         {/* Right side */}
@@ -57,12 +54,12 @@ export default function Navbar() {
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
               <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
             </svg>
-            <span className="hidden md:inline">Call (601) 909-5380</span>
-            <span className="md:hidden">Call</span>
+            <span className="hidden lg:inline">Call (601) 909-5380</span>
+            <span className="lg:hidden">Call</span>
           </a>
-          {/* Mobile menu button */}
+          {/* Mobile / tablet menu button (hidden at lg+) */}
           <button
-            className="md:hidden text-white"
+            className="lg:hidden text-white"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
@@ -77,10 +74,10 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile category strip — horizontal scroll, always visible on phones */}
+      {/* Mobile / tablet category strip — horizontal scroll, hidden at lg+ */}
       <nav
         aria-label="Shop categories"
-        className="md:hidden border-t border-gray-800 overflow-x-auto no-scrollbar"
+        className="lg:hidden border-t border-gray-800 overflow-x-auto no-scrollbar"
       >
         <div className="flex items-center gap-1 px-3 py-2 text-xs font-semibold whitespace-nowrap">
           <Link href="/catalog" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Shop All</Link>
@@ -97,9 +94,9 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile menu */}
+      {/* Mobile / tablet menu */}
       {open && (
-        <div className="md:hidden bg-black border-t border-gray-800 px-4 py-4 flex flex-col gap-4 text-sm font-semibold">
+        <div className="lg:hidden bg-black border-t border-gray-800 px-4 py-4 flex flex-col gap-4 text-sm font-semibold">
           <Link href="/catalog" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Shop All</Link>
           <Link href="/catalog?category=Zero+Turn+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Zero Turn Mowers</Link>
           <Link href="/catalog?category=Stand-On+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Stand-On Mowers</Link>

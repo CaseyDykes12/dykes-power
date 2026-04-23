@@ -3,9 +3,24 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { parts, getAllPartCategories, getPartsByCategory, PartCategory } from '@/lib/parts';
 
+// Mower family labels for the fit finder — derived from the fits[] strings in
+// parts.ts. Adding a new family here automatically filters any part whose
+// `fits` array contains a matching substring.
+const MOWER_FAMILIES = [
+  '300S', '300R', '500S',
+  'IS 600', 'IS 700', 'IS 2600', 'IS 6200',
+  'ISX 800', 'ISX 2200', 'ISX 3300',
+  'SRS Z1', 'SRS Z2', 'SRS Z3X',
+  'FW15', 'FW25', 'FW45',
+  'F60',
+  'ProCut S', 'Venture', 'Pathfinder', 'Rover',
+  'FB1000', 'FB2000', 'FB3000',
+] as const;
+
 export default function PartsPage() {
   const [activeCategory, setActiveCategory] = useState<PartCategory | null>(null);
   const [search, setSearch] = useState('');
+  const [mowerFilter, setMowerFilter] = useState<string>('');
 
   const categories = getAllPartCategories();
 
@@ -18,17 +33,22 @@ export default function PartsPage() {
   }, [categories]);
 
   const filtered = useMemo(() => {
+    const q = search.toLowerCase();
+    const fam = mowerFilter.toLowerCase();
     return parts.filter((p) => {
       const matchCat = activeCategory ? p.category === activeCategory : true;
-      const matchSearch = search
-        ? p.name.toLowerCase().includes(search.toLowerCase()) ||
-          p.partNumber.toLowerCase().includes(search.toLowerCase()) ||
-          p.description.toLowerCase().includes(search.toLowerCase()) ||
-          p.fits.some((f) => f.toLowerCase().includes(search.toLowerCase()))
+      const matchSearch = q
+        ? p.name.toLowerCase().includes(q) ||
+          p.partNumber.toLowerCase().includes(q) ||
+          p.description.toLowerCase().includes(q) ||
+          p.fits.some((f) => f.toLowerCase().includes(q))
         : true;
-      return matchCat && matchSearch;
+      const matchMower = fam
+        ? p.fits.some((f) => f.toLowerCase().includes(fam))
+        : true;
+      return matchCat && matchSearch && matchMower;
     });
-  }, [activeCategory, search]);
+  }, [activeCategory, search, mowerFilter]);
 
   return (
     <div className="bg-[#0f0f0f] min-h-screen">
@@ -42,9 +62,42 @@ export default function PartsPage() {
           </p>
           <h1 className="text-3xl font-bold text-white">Ferris OEM Parts</h1>
           <p className="text-gray-400 mt-1">Genuine Ferris replacement parts from Collins, Mississippi — shipped nationwide.</p>
+
+          {/* Identity bar */}
+          <div className="flex flex-wrap gap-x-5 gap-y-1 mt-3 text-xs text-gray-500">
+            <span>📦 <span className="text-[#C8C8C8] font-semibold">Packed in Collins, MS</span></span>
+            <span>✂️ Boxed by a real human, not a warehouse bot</span>
+            <span>📱 Text Addison at <a href="sms:+16013362541" className="text-[#C8C8C8] hover:text-white">(601) 336-2541</a></span>
+          </div>
           <p className="text-xs text-[#C8C8C8] mt-3 font-semibold">
             Flat rate shipping $12.99 · Free shipping on orders $75+
           </p>
+
+          {/* Fit finder */}
+          <div className="mt-5 flex flex-wrap items-center gap-3 bg-[#111] border border-gray-800 rounded-xl p-3">
+            <label htmlFor="mower-filter" className="text-xs uppercase tracking-widest text-gray-400 font-semibold shrink-0">
+              Which mower do you have?
+            </label>
+            <select
+              id="mower-filter"
+              value={mowerFilter}
+              onChange={(e) => setMowerFilter(e.target.value)}
+              className="bg-[#1a1a1a] border border-gray-700 text-white rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#C8C8C8] flex-1 min-w-[180px]"
+            >
+              <option value="">Show all parts</option>
+              {MOWER_FAMILIES.map((m) => (
+                <option key={m} value={m}>{m}</option>
+              ))}
+            </select>
+            {mowerFilter && (
+              <button
+                onClick={() => setMowerFilter('')}
+                className="text-xs text-gray-500 hover:text-[#C8C8C8] transition-colors"
+              >
+                Clear
+              </button>
+            )}
+          </div>
         </div>
       </div>
 
@@ -140,9 +193,9 @@ export default function PartsPage() {
               {filtered.length} {filtered.length === 1 ? 'part' : 'parts'}
               {activeCategory && <span className="text-[#C8C8C8]"> — {activeCategory}</span>}
             </p>
-            {(activeCategory || search) && (
+            {(activeCategory || search || mowerFilter) && (
               <button
-                onClick={() => { setActiveCategory(null); setSearch(''); }}
+                onClick={() => { setActiveCategory(null); setSearch(''); setMowerFilter(''); }}
                 className="text-xs text-gray-500 hover:text-[#C8C8C8] transition-colors"
               >
                 Clear filters

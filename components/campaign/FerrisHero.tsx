@@ -65,7 +65,7 @@ export default function FerrisHero() {
         playsInline
         preload="auto"
         poster="/images/ferris/campaign/isx3300-fr.webp"
-        className="absolute inset-0 w-full h-full object-cover object-center opacity-40"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-50 md:opacity-50"
         aria-hidden="true"
       >
         <source src={`${videoBase}.webm`} type="video/webm" />
@@ -74,7 +74,7 @@ export default function FerrisHero() {
 
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80"
+        className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/25 to-black/70 md:from-black/80 md:via-black/40 md:to-black/80"
       />
 
       <div className="relative z-10 max-w-[1280px] mx-auto px-4 py-20 w-full">
