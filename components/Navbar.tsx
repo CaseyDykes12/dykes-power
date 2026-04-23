@@ -30,11 +30,46 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-sm font-semibold whitespace-nowrap">
-          <Link href="/catalog" className="hover:text-[#C8C8C8] transition-colors">Shop</Link>
-          <Link href="/trailers" className="hover:text-[#C8C8C8] transition-colors">Trailers</Link>
-          <Link href="/parts" className="hover:text-[#C8C8C8] transition-colors">Parts</Link>
-          <Link href="/accessories" className="hover:text-[#C8C8C8] transition-colors">Accessories</Link>
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-semibold whitespace-nowrap">
+          {/* Shop — dropdown */}
+          <div className="relative group">
+            <button className="flex items-center gap-1 hover:text-[#C8C8C8] transition-colors py-5" aria-haspopup="true">
+              Shop
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div className="absolute left-0 top-full mt-0 bg-black border border-gray-800 rounded-lg shadow-xl min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible focus-within:opacity-100 focus-within:visible transition-all duration-150 z-50 py-2">
+              <Link href="/catalog" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">All Mowers</Link>
+              <Link href="/catalog?category=Zero+Turn+Mowers" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Zero Turn</Link>
+              <Link href="/catalog?category=Stand-On+Mowers" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Stand-On</Link>
+              <Link href="/catalog?category=Walk-Behind+Mowers" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Walk-Behind</Link>
+              <Link href="/catalog?category=Stand-On+Blowers" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Stand-On Blowers</Link>
+              <div className="border-t border-gray-800 my-1" />
+              <Link href="/trailers" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Trailers</Link>
+              <Link href="/parts" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Parts</Link>
+              <Link href="/accessories" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Accessories</Link>
+              <div className="border-t border-gray-800 my-1" />
+              <a href="/downloads/ferris-2026-catalog.pdf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Ferris 2026 Catalog (PDF)</a>
+            </div>
+          </div>
+
+          {/* Why Ferris — dropdown */}
+          <div className="relative group">
+            <button className="flex items-center gap-1 hover:text-[#C8C8C8] transition-colors py-5" aria-haspopup="true">
+              Why Ferris
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div className="absolute left-0 top-full mt-0 bg-black border border-gray-800 rounded-lg shadow-xl min-w-[260px] opacity-0 invisible group-hover:opacity-100 group-hover:visible focus-within:opacity-100 focus-within:visible transition-all duration-150 z-50 py-2">
+              <Link href="/why-ferris" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors font-semibold">Feels Like a Ferris — Overview</Link>
+              <div className="border-t border-gray-800 my-1" />
+              <Link href="/why-ferris#suspension" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">10-Year Suspension Warranty</Link>
+              <Link href="/why-ferris#icd-cutting" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">iCD+ Cutting System</Link>
+              <Link href="/why-ferris#engines" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Vanguard EFI & ETC Engines</Link>
+              <Link href="/why-ferris#oil-guard" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Oil Guard Protection</Link>
+              <div className="border-t border-gray-800 my-1" />
+              <Link href="/why-ferris#calculators" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Productivity & ROI Calculators</Link>
+            </div>
+          </div>
+
           <Link href="/service" className="hover:text-[#C8C8C8] transition-colors">Service</Link>
           <Link href="/financing" className="hover:text-[#C8C8C8] transition-colors">Financing</Link>
           <Link href="/blog" className="hover:text-[#C8C8C8] transition-colors">Blog</Link>
@@ -91,15 +126,18 @@ export default function Navbar() {
           <Link href="/blog" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Blog</Link>
           <a href="/downloads/ferris-2026-catalog.pdf" target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Catalog</a>
           <Link href="/contact" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Contact</Link>
+          <Link href="/why-ferris" className="px-3 py-1.5 rounded-full bg-[#C8C8C8]/10 hover:bg-[#C8C8C8]/20 text-[#C8C8C8] border border-[#C8C8C8]/30">Why Ferris</Link>
         </div>
       </nav>
 
       {/* Mobile / tablet menu */}
       {open && (
         <div className="lg:hidden bg-black border-t border-gray-800 px-4 py-4 flex flex-col gap-4 text-sm font-semibold">
+          <Link href="/why-ferris" onClick={() => setOpen(false)} className="text-[#C8C8C8] font-bold">Why Ferris</Link>
           <Link href="/catalog" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Shop All</Link>
-          <Link href="/catalog?category=Zero+Turn+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Zero Turn Mowers</Link>
-          <Link href="/catalog?category=Stand-On+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Stand-On Mowers</Link>
+          <Link href="/catalog?category=Zero+Turn+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8] pl-4 text-gray-400">Zero Turn</Link>
+          <Link href="/catalog?category=Stand-On+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8] pl-4 text-gray-400">Stand-On</Link>
+          <Link href="/catalog?category=Walk-Behind+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8] pl-4 text-gray-400">Walk-Behind</Link>
           <Link href="/trailers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Trailers</Link>
           <Link href="/parts" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Parts</Link>
           <Link href="/accessories" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Accessories</Link>

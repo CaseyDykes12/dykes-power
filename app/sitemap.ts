@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/about`, lastModified: now, priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${BASE}/parts`, lastModified: now, priority: 0.8, changeFrequency: 'weekly' as const },
     { url: `${BASE}/financing`, lastModified: now, priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: `${BASE}/why-ferris`, lastModified: now, priority: 0.85, changeFrequency: 'monthly' as const },
     { url: `${BASE}/blog`, lastModified: now, priority: 0.8, changeFrequency: 'daily' as const },
     { url: `${BASE}/contact`, lastModified: now, priority: 0.7, changeFrequency: 'monthly' as const },
     { url: `${BASE}/trailers`, lastModified: now, priority: 0.7, changeFrequency: 'weekly' as const },
