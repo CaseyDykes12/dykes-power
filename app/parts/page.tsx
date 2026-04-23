@@ -6,7 +6,6 @@ import { parts, getAllPartCategories, getPartsByCategory, PartCategory } from '@
 export default function PartsPage() {
   const [activeCategory, setActiveCategory] = useState<PartCategory | null>(null);
   const [search, setSearch] = useState('');
-  const [stockFilter, setStockFilter] = useState<'all' | 'in-stock'>('all');
 
   const categories = getAllPartCategories();
 
@@ -21,16 +20,15 @@ export default function PartsPage() {
   const filtered = useMemo(() => {
     return parts.filter((p) => {
       const matchCat = activeCategory ? p.category === activeCategory : true;
-      const matchStock = stockFilter === 'in-stock' ? p.inStock : true;
       const matchSearch = search
         ? p.name.toLowerCase().includes(search.toLowerCase()) ||
           p.partNumber.toLowerCase().includes(search.toLowerCase()) ||
           p.description.toLowerCase().includes(search.toLowerCase()) ||
           p.fits.some((f) => f.toLowerCase().includes(search.toLowerCase()))
         : true;
-      return matchCat && matchStock && matchSearch;
+      return matchCat && matchSearch;
     });
-  }, [activeCategory, search, stockFilter]);
+  }, [activeCategory, search]);
 
   return (
     <div className="bg-[#0f0f0f] min-h-screen">
@@ -62,28 +60,6 @@ export default function PartsPage() {
               onChange={(e) => setSearch(e.target.value)}
               className="w-full bg-[#1a1a1a] border border-gray-700 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#C8C8C8] placeholder-gray-600"
             />
-          </div>
-
-          {/* Stock filter */}
-          <div className="mb-6">
-            <label className="text-xs font-semibold text-gray-400 uppercase tracking-widest block mb-2">
-              Availability
-            </label>
-            <div className="space-y-1">
-              {(['all', 'in-stock'] as const).map((opt) => (
-                <button
-                  key={opt}
-                  onClick={() => setStockFilter(opt)}
-                  className={`w-full text-left px-3 py-2 rounded text-sm transition-colors ${
-                    stockFilter === opt
-                      ? 'bg-[#C8C8C8] text-black font-semibold'
-                      : 'text-gray-400 hover:text-white hover:bg-[#1a1a1a]'
-                  }`}
-                >
-                  {opt === 'all' ? 'All Parts' : 'In Stock Only'}
-                </button>
-              ))}
-            </div>
           </div>
 
           {/* Categories */}
@@ -161,9 +137,9 @@ export default function PartsPage() {
               {filtered.length} {filtered.length === 1 ? 'part' : 'parts'}
               {activeCategory && <span className="text-[#C8C8C8]"> — {activeCategory}</span>}
             </p>
-            {(activeCategory || search || stockFilter !== 'all') && (
+            {(activeCategory || search) && (
               <button
-                onClick={() => { setActiveCategory(null); setSearch(''); setStockFilter('all'); }}
+                onClick={() => { setActiveCategory(null); setSearch(''); }}
                 className="text-xs text-gray-500 hover:text-[#C8C8C8] transition-colors"
               >
                 Clear filters
@@ -191,20 +167,11 @@ export default function PartsPage() {
                         OEM
                       </span>
                     )}
-                    <span className={`absolute top-2 right-2 text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${
-                      part.inStock ? 'bg-green-900 text-green-300' : 'bg-gray-800 text-gray-400'
-                    }`}>
-                      {part.inStock ? 'In Stock' : 'Call to Order'}
-                    </span>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={part.imageUrl}
                       alt={part.name}
                       className="max-h-full max-w-full object-contain opacity-70 group-hover:opacity-90 transition-opacity"
-                      onError={(e) => {
-                        const img = e.target as HTMLImageElement;
-                        img.src = '/images/parts/placeholder-part.svg';
-                      }}
                     />
                   </div>
 

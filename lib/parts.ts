@@ -20,638 +20,866 @@ export interface Part {
   name: string;
   category: PartCategory;
   description: string;
-  price: number | null; // null = pending dealer portal pricing
+  price: number;
   imageUrl: string;
-  fits: string[]; // mower model names this part fits
+  fits: string[];
   inStock: boolean;
-  oem: boolean; // true = genuine Ferris/OEM part
+  oem: boolean;
 }
 
+// Auto-generated from Ferris dealer catalog (PricePartsFerrisFULL.csv).
+// Pricing: dealer_cost × 1.40 (40% markup). Refine to competitor-median later.
 export const parts: Part[] = [
-
-  // ─── BLADES ──────────────────────────────────────────────────────────────────
   {
-    partNumber: '5020127',
-    name: 'High-Lift Blade 52"',
-    category: 'Blades',
-    description: 'Genuine Ferris high-lift blade for 52" iCD™ cutting decks. Provides superior lift and discharge for clean, consistent cuts.',
-    price: null,
-    imageUrl: '/images/parts/blade.jpg',
-    fits: ['IS 600 (52")', 'IS 700 (52")', 'ISX 800 (52")', 'ISX 2200 (52")', 'SRS Z3X (52")', 'SRS Z2 (52")', 'FW45 (52")'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5101986S",
+    "name": "High-Lift Blade Set — 48\" Deck",
+    "category": "Blades",
+    "description": "Genuine Ferris OEM blade set — BLADE SET 48 DECK. Direct factory replacement for consistent cut quality.",
+    "price": 83.99,
+    "imageUrl": "/images/parts/blade.jpg",
+    "fits": [
+      "300S (48\")",
+      "IS 600 (48\")",
+      "SRS Z1 (48\")",
+      "FW25 (48\")",
+      "FW45 (48\")"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5020128',
-    name: 'High-Lift Blade 60"',
-    category: 'Blades',
-    description: 'Genuine Ferris high-lift blade for 60" iCD™ cutting decks. Optimized for maximum airflow and clean discharge.',
-    price: null,
-    imageUrl: '/images/parts/blade.jpg',
-    fits: ['IS 700 (60")', 'ISX 800 (60")', 'ISX 2200 (60")', 'ISX 3300 (60")', 'SRS Z3X (60")', 'SRS Z2 (60")'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5101755S",
+    "name": "High-Lift Blade Set — 52\" Deck",
+    "category": "Blades",
+    "description": "Genuine Ferris OEM blade set — BLADE SET. Direct factory replacement for consistent cut quality.",
+    "price": 100.99,
+    "imageUrl": "/images/parts/blade.jpg",
+    "fits": [
+      "IS 600 (52\")",
+      "IS 700 (52\")",
+      "ISX 800 (52\")",
+      "ISX 2200 (52\")",
+      "SRS Z3X (52\")",
+      "SRS Z2 (52\")",
+      "FW45 (52\")"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5020129',
-    name: 'High-Lift Blade 48"',
-    category: 'Blades',
-    description: 'Genuine Ferris high-lift blade for 48" cutting decks. Fits 300S, IS 600, and SRS Z1 48" platforms.',
-    price: null,
-    imageUrl: '/images/parts/blade.jpg',
-    fits: ['300S (48")', 'IS 600 (48")', 'SRS Z1 (48")', 'FW25 (48")', 'FW45 (48")'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5103304S",
+    "name": "Mulching Blade Set — 52\" Deck",
+    "category": "Blades",
+    "description": "Genuine Ferris OEM blade set — BLADE SET MULCH 52 DECK. Direct factory replacement for consistent cut quality.",
+    "price": 105.99,
+    "imageUrl": "/images/parts/blade.jpg",
+    "fits": [
+      "IS 600 (52\")",
+      "IS 700 (52\")",
+      "ISX 800 (52\")",
+      "ISX 2200 (52\")",
+      "SRS Z3X (52\")"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5020130',
-    name: 'High-Lift Blade 61"',
-    category: 'Blades',
-    description: 'Genuine Ferris high-lift blade for 61" cutting decks. Designed for 500S and IS 2600 wide-cut platforms.',
-    price: null,
-    imageUrl: '/images/parts/blade.jpg',
-    fits: ['500S (61")', 'IS 2600 (61")', 'ProCut S (61")', 'FW45 (61")'],
-    inStock: false,
-    oem: true,
+    "partNumber": "5103305S",
+    "name": "Mulching Blade Set — 61\" Deck",
+    "category": "Blades",
+    "description": "Genuine Ferris OEM blade set — BLADE SET MULCH 61 DECK. Direct factory replacement for consistent cut quality.",
+    "price": 103.99,
+    "imageUrl": "/images/parts/blade.jpg",
+    "fits": [
+      "500S (61\")",
+      "IS 2600 (61\")",
+      "ProCut S (61\")"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5020131',
-    name: 'High-Lift Blade 72"',
-    category: 'Blades',
-    description: 'Genuine Ferris high-lift blade for 72" cutting decks. For IS 6200 and ISX 3300 72" commercial platforms.',
-    price: null,
-    imageUrl: '/images/parts/blade.jpg',
-    fits: ['IS 6200 (72")', 'ISX 3300 (72")', 'SRS Z3X (72")'],
-    inStock: false,
-    oem: true,
+    "partNumber": "5061827S",
+    "name": "High-Lift Blade Set — 44\" Deck",
+    "category": "Blades",
+    "description": "Genuine Ferris OEM blade set — BLADE SET 44 DECK. Direct factory replacement for consistent cut quality.",
+    "price": 88.99,
+    "imageUrl": "/images/parts/blade.jpg",
+    "fits": [
+      "Ferris 44\" decks"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5020133',
-    name: 'Mulching Blade 52"',
-    category: 'Blades',
-    description: 'Genuine Ferris mulching blade for 52" decks. Triple-cut design for fine clipping mulch without a mulch kit.',
-    price: null,
-    imageUrl: '/images/parts/blade.jpg',
-    fits: ['IS 600 (52")', 'IS 700 (52")', 'ISX 800 (52")', 'ISX 2200 (52")', 'SRS Z3X (52")'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5103306S",
+    "name": "High-Lift Blade Set — 72\" Deck",
+    "category": "Blades",
+    "description": "Genuine Ferris OEM blade set — BLADE SET MULCH 72 DECK. Direct factory replacement for consistent cut quality.",
+    "price": 113.99,
+    "imageUrl": "/images/parts/blade.jpg",
+    "fits": [
+      "IS 6200 (72\")",
+      "ISX 3300 (72\")",
+      "SRS Z3X (72\")"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5020135',
-    name: 'Gator Mulching Blade 60"',
-    category: 'Blades',
-    description: 'High-performance Gator-style mulching blade for 60" decks. Enhanced serrated edge for superior mulching capability.',
-    price: null,
-    imageUrl: '/images/parts/blade.jpg',
-    fits: ['IS 700 (60")', 'ISX 800 (60")', 'ISX 2200 (60")', 'ISX 3300 (60")'],
-    inStock: true,
-    oem: false,
+    "partNumber": "5104583FS",
+    "name": "OEM Drive Belt — 5104583FS",
+    "category": "Belts",
+    "description": "Genuine Ferris BELT. OEM belt for original-spec tension and service life.",
+    "price": 298.99,
+    "imageUrl": "/images/parts/belt.jpg",
+    "fits": [
+      "Verify fit by mower serial number — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5020140',
-    name: 'High-Lift Blade 42"',
-    category: 'Blades',
-    description: 'Genuine Ferris high-lift blade for 42" cutting decks. Fits 300R and 300S 42" platforms.',
-    price: null,
-    imageUrl: '/images/parts/blade.jpg',
-    fits: ['300R (42")', '300S (42")', 'F60 (36")'],
-    inStock: true,
-    oem: true,
-  },
-
-  // ─── BELTS ───────────────────────────────────────────────────────────────────
-  {
-    partNumber: '5021765',
-    name: 'Drive Belt — IS 600 / IS 700',
-    category: 'Belts',
-    description: 'OEM deck drive belt for IS 600 and IS 700 series mowers. Replaces worn or cracked belts for restored cutting performance.',
-    price: null,
-    imageUrl: '/images/parts/belt.jpg',
-    fits: ['IS 600 (52")', 'IS 600 (48")', 'IS 700 (52")', 'IS 700 (60")'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5105029FS",
+    "name": "OEM Drive Belt — 5105029FS",
+    "category": "Belts",
+    "description": "Genuine Ferris BELT. OEM belt for original-spec tension and service life.",
+    "price": 109.99,
+    "imageUrl": "/images/parts/belt.jpg",
+    "fits": [
+      "Verify fit by mower serial number — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5021766',
-    name: 'Drive Belt — ISX 2200',
-    category: 'Belts',
-    description: 'OEM 2-belt iCD™+ drive belt set for ISX 2200 series. Genuine Ferris for proper tension and deck engagement.',
-    price: null,
-    imageUrl: '/images/parts/belt.jpg',
-    fits: ['ISX 2200 (52")', 'ISX 2200 (60")'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5103928FS",
+    "name": "OEM Drive Belt — 5103928FS",
+    "category": "Belts",
+    "description": "Genuine Ferris BELT. OEM belt for original-spec tension and service life.",
+    "price": 156.99,
+    "imageUrl": "/images/parts/belt.jpg",
+    "fits": [
+      "Verify fit by mower serial number — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5021767',
-    name: 'Drive Belt — ISX 3300',
-    category: 'Belts',
-    description: 'OEM 2-belt iCD™+ drive belt set for ISX 3300 series. High-strength belt for heavy commercial use.',
-    price: null,
-    imageUrl: '/images/parts/belt.jpg',
-    fits: ['ISX 3300 (60")', 'ISX 3300 (72")'],
-    inStock: false,
-    oem: true,
+    "partNumber": "5105884FS",
+    "name": "OEM Drive Belt — 5105884FS",
+    "category": "Belts",
+    "description": "Genuine Ferris BELT. OEM belt for original-spec tension and service life.",
+    "price": 44.99,
+    "imageUrl": "/images/parts/belt.jpg",
+    "fits": [
+      "Verify fit by mower serial number — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5021770',
-    name: 'Drive Belt — 300S / 300R',
-    category: 'Belts',
-    description: 'OEM deck drive belt for 300S and 300R series mowers. Direct replacement for all 300-series deck sizes.',
-    price: null,
-    imageUrl: '/images/parts/belt.jpg',
-    fits: ['300S (42")', '300S (48")', '300S (52")', '300R (42")'],
-    inStock: true,
-    oem: true,
+    "partNumber": "84003255",
+    "name": "OEM Drive Belt — 84003255",
+    "category": "Belts",
+    "description": "Genuine Ferris BELT  DRIVE. OEM belt for original-spec tension and service life.",
+    "price": 126.99,
+    "imageUrl": "/images/parts/belt.jpg",
+    "fits": [
+      "Verify fit by mower serial number — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5021772',
-    name: 'Drive Belt — 500S',
-    category: 'Belts',
-    description: 'OEM deck drive belt for 500S series mowers. Fits all 500S deck configurations.',
-    price: null,
-    imageUrl: '/images/parts/belt.jpg',
-    fits: ['500S (48")', '500S (52")', '500S (61")'],
-    inStock: true,
-    oem: true,
+    "partNumber": "84009021",
+    "name": "OEM Drive Belt — 84009021",
+    "category": "Belts",
+    "description": "Genuine Ferris BELT. OEM belt for original-spec tension and service life.",
+    "price": 90.99,
+    "imageUrl": "/images/parts/belt.jpg",
+    "fits": [
+      "Verify fit by mower serial number — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5021780',
-    name: 'Drive Belt — ISX 800',
-    category: 'Belts',
-    description: 'OEM deck drive belt for ISX 800 series. Designed for Hydro-Gear ZT-3400 platform belt routing.',
-    price: null,
-    imageUrl: '/images/parts/belt.jpg',
-    fits: ['ISX 800 (52")', 'ISX 800 (60")'],
-    inStock: true,
-    oem: true,
-  },
-
-  // ─── AIR FILTERS ─────────────────────────────────────────────────────────────
-  {
-    partNumber: '5101095',
-    name: 'Air Filter — Kawasaki FX/FS Series',
-    category: 'Air Filters',
-    description: 'OEM Kawasaki air filter for FX and FS series engines. Dual-element design with foam pre-cleaner for extended engine life.',
-    price: null,
-    imageUrl: '/images/parts/air-filter.jpg',
-    fits: ['IS 600 Kawasaki', 'IS 700 Kawasaki', 'ISX 800 Kawasaki', 'ISX 2200 Kawasaki', 'SRS Z1 Kawasaki', 'SRS Z3X Kawasaki', 'FW25 Kawasaki', 'FW45 Kawasaki'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5021251SM",
+    "name": "OEM Drive Belt — 5021251SM",
+    "category": "Belts",
+    "description": "Genuine Ferris BELT. OEM belt for original-spec tension and service life.",
+    "price": 50.99,
+    "imageUrl": "/images/parts/belt.jpg",
+    "fits": [
+      "Verify fit by mower serial number — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101096',
-    name: 'Air Filter — Vanguard 810cc',
-    category: 'Air Filters',
-    description: 'OEM Vanguard air filter for 810cc engines. Dual-stage filtration for maximum protection in dusty commercial conditions.',
-    price: null,
-    imageUrl: '/images/parts/air-filter.jpg',
-    fits: ['ISX 2200 Vanguard', 'ISX 3300 Vanguard', 'SRS Z2 Vanguard', 'SRS Z3X Vanguard', 'FW45 Vanguard'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5102594FS",
+    "name": "OEM Drive Belt — 5102594FS",
+    "category": "Belts",
+    "description": "Genuine Ferris BELT SET. OEM belt for original-spec tension and service life.",
+    "price": 72.99,
+    "imageUrl": "/images/parts/belt.jpg",
+    "fits": [
+      "Verify fit by mower serial number — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101097',
-    name: 'Air Filter — Briggs & Stratton CXi/PXi',
-    category: 'Air Filters',
-    description: 'OEM B&S air filter for CXi and PXi series engines. Paper element with foam pre-cleaner wrap.',
-    price: null,
-    imageUrl: '/images/parts/air-filter.jpg',
-    fits: ['300S B&S', '300R B&S', '500S B&S', 'IS 600 B&S', 'IS 700 B&S', 'ISX 800 B&S'],
-    inStock: true,
-    oem: true,
+    "partNumber": "792303",
+    "name": "OEM Air Filter — 792303",
+    "category": "Air Filters",
+    "description": "Genuine Ferris/engine-manufacturer OEM air filter — FILTER-PRE CLEANER. Protects against dust and debris ingestion.",
+    "price": 10.99,
+    "imageUrl": "/images/parts/air-filter.jpg",
+    "fits": [
+      "Verify engine model before ordering — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101098',
-    name: 'Air Filter — Kubota Diesel',
-    category: 'Air Filters',
-    description: 'OEM Kubota air filter for IS 6200 diesel engine. Heavy-duty commercial-grade filtration.',
-    price: null,
-    imageUrl: '/images/parts/air-filter.jpg',
-    fits: ['IS 6200 Kubota Diesel'],
-    inStock: false,
-    oem: true,
-  },
-
-  // ─── OIL FILTERS ─────────────────────────────────────────────────────────────
-  {
-    partNumber: '5101110',
-    name: 'Oil Filter — Kawasaki FX/FS Series',
-    category: 'Oil Filters',
-    description: 'OEM Kawasaki oil filter for FX and FS series engines. High-capacity filter media for extended oil life.',
-    price: null,
-    imageUrl: '/images/parts/kawasaki-oil-filter.png',
-    fits: ['IS 600 Kawasaki', 'IS 700 Kawasaki', 'ISX 800 Kawasaki', 'ISX 2200 Kawasaki', 'SRS Z1 Kawasaki', 'SRS Z3X Kawasaki'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5400582B",
+    "name": "OEM Air Filter — 5400582B",
+    "category": "Air Filters",
+    "description": "Genuine Ferris/engine-manufacturer OEM air filter — PLATE  AIR FILTER - RED. Protects against dust and debris ingestion.",
+    "price": 21.99,
+    "imageUrl": "/images/parts/air-filter.jpg",
+    "fits": [
+      "Verify engine model before ordering — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101111',
-    name: 'Oil Filter — Vanguard 810cc / Big Block',
-    category: 'Oil Filters',
-    description: 'OEM Vanguard oil filter for 810cc and Big Block EFI engines. Extended-life filter for Oil Guard-equipped models.',
-    price: null,
-    imageUrl: '/images/parts/kawasaki-oil-filter.png',
-    fits: ['ISX 2200 Vanguard', 'ISX 3300 Vanguard', 'SRS Z2 Vanguard', 'SRS Z3X Vanguard'],
-    inStock: true,
-    oem: true,
+    "partNumber": "841497",
+    "name": "OEM Air Filter — 841497",
+    "category": "Air Filters",
+    "description": "Genuine Ferris/engine-manufacturer OEM air filter — FILTER-A/C CARTRIDGE. Protects against dust and debris ingestion.",
+    "price": 41.99,
+    "imageUrl": "/images/parts/air-filter.jpg",
+    "fits": [
+      "Verify engine model before ordering — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101112',
-    name: 'Oil Filter — Briggs & Stratton CXi/PXi',
-    category: 'Oil Filters',
-    description: 'OEM B&S oil filter for CXi and PXi series engines. Spin-on canister design for quick changes.',
-    price: null,
-    imageUrl: '/images/parts/kawasaki-oil-filter.png',
-    fits: ['300S B&S', '300R B&S', '500S B&S', 'IS 600 B&S', 'IS 700 B&S', 'ISX 800 B&S'],
-    inStock: true,
-    oem: true,
-  },
-
-  // ─── FUEL FILTERS ────────────────────────────────────────────────────────────
-  {
-    partNumber: '5101120',
-    name: 'In-Line Fuel Filter — Gas Engines',
-    category: 'Fuel Filters',
-    description: 'Universal in-line fuel filter for all Ferris gas engine models. Protects carburetor and injectors from fuel contamination.',
-    price: null,
-    imageUrl: '/images/parts/fuel-filter-kit.jpg',
-    fits: ['All gas engine Ferris models'],
-    inStock: true,
-    oem: true,
+    "partNumber": "84008852",
+    "name": "OEM Air Filter — 84008852",
+    "category": "Air Filters",
+    "description": "Genuine Ferris/engine-manufacturer OEM air filter — FILTER  AIR. Protects against dust and debris ingestion.",
+    "price": 91.99,
+    "imageUrl": "/images/parts/air-filter.jpg",
+    "fits": [
+      "Verify engine model before ordering — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101121',
-    name: 'Fuel Filter — Kubota Diesel',
-    category: 'Fuel Filters',
-    description: 'OEM Kubota diesel fuel filter for IS 6200. Water-separating filter for clean fuel delivery.',
-    price: null,
-    imageUrl: '/images/parts/fuel-filter-kit.jpg',
-    fits: ['IS 6200 Kubota Diesel'],
-    inStock: false,
-    oem: true,
-  },
-
-  // ─── SPARK PLUGS ─────────────────────────────────────────────────────────────
-  {
-    partNumber: '5101130',
-    name: 'Spark Plug — Kawasaki FX/FS (each)',
-    category: 'Spark Plugs',
-    description: 'OEM NGK spark plug for Kawasaki FX and FS series V-twin engines. Sold individually — most engines require 2.',
-    price: null,
-    imageUrl: '/images/parts/spark-plug.jpg',
-    fits: ['IS 600 Kawasaki', 'IS 700 Kawasaki', 'ISX 800 Kawasaki', 'ISX 2200 Kawasaki', 'SRS Z1 Kawasaki', 'SRS Z3X Kawasaki', 'FW25 Kawasaki', 'FW45 Kawasaki'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5102126X6",
+    "name": "OEM Air Filter — 5102126X6",
+    "category": "Air Filters",
+    "description": "Genuine Ferris/engine-manufacturer OEM air filter — BRKT AIR FILTER 22 24&26HP KAV  INNER. Protects against dust and debris ingestion.",
+    "price": 56.99,
+    "imageUrl": "/images/parts/air-filter.jpg",
+    "fits": [
+      "Verify engine model before ordering — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101131',
-    name: 'Spark Plug — Vanguard 810cc (each)',
-    category: 'Spark Plugs',
-    description: 'OEM spark plug for Vanguard 810cc V-twin engines. Sold individually — most engines require 2.',
-    price: null,
-    imageUrl: '/images/parts/spark-plug.jpg',
-    fits: ['ISX 2200 Vanguard', 'ISX 3300 Vanguard', 'SRS Z2 Vanguard', 'SRS Z3X Vanguard'],
-    inStock: true,
-    oem: true,
+    "partNumber": "792105",
+    "name": "OEM Air Filter — 792105",
+    "category": "Air Filters",
+    "description": "Genuine Ferris/engine-manufacturer OEM air filter — FILTER-AIR CLEANER CA. Protects against dust and debris ingestion.",
+    "price": 31.99,
+    "imageUrl": "/images/parts/air-filter.jpg",
+    "fits": [
+      "Verify engine model before ordering — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101132',
-    name: 'Spark Plug — Briggs & Stratton CXi/PXi (each)',
-    category: 'Spark Plugs',
-    description: 'OEM spark plug for Briggs & Stratton CXi and PXi series engines. Sold individually — most engines require 2.',
-    price: null,
-    imageUrl: '/images/parts/spark-plug.jpg',
-    fits: ['300S B&S', '300R B&S', '500S B&S', 'IS 600 B&S', 'IS 700 B&S', 'ISX 800 B&S'],
-    inStock: true,
-    oem: true,
-  },
-
-  // ─── SPINDLES & BEARINGS ─────────────────────────────────────────────────────
-  {
-    partNumber: '5021820',
-    name: 'Deck Spindle Assembly — 52" / 60"',
-    category: 'Spindles & Bearings',
-    description: 'Complete OEM spindle assembly with bearing for 52" and 60" iCD™ cutting decks. Heavy-duty cast housing for commercial use.',
-    price: null,
-    imageUrl: '/images/parts/spindle.jpg',
-    fits: ['IS 600 (52")', 'IS 700 (52")', 'IS 700 (60")', 'ISX 800 (52")', 'ISX 800 (60")', 'ISX 2200 (52")', 'ISX 2200 (60")', 'SRS Z3X (52")', 'SRS Z3X (60")'],
-    inStock: true,
-    oem: true,
+    "partNumber": "84009389",
+    "name": "OEM Oil Filter — 84009389",
+    "category": "Oil Filters",
+    "description": "Genuine OEM oil filter — FILTER  OIL. Spin-on element for engine longevity.",
+    "price": 50.99,
+    "imageUrl": "/images/parts/kawasaki-oil-filter.png",
+    "fits": [
+      "Verify engine model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5021821',
-    name: 'Deck Spindle Assembly — 48"',
-    category: 'Spindles & Bearings',
-    description: 'Complete OEM spindle assembly for 48" decks. Includes pre-installed bearing for drop-in replacement.',
-    price: null,
-    imageUrl: '/images/parts/spindle.jpg',
-    fits: ['300S (48")', 'IS 600 (48")', 'SRS Z1 (48")', 'FW25 (48")', 'FW45 (48")'],
-    inStock: true,
-    oem: true,
+    "partNumber": "842921",
+    "name": "OEM Oil Filter — 842921",
+    "category": "Oil Filters",
+    "description": "Genuine OEM oil filter — FILTER-OIL. Spin-on element for engine longevity.",
+    "price": 16.99,
+    "imageUrl": "/images/parts/kawasaki-oil-filter.png",
+    "fits": [
+      "Verify engine model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5021825',
-    name: 'Spindle Bearing Kit',
-    category: 'Spindles & Bearings',
-    description: 'Replacement bearing kit for Ferris deck spindles. Includes upper and lower bearings and seals.',
-    price: null,
-    imageUrl: '/images/parts/spindle.jpg',
-    fits: ['All Ferris iCD™ deck models'],
-    inStock: true,
-    oem: true,
-  },
-
-  // ─── PULLEYS ─────────────────────────────────────────────────────────────────
-  {
-    partNumber: '5021840',
-    name: 'Idler Pulley — Deck Drive',
-    category: 'Pulleys',
-    description: 'OEM idler pulley for deck drive belt system. Smooth-bore bearing pulley for consistent belt tension.',
-    price: null,
-    imageUrl: '/images/parts/pulley.jpg',
-    fits: ['IS 600', 'IS 700', 'ISX 800', 'ISX 2200', '500S', '300S', '300R'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5101026X1SM",
+    "name": "OEM Oil Filter — 5101026X1SM",
+    "category": "Oil Filters",
+    "description": "Genuine OEM oil filter — FILTER  OIL. Spin-on element for engine longevity.",
+    "price": 47.99,
+    "imageUrl": "/images/parts/kawasaki-oil-filter.png",
+    "fits": [
+      "Verify engine model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5021841',
-    name: 'Blade Drive Pulley',
-    category: 'Pulleys',
-    description: 'OEM blade drive pulley for iCD™ spindle assemblies. Precision-balanced for vibration-free operation.',
-    price: null,
-    imageUrl: '/images/parts/pulley.jpg',
-    fits: ['All Ferris iCD™ deck models'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5401130B",
+    "name": "OEM Oil Filter — 5401130B",
+    "category": "Oil Filters",
+    "description": "Genuine OEM oil filter — MOUNT  OIL FILTER - RED. Spin-on element for engine longevity.",
+    "price": 22.99,
+    "imageUrl": "/images/parts/kawasaki-oil-filter.png",
+    "fits": [
+      "Verify engine model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5021843',
-    name: 'PTO Engagement Pulley',
-    category: 'Pulleys',
-    description: 'OEM PTO clutch pulley for Ferris electric PTO systems. Precision fit for smooth engagement.',
-    price: null,
-    imageUrl: '/images/parts/pulley.jpg',
-    fits: ['IS 600', 'IS 700', 'ISX 800', 'ISX 2200', 'ISX 3300'],
-    inStock: false,
-    oem: true,
-  },
-
-  // ─── TIRES & WHEELS ──────────────────────────────────────────────────────────
-  {
-    partNumber: '5101200',
-    name: 'Rear Drive Tire 24x12-12',
-    category: 'Tires & Wheels',
-    description: 'OEM rear drive tire for zero-turn mowers. Turf-saver tread pattern for minimal lawn damage.',
-    price: null,
-    imageUrl: '/images/parts/tire-wheel.jpg',
-    fits: ['IS 600', 'IS 700', 'ISX 800', 'ISX 2200', '500S', '300S', '300R'],
-    inStock: true,
-    oem: false,
+    "partNumber": "84009883",
+    "name": "OEM Oil Filter — 84009883",
+    "category": "Oil Filters",
+    "description": "Genuine OEM oil filter — FILTER  OIL. Spin-on element for engine longevity.",
+    "price": 28.99,
+    "imageUrl": "/images/parts/kawasaki-oil-filter.png",
+    "fits": [
+      "Verify engine model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101201',
-    name: 'Front Caster Tire 13x6.5-6',
-    category: 'Tires & Wheels',
-    description: 'OEM front caster tire for zero-turn mowers. Smooth-tread design for easy pivot turns.',
-    price: null,
-    imageUrl: '/images/parts/tire-wheel.jpg',
-    fits: ['IS 600', 'IS 700', 'ISX 800', 'ISX 2200', '500S', '300S', '300R'],
-    inStock: true,
-    oem: false,
+    "partNumber": "84001895",
+    "name": "OEM Fuel Filter — 84001895",
+    "category": "Fuel Filters",
+    "description": "Genuine OEM fuel filter — FILTER  FUEL. Protects carburetor and injectors from contamination.",
+    "price": 8.99,
+    "imageUrl": "/images/parts/fuel-filter-kit.jpg",
+    "fits": [
+      "Verify engine model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101205',
-    name: 'Rear Drive Tire 26x12-12 — ISX/Commercial',
-    category: 'Tires & Wheels',
-    description: 'Heavy-duty commercial rear tire for ISX series and larger commercial mowers.',
-    price: null,
-    imageUrl: '/images/parts/tire-wheel.jpg',
-    fits: ['ISX 2200', 'ISX 3300', 'IS 6200', 'IS 2600'],
-    inStock: false,
-    oem: false,
-  },
-
-  // ─── DECK PARTS ──────────────────────────────────────────────────────────────
-  {
-    partNumber: '5021900',
-    name: 'Deck Wash Port Kit',
-    category: 'Deck Parts',
-    description: 'Install a quick-connect water fitting to flush your deck after mowing. Prevents corrosion and buildup.',
-    price: null,
-    imageUrl: '/images/parts/deck-chute.jpg',
-    fits: ['All Ferris zero-turn mowers with iCD™ deck'],
-    inStock: true,
-    oem: true,
+    "partNumber": "84009438",
+    "name": "OEM Fuel Filter — 84009438",
+    "category": "Fuel Filters",
+    "description": "Genuine OEM fuel filter — FILTER  FUEL. Protects carburetor and injectors from contamination.",
+    "price": 109.99,
+    "imageUrl": "/images/parts/fuel-filter-kit.jpg",
+    "fits": [
+      "Verify engine model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5021901',
-    name: 'Deck Height Adjustment Knob',
-    category: 'Deck Parts',
-    description: 'OEM deck height adjustment knob with detent positions. Tool-free height changes from 1.5" to 4.5".',
-    price: null,
-    imageUrl: '/images/parts/deck-chute.jpg',
-    fits: ['300S', '300R', '500S', 'IS 600', 'IS 700'],
-    inStock: true,
-    oem: true,
+    "partNumber": "84009442",
+    "name": "OEM Fuel Filter — 84009442",
+    "category": "Fuel Filters",
+    "description": "Genuine OEM fuel filter — FILTER  FUEL. Protects carburetor and injectors from contamination.",
+    "price": 70.99,
+    "imageUrl": "/images/parts/fuel-filter-kit.jpg",
+    "fits": [
+      "Verify engine model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5021905',
-    name: 'Anti-Scalp Roller Kit',
-    category: 'Deck Parts',
-    description: 'OEM anti-scalp roller set for iCD™ decks. Prevents deck gouging on uneven terrain. Set of 3.',
-    price: null,
-    imageUrl: '/images/parts/deck-chute.jpg',
-    fits: ['IS 600', 'IS 700', 'ISX 800', 'ISX 2200', 'ISX 3300', '500S'],
-    inStock: true,
-    oem: true,
-  },
-
-  // ─── ELECTRICAL ──────────────────────────────────────────────────────────────
-  {
-    partNumber: '5101300',
-    name: 'PTO Clutch — Electric',
-    category: 'Electrical',
-    description: 'OEM electric PTO clutch for Ferris zero-turn mowers. Electromagnetic engagement for smooth blade start.',
-    price: null,
-    imageUrl: '/images/parts/pto-switch.jpg',
-    fits: ['IS 600', 'IS 700', 'ISX 800', 'ISX 2200', 'ISX 3300', '500S'],
-    inStock: false,
-    oem: true,
+    "partNumber": "5021178X3FS",
+    "name": "OEM Fuel Filter — 5021178X3FS",
+    "category": "Fuel Filters",
+    "description": "Genuine OEM fuel filter — FILTER  FUEL. Protects carburetor and injectors from contamination.",
+    "price": 15.99,
+    "imageUrl": "/images/parts/fuel-filter-kit.jpg",
+    "fits": [
+      "Verify engine model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101301',
-    name: 'Ignition Switch',
-    category: 'Electrical',
-    description: 'OEM ignition key switch for Ferris mowers. 5-position switch with standard key.',
-    price: null,
-    imageUrl: '/images/parts/pto-switch.jpg',
-    fits: ['All Ferris zero-turn and walk-behind models'],
-    inStock: true,
-    oem: true,
+    "partNumber": "84003655",
+    "name": "OEM Spindle Assembly — 84003655",
+    "category": "Spindles & Bearings",
+    "description": "Genuine Ferris spindle assembly — SPINDLE ASSEMBLY. Heavy-duty cast housing for commercial use.",
+    "price": 34.99,
+    "imageUrl": "/images/parts/spindle.jpg",
+    "fits": [
+      "Verify deck model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101302',
-    name: 'Seat Safety Switch',
-    category: 'Electrical',
-    description: 'OEM operator presence seat safety switch. Required for safe mower operation — must be replaced if malfunctioning.',
-    price: null,
-    imageUrl: '/images/parts/pto-switch.jpg',
-    fits: ['All Ferris zero-turn mowers'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5416763FS",
+    "name": "OEM Spindle Assembly — 5416763FS",
+    "category": "Spindles & Bearings",
+    "description": "Genuine Ferris spindle assembly — SPINDLE ASSEMBLY. Heavy-duty cast housing for commercial use.",
+    "price": 163.99,
+    "imageUrl": "/images/parts/spindle.jpg",
+    "fits": [
+      "Verify deck model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101305',
-    name: 'Battery — 12V Commercial',
-    category: 'Electrical',
-    description: 'Heavy-duty 12V 35Ah sealed AGM battery for Ferris commercial mowers. Extended cold cranking amps for reliable starts.',
-    price: null,
-    imageUrl: '/images/parts/pto-switch.jpg',
-    fits: ['All Ferris zero-turn mowers'],
-    inStock: true,
-    oem: false,
-  },
-
-  // ─── HYDRAULIC COMPONENTS ────────────────────────────────────────────────────
-  {
-    partNumber: '5101400',
-    name: 'Hydrostatic Fluid — 1 Quart',
-    category: 'Hydraulic Components',
-    description: 'OEM-spec hydrostatic transmission fluid for Hydro-Gear transaxles. Required for ZT-3200, ZT-3400, and ZT-5400 transaxles.',
-    price: null,
-    imageUrl: '/images/parts/hydraulic-filter.jpg',
-    fits: ['All Ferris hydrostatic drive models'],
-    inStock: true,
-    oem: false,
+    "partNumber": "5100993SM",
+    "name": "OEM Spindle Assembly — 5100993SM",
+    "category": "Spindles & Bearings",
+    "description": "Genuine Ferris spindle assembly — SPINDLE ASSEMBLY. Heavy-duty cast housing for commercial use.",
+    "price": 208.99,
+    "imageUrl": "/images/parts/spindle.jpg",
+    "fits": [
+      "Verify deck model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101401',
-    name: 'Hydro-Gear Pump Return Filter',
-    category: 'Hydraulic Components',
-    description: 'OEM return filter for Hydro-Gear ZT-series transaxle systems. Replace per maintenance schedule to prevent contamination.',
-    price: null,
-    imageUrl: '/images/parts/hydraulic-filter.jpg',
-    fits: ['ISX 2200', 'ISX 3300', 'IS 6200', 'IS 2600'],
-    inStock: false,
-    oem: true,
-  },
-
-  // ─── SEATS & CONTROLS ────────────────────────────────────────────────────────
-  {
-    partNumber: '5021960',
-    name: 'Operator Seat — Standard',
-    category: 'Seats & Controls',
-    description: 'OEM replacement operator seat for Ferris zero-turn mowers. High-back design with lumbar support. Direct bolt-on replacement.',
-    price: null,
-    imageUrl: '/images/parts/seat.jpg',
-    fits: ['IS 600', 'IS 700', 'ISX 800', '500S', '300S', '300R'],
-    inStock: false,
-    oem: true,
+    "partNumber": "5417770FS",
+    "name": "OEM Spindle Assembly — 5417770FS",
+    "category": "Spindles & Bearings",
+    "description": "Genuine Ferris spindle assembly — SPINDLE ASSEMBLY. Heavy-duty cast housing for commercial use.",
+    "price": 240.99,
+    "imageUrl": "/images/parts/spindle.jpg",
+    "fits": [
+      "Verify deck model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5021961',
-    name: 'Operator Seat — Suspension (ISX)',
-    category: 'Seats & Controls',
-    description: 'OEM suspension seat for ISX series mowers. Built-in mechanical suspension for reduced operator fatigue on long jobs.',
-    price: null,
-    imageUrl: '/images/parts/seat.jpg',
-    fits: ['ISX 2200', 'ISX 3300'],
-    inStock: false,
-    oem: true,
+    "partNumber": "5104807FS",
+    "name": "OEM Spindle Assembly — 5104807FS",
+    "category": "Spindles & Bearings",
+    "description": "Genuine Ferris spindle assembly — SPINDLE ASSEMBLY. Heavy-duty cast housing for commercial use.",
+    "price": 196.99,
+    "imageUrl": "/images/parts/spindle.jpg",
+    "fits": [
+      "Verify deck model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5021965',
-    name: 'Control Arm Grip Set',
-    category: 'Seats & Controls',
-    description: 'OEM replacement lap bar grip set. Non-slip rubber grips for both control arms. Sold as a pair.',
-    price: null,
-    imageUrl: '/images/parts/seat.jpg',
-    fits: ['All Ferris zero-turn mowers'],
-    inStock: true,
-    oem: true,
-  },
-
-  // ─── ENGINE PARTS ────────────────────────────────────────────────────────────
-  {
-    partNumber: '5101500',
-    name: 'Carburetor — Kawasaki FS651V',
-    category: 'Engine Parts',
-    description: 'OEM replacement carburetor for Kawasaki FS651V engines. Genuine Kawasaki part for proper fuel metering.',
-    price: null,
-    imageUrl: '/images/parts/engine-parts.jpg',
-    fits: ['IS 600 Kawasaki FS651V', 'IS 700 Kawasaki FS', 'SRS Z1 Kawasaki'],
-    inStock: false,
-    oem: true,
+    "partNumber": "5023178SM",
+    "name": "OEM Pulley — 5023178SM",
+    "category": "Pulleys",
+    "description": "Genuine Ferris pulley — PULLEY  6.122 OD.  52. Precision-balanced for vibration-free operation.",
+    "price": 87.99,
+    "imageUrl": "/images/parts/pulley.jpg",
+    "fits": [
+      "Verify model before ordering — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101501',
-    name: 'Engine Oil — 10W-30 Commercial (1 Qt)',
-    category: 'Engine Parts',
-    description: 'Commercial-grade SAE 10W-30 engine oil for Kawasaki and Briggs engines. 1 quart.',
-    price: null,
-    imageUrl: '/images/parts/engine-parts.jpg',
-    fits: ['All gas engine Ferris models'],
-    inStock: true,
-    oem: false,
+    "partNumber": "5102496YP",
+    "name": "OEM Pulley — 5102496YP",
+    "category": "Pulleys",
+    "description": "Genuine Ferris pulley — PULLEY  IDLER. Precision-balanced for vibration-free operation.",
+    "price": 72.99,
+    "imageUrl": "/images/parts/pulley.jpg",
+    "fits": [
+      "Verify model before ordering — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5101502',
-    name: 'Engine Oil — 10W-40 (1 Qt)',
-    category: 'Engine Parts',
-    description: 'SAE 10W-40 engine oil for Vanguard engines. 1 quart. Check your engine manual for recommended viscosity.',
-    price: null,
-    imageUrl: '/images/parts/engine-parts.jpg',
-    fits: ['ISX 2200 Vanguard', 'ISX 3300 Vanguard', 'SRS Z2 Vanguard'],
-    inStock: true,
-    oem: false,
-  },
-
-  // ─── ACCESSORIES ─────────────────────────────────────────────────────────────
-  {
-    partNumber: '5022000',
-    name: 'Striping Kit — Zero Turn',
-    category: 'Accessories',
-    description: 'Bolt-on lawn striping roller kit for Ferris zero-turn mowers. Creates professional-quality stripes without slowing mowing speed.',
-    price: null,
-    imageUrl: '/images/parts/mulch-kit.jpg',
-    fits: ['IS 600', 'IS 700', 'ISX 800', 'ISX 2200', 'ISX 3300'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5102276FS",
+    "name": "OEM Pulley — 5102276FS",
+    "category": "Pulleys",
+    "description": "Genuine Ferris pulley — PULLEY  IDLER. Precision-balanced for vibration-free operation.",
+    "price": 63.99,
+    "imageUrl": "/images/parts/pulley.jpg",
+    "fits": [
+      "Verify model before ordering — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5022001',
-    name: 'Mulch Kit — 52" Deck',
-    category: 'Accessories',
-    description: 'OEM mulch kit for 52" iCD™ decks. Includes discharge blocker plate and mulching blades.',
-    price: null,
-    imageUrl: '/images/parts/mulch-kit.jpg',
-    fits: ['IS 600 (52")', 'IS 700 (52")', 'ISX 800 (52")', 'ISX 2200 (52")', 'SRS Z3X (52")'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5104528FS",
+    "name": "OEM Pulley — 5104528FS",
+    "category": "Pulleys",
+    "description": "Genuine Ferris pulley — PULLEY. Precision-balanced for vibration-free operation.",
+    "price": 91.99,
+    "imageUrl": "/images/parts/pulley.jpg",
+    "fits": [
+      "Verify model before ordering — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5022002',
-    name: 'Mulch Kit — 60" Deck',
-    category: 'Accessories',
-    description: 'OEM mulch kit for 60" iCD™+ decks. Includes discharge blocker plate and mulching blades.',
-    price: null,
-    imageUrl: '/images/parts/mulch-kit.jpg',
-    fits: ['IS 700 (60")', 'ISX 800 (60")', 'ISX 2200 (60")', 'ISX 3300 (60")'],
-    inStock: false,
-    oem: true,
+    "partNumber": "5105101YP",
+    "name": "OEM Pulley — 5105101YP",
+    "category": "Pulleys",
+    "description": "Genuine Ferris pulley — PULLEY  IDLER. Precision-balanced for vibration-free operation.",
+    "price": 56.99,
+    "imageUrl": "/images/parts/pulley.jpg",
+    "fits": [
+      "Verify model before ordering — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
   },
   {
-    partNumber: '5022010',
-    name: 'Operator Manual — IS Series',
-    category: 'Accessories',
-    description: 'Official Ferris operator manual for IS 600, IS 700, and ISX 800 series mowers. Includes maintenance schedule.',
-    price: null,
-    imageUrl: '/images/parts/mulch-kit.jpg',
-    fits: ['IS 600', 'IS 700', 'ISX 800'],
-    inStock: true,
-    oem: true,
+    "partNumber": "5022433X1SM",
+    "name": "OEM Tire/Wheel — 5022433X1SM",
+    "category": "Tires & Wheels",
+    "description": "Genuine Ferris TIRE  11 X 4.0-5 (TIR. Commercial-grade tread for zero-turn use.",
+    "price": 92.99,
+    "imageUrl": "/images/parts/tire-wheel.jpg",
+    "fits": [
+      "Verify tire size and mower model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": false
   },
+  {
+    "partNumber": "5109036FS",
+    "name": "OEM Tire/Wheel — 5109036FS",
+    "category": "Tires & Wheels",
+    "description": "Genuine Ferris TIRE ASSEMBLY. Commercial-grade tread for zero-turn use.",
+    "price": 87.99,
+    "imageUrl": "/images/parts/tire-wheel.jpg",
+    "fits": [
+      "Verify tire size and mower model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": false
+  },
+  {
+    "partNumber": "84003896",
+    "name": "OEM Tire/Wheel — 84003896",
+    "category": "Tires & Wheels",
+    "description": "Genuine Ferris TIRE ASSEMBLY. Commercial-grade tread for zero-turn use.",
+    "price": 457.99,
+    "imageUrl": "/images/parts/tire-wheel.jpg",
+    "fits": [
+      "Verify tire size and mower model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": false
+  },
+  {
+    "partNumber": "84010749",
+    "name": "OEM Tire/Wheel — 84010749",
+    "category": "Tires & Wheels",
+    "description": "Genuine Ferris WHEEL. Commercial-grade tread for zero-turn use.",
+    "price": 185.99,
+    "imageUrl": "/images/parts/tire-wheel.jpg",
+    "fits": [
+      "Verify tire size and mower model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": false
+  },
+  {
+    "partNumber": "5104433YP",
+    "name": "OEM Tire/Wheel — 5104433YP",
+    "category": "Tires & Wheels",
+    "description": "Genuine Ferris TIRE ASSM  20X10.00-8. Commercial-grade tread for zero-turn use.",
+    "price": 337.99,
+    "imageUrl": "/images/parts/tire-wheel.jpg",
+    "fits": [
+      "Verify tire size and mower model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": false
+  },
+  {
+    "partNumber": "84010178",
+    "name": "OEM Operator Seat — 84010178",
+    "category": "Seats & Controls",
+    "description": "Genuine Ferris operator seat — SEAT. Direct bolt-on replacement.",
+    "price": 1397.99,
+    "imageUrl": "/images/parts/seat.jpg",
+    "fits": [
+      "Verify mower model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "84008926",
+    "name": "OEM Operator Seat — 84008926",
+    "category": "Seats & Controls",
+    "description": "Genuine Ferris operator seat — SEAT PLATE ASSEMBLY. Direct bolt-on replacement.",
+    "price": 451.99,
+    "imageUrl": "/images/parts/seat.jpg",
+    "fits": [
+      "Verify mower model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "5415237BFS",
+    "name": "OEM Operator Seat — 5415237BFS",
+    "category": "Seats & Controls",
+    "description": "Genuine Ferris operator seat — SEAT PLATE ASSEMBLY. Direct bolt-on replacement.",
+    "price": 211.99,
+    "imageUrl": "/images/parts/seat.jpg",
+    "fits": [
+      "Verify mower model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "5601014",
+    "name": "OEM Operator Seat — 5601014",
+    "category": "Seats & Controls",
+    "description": "Genuine Ferris operator seat — ASSM  SEAT PLATE W/DECAL  F320Z-DOM. Direct bolt-on replacement.",
+    "price": 407.99,
+    "imageUrl": "/images/parts/seat.jpg",
+    "fits": [
+      "Verify mower model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "5107021FS",
+    "name": "OEM Electrical Component — 5107021FS",
+    "category": "Electrical",
+    "description": "Genuine Ferris electrical part — SWITCH  IGNITION.",
+    "price": 39.99,
+    "imageUrl": "/images/parts/pto-switch.jpg",
+    "fits": [
+      "Verify mower model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "84010299",
+    "name": "OEM Electrical Component — 84010299",
+    "category": "Electrical",
+    "description": "Genuine Ferris electrical part — SWITCH  IGNITION.",
+    "price": 60.99,
+    "imageUrl": "/images/parts/pto-switch.jpg",
+    "fits": [
+      "Verify mower model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "5020927FS",
+    "name": "OEM Electrical Component — 5020927FS",
+    "category": "Electrical",
+    "description": "Genuine Ferris electrical part — SWITCH  IGNITION.",
+    "price": 41.99,
+    "imageUrl": "/images/parts/pto-switch.jpg",
+    "fits": [
+      "Verify mower model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "5102962FS",
+    "name": "OEM Electrical Component — 5102962FS",
+    "category": "Electrical",
+    "description": "Genuine Ferris electrical part — SWITCH  IGNITION.",
+    "price": 125.99,
+    "imageUrl": "/images/parts/pto-switch.jpg",
+    "fits": [
+      "Verify mower model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "5010673X35SM",
+    "name": "OEM Deck Component — 5010673X35SM",
+    "category": "Deck Parts",
+    "description": "Genuine Ferris #40 ROLLER CHAIN.",
+    "price": 27.99,
+    "imageUrl": "/images/parts/deck-chute.jpg",
+    "fits": [
+      "Verify deck model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "5020785SM",
+    "name": "OEM Deck Component — 5020785SM",
+    "category": "Deck Parts",
+    "description": "Genuine Ferris ROLLER  DECK.",
+    "price": 36.99,
+    "imageUrl": "/images/parts/deck-chute.jpg",
+    "fits": [
+      "Verify deck model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "5410502AYP",
+    "name": "OEM Deck Component — 5410502AYP",
+    "category": "Deck Parts",
+    "description": "Genuine Ferris ROLLER MOUNT 52 & 61.",
+    "price": 143.99,
+    "imageUrl": "/images/parts/deck-chute.jpg",
+    "fits": [
+      "Verify deck model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "5010673X33FS",
+    "name": "OEM Deck Component — 5010673X33FS",
+    "category": "Deck Parts",
+    "description": "Genuine Ferris CHAIN  ROLLER.",
+    "price": 11.99,
+    "imageUrl": "/images/parts/deck-chute.jpg",
+    "fits": [
+      "Verify deck model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "1696909",
+    "name": "OEM Accessory — 1696909",
+    "category": "Accessories",
+    "description": "Genuine Ferris MULCH KIT 48. Bolt-on accessory kit.",
+    "price": 313.99,
+    "imageUrl": "/images/parts/mulch-kit.jpg",
+    "fits": [
+      "Verify mower compatibility — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "5416154BFS",
+    "name": "OEM Engine Component — 5416154BFS",
+    "category": "Engine Parts",
+    "description": "Genuine OEM engine component — MUFFLER  GUARD.",
+    "price": 240.99,
+    "imageUrl": "/images/parts/engine-parts.jpg",
+    "fits": [
+      "Verify engine model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "5102389FS",
+    "name": "OEM Engine Component — 5102389FS",
+    "category": "Engine Parts",
+    "description": "Genuine OEM engine component — MUFFLER.",
+    "price": 473.99,
+    "imageUrl": "/images/parts/engine-parts.jpg",
+    "fits": [
+      "Verify engine model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "5105069YP",
+    "name": "OEM Engine Component — 5105069YP",
+    "category": "Engine Parts",
+    "description": "Genuine OEM engine component — MUFFLER.",
+    "price": 353.99,
+    "imageUrl": "/images/parts/engine-parts.jpg",
+    "fits": [
+      "Verify engine model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "84009854",
+    "name": "OEM Engine Component — 84009854",
+    "category": "Engine Parts",
+    "description": "Genuine OEM engine component — MUFFLER.",
+    "price": 360.99,
+    "imageUrl": "/images/parts/engine-parts.jpg",
+    "fits": [
+      "Verify engine model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "84006964",
+    "name": "OEM Hydraulic Component — 84006964",
+    "category": "Hydraulic Components",
+    "description": "Genuine Hydro-Gear component — TRANSAXLE.",
+    "price": 1556.99,
+    "imageUrl": "/images/parts/hydraulic-filter.jpg",
+    "fits": [
+      "Verify transaxle model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "5102815YP",
+    "name": "OEM Hydraulic Component — 5102815YP",
+    "category": "Hydraulic Components",
+    "description": "Genuine Hydro-Gear component — WHEEL MOTOR  RH  11.9.",
+    "price": 1237.99,
+    "imageUrl": "/images/parts/hydraulic-filter.jpg",
+    "fits": [
+      "Verify transaxle model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  },
+  {
+    "partNumber": "84007620",
+    "name": "OEM Hydraulic Component — 84007620",
+    "category": "Hydraulic Components",
+    "description": "Genuine Hydro-Gear component — TRANSAXLE.",
+    "price": 1434.99,
+    "imageUrl": "/images/parts/hydraulic-filter.jpg",
+    "fits": [
+      "Verify transaxle model — call (601) 336-2541"
+    ],
+    "inStock": true,
+    "oem": true
+  }
 ];
 
 export function getPartByNumber(partNumber: string): Part | undefined {
@@ -673,6 +901,6 @@ export function searchParts(query: string): Part[] {
       p.partNumber.toLowerCase().includes(q) ||
       p.name.toLowerCase().includes(q) ||
       p.description.toLowerCase().includes(q) ||
-      p.fits.some((f) => f.toLowerCase().includes(q))
+      p.fits.some((f) => f.toLowerCase().includes(q)),
   );
 }

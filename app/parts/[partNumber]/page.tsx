@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ partNumbe
   const part = getPartByNumber(partNumber);
   if (!part) return {};
   const title = `${part.name} — Ferris OEM Part #${part.partNumber} | Dykes Motors`;
-  const description = `${part.name} (Part #${part.partNumber}). ${part.description} Fits: ${part.fits.slice(0, 4).join(', ')}. ${part.inStock ? 'In stock' : 'Available to order'} at Dykes Motors Power Equipment, Collins, MS.`;
+  const description = `${part.name} (Part #${part.partNumber}). ${part.description} Fits: ${part.fits.slice(0, 4).join(', ')}. Available at Dykes Motors Power Equipment, Collins, MS.`;
   return {
     title,
     description,
@@ -48,7 +48,7 @@ export default async function PartDetailPage({ params }: { params: Promise<{ par
         priceCurrency: 'USD',
         price: part.price,
         itemCondition: 'https://schema.org/NewCondition',
-        availability: part.inStock ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
+        availability: 'https://schema.org/InStock',
         seller: {
           '@type': 'LocalBusiness',
           name: 'Dykes Motors Power Equipment',
@@ -108,11 +108,6 @@ export default async function PartDetailPage({ params }: { params: Promise<{ par
                   Genuine OEM
                 </span>
               )}
-              <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
-                part.inStock ? 'bg-green-900 text-green-300' : 'bg-gray-800 text-gray-400'
-              }`}>
-                {part.inStock ? 'In Stock' : 'Call to Order'}
-              </span>
               <span className="bg-[#1a1a1a] text-gray-400 text-xs px-2 py-0.5 rounded border border-gray-700">
                 {part.category}
               </span>
