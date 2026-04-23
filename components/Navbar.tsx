@@ -47,8 +47,6 @@ export default function Navbar() {
               <Link href="/trailers" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Trailers</Link>
               <Link href="/parts" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Parts</Link>
               <Link href="/accessories" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Accessories</Link>
-              <div className="border-t border-gray-800 my-1" />
-              <a href="/downloads/ferris-2026-catalog.pdf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Ferris 2026 Catalog (PDF)</a>
             </div>
           </div>
 
@@ -124,7 +122,6 @@ export default function Navbar() {
           <Link href="/service" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Service</Link>
           <Link href="/financing" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Financing</Link>
           <Link href="/blog" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Blog</Link>
-          <a href="/downloads/ferris-2026-catalog.pdf" target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Catalog</a>
           <Link href="/contact" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Contact</Link>
           <Link href="/why-ferris" className="px-3 py-1.5 rounded-full bg-[#C8C8C8]/10 hover:bg-[#C8C8C8]/20 text-[#C8C8C8] border border-[#C8C8C8]/30">Why Ferris</Link>
         </div>
@@ -144,7 +141,6 @@ export default function Navbar() {
           <Link href="/service" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Service</Link>
           <Link href="/financing" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Financing</Link>
           <Link href="/blog" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Blog</Link>
-          <a href="/downloads/ferris-2026-catalog.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">2026 Catalog (PDF)</a>
           <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Contact</Link>
           <a href="https://www.dykesmotors.com/inventory" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Auto Inventory</a>
           <a href="tel:6019095380" onClick={() => setOpen(false)} className="btn-primary text-center">Call (601) 909-5380</a>

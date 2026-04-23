@@ -141,6 +141,95 @@ function sizeFromDesc(d) {
   return m ? `${m[1]}"` : '';
 }
 
+// Infer which mower models a generic part fits based on keywords in the raw
+// Ferris description. When we can't pin it down, fall back to the conservative
+// "verify" message so we don't mislead a customer.
+const DECK_FITS = {
+  '36': ['F60 (36")', 'SRS Z1 (36")', 'FW25 (36")'],
+  '42': ['300S (42")', '300R (42")'],
+  '44': ['Select 44" Ferris decks'],
+  '48': ['300S (48")', 'IS 600 (48")', 'SRS Z1 (48")', 'FW25 (48")', 'FW45 (48")', '500S (48")'],
+  '52': ['IS 600 (52")', 'IS 700 (52")', 'ISX 800 (52")', 'ISX 2200 (52")', 'SRS Z3X (52")', 'SRS Z2 (52")', 'FW45 (52")', '500S (52")', '300S (52")', 'ProCut S (61")'],
+  '60': ['IS 700 (60")', 'ISX 800 (60")', 'ISX 2200 (60")', 'ISX 3300 (60")', 'SRS Z3X (60")', 'SRS Z2 (60")'],
+  '61': ['500S (61")', 'IS 2600 (61")', 'ProCut S (61")', 'FW45 (61")'],
+  '72': ['IS 6200 (72")', 'ISX 3300 (72")', 'SRS Z3X (72")'],
+};
+
+function inferFits(rawDesc, category) {
+  const d = (rawDesc || '').toLowerCase();
+  const found = new Set();
+
+  // Deck-size keywords
+  const sizeMatch = d.match(/\b(36|42|44|48|52|60|61|72)\b/);
+  if (sizeMatch) {
+    const models = DECK_FITS[sizeMatch[1]] || [];
+    for (const m of models) found.add(m);
+  }
+
+  // Engine keywords → model families that run that engine
+  if (/kawasaki\s+fs/i.test(d)) {
+    ['IS 600 Kawasaki', 'IS 700 Kawasaki', 'SRS Z1 Kawasaki', 'FW25 Kawasaki'].forEach(m => found.add(m));
+  }
+  if (/kawasaki\s+fx/i.test(d)) {
+    ['ISX 800 Kawasaki', 'ISX 2200 Kawasaki', 'ISX 3300 Kawasaki', 'SRS Z2 Kawasaki', 'SRS Z3X Kawasaki', 'FW45 Kawasaki'].forEach(m => found.add(m));
+  }
+  if (/vanguard\s*(810|big\s*block|efi)/i.test(d) || /810cc/i.test(d)) {
+    ['ISX 2200 Vanguard', 'ISX 3300 Vanguard', 'SRS Z2 Vanguard', 'SRS Z3X Vanguard', 'FW45 Vanguard'].forEach(m => found.add(m));
+  }
+  if (/briggs|cxi|pxi|b&s|b & s/i.test(d)) {
+    ['300S B&S', '300R B&S', '500S B&S', 'IS 600 B&S', 'IS 700 B&S', 'ISX 800 B&S'].forEach(m => found.add(m));
+  }
+  if (/kubota|diesel/i.test(d)) {
+    ['IS 6200 Kubota Diesel', 'IS 2600 Yanmar Diesel'].forEach(m => found.add(m));
+  }
+
+  // Model-specific mentions
+  const modelMentions = [
+    /is\s*600/i, /is\s*700/i, /is\s*2600/i, /is\s*6200/i,
+    /isx\s*800/i, /isx\s*2200/i, /isx\s*3300/i,
+    /300\s*s/i, /300\s*r/i, /500\s*s/i,
+    /srs\s*z1/i, /srs\s*z2/i, /srs\s*z3x/i,
+    /fw15/i, /fw25/i, /fw45/i,
+    /f60/i, /procut/i, /venture/i, /pathfinder/i, /rover/i,
+    /fb1000/i, /fb2000/i, /fb3000/i,
+  ];
+  for (const re of modelMentions) {
+    const m = d.match(re);
+    if (m) {
+      const raw = m[0].toUpperCase().replace(/\s+/g, ' ').trim();
+      found.add(`Ferris ${raw}`);
+    }
+  }
+
+  // Hydro-Gear transaxle components
+  if (/zt\s*(3200|3400|5400)|hydro[-\s]*gear|transaxle/i.test(d) || category === 'Hydraulic Components') {
+    ['ISX 2200', 'ISX 3300', 'IS 6200', 'IS 2600'].forEach(m => found.add(m));
+  }
+
+  // Category-specific fallbacks when we can't pin it down from the description.
+  if (found.size === 0) {
+    const catPhrase = {
+      'Belts': 'Multiple Ferris models use this belt pattern',
+      'Pulleys': 'Fits multiple Ferris deck and drive systems',
+      'Spindles & Bearings': 'Fits multiple Ferris iCD deck configurations',
+      'Air Filters': 'Engine-specific — match by your engine family',
+      'Oil Filters': 'Engine-specific — match by your engine family',
+      'Fuel Filters': 'Universal in-line style — works on most Ferris gas engines',
+      'Spark Plugs': 'Engine-specific — match by your engine family',
+      'Tires & Wheels': 'Fits most Ferris zero-turn and stand-on platforms',
+      'Seats & Controls': 'Fits most Ferris zero-turn mowers',
+      'Electrical': 'Fits most Ferris zero-turn and walk-behind platforms',
+      'Deck Parts': 'Fits multiple Ferris deck configurations',
+      'Engine Parts': 'Engine-specific — match by your engine family',
+      'Hydraulic Components': 'Fits Hydro-Gear transaxles on ISX / IS commercial platforms',
+      'Accessories': 'Fits multiple Ferris zero-turn platforms',
+    }[category] || 'Fits multiple Ferris platforms';
+    return [catPhrase, 'Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering'];
+  }
+
+  return [...found].sort();
+}
+
 // Match helpers: pick the first row where desc contains all keywords.
 function find(keywords, opts = {}) {
   const { exclude = [], minCost = 0, maxCost = Infinity } = opts;
@@ -185,6 +274,11 @@ function add({ part, desc, cost, category, name, fits, oem = true, imageUrl, des
   const sourceText = (description || '') + ' ' + (desc || '') + ' ' + name;
   const size = sizeFromDesc(sourceText);
   const humanDescription = humanDesc(category, size, idx);
+  // If caller passed an explicit `fits` (blade targets have hand-curated lists),
+  // keep it. Otherwise infer from the raw CSV description.
+  const resolvedFits = Array.isArray(fits) && fits.length > 0 && !/^Verify\b|^multiple ferris/i.test(fits[0])
+    ? fits
+    : inferFits(sourceText, category);
   parts.push({
     partNumber: part,
     name,
@@ -192,7 +286,7 @@ function add({ part, desc, cost, category, name, fits, oem = true, imageUrl, des
     description: humanDescription,
     price: retail(cost),
     imageUrl,
-    fits,
+    fits: resolvedFits,
     inStock: true,
     oem,
     dealerCost: cost,

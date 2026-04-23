@@ -129,18 +129,8 @@ export default function WarrantyPage() {
             ))}
           </div>
           <p className="text-sm text-gray-500 mt-6">
-            From the 2026 Ferris Product Catalog. Full terms and conditions on file at our dealership.
+            From the 2026 Ferris Product Catalog. Full terms and conditions on file at our dealership — stop by or call (601) 909-5380.
           </p>
-          <div className="mt-6">
-            <Link
-              href="/downloads/ferris-2026-catalog.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block border border-gray-700 text-white font-semibold px-5 py-2 rounded-md hover:border-ferris-yellow hover:text-ferris-yellow transition-colors"
-            >
-              Download the 2026 Ferris Catalog (PDF)
-            </Link>
-          </div>
         </div>
       </section>
 

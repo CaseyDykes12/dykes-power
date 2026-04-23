@@ -134,7 +134,8 @@ export const parts: Part[] = [
     "price": 298.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
-      "Verify fit by mower serial number — call (601) 336-2541"
+      "Multiple Ferris models use this belt pattern",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -147,7 +148,8 @@ export const parts: Part[] = [
     "price": 109.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
-      "Verify fit by mower serial number — call (601) 336-2541"
+      "Multiple Ferris models use this belt pattern",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -160,7 +162,8 @@ export const parts: Part[] = [
     "price": 156.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
-      "Verify fit by mower serial number — call (601) 336-2541"
+      "Multiple Ferris models use this belt pattern",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -173,7 +176,8 @@ export const parts: Part[] = [
     "price": 44.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
-      "Verify fit by mower serial number — call (601) 336-2541"
+      "Multiple Ferris models use this belt pattern",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -186,7 +190,8 @@ export const parts: Part[] = [
     "price": 126.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
-      "Verify fit by mower serial number — call (601) 336-2541"
+      "Multiple Ferris models use this belt pattern",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -199,7 +204,8 @@ export const parts: Part[] = [
     "price": 90.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
-      "Verify fit by mower serial number — call (601) 336-2541"
+      "Multiple Ferris models use this belt pattern",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -212,7 +218,8 @@ export const parts: Part[] = [
     "price": 50.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
-      "Verify fit by mower serial number — call (601) 336-2541"
+      "Multiple Ferris models use this belt pattern",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -225,7 +232,8 @@ export const parts: Part[] = [
     "price": 72.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
-      "Verify fit by mower serial number — call (601) 336-2541"
+      "Multiple Ferris models use this belt pattern",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -238,7 +246,8 @@ export const parts: Part[] = [
     "price": 10.99,
     "imageUrl": "/images/parts/air-filter.jpg",
     "fits": [
-      "Verify engine model before ordering — call (601) 336-2541"
+      "Engine-specific — match by your engine family",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -251,7 +260,8 @@ export const parts: Part[] = [
     "price": 21.99,
     "imageUrl": "/images/parts/air-filter.jpg",
     "fits": [
-      "Verify engine model before ordering — call (601) 336-2541"
+      "Engine-specific — match by your engine family",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -264,7 +274,8 @@ export const parts: Part[] = [
     "price": 41.99,
     "imageUrl": "/images/parts/air-filter.jpg",
     "fits": [
-      "Verify engine model before ordering — call (601) 336-2541"
+      "Engine-specific — match by your engine family",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -277,7 +288,8 @@ export const parts: Part[] = [
     "price": 91.99,
     "imageUrl": "/images/parts/air-filter.jpg",
     "fits": [
-      "Verify engine model before ordering — call (601) 336-2541"
+      "Engine-specific — match by your engine family",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -290,7 +302,8 @@ export const parts: Part[] = [
     "price": 56.99,
     "imageUrl": "/images/parts/air-filter.jpg",
     "fits": [
-      "Verify engine model before ordering — call (601) 336-2541"
+      "Engine-specific — match by your engine family",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -303,7 +316,8 @@ export const parts: Part[] = [
     "price": 31.99,
     "imageUrl": "/images/parts/air-filter.jpg",
     "fits": [
-      "Verify engine model before ordering — call (601) 336-2541"
+      "Engine-specific — match by your engine family",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -316,7 +330,8 @@ export const parts: Part[] = [
     "price": 50.99,
     "imageUrl": "/images/parts/kawasaki-oil-filter.png",
     "fits": [
-      "Verify engine model — call (601) 336-2541"
+      "Engine-specific — match by your engine family",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -329,7 +344,8 @@ export const parts: Part[] = [
     "price": 16.99,
     "imageUrl": "/images/parts/kawasaki-oil-filter.png",
     "fits": [
-      "Verify engine model — call (601) 336-2541"
+      "Engine-specific — match by your engine family",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -342,7 +358,8 @@ export const parts: Part[] = [
     "price": 47.99,
     "imageUrl": "/images/parts/kawasaki-oil-filter.png",
     "fits": [
-      "Verify engine model — call (601) 336-2541"
+      "Engine-specific — match by your engine family",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -355,7 +372,8 @@ export const parts: Part[] = [
     "price": 22.99,
     "imageUrl": "/images/parts/kawasaki-oil-filter.png",
     "fits": [
-      "Verify engine model — call (601) 336-2541"
+      "Engine-specific — match by your engine family",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -368,7 +386,8 @@ export const parts: Part[] = [
     "price": 28.99,
     "imageUrl": "/images/parts/kawasaki-oil-filter.png",
     "fits": [
-      "Verify engine model — call (601) 336-2541"
+      "Engine-specific — match by your engine family",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -381,7 +400,8 @@ export const parts: Part[] = [
     "price": 8.99,
     "imageUrl": "/images/parts/fuel-filter-kit.jpg",
     "fits": [
-      "Verify engine model — call (601) 336-2541"
+      "Universal in-line style — works on most Ferris gas engines",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -394,7 +414,8 @@ export const parts: Part[] = [
     "price": 109.99,
     "imageUrl": "/images/parts/fuel-filter-kit.jpg",
     "fits": [
-      "Verify engine model — call (601) 336-2541"
+      "Universal in-line style — works on most Ferris gas engines",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -407,7 +428,8 @@ export const parts: Part[] = [
     "price": 70.99,
     "imageUrl": "/images/parts/fuel-filter-kit.jpg",
     "fits": [
-      "Verify engine model — call (601) 336-2541"
+      "Universal in-line style — works on most Ferris gas engines",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -420,7 +442,8 @@ export const parts: Part[] = [
     "price": 15.99,
     "imageUrl": "/images/parts/fuel-filter-kit.jpg",
     "fits": [
-      "Verify engine model — call (601) 336-2541"
+      "Universal in-line style — works on most Ferris gas engines",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -433,7 +456,8 @@ export const parts: Part[] = [
     "price": 34.99,
     "imageUrl": "/images/parts/spindle.jpg",
     "fits": [
-      "Verify deck model — call (601) 336-2541"
+      "Fits multiple Ferris iCD deck configurations",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -446,7 +470,8 @@ export const parts: Part[] = [
     "price": 163.99,
     "imageUrl": "/images/parts/spindle.jpg",
     "fits": [
-      "Verify deck model — call (601) 336-2541"
+      "Fits multiple Ferris iCD deck configurations",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -459,7 +484,8 @@ export const parts: Part[] = [
     "price": 208.99,
     "imageUrl": "/images/parts/spindle.jpg",
     "fits": [
-      "Verify deck model — call (601) 336-2541"
+      "Fits multiple Ferris iCD deck configurations",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -472,7 +498,8 @@ export const parts: Part[] = [
     "price": 240.99,
     "imageUrl": "/images/parts/spindle.jpg",
     "fits": [
-      "Verify deck model — call (601) 336-2541"
+      "Fits multiple Ferris iCD deck configurations",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -485,7 +512,8 @@ export const parts: Part[] = [
     "price": 196.99,
     "imageUrl": "/images/parts/spindle.jpg",
     "fits": [
-      "Verify deck model — call (601) 336-2541"
+      "Fits multiple Ferris iCD deck configurations",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -498,7 +526,16 @@ export const parts: Part[] = [
     "price": 87.99,
     "imageUrl": "/images/parts/pulley.jpg",
     "fits": [
-      "Verify model before ordering — call (601) 336-2541"
+      "300S (52\")",
+      "500S (52\")",
+      "FW45 (52\")",
+      "IS 600 (52\")",
+      "IS 700 (52\")",
+      "ISX 2200 (52\")",
+      "ISX 800 (52\")",
+      "ProCut S (61\")",
+      "SRS Z2 (52\")",
+      "SRS Z3X (52\")"
     ],
     "inStock": true,
     "oem": true
@@ -511,7 +548,8 @@ export const parts: Part[] = [
     "price": 72.99,
     "imageUrl": "/images/parts/pulley.jpg",
     "fits": [
-      "Verify model before ordering — call (601) 336-2541"
+      "Fits multiple Ferris deck and drive systems",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -524,7 +562,8 @@ export const parts: Part[] = [
     "price": 63.99,
     "imageUrl": "/images/parts/pulley.jpg",
     "fits": [
-      "Verify model before ordering — call (601) 336-2541"
+      "Fits multiple Ferris deck and drive systems",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -537,7 +576,8 @@ export const parts: Part[] = [
     "price": 91.99,
     "imageUrl": "/images/parts/pulley.jpg",
     "fits": [
-      "Verify model before ordering — call (601) 336-2541"
+      "Fits multiple Ferris deck and drive systems",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -550,7 +590,8 @@ export const parts: Part[] = [
     "price": 56.99,
     "imageUrl": "/images/parts/pulley.jpg",
     "fits": [
-      "Verify model before ordering — call (601) 336-2541"
+      "Fits multiple Ferris deck and drive systems",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -563,7 +604,8 @@ export const parts: Part[] = [
     "price": 92.99,
     "imageUrl": "/images/parts/tire-wheel.jpg",
     "fits": [
-      "Verify tire size and mower model — call (601) 336-2541"
+      "Fits most Ferris zero-turn and stand-on platforms",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": false
@@ -576,7 +618,8 @@ export const parts: Part[] = [
     "price": 87.99,
     "imageUrl": "/images/parts/tire-wheel.jpg",
     "fits": [
-      "Verify tire size and mower model — call (601) 336-2541"
+      "Fits most Ferris zero-turn and stand-on platforms",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": false
@@ -589,7 +632,8 @@ export const parts: Part[] = [
     "price": 457.99,
     "imageUrl": "/images/parts/tire-wheel.jpg",
     "fits": [
-      "Verify tire size and mower model — call (601) 336-2541"
+      "Fits most Ferris zero-turn and stand-on platforms",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": false
@@ -602,7 +646,8 @@ export const parts: Part[] = [
     "price": 185.99,
     "imageUrl": "/images/parts/tire-wheel.jpg",
     "fits": [
-      "Verify tire size and mower model — call (601) 336-2541"
+      "Fits most Ferris zero-turn and stand-on platforms",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": false
@@ -615,7 +660,8 @@ export const parts: Part[] = [
     "price": 337.99,
     "imageUrl": "/images/parts/tire-wheel.jpg",
     "fits": [
-      "Verify tire size and mower model — call (601) 336-2541"
+      "Fits most Ferris zero-turn and stand-on platforms",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": false
@@ -628,7 +674,8 @@ export const parts: Part[] = [
     "price": 1397.99,
     "imageUrl": "/images/parts/seat.jpg",
     "fits": [
-      "Verify mower model — call (601) 336-2541"
+      "Fits most Ferris zero-turn mowers",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -641,7 +688,8 @@ export const parts: Part[] = [
     "price": 451.99,
     "imageUrl": "/images/parts/seat.jpg",
     "fits": [
-      "Verify mower model — call (601) 336-2541"
+      "Fits most Ferris zero-turn mowers",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -654,7 +702,8 @@ export const parts: Part[] = [
     "price": 211.99,
     "imageUrl": "/images/parts/seat.jpg",
     "fits": [
-      "Verify mower model — call (601) 336-2541"
+      "Fits most Ferris zero-turn mowers",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -667,7 +716,8 @@ export const parts: Part[] = [
     "price": 407.99,
     "imageUrl": "/images/parts/seat.jpg",
     "fits": [
-      "Verify mower model — call (601) 336-2541"
+      "Fits most Ferris zero-turn mowers",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -680,7 +730,8 @@ export const parts: Part[] = [
     "price": 39.99,
     "imageUrl": "/images/parts/pto-switch.jpg",
     "fits": [
-      "Verify mower model — call (601) 336-2541"
+      "Fits most Ferris zero-turn and walk-behind platforms",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -693,7 +744,8 @@ export const parts: Part[] = [
     "price": 60.99,
     "imageUrl": "/images/parts/pto-switch.jpg",
     "fits": [
-      "Verify mower model — call (601) 336-2541"
+      "Fits most Ferris zero-turn and walk-behind platforms",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -706,7 +758,8 @@ export const parts: Part[] = [
     "price": 41.99,
     "imageUrl": "/images/parts/pto-switch.jpg",
     "fits": [
-      "Verify mower model — call (601) 336-2541"
+      "Fits most Ferris zero-turn and walk-behind platforms",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -719,7 +772,8 @@ export const parts: Part[] = [
     "price": 125.99,
     "imageUrl": "/images/parts/pto-switch.jpg",
     "fits": [
-      "Verify mower model — call (601) 336-2541"
+      "Fits most Ferris zero-turn and walk-behind platforms",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -732,7 +786,8 @@ export const parts: Part[] = [
     "price": 27.99,
     "imageUrl": "/images/parts/deck-chute.jpg",
     "fits": [
-      "Verify deck model — call (601) 336-2541"
+      "Fits multiple Ferris deck configurations",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -745,7 +800,8 @@ export const parts: Part[] = [
     "price": 36.99,
     "imageUrl": "/images/parts/deck-chute.jpg",
     "fits": [
-      "Verify deck model — call (601) 336-2541"
+      "Fits multiple Ferris deck configurations",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -758,7 +814,16 @@ export const parts: Part[] = [
     "price": 143.99,
     "imageUrl": "/images/parts/deck-chute.jpg",
     "fits": [
-      "Verify deck model — call (601) 336-2541"
+      "300S (52\")",
+      "500S (52\")",
+      "FW45 (52\")",
+      "IS 600 (52\")",
+      "IS 700 (52\")",
+      "ISX 2200 (52\")",
+      "ISX 800 (52\")",
+      "ProCut S (61\")",
+      "SRS Z2 (52\")",
+      "SRS Z3X (52\")"
     ],
     "inStock": true,
     "oem": true
@@ -771,7 +836,8 @@ export const parts: Part[] = [
     "price": 11.99,
     "imageUrl": "/images/parts/deck-chute.jpg",
     "fits": [
-      "Verify deck model — call (601) 336-2541"
+      "Fits multiple Ferris deck configurations",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -784,7 +850,12 @@ export const parts: Part[] = [
     "price": 313.99,
     "imageUrl": "/images/parts/mulch-kit.jpg",
     "fits": [
-      "Verify mower compatibility — call (601) 336-2541"
+      "300S (48\")",
+      "500S (48\")",
+      "FW25 (48\")",
+      "FW45 (48\")",
+      "IS 600 (48\")",
+      "SRS Z1 (48\")"
     ],
     "inStock": true,
     "oem": true
@@ -797,7 +868,8 @@ export const parts: Part[] = [
     "price": 240.99,
     "imageUrl": "/images/parts/engine-parts.jpg",
     "fits": [
-      "Verify engine model — call (601) 336-2541"
+      "Engine-specific — match by your engine family",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -810,7 +882,8 @@ export const parts: Part[] = [
     "price": 473.99,
     "imageUrl": "/images/parts/engine-parts.jpg",
     "fits": [
-      "Verify engine model — call (601) 336-2541"
+      "Engine-specific — match by your engine family",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -823,7 +896,8 @@ export const parts: Part[] = [
     "price": 353.99,
     "imageUrl": "/images/parts/engine-parts.jpg",
     "fits": [
-      "Verify engine model — call (601) 336-2541"
+      "Engine-specific — match by your engine family",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -836,7 +910,8 @@ export const parts: Part[] = [
     "price": 360.99,
     "imageUrl": "/images/parts/engine-parts.jpg",
     "fits": [
-      "Verify engine model — call (601) 336-2541"
+      "Engine-specific — match by your engine family",
+      "Text your mower model to Addison at (601) 336-2541 to confirm fit before ordering"
     ],
     "inStock": true,
     "oem": true
@@ -849,7 +924,10 @@ export const parts: Part[] = [
     "price": 1556.99,
     "imageUrl": "/images/parts/hydraulic-filter.jpg",
     "fits": [
-      "Verify transaxle model — call (601) 336-2541"
+      "IS 2600",
+      "IS 6200",
+      "ISX 2200",
+      "ISX 3300"
     ],
     "inStock": true,
     "oem": true
@@ -862,7 +940,10 @@ export const parts: Part[] = [
     "price": 1237.99,
     "imageUrl": "/images/parts/hydraulic-filter.jpg",
     "fits": [
-      "Verify transaxle model — call (601) 336-2541"
+      "IS 2600",
+      "IS 6200",
+      "ISX 2200",
+      "ISX 3300"
     ],
     "inStock": true,
     "oem": true
@@ -875,7 +956,10 @@ export const parts: Part[] = [
     "price": 1434.99,
     "imageUrl": "/images/parts/hydraulic-filter.jpg",
     "fits": [
-      "Verify transaxle model — call (601) 336-2541"
+      "IS 2600",
+      "IS 6200",
+      "ISX 2200",
+      "ISX 3300"
     ],
     "inStock": true,
     "oem": true
