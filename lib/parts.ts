@@ -34,7 +34,7 @@ export const parts: Part[] = [
     "partNumber": "5101986S",
     "name": "High-Lift Blade Set — 48\" Deck",
     "category": "Blades",
-    "description": "Genuine Ferris OEM blade set — BLADE SET 48 DECK. Direct factory replacement for consistent cut quality.",
+    "description": "3-blade set for 48\" iCD decks. Same OEM pattern Ferris builds their mowers with. Swap all three at once or you will feel it in the cut.",
     "price": 83.99,
     "imageUrl": "/images/parts/blade.jpg",
     "fits": [
@@ -51,7 +51,7 @@ export const parts: Part[] = [
     "partNumber": "5101755S",
     "name": "High-Lift Blade Set — 52\" Deck",
     "category": "Blades",
-    "description": "Genuine Ferris OEM blade set — BLADE SET. Direct factory replacement for consistent cut quality.",
+    "description": "OEM replacement set for 52\" decks. Keeps the discharge clean and the stripe sharp.",
     "price": 100.99,
     "imageUrl": "/images/parts/blade.jpg",
     "fits": [
@@ -70,7 +70,7 @@ export const parts: Part[] = [
     "partNumber": "5103304S",
     "name": "Mulching Blade Set — 52\" Deck",
     "category": "Blades",
-    "description": "Genuine Ferris OEM blade set — BLADE SET MULCH 52 DECK. Direct factory replacement for consistent cut quality.",
+    "description": "Factory blade set for 52\" decks. Run one season, replace as a set — cheaper than limping along with a dull one.",
     "price": 105.99,
     "imageUrl": "/images/parts/blade.jpg",
     "fits": [
@@ -87,7 +87,7 @@ export const parts: Part[] = [
     "partNumber": "5103305S",
     "name": "Mulching Blade Set — 61\" Deck",
     "category": "Blades",
-    "description": "Genuine Ferris OEM blade set — BLADE SET MULCH 61 DECK. Direct factory replacement for consistent cut quality.",
+    "description": "61\" deck blade set. Same part Ferris puts on new mowers — don’t settle for the off-brand.",
     "price": 103.99,
     "imageUrl": "/images/parts/blade.jpg",
     "fits": [
@@ -102,7 +102,7 @@ export const parts: Part[] = [
     "partNumber": "5061827S",
     "name": "High-Lift Blade Set — 44\" Deck",
     "category": "Blades",
-    "description": "Genuine Ferris OEM blade set — BLADE SET 44 DECK. Direct factory replacement for consistent cut quality.",
+    "description": "44\" deck blade set, OEM pattern. Sharpen twice, replace as a set on the third go.",
     "price": 88.99,
     "imageUrl": "/images/parts/blade.jpg",
     "fits": [
@@ -115,7 +115,7 @@ export const parts: Part[] = [
     "partNumber": "5103306S",
     "name": "High-Lift Blade Set — 72\" Deck",
     "category": "Blades",
-    "description": "Genuine Ferris OEM blade set — BLADE SET MULCH 72 DECK. Direct factory replacement for consistent cut quality.",
+    "description": "Ferris blade set for 72\" decks. Balanced at the factory — aftermarket sets throw vibration.",
     "price": 113.99,
     "imageUrl": "/images/parts/blade.jpg",
     "fits": [
@@ -130,7 +130,7 @@ export const parts: Part[] = [
     "partNumber": "5104583FS",
     "name": "OEM Drive Belt — 5104583FS",
     "category": "Belts",
-    "description": "Genuine Ferris BELT. OEM belt for original-spec tension and service life.",
+    "description": "OEM drive belt. Run the aftermarket version and you will be back in a season — not worth the $30 you saved.",
     "price": 298.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
@@ -143,7 +143,7 @@ export const parts: Part[] = [
     "partNumber": "5105029FS",
     "name": "OEM Drive Belt — 5105029FS",
     "category": "Belts",
-    "description": "Genuine Ferris BELT. OEM belt for original-spec tension and service life.",
+    "description": "Factory belt, same part Ferris ships from Munnsville. Tension and length matched to the deck.",
     "price": 109.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
@@ -156,7 +156,7 @@ export const parts: Part[] = [
     "partNumber": "5103928FS",
     "name": "OEM Drive Belt — 5103928FS",
     "category": "Belts",
-    "description": "Genuine Ferris BELT. OEM belt for original-spec tension and service life.",
+    "description": "Direct replacement belt. If the deck is slipping or squealing, this is usually your fix.",
     "price": 156.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
@@ -169,7 +169,7 @@ export const parts: Part[] = [
     "partNumber": "5105884FS",
     "name": "OEM Drive Belt — 5105884FS",
     "category": "Belts",
-    "description": "Genuine Ferris BELT. OEM belt for original-spec tension and service life.",
+    "description": "OEM belt for the iCD drive system. Belts that stretch throw the whole deck off — stay OEM.",
     "price": 44.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
@@ -182,7 +182,7 @@ export const parts: Part[] = [
     "partNumber": "84003255",
     "name": "OEM Drive Belt — 84003255",
     "category": "Belts",
-    "description": "Genuine Ferris BELT  DRIVE. OEM belt for original-spec tension and service life.",
+    "description": "Factory spec drive belt. Generics always look close on the tape measure and never run right.",
     "price": 126.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
@@ -195,7 +195,7 @@ export const parts: Part[] = [
     "partNumber": "84009021",
     "name": "OEM Drive Belt — 84009021",
     "category": "Belts",
-    "description": "Genuine Ferris BELT. OEM belt for original-spec tension and service life.",
+    "description": "OEM replacement. Keep a spare in the shop — belts fail mid-job, not on a Sunday afternoon.",
     "price": 90.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
@@ -208,7 +208,7 @@ export const parts: Part[] = [
     "partNumber": "5021251SM",
     "name": "OEM Drive Belt — 5021251SM",
     "category": "Belts",
-    "description": "Genuine Ferris BELT. OEM belt for original-spec tension and service life.",
+    "description": "Same belt the factory uses. If yours is glazed or cracked, don’t wait for it to snap.",
     "price": 50.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
@@ -221,7 +221,7 @@ export const parts: Part[] = [
     "partNumber": "5102594FS",
     "name": "OEM Drive Belt — 5102594FS",
     "category": "Belts",
-    "description": "Genuine Ferris BELT SET. OEM belt for original-spec tension and service life.",
+    "description": "Factory belt, original spec. One of those parts you only miss when it’s gone.",
     "price": 72.99,
     "imageUrl": "/images/parts/belt.jpg",
     "fits": [
@@ -234,7 +234,7 @@ export const parts: Part[] = [
     "partNumber": "792303",
     "name": "OEM Air Filter — 792303",
     "category": "Air Filters",
-    "description": "Genuine Ferris/engine-manufacturer OEM air filter — FILTER-PRE CLEANER. Protects against dust and debris ingestion.",
+    "description": "OEM air filter. Change it yearly or every 200 hours, whichever hits first.",
     "price": 10.99,
     "imageUrl": "/images/parts/air-filter.jpg",
     "fits": [
@@ -247,7 +247,7 @@ export const parts: Part[] = [
     "partNumber": "5400582B",
     "name": "OEM Air Filter — 5400582B",
     "category": "Air Filters",
-    "description": "Genuine Ferris/engine-manufacturer OEM air filter — PLATE  AIR FILTER - RED. Protects against dust and debris ingestion.",
+    "description": "Paper element with pre-cleaner wrap. Cheap insurance against dust eating your engine.",
     "price": 21.99,
     "imageUrl": "/images/parts/air-filter.jpg",
     "fits": [
@@ -260,7 +260,7 @@ export const parts: Part[] = [
     "partNumber": "841497",
     "name": "OEM Air Filter — 841497",
     "category": "Air Filters",
-    "description": "Genuine Ferris/engine-manufacturer OEM air filter — FILTER-A/C CARTRIDGE. Protects against dust and debris ingestion.",
+    "description": "Factory service part. If you’re mowing dry dusty lots, check it every 50 hours.",
     "price": 41.99,
     "imageUrl": "/images/parts/air-filter.jpg",
     "fits": [
@@ -273,7 +273,7 @@ export const parts: Part[] = [
     "partNumber": "84008852",
     "name": "OEM Air Filter — 84008852",
     "category": "Air Filters",
-    "description": "Genuine Ferris/engine-manufacturer OEM air filter — FILTER  AIR. Protects against dust and debris ingestion.",
+    "description": "OEM replacement. The generic ones on Amazon fit loose and let grit past.",
     "price": 91.99,
     "imageUrl": "/images/parts/air-filter.jpg",
     "fits": [
@@ -286,7 +286,7 @@ export const parts: Part[] = [
     "partNumber": "5102126X6",
     "name": "OEM Air Filter — 5102126X6",
     "category": "Air Filters",
-    "description": "Genuine Ferris/engine-manufacturer OEM air filter — BRKT AIR FILTER 22 24&26HP KAV  INNER. Protects against dust and debris ingestion.",
+    "description": "Original-spec air filter. Pre-cleaner wrap pulls off for a tap-out, element goes yearly.",
     "price": 56.99,
     "imageUrl": "/images/parts/air-filter.jpg",
     "fits": [
@@ -299,7 +299,7 @@ export const parts: Part[] = [
     "partNumber": "792105",
     "name": "OEM Air Filter — 792105",
     "category": "Air Filters",
-    "description": "Genuine Ferris/engine-manufacturer OEM air filter — FILTER-AIR CLEANER CA. Protects against dust and debris ingestion.",
+    "description": "Factory air filter. Running a dirty one costs you horsepower and fuel both.",
     "price": 31.99,
     "imageUrl": "/images/parts/air-filter.jpg",
     "fits": [
@@ -312,7 +312,7 @@ export const parts: Part[] = [
     "partNumber": "84009389",
     "name": "OEM Oil Filter — 84009389",
     "category": "Oil Filters",
-    "description": "Genuine OEM oil filter — FILTER  OIL. Spin-on element for engine longevity.",
+    "description": "Spin-on oil filter. Swap it every oil change — don’t skip it.",
     "price": 50.99,
     "imageUrl": "/images/parts/kawasaki-oil-filter.png",
     "fits": [
@@ -325,7 +325,7 @@ export const parts: Part[] = [
     "partNumber": "842921",
     "name": "OEM Oil Filter — 842921",
     "category": "Oil Filters",
-    "description": "Genuine OEM oil filter — FILTER-OIL. Spin-on element for engine longevity.",
+    "description": "OEM filter. An $8 filter beats a $3,000 engine every time.",
     "price": 16.99,
     "imageUrl": "/images/parts/kawasaki-oil-filter.png",
     "fits": [
@@ -338,7 +338,7 @@ export const parts: Part[] = [
     "partNumber": "5101026X1SM",
     "name": "OEM Oil Filter — 5101026X1SM",
     "category": "Oil Filters",
-    "description": "Genuine OEM oil filter — FILTER  OIL. Spin-on element for engine longevity.",
+    "description": "Factory spec spin-on. Same one the dealer puts on at service.",
     "price": 47.99,
     "imageUrl": "/images/parts/kawasaki-oil-filter.png",
     "fits": [
@@ -351,7 +351,7 @@ export const parts: Part[] = [
     "partNumber": "5401130B",
     "name": "OEM Oil Filter — 5401130B",
     "category": "Oil Filters",
-    "description": "Genuine OEM oil filter — MOUNT  OIL FILTER - RED. Spin-on element for engine longevity.",
+    "description": "OEM replacement filter. Spins on by hand — snug it a three-quarter turn after it seats.",
     "price": 22.99,
     "imageUrl": "/images/parts/kawasaki-oil-filter.png",
     "fits": [
@@ -364,7 +364,7 @@ export const parts: Part[] = [
     "partNumber": "84009883",
     "name": "OEM Oil Filter — 84009883",
     "category": "Oil Filters",
-    "description": "Genuine OEM oil filter — FILTER  OIL. Spin-on element for engine longevity.",
+    "description": "Original spec oil filter. Skipping this on an oil change is how engines die young.",
     "price": 28.99,
     "imageUrl": "/images/parts/kawasaki-oil-filter.png",
     "fits": [
@@ -377,7 +377,7 @@ export const parts: Part[] = [
     "partNumber": "84001895",
     "name": "OEM Fuel Filter — 84001895",
     "category": "Fuel Filters",
-    "description": "Genuine OEM fuel filter — FILTER  FUEL. Protects carburetor and injectors from contamination.",
+    "description": "In-line fuel filter. Keeps the carburetor clean and the engine starting.",
     "price": 8.99,
     "imageUrl": "/images/parts/fuel-filter-kit.jpg",
     "fits": [
@@ -390,7 +390,7 @@ export const parts: Part[] = [
     "partNumber": "84009438",
     "name": "OEM Fuel Filter — 84009438",
     "category": "Fuel Filters",
-    "description": "Genuine OEM fuel filter — FILTER  FUEL. Protects carburetor and injectors from contamination.",
+    "description": "OEM replacement. Swap yearly or when you notice hard starting.",
     "price": 109.99,
     "imageUrl": "/images/parts/fuel-filter-kit.jpg",
     "fits": [
@@ -403,7 +403,7 @@ export const parts: Part[] = [
     "partNumber": "84009442",
     "name": "OEM Fuel Filter — 84009442",
     "category": "Fuel Filters",
-    "description": "Genuine OEM fuel filter — FILTER  FUEL. Protects carburetor and injectors from contamination.",
+    "description": "Factory fuel filter. Gum builds up fast in ethanol fuel — stay ahead of it.",
     "price": 70.99,
     "imageUrl": "/images/parts/fuel-filter-kit.jpg",
     "fits": [
@@ -416,7 +416,7 @@ export const parts: Part[] = [
     "partNumber": "5021178X3FS",
     "name": "OEM Fuel Filter — 5021178X3FS",
     "category": "Fuel Filters",
-    "description": "Genuine OEM fuel filter — FILTER  FUEL. Protects carburetor and injectors from contamination.",
+    "description": "Original-spec filter. Plumb it with the flow arrow pointing toward the carb.",
     "price": 15.99,
     "imageUrl": "/images/parts/fuel-filter-kit.jpg",
     "fits": [
@@ -429,7 +429,7 @@ export const parts: Part[] = [
     "partNumber": "84003655",
     "name": "OEM Spindle Assembly — 84003655",
     "category": "Spindles & Bearings",
-    "description": "Genuine Ferris spindle assembly — SPINDLE ASSEMBLY. Heavy-duty cast housing for commercial use.",
+    "description": "Drop-in spindle assembly with bearing already pressed in. Saves you the shop press fee.",
     "price": 34.99,
     "imageUrl": "/images/parts/spindle.jpg",
     "fits": [
@@ -442,7 +442,7 @@ export const parts: Part[] = [
     "partNumber": "5416763FS",
     "name": "OEM Spindle Assembly — 5416763FS",
     "category": "Spindles & Bearings",
-    "description": "Genuine Ferris spindle assembly — SPINDLE ASSEMBLY. Heavy-duty cast housing for commercial use.",
+    "description": "Complete OEM spindle. Bolt it on and re-belt — done in 20 minutes.",
     "price": 163.99,
     "imageUrl": "/images/parts/spindle.jpg",
     "fits": [
@@ -455,7 +455,7 @@ export const parts: Part[] = [
     "partNumber": "5100993SM",
     "name": "OEM Spindle Assembly — 5100993SM",
     "category": "Spindles & Bearings",
-    "description": "Genuine Ferris spindle assembly — SPINDLE ASSEMBLY. Heavy-duty cast housing for commercial use.",
+    "description": "Factory spindle assembly. Replace in pairs on the same deck — bearings wear together.",
     "price": 208.99,
     "imageUrl": "/images/parts/spindle.jpg",
     "fits": [
@@ -468,7 +468,7 @@ export const parts: Part[] = [
     "partNumber": "5417770FS",
     "name": "OEM Spindle Assembly — 5417770FS",
     "category": "Spindles & Bearings",
-    "description": "Genuine Ferris spindle assembly — SPINDLE ASSEMBLY. Heavy-duty cast housing for commercial use.",
+    "description": "Pre-assembled OEM spindle. If yours has play in the shaft or hum under load, it’s toast.",
     "price": 240.99,
     "imageUrl": "/images/parts/spindle.jpg",
     "fits": [
@@ -481,7 +481,7 @@ export const parts: Part[] = [
     "partNumber": "5104807FS",
     "name": "OEM Spindle Assembly — 5104807FS",
     "category": "Spindles & Bearings",
-    "description": "Genuine Ferris spindle assembly — SPINDLE ASSEMBLY. Heavy-duty cast housing for commercial use.",
+    "description": "Original-spec spindle. The cast housing matters — stamped-steel knock-offs crack.",
     "price": 196.99,
     "imageUrl": "/images/parts/spindle.jpg",
     "fits": [
@@ -494,7 +494,7 @@ export const parts: Part[] = [
     "partNumber": "5023178SM",
     "name": "OEM Pulley — 5023178SM",
     "category": "Pulleys",
-    "description": "Genuine Ferris pulley — PULLEY  6.122 OD.  52. Precision-balanced for vibration-free operation.",
+    "description": "OEM replacement pulley. Precision-balanced so the belt doesn’t walk.",
     "price": 87.99,
     "imageUrl": "/images/parts/pulley.jpg",
     "fits": [
@@ -507,7 +507,7 @@ export const parts: Part[] = [
     "partNumber": "5102496YP",
     "name": "OEM Pulley — 5102496YP",
     "category": "Pulleys",
-    "description": "Genuine Ferris pulley — PULLEY  IDLER. Precision-balanced for vibration-free operation.",
+    "description": "Factory-spec pulley. If the belt is chewing itself up, this is usually why.",
     "price": 72.99,
     "imageUrl": "/images/parts/pulley.jpg",
     "fits": [
@@ -520,7 +520,7 @@ export const parts: Part[] = [
     "partNumber": "5102276FS",
     "name": "OEM Pulley — 5102276FS",
     "category": "Pulleys",
-    "description": "Genuine Ferris pulley — PULLEY  IDLER. Precision-balanced for vibration-free operation.",
+    "description": "Direct replacement. Same bore and groove as original.",
     "price": 63.99,
     "imageUrl": "/images/parts/pulley.jpg",
     "fits": [
@@ -533,7 +533,7 @@ export const parts: Part[] = [
     "partNumber": "5104528FS",
     "name": "OEM Pulley — 5104528FS",
     "category": "Pulleys",
-    "description": "Genuine Ferris pulley — PULLEY. Precision-balanced for vibration-free operation.",
+    "description": "Original OEM pulley. Aftermarket pulleys run rough and eat belts.",
     "price": 91.99,
     "imageUrl": "/images/parts/pulley.jpg",
     "fits": [
@@ -546,7 +546,7 @@ export const parts: Part[] = [
     "partNumber": "5105101YP",
     "name": "OEM Pulley — 5105101YP",
     "category": "Pulleys",
-    "description": "Genuine Ferris pulley — PULLEY  IDLER. Precision-balanced for vibration-free operation.",
+    "description": "Factory pulley. Spin the old one by hand — if the bearing growls, replace it now.",
     "price": 56.99,
     "imageUrl": "/images/parts/pulley.jpg",
     "fits": [
@@ -559,7 +559,7 @@ export const parts: Part[] = [
     "partNumber": "5022433X1SM",
     "name": "OEM Tire/Wheel — 5022433X1SM",
     "category": "Tires & Wheels",
-    "description": "Genuine Ferris TIRE  11 X 4.0-5 (TIR. Commercial-grade tread for zero-turn use.",
+    "description": "Turf-saver tread. Pivots on the grass without tearing it up.",
     "price": 92.99,
     "imageUrl": "/images/parts/tire-wheel.jpg",
     "fits": [
@@ -572,7 +572,7 @@ export const parts: Part[] = [
     "partNumber": "5109036FS",
     "name": "OEM Tire/Wheel — 5109036FS",
     "category": "Tires & Wheels",
-    "description": "Genuine Ferris TIRE ASSEMBLY. Commercial-grade tread for zero-turn use.",
+    "description": "Standard zero-turn rear drive tire. Bolt pattern matches factory.",
     "price": 87.99,
     "imageUrl": "/images/parts/tire-wheel.jpg",
     "fits": [
@@ -585,7 +585,7 @@ export const parts: Part[] = [
     "partNumber": "84003896",
     "name": "OEM Tire/Wheel — 84003896",
     "category": "Tires & Wheels",
-    "description": "Genuine Ferris TIRE ASSEMBLY. Commercial-grade tread for zero-turn use.",
+    "description": "Replacement tire, same size as stock. Run around 10 PSI for the best ride.",
     "price": 457.99,
     "imageUrl": "/images/parts/tire-wheel.jpg",
     "fits": [
@@ -598,7 +598,7 @@ export const parts: Part[] = [
     "partNumber": "84010749",
     "name": "OEM Tire/Wheel — 84010749",
     "category": "Tires & Wheels",
-    "description": "Genuine Ferris WHEEL. Commercial-grade tread for zero-turn use.",
+    "description": "Factory-size tire. Matching fronts and rears is the single easiest way to improve ride quality.",
     "price": 185.99,
     "imageUrl": "/images/parts/tire-wheel.jpg",
     "fits": [
@@ -611,7 +611,7 @@ export const parts: Part[] = [
     "partNumber": "5104433YP",
     "name": "OEM Tire/Wheel — 5104433YP",
     "category": "Tires & Wheels",
-    "description": "Genuine Ferris TIRE ASSM  20X10.00-8. Commercial-grade tread for zero-turn use.",
+    "description": "OEM-spec tire. Air pressure changes your scalp and ride more than most people realize.",
     "price": 337.99,
     "imageUrl": "/images/parts/tire-wheel.jpg",
     "fits": [
@@ -624,7 +624,7 @@ export const parts: Part[] = [
     "partNumber": "84010178",
     "name": "OEM Operator Seat — 84010178",
     "category": "Seats & Controls",
-    "description": "Genuine Ferris operator seat — SEAT. Direct bolt-on replacement.",
+    "description": "Direct bolt-in operator seat. Same mount as factory — no bracket work.",
     "price": 1397.99,
     "imageUrl": "/images/parts/seat.jpg",
     "fits": [
@@ -637,7 +637,7 @@ export const parts: Part[] = [
     "partNumber": "84008926",
     "name": "OEM Operator Seat — 84008926",
     "category": "Seats & Controls",
-    "description": "Genuine Ferris operator seat — SEAT PLATE ASSEMBLY. Direct bolt-on replacement.",
+    "description": "OEM replacement seat. If you’re mowing 30+ hours a week this isn’t a luxury.",
     "price": 451.99,
     "imageUrl": "/images/parts/seat.jpg",
     "fits": [
@@ -650,7 +650,7 @@ export const parts: Part[] = [
     "partNumber": "5415237BFS",
     "name": "OEM Operator Seat — 5415237BFS",
     "category": "Seats & Controls",
-    "description": "Genuine Ferris operator seat — SEAT PLATE ASSEMBLY. Direct bolt-on replacement.",
+    "description": "Factory seat. Worn-out seats are the #1 comfort complaint — fix it before your back tells you to.",
     "price": 211.99,
     "imageUrl": "/images/parts/seat.jpg",
     "fits": [
@@ -663,7 +663,7 @@ export const parts: Part[] = [
     "partNumber": "5601014",
     "name": "OEM Operator Seat — 5601014",
     "category": "Seats & Controls",
-    "description": "Genuine Ferris operator seat — ASSM  SEAT PLATE W/DECAL  F320Z-DOM. Direct bolt-on replacement.",
+    "description": "Original-spec seat. Most operators run their seats past the point where the cushion is gone.",
     "price": 407.99,
     "imageUrl": "/images/parts/seat.jpg",
     "fits": [
@@ -676,7 +676,7 @@ export const parts: Part[] = [
     "partNumber": "5107021FS",
     "name": "OEM Electrical Component — 5107021FS",
     "category": "Electrical",
-    "description": "Genuine Ferris electrical part — SWITCH  IGNITION.",
+    "description": "OEM switch. Plug-in replacement — no rewiring.",
     "price": 39.99,
     "imageUrl": "/images/parts/pto-switch.jpg",
     "fits": [
@@ -689,7 +689,7 @@ export const parts: Part[] = [
     "partNumber": "84010299",
     "name": "OEM Electrical Component — 84010299",
     "category": "Electrical",
-    "description": "Genuine Ferris electrical part — SWITCH  IGNITION.",
+    "description": "Direct electrical replacement. Connectors match factory.",
     "price": 60.99,
     "imageUrl": "/images/parts/pto-switch.jpg",
     "fits": [
@@ -702,7 +702,7 @@ export const parts: Part[] = [
     "partNumber": "5020927FS",
     "name": "OEM Electrical Component — 5020927FS",
     "category": "Electrical",
-    "description": "Genuine Ferris electrical part — SWITCH  IGNITION.",
+    "description": "Factory replacement. Test the old one with a meter before you swap — half the time the switch is fine and the wiring is the problem.",
     "price": 41.99,
     "imageUrl": "/images/parts/pto-switch.jpg",
     "fits": [
@@ -715,7 +715,7 @@ export const parts: Part[] = [
     "partNumber": "5102962FS",
     "name": "OEM Electrical Component — 5102962FS",
     "category": "Electrical",
-    "description": "Genuine Ferris electrical part — SWITCH  IGNITION.",
+    "description": "Original-spec electrical component. Read your wiring color codes against the service manual before install.",
     "price": 125.99,
     "imageUrl": "/images/parts/pto-switch.jpg",
     "fits": [
@@ -728,7 +728,7 @@ export const parts: Part[] = [
     "partNumber": "5010673X35SM",
     "name": "OEM Deck Component — 5010673X35SM",
     "category": "Deck Parts",
-    "description": "Genuine Ferris #40 ROLLER CHAIN.",
+    "description": "OEM deck hardware. Direct replacement.",
     "price": 27.99,
     "imageUrl": "/images/parts/deck-chute.jpg",
     "fits": [
@@ -741,7 +741,7 @@ export const parts: Part[] = [
     "partNumber": "5020785SM",
     "name": "OEM Deck Component — 5020785SM",
     "category": "Deck Parts",
-    "description": "Genuine Ferris ROLLER  DECK.",
+    "description": "Factory part. If the deck is scarring grass or not washing clean, this is the fix.",
     "price": 36.99,
     "imageUrl": "/images/parts/deck-chute.jpg",
     "fits": [
@@ -754,7 +754,7 @@ export const parts: Part[] = [
     "partNumber": "5410502AYP",
     "name": "OEM Deck Component — 5410502AYP",
     "category": "Deck Parts",
-    "description": "Genuine Ferris ROLLER MOUNT 52 & 61.",
+    "description": "Bolt-on replacement. Same hardware as stock.",
     "price": 143.99,
     "imageUrl": "/images/parts/deck-chute.jpg",
     "fits": [
@@ -767,7 +767,7 @@ export const parts: Part[] = [
     "partNumber": "5010673X33FS",
     "name": "OEM Deck Component — 5010673X33FS",
     "category": "Deck Parts",
-    "description": "Genuine Ferris CHAIN  ROLLER.",
+    "description": "Original-spec deck component. Use stainless hardware when reinstalling if you can.",
     "price": 11.99,
     "imageUrl": "/images/parts/deck-chute.jpg",
     "fits": [
@@ -780,7 +780,7 @@ export const parts: Part[] = [
     "partNumber": "1696909",
     "name": "OEM Accessory — 1696909",
     "category": "Accessories",
-    "description": "Genuine Ferris MULCH KIT 48. Bolt-on accessory kit.",
+    "description": "Bolt-on accessory kit. Hardware included.",
     "price": 313.99,
     "imageUrl": "/images/parts/mulch-kit.jpg",
     "fits": [
@@ -793,7 +793,7 @@ export const parts: Part[] = [
     "partNumber": "5416154BFS",
     "name": "OEM Engine Component — 5416154BFS",
     "category": "Engine Parts",
-    "description": "Genuine OEM engine component — MUFFLER  GUARD.",
+    "description": "OEM engine component. Match by engine model, not mower model.",
     "price": 240.99,
     "imageUrl": "/images/parts/engine-parts.jpg",
     "fits": [
@@ -806,7 +806,7 @@ export const parts: Part[] = [
     "partNumber": "5102389FS",
     "name": "OEM Engine Component — 5102389FS",
     "category": "Engine Parts",
-    "description": "Genuine OEM engine component — MUFFLER.",
+    "description": "Factory replacement part. Verify against your engine serial tag before ordering.",
     "price": 473.99,
     "imageUrl": "/images/parts/engine-parts.jpg",
     "fits": [
@@ -819,7 +819,7 @@ export const parts: Part[] = [
     "partNumber": "5105069YP",
     "name": "OEM Engine Component — 5105069YP",
     "category": "Engine Parts",
-    "description": "Genuine OEM engine component — MUFFLER.",
+    "description": "Original-spec engine component. Write down your engine family tag before calling if you need help matching.",
     "price": 353.99,
     "imageUrl": "/images/parts/engine-parts.jpg",
     "fits": [
@@ -832,7 +832,7 @@ export const parts: Part[] = [
     "partNumber": "84009854",
     "name": "OEM Engine Component — 84009854",
     "category": "Engine Parts",
-    "description": "Genuine OEM engine component — MUFFLER.",
+    "description": "OEM part from the engine manufacturer. Aftermarket castings often have different bolt spacing.",
     "price": 360.99,
     "imageUrl": "/images/parts/engine-parts.jpg",
     "fits": [
@@ -845,7 +845,7 @@ export const parts: Part[] = [
     "partNumber": "84006964",
     "name": "OEM Hydraulic Component — 84006964",
     "category": "Hydraulic Components",
-    "description": "Genuine Hydro-Gear component — TRANSAXLE.",
+    "description": "Heavy-duty Hydro-Gear component. Match by transaxle model — not all ZT series use the same parts.",
     "price": 1556.99,
     "imageUrl": "/images/parts/hydraulic-filter.jpg",
     "fits": [
@@ -858,7 +858,7 @@ export const parts: Part[] = [
     "partNumber": "5102815YP",
     "name": "OEM Hydraulic Component — 5102815YP",
     "category": "Hydraulic Components",
-    "description": "Genuine Hydro-Gear component — WHEEL MOTOR  RH  11.9.",
+    "description": "OEM hydraulic part. If your mower is creeping when it should stop, this area is where to look.",
     "price": 1237.99,
     "imageUrl": "/images/parts/hydraulic-filter.jpg",
     "fits": [
@@ -871,7 +871,7 @@ export const parts: Part[] = [
     "partNumber": "84007620",
     "name": "OEM Hydraulic Component — 84007620",
     "category": "Hydraulic Components",
-    "description": "Genuine Hydro-Gear component — TRANSAXLE.",
+    "description": "Factory Hydro-Gear replacement. Bleed the system after install — air in the lines means slow response.",
     "price": 1434.99,
     "imageUrl": "/images/parts/hydraulic-filter.jpg",
     "fits": [

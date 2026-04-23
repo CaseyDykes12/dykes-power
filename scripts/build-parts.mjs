@@ -23,6 +23,124 @@ for (const line of lines) {
   rows.push({ part: part.trim(), desc: (desc || '').trim(), cost: price });
 }
 
+// Human descriptions keyed by category. Short, counter-voice, no AI filler.
+// Multiple variants per category — rotate by SKU index so parts in the same
+// category don't all read identical.
+const descVariants = {
+  Blades: [
+    '3-blade set for {size} iCD decks. Same OEM pattern Ferris builds their mowers with. Swap all three at once or you will feel it in the cut.',
+    'OEM replacement set for {size} decks. Keeps the discharge clean and the stripe sharp.',
+    'Factory blade set for {size} decks. Run one season, replace as a set — cheaper than limping along with a dull one.',
+    '{size} deck blade set. Same part Ferris puts on new mowers — don’t settle for the off-brand.',
+    '{size} deck blade set, OEM pattern. Sharpen twice, replace as a set on the third go.',
+    'Ferris blade set for {size} decks. Balanced at the factory — aftermarket sets throw vibration.',
+  ],
+  Belts: [
+    'OEM drive belt. Run the aftermarket version and you will be back in a season — not worth the $30 you saved.',
+    'Factory belt, same part Ferris ships from Munnsville. Tension and length matched to the deck.',
+    'Direct replacement belt. If the deck is slipping or squealing, this is usually your fix.',
+    'OEM belt for the iCD drive system. Belts that stretch throw the whole deck off — stay OEM.',
+    'Factory spec drive belt. Generics always look close on the tape measure and never run right.',
+    'OEM replacement. Keep a spare in the shop — belts fail mid-job, not on a Sunday afternoon.',
+    'Same belt the factory uses. If yours is glazed or cracked, don’t wait for it to snap.',
+    'Factory belt, original spec. One of those parts you only miss when it’s gone.',
+  ],
+  'Air Filters': [
+    'OEM air filter. Change it yearly or every 200 hours, whichever hits first.',
+    'Paper element with pre-cleaner wrap. Cheap insurance against dust eating your engine.',
+    'Factory service part. If you’re mowing dry dusty lots, check it every 50 hours.',
+    'OEM replacement. The generic ones on Amazon fit loose and let grit past.',
+    'Original-spec air filter. Pre-cleaner wrap pulls off for a tap-out, element goes yearly.',
+    'Factory air filter. Running a dirty one costs you horsepower and fuel both.',
+  ],
+  'Oil Filters': [
+    'Spin-on oil filter. Swap it every oil change — don’t skip it.',
+    'OEM filter. An $8 filter beats a $3,000 engine every time.',
+    'Factory spec spin-on. Same one the dealer puts on at service.',
+    'OEM replacement filter. Spins on by hand — snug it a three-quarter turn after it seats.',
+    'Original spec oil filter. Skipping this on an oil change is how engines die young.',
+  ],
+  'Fuel Filters': [
+    'In-line fuel filter. Keeps the carburetor clean and the engine starting.',
+    'OEM replacement. Swap yearly or when you notice hard starting.',
+    'Factory fuel filter. Gum builds up fast in ethanol fuel — stay ahead of it.',
+    'Original-spec filter. Plumb it with the flow arrow pointing toward the carb.',
+  ],
+  'Spark Plugs': [
+    'Sold each. Most V-twins run two — order a pair.',
+    'Pre-gapped OEM plug. Drop-in replacement, no adjustment needed.',
+    'Factory spark plug. Change them every 100 hours or when you notice rough idle.',
+    'OEM plug, sold individually. Torque to 15 ft-lb — don’t cross-thread it in an aluminum head.',
+  ],
+  'Spindles & Bearings': [
+    'Drop-in spindle assembly with bearing already pressed in. Saves you the shop press fee.',
+    'Complete OEM spindle. Bolt it on and re-belt — done in 20 minutes.',
+    'Factory spindle assembly. Replace in pairs on the same deck — bearings wear together.',
+    'Pre-assembled OEM spindle. If yours has play in the shaft or hum under load, it’s toast.',
+    'Original-spec spindle. The cast housing matters — stamped-steel knock-offs crack.',
+  ],
+  Pulleys: [
+    'OEM replacement pulley. Precision-balanced so the belt doesn’t walk.',
+    'Factory-spec pulley. If the belt is chewing itself up, this is usually why.',
+    'Direct replacement. Same bore and groove as original.',
+    'Original OEM pulley. Aftermarket pulleys run rough and eat belts.',
+    'Factory pulley. Spin the old one by hand — if the bearing growls, replace it now.',
+  ],
+  'Tires & Wheels': [
+    'Turf-saver tread. Pivots on the grass without tearing it up.',
+    'Standard zero-turn rear drive tire. Bolt pattern matches factory.',
+    'Replacement tire, same size as stock. Run around 10 PSI for the best ride.',
+    'Factory-size tire. Matching fronts and rears is the single easiest way to improve ride quality.',
+    'OEM-spec tire. Air pressure changes your scalp and ride more than most people realize.',
+  ],
+  'Seats & Controls': [
+    'Direct bolt-in operator seat. Same mount as factory — no bracket work.',
+    'OEM replacement seat. If you’re mowing 30+ hours a week this isn’t a luxury.',
+    'Factory seat. Worn-out seats are the #1 comfort complaint — fix it before your back tells you to.',
+    'Original-spec seat. Most operators run their seats past the point where the cushion is gone.',
+  ],
+  Electrical: [
+    'OEM switch. Plug-in replacement — no rewiring.',
+    'Direct electrical replacement. Connectors match factory.',
+    'Factory replacement. Test the old one with a meter before you swap — half the time the switch is fine and the wiring is the problem.',
+    'Original-spec electrical component. Read your wiring color codes against the service manual before install.',
+    'OEM part. Disconnect the battery before you swap any electrical — saves a lot of blue smoke.',
+    'Factory replacement electrical part. Crimp connectors, then dab them with liquid tape.',
+  ],
+  'Deck Parts': [
+    'OEM deck hardware. Direct replacement.',
+    'Factory part. If the deck is scarring grass or not washing clean, this is the fix.',
+    'Bolt-on replacement. Same hardware as stock.',
+    'Original-spec deck component. Use stainless hardware when reinstalling if you can.',
+  ],
+  Accessories: [
+    'Bolt-on accessory kit. Hardware included.',
+    'Factory accessory. Direct fit — no cutting or drilling.',
+  ],
+  'Engine Parts': [
+    'OEM engine component. Match by engine model, not mower model.',
+    'Factory replacement part. Verify against your engine serial tag before ordering.',
+    'Original-spec engine component. Write down your engine family tag before calling if you need help matching.',
+    'OEM part from the engine manufacturer. Aftermarket castings often have different bolt spacing.',
+  ],
+  'Hydraulic Components': [
+    'Heavy-duty Hydro-Gear component. Match by transaxle model — not all ZT series use the same parts.',
+    'OEM hydraulic part. If your mower is creeping when it should stop, this area is where to look.',
+    'Factory Hydro-Gear replacement. Bleed the system after install — air in the lines means slow response.',
+  ],
+};
+
+function humanDesc(category, size, index) {
+  const variants = descVariants[category] || ['OEM replacement. Fits Ferris mowers — match by model before ordering.'];
+  const tpl = variants[index % variants.length];
+  return size ? tpl.replace('{size}', size) : tpl.replace(/{size} ?/g, '');
+}
+
+function sizeFromDesc(d) {
+  const m = d.match(/\b(36|42|44|48|52|60|61|72)\b/);
+  return m ? `${m[1]}"` : '';
+}
+
 // Match helpers: pick the first row where desc contains all keywords.
 function find(keywords, opts = {}) {
   const { exclude = [], minCost = 0, maxCost = Infinity } = opts;
@@ -55,21 +173,29 @@ function retail(cost) {
 
 const parts = [];
 const seen = new Set();
+const catIndex = {}; // rotate description variants per category
 
-function add({ part, desc, cost, category, name, description, fits, oem = true, imageUrl }) {
+function add({ part, desc, cost, category, name, fits, oem = true, imageUrl, description = '' }) {
   if (seen.has(part)) return;
   seen.add(part);
+  const idx = (catIndex[category] || 0);
+  catIndex[category] = idx + 1;
+  // Pull size from whatever source string is available (legacy `description`
+  // argument carries the raw CSV desc, e.g., "BLADE SET MULCH 52 DECK").
+  const sourceText = (description || '') + ' ' + (desc || '') + ' ' + name;
+  const size = sizeFromDesc(sourceText);
+  const humanDescription = humanDesc(category, size, idx);
   parts.push({
     partNumber: part,
     name,
     category,
-    description,
+    description: humanDescription,
     price: retail(cost),
     imageUrl,
     fits,
     inStock: true,
     oem,
-    dealerCost: cost, // internal only
+    dealerCost: cost,
   });
 }
 
