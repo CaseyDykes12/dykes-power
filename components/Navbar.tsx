@@ -3,6 +3,88 @@ import Link from 'next/link';
 import { useState } from 'react';
 import CartIcon from './CartIcon';
 
+// Mega-menu structure — mirrors ferrismowers.com Products nav with dealer-only
+// additions (Trailers, Parts, Accessories). Each model links to its canonical
+// product page.
+const PRODUCT_MEGA_MENU: Array<{
+  heading: string;
+  href?: string;
+  models?: Array<{ label: string; href: string }>;
+}> = [
+  {
+    heading: 'Zero Turn Mowers',
+    href: '/catalog?category=Zero+Turn+Mowers',
+    models: [
+      { label: 'F60 Zero Turn', href: '/product/5901895' },
+      { label: '300e Electric Zero Turn', href: '/product/5902093' },
+      { label: '300R Zero Turn', href: '/product/5902204' },
+      { label: '300S Zero Turn', href: '/product/5902144' },
+      { label: '500S Zero Turn', href: '/product/5902101' },
+      { label: 'IS® 600 Zero Turn', href: '/product/5902110' },
+      { label: 'IS® 700 Zero Turn', href: '/product/5902107' },
+      { label: 'ISX™ 800 Zero Turn', href: '/product/5902084' },
+      { label: 'ISX™ 2200 Zero Turn', href: '/product/5902159' },
+      { label: 'ISX™ 3300 Zero Turn', href: '/product/5902064' },
+      { label: 'IS® 2600 Zero Turn (Diesel)', href: '/product/5901929' },
+      { label: 'IS® 6200 Zero Turn (Diesel)', href: '/product/5902162' },
+    ],
+  },
+  {
+    heading: 'Stand-On Mowers',
+    href: '/catalog?category=Stand-On+Mowers',
+    models: [
+      { label: 'SRS™ Z1 Stand-On', href: '/product/5901941' },
+      { label: 'SRS™ Z2 Stand-On', href: '/product/5901948' },
+      { label: 'SRS™ Z3X Stand-On', href: '/product/5902168' },
+    ],
+  },
+  {
+    heading: 'Walk-Behind Mowers',
+    href: '/catalog?category=Walk-Behind+Mowers',
+    models: [
+      { label: 'FW15 Walk-Behind', href: '/product/5901737' },
+      { label: 'FW25 Walk-Behind', href: '/product/5901886' },
+      { label: 'FW45 Walk-Behind', href: '/product/5902014' },
+    ],
+  },
+  {
+    heading: 'Front-Mount Mowers',
+    models: [
+      { label: 'ProCut S Front Mount', href: '/product/5900533' },
+    ],
+  },
+  {
+    heading: 'Stand-On Blowers',
+    models: [
+      { label: 'FB1000 Hurricane™', href: '/product/5902012' },
+      { label: 'FB2000 Hurricane™', href: '/product/5902132' },
+      { label: 'FB3000 Hurricane™', href: '/product/5902194' },
+    ],
+  },
+  {
+    heading: 'Ride-On Spreader/Sprayers',
+    models: [
+      { label: 'Venture XC™ FS3200', href: '/product/5901755' },
+      { label: 'Venture X', href: '/product/5902195' },
+      { label: 'Pathfinder XC™ FS2200', href: '/product/5901753' },
+      { label: 'Pathfinder™ FS2100', href: '/product/5901752' },
+      { label: 'Rover XC™ FS1200', href: '/product/5902000' },
+    ],
+  },
+  {
+    heading: 'Trailers',
+    href: '/trailers',
+  },
+  {
+    heading: 'Parts',
+    href: '/parts',
+  },
+  {
+    heading: 'Accessories',
+    href: '/accessories',
+  },
+];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -31,18 +113,69 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-semibold whitespace-nowrap">
-          {/* Products — dropdown */}
+          {/* Products — mega-menu with nested model flyouts */}
           <div className="relative group">
             <button className="flex items-center gap-1 hover:text-[#C8C8C8] transition-colors py-5" aria-haspopup="true">
               Products
               <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
             </button>
-            <div className="absolute left-0 top-full mt-0 bg-black border border-gray-800 rounded-lg shadow-xl min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible focus-within:opacity-100 focus-within:visible transition-all duration-150 z-50 py-2">
-              <Link href="/catalog?category=Zero+Turn+Mowers" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Zero Turn</Link>
-              <Link href="/catalog?category=Stand-On+Mowers" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Stand-On</Link>
-              <Link href="/trailers" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Trailers</Link>
-              <Link href="/parts" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Parts</Link>
-              <Link href="/accessories" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Accessories</Link>
+            <div className="absolute left-0 top-full mt-0 bg-black border border-gray-800 rounded-lg shadow-xl min-w-[270px] opacity-0 invisible group-hover:opacity-100 group-hover:visible focus-within:opacity-100 focus-within:visible transition-all duration-150 z-50 py-2">
+              {PRODUCT_MEGA_MENU.map((cat) => {
+                const hasModels = cat.models && cat.models.length > 0;
+                if (!hasModels) {
+                  // Leaf link (Trailers, Parts, Accessories).
+                  return (
+                    <Link
+                      key={cat.heading}
+                      href={cat.href!}
+                      className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors"
+                    >
+                      {cat.heading}
+                    </Link>
+                  );
+                }
+                return (
+                  <div key={cat.heading} className="relative group/sub">
+                    {cat.href ? (
+                      <Link
+                        href={cat.href}
+                        className="flex items-center justify-between px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors"
+                      >
+                        <span>{cat.heading}</span>
+                        <svg className="w-3 h-3 ml-3 shrink-0 opacity-60" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+                      </Link>
+                    ) : (
+                      <div className="flex items-center justify-between px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors cursor-default">
+                        <span>{cat.heading}</span>
+                        <svg className="w-3 h-3 ml-3 shrink-0 opacity-60" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+                      </div>
+                    )}
+                    {/* Nested model flyout */}
+                    <div className="absolute left-full top-0 ml-0 bg-black border border-gray-800 rounded-lg shadow-xl min-w-[280px] opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible focus-within:opacity-100 focus-within:visible transition-all duration-150 z-50 py-2">
+                      {cat.href && (
+                        <>
+                          <Link
+                            href={cat.href}
+                            className="block px-4 py-2 text-[#C8C8C8] font-semibold hover:bg-gray-900 transition-colors"
+                          >
+                            Shop all {cat.heading.toLowerCase()}
+                          </Link>
+                          <div className="border-t border-gray-800 my-1" />
+                        </>
+                      )}
+                      {cat.models!.map((m) => (
+                        <Link
+                          key={m.href}
+                          href={m.href}
+                          className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors"
+                        >
+                          {m.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -123,13 +256,52 @@ export default function Navbar() {
 
       {/* Mobile / tablet menu */}
       {open && (
-        <div className="lg:hidden bg-black border-t border-gray-800 px-4 py-4 flex flex-col gap-4 text-sm font-semibold">
+        <div className="lg:hidden bg-black border-t border-gray-800 px-4 py-4 flex flex-col gap-3 text-sm font-semibold max-h-[85vh] overflow-y-auto">
           <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mt-1">Products</p>
-          <Link href="/catalog?category=Zero+Turn+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8] pl-3">Zero Turn</Link>
-          <Link href="/catalog?category=Stand-On+Mowers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8] pl-3">Stand-On</Link>
-          <Link href="/trailers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8] pl-3">Trailers</Link>
-          <Link href="/parts" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8] pl-3">Parts</Link>
-          <Link href="/accessories" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8] pl-3">Accessories</Link>
+          {PRODUCT_MEGA_MENU.map((cat) => {
+            const hasModels = cat.models && cat.models.length > 0;
+            if (!hasModels) {
+              return (
+                <Link
+                  key={cat.heading}
+                  href={cat.href!}
+                  onClick={() => setOpen(false)}
+                  className="hover:text-[#C8C8C8] pl-3"
+                >
+                  {cat.heading}
+                </Link>
+              );
+            }
+            return (
+              <details key={cat.heading} className="group pl-3">
+                <summary className="list-none cursor-pointer flex items-center justify-between hover:text-[#C8C8C8]">
+                  <span>{cat.heading}</span>
+                  <svg className="w-3 h-3 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+                </summary>
+                <div className="mt-2 flex flex-col gap-2 pl-3 border-l border-gray-800">
+                  {cat.href && (
+                    <Link
+                      href={cat.href}
+                      onClick={() => setOpen(false)}
+                      className="text-[#C8C8C8] font-semibold text-xs uppercase tracking-wider"
+                    >
+                      All {cat.heading.toLowerCase()}
+                    </Link>
+                  )}
+                  {cat.models!.map((m) => (
+                    <Link
+                      key={m.href}
+                      href={m.href}
+                      onClick={() => setOpen(false)}
+                      className="text-gray-400 hover:text-[#C8C8C8] text-sm font-normal"
+                    >
+                      {m.label}
+                    </Link>
+                  ))}
+                </div>
+              </details>
+            );
+          })}
 
           <div className="border-t border-gray-800 mt-1 pt-2" />
           <Link href="/why-ferris" onClick={() => setOpen(false)} className="text-[#C8C8C8] font-bold">Why Ferris</Link>
@@ -137,7 +309,7 @@ export default function Navbar() {
           <Link href="/financing" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Financing</Link>
           <Link href="/blog" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Blog</Link>
           <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Contact</Link>
-          <a href="tel:6019095380" onClick={() => setOpen(false)} className="btn-primary text-center">Call (601) 909-5380</a>
+          <a href="tel:6019095380" onClick={() => setOpen(false)} className="btn-primary text-center mt-2">Call (601) 909-5380</a>
         </div>
       )}
     </header>
