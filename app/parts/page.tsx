@@ -62,13 +62,6 @@ export default function PartsPage() {
           </p>
           <h1 className="text-3xl font-bold text-white">Ferris OEM Parts</h1>
           <p className="text-gray-400 mt-1">Genuine Ferris replacement parts from Collins, Mississippi — shipped nationwide.</p>
-
-          {/* Identity bar */}
-          <div className="flex flex-wrap gap-x-5 gap-y-1 mt-3 text-xs text-gray-500">
-            <span>📦 <span className="text-[#C8C8C8] font-semibold">Packed in Collins, MS</span></span>
-            <span>✂️ Boxed by a real human, not a warehouse bot</span>
-            <span>📱 Text Addison at <a href="sms:+16013362541" className="text-[#C8C8C8] hover:text-white">(601) 336-2541</a></span>
-          </div>
           <p className="text-xs text-[#C8C8C8] mt-3 font-semibold">
             Flat rate shipping $12.99 · Free shipping on orders $75+
           </p>
