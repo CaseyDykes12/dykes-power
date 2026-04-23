@@ -121,10 +121,15 @@ export default async function PartDetailPage({ params }: { params: Promise<{ par
             {/* Price block */}
             <div className="bg-[#111] border border-gray-800 rounded-xl p-5 mb-6">
               {part.price !== null ? (
-                <div className="flex items-baseline gap-2">
-                  <p className="text-3xl font-bold text-white">${part.price.toFixed(2)}</p>
-                  <p className="text-gray-500 text-sm">each</p>
-                </div>
+                <>
+                  <div className="flex items-baseline gap-2">
+                    <p className="text-3xl font-bold text-white">${part.price.toFixed(2)}</p>
+                    <p className="text-gray-500 text-sm">each</p>
+                  </div>
+                  <p className="text-gray-500 text-xs mt-2">
+                    Ships $12.99 flat rate · <span className="text-[#C8C8C8] font-semibold">Free over $75</span>
+                  </p>
+                </>
               ) : (
                 <div>
                   <p className="text-[#C8C8C8] font-bold text-lg mb-1">Pricing Available In-Store</p>

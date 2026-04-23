@@ -13,10 +13,11 @@ export default function ShippingReturnsPage() {
 
       <section className="mb-10">
         <p className="text-gray-300">
-          Dykes Motors Power Equipment is a local authorized Ferris mower dealership located at{' '}
+          Dykes Motors Power Equipment is an authorized Ferris dealership at{' '}
           <span className="font-semibold text-white">3069 Hwy 49, Collins, MS 39428</span>.
-          Most purchases are picked up in person at our location. Local delivery may be available for a fee — call{' '}
-          <a href="tel:6019095380" className="text-white underline">(601) 909-5380</a> for a quote.
+          We ship parts and accessories nationally from our Collins location and the Ferris distribution network. Mowers, trailers, and large equipment are handled locally — reserve online with a $1,000 deposit and finalize in person, or arrange local delivery within 50 miles of Collins. Questions? Call{' '}
+          <a href="tel:6019095380" className="text-white underline">(601) 909-5380</a> (sales) or{' '}
+          <a href="tel:6013362541" className="text-white underline">(601) 336-2541</a> (parts & service).
         </p>
       </section>
 
@@ -67,21 +68,49 @@ export default function ShippingReturnsPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-3">Shipping</h2>
+        <h2 className="text-xl font-bold mb-3">Shipping — Parts & Accessories</h2>
         <ul className="space-y-3 text-gray-300">
           <li>
-            <span className="font-semibold text-white">In-store pickup:</span> Most equipment purchases require pickup at 3069 Hwy 49, Collins, MS.
+            <span className="font-semibold text-white">Flat rate:</span> $12.99 per order within the continental United States.
           </li>
           <li>
-            <span className="font-semibold text-white">Local delivery:</span> Available for a fee within the Collins/Hattiesburg area. Call (601) 909-5380 for a quote.
+            <span className="font-semibold text-white">Free shipping:</span> Orders of $75 or more ship free within the continental US.
           </li>
           <li>
-            <span className="font-semibold text-white">Parts & accessories:</span> Ship within the continental US. Processing 1–2 business days; delivery 3–7 business days. Shipping cost quoted before order is finalized.
+            <span className="font-semibold text-white">Processing:</span> 1–2 business days. In-stock items ship from our Collins, MS location; certain parts drop-ship directly from the Ferris distributor.
           </li>
           <li>
-            <span className="font-semibold text-white">Area served:</span> United States (in-store purchases) · Mississippi and surrounding states (local delivery).
+            <span className="font-semibold text-white">Delivery:</span> 3–7 business days via USPS, UPS, or FedEx depending on the item. Tracking emailed when the label is created.
+          </li>
+          <li>
+            <span className="font-semibold text-white">Not shipped:</span> Alaska, Hawaii, Puerto Rico, and international. Call (601) 336-2541 for special arrangements.
           </li>
         </ul>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">Mowers & Large Equipment</h2>
+        <p className="text-gray-300 mb-3">
+          Zero-turn mowers, walk-behinds, and stand-on units are <span className="font-semibold text-white">not shipped</span> via standard carrier. Delivery works one of two ways:
+        </p>
+        <ul className="space-y-3 text-gray-300">
+          <li>
+            <span className="font-semibold text-white">Reserve online with a $1,000 deposit:</span> Secure the unit from our inventory. We finalize payment and hand you the keys at 3069 Hwy 49, Collins, MS. Your deposit applies to the purchase price.
+          </li>
+          <li>
+            <span className="font-semibold text-white">Local delivery:</span> Flat fee delivery within 50 miles of Collins, MS. Call (601) 909-5380 before placing a reservation to confirm coverage and schedule.
+          </li>
+          <li>
+            <span className="font-semibold text-white">Outside the 50-mile zone:</span> Pickup at the dealership, or call us to quote freight. We do not ship mowers blind — we want you to inspect and sign off at delivery.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">Trailers</h2>
+        <p className="text-gray-300">
+          Utility trailers sold locally only — pickup at 3069 Hwy 49, Collins, MS. Local delivery available for a fee; call (601) 909-5380 for a quote.
+        </p>
       </section>
 
       <section>
