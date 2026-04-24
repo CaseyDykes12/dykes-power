@@ -50,6 +50,8 @@ export default function Footer() {
             <li><Link href="/service" className="hover:text-[#C8C8C8]">Service & Repairs</Link></li>
             <li><Link href="/contact" className="hover:text-[#C8C8C8]">Get a Quote</Link></li>
             <li><Link href="/contact" className="hover:text-[#C8C8C8]">Contact Us</Link></li>
+            <li><Link href="/support" className="hover:text-[#C8C8C8]">Customer Support</Link></li>
+            <li><Link href="/warranty" className="hover:text-[#C8C8C8]">Warranty</Link></li>
             <li><Link href="/blog" className="hover:text-[#C8C8C8]">Blog</Link></li>
             <li><Link href="/why-ferris" className="hover:text-[#C8C8C8]">Why Ferris</Link></li>
             <li><Link href="/accessories" className="hover:text-[#C8C8C8]">Accessories</Link></li>
