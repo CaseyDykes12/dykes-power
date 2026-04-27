@@ -73,7 +73,7 @@ export const categoryBrowse: CategoryMeta[] = [
     shortLabel: 'Accessories',
     description: 'Baggers, mulch kits, striping kits, light kits, Sulkies, and the small parts that turn a mower into a setup.',
     href: '/accessories',
-    fallbackImage: '/images/ferris/lot/isx800-lot.jpg',
+    fallbackImage: 'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/ISX800/Product%20Images/FER_ISX800_FL-PDP.jpg',
   },
 ];
 

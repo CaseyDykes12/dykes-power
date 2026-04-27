@@ -1,18 +1,13 @@
-import { Product } from './products';
+﻿import { Product } from './products';
 
 // Official Ferris product images from ferrismowers.com HubSpot CDN
-// Authorized dealer use — Ferris/Briggs & Stratton marketing imagery
+// Authorized dealer use â€” Ferris/Briggs & Stratton marketing imagery
 const BASE = 'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products';
 const OLD  = 'https://www.ferrismowers.com/hs-fs/hubfs/Website%20Migration%202025/Ferris/Images/Products';
 
 const galleryMap: Record<string, string[]> = {
 
   '300s': [
-    '/images/ferris/lot/300s-lot.jpg',
-    '/images/ferris/lot/300s-lot-2.jpg',
-    '/images/ferris/300s-dykes-hero.jpg',
-    '/images/ferris/300s-dykes-rear.jpg',
-    '/images/ferris/300s-dykes-engine.jpg',
     `${BASE}/Zero%20Turn%20Mowers/300S/Features%20and%20Benefits/Premium%20Features.jpg`,
     `${BASE}/Zero%20Turn%20Mowers/300S/Features%20and%20Benefits/Commercial%20Grade%20Power.jpg`,
     `${BASE}/Zero%20Turn%20Mowers/300S/Features%20and%20Benefits/Fab%20Mowing%20Deck.jpg`,
@@ -40,8 +35,6 @@ const galleryMap: Record<string, string[]> = {
   ],
 
   '500s': [
-    '/images/ferris/lot/500s-lot.jpg',
-    '/images/ferris/lot/500s-lot-2.jpg',
     `${BASE}/Zero%20Turn%20Mowers/500/Product%20Images/FER_Products_500S.jpg`,
     `${OLD}/Zero%20Turn%20Mowers/500S/Features%20and%20Benefits/FER_500S_FB-Suspension.jpg`,
     `${OLD}/Zero%20Turn%20Mowers/500S/Features%20and%20Benefits/FER_500S_FB-Engine.jpg`,
@@ -53,8 +46,6 @@ const galleryMap: Record<string, string[]> = {
   ],
 
   'is600': [
-    '/images/ferris/lot/is600-lot.jpg',
-    '/images/ferris/lot/is600-lot-2.jpg',
     `${BASE}/Zero%20Turn%20Mowers/IS600/Product%20Images/FER_PDP_IS600_Hero_FR.jpg`,
     `${BASE}/Zero%20Turn%20Mowers/IS600/Features%20and%20Benefits/FER_600_FB-Engine.jpeg`,
     `${OLD}/Zero%20Turn%20Mowers/IS600/Features%20and%20Benefits/FER_PDP_IS600_FB-Operator.jpg`,
@@ -80,9 +71,6 @@ const galleryMap: Record<string, string[]> = {
   ],
 
   'isx800': [
-    '/images/ferris/lot/isx800-lot.jpg',
-    '/images/ferris/lot/isx800-lot-2.jpg',
-    '/images/ferris/lot/isx800-lot-3.jpg',
     `${BASE}/Zero%20Turn%20Mowers/ISX800/Product%20Images/FER_ISX800_FL-PDP.jpg`,
     `${BASE}/Zero%20Turn%20Mowers/ISX800/Features%20and%20Benefits/FER_PDP_IS800_FB-Oil.jpeg`,
     `${BASE}/Zero%20Turn%20Mowers/ISX800/Features%20and%20Benefits/FER_PDP_IS800_FB-CuttingSystem.jpeg`,
@@ -104,8 +92,6 @@ const galleryMap: Record<string, string[]> = {
   ],
 
   'isx3300': [
-    '/images/ferris/lot/isx3300-lot.jpg',
-    '/images/ferris/lot/isx3300-lot-2.jpg',
     `${BASE}/Zero%20Turn%20Mowers/ISX3300/Product%20Images/FER_3300_FR.jpeg`,
     `${BASE}/Zero%20Turn%20Mowers/ISX3300/Features%20and%20Benefits/FER_PDP_ISX3300_FB-CuttingSystem.jpeg`,
     `${BASE}/Zero%20Turn%20Mowers/ISX3300/Features%20and%20Benefits/FER_PDP_ISX3300_FB-USB.jpeg`,
@@ -156,8 +142,6 @@ const galleryMap: Record<string, string[]> = {
   ],
 
   'srsz2': [
-    '/images/ferris/lot/srsz2-lot.jpg',
-    '/images/ferris/lot/srsz2-lot-2.jpg',
     `${BASE}/Stand-On%20Mowers/Z2/Product%20Images/FER_PDP_SRSZ2_Hero_FL.jpg`,
     `${BASE}/Stand-On%20Mowers/Z2/Product%20Images/FER_PDP_Z2_Hero-FR.jpg`,
     `${BASE}/Stand-On%20Mowers/Z2/Product%20Images/FER_PDP_Z2_Hero-L.jpg`,
@@ -173,8 +157,6 @@ const galleryMap: Record<string, string[]> = {
   ],
 
   'srsz3x': [
-    '/images/ferris/lot/srsz3-lot.jpg',
-    '/images/ferris/lot/srsz3-lot-2.jpg',
     `${BASE}/Stand-On%20Mowers/Z3/Product%20Images/FER_PDP_SRSZ3X_Hero_FL.jpg`,
     `${BASE}/Stand-On%20Mowers/Z3/Product%20Images/FER_PDP_Z3X_Hero-FR.jpg`,
     `${BASE}/Stand-On%20Mowers/Z3/Product%20Images/FER_PDP_Z3X_Hero-L.jpg`,
@@ -333,8 +315,8 @@ const galleryMap: Record<string, string[]> = {
   ],
 };
 
-// Keyword patterns to match product names → gallery key.
-// [^\d]* between prefix and number tolerates ® / ™ / whitespace.
+// Keyword patterns to match product names â†’ gallery key.
+// [^\d]* between prefix and number tolerates Â® / â„¢ / whitespace.
 // \b after the number prevents 600 from matching 6200 (order also reinforces this).
 const namePatterns: [RegExp, string][] = [
   [/300e/i,                '300e'],
@@ -365,6 +347,16 @@ const namePatterns: [RegExp, string][] = [
   [/F60/i,                 'f60'],
 ];
 
+/**
+ * Drop any Dykes-shot imagery (on-the-lot photos and our staged "dykes-*"
+ * studio shots). Customer-facing product galleries should only show the
+ * official Ferris-provided product imagery â€” clean white-background
+ * studio renders.
+ */
+function isDykesShot(url: string): boolean {
+  return url.includes('/images/ferris/lot/') || /-dykes-/.test(url);
+}
+
 export function getProductImages(product: Product): string[] {
   const sku = product.images ?? [];
 
@@ -379,7 +371,14 @@ export function getProductImages(product: Product): string[] {
 
   // SKU photos first (they're keyed to the exact model), then the shared
   // model-line library. Dedup preserves order. Fall back to imageUrl only
-  // if neither source yielded anything.
-  const merged = Array.from(new Set([...sku, ...lineup]));
-  return merged.length > 0 ? merged : [product.imageUrl];
+  // if neither source yielded anything. Filter out any Dykes-shot photos
+  // so customers only see official Ferris product imagery.
+  const merged = Array.from(new Set([...sku, ...lineup])).filter(
+    (url) => !isDykesShot(url)
+  );
+  if (merged.length > 0) return merged;
+  if (product.imageUrl && !isDykesShot(product.imageUrl)) return [product.imageUrl];
+  // Ultimate fallback when every candidate was a Dykes-shot: pull whatever
+  // Ferris-CDN images exist on the matched lineup, raw.
+  return lineup.filter((url) => !isDykesShot(url));
 }

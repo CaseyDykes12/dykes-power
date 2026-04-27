@@ -36,8 +36,8 @@ const SERIES: Series[] = [
     },
     variants: {
       briggs: [
-        { sku: '5902110', deck: '48"', price: 7899, msrp: 8689, hp: '25 hp', image: '/images/ferris/lot/is600-lot.jpg' },
-        { sku: '5902109', deck: '52"', price: 8099, msrp: 8909, hp: '25 hp', image: '/images/ferris/lot/is600-lot.jpg' },
+        { sku: '5902110', deck: '48"', price: 7899, msrp: 8689, hp: '25 hp', image: 'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/IS600/Product%20Images/FER_PDP_IS600_Hero_FR.jpg' },
+        { sku: '5902109', deck: '52"', price: 8099, msrp: 8909, hp: '25 hp', image: 'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/IS600/Product%20Images/FER_PDP_IS600_Hero_FR.jpg' },
       ],
       kawasaki: [
         { sku: '5901908', deck: '48"', price: 8449, msrp: 9294, hp: '18.5 hp', image: '/images/ferris/basco/5901908/5901908_FER_IS600Z_Studio_FL.jpg' },

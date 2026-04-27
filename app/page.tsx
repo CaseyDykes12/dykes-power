@@ -15,10 +15,10 @@ export default function HomePage() {
   const recentPosts = getAllPosts().slice(0, 3);
 
   const explore: { href: string; label: string; image: string }[] = [
-    { href: '/parts', label: 'Genuine Parts', image: '/images/ferris/lot/isx800-lot.jpg' },
-    { href: '/service', label: 'Service & Repair', image: '/images/ferris/lot/srsz3-lot.jpg' },
-    { href: '/financing', label: 'Financing 4.9% APR', image: '/images/ferris/lot/500s-lot.jpg' },
-    { href: '/catalog', label: 'Full Catalog', image: '/images/ferris/lot/is600-lot.jpg' },
+    { href: '/parts', label: 'Genuine Parts', image: 'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/ISX800/Product%20Images/FER_ISX800_FL-PDP.jpg' },
+    { href: '/service', label: 'Service & Repair', image: 'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z3/Product%20Images/FER_PDP_SRSZ3X_Hero_FL.jpg' },
+    { href: '/financing', label: 'Financing 4.9% APR', image: 'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/500/Product%20Images/FER_Products_500S.jpg' },
+    { href: '/catalog', label: 'Full Catalog', image: 'https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/IS600/Product%20Images/FER_PDP_IS600_Hero_FR.jpg' },
   ];
 
   return (

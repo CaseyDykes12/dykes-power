@@ -55,7 +55,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden border-b border-dykes-gray-700">
         <div className="absolute inset-0">
           <Image
-            src="/images/ferris/lot/isx800-lot-3.jpg"
+            src="https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/ISX800/Product%20Images/FER_ISX800_FL-PDP.jpg"
             alt=""
             fill
             sizes="100vw"
