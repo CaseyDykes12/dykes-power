@@ -42,14 +42,12 @@ export default function ShippingReturnsPage() {
         <h2 className="text-xl font-bold mb-3">Shipping — Mowers, Trailers &amp; Large Equipment</h2>
         <ul className="space-y-3 text-gray-300">
           <li>
-            <span className="font-semibold text-white">Delivery:</span> Shipped via tracked freight carrier
-            within the contiguous United States. Shipping cost is calculated at checkout based on
-            destination state — typically $599 within the Southeast, $899 across the Eastern half
-            and Midwest, and $1,099 to Western states.
+            <span className="font-semibold text-white">FREE freight shipping</span> on all mowers
+            and trailers within the contiguous United States.
           </li>
           <li>
             <span className="font-semibold text-white">Lead time:</span> 7–14 business days from order
-            confirmation, depending on destination.
+            confirmation via tracked freight carrier.
           </li>
           <li>
             <span className="font-semibold text-white">Pickup option:</span> Free pickup at 3069 Hwy 49,
