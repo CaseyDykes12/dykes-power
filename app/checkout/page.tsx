@@ -35,11 +35,11 @@ export default function CheckoutPage() {
   }, []);
 
   const subtotal = cartTotal(cart);
-  const options = useMemo(() => getShippingOptions(cart), [cart]);
+  const options = useMemo(() => getShippingOptions(cart, state), [cart, state]);
   const selectedOption = options.find((o) => o.id === shipping)!;
   const shippingFee = useMemo(
-    () => getShippingPrice(shipping, cart),
-    [shipping, cart]
+    () => getShippingPrice(shipping, cart, state),
+    [shipping, cart, state]
   );
   const tax = useMemo(
     () => calculateTax(subtotal, shipping === 'pickup' ? 'MS' : state),

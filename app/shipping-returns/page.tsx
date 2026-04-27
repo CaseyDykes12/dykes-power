@@ -43,8 +43,9 @@ export default function ShippingReturnsPage() {
         <ul className="space-y-3 text-gray-300">
           <li>
             <span className="font-semibold text-white">Delivery:</span> Shipped via tracked freight carrier
-            within the contiguous United States. Shipping cost is calculated based on destination
-            and confirmed before your order is finalized.
+            within the contiguous United States. Shipping cost is calculated at checkout based on
+            destination state — typically $599 within the Southeast, $899 across the Eastern half
+            and Midwest, and $1,099 to Western states.
           </li>
           <li>
             <span className="font-semibold text-white">Lead time:</span> 7–14 business days from order
