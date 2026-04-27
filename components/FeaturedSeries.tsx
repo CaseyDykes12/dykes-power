@@ -105,8 +105,8 @@ function SeriesCard({ series }: { series: Series }) {
     setDeckIdx(0);
   };
 
+  const photoBg = 'bg-white';
   const isBriggs = engine === 'briggs';
-  const photoBg = isBriggs ? 'bg-black' : 'bg-white';
   const engineLabel = series.engineLabels[engine];
 
   return (

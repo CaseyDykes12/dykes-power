@@ -7,9 +7,9 @@ import MowCalculator from '@/components/MowCalculator';
 import WatchTheFilm from '@/components/campaign/WatchTheFilm';
 import DealerStory from '@/components/campaign/DealerStory';
 import DayOfWorkGallery from '@/components/campaign/DayOfWorkGallery';
-import FeaturedSeries from '@/components/FeaturedSeries';
 import HomeAboutTeam from '@/components/HomeAboutTeam';
 import BuildYourFerris from '@/components/BuildYourFerris';
+import CategoryBrowser from '@/components/CategoryBrowser';
 
 export default function HomePage() {
   const recentPosts = getAllPosts().slice(0, 3);
@@ -68,29 +68,8 @@ export default function HomePage() {
       {/* 2. Why We Carry Ferris */}
       <WhyWeCarryFerris />
 
-      {/* 3. Popular Models — interactive series picker */}
-      <section id="popular-models" className="py-16 px-4 bg-dykes-gray-900 scroll-mt-20">
-        <div className="max-w-[1280px] mx-auto">
-          <p className="text-dykes-silver text-sm font-semibold tracking-widest uppercase mb-2">
-            Popular Models
-          </p>
-          <h2
-            className="text-3xl md:text-5xl font-bold mb-3 text-white"
-            style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.01em' }}
-          >
-            The ones we move the most.
-          </h2>
-          <p className="text-dykes-gray-300 mb-8">
-            Pick the engine, pick the deck, see the price. Monthly payments assume 4.9% APR over 72 months for qualified credit.
-          </p>
-          <FeaturedSeries />
-          <div className="mt-10 text-center">
-            <Link href="/catalog" className="btn-primary text-lg px-10 py-3">
-              View Full Catalog
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* 3. Find Your Ferris — category browser */}
+      <CategoryBrowser />
 
       {/* 4. Why Ferris — refreshed, photos now linked */}
       <section className="bg-dykes-black py-16 md:py-24 px-4">

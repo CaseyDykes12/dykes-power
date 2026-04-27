@@ -13,7 +13,7 @@ const PRODUCT_MEGA_MENU: Array<{
 }> = [
   {
     heading: 'Zero Turn Mowers',
-    href: '/catalog?category=Zero+Turn+Mowers',
+    href: '/products/zero-turn-mowers',
     models: [
       { label: 'F60 Zero Turn', href: '/product/5901895' },
       { label: '300e Electric Zero Turn', href: '/product/5902093' },
@@ -31,7 +31,7 @@ const PRODUCT_MEGA_MENU: Array<{
   },
   {
     heading: 'Stand-On Mowers',
-    href: '/catalog?category=Stand-On+Mowers',
+    href: '/products/stand-on-mowers',
     models: [
       { label: 'SRS™ Z1 Stand-On', href: '/product/5901941' },
       { label: 'SRS™ Z2 Stand-On', href: '/product/5901948' },
@@ -40,7 +40,7 @@ const PRODUCT_MEGA_MENU: Array<{
   },
   {
     heading: 'Walk-Behind Mowers',
-    href: '/catalog?category=Walk-Behind+Mowers',
+    href: '/products/walk-behind-mowers',
     models: [
       { label: 'FW15 Walk-Behind', href: '/product/5901737' },
       { label: 'FW25 Walk-Behind', href: '/product/5901886' },
@@ -49,12 +49,14 @@ const PRODUCT_MEGA_MENU: Array<{
   },
   {
     heading: 'Front-Mount Mowers',
+    href: '/products/front-mount-mowers',
     models: [
       { label: 'ProCut S Front Mount', href: '/product/5900533' },
     ],
   },
   {
     heading: 'Stand-On Blowers',
+    href: '/products/stand-on-blowers',
     models: [
       { label: 'FB1000 Hurricane™', href: '/product/5902012' },
       { label: 'FB2000 Hurricane™', href: '/product/5902132' },
@@ -63,6 +65,7 @@ const PRODUCT_MEGA_MENU: Array<{
   },
   {
     heading: 'Ride-On Spreader/Sprayers',
+    href: '/products/ride-on-spreader-sprayers',
     models: [
       { label: 'Venture XC™ FS3200', href: '/product/5901755' },
       { label: 'Venture X', href: '/product/5902195' },
@@ -241,8 +244,8 @@ export default function Navbar() {
         className="lg:hidden border-t border-gray-800 overflow-x-auto no-scrollbar"
       >
         <div className="flex items-center gap-1 px-3 py-2 text-xs font-semibold whitespace-nowrap">
-          <Link href="/catalog?category=Zero+Turn+Mowers" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Zero Turn</Link>
-          <Link href="/catalog?category=Stand-On+Mowers" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Stand-On</Link>
+          <Link href="/products/zero-turn-mowers" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Zero Turn</Link>
+          <Link href="/products/stand-on-mowers" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Stand-On</Link>
           <Link href="/trailers" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Trailers</Link>
           <Link href="/parts" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Parts</Link>
           <Link href="/accessories" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Accessories</Link>

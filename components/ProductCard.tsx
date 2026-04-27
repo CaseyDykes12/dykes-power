@@ -12,7 +12,7 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <Link href={`/product/${product.sku}`} className="bg-[#1a1a1a] border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:border-[#C8C8C8] transition-all flex flex-col cursor-pointer">
       {/* Image — taller on mobile so photos fill the screen */}
-      <div className="bg-[#111] h-72 sm:h-56 relative">
+      <div className="bg-white h-72 sm:h-56 relative">
         {product.tag && (
           <span className="absolute top-3 left-3 z-10 bg-[#D4AF37] text-black text-xs font-bold px-2 py-1 rounded">
             {product.tag}

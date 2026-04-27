@@ -5,7 +5,7 @@ import type { Accessory } from '@/lib/accessories';
 export default function AccessoryCard({ item }: { item: Accessory }) {
   return (
     <div className="rounded-lg border border-gray-800 bg-black/50 p-4 flex flex-col">
-      <div className="aspect-[4/3] w-full mb-3 rounded-md bg-[#0a0a0a] border border-gray-900 overflow-hidden flex items-center justify-center">
+      <div className="aspect-[4/3] w-full mb-3 rounded-md bg-white border border-gray-300 overflow-hidden flex items-center justify-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={item.photo}

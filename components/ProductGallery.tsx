@@ -52,7 +52,7 @@ export default function ProductGallery({ images, alt }: Props) {
         type="button"
         onClick={() => setLightboxOpen(true)}
         aria-label="Open image in full screen — tap to zoom"
-        className="relative bg-[#0a0a0a] rounded-2xl overflow-hidden border border-gray-800 group aspect-[4/3] sm:aspect-auto w-full cursor-zoom-in"
+        className="relative bg-white rounded-2xl overflow-hidden border border-gray-300 group aspect-[4/3] sm:aspect-auto w-full cursor-zoom-in"
         style={{ minHeight: '320px', maxHeight: '600px' }}
       >
         <Image
