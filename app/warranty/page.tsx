@@ -60,7 +60,7 @@ export default function WarrantyPage() {
         acceptedAnswer: {
           '@type': 'Answer',
           text:
-            'Warranty service is performed by certified technicians at Dykes Motors Power Equipment, 3069 Hwy 49, Collins, MS. Call (601) 336-2541 for service.',
+            'Warranty service is performed by our experienced techs at Dykes Motors Power Equipment, 3069 Hwy 49, Collins, MS. Call (601) 336-2541 for service.',
         },
       },
     ],

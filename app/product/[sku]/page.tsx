@@ -103,7 +103,10 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
         hasMerchantReturnPolicy: {
           '@type': 'MerchantReturnPolicy',
           applicableCountry: 'US',
-          returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+          returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+          merchantReturnDays: 7,
+          returnFees: 'https://schema.org/FreeReturn',
+          returnMethod: 'https://schema.org/ReturnByMail',
           merchantReturnLink: 'https://www.dykespower.com/shipping-returns',
         },
         shippingDetails: {
@@ -114,8 +117,8 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
           },
           deliveryTime: {
             '@type': 'ShippingDeliveryTime',
-            handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 3, unitCode: 'DAY' },
-            transitTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 7, unitCode: 'DAY' },
+            handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 7, unitCode: 'DAY' },
+            transitTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 14, unitCode: 'DAY' },
           },
         },
         seller: {

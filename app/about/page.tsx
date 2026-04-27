@@ -100,10 +100,10 @@ export default function AboutPage() {
           Why we carry Ferris.
         </h2>
         <p className="text-dykes-gray-300 leading-relaxed mb-4">
-          We spent time in Collins picking the line we were willing to put our name behind.
-          Ferris invented the suspension mower — independent shocks on all four corners — and
-          nobody else comes close. When you spend 40 hours a week on a machine, that matters.
-          That&apos;s why every commercial crew we sell to goes home on a Ferris.
+          When we picked the line to stand behind, we chose Ferris. Ferris invented the
+          suspension mower — independent shocks on all four corners — and nobody else comes
+          close. When you spend 40 hours a week on a machine, that matters. That&apos;s why
+          every commercial crew we sell to goes home on a Ferris.
         </p>
         <p className="text-dykes-gray-300 leading-relaxed mb-12">
           From the residential 300 Series to the commercial ISX 3300 and the all-electric 300e,
@@ -130,7 +130,7 @@ export default function AboutPage() {
             <span className="text-dykes-silver font-bold shrink-0 mt-1">✓</span>
             <span>
               <span className="font-semibold text-white">Service &amp; repair.</span>{' '}
-              Factory-trained techs who work on every brand, not just what we sell. Oil changes,
+              Experienced techs who work on every brand, not just what we sell. Oil changes,
               blade sharpening, engine rebuilds, hydrostatic drive service, seasonal tune-ups.
             </span>
           </li>

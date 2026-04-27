@@ -42,7 +42,7 @@ export default function ShippingReturnsPage() {
         <ol className="list-decimal list-inside space-y-2 text-gray-300">
           <li>Contact us within 7 days at <a href="tel:6019095380" className="text-white underline">(601) 909-5380</a> or <a href="mailto:info@dykesmotors.com" className="text-white underline">info@dykesmotors.com</a></li>
           <li>Our service department will inspect the equipment and coordinate warranty service with Ferris</li>
-          <li>Warranty repairs are handled by certified technicians at our Collins, MS facility</li>
+          <li>Warranty repairs are handled by our experienced techs at the Collins, MS shop</li>
         </ol>
         <p className="text-gray-400 mt-4">
           Ferris warranty coverage: 3-year residential / 2-year commercial (coverage varies by model).

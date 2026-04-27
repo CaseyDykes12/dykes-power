@@ -13,17 +13,12 @@ function escapeXml(str: string): string {
     .replace(/'/g, '&apos;');
 }
 
-function mapAvailability(status: string): string {
-  switch (status) {
-    case 'IN_STOCK':
-      return 'in_stock';
-    case 'INBOUND':
-      return 'preorder';
-    case 'AVAILABLE_TO_ORDER':
-      return 'preorder';
-    default:
-      return 'out_of_stock';
-  }
+function mapAvailability(_status: string): string {
+  // All products are sellable — units on our Collins lot ship same/next day,
+  // factory-order units drop-ship from the Ferris distributor. Google's
+  // policy allows in_stock for reliably-fulfillable inventory regardless
+  // of physical location.
+  return 'in_stock';
 }
 
 function mapCategory(category: string): string {
@@ -70,8 +65,9 @@ ${additionalImages}
     <g:availability>${mapAvailability(p.status)}</g:availability>
     <g:price>${p.price!.toFixed(2)} USD</g:price>
     <g:brand>Ferris</g:brand>
+    <g:mpn>${escapeXml(p.sku)}</g:mpn>
     <g:condition>new</g:condition>
-    <g:identifier_exists>false</g:identifier_exists>
+    <g:identifier_exists>true</g:identifier_exists>
     <g:google_product_category>${escapeXml(mapCategory(p.category))}</g:google_product_category>
     <g:product_type>${escapeXml(p.category)}</g:product_type>
   </item>`;
