@@ -172,6 +172,57 @@ export default function HomePage() {
       {/* 10. About / Team */}
       <HomeAboutTeam />
 
+      {/* 10b. Customer Reviews */}
+      <section className="bg-dykes-black py-16 md:py-20 px-4 border-t border-dykes-gray-700">
+        <div className="max-w-[1280px] mx-auto">
+          <p className="text-dykes-silver text-sm font-semibold tracking-widest uppercase mb-2">
+            What customers are saying
+          </p>
+          <h2
+            className="text-3xl md:text-5xl font-bold mb-8 text-white"
+            style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.01em' }}
+          >
+            Real reviews from real customers.
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <article className="bg-dykes-gray-900 border border-dykes-gray-700 rounded-xl p-6 md:p-7">
+              <div className="flex items-center gap-2 mb-3 text-ferris-yellow text-lg" aria-label="5 out of 5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <blockquote className="text-dykes-gray-100 text-base md:text-lg leading-relaxed mb-4">
+                &ldquo;Great guys, first time owning a Ferris mower and man it&rsquo;s a game changer.
+                Thanks to Justin and Nathan for all the help!!!!&rdquo;
+              </blockquote>
+              <p className="text-dykes-silver text-sm">
+                <span className="text-white font-semibold">Charles</span> · Verified Google review
+              </p>
+            </article>
+            <article className="bg-dykes-gray-900 border border-dykes-gray-700 rounded-xl p-6 md:p-7 flex flex-col">
+              <div className="flex items-center gap-2 mb-3 text-ferris-yellow text-lg" aria-label="5 out of 5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p className="text-dykes-gray-100 text-base md:text-lg leading-relaxed mb-4 flex-1">
+                Five-star rating from a verified customer.
+              </p>
+              <p className="text-dykes-silver text-sm">
+                <span className="text-white font-semibold">Derek</span> · Verified Google review
+              </p>
+            </article>
+          </div>
+          <p className="text-dykes-gray-400 text-sm mt-6">
+            Reviews pulled from our Google Business Profile.{' '}
+            <a
+              href="https://www.google.com/search?q=Dykes+Motors+Power+Equipment+Collins+MS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white underline hover:text-dykes-silver"
+            >
+              Read more on Google →
+            </a>
+          </p>
+        </div>
+      </section>
+
       {/* 11. Mower Tips */}
       {recentPosts.length > 0 && (
         <section className="bg-dykes-gray-900 py-16 px-4 border-t border-dykes-gray-700">

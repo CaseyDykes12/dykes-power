@@ -35,9 +35,9 @@ export default function Footer() {
         <div>
           <p className="font-semibold text-white mb-3">Shop</p>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/catalog?category=Zero+Turn+Mowers" className="hover:text-[#C8C8C8]">Zero Turn Mowers</Link></li>
-            <li><Link href="/catalog?category=Stand-On+Mowers" className="hover:text-[#C8C8C8]">Stand-On Mowers</Link></li>
-            <li><Link href="/catalog?category=Walk-Behind+Mowers" className="hover:text-[#C8C8C8]">Walk-Behind Mowers</Link></li>
+            <li><Link href="/products/zero-turn-mowers" className="hover:text-[#C8C8C8]">Zero Turn Mowers</Link></li>
+            <li><Link href="/products/stand-on-mowers" className="hover:text-[#C8C8C8]">Stand-On Mowers</Link></li>
+            <li><Link href="/products/walk-behind-mowers" className="hover:text-[#C8C8C8]">Walk-Behind Mowers</Link></li>
             <li><Link href="/trailers" className="hover:text-[#C8C8C8]">Utility Trailers</Link></li>
             <li><Link href="/catalog" className="hover:text-[#C8C8C8]">All Products</Link></li>
           </ul>
@@ -131,12 +131,38 @@ export default function Footer() {
             </svg>
           </a>
 
-          <p className="text-xs text-gray-600 ml-2 hidden md:inline">Built in Mississippi. Backed by Dykes.</p>
+          <p className="text-xs text-gray-600 ml-2 hidden md:inline">Family-owned in Mississippi · Established 2025 in Collins, MS</p>
         </div>
         <p className="text-xs text-gray-600">
           © {new Date().getFullYear()} Dykes Power Equipment. All rights reserved.
         </p>
       </div>
+
+      {/* Payment methods */}
+      <div className="relative border-t border-gray-900 max-w-[1280px] mx-auto px-4 py-4">
+        <p className="text-[10px] uppercase tracking-widest text-gray-600 mb-2 text-center">We Accept</p>
+        <div className="flex items-center justify-center flex-wrap gap-2 md:gap-3">
+          {[
+            { label: 'Visa', bg: '#1a1f71' },
+            { label: 'Mastercard', bg: '#000000' },
+            { label: 'Amex', bg: '#016fd0' },
+            { label: 'Discover', bg: '#ff6000' },
+            { label: 'PayPal', bg: '#003087' },
+            { label: 'Apple Pay', bg: '#000000' },
+            { label: 'Google Pay', bg: '#4285f4' },
+            { label: 'Financing', bg: '#16a34a' },
+          ].map(({ label, bg }) => (
+            <span
+              key={label}
+              className="inline-flex items-center justify-center text-white text-[10px] font-bold px-2.5 py-1 rounded border border-gray-800"
+              style={{ backgroundColor: bg }}
+            >
+              {label}
+            </span>
+          ))}
+        </div>
+      </div>
+
       <div className="relative border-t border-gray-900 max-w-[1280px] mx-auto px-4 py-4 flex items-center justify-center gap-3 text-xs text-gray-600">
         <span>Proudly an Authorized Ferris<sup className="text-[0.6rem]">®</sup> Dealer. Participating in the &ldquo;Feels Like a Ferris&rdquo; national campaign.</span>
         {/* eslint-disable-next-line @next/next/no-img-element */}

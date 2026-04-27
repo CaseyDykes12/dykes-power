@@ -93,6 +93,31 @@ export default function AboutPage() {
           </p>
         </div>
 
+        {/* Owners + grand opening */}
+        <div className="mb-12 rounded-xl overflow-hidden border border-dykes-gray-700 bg-dykes-gray-900">
+          <div className="relative aspect-[3/2] bg-black">
+            <Image
+              src="/images/about/grand-opening-ribbon.jpg"
+              alt="Dykes Motors Power Equipment grand opening ribbon cutting in Collins, Mississippi — Casey Dykes, Everett Dykes, Charles Brooks, family, and Covington County Chamber of Commerce"
+              fill
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="object-cover object-center"
+            />
+          </div>
+          <div className="p-5 md:p-6">
+            <p className="text-dykes-silver text-xs font-semibold tracking-widest uppercase mb-2">
+              Ribbon Cutting · March 2026 · Covington County Chamber
+            </p>
+            <p className="text-dykes-gray-300 leading-relaxed">
+              Dykes Motors LLC is owned by{' '}
+              <span className="text-white font-semibold">Casey Dykes</span> (50%),{' '}
+              <span className="text-white font-semibold">Everett Dykes</span> (40%), and{' '}
+              <span className="text-white font-semibold">Charles Brooks</span> (10%). Power Equipment
+              operates alongside our used-vehicle dealership at 3069 Hwy 49 in Collins, Mississippi.
+            </p>
+          </div>
+        </div>
+
         <h2
           className="text-3xl md:text-4xl font-bold text-white mb-4"
           style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.02em' }}
