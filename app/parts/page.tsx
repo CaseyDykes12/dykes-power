@@ -220,6 +220,10 @@ export default function PartsPage() {
                     <img
                       src={part.imageUrl}
                       alt={part.name}
+                      loading="lazy"
+                      decoding="async"
+                      width={200}
+                      height={160}
                       className="max-h-full max-w-full object-contain opacity-70 group-hover:opacity-90 transition-opacity"
                     />
                   </div>
