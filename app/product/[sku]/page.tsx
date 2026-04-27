@@ -1,6 +1,6 @@
 import { products, getProductsBySku } from '@/lib/products';
 import { getProductImages } from '@/lib/productImages';
-import { notFound, permanentRedirect } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
@@ -22,22 +22,26 @@ export async function generateMetadata({ params }: { params: Promise<{ sku: stri
   const { sku } = await params;
   const product = getProductsBySku(sku);
   if (!product) return {};
-  if (product.canonicalSku) {
-    return { alternates: { canonical: `https://www.dykespower.com/product/${product.canonicalSku}` } };
-  }
 
-  const title = `${product.name} | Dykes Motors Power Equipment — Collins, MS`;
-  const description = `${product.name} — ${product.engine}, ${product.deckSizes.join('/')} deck. ${product.price ? `$${product.price.toLocaleString()} at` : 'Available at'} Dykes Motors Power Equipment, authorized Ferris dealer in Collins, Mississippi.`;
+  // Each variant SKU has its own landing page so Google Shopping can index
+  // every engine/deck configuration separately. Variants in the same family
+  // are tied together via g:item_group_id in /api/feed.
+  const deckPart = product.deckSizes.length > 0 ? ` — ${product.deckSizes.join('/')} deck` : '';
+  const enginePart = product.engine ? `, ${product.engine}` : '';
+  const title = `${product.name}${deckPart}${enginePart} | Dykes Motors Power Equipment — Collins, MS`;
+  const description = `${product.name}${deckPart}${enginePart}. ${product.price ? `$${product.price.toLocaleString()} at` : 'Available at'} Dykes Motors Power Equipment, authorized Ferris dealer in Collins, Mississippi.`;
   const images = getProductImages(product);
+  const canonicalUrl = `https://www.dykespower.com/product/${sku}`;
 
   return {
     title,
     description,
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       type: 'website',
       title,
       description,
-      url: `https://www.dykespower.com/product/${sku}`,
+      url: canonicalUrl,
       images: images.length > 0 ? [{ url: images[0], alt: product.name }] : undefined,
     },
     twitter: {
@@ -53,7 +57,6 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
   const { sku } = await params;
   const product = getProductsBySku(sku);
   if (!product) notFound();
-  if (product.canonicalSku) permanentRedirect(`/product/${product.canonicalSku}`);
 
   const images = getProductImages(product);
   const familyTagline = getFamilyTagline(product.name);

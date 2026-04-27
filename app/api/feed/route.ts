@@ -54,18 +54,24 @@ export async function GET() {
       const deckLabel = p.deckSizes.length > 0 ? ` ${p.deckSizes[0]} deck` : '';
       const title = `${p.name} ${p.engine}${deckLabel}`;
 
-      const landingSku = p.canonicalSku ?? p.sku;
+      // Each variant gets its own landing page; item_group_id ties variants
+      // in the same model family together for Google Shopping.
+      const itemGroupId = p.canonicalSku ?? p.sku;
+      const sizeTag = p.deckSizes[0]
+        ? `\n    <g:size>${escapeXml(p.deckSizes[0])}</g:size>`
+        : '';
       return `  <item>
     <g:id>${escapeXml(p.sku)}</g:id>
+    <g:item_group_id>${escapeXml(itemGroupId)}</g:item_group_id>
     <g:title>${escapeXml(title)}</g:title>
     <g:description>${escapeXml(p.description)}</g:description>
-    <g:link>${SITE}/product/${landingSku}</g:link>
+    <g:link>${SITE}/product/${escapeXml(p.sku)}</g:link>
     <g:image_link>${escapeXml(imageUrl)}</g:image_link>
 ${additionalImages}
     <g:availability>${mapAvailability(p.status)}</g:availability>
     <g:price>${p.price!.toFixed(2)} USD</g:price>
     <g:brand>Ferris</g:brand>
-    <g:mpn>${escapeXml(p.sku)}</g:mpn>
+    <g:mpn>${escapeXml(p.sku)}</g:mpn>${sizeTag}
     <g:condition>new</g:condition>
     <g:identifier_exists>true</g:identifier_exists>
     <g:google_product_category>${escapeXml(mapCategory(p.category))}</g:google_product_category>

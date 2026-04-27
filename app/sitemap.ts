@@ -32,14 +32,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ferris-mowers-laurel-ms`, lastModified: now, priority: 0.8, changeFrequency: 'monthly' as const },
   ];
 
-  const productPages = products
-    .filter((p) => !p.canonicalSku)
-    .map((p) => ({
-      url: `${BASE}/product/${p.sku}`,
-      lastModified: now,
-      priority: 0.8,
-      changeFrequency: 'weekly' as const,
-    }));
+  // Include every product variant in the sitemap. Each engine/deck SKU has
+  // its own landing page; Google Shopping uses g:item_group_id (in /api/feed)
+  // to group variants in the same family.
+  const productPages = products.map((p) => ({
+    url: `${BASE}/product/${p.sku}`,
+    lastModified: now,
+    priority: p.canonicalSku ? 0.7 : 0.8,
+    changeFrequency: 'weekly' as const,
+  }));
 
   // Individual OEM parts pages
   const partPages = parts.map((p) => ({
