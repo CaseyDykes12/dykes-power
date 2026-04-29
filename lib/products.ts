@@ -2710,6 +2710,99 @@ export const products: Product[] = [
     ],
     "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS1200/Product%20Images/FER_RoverXC-FS1200_Updated.jpg",
     "status": "AVAILABLE_TO_ORDER"
+  },
+  {
+    "sku": "ferris-isx3300-curtis-ac-cab",
+    "name": "Ferris ISX™ 3300 — Curtis Premium A/C Cab",
+    "category": "Zero Turn Mowers",
+    "engine": "Vanguard® Big Block EFI ETC with Oil Guard",
+    "horsepower": "40 hp",
+    "deckSizes": ["60\""],
+    "price": 28900,
+    "msrp": null,
+    "description": "A Ferris ISX 3300 with the Curtis Industries Premium A/C cab installed and ready to roll. Air conditioning that's pre-charged from the factory, hard-coated polycarbonate windshield, lockable doors, side mirrors, front and rear wipers, and headlights — all on this unit. Cutting in 95-degree humidity is a different deal when you're sitting in here. The chassis is the top of the Ferris line: ForeFront suspension, Dual Hydro-Gear ZT-5400, 2-belt iCD+ deck, Vanguard Big Block EFI with Oil Guard. Want a 61\" or 72\" deck instead of the 60\"? We'll order it and install the cab for you — pricing on request.",
+    "features": [
+      "Curtis Industries Premium A/C Cab (SKU 1FISX33PR)",
+      "Pre-charged automotive A/C — runs at full throttle",
+      "Hard-coated tinted polycarbonate windshield + doors",
+      "Lockable rear-hinged side doors",
+      "Front + rear wipers, headlights, side mirrors — all installed",
+      "Lightweight aluminum cab with acoustical headliner",
+      "40 HP Vanguard® Big Block EFI ETC with Oil Guard",
+      "60\" iCD+ side-discharge deck (61\" or 72\" available — call us)",
+      "Next-gen ForeFront™ suspension, front + rear independent",
+      "Dual Hydro-Gear® ZT-5400 commercial drive"
+    ],
+    "imageUrl": "/images/ferris/isx3300-curtis-cab/02-rear-3q.webp",
+    "images": [
+      "/images/ferris/isx3300-curtis-cab/02-rear-3q.webp",
+      "/images/ferris/isx3300-curtis-cab/01-front-3q-hero.webp",
+      "/images/ferris/isx3300-curtis-cab/03-side-profile.webp",
+      "/images/ferris/isx3300-curtis-cab/04-operator-station.webp",
+      "/images/ferris/isx3300-curtis-cab/05-cab-interior-controls.webp",
+      "/images/ferris/isx3300-curtis-cab/06-curtis-ac-unit.webp",
+      "/images/ferris/isx3300-curtis-cab/07-vanguard-engine.webp",
+      "/images/ferris/isx3300-curtis-cab/08-60in-deck.webp",
+      "/images/ferris/isx3300-curtis-cab/09-isx3300-chassis-decal.webp",
+      "/images/ferris/isx3300-curtis-cab/10-curtis-mfg-label.webp"
+    ],
+    "status": "IN_STOCK",
+    "tag": "Climate-Controlled Cab",
+    "keyFeatures": [
+      {
+        "title": "Real A/C, Real Cab",
+        "body": "Curtis Industries built the cab. We installed it. Hard polycarbonate windshield, doors that lock, automotive A/C pre-charged from the factory. Aluminum frame, acoustical headliner. Same outfit you see on the John Deere and Kubota dealer floors.",
+        "icon": "seat"
+      },
+      {
+        "title": "Top of the Ferris Line",
+        "body": "ISX 3300 is the flagship. ForeFront suspension, Dual Hydro-Gear ZT-5400, 2-belt iCD+ cutting deck, and Vanguard's Big Block EFI ETC with Oil Guard for extended service intervals. The cab needs the Big Block — Kawasaki won't work with this setup.",
+        "icon": "engine"
+      },
+      {
+        "title": "Wipers, Lights, Mirrors — All On It",
+        "body": "Three Curtis kits already installed on this unit: front + rear wiper kit, light kit (headlights for early starts), side-mirror kit. You can see the three rocker switches on the headliner in the photos.",
+        "icon": "deck"
+      },
+      {
+        "title": "Build Your Own",
+        "body": "This unit is the 60\" deck. The same ISX 3300 chassis comes in 61\" or 72\" too — we'll order whichever deck you want and install the cab. Curtis also sells add-on accessories like an overhead console, door storage bracket kit ($109), and an additional 5-LED low-profile work light kit ($312). Call or text us at (601) 641-5475 and we'll quote whatever build you want.",
+        "icon": "transaxle"
+      },
+      {
+        "title": "Warranty Notes (Important)",
+        "body": "Curtis Industries provides their own manufacturer warranty on the cab — terms on file in our parts office, call us and we'll send you a copy. Heads up: aftermarket cab installation can affect Ferris factory warranty coverage on systems the cab modifies (electrical and A/C-related drive). Talk to us before purchase so you know exactly what's covered and what isn't. We'd rather you go in eyes-open.",
+        "icon": "warranty"
+      }
+    ],
+    "specs": {
+      "groundSpeedFwd": "0–11.5 mph",
+      "groundSpeedRev": "0–6 mph",
+      "deckConstruction": "10-gauge fabricated steel, iCD+ 2-belt",
+      "cuttingHeight": "1.5\" – 5.5\" in 0.25\" increments",
+      "engineBrand": "Vanguard®",
+      "engineModel": "Big Block EFI ETC with Oil Guard",
+      "engineDisplacement": "993 cc",
+      "engineCylinders": "V-Twin",
+      "starter": "Electric",
+      "fuelType": "Unleaded gasoline",
+      "fuelCapacity": "11.5 gal",
+      "transmission": "Dual Hydro-Gear® ZT-5400 with cooling fans",
+      "parkingBrake": "Automatic",
+      "suspension": "Next-gen ForeFront™ — front and rear independent",
+      "seat": "High-back commercial with armrests, inside Curtis A/C cab",
+      "instrumentation": "Digital hour meter + cab control panel (wiper, light, A/C)",
+      "spindles": "Heavy-duty cast iron",
+      "driveTires": "24x12-12 turf",
+      "casterTires": "13x6.5-6 dual",
+      "overallLength": "82 in",
+      "overallHeight": "76 in (with cab)",
+      "overallWidth": "65.5 in (60\" deck)",
+      "dryWeight": "~1,950 lb (with Curtis cab installed)",
+      "warrantyMachine": "4-yr / 500-hr Ferris commercial limited (subject to standard exclusions; cab install may affect coverage on modified systems)",
+      "warrantySuspension": "5-yr / unlimited-hour suspension components",
+      "warrantyEngine": "3-yr Vanguard limited engine warranty"
+    }
   }
 ];
 
