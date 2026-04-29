@@ -200,6 +200,68 @@ export const richContentByFamily: Record<string, RichContent> = {
     },
   },
 
+  'Ferris ISX™ 3300 Series': {
+    keyFeatures: [
+      {
+        title: 'Top of the Ferris line',
+        body: 'ISX 3300 is the flagship. Bigger frame than the 2200, bigger engines (40 HP), bigger deck options (60" or 72"), bigger fuel tank. Built for crews running 1,500+ hours a year and the kind of acreage that eats smaller machines.',
+        icon: 'engine',
+      },
+      {
+        title: 'Vanguard Big Block EFI with Oil Guard',
+        body: '40 HP, 993 cc V-twin, electronic throttle control, fuel-injected. Oil Guard stretches oil-change intervals to 500 hours. That\'s one oil change per quarter instead of one per week. Kawasaki FX1000V EFI also available — 38.5 HP, no Oil Guard.',
+        icon: 'engine',
+      },
+      {
+        title: '0–12 mph ground speed',
+        body: 'Two mph faster than the 2200. On a 60" deck, that\'s real productivity — about 7 acres per hour at full chip. Reverse is 0–5 mph for trimming around buildings and tight cleanup.',
+        icon: 'transaxle',
+      },
+      {
+        title: '2-belt iCD™+ deck',
+        body: '60" or 72" fabricated deck with the redesigned iCD+ cutting system. Two-belt drive instead of one — faster blade response, cleaner cut at full ground speed, better discharge in wet grass. Cutting height 1.5–5 inches.',
+        icon: 'deck',
+      },
+      {
+        title: 'Hydro-Gear ZT-5400 Powertrain',
+        body: 'Same commercial transaxles as the 2200 but with 9" cooling fans and a heavier external cooler. Hercules II cast-iron spindles, greaseable, warrantied. Built to outlast the engine.',
+        icon: 'transaxle',
+      },
+      {
+        title: 'Operator platform built for the long day',
+        body: 'Premium high-back suspension seat with adjustable armrests, lumbar support, and seat-back recline. USB charging ports (12V–60V, Type A and C) on the dash for phones and tablets. Mowing 8 hours straight is a different deal up here.',
+        icon: 'seat',
+      },
+    ],
+    specs: {
+      groundSpeedFwd: '0–12 mph',
+      groundSpeedRev: '0–5 mph',
+      deckConstruction: '10-gauge fabricated steel, 2-belt iCD+ deep-shell',
+      cuttingHeight: '1.5–5 inches',
+      engineBrand: 'Vanguard Big Block EFI ETC w/ Oil Guard or Kawasaki FX1000V EFI',
+      engineDisplacement: '993 cc (Vanguard) · 999 cc (Kawasaki)',
+      engineCylinders: '2',
+      starter: 'Electric',
+      fuelType: 'Gasoline',
+      fuelCapacity: '11 gallons',
+      transmission: 'Dual Hydro-Gear ZT-5400 Powertrain with 9" cooling fans',
+      parkingBrake: 'Hand-operated transaxle brake',
+      suspension: 'ForeFront™ four-wheel independent',
+      seat: 'Premium high-back suspension with armrests, lumbar, and recline',
+      instrumentation: 'Digital hour meter, fuel gauge, USB-A and USB-C charging (12V–60V)',
+      spindles: 'Hercules II cast-iron, greaseable',
+      driveTires: '24 x 12–12 turf',
+      casterTires: '13 x 6.5–6',
+      overallLength: '84.5 inches',
+      overallHeight: '52 inches',
+      overallWidth: '74–86 inches (deflector-dependent)',
+      dryWeight: '1,496–1,717 lbs',
+      warrantyMachine: '2 years unlimited · 4 years / 500 hours commercial',
+      warrantySuspension: '10 years',
+      warrantyEngine: 'Per engine manufacturer\'s warranty',
+    },
+  },
+
   'Ferris SRS™ Z3X Series': {
     keyFeatures: [
       {
