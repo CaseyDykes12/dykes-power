@@ -113,6 +113,12 @@ export default function FerrisHero() {
 
           <div className="flex flex-wrap gap-4 mb-8">
             <Link
+              href="/contact"
+              className="bg-ferris-yellow text-dykes-black font-bold text-lg px-8 py-4 rounded-md hover:bg-ferris-yellow-dark transition-colors shadow-lg"
+            >
+              Schedule a Demo →
+            </Link>
+            <Link
               href="/catalog"
               className="bg-white text-dykes-black font-bold px-8 py-3 rounded-md hover:bg-dykes-gray-100 transition-colors"
             >

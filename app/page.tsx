@@ -24,8 +24,14 @@ export default function HomePage() {
   return (
     <>
       {/* Financing banner */}
-      <div className="bg-red-600 text-white text-center text-xs md:text-sm font-semibold tracking-widest uppercase py-2 px-4">
-        Financing as low as 4.9% APR up to 84 months for qualified credit — <Link href="/contact" className="underline hover:no-underline">Get pre-approved</Link>
+      <div className="bg-red-600 text-white text-center text-xs md:text-sm font-semibold tracking-widest uppercase py-3 px-4 flex flex-col sm:flex-row sm:items-center sm:justify-center gap-2 sm:gap-4">
+        <span>Financing as low as 4.9% APR up to 84 months for qualified credit</span>
+        <Link
+          href="/financing"
+          className="inline-block bg-white text-red-600 font-bold tracking-wider px-4 py-1.5 rounded-md hover:bg-gray-100 transition-colors"
+        >
+          Get Pre-Approved →
+        </Link>
       </div>
 
       {/* 1. Hero */}
@@ -70,6 +76,35 @@ export default function HomePage() {
 
       {/* 3. Find Your Ferris — category browser */}
       <CategoryBrowser />
+
+      {/* 3b. Mid-page CTA — give shoppers a fast path to a quote without scrolling 12 sections */}
+      <section className="bg-ferris-yellow text-dykes-black py-12 md:py-14 px-4 border-y-4 border-dykes-black">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2
+            className="text-3xl md:text-4xl font-black mb-3 leading-tight"
+            style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.02em' }}
+          >
+            Ready to talk to us?
+          </h2>
+          <p className="text-base md:text-lg mb-6 text-dykes-black/80 max-w-xl mx-auto">
+            Real pricing, real people, no pressure. Tell us what you need and we'll get back fast.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link
+              href="/contact"
+              className="inline-block bg-dykes-black text-white text-base md:text-lg font-bold px-8 py-3 md:py-4 rounded-md hover:bg-dykes-gray-900 transition-colors shadow-md"
+            >
+              Schedule a Demo →
+            </Link>
+            <a
+              href="tel:6019095380"
+              className="inline-block border-2 border-dykes-black text-dykes-black text-base md:text-lg font-bold px-8 py-3 md:py-4 rounded-md hover:bg-dykes-black hover:text-white transition-colors"
+            >
+              Call (601) 909-5380
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* 4. Why Ferris — refreshed, photos now linked */}
       <section className="bg-dykes-black py-16 md:py-24 px-4">
@@ -163,33 +198,43 @@ export default function HomePage() {
           >
             Real reviews from real customers.
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <article className="bg-dykes-gray-900 border border-dykes-gray-700 rounded-xl p-6 md:p-7">
               <div className="flex items-center gap-2 mb-3 text-ferris-yellow text-lg" aria-label="5 out of 5 stars">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
               <blockquote className="text-dykes-gray-100 text-base md:text-lg leading-relaxed mb-4">
-                &ldquo;Great guys, first time owning a Ferris mower and man it&rsquo;s a game changer.
-                Thanks to Justin and Nathan for all the help!!!!&rdquo;
+                &ldquo;I had the best experience at Dykes Motors. Everyone was so helpful and so attentive. I highly recommend!!&rdquo;
               </blockquote>
               <p className="text-dykes-silver text-sm">
-                <span className="text-white font-semibold">Charles</span> · Verified Google review
+                <span className="text-white font-semibold">Natalie C.</span> · Verified Facebook review
               </p>
             </article>
-            <article className="bg-dykes-gray-900 border border-dykes-gray-700 rounded-xl p-6 md:p-7 flex flex-col">
+            <article className="bg-dykes-gray-900 border border-dykes-gray-700 rounded-xl p-6 md:p-7">
               <div className="flex items-center gap-2 mb-3 text-ferris-yellow text-lg" aria-label="5 out of 5 stars">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
-              <p className="text-dykes-gray-100 text-base md:text-lg leading-relaxed mb-4 flex-1">
-                Five-star rating from a verified customer.
-              </p>
+              <blockquote className="text-dykes-gray-100 text-base md:text-lg leading-relaxed mb-4">
+                &ldquo;Thanks so much for guiding me through my purchase. Your knowledge and excellent service made my purchase a joy and a blessing.&rdquo;
+              </blockquote>
               <p className="text-dykes-silver text-sm">
-                <span className="text-white font-semibold">Derek</span> · Verified Google review
+                <span className="text-white font-semibold">Nelda D.</span> · Verified Facebook review
+              </p>
+            </article>
+            <article className="bg-dykes-gray-900 border border-dykes-gray-700 rounded-xl p-6 md:p-7">
+              <div className="flex items-center gap-2 mb-3 text-ferris-yellow text-lg" aria-label="5 out of 5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <blockquote className="text-dykes-gray-100 text-base md:text-lg leading-relaxed mb-4">
+                &ldquo;They were very easy to work with, and provided the best sales and service. We will absolutely do business with them again!&rdquo;
+              </blockquote>
+              <p className="text-dykes-silver text-sm">
+                <span className="text-white font-semibold">Jennifer S.</span> · Verified Facebook review
               </p>
             </article>
           </div>
           <p className="text-dykes-gray-400 text-sm mt-6">
-            Reviews pulled from our Google Business Profile.{' '}
+            Reviews pulled from our verified Google and Facebook profiles.{' '}
             <a
               href="https://www.google.com/search?q=Dykes+Motors+Power+Equipment+Collins+MS"
               target="_blank"

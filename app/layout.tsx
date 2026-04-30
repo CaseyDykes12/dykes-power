@@ -4,6 +4,7 @@ import Script from 'next/script';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SiteStickyCTA from '@/components/SiteStickyCTA';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' });
@@ -215,6 +216,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <SiteStickyCTA />
         {/* Tecobi SMS Widget (clientId 2692 — Dykes Motors) */}
         <Script
           id="tecobi-widget-include"
