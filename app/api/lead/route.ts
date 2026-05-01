@@ -78,8 +78,8 @@ Submitted: ${timestamp}
 
     // Fire an ADF XML lead to Tecobi (clientId 2692) for every lead, phone or not.
     // Phone is optional per ADF spec; Tecobi will follow up via email when phone is missing.
+    const adfXml = buildAdfXml({ name, email, phone: phone || '', interest, propertySize, message });
     try {
-      const adfXml = buildAdfXml({ name, email, phone: phone || '', interest, propertySize, message });
       const tecobiRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
@@ -104,6 +104,11 @@ Submitted: ${timestamp}
       console.error('[LEAD-TECOBI-FAIL] threw:', tecErr instanceof Error ? tecErr.message : String(tecErr));
     }
 
+    // Dual-write: also POST to DM Command Center (Tecobi replacement, currently
+    // shadowing). Best-effort, non-blocking. Tecobi remains the source of truth
+    // until cutover; if DM Command is down, the customer experience is unaffected.
+    void postToDmCommand(adfXml);
+
     return NextResponse.json({ success: true, id: data?.id });
   } catch (err) {
     console.error('[LEAD-FAIL] Resend fetch threw:', err instanceof Error ? err.message : String(err));
@@ -111,6 +116,41 @@ Submitted: ${timestamp}
       { success: false, error: 'email_exception' },
       { status: 500 }
     );
+  }
+}
+
+async function postToDmCommand(adfXml: string): Promise<void> {
+  const base = process.env.DM_COMMAND_BASE_URL;
+  const token = process.env.ADF_INTAKE_TOKEN;
+  if (!base || !token) {
+    // Pre-cutover defense: skip silently if env isn't wired yet.
+    console.warn('[LEAD-DMCC-SKIP] DM_COMMAND_BASE_URL or ADF_INTAKE_TOKEN not set');
+    return;
+  }
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 8_000);
+  try {
+    const res = await fetch(`${base}/api/motors/adf?tenant=dykes-motors`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/xml',
+        'x-adf-token': token,
+      },
+      body: adfXml,
+      signal: controller.signal,
+    });
+    if (!res.ok) {
+      const errText = await res.text().catch(() => '(no body)');
+      console.error('[LEAD-DMCC-FAIL]', res.status, errText);
+      return;
+    }
+    const data = await res.json().catch(() => null);
+    console.log('[LEAD-DMCC-OK] lead_id:', data?.lead_id ?? '(unknown)', 'existing:', data?.existing ?? false);
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err);
+    console.error('[LEAD-DMCC-FAIL] threw:', msg);
+  } finally {
+    clearTimeout(timer);
   }
 }
 
