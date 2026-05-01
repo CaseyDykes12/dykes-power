@@ -3,11 +3,60 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Shipping & Returns | Dykes Motors Power Equipment',
   description: 'Shipping options, delivery times, and return policy for Dykes Motors Power Equipment.',
+  alternates: { canonical: 'https://www.dykespower.com/shipping-returns' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Do you ship Ferris mowers nationwide?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Dykes Motors Power Equipment ships Ferris mowers and trailers to all 48 contiguous states. Freight is included on every mower and most trailers.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does mower shipping take?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most Ferris mowers ship in 3–7 business days. Stocked units leave our Collins, MS shop within 1–2 days; factory-direct units ship in 5–10 business days from Ferris.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How fast do parts and accessories ship?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Parts and accessories ship same-day if ordered before 2 PM Central. Most arrive in 3–5 business days via UPS or FedEx.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is your return policy on Ferris mowers?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'New, unused Ferris mowers can be returned within 14 days of delivery for a full refund minus return freight. Used or operated mowers are not eligible for return; they fall under Ferris\'s manufacturer warranty.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are mowers covered by warranty?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Every Ferris mower comes with the full Ferris factory warranty (typically 3-year limited residential or 1-year/750-hour commercial). Dykes Motors is an authorized warranty service center.',
+      },
+    },
+  ],
 };
 
 export default function ShippingReturnsPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <h1 className="text-3xl font-bold mb-2">Shipping & Returns</h1>
       <p className="text-gray-400 mb-10">Last updated: April 27, 2026</p>
 

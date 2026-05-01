@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/blog';
 import HomepageStickyCTA from '@/components/HomepageStickyCTA';
@@ -10,6 +11,10 @@ import DayOfWorkGallery from '@/components/campaign/DayOfWorkGallery';
 import HomeAboutTeam from '@/components/HomeAboutTeam';
 import BuildYourFerris from '@/components/BuildYourFerris';
 import CategoryBrowser from '@/components/CategoryBrowser';
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
 
 export default function HomePage() {
   const recentPosts = getAllPosts().slice(0, 3);

@@ -140,6 +140,16 @@ const localBusinessSchema = {
   sameAs: [
     'https://www.facebook.com/DykesMotor',
   ],
+  // AggregateRating reflects Dykes Motors Power Equipment's verified GBP
+  // reviews. Update reviewCount as reviews accumulate; ratingValue is an
+  // average of all GBP star ratings.
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: '2',
+    bestRating: '5',
+    worstRating: '1',
+  },
 };
 
 const websiteSchema = {
