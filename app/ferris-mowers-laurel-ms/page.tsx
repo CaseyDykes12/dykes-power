@@ -54,6 +54,74 @@ const breadcrumbSchema = {
   ],
 };
 
+const LAUREL_AREA = [
+  { '@type': 'City', name: 'Laurel', containedInPlace: { '@type': 'State', name: 'Mississippi' } },
+  { '@type': 'City', name: 'Ellisville', containedInPlace: { '@type': 'State', name: 'Mississippi' } },
+  { '@type': 'AdministrativeArea', name: 'Jones County, Mississippi' },
+];
+
+const PROVIDER = {
+  '@type': 'LocalBusiness',
+  name: 'Dykes Motors Power Equipment',
+  url: 'https://www.dykespower.com',
+  telephone: '+16019095380',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '3069 Hwy 49',
+    addressLocality: 'Collins',
+    addressRegion: 'MS',
+    postalCode: '39428',
+    addressCountry: 'US',
+  },
+};
+
+const serviceSchemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Ferris Mower Sales near Laurel, MS',
+    serviceType: 'Mower Sales',
+    description:
+      'New Ferris zero-turn, stand-on, and walk-behind mower sales for Laurel and Jones County. Free freight, financing as low as 4.9% APR for qualified credit.',
+    provider: PROVIDER,
+    areaServed: LAUREL_AREA,
+    url: 'https://www.dykespower.com/ferris-mowers-laurel-ms',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Ferris Mower Service & Repair near Laurel, MS',
+    serviceType: 'Mower Repair',
+    description:
+      'Authorized Ferris service center serving Laurel, Ellisville, and Jones County. Engine diagnostics, hydrostatic service, blade sharpening, seasonal tune-ups, warranty work.',
+    provider: PROVIDER,
+    areaServed: LAUREL_AREA,
+    url: 'https://www.dykespower.com/service',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Ferris OEM Parts near Laurel, MS',
+    serviceType: 'Parts Sales',
+    description:
+      'Genuine Ferris OEM parts — blades, belts, filters, spindles, decks. Same-day shipping on stocked parts. Free shipping nationwide.',
+    provider: PROVIDER,
+    areaServed: LAUREL_AREA,
+    url: 'https://www.dykespower.com/parts',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Mower Financing near Laurel, MS',
+    serviceType: 'Equipment Financing',
+    description:
+      'Mower financing for Laurel-area buyers as low as 4.9% APR up to 84 months for qualified credit. Soft-pull pre-qualification with no credit impact.',
+    provider: PROVIDER,
+    areaServed: LAUREL_AREA,
+    url: 'https://www.dykespower.com/financing',
+  },
+];
+
 export default function FerrisMowersLaurelPage() {
   const featured = products
     .filter((p) => p.tag === 'Best Seller' || p.tag === 'Popular')
@@ -63,6 +131,9 @@ export default function FerrisMowersLaurelPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(geoSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {serviceSchemas.map((s, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
       {/* Hero */}
       <section className="bg-[#0a0a0a] text-white px-4 py-12 sm:py-16 border-b border-gray-800">
         <div className="max-w-3xl mx-auto">

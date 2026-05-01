@@ -1,4 +1,4 @@
-import { products, getProductsBySku } from '@/lib/products';
+import { products, getProductsBySku, type Product } from '@/lib/products';
 import { getProductImages } from '@/lib/productImages';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -8,6 +8,26 @@ import AddToCartButton from '@/components/AddToCartButton';
 import ProductGallery from '@/components/ProductGallery';
 import FinancingOptions from '@/components/FinancingOptions';
 import VariantDeckSelector from '@/components/VariantDeckSelector';
+import ProductCard from '@/components/ProductCard';
+
+// Picks 3 same-category Ferris models, ranked by price proximity to the
+// current product. Skips canonical-alias entries (those redirect anyway)
+// and the current product itself. Powers the "Similar Ferris models"
+// internal-linking widget on every PDP — gives Google more crawl paths
+// between products and gives shoppers natural cross-comparison.
+function pickSimilarProducts(current: Product, max = 3): Product[] {
+  const currentPrice = current.price ?? 0;
+  return products
+    .filter((p) => p.sku !== current.sku)
+    .filter((p) => !p.canonicalSku)
+    .filter((p) => p.category === current.category)
+    .sort((a, b) => {
+      const ap = a.price ?? Number.POSITIVE_INFINITY;
+      const bp = b.price ?? Number.POSITIVE_INFINITY;
+      return Math.abs(ap - currentPrice) - Math.abs(bp - currentPrice);
+    })
+    .slice(0, max);
+}
 import { getRichContent } from '@/lib/productRichContent';
 import StickyMobileCTA from '@/components/StickyMobileCTA';
 import ProductLeadForm from '@/components/ProductLeadForm';
@@ -60,6 +80,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
 
   const images = getProductImages(product);
   const familyTagline = getFamilyTagline(product.name);
+  const similarProducts = pickSimilarProducts(product);
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -539,6 +560,31 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
             </a>
           </div>
         </div>
+
+        {/* ── Similar Ferris Models ──────────────────────────────── */}
+        {similarProducts.length > 0 && (
+          <div className="mt-16">
+            <div className="flex items-baseline justify-between gap-4 mb-6 flex-wrap">
+              <h2
+                className="text-2xl md:text-3xl font-black text-white"
+                style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.02em' }}
+              >
+                Compare similar Ferris {product.category}
+              </h2>
+              <Link
+                href={`/products/${product.category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
+                className="text-[#C8C8C8] text-sm font-semibold hover:text-white transition-colors"
+              >
+                See all {product.category} →
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {similarProducts.map((p) => (
+                <ProductCard key={p.sku} product={p} />
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* ── Bottom CTA ───────────────────────────────────────────── */}
         <div className="mt-10 grid md:grid-cols-3 gap-4">
