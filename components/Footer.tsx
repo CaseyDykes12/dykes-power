@@ -58,6 +58,7 @@ export default function Footer() {
             <li><Link href="/shipping-returns" className="hover:text-[#C8C8C8]">Shipping & Returns</Link></li>
             <li><Link href="/privacy" className="hover:text-[#C8C8C8]">Privacy Policy</Link></li>
             <li><Link href="/terms" className="hover:text-[#C8C8C8]">Terms of Service</Link></li>
+            <li><Link href="/sms-terms" className="hover:text-[#C8C8C8]">SMS Terms</Link></li>
           </ul>
         </div>
 
