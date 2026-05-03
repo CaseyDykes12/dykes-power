@@ -1,6 +1,7 @@
 'use client';
 import { useMemo, useState } from 'react';
 import type { Product, ProductVariant } from '@/lib/products';
+import PriceBlock from './PriceBlock';
 
 type Props = {
   product: Product;
@@ -126,18 +127,12 @@ export default function VariantDeckSelector({ product }: Props) {
 
       {/* Selected variant price block */}
       <div className="bg-[#0c0c0c] border border-gray-800 rounded-lg p-4">
-        <div className="flex items-baseline justify-between mb-1">
+        <div className="flex items-baseline justify-between mb-2">
           <span className="text-xs font-semibold text-[#C8C8C8] uppercase tracking-widest">Your Price</span>
           <span className="text-[10px] text-gray-600 font-mono">SKU {selected.sku}</span>
         </div>
-        {selected.price ? (
-          <p className="text-3xl font-black text-white">
-            ${selected.price.toLocaleString()}
-          </p>
-        ) : (
-          <p className="text-lg text-[#C8C8C8] font-bold">Contact us for pricing</p>
-        )}
-        <p className="text-xs text-gray-500 mt-1">
+        <PriceBlock price={selected.price} msrp={selected.msrp} mode="variant" />
+        <p className="text-xs text-gray-500 mt-2">
           {selected.engine}{selected.horsepower ? ` · ${selected.horsepower}` : ''}{selected.deckSize ? ` · ${selected.deckSize} deck` : ''}
         </p>
       </div>

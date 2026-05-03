@@ -8,6 +8,7 @@ import AddToCartButton from '@/components/AddToCartButton';
 import ProductGallery from '@/components/ProductGallery';
 import FinancingOptions from '@/components/FinancingOptions';
 import VariantDeckSelector from '@/components/VariantDeckSelector';
+import PriceBlock from '@/components/PriceBlock';
 import ProductCard from '@/components/ProductCard';
 
 // Picks 3 same-category Ferris models, ranked by price proximity to the
@@ -234,23 +235,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
               <VariantDeckSelector product={product} />
             ) : (
               <div className="mb-6">
-                {product.price ? (
-                  <div>
-                    {product.msrp && product.msrp !== product.price && (
-                      <p className="text-gray-500 text-base line-through mb-0.5">
-                        MSRP: ${product.msrp.toLocaleString()}
-                      </p>
-                    )}
-                    <p className="text-xs font-semibold text-[#C8C8C8] uppercase tracking-widest mb-1">Dykes Motors Price</p>
-                    <p className="text-4xl font-black text-white mb-1">${product.price.toLocaleString()}</p>
-                    <p className="text-gray-500 text-sm">Cash or finance — your choice</p>
-                  </div>
-                ) : (
-                  <div>
-                    <p className="text-2xl font-bold text-[#C8C8C8]">Contact us for pricing</p>
-                    <p className="text-gray-500 text-sm mt-1">Call or message us for a real quote</p>
-                  </div>
-                )}
+                <PriceBlock price={product.price} msrp={product.msrp} mode="detail" />
               </div>
             )}
 

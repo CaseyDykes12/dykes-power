@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Product } from '@/lib/products';
 import { SuspensionWarrantyBadge, isWarrantyEligible } from './SuspensionWarrantyBadge';
+import PriceBlock from './PriceBlock';
 
 export default function ProductCard({ product }: { product: Product }) {
   const [imgError, setImgError] = useState(false);
@@ -60,22 +61,16 @@ export default function ProductCard({ product }: { product: Product }) {
 
         <p className="text-gray-500 text-sm line-clamp-2 mb-4 flex-1">{product.description}</p>
 
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-700">
-          <div>
-            {product.price ? (
-              <>
-                {product.msrp && product.msrp !== product.price && (
-                  <p className="text-gray-500 text-xs line-through">MSRP ${product.msrp.toLocaleString()}</p>
-                )}
-                <p className="font-bold text-lg text-white">${product.price.toLocaleString()}</p>
-                <p className="text-[#C8C8C8] text-xs font-semibold">Dykes Motors Price</p>
-                <p className="text-gray-500 text-xs">from ${Math.ceil(product.price * 0.00408333 * Math.pow(1.00408333, 72) / (Math.pow(1.00408333, 72) - 1)).toLocaleString()}/mo*</p>
-              </>
-            ) : (
-              <p className="font-semibold text-[#C8C8C8]">Contact for price</p>
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-700 gap-3">
+          <div className="flex-1 min-w-0">
+            <PriceBlock price={product.price} msrp={product.msrp} mode="compact" />
+            {product.price && (
+              <p className="text-gray-500 text-xs mt-1">
+                from ${Math.ceil(product.price * 0.00408333 * Math.pow(1.00408333, 72) / (Math.pow(1.00408333, 72) - 1)).toLocaleString()}/mo*
+              </p>
             )}
           </div>
-          <span className="btn-primary text-sm py-2 px-4">
+          <span className="btn-primary text-sm py-2 px-4 shrink-0">
             View Details
           </span>
         </div>

@@ -224,6 +224,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </noscript>
         <Navbar />
+        {/* Site-wide pricing banner — mirrors authorized-dealer convention */}
+        <div className="bg-black text-white border-b border-gray-800 py-2 text-center text-xs sm:text-sm tracking-wide">
+          <strong className="font-bold">Add Product to Cart To See Lowest Price</strong>
+          <span className="hidden sm:inline text-gray-400"> · Manufacturer instant rebates already included where shown · Call <a href="tel:6019095380" className="underline">(601) 909-5380</a> for additional package savings</span>
+        </div>
         <main className="flex-1">{children}</main>
         <Footer />
         <SiteStickyCTA />
