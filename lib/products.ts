@@ -470,7 +470,7 @@ export const products: Product[] = [
         "horsepower": "25 hp",
         "deckSize": "52\"",
         "price": 6899,
-        "msrp": 7588,
+        "msrp": 7259,
         "status": "AVAILABLE_TO_ORDER"
       },
       {
@@ -503,7 +503,7 @@ export const products: Product[] = [
       "52\""
     ],
     "price": 6899,
-    "msrp": 7588,
+    "msrp": 7259,
     "description": "The 52\" 500S adds more cutting width to Ferris's mid-range commercial platform.",
     "features": [
       "25 HP Briggs & Stratton CXi engine",
@@ -1680,7 +1680,7 @@ export const products: Product[] = [
         "engine": "Vanguard™ 810 EFI w/ Oil Guard",
         "horsepower": "25.5 hp",
         "deckSize": "52\"",
-        "price": 11949,
+        "price": 10699,
         "msrp": 13144,
         "status": "AVAILABLE_TO_ORDER"
       },
@@ -1752,14 +1752,14 @@ export const products: Product[] = [
   },
   {
     "sku": "5902165",
-    "name": "Ferris SRS™ Z2 Series",
+    "name": "Ferris SRS™ Z2 Series (Instant Rebate Included)",
     "category": "Stand-On Mowers",
     "engine": "Vanguard™ 810 EFI w/ Oil Guard",
     "horsepower": "25.5 hp",
     "deckSizes": [
       "52\""
     ],
-    "price": 11949,
+    "price": 10699,
     "msrp": 13144,
     "description": "The SRS Z2 52\" Vanguard EFI — premium stand-on performance with Ferris suspension and extended service intervals.",
     "features": [
@@ -1875,7 +1875,7 @@ export const products: Product[] = [
         "engine": "Kawasaki® FX1000 EFI",
         "horsepower": "38.5 hp",
         "deckSize": "52\"",
-        "price": 13899,
+        "price": 12499,
         "msrp": 15289,
         "status": "AVAILABLE_TO_ORDER"
       },
@@ -1893,7 +1893,7 @@ export const products: Product[] = [
         "engine": "Vanguard™ EFI-ETC w/ Oil Guard",
         "horsepower": "40 hp",
         "deckSize": "52\"",
-        "price": 14499,
+        "price": 13099,
         "msrp": 15949,
         "status": "AVAILABLE_TO_ORDER"
       },
@@ -1964,14 +1964,14 @@ export const products: Product[] = [
   },
   {
     "sku": "5902233",
-    "name": "Ferris SRS™ Z3X Series",
+    "name": "Ferris SRS™ Z3X Series (Instant Rebate Included)",
     "category": "Stand-On Mowers",
     "engine": "Kawasaki® FX1000 EFI",
     "horsepower": "38.5 hp",
     "deckSizes": [
       "52\""
     ],
-    "price": 13899,
+    "price": 12499,
     "msrp": 15289,
     "description": "The SRS Z3X EFI 52\" brings fuel-injected Kawasaki power to the premium stand-on platform.",
     "features": [
@@ -2019,14 +2019,14 @@ export const products: Product[] = [
   },
   {
     "sku": "5902217",
-    "name": "Ferris SRS™ Z3X Series",
+    "name": "Ferris SRS™ Z3X Series (Instant Rebate Included)",
     "category": "Stand-On Mowers",
     "engine": "Vanguard™ EFI-ETC w/ Oil Guard",
     "horsepower": "40 hp",
     "deckSizes": [
       "52\""
     ],
-    "price": 14499,
+    "price": 13099,
     "msrp": 15949,
     "description": "The SRS Z3X 52\" Vanguard — premium stand-on performance with EFI power and Oil Guard convenience.",
     "features": [
@@ -2358,7 +2358,7 @@ export const products: Product[] = [
         "horsepower": "24 hp",
         "deckSize": "61\"",
         "price": 10349,
-        "msrp": 11384,
+        "msrp": 11999,
         "status": "AVAILABLE_TO_ORDER"
       }
     ]
@@ -2478,7 +2478,7 @@ export const products: Product[] = [
       "61\""
     ],
     "price": 10349,
-    "msrp": 11384,
+    "msrp": 11999,
     "description": "The FW45 61\" — the widest Ferris walk-behind, delivering maximum coverage for large commercial walk-behind applications.",
     "features": [
       "Kawasaki FX730V engine",
