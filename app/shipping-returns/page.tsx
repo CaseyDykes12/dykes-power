@@ -39,7 +39,7 @@ const faqSchema = {
       name: 'What is your return policy on Ferris mowers?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'New, unused Ferris mowers can be returned within 14 days of delivery for a full refund minus return freight. Used or operated mowers are not eligible for return; they fall under Ferris\'s manufacturer warranty.',
+        text: 'New, unused mowers and parts may be returned within 30 days of delivery for a full refund minus return shipping. Defective items returned within 30 days are refunded in full including shipping. Used or operated mowers are not eligible for return; they fall under Ferris\'s manufacturer warranty.',
       },
     },
     {
@@ -58,7 +58,7 @@ export default function ShippingReturnsPage() {
     <div className="max-w-3xl mx-auto px-4 py-16">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <h1 className="text-3xl font-bold mb-2">Shipping & Returns</h1>
-      <p className="text-gray-400 mb-10">Last updated: April 27, 2026</p>
+      <p className="text-gray-400 mb-10">Last updated: May 2, 2026</p>
 
       <section className="mb-10">
         <p className="text-gray-300">
@@ -123,11 +123,16 @@ export default function ShippingReturnsPage() {
       <section className="mb-10">
         <h2 className="text-xl font-bold mb-3">Returns</h2>
         <p className="text-gray-300 mb-4">
-          Defective items may be returned within 7 days of delivery. Contact us at{' '}
+          New, unused mowers and parts may be returned within 30 days of delivery for a full refund
+          minus return shipping. Defective items returned within 30 days are refunded in full,
+          including shipping both ways. Used or operated mowers are not eligible for return;
+          they fall under the Ferris manufacturer warranty (see <a href="/warranty" className="text-white underline">warranty page</a>).
+        </p>
+        <p className="text-gray-300 mb-4">
+          To start a return, contact us at{' '}
           <a href="tel:6019095380" className="text-white underline">(601) 909-5380</a> or{' '}
-          <a href="mailto:info@dykesmotors.com" className="text-white underline">info@dykesmotors.com</a>{' '}
-          to start a return. We do not accept returns for change of mind, wrong selection, or
-          buyer&apos;s remorse.
+          <a href="mailto:info@dykesmotors.com" className="text-white underline">info@dykesmotors.com</a>.
+          Returned items must be in original packaging with all included parts, manuals, and accessories.
         </p>
       </section>
 
