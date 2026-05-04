@@ -8,6 +8,10 @@ const OLD  = 'https://www.ferrismowers.com/hs-fs/hubfs/Website%20Migration%20202
 const galleryMap: Record<string, string[]> = {
 
   '300s': [
+    // Full-mower hero — Ferris CDN didn't expose a 300S FL-PDP at the standard
+    // path, so use the 1000×1000 local asset as the primary image. The Features
+    // and Benefits crops (deck, engine) follow as supporting gallery shots.
+    `/images/ferris/300s-hero.webp`,
     `${BASE}/Zero%20Turn%20Mowers/300S/Features%20and%20Benefits/Premium%20Features.jpg`,
     `${BASE}/Zero%20Turn%20Mowers/300S/Features%20and%20Benefits/Commercial%20Grade%20Power.jpg`,
     `${BASE}/Zero%20Turn%20Mowers/300S/Features%20and%20Benefits/Fab%20Mowing%20Deck.jpg`,
