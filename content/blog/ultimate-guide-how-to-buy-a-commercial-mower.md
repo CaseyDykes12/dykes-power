@@ -1,7 +1,7 @@
 ---
-title: How to Buy a Commercial Mower: 12 Things Pro Landscapers Wish They'd Known
+title: "How to Buy a Commercial Mower: 12 Things Pro Landscapers Wish They'd Known"
 date: 2026-05-04
-description: A dealer's honest guide to buying a commercial zero-turn mower in Mississippi — covering engines, drives, suspension, deck size, and real pricing on Ferris models.
+description: "A dealer's honest guide to buying a commercial zero-turn mower in Mississippi — covering engines, drives, suspension, deck size, and real pricing on Ferris models."
 category: Buying Guide
 keywords: how to buy commercial mower, commercial zero turn mower Mississippi, Ferris mower buyer guide, commercial mower comparison, commercial landscaping equipment Mississippi, Ferris dealer Collins MS, Ferris IS series, Ferris ISX series, mower financing Mississippi, zero turn mower buying guide
 image: /images/ferris/lot/isx800-lot.jpg
