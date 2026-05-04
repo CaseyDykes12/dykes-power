@@ -120,11 +120,10 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
         priceCurrency: 'USD',
         price: product.price,
         itemCondition: 'https://schema.org/NewCondition',
-        availability: product.status === 'IN_STOCK'
-          ? 'https://schema.org/InStock'
-          : product.status === 'INBOUND'
-            ? 'https://schema.org/PreOrder'
-            : 'https://schema.org/MadeToOrder',
+        // Match feed policy — all products sellable (lot stock or drop-ship).
+        // Splitting JSON-LD into MadeToOrder while feed says in_stock triggers
+        // GMC "Product page unavailable" on every AVAILABLE_TO_ORDER variant.
+        availability: 'https://schema.org/InStock',
         hasMerchantReturnPolicy: {
           '@type': 'MerchantReturnPolicy',
           applicableCountry: 'US',
