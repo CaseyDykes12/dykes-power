@@ -2,7 +2,7 @@ import type { Cart } from './cart';
 
 export const TAX_RATE_MS = 0.07;
 
-export type ShippingMethod = 'pickup' | 'local' | 'freight';
+export type ShippingMethod = 'pickup' | 'freight';
 
 export interface ShippingOption {
   id: ShippingMethod;
@@ -68,10 +68,9 @@ export function getShippingOptions(cart: Cart, state?: string): ShippingOption[]
       freight = {
         id: 'freight',
         label: 'FREE Freight Shipping',
-        description: 'Tracked freight delivery — 7–14 business days within the contiguous US',
+        description: 'Shipping times vary by product — we will confirm your delivery window after checkout.',
         price: 0,
         available: true,
-        notes: 'Free shipping included on all mowers and trailers in the contiguous US.',
       };
     }
   } else {
@@ -79,11 +78,11 @@ export function getShippingOptions(cart: Cart, state?: string): ShippingOption[]
     freight = {
       id: 'freight',
       label: fee === 0 ? 'FREE Standard Shipping' : 'Standard Shipping',
-      description: '3–7 business days via tracked carrier',
+      description: 'Shipping times vary by product — we will confirm your delivery window after checkout.',
       price: fee,
       available: true,
       notes: fee === 0
-        ? 'Your order qualifies for free shipping (subtotal $75+).'
+        ? undefined
         : 'Flat rate $12.99. Add $' + (FREE_SHIPPING_THRESHOLD - subtotal).toFixed(2) + ' more to qualify for free shipping.',
     };
   }
@@ -94,19 +93,9 @@ export function getShippingOptions(cart: Cart, state?: string): ShippingOption[]
     description: '3069 Hwy 49, Collins MS 39428',
     price: 0,
     available: true,
-    notes: 'Pickup ready within 1 business day. We will call when your order is ready.',
   };
 
-  const local: ShippingOption = {
-    id: 'local',
-    label: large ? 'Local Delivery (within 50 mi of Collins)' : 'Local Delivery (within 50 mi)',
-    description: 'Direct delivery from our Collins, MS location',
-    price: large ? 200 : 50,
-    available: true,
-    notes: 'Local delivery scheduled within 2 business days. Driver will confirm time window.',
-  };
-
-  return [pickup, local, freight];
+  return [pickup, freight];
 }
 
 export function calculateTax(subtotal: number, shippingState: string): number {

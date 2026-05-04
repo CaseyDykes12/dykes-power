@@ -144,13 +144,7 @@ export default function Footer() {
         <p className="text-[10px] uppercase tracking-widest text-gray-600 mb-2 text-center">We Accept</p>
         <div className="flex items-center justify-center flex-wrap gap-2 md:gap-3">
           {[
-            { label: 'Visa', bg: '#1a1f71' },
-            { label: 'Mastercard', bg: '#000000' },
-            { label: 'Amex', bg: '#016fd0' },
-            { label: 'Discover', bg: '#ff6000' },
             { label: 'PayPal', bg: '#003087' },
-            { label: 'Apple Pay', bg: '#000000' },
-            { label: 'Google Pay', bg: '#4285f4' },
             { label: 'Financing', bg: '#16a34a' },
           ].map(({ label, bg }) => (
             <span
