@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
 import { products } from '@/lib/products';
+import { parts } from '@/lib/parts';
+import { COLLECTION_SYSTEMS, ACCESSORIES } from '@/lib/accessories';
 import { getProductImages } from '@/lib/productImages';
 
 const SITE = 'https://www.dykespower.com';
@@ -36,6 +38,9 @@ function mapCategory(category: string): string {
       return 'Home & Garden > Lawn & Garden > Outdoor Power Equipment';
   }
 }
+
+const PARTS_CATEGORY = 'Vehicles &amp; Parts &gt; Vehicle Parts &amp; Accessories &gt; Motor Vehicle Parts &gt; Lawn Mower Parts &amp; Accessories';
+const ACCESSORIES_CATEGORY = 'Home &amp; Garden &gt; Lawn &amp; Garden &gt; Outdoor Power Equipment &gt; Outdoor Power Equipment Accessories';
 
 export async function GET() {
   const items = products
@@ -80,6 +85,50 @@ ${additionalImages}
     })
     .join('\n');
 
+  const partItems = parts
+    .filter((p) => p.price > 0)
+    .map((p) => {
+      const imageUrl = p.imageUrl.startsWith('http') ? p.imageUrl : `${SITE}${p.imageUrl}`;
+      return `  <item>
+    <g:id>PART-${escapeXml(p.partNumber)}</g:id>
+    <g:title>${escapeXml(`Ferris ${p.name}`)}</g:title>
+    <g:description>${escapeXml(p.description)}</g:description>
+    <g:link>${SITE}/parts/${escapeXml(p.partNumber)}</g:link>
+    <g:image_link>${escapeXml(imageUrl)}</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>${p.price.toFixed(2)} USD</g:price>
+    <g:brand>Ferris</g:brand>
+    <g:mpn>${escapeXml(p.partNumber)}</g:mpn>
+    <g:condition>new</g:condition>
+    <g:identifier_exists>true</g:identifier_exists>
+    <g:google_product_category>${PARTS_CATEGORY}</g:google_product_category>
+    <g:product_type>${escapeXml(p.category)}</g:product_type>
+  </item>`;
+    })
+    .join('\n');
+
+  const accessoryItems = [...COLLECTION_SYSTEMS, ...ACCESSORIES]
+    .filter((a) => a.price && a.price > 0)
+    .map((a) => {
+      const imageUrl = a.photo.startsWith('http') ? a.photo : `${SITE}${a.photo}`;
+      return `  <item>
+    <g:id>ACC-${escapeXml(a.id)}</g:id>
+    <g:title>${escapeXml(`Ferris ${a.name}`)}</g:title>
+    <g:description>${escapeXml(a.description)}</g:description>
+    <g:link>${SITE}/accessories</g:link>
+    <g:image_link>${escapeXml(imageUrl)}</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>${a.price!.toFixed(2)} USD</g:price>
+    <g:brand>Ferris</g:brand>
+    <g:mpn>${escapeXml(a.id)}</g:mpn>
+    <g:condition>new</g:condition>
+    <g:identifier_exists>true</g:identifier_exists>
+    <g:google_product_category>${ACCESSORIES_CATEGORY}</g:google_product_category>
+    <g:product_type>${escapeXml(a.category === 'collection' ? 'Collection Systems' : 'Accessories')}</g:product_type>
+  </item>`;
+    })
+    .join('\n');
+
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
 <channel>
@@ -87,6 +136,8 @@ ${additionalImages}
   <link>${SITE}</link>
   <description>Authorized Ferris dealer in Collins, Mississippi. Zero-turn, stand-on, and walk-behind mowers.</description>
 ${items}
+${partItems}
+${accessoryItems}
 </channel>
 </rss>`;
 
