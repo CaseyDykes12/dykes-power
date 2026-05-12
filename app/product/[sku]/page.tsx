@@ -5,11 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import AddToCartButton from '@/components/AddToCartButton';
+import SpeakWithRepButton from '@/components/SpeakWithRepButton';
 import ProductGallery from '@/components/ProductGallery';
 import FinancingOptions from '@/components/FinancingOptions';
 import VariantDeckSelector from '@/components/VariantDeckSelector';
 import PriceBlock from '@/components/PriceBlock';
 import ProductCard from '@/components/ProductCard';
+// ProductLeadForm import removed — replaced by SpeakWithRepButton + unified buy-box stack
 
 // Picks 3 same-category Ferris models, ranked by price proximity to the
 // current product. Skips canonical-alias entries (those redirect anyway)
@@ -31,7 +33,6 @@ function pickSimilarProducts(current: Product, max = 3): Product[] {
 }
 import { getRichContent } from '@/lib/productRichContent';
 import StickyMobileCTA from '@/components/StickyMobileCTA';
-import ProductLeadForm from '@/components/ProductLeadForm';
 import { SuspensionWarrantyBadge, isWarrantyEligible } from '@/components/SuspensionWarrantyBadge';
 import { getFamilyTagline, FAMILY_TAGLINE_ATTRIBUTION } from '@/lib/familyTaglines';
 
@@ -324,35 +325,40 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
               </ul>
             </div>
 
-            {/* CTAs */}
-            <div className="mb-4">
+            {/* CTAs — unified buy-box stack: Cart → Pre-Approved → Financing → Talk */}
+            <div className="space-y-3 mb-4">
               <AddToCartButton product={product} />
+              <Link
+                href="/financing"
+                className="block w-full text-center bg-[#1a1a1a] border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                Get Pre-Approved
+              </Link>
+              <Link
+                href="/financing"
+                className="block w-full text-center bg-[#0a0a0a] border border-gray-700 text-white hover:bg-gray-900 hover:border-gray-600 font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                Apply for Financing
+              </Link>
+              <SpeakWithRepButton
+                context={`${product.name} (SKU ${product.sku})`}
+                className="block w-full text-center bg-[#0a0a0a] border border-gray-700 text-white hover:bg-gray-900 hover:border-gray-600 font-bold py-3 px-6 rounded-lg transition-colors"
+              />
             </div>
-
-            {/* Inline lead form — captures every shopper, phone or not */}
-            <ProductLeadForm product={product} />
 
             {product.price && product.price >= 5000 && (
               <div className="mb-4">
                 <Link
                   href={`/checkout/deposit?sku=${product.sku}`}
-                  className="block w-full text-center bg-[#1a1a1a] border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black font-bold py-3 px-6 rounded-lg transition-colors"
+                  className="block w-full text-center bg-transparent border border-gray-800 text-gray-400 hover:text-white hover:border-gray-600 text-sm py-2 px-6 rounded-lg transition-colors"
                 >
                   Reserve with $1,000 Deposit →
                 </Link>
-                <p className="text-xs text-gray-500 mt-2 text-center">
+                <p className="text-xs text-gray-500 mt-1 text-center">
                   Holds your machine. Balance due at pickup or delivery.
                 </p>
               </div>
             )}
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a href="tel:6019095380" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg flex-1">
-                📞 Sales: (601) 909-5380
-              </a>
-              <Link href="/financing" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg flex-1">
-                Apply for Financing
-              </Link>
-            </div>
 
             {/* Trust & Policy Links */}
             <div className="mt-6 pt-4 border-t border-gray-800">
@@ -573,9 +579,9 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
         {/* ── Bottom CTA ───────────────────────────────────────────── */}
         <div className="mt-10 grid md:grid-cols-3 gap-4">
           {[
-            { icon: '📋', title: 'Financing Available', body: 'As low as 4.9% APR up to 84 months for qualified credit. Get pre-approved today.', href: '/contact', cta: 'Get Pre-Approved' },
             { icon: '🔧', title: 'Local Service & Support', body: 'Our team in Collins, MS services every machine we sell — before and after the sale.', href: '/service', cta: 'Service Info' },
             { icon: '📍', title: 'See It In Person', body: 'Come to our Collins, MS location and walk the lot. No pressure, real advice.', href: '/contact', cta: 'Get Directions' },
+            { icon: '📋', title: 'Financing Available', body: 'As low as 4.9% APR up to 84 months for qualified credit.', href: '/financing', cta: 'Learn More' },
           ].map(({ icon, title, body, href, cta }) => (
             <div key={title} className="bg-[#111] border border-gray-800 rounded-xl p-6 text-center hover:border-gray-600 transition-colors">
               <p className="text-3xl mb-3">{icon}</p>

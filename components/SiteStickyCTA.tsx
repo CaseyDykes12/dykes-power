@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import SpeakWithRepButton from './SpeakWithRepButton';
 
 const DISMISS_KEY = 'dp_site_sticky_dismissed';
 
@@ -14,6 +14,19 @@ const SUPPRESS_PREFIXES = [
   '/order-confirmed',
   '/product/',
 ];
+
+function contextFromPath(p: string): string {
+  if (p.startsWith('/parts')) return 'Ferris OEM parts page';
+  if (p.startsWith('/accessories')) return 'Ferris accessories page';
+  if (p.startsWith('/trailers')) return 'Utility trailers page';
+  if (p.startsWith('/catalog')) return 'Catalog browsing';
+  if (p.startsWith('/products/')) return `Category: ${p.replace('/products/', '')}`;
+  if (p.startsWith('/locations/')) return `Location page: ${p.replace('/locations/', '')}`;
+  if (p.startsWith('/blog')) return 'Blog reader';
+  if (p.startsWith('/financing')) return 'Financing page visitor';
+  if (p.startsWith('/service')) return 'Service inquiry';
+  return `Site visit: ${p}`;
+}
 
 export default function SiteStickyCTA() {
   const pathname = usePathname();
@@ -66,12 +79,13 @@ export default function SiteStickyCTA() {
       >
         📞 Call
       </a>
-      <Link
-        href="/contact"
-        className="flex-[2] bg-ferris-yellow text-dykes-black font-bold text-sm py-3 rounded-lg text-center"
-      >
-        Talk to Us →
-      </Link>
+      <div className="flex-[2]">
+        <SpeakWithRepButton
+          context={contextFromPath(pathname)}
+          label="Talk to Us →"
+          className="block w-full bg-ferris-yellow text-dykes-black font-bold text-sm py-3 rounded-lg text-center"
+        />
+      </div>
       <button
         type="button"
         onClick={dismiss}
