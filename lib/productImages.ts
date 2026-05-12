@@ -372,28 +372,214 @@ function isDykesShot(url: string): boolean {
   return url.includes('/images/ferris/lot/') || /-dykes-/.test(url);
 }
 
+/**
+ * Official Ferris/BASCO studio photography stored locally at
+ * /public/images/ferris/basco/{SKU}/. Multiple angles of the same physical
+ * mower (front, rear, left, right, top, three-quarter). Prepended to every
+ * family gallery so PDPs lead with proper full-mower studio shots before
+ * the Ferris CDN feature-and-benefit zoom-ins.
+ */
+const BASCO_IMAGES_BY_FAMILY: Record<string, string[]> = {
+  '300s': [
+    `/images/ferris/basco/5902207/5902207_FER_300S_FL_FINAL.jpg`,
+    `/images/ferris/basco/5902207/5902207_FER_300S_FR_FINAL.jpg`,
+    `/images/ferris/basco/5902207/5902207_FER_300S_F_Final.jpg`,
+    `/images/ferris/basco/5902207/5902207_FER_300S_KL_Final.jpg`,
+    `/images/ferris/basco/5902207/5902207_FER_300S_KR_Final.jpg`,
+    `/images/ferris/basco/5902207/5902207_FER_300S_K_Final.jpg`,
+    `/images/ferris/basco/5902207/5902207_FER_300S_L_Final.jpg`,
+    `/images/ferris/basco/5902207/5902207_FER_300S_R_Final.jpg`,
+    `/images/ferris/basco/5902207/5902207_FER_300S_T_Final.jpg`,
+  ],
+  '300r': [
+    `/images/ferris/basco/5902204/5902204_FER_300R_FL_Final.jpg`,
+    `/images/ferris/basco/5902204/5902204_FER_300R_FR_Final.jpg`,
+    `/images/ferris/basco/5902204/5902204_FER_300R_F_Final.jpg`,
+    `/images/ferris/basco/5902204/5902204_FER_300R_KL_Final.jpg`,
+    `/images/ferris/basco/5902204/5902204_FER_300R_KR_Final.jpg`,
+    `/images/ferris/basco/5902204/5902204_FER_300R_K_Final.jpg`,
+    `/images/ferris/basco/5902204/5902204_FER_300R_L_Final.jpg`,
+    `/images/ferris/basco/5902204/5902204_FER_300R_R_Final.jpg`,
+    `/images/ferris/basco/5902204/5902204_FER_300R_T_Final.jpg`,
+  ],
+  '300e': [
+    `/images/ferris/basco/5902093/5902093_FER_300e_Render_FL_Final.jpg`,
+    `/images/ferris/basco/5902093/5902093_FER_300e_Render_FR_Final.jpg`,
+    `/images/ferris/basco/5902093/5902093_FER_300e_Render_F_Final.jpg`,
+    `/images/ferris/basco/5902093/5902093_FER_300e_Render_BL_Final.jpg`,
+    `/images/ferris/basco/5902093/5902093_FER_300e_Render_BR_Final.jpg`,
+    `/images/ferris/basco/5902093/5902093_FER_300e_Render_B_Final.jpg`,
+    `/images/ferris/basco/5902093/5902093_FER_300e_Render_L_Final.jpg`,
+    `/images/ferris/basco/5902093/5902093_FER_300e_Render_R_Final.jpg`,
+    `/images/ferris/basco/5902093/5902093_FER_300e_Render_T_Final.jpg`,
+  ],
+  '500s': [
+    `/images/ferris/basco/5902101/5902101_FER_500S_FL_FINAL.jpg`,
+    `/images/ferris/basco/5902101/5902101_FER_500S_FR_FINAL.jpg`,
+    `/images/ferris/basco/5902101/5902101_FER_500S_F_Final_.jpg`,
+    `/images/ferris/basco/5902101/5902101_FER_500S_KL_Final_.jpg`,
+    `/images/ferris/basco/5902101/5902101_FER_500S_KR_Final_.jpg`,
+    `/images/ferris/basco/5902101/5902101_FER_500S_K_Final_.jpg`,
+    `/images/ferris/basco/5902101/5902101_FER_500S_L_Final_.jpg`,
+    `/images/ferris/basco/5902101/5902101_FER_500S_R_Final_.jpg`,
+    `/images/ferris/basco/5902101/5902101_FER_500S_T_Final_.jpg`,
+  ],
+  'is600': [
+    `/images/ferris/basco/5901908/5901908_FER_IS600Z_Studio_FL.jpg`,
+    `/images/ferris/basco/5901908/5901908_FER_IS600_Studio_FR.jpg`,
+  ],
+  'is700': [
+    `/images/ferris/basco/5902107/5902107_FER_IS700_Studio_FL.jpg`,
+    `/images/ferris/basco/5902107/5902107_FER_IS700_Studio_FR.jpg`,
+    `/images/ferris/basco/5902107/5902107_FER_IS700_Studio_K.jpg`,
+  ],
+  'isx2200': [
+    `/images/ferris/basco/5902078/5902078_FER_ISX2200_FL_FINAL.jpg`,
+    `/images/ferris/basco/5902078/5902078_FER_ISX2200_FR_FINAL.jpg`,
+    `/images/ferris/basco/5902078/5902078_FER_ISX2200_F_Final_.jpg`,
+    `/images/ferris/basco/5902078/5902078_FER_ISX2200_KL_Final_.jpg`,
+    `/images/ferris/basco/5902078/5902078_FER_ISX2200_KR_Final_.jpg`,
+    `/images/ferris/basco/5902078/5902078_FER_ISX2200_K_Final_.jpg`,
+    `/images/ferris/basco/5902078/5902078_FER_ISX2200_L_Final_.jpg`,
+    `/images/ferris/basco/5902078/5902078_FER_ISX2200_R_Final_.jpg`,
+    `/images/ferris/basco/5902078/5902078_FER_ISX2200_T_Final_.jpg`,
+  ],
+  'isx3300': [
+    `/images/ferris/basco/5902064/5902064_FER_ISX3300_FL_FINAL.jpg`,
+    `/images/ferris/basco/5902064/5902064_FER_ISX3300_FR_FINAL_with_Tweel.jpg`,
+    `/images/ferris/basco/5902064/5902064_FER_ISX3300_F_Final_.jpg`,
+    `/images/ferris/basco/5902064/5902064_FER_ISX3300_KL_Final_.jpg`,
+    `/images/ferris/basco/5902064/5902064_FER_ISX3300_KR_Final_.jpg`,
+    `/images/ferris/basco/5902064/5902064_FER_ISX3300_K_Final_.jpg`,
+    `/images/ferris/basco/5902064/5902064_FER_ISX3300_L_Final_.jpg`,
+    `/images/ferris/basco/5902064/5902064_FER_ISX3300_R_Final_.jpg`,
+  ],
+  'is2600': [
+    `/images/ferris/basco/5901929/5901929_FER_IS2600_Studio_FL.jpg`,
+    `/images/ferris/basco/5901929/5901929_FER_IS2600_Studio_FR.jpg`,
+    `/images/ferris/basco/5901929/5901929_FER_IS2600_Studio_KL-Engine.jpg`,
+  ],
+  'is6200': [
+    `/images/ferris/basco/5902162/5902162_FER_IS6200_FL_FINAL.jpg`,
+    `/images/ferris/basco/5902162/5902162_FER_IS6200_FR.jpg`,
+    `/images/ferris/basco/5902162/5902162_FER_IS6200_F_Final.jpg`,
+    `/images/ferris/basco/5902162/5902162_FER_IS6200_KL_Final.jpg`,
+    `/images/ferris/basco/5902162/5902162_FER_IS6200_KR_Final.jpg`,
+    `/images/ferris/basco/5902162/5902162_FER_IS6200_K_Final.jpg`,
+    `/images/ferris/basco/5902162/5902162_FER_IS6200_L_Final.jpg`,
+    `/images/ferris/basco/5902162/5902162_FER_IS6200_R_Final.jpg`,
+    `/images/ferris/basco/5902162/5902162_FER_IS6200_T_Final.jpg`,
+  ],
+  'srsz1': [
+    `/images/ferris/basco/5901940/5901940_FER_SRSZ1_Studio_FL.jpg`,
+    `/images/ferris/basco/5901940/5901940_FER_SRSZ1_Studio_FR.jpg`,
+    `/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_FL.jpg`,
+    `/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_FR.jpg`,
+    `/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_K.jpg`,
+    `/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_KR.jpg`,
+    `/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_Tank.jpg`,
+  ],
+  'srsz2': [
+    `/images/ferris/basco/5901948/5901948_FER_Z2_FL_FINAL.jpg`,
+    `/images/ferris/basco/5902165/5902165_FER_Z2_F_Final.jpg`,
+    `/images/ferris/basco/5902165/5902165_FER_Z2_KL_Final.jpg`,
+    `/images/ferris/basco/5902165/5902165_FER_Z2_KR_Final.jpg`,
+    `/images/ferris/basco/5902165/5902165_FER_Z2_K_Final.jpg`,
+    `/images/ferris/basco/5902165/5902165_FER_Z2_L_Final.jpg`,
+    `/images/ferris/basco/5902165/5902165_FER_Z2_R_Final.jpg`,
+    `/images/ferris/basco/5902165/5902165_FER_Z2_T_Final.jpg`,
+  ],
+  'srsz3x': [
+    `/images/ferris/basco/5901955/5901955_FER_Z3X_FL_FINAL.jpg`,
+    `/images/ferris/basco/5901955/5901955_FER_Z3X_FR_FINAL.jpg`,
+    `/images/ferris/basco/5902169/5902169_FER_Z3X_F_Final.jpg`,
+    `/images/ferris/basco/5902169/5902169_FER_Z3X_KL_Final.jpg`,
+    `/images/ferris/basco/5902169/5902169_FER_Z3X_KR_Final.jpg`,
+    `/images/ferris/basco/5902169/5902169_FER_Z3X_K_Final.jpg`,
+    `/images/ferris/basco/5902169/5902169_FER_Z3X_L_Final.jpg`,
+    `/images/ferris/basco/5902169/5902169_FER_Z3X_R_Final.jpg`,
+    `/images/ferris/basco/5902169/5902169_FER_Z3X_T_Final.jpg`,
+  ],
+  'fw15': [
+    `/images/ferris/basco/5901737/5901737_FER_FW15_FRONT.jpg`,
+    `/images/ferris/basco/5901737/5901737_FER_FW15_LFRONT.jpg`,
+    `/images/ferris/basco/5901737/5901737_FER_FW15_RFRONT.jpg`,
+    `/images/ferris/basco/5901737/5901737_FER_FW15_LSIDE.jpg`,
+    `/images/ferris/basco/5901737/5901737_FER_FW15_BACK.jpg`,
+    `/images/ferris/basco/5901737/5901737_FER_FW15_RBACK.jpg`,
+    `/images/ferris/basco/5901737/5901737_FER_FW15_PIVOTWHEELS.jpg`,
+  ],
+  'fw25': [
+    `/images/ferris/basco/5901887/5901887_FER_FW25_48-Std_Studio_FL.jpg`,
+    `/images/ferris/basco/5901888/5901888_FER_FW25_48-CC_Studio_FL.jpg`,
+    `/images/ferris/basco/5901888/5901888_FER_FW25_48-CC_Studio_FR.jpg`,
+    `/images/ferris/basco/5901886/5901886_FER_FW25_36-CC_Studio_FL.jpg`,
+    `/images/ferris/basco/5901886/5901886_FER_FW25_36-CC_Studio_FR.jpg`,
+  ],
+  'fw45': [
+    `/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FL.jpg`,
+    `/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FR.jpg`,
+    `/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_KL.jpg`,
+    `/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_KR.jpg`,
+    `/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_L.jpg`,
+    `/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_R.jpg`,
+    `/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_HOC.jpg`,
+  ],
+  'f60': [
+    `/images/ferris/basco/5901895/5901895_FER_F60_Studio_FL.jpg`,
+    `/images/ferris/basco/5901895/5901895_FER_F60_Studio_FR.jpg`,
+  ],
+  'fb1000': [
+    `/images/ferris/basco/5902012/5902012_FER_FB1000_FL_TN.jpg`,
+    `/images/ferris/basco/5902012/5902012_FER_FB1000_FR_TN_Final.jpg`,
+    `/images/ferris/basco/5902012/5902012_FER_FB1000_F_BR_v2_Final.jpg`,
+    `/images/ferris/basco/5902012/5902012_FER_FB1000_FR-Top_TN_Final.jpg`,
+    `/images/ferris/basco/5902012/5902012_FER_FB1000_KR_BR_Final.jpg`,
+    `/images/ferris/basco/5902012/5902012_FER_FB1000_R_BR_Final.jpg`,
+    `/images/ferris/basco/5902012/5902012_FER_FB1000_Engine_BR_Final.jpg`,
+    `/images/ferris/basco/5902012/5902012_FER_FB1000_FR-Chute_BR_v2_Final.jpg`,
+    `/images/ferris/basco/5902012/5902012_FER_FB1000_DeflectorControl-L_TN_Final.jpg`,
+  ],
+  'fb3000': [
+    `/images/ferris/basco/5901810/5901810_FER_FB3000_FRONT.jpg`,
+  ],
+  'venturex': [
+    `/images/ferris/basco/5902195/5902195_FER_VentureX_FL_Final.jpg`,
+    `/images/ferris/basco/5902195/5902195_FER_VentureX_FR_Final.jpg`,
+    `/images/ferris/basco/5902195/5902195_FER_VentureX_F_Final.jpg`,
+    `/images/ferris/basco/5902195/5902195_FER_VentureX_KL_Final.jpg`,
+    `/images/ferris/basco/5902195/5902195_FER_VentureX_KR_Final.jpg`,
+    `/images/ferris/basco/5902195/5902195_FER_VentureX_K_Final.jpg`,
+    `/images/ferris/basco/5902195/5902195_FER_VentureX_L_Final.jpg`,
+    `/images/ferris/basco/5902195/5902195_FER_VentureX_R_Final.jpg`,
+    `/images/ferris/basco/5902195/5902195_FER_VentureX_T_Final.jpg`,
+  ],
+};
+
 export function getProductImages(product: Product): string[] {
   const sku = product.images ?? [];
 
   // Find the matching model-line gallery (if any).
   let lineup: string[] = [];
+  let bascoLineup: string[] = [];
   for (const [pattern, key] of namePatterns) {
     if (pattern.test(product.name)) {
       lineup = galleryMap[key] ?? [];
+      bascoLineup = BASCO_IMAGES_BY_FAMILY[key] ?? [];
       break;
     }
   }
 
-  // SKU photos first (they're keyed to the exact model), then the shared
-  // model-line library. Dedup preserves order. Fall back to imageUrl only
-  // if neither source yielded anything. Filter out any Dykes-shot photos
-  // so customers only see official Ferris product imagery.
-  const merged = Array.from(new Set([...sku, ...lineup])).filter(
-    (url) => !isDykesShot(url)
+  // Order: SKU-level photos, then local BASCO studio shots (full-mower
+  // angles), then the Ferris CDN feature-and-benefit lineup. Dedup
+  // preserves order. Filter out any Dykes-shot photos so customers only
+  // see official Ferris product imagery.
+  const merged = Array.from(new Set([...sku, ...bascoLineup, ...lineup])).filter(
+    (url) => !isDykesShot(url),
   );
   if (merged.length > 0) return merged;
   if (product.imageUrl && !isDykesShot(product.imageUrl)) return [product.imageUrl];
   // Ultimate fallback when every candidate was a Dykes-shot: pull whatever
-  // Ferris-CDN images exist on the matched lineup, raw.
-  return lineup.filter((url) => !isDykesShot(url));
+  // Ferris-CDN or BASCO images exist on the matched lineup, raw.
+  return [...bascoLineup, ...lineup].filter((url) => !isDykesShot(url));
 }
