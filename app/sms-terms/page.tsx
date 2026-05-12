@@ -49,7 +49,7 @@ export default function SmsTermsPage() {
       <section className="mb-10">
         <h2 className="text-xl font-bold mb-3">How to Get Help</h2>
         <p className="text-gray-300">
-          Reply <strong className="text-white">HELP</strong> to any message for support, or contact us at <a href="tel:6016415475" className="text-white underline">(601) 641-5475</a> or <a href="mailto:info@dykesmotors.com" className="text-white underline">info@dykesmotors.com</a>.
+          Reply <strong className="text-white">HELP</strong> to any message for support, or contact us at <a href="tel:6016415475" className="text-white underline">(601) 641-5475</a> or <a href="mailto:support@dykespower.com" className="text-white underline">support@dykespower.com</a>.
         </p>
       </section>
 
@@ -102,7 +102,7 @@ export default function SmsTermsPage() {
           <li>3069 Hwy 49, Collins, MS 39428</li>
           <li>Sales: <a href="tel:6016415475" className="text-white underline">(601) 641-5475</a></li>
           <li>SMS line: <a href="tel:6015167255" className="text-white underline">(601) 516-7255</a></li>
-          <li>Email: <a href="mailto:info@dykesmotors.com" className="text-white underline">info@dykesmotors.com</a></li>
+          <li>Email: <a href="mailto:support@dykespower.com" className="text-white underline">support@dykespower.com</a></li>
         </ul>
       </section>
     </div>

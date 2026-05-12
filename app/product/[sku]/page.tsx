@@ -350,7 +350,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                 📞 Sales: (601) 909-5380
               </a>
               <Link href="/financing" className="text-center text-sm text-gray-400 hover:text-[#C8C8C8] transition-colors py-2 border border-gray-800 rounded-lg flex-1">
-                💳 Apply for Financing
+                Apply for Financing
               </Link>
             </div>
 
@@ -573,7 +573,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
         {/* ── Bottom CTA ───────────────────────────────────────────── */}
         <div className="mt-10 grid md:grid-cols-3 gap-4">
           {[
-            { icon: '💳', title: 'Financing Available', body: 'As low as 4.9% APR up to 84 months for qualified credit. Get pre-approved today.', href: '/contact', cta: 'Get Pre-Approved' },
+            { icon: '📋', title: 'Financing Available', body: 'As low as 4.9% APR up to 84 months for qualified credit. Get pre-approved today.', href: '/contact', cta: 'Get Pre-Approved' },
             { icon: '🔧', title: 'Local Service & Support', body: 'Our team in Collins, MS services every machine we sell — before and after the sale.', href: '/service', cta: 'Service Info' },
             { icon: '📍', title: 'See It In Person', body: 'Come to our Collins, MS location and walk the lot. No pressure, real advice.', href: '/contact', cta: 'Get Directions' },
           ].map(({ icon, title, body, href, cta }) => (

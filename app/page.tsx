@@ -66,7 +66,7 @@ export default function HomePage() {
             <p className="font-semibold text-sm text-dykes-gray-100">Service &amp; Repairs</p>
           </Link>
           <Link href="/financing" className="flex flex-col items-center gap-2 py-2 hover:opacity-80 transition-opacity">
-            <span className="text-3xl">💳</span>
+            <span className="text-3xl">📋</span>
             <p className="font-semibold text-sm text-dykes-gray-100">Financing Available</p>
           </Link>
           <div className="flex flex-col items-center gap-2 py-2">

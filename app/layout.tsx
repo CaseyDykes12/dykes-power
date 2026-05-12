@@ -5,6 +5,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SiteStickyCTA from '@/components/SiteStickyCTA';
+import TextUsButton from '@/components/TextUsButton';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' });
@@ -43,7 +44,7 @@ const localBusinessSchema = {
   logo: 'https://www.dykespower.com/df-logo.png',
   image: 'https://www.dykespower.com/df-logo.png',
   telephone: ['+16019095380', '+16013362541'],
-  email: 'info@dykesmotors.com',
+  email: 'support@dykespower.com',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '3069 Hwy 49',
@@ -232,6 +233,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-1">{children}</main>
         <Footer />
         <SiteStickyCTA />
+        <TextUsButton />
         {/* Tecobi SMS Widget (clientId 2692 — Dykes Motors) */}
         <Script
           id="tecobi-widget-include"

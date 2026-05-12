@@ -127,7 +127,7 @@ export default async function PartDetailPage({ params }: { params: Promise<{ par
                     <p className="text-gray-500 text-sm">each</p>
                   </div>
                   <p className="text-gray-500 text-xs mt-2">
-                    Ships $12.99 flat rate · <span className="text-[#C8C8C8] font-semibold">Free over $75</span>
+                    <span className="text-[#C8C8C8] font-semibold">FREE shipping</span> · No minimum order
                   </p>
                 </>
               ) : (

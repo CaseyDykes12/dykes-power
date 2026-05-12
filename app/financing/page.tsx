@@ -134,7 +134,7 @@ export default function FinancingPage() {
             Questions? Call us at{' '}
             <a href="tel:6019095380" className="text-[#C8C8C8] font-semibold">(601) 909-5380</a>
             {' '}or email{' '}
-            <a href="mailto:info@dykesmotors.com" className="text-[#C8C8C8] font-semibold">info@dykesmotors.com</a>
+            <a href="mailto:support@dykespower.com" className="text-[#C8C8C8] font-semibold">support@dykespower.com</a>
           </p>
           <a href="/catalog" className="btn-primary">Continue Browsing</a>
         </div>

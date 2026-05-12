@@ -28,7 +28,7 @@ export default function Footer() {
             Service: <a href="tel:6013362541" className="hover:text-[#C8C8C8]">(601) 336-2541</a>
           </p>
           <p className="text-sm mt-1">
-            <a href="mailto:info@dykesmotors.com" className="hover:text-[#C8C8C8]">info@dykesmotors.com</a>
+            <a href="mailto:support@dykespower.com" className="hover:text-[#C8C8C8]">support@dykespower.com</a>
           </p>
         </div>
 

@@ -111,7 +111,7 @@ export default function TermsPage() {
           <li>Dykes Motors Power Equipment</li>
           <li>3069 Hwy 49, Collins, MS 39428</li>
           <li>Phone: <a href="tel:6019095380" className="text-white underline">(601) 909-5380</a></li>
-          <li>Email: <a href="mailto:info@dykesmotors.com" className="text-white underline">info@dykesmotors.com</a></li>
+          <li>Email: <a href="mailto:support@dykespower.com" className="text-white underline">support@dykespower.com</a></li>
         </ul>
       </section>
     </div>

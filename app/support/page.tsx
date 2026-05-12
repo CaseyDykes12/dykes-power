@@ -29,7 +29,7 @@ const TOPICS = [
   {
     href: '/shipping-returns',
     title: 'Shipping & delivery',
-    blurb: 'Flat $12.99 on parts, free over $75. Mowers delivered locally or picked up.',
+    blurb: 'Free shipping on parts and accessories. Mowers shipped free nationwide or picked up at our Collins, MS location.',
   },
   {
     href: '/service',
@@ -58,7 +58,7 @@ export default function SupportPage() {
       '@type': 'Organization',
       name: 'Dykes Motors Power Equipment',
       url: 'https://www.dykespower.com',
-      email: 'info@dykesmotors.com',
+      email: 'support@dykespower.com',
       address: {
         '@type': 'PostalAddress',
         streetAddress: '3069 Hwy 49',
@@ -137,10 +137,10 @@ export default function SupportPage() {
               Email
             </p>
             <a
-              href="mailto:info@dykesmotors.com"
+              href="mailto:support@dykespower.com"
               className="text-lg font-bold text-white underline break-all"
             >
-              info@dykesmotors.com
+              support@dykespower.com
             </a>
             <p className="text-sm text-gray-400 mt-2">Reply within 1 business day</p>
           </div>

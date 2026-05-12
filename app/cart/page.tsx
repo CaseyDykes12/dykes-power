@@ -12,8 +12,6 @@ import {
 import {
   calculatePartsShipping,
   hasLargeEquipment,
-  FLAT_SHIPPING_RATE,
-  FREE_SHIPPING_THRESHOLD,
 } from '@/lib/checkout';
 
 export default function CartPage() {
@@ -52,7 +50,6 @@ export default function CartPage() {
   const subtotal = cartTotal(cart);
   const large = hasLargeEquipment(cart);
   const shippingEstimate = large ? null : calculatePartsShipping(cart);
-  const amountToFree = Math.max(0, FREE_SHIPPING_THRESHOLD - subtotal);
 
   return (
     <div className="bg-[#0f0f0f] min-h-screen">
@@ -172,14 +169,9 @@ export default function CartPage() {
                     )}
                   </div>
                 </div>
-                {!large && amountToFree > 0 && (
-                  <div className="bg-[#0a0a0a] border border-gray-800 rounded-lg px-3 py-2 mb-4 text-xs text-gray-400">
-                    Add <span className="text-[#C8C8C8] font-semibold">${amountToFree.toFixed(2)}</span> more to unlock free shipping.
-                  </div>
-                )}
-                {!large && amountToFree === 0 && subtotal > 0 && (
+                {!large && subtotal > 0 && (
                   <div className="bg-[#0a0a0a] border border-[#C8C8C8] rounded-lg px-3 py-2 mb-4 text-xs text-[#C8C8C8] font-semibold">
-                    ✓ Your order qualifies for free shipping.
+                    ✓ Free shipping on every order.
                   </div>
                 )}
                 <div className="border-t border-gray-800 pt-3 mb-5">

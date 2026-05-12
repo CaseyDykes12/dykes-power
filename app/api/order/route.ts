@@ -209,7 +209,7 @@ Questions? Call (601) 909-5380.
       body: JSON.stringify({
         from: 'orders@dykespower.com',
         to: customer.email,
-        reply_to: 'Casey@dykesmotors.com',
+        reply_to: 'support@dykespower.com',
         subject: customerSubject,
         text: customerBody,
       }),

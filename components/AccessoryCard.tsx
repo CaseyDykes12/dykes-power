@@ -1,6 +1,7 @@
 'use client';
 
 import type { Accessory } from '@/lib/accessories';
+import AddAccessoryToCartButton from './AddAccessoryToCartButton';
 
 export default function AccessoryCard({ item }: { item: Accessory }) {
   return (
@@ -29,11 +30,15 @@ export default function AccessoryCard({ item }: { item: Accessory }) {
         </ul>
       )}
 
-      <div className="mt-auto pt-3 border-t border-gray-900">
+      <div className="pt-3 border-t border-gray-900 mb-3">
         <p className="text-[11px] font-bold text-ferris-yellow tracking-widest uppercase mb-1">
           Fits
         </p>
         <p className="text-xs text-gray-300 leading-snug">{item.compatibility.join(', ')}</p>
+      </div>
+
+      <div className="mt-auto">
+        <AddAccessoryToCartButton item={item} />
       </div>
     </div>
   );

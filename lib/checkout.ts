@@ -14,13 +14,13 @@ export interface ShippingOption {
 }
 
 const MOWER_PRICE_THRESHOLD = 1500;
-export const FLAT_SHIPPING_RATE = 12.99;
-export const FREE_SHIPPING_THRESHOLD = 75;
 
-// Free freight nationally on mowers and trailers within the contiguous US.
-// Casey absorbs the actual carrier cost as a marketing expense to match
-// the dominant Ferris-dealer pattern (Russo, MowersDirect, etc.) where
-// "Free shipping" is the standard ad display.
+// Free shipping site-wide on parts, accessories, mowers, and trailers within
+// the contiguous US. Casey absorbs the carrier cost as a marketing expense
+// (matches the dominant Ferris-dealer pattern: Russo, MowersDirect, etc.)
+// and the Merchant Center feed declares free shipping everywhere — keeping
+// the on-site copy and the shipping calculator aligned avoids the
+// "misrepresentation" flag from Google.
 const NOT_SHIPPED_STATES = new Set(['AK', 'HI']);
 
 /** Returns 0 for serviceable contiguous US states, null for AK/HI/unknown. */
@@ -40,11 +40,9 @@ export function cartSubtotal(cart: Cart): number {
   return cart.items.reduce((s, i) => s + i.price * i.quantity, 0);
 }
 
-/** Flat-rate parts shipping: $12.99, free over $75. Returns 0 if cart qualifies for free shipping. */
-export function calculatePartsShipping(cart: Cart): number {
-  if (cart.items.length === 0) return 0;
-  if (cartSubtotal(cart) >= FREE_SHIPPING_THRESHOLD) return 0;
-  return FLAT_SHIPPING_RATE;
+/** Parts shipping is free site-wide. Signature retained for callers. */
+export function calculatePartsShipping(_cart: Cart): number {
+  return 0;
 }
 
 export function getShippingOptions(cart: Cart, state?: string): ShippingOption[] {
@@ -74,16 +72,12 @@ export function getShippingOptions(cart: Cart, state?: string): ShippingOption[]
       };
     }
   } else {
-    const fee = subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : FLAT_SHIPPING_RATE;
     freight = {
       id: 'freight',
-      label: fee === 0 ? 'FREE Standard Shipping' : 'Standard Shipping',
+      label: 'FREE Standard Shipping',
       description: 'Shipping times vary by product — we will confirm your delivery window after checkout.',
-      price: fee,
+      price: 0,
       available: true,
-      notes: fee === 0
-        ? undefined
-        : 'Flat rate $12.99. Add $' + (FREE_SHIPPING_THRESHOLD - subtotal).toFixed(2) + ' more to qualify for free shipping.',
     };
   }
 

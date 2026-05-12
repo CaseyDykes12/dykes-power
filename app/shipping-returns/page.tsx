@@ -72,10 +72,7 @@ export default function ShippingReturnsPage() {
         <h2 className="text-xl font-bold mb-3">Shipping — Parts &amp; Accessories</h2>
         <ul className="space-y-3 text-gray-300">
           <li>
-            <span className="font-semibold text-white">Flat rate:</span> $12.99 per order.
-          </li>
-          <li>
-            <span className="font-semibold text-white">Free shipping:</span> Orders of $75 or more.
+            <span className="font-semibold text-white">FREE shipping</span> on every parts and accessories order — no minimum.
           </li>
           <li>
             <span className="font-semibold text-white">Processing:</span> 1–2 business days.
@@ -131,7 +128,7 @@ export default function ShippingReturnsPage() {
         <p className="text-gray-300 mb-4">
           To start a return, contact us at{' '}
           <a href="tel:6019095380" className="text-white underline">(601) 909-5380</a> or{' '}
-          <a href="mailto:info@dykesmotors.com" className="text-white underline">info@dykesmotors.com</a>.
+          <a href="mailto:support@dykespower.com" className="text-white underline">support@dykespower.com</a>.
           Returned items must be in original packaging with all included parts, manuals, and accessories.
         </p>
       </section>
@@ -158,7 +155,7 @@ export default function ShippingReturnsPage() {
         <ul className="space-y-1 text-gray-300">
           <li>Sales: <a href="tel:6019095380" className="text-white underline">(601) 909-5380</a></li>
           <li>Service &amp; Parts: <a href="tel:6013362541" className="text-white underline">(601) 336-2541</a></li>
-          <li>Email: <a href="mailto:info@dykesmotors.com" className="text-white underline">info@dykesmotors.com</a></li>
+          <li>Email: <a href="mailto:support@dykespower.com" className="text-white underline">support@dykespower.com</a></li>
           <li>Address: 3069 Hwy 49, Collins, MS 39428</li>
           <li>Hours: Mon–Fri 9am–6pm · Sat 9am–2pm · Sun Closed</li>
         </ul>

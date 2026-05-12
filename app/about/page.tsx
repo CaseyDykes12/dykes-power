@@ -19,7 +19,7 @@ const organizationSchema = {
     'Authorized Ferris mower dealer in Collins, Mississippi. Family-owned and operated — sales, service, parts, and financing for commercial and residential mowers.',
   foundingDate: '2025-09',
   telephone: '+16019095380',
-  email: 'info@dykesmotors.com',
+  email: 'support@dykespower.com',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '3069 Hwy 49',
