@@ -75,6 +75,17 @@ const galleryMap: Record<string, string[]> = {
   ],
 
   'isx800': [
+    // Local BASCO stock photography — multiple full-mower angles (front, rear,
+    // left, right, three-quarter, top). These were provided by Ferris/BASCO
+    // for dealer use and live at /public/images/ferris/basco/5902154/.
+    `/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg`,
+    `/images/ferris/basco/5902154/5902154_FER_ISX800_R_Final.jpg`,
+    `/images/ferris/basco/5902154/5902154_FER_ISX800_L_Final.jpg`,
+    `/images/ferris/basco/5902154/5902154_FER_ISX800_K_Final.jpg`,
+    `/images/ferris/basco/5902154/5902154_FER_ISX800_KL_Final.jpg`,
+    `/images/ferris/basco/5902154/5902154_FER_ISX800_KR_Final.jpg`,
+    `/images/ferris/basco/5902154/5902154_FER_ISX800_T_Final.jpg`,
+    // Ferris CDN hero + feature-and-benefit close-ups
     `${BASE}/Zero%20Turn%20Mowers/ISX800/Product%20Images/FER_ISX800_FL-PDP.jpg`,
     `${BASE}/Zero%20Turn%20Mowers/ISX800/Features%20and%20Benefits/FER_PDP_IS800_FB-Oil.jpeg`,
     `${BASE}/Zero%20Turn%20Mowers/ISX800/Features%20and%20Benefits/FER_PDP_IS800_FB-CuttingSystem.jpeg`,

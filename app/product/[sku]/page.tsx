@@ -230,20 +230,88 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
             </h1>
             <p className="text-gray-500 text-sm mb-5">SKU: {product.sku}</p>
 
-            {/* Interactive deck + engine selector with live price (when variants exist) */}
-            {product.variants && product.variants.length > 0 && (product.deckSizes?.length ?? 0) > 0 ? (
-              <VariantDeckSelector product={product} />
-            ) : (
-              <div className="mb-6">
-                <PriceBlock price={product.price} msrp={product.msrp} mode="detail" />
+            {/* ── Unified Buy Box: price, financing teaser, warranty, CTAs ── */}
+            <div className="bg-[#0c0c0c] border border-gray-800 rounded-2xl overflow-hidden mb-6">
+
+              {/* Section 1: Price (variant selector or simple price block) */}
+              <div className="p-5 border-b border-gray-800">
+                {product.variants && product.variants.length > 0 && (product.deckSizes?.length ?? 0) > 0 ? (
+                  <VariantDeckSelector product={product} />
+                ) : (
+                  <PriceBlock price={product.price} msrp={product.msrp} mode="detail" />
+                )}
               </div>
+
+              {/* Section 2: 10-Year Suspension Warranty (if eligible) */}
+              {isWarrantyEligible(product.name) && (
+                <div className="px-5 py-3 border-b border-gray-800 bg-[#D4AF37]/5">
+                  <SuspensionWarrantyBadge variant="detail" />
+                </div>
+              )}
+
+              {/* Section 3: Estimated payment teaser */}
+              {product.price && (
+                <div className="px-5 py-4 border-b border-gray-800">
+                  <p className="text-gray-500 text-xs uppercase tracking-widest mb-1">Estimated Payment</p>
+                  <div className="flex items-baseline gap-2 flex-wrap">
+                    <span className="text-3xl font-black text-white">
+                      ${Math.ceil((product.price * (0.049 / 12) * Math.pow(1 + 0.049 / 12, 72)) / (Math.pow(1 + 0.049 / 12, 72) - 1)).toLocaleString()}
+                      <span className="text-base font-semibold text-gray-400">/mo</span>
+                    </span>
+                    <span className="text-gray-500 text-sm">as low as 4.9% APR · 72 mo</span>
+                  </div>
+                  <p className="text-[#D4AF37] text-xs mt-1 font-semibold">For qualified credit</p>
+                </div>
+              )}
+
+              {/* Section 4: CTA stack — Cart → Pre-Approved → Financing → Talk */}
+              <div className="p-5 space-y-3">
+                <AddToCartButton product={product} />
+                <Link
+                  href="/financing"
+                  className="block w-full text-center bg-[#1a1a1a] border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black font-bold py-3 px-6 rounded-lg transition-colors"
+                >
+                  Get Pre-Approved
+                </Link>
+                <Link
+                  href="/financing"
+                  className="block w-full text-center bg-[#0a0a0a] border border-gray-700 text-white hover:bg-gray-900 hover:border-gray-600 font-bold py-3 px-6 rounded-lg transition-colors"
+                >
+                  Apply for Financing
+                </Link>
+                <SpeakWithRepButton
+                  context={`${product.name} (SKU ${product.sku})`}
+                  className="block w-full text-center bg-[#0a0a0a] border border-gray-700 text-white hover:bg-gray-900 hover:border-gray-600 font-bold py-3 px-6 rounded-lg transition-colors"
+                />
+
+                {product.price && product.price >= 5000 && (
+                  <div className="pt-3">
+                    <Link
+                      href={`/checkout/deposit?sku=${product.sku}`}
+                      className="block w-full text-center bg-transparent border border-gray-800 text-gray-400 hover:text-white hover:border-gray-600 text-sm py-2 px-6 rounded-lg transition-colors"
+                    >
+                      Reserve with $1,000 Deposit →
+                    </Link>
+                    <p className="text-xs text-gray-500 mt-1 text-center">
+                      Holds your machine. Balance due at pickup or delivery.
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Full financing calculator — collapsed by default, customers can expand to tinker */}
+            {product.price && (
+              <details className="mb-6 group">
+                <summary className="cursor-pointer text-sm text-gray-400 hover:text-white transition-colors py-2 inline-flex items-center gap-2">
+                  <span className="group-open:rotate-90 transition-transform">▶</span>
+                  Customize your payment (down payment + term)
+                </summary>
+                <div className="mt-3">
+                  <FinancingOptions price={product.price} />
+                </div>
+              </details>
             )}
-
-            {/* 10-Year Suspension Warranty */}
-            {isWarrantyEligible(product.name) && <SuspensionWarrantyBadge variant="detail" />}
-
-            {/* Financing options */}
-            {product.price && <FinancingOptions price={product.price} />}
 
             {/* Spec grid — excludes deck sizes (covered by selector) */}
             <div className="grid grid-cols-2 gap-3 mb-6">
@@ -324,41 +392,6 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                 ))}
               </ul>
             </div>
-
-            {/* CTAs — unified buy-box stack: Cart → Pre-Approved → Financing → Talk */}
-            <div className="space-y-3 mb-4">
-              <AddToCartButton product={product} />
-              <Link
-                href="/financing"
-                className="block w-full text-center bg-[#1a1a1a] border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black font-bold py-3 px-6 rounded-lg transition-colors"
-              >
-                Get Pre-Approved
-              </Link>
-              <Link
-                href="/financing"
-                className="block w-full text-center bg-[#0a0a0a] border border-gray-700 text-white hover:bg-gray-900 hover:border-gray-600 font-bold py-3 px-6 rounded-lg transition-colors"
-              >
-                Apply for Financing
-              </Link>
-              <SpeakWithRepButton
-                context={`${product.name} (SKU ${product.sku})`}
-                className="block w-full text-center bg-[#0a0a0a] border border-gray-700 text-white hover:bg-gray-900 hover:border-gray-600 font-bold py-3 px-6 rounded-lg transition-colors"
-              />
-            </div>
-
-            {product.price && product.price >= 5000 && (
-              <div className="mb-4">
-                <Link
-                  href={`/checkout/deposit?sku=${product.sku}`}
-                  className="block w-full text-center bg-transparent border border-gray-800 text-gray-400 hover:text-white hover:border-gray-600 text-sm py-2 px-6 rounded-lg transition-colors"
-                >
-                  Reserve with $1,000 Deposit →
-                </Link>
-                <p className="text-xs text-gray-500 mt-1 text-center">
-                  Holds your machine. Balance due at pickup or delivery.
-                </p>
-              </div>
-            )}
 
             {/* Trust & Policy Links */}
             <div className="mt-6 pt-4 border-t border-gray-800">
