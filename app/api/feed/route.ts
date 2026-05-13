@@ -1,10 +1,22 @@
 import { NextResponse } from 'next/server';
+import { existsSync } from 'fs';
+import { join } from 'path';
 import { products } from '@/lib/products';
 import { parts } from '@/lib/parts';
 import { COLLECTION_SYSTEMS, ACCESSORIES } from '@/lib/accessories';
 import { getProductImages } from '@/lib/productImages';
 
 const SITE = 'https://www.dykespower.com';
+
+// Resolve a /public/... path to the absolute filesystem path so we can verify
+// the file actually exists before claiming image_link in the feed. Items
+// whose local image is missing get filtered — Google MC reviewers fetch every
+// image_link and a 404 here counts as Misrepresentation.
+function localImageExists(webPath: string): boolean {
+  if (webPath.startsWith('http')) return true;
+  const clean = webPath.startsWith('/') ? webPath.slice(1) : webPath;
+  return existsSync(join(process.cwd(), 'public', clean));
+}
 
 function escapeXml(str: string): string {
   return str
@@ -109,6 +121,7 @@ ${additionalImages}
 
   const accessoryItems = [...COLLECTION_SYSTEMS, ...ACCESSORIES]
     .filter((a) => a.price && a.price > 0)
+    .filter((a) => localImageExists(a.photo))
     .map((a) => {
       const imageUrl = a.photo.startsWith('http') ? a.photo : `${SITE}${a.photo}`;
       return `  <item>
