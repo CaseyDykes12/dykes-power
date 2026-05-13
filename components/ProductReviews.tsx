@@ -2,6 +2,7 @@ import {
   type CustomerReview,
   getProductReviews,
   getProductAggregateRating,
+  getYoutubeReview,
   dealerReviews,
   getDealerAggregateRating,
 } from '@/lib/productReviews';
@@ -53,25 +54,28 @@ function ReviewCard({ review }: { review: CustomerReview }) {
 }
 
 /**
- * Reviews section for the bottom of every PDP. Two parts:
- *   1. Reviews of this specific Ferris model (if any collected)
- *   2. Reviews of the Dykes Motors dealership (always shown when populated)
+ * Reviews section for the bottom of every PDP. Up to three blocks:
+ *   1. Curated YouTube reviewer embed (independent owner/operator) — shown
+ *      whenever we have one mapped for this family. No Review schema emitted.
+ *   2. Reviews from Dykes Motors customers of this Ferris model (if any).
+ *   3. Reviews of the Dykes Motors dealership (shown when populated).
  *
- * Also emits Product + AggregateRating + Review JSON-LD when productReviews
- * has at least one entry — this is what powers Google rich results.
+ * Product + AggregateRating + Review JSON-LD is emitted only when we have at
+ * least one entry in productReviews[familySlug] — never from YouTube embeds.
  */
 export default function ProductReviews({ familySlug, productName, limit = 5 }: Props) {
   const productList = getProductReviews(familySlug).slice(0, limit);
   const productRating = getProductAggregateRating(familySlug);
+  const youtube = getYoutubeReview(familySlug);
   const dealerList = dealerReviews.slice(0, limit);
   const dealerRating = getDealerAggregateRating();
 
-  // Don't render anything if we have no reviews at all yet.
-  if (productList.length === 0 && dealerList.length === 0) {
+  // Nothing to show at all — bail.
+  if (productList.length === 0 && dealerList.length === 0 && !youtube) {
     return null;
   }
 
-  // Schema markup — only when we have at least one product review.
+  // Schema markup — only when we have at least one real customer review.
   const reviewSchema =
     productList.length > 0 && productRating
       ? {
@@ -117,11 +121,37 @@ export default function ProductReviews({ familySlug, productName, limit = 5 }: P
         What Buyers Say
       </h2>
 
-      {/* === Product-specific reviews === */}
-      {productList.length > 0 ? (
+      {/* === Curated independent reviewer (YouTube) === */}
+      {youtube && (
+        <div className="mb-10">
+          <h3 className="text-lg font-bold text-white mb-1">
+            Watch a real review of the {productName}
+          </h3>
+          <p className="text-sm text-gray-400 mb-4">
+            {youtube.context}
+          </p>
+          <div className="relative w-full overflow-hidden rounded-xl border border-gray-800 bg-black" style={{ paddingTop: '56.25%' }}>
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src={`https://www.youtube-nocookie.com/embed/${youtube.videoId}`}
+              title={youtube.title}
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+          <p className="text-xs text-gray-500 mt-2">
+            Independent third-party review. Posted on YouTube — not produced by Ferris or Dykes Motors.
+          </p>
+        </div>
+      )}
+
+      {/* === Customer reviews of this specific model (Dykes Motors buyers) === */}
+      {productList.length > 0 && (
         <div className="mb-10">
           <div className="flex items-baseline flex-wrap gap-3 mb-5">
-            <h3 className="text-lg font-bold text-white">About the {productName}</h3>
+            <h3 className="text-lg font-bold text-white">From Dykes Motors buyers</h3>
             {productRating && (
               <p className="text-sm text-gray-400">
                 <Stars rating={productRating.average} />{' '}
@@ -135,15 +165,6 @@ export default function ProductReviews({ familySlug, productName, limit = 5 }: P
               <ReviewCard key={`${r.name}-${r.date}-${i}`} review={r} />
             ))}
           </div>
-        </div>
-      ) : (
-        <div className="mb-10 bg-[#0c0c0c] border border-gray-800 rounded-xl p-6 text-center">
-          <p className="text-gray-300 mb-2">
-            <span className="font-semibold text-white">Be the first to review the {productName}.</span>
-          </p>
-          <p className="text-sm text-gray-500">
-            Bought one from us? Email <a href="mailto:support@dykespower.com" className="text-[#C8C8C8] underline">support@dykespower.com</a> with how it's working out and we'll feature your review here.
-          </p>
         </div>
       )}
 

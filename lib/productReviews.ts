@@ -111,3 +111,66 @@ export function getProductAggregateRating(familySlug: string): { average: number
     count: reviews.length,
   };
 }
+
+/**
+ * Curated third-party reviewer videos, keyed by the same family slug used
+ * everywhere else. These are independent owner/operator videos on YouTube
+ * (long-term reviews, walk-arounds, side-by-side comparisons). We embed
+ * them on the PDP as a "Watch a real review" panel — no Review schema
+ * markup emitted, since the speaker isn't a Dykes Motors buyer.
+ *
+ * Curation policy: pick channels run by working lawn-care operators or
+ * trusted equipment reviewers, not Ferris marketing. Replace any video that
+ * goes private/unlisted.
+ */
+export interface YoutubeReview {
+  /** YouTube video ID (the part after watch?v= ). */
+  videoId: string;
+  /** Display title shown above the embed. */
+  title: string;
+  /** Short context line — what kind of review this is. */
+  context: string;
+}
+
+export const YOUTUBE_REVIEWS: Record<string, YoutubeReview> = {
+  '300s': {
+    videoId: '6sS33fFRjkM',
+    title: 'Ferris 300S — 52" / 25HP Briggs Walk-Around Review',
+    context: 'Independent reviewer goes through deck, controls, and ride quality.',
+  },
+  'is600': {
+    videoId: 'CbwGXeKBENw',
+    title: 'Ferris IS 600Z — Owner Demo & Ride Review',
+    context: 'Working operator demonstrates how the suspension handles rough ground.',
+  },
+  'isx800': {
+    videoId: 'GJrv1QOidvQ',
+    title: 'Ferris ISX 800 — Long-Term Review (Watch Before You Buy)',
+    context: 'Honest pros and cons after extended use on a residential property.',
+  },
+  'isx2200': {
+    videoId: '1r-6gBUzw2Q',
+    title: 'Ferris ISX 2200 — Two-Year Owner Review',
+    context: 'Independent owner shares maintenance, durability, and operating tips after two seasons.',
+  },
+  'isx3300': {
+    videoId: 'KtO9IO45x30',
+    title: 'Ferris ISX 3300 — 100-Hour Brutally Honest Review',
+    context: 'Working operator gives an unfiltered review at the 100-hour mark.',
+  },
+  'srsz2': {
+    videoId: '6VPYf3WEnIw',
+    title: 'Ferris SRS Z2 — One of the Best Mowers You Can Buy',
+    context: 'Independent operator review focused on commercial productivity and ride.',
+  },
+  'fb1000': {
+    videoId: 'pnhCk92Zxlw',
+    title: 'Ferris FB1000 — Is It Any Good? Backyard Beast?',
+    context: 'Real-world test of the stand-on blower against typical fall debris.',
+  },
+};
+
+/** Look up a curated YouTube review for a given family slug. */
+export function getYoutubeReview(familySlug: string): YoutubeReview | null {
+  return YOUTUBE_REVIEWS[familySlug] ?? null;
+}
