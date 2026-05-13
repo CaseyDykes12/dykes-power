@@ -79,13 +79,17 @@ export default function FerrisHero() {
 
       <div className="relative z-10 max-w-[1280px] mx-auto px-4 py-20 w-full">
         <div className="max-w-2xl">
-          <div className="flex items-center gap-4 mb-8">
+          <div className="flex items-stretch gap-4 mb-8">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/df-logo.png" alt="Dykes Family Logo" className="h-14 w-auto" />
-            <div>
+            <img
+              src="/df-logo.png"
+              alt="Dykes Family Logo"
+              className="h-24 sm:h-20 w-auto self-stretch object-contain shrink-0"
+            />
+            <div className="flex flex-col justify-between">
               <p
                 className="text-3xl text-white leading-tight tracking-widest"
-                style={{ fontFamily: 'var(--font-bebas)', WebkitTextStroke: '0.5px #666' }}
+                style={{ fontFamily: 'var(--font-bebas)' }}
               >
                 DYKES MOTORS
               </p>

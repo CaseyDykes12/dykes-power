@@ -101,7 +101,7 @@ export default function Navbar() {
           <div className="flex flex-col leading-none min-w-0">
             <span
               className="text-lg sm:text-2xl tracking-widest text-white leading-tight truncate"
-              style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.08em', WebkitTextStroke: '0.5px #888' }}
+              style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.08em' }}
             >
               DYKES MOTORS
             </span>

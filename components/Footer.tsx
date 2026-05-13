@@ -14,7 +14,7 @@ export default function Footer() {
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/df-logo.png" alt="Dykes Family Logo" className="h-10 w-auto mb-2" />
-          <p className="text-2xl text-white leading-tight tracking-widest" style={{ fontFamily: 'var(--font-bebas)', WebkitTextStroke: '0.5px #888' }}>
+          <p className="text-2xl text-white leading-tight tracking-widest" style={{ fontFamily: 'var(--font-bebas)' }}>
             DYKES MOTORS
           </p>
           <p className="text-sm tracking-widest uppercase leading-tight mb-1" style={{ fontFamily: 'var(--font-bebas)', color: '#C8C8C8', letterSpacing: '0.12em' }}>

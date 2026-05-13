@@ -824,9 +824,9 @@ export const products: Product[] = [
       "Suspension seat",
       "Commercial-grade drive"
     ],
-    "imageUrl": "/images/ferris/basco/5902084/5902084_FER_ISX800_FR_FINAL.jpg",
+    "imageUrl": "/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg",
     "images": [
-      "/images/ferris/basco/5902084/5902084_FER_ISX800_FR_FINAL.jpg"
+      "/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg"
     ],
     "status": "AVAILABLE_TO_ORDER",
     "variants": [
