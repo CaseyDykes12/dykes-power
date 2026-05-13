@@ -1,10 +1,84 @@
 import { NextResponse } from 'next/server';
-import { products } from '@/lib/products';
+import { products, type Product } from '@/lib/products';
 import { parts } from '@/lib/parts';
 import { getProductImages } from '@/lib/productImages';
 import { getDistributorStock } from '@/lib/distributorInventory';
+import { getRichContent } from '@/lib/productRichContent';
+import { getFamilyTagline } from '@/lib/familyTaglines';
 
 const SITE = 'https://www.dykespower.com';
+
+/**
+ * Build a feed-grade product description that combines the catalog blurb,
+ * top key-feature talking points, hard specs, and local-SEO keywords. Aim
+ * for ~800-1500 chars per item — well under Google's 5000 limit but rich
+ * enough to rank for the queries we care about (model name, "Ferris dealer
+ * Mississippi", "commercial zero turn near Hattiesburg / Laurel / Petal").
+ */
+function buildDescription(p: Product): string {
+  const parts: string[] = [];
+
+  const tagline = getFamilyTagline(p.name);
+  if (tagline) parts.push(tagline);
+
+  parts.push(p.description);
+
+  // Top 3 key features as a single prose sentence.
+  const rich = getRichContent(p.name);
+  if (rich?.keyFeatures?.length) {
+    const top = rich.keyFeatures
+      .slice(0, 3)
+      .map((kf) => `${kf.title} — ${kf.body}`)
+      .join(' ');
+    parts.push(top);
+  }
+
+  // Hard specs paragraph. Built defensively so partial specs still help.
+  if (rich?.specs) {
+    const s = rich.specs;
+    const specBits: string[] = [];
+    if (p.engine) specBits.push(`${p.engine} engine`);
+    if (p.horsepower) specBits.push(`${p.horsepower}`);
+    if (s.engineDisplacement) specBits.push(`${s.engineDisplacement} displacement`);
+    if (p.deckSizes.length > 0)
+      specBits.push(`${p.deckSizes.join('/')} ${s.deckConstruction ?? 'fabricated steel'} deck`);
+    if (s.transmission) specBits.push(s.transmission);
+    if (s.groundSpeedFwd) specBits.push(`top speed ${s.groundSpeedFwd}`);
+    if (s.suspension) specBits.push(`${s.suspension} suspension`);
+    if (s.fuelCapacity) specBits.push(`${s.fuelCapacity} fuel`);
+    if (s.dryWeight) specBits.push(`${s.dryWeight} dry weight`);
+    const warrantyBits: string[] = [];
+    if (s.warrantyMachine) warrantyBits.push(`${s.warrantyMachine} machine warranty`);
+    if (s.warrantySuspension) warrantyBits.push(`${s.warrantySuspension} suspension warranty`);
+    if (s.warrantyEngine) warrantyBits.push(`${s.warrantyEngine} engine warranty`);
+    if (specBits.length) parts.push('Specifications: ' + specBits.join(', ') + '.');
+    if (warrantyBits.length) parts.push('Warranty: ' + warrantyBits.join(', ') + '.');
+  } else {
+    // Lightweight spec line for products without rich content yet.
+    const lite: string[] = [];
+    if (p.engine) lite.push(p.engine);
+    if (p.horsepower) lite.push(p.horsepower);
+    if (p.deckSizes.length > 0) lite.push(`${p.deckSizes.join('/')} deck`);
+    if (lite.length) parts.push('Specs: ' + lite.join(' / ') + '.');
+  }
+
+  // Built-in feature bullets from the catalog (always present, short).
+  if (p.features?.length) {
+    parts.push('At a glance: ' + p.features.slice(0, 6).join('; ') + '.');
+  }
+
+  // Local SEO + dealer trust signals + buyer next-step.
+  parts.push(
+    'Sold by Dykes Motors Power Equipment, your authorized Ferris dealer ' +
+      'in Collins, Mississippi — serving Hattiesburg, Laurel, Petal, ' +
+      'Seminary, Mendenhall, Magee, Columbia, Brookhaven, and the Pine Belt ' +
+      'region. Free nationwide shipping on every Ferris mower with no ' +
+      'minimum. Financing available as low as 4.9% APR for qualified ' +
+      'credit. Order online at dykespower.com or call (601) 909-5380.',
+  );
+
+  return parts.filter(Boolean).join(' ').replace(/\s+/g, ' ').trim();
+}
 
 // Accessories + Collection Systems are excluded from the feed until we have
 // high-resolution (500x500+) product photography. The accessory images
@@ -79,7 +153,7 @@ export async function GET() {
     <g:id>${escapeXml(p.sku)}</g:id>
     <g:item_group_id>${escapeXml(itemGroupId)}</g:item_group_id>
     <g:title>${escapeXml(title)}</g:title>
-    <g:description>${escapeXml(p.description)}</g:description>
+    <g:description>${escapeXml(buildDescription(p))}</g:description>
     <g:link>${SITE}/product/${escapeXml(p.sku)}</g:link>
     <g:image_link>${escapeXml(imageUrl)}</g:image_link>
 ${additionalImages}
