@@ -1,5 +1,6 @@
 import { products, getProductsBySku, type Product } from '@/lib/products';
-import { getProductImages } from '@/lib/productImages';
+import { getProductImages, getFamilySlug } from '@/lib/productImages';
+import ProductReviews from '@/components/ProductReviews';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -240,6 +241,16 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                 ) : (
                   <PriceBlock price={product.price} msrp={product.msrp} mode="detail" />
                 )}
+
+                {/* Stock + shipping callouts — Amazon-style clarity */}
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-4 text-sm">
+                  <span className="inline-flex items-center gap-1.5 text-green-400 font-semibold">
+                    <span aria-hidden>●</span> In Stock
+                  </span>
+                  <span className="text-gray-400">
+                    <span className="text-white font-semibold">FREE shipping</span> nationwide · no minimum
+                  </span>
+                </div>
               </div>
 
               {/* Section 2: 10-Year Suspension Warranty (if eligible) */}
@@ -583,6 +594,13 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
             </a>
           </div>
         </div>
+
+        {/* ── Customer Reviews ──────────────────────────────────── */}
+        {(() => {
+          const familySlug = getFamilySlug(product.name);
+          if (!familySlug) return null;
+          return <ProductReviews familySlug={familySlug} productName={product.name} />;
+        })()}
 
         {/* ── Similar Ferris Models ──────────────────────────────── */}
         {similarProducts.length > 0 && (

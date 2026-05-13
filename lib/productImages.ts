@@ -556,6 +556,19 @@ const BASCO_IMAGES_BY_FAMILY: Record<string, string[]> = {
   ],
 };
 
+/**
+ * Returns the canonical family slug for a product (300s, isx800, srsz2,
+ * etc.) or null if the name doesn't match any known Ferris family. Used
+ * by the reviews component to look up per-model reviews and aggregate
+ * ratings.
+ */
+export function getFamilySlug(productName: string): string | null {
+  for (const [pattern, key] of namePatterns) {
+    if (pattern.test(productName)) return key;
+  }
+  return null;
+}
+
 export function getProductImages(product: Product): string[] {
   const sku = product.images ?? [];
 
