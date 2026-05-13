@@ -1,5 +1,6 @@
 import { products, getProductsBySku, type Product } from '@/lib/products';
 import { getProductImages, getFamilySlug } from '@/lib/productImages';
+import { getYoutubeReview } from '@/lib/productReviews';
 import ProductReviews from '@/components/ProductReviews';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -197,7 +198,15 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
           {/* ── Gallery ─────────────────────────────────────────────── */}
           <div className="lg:sticky lg:top-24">
             <div className="relative">
-              <ProductGallery images={images} alt={product.name} />
+              <ProductGallery
+                images={images}
+                alt={product.name}
+                video={(() => {
+                  const slug = getFamilySlug(product.name);
+                  const rev = slug ? getYoutubeReview(slug) : null;
+                  return rev ? { videoId: rev.videoId, title: rev.title } : null;
+                })()}
+              />
 
               {/* "Feels Like a Ferris" campaign sash */}
               <div

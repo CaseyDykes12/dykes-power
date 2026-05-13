@@ -113,15 +113,14 @@ export function getProductAggregateRating(familySlug: string): { average: number
 }
 
 /**
- * Curated third-party reviewer videos, keyed by the same family slug used
- * everywhere else. These are independent owner/operator videos on YouTube
- * (long-term reviews, walk-arounds, side-by-side comparisons). We embed
- * them on the PDP as a "Watch a real review" panel — no Review schema
- * markup emitted, since the speaker isn't a Dykes Motors buyer.
+ * Official-style Ferris product walkthrough videos, keyed by family slug.
+ * Used as the first slot in the PDP gallery — customer sees the play
+ * button and watching the manufacturer overview is their first action.
+ * YouTube's related-video panel after playback then surfaces real-owner
+ * reviews naturally, so we don't double-embed reviewer content.
  *
- * Curation policy: pick channels run by working lawn-care operators or
- * trusted equipment reviewers, not Ferris marketing. Replace any video that
- * goes private/unlisted.
+ * Curation policy: prefer videos with Ferris-branded titles (no third-party
+ * "Review of" prefix). Drop any video that goes private/unlisted.
  */
 export interface YoutubeReview {
   /** YouTube video ID (the part after watch?v= ). */
@@ -135,120 +134,120 @@ export interface YoutubeReview {
 export const YOUTUBE_REVIEWS: Record<string, YoutubeReview> = {
   // ── Entry zero turn ───────────────────────────────────────────────
   '300s': {
-    videoId: '6sS33fFRjkM',
-    title: 'Ferris 300S — 52" / 25HP Briggs Walk-Around Review',
-    context: 'Independent reviewer goes through deck, controls, and ride quality.',
+    videoId: 'tRz1nxSMFgY',
+    title: 'Ferris 300S — 52" Deck / 25 HP Briggs & Stratton',
+    context: 'Manufacturer-style walk-around of the 300S residential zero turn.',
   },
   '300r': {
     videoId: '9UeQAcooBog',
-    title: 'Ferris 300R — Owner Review',
-    context: 'Independent owner walks through the 21.5HP Kawasaki configuration.',
+    title: 'Ferris 300R Zero Turn — Walk-Around',
+    context: 'Walk-around of the 300R / 21.5 HP Kawasaki entry zero turn.',
   },
   '500s': {
-    videoId: 'hYytgo80Ppc',
-    title: 'Ferris 500S — 61" / 24HP Kawasaki Review',
-    context: 'Detailed review of deck construction, cut quality, and ride.',
+    videoId: 'PSZnvfnMP60',
+    title: 'Ferris 500S — 61" / 25HP Briggs Overview',
+    context: 'Authorized-dealer overview of the 500S zero turn — deck, suspension, controls.',
   },
   'f60': {
-    videoId: 'S-aZy89_GlA',
-    title: 'Ferris F60Z — 36" Sit-Down Mower Owner Review',
-    context: 'Owner shares real-world impressions of the compact commercial zero-turn.',
+    videoId: 'NmUt7sc-DiM',
+    title: 'Ferris F60Z Commercial Zero Turn Mower',
+    context: 'Walk-around of the compact 36" commercial F60Z.',
   },
 
   // ── Commercial IS / ISX zero turn ─────────────────────────────────
   'is600': {
-    videoId: 'CbwGXeKBENw',
-    title: 'Ferris IS 600Z — Owner Demo & Ride Review',
-    context: 'Working operator demonstrates how the suspension handles rough ground.',
+    videoId: 'FdB3VZ_HfI8',
+    title: 'Ferris IS600Z & IS700Z Zero Turn Mowers',
+    context: 'Side-by-side walk-around of the IS 600Z and 700Z platforms.',
   },
   'is700': {
-    videoId: 'aheOEcBEz4k',
-    title: 'Ferris IS 700Z — Are Ferris Mowers Really That Fast?',
-    context: 'Independent review focused on speed, productivity, and ride comfort.',
+    videoId: 'xgcvJSxxG1M',
+    title: 'Ferris Zero-Turn Commercial Mower: IS 700Z',
+    context: 'Manufacturer-style overview of the IS 700Z commercial zero turn.',
   },
   'isx800': {
-    videoId: 'GJrv1QOidvQ',
-    title: 'Ferris ISX 800 — Long-Term Review (Watch Before You Buy)',
-    context: 'Honest pros and cons after extended use on a residential property.',
+    videoId: 'A2-Y_L6EPp4',
+    title: 'Feature Overview: Ferris ISX™ 800',
+    context: 'Forefront™ Suspension System and feature walkthrough.',
   },
   'isx2200': {
-    videoId: '1r-6gBUzw2Q',
-    title: 'Ferris ISX 2200 — Two-Year Owner Review',
-    context: 'Independent owner shares maintenance, durability, and operating tips after two seasons.',
+    videoId: 'zmV1SQde5ok',
+    title: 'Ferris ISX™ 2200 Zero Turn Mower',
+    context: 'Manufacturer-style overview of the ISX 2200 commercial zero turn.',
   },
   'isx3300': {
-    videoId: 'KtO9IO45x30',
-    title: 'Ferris ISX 3300 — 100-Hour Brutally Honest Review',
-    context: 'Working operator gives an unfiltered review at the 100-hour mark.',
+    videoId: 'flek4cB2Q4E',
+    title: 'Ferris ISX™ 3300 Zero Turn Mower — Walkaround Introduction',
+    context: 'Dennie walks through the ISX 3300 features and benefits.',
   },
 
   // ── Diesel ────────────────────────────────────────────────────────
   'is2600': {
-    videoId: '2_g3pqkJ5-o',
-    title: 'Ferris IS® 2600 Diesel — Walk-Around & Overview',
-    context: 'Independent walk-around of the diesel commercial zero turn.',
+    videoId: 'IN8_jQMO9p4',
+    title: 'Ferris IS® 2600 Diesel Zero Turn Mower',
+    context: 'Manufacturer-style walk-around of the IS 2600 diesel.',
   },
   'is6200': {
-    videoId: 'LiX4A0shpxo',
-    title: 'Ferris IS 6200 Diesel — 72" / 48HP CAT Walk-Around',
-    context: 'Independent review of the flagship 72-inch diesel zero turn.',
+    videoId: '7kzN0PyT3tI',
+    title: 'Ferris IS® 6200 Diesel Zero Turn Mower — Walkaround Introduction',
+    context: 'Walkaround of the flagship 72" CAT-powered diesel zero turn.',
   },
 
   // ── Stand-On (SRS) ────────────────────────────────────────────────
   'srsz1': {
-    videoId: 'UmId2WFZXxw',
-    title: 'Ferris SRS Z1 — How Good Is It, and Is It Priced Right?',
-    context: 'Operator-focused review of the entry stand-on with soft-ride suspension.',
+    videoId: 'TJroXtK1zA8',
+    title: 'Ferris SRS™ Z1 Stand-On Mower',
+    context: 'Overview of the Z1 with soft-ride stand-on suspension.',
   },
   'srsz2': {
-    videoId: '6VPYf3WEnIw',
-    title: 'Ferris SRS Z2 — One of the Best Mowers You Can Buy',
-    context: 'Independent operator review focused on commercial productivity and ride.',
+    videoId: 'O_fBKCpqGuI',
+    title: 'Ferris Stand-On Commercial Zero Turn Mower: SRS™ Z2',
+    context: 'Walk-around of the SRS Z2 commercial stand-on.',
   },
   'srsz3x': {
-    videoId: 'L8U_r4pMt9s',
-    title: 'Ferris SRS Z3X 60" — 100-Hour Honest Review',
-    context: 'Pros and cons on the 37HP Vanguard ETC stand-on at 100 hours.',
+    videoId: 'xedBWcnX99s',
+    title: 'Ferris SRS™ Z3X Stand-On Mower with Oil Guard',
+    context: 'Feature walkthrough of the Z3X stand-on with Oil Guard system.',
   },
 
   // ── Walk-Behind ───────────────────────────────────────────────────
   'fw15': {
-    videoId: 'Qx5PnH1MgCU',
-    title: 'Ferris FW15 — Why I Sold My 32" Mower After 2 Years',
-    context: 'Long-term owner review of the FW15 hydro walk-behind.',
+    videoId: '8NImp8aaXvM',
+    title: 'Ferris FW15 Walk-Behind Mower',
+    context: 'Overview of the FW15 commercial walk-behind with Honda engine.',
   },
   'fw25': {
-    videoId: '62whqpNZUec',
-    title: 'Ferris FW25 52" — Walk-Behind Owner Review',
-    context: 'Independent review at 42 hours of commercial use.',
+    videoId: 'ekUm5mPnsZA',
+    title: 'Ferris FW25 48" Walk-Behind Mower',
+    context: 'Walk-around of the FW25 commercial walk-behind.',
   },
   'fw45': {
-    videoId: 'uyJauJhRnm8',
-    title: 'Ferris FW45 — 50-Hour Walk-Behind Review',
-    context: 'Owner walks through the 52" / 20.5HP Kawasaki commercial unit.',
+    videoId: '59hOp0_2qWM',
+    title: 'Ferris FW45 Commercial Walk-Behind Lawn Mower',
+    context: 'Manufacturer-style overview of the FW45 commercial walk-behind.',
   },
 
   // ── Blowers (Hurricane) ───────────────────────────────────────────
   'fb1000': {
-    videoId: 'pnhCk92Zxlw',
-    title: 'Ferris FB1000 — Is It Any Good? Backyard Beast?',
-    context: 'Real-world test of the stand-on blower against typical fall debris.',
+    videoId: 'j7WEIlNWPL8',
+    title: 'Ferris FB1000 Hurricane™ Stand-On Commercial Blower',
+    context: 'Manufacturer-style overview of the FB1000 stand-on blower.',
   },
   'fb3000': {
-    videoId: 'Ld4XGKIZHLE',
-    title: 'Ferris FB3000 — Stand-On Blower Review',
-    context: 'Independent owner shows the FB3000 in action and covers honest pros/cons.',
+    videoId: 'DuKEJHDLYM4',
+    title: 'Ferris FB3000 Stand-On Blower',
+    context: 'Overview of the FB3000 Hurricane stand-on commercial blower.',
   },
 
   // ── Ride-On Spreader/Sprayer ──────────────────────────────────────
   'venturex': {
     videoId: 'i3HpC4Cb67s',
-    title: 'Ferris Venture XC FS3200 — Spreader/Sprayer Review',
-    context: 'Working applicator covers productivity and feature highlights.',
+    title: 'Ferris Spreader/Sprayer Venture XC FS3200',
+    context: 'Working applicator walks through productivity and features.',
   },
 
-  // 300e (electric) intentionally omitted — too new for credible
-  // independent owner reviews; revisit once we find a real one.
+  // 300E electric intentionally omitted — too new for a credible
+  // Ferris-branded walk-around video; revisit once one is released.
 };
 
 /** Look up a curated YouTube review for a given family slug. */

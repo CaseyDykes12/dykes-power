@@ -2,7 +2,6 @@ import {
   type CustomerReview,
   getProductReviews,
   getProductAggregateRating,
-  getYoutubeReview,
   dealerReviews,
   getDealerAggregateRating,
 } from '@/lib/productReviews';
@@ -54,24 +53,22 @@ function ReviewCard({ review }: { review: CustomerReview }) {
 }
 
 /**
- * Reviews section for the bottom of every PDP. Up to three blocks:
- *   1. Curated YouTube reviewer embed (independent owner/operator) — shown
- *      whenever we have one mapped for this family. No Review schema emitted.
- *   2. Reviews from Dykes Motors customers of this Ferris model (if any).
- *   3. Reviews of the Dykes Motors dealership (shown when populated).
+ * Reviews section for the bottom of every PDP. Two blocks:
+ *   1. Reviews from Dykes Motors customers of this Ferris model (if any).
+ *   2. Reviews of the Dykes Motors dealership (shown when populated).
  *
  * Product + AggregateRating + Review JSON-LD is emitted only when we have at
- * least one entry in productReviews[familySlug] — never from YouTube embeds.
+ * least one entry in productReviews[familySlug]. The Ferris product video
+ * lives in the PDP gallery, not here.
  */
 export default function ProductReviews({ familySlug, productName, limit = 5 }: Props) {
   const productList = getProductReviews(familySlug).slice(0, limit);
   const productRating = getProductAggregateRating(familySlug);
-  const youtube = getYoutubeReview(familySlug);
   const dealerList = dealerReviews.slice(0, limit);
   const dealerRating = getDealerAggregateRating();
 
   // Nothing to show at all — bail.
-  if (productList.length === 0 && dealerList.length === 0 && !youtube) {
+  if (productList.length === 0 && dealerList.length === 0) {
     return null;
   }
 
@@ -120,32 +117,6 @@ export default function ProductReviews({ familySlug, productName, limit = 5 }: P
       >
         What Buyers Say
       </h2>
-
-      {/* === Curated independent reviewer (YouTube) === */}
-      {youtube && (
-        <div className="mb-10">
-          <h3 className="text-lg font-bold text-white mb-1">
-            Watch a real review of the {productName}
-          </h3>
-          <p className="text-sm text-gray-400 mb-4">
-            {youtube.context}
-          </p>
-          <div className="relative w-full overflow-hidden rounded-xl border border-gray-800 bg-black" style={{ paddingTop: '56.25%' }}>
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src={`https://www.youtube-nocookie.com/embed/${youtube.videoId}`}
-              title={youtube.title}
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </div>
-          <p className="text-xs text-gray-500 mt-2">
-            Independent third-party review. Posted on YouTube — not produced by Ferris or Dykes Motors.
-          </p>
-        </div>
-      )}
 
       {/* === Customer reviews of this specific model (Dykes Motors buyers) === */}
       {productList.length > 0 && (
