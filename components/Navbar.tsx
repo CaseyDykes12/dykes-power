@@ -93,20 +93,20 @@ export default function Navbar() {
 
   return (
     <header className="bg-black text-white sticky top-0 z-50 shadow-md">
-      <div className="max-w-[1280px] mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="max-w-[1280px] mx-auto px-3 sm:px-4 py-3 flex items-center justify-between gap-2">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-2 sm:gap-3 min-w-0 shrink">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/df-logo.png" alt="Dykes Family Logo" className="h-10 w-auto" />
-          <div className="flex flex-col leading-none">
+          <img src="/df-logo.png" alt="Dykes Family Logo" className="h-8 sm:h-10 w-auto shrink-0" />
+          <div className="flex flex-col leading-none min-w-0">
             <span
-              className="text-2xl tracking-widest text-white leading-tight"
+              className="text-lg sm:text-2xl tracking-widest text-white leading-tight truncate"
               style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.08em', WebkitTextStroke: '0.5px #888' }}
             >
               DYKES MOTORS
             </span>
             <span
-              className="text-sm tracking-widest uppercase leading-tight"
+              className="text-[10px] sm:text-sm tracking-widest uppercase leading-tight truncate"
               style={{ fontFamily: 'var(--font-bebas)', color: '#C8C8C8', letterSpacing: '0.12em' }}
             >
               Power Equipment
@@ -207,7 +207,7 @@ export default function Navbar() {
         </nav>
 
         {/* Right side */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <CartIcon />
           {/* Call button — visible on ALL sizes (mobile shows phone icon only, desktop shows full number) */}
           <a

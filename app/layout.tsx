@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, Montserrat, Bebas_Neue } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
@@ -10,6 +10,12 @@ import TextUsButton from '@/components/TextUsButton';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' });
 const bebasNeue = Bebas_Neue({ subsets: ['latin'], weight: '400', variable: '--font-bebas' });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.dykespower.com'),
@@ -186,7 +192,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <meta name="google-site-verification" content="qW0oAxSqngP7GBmf8rXxdZs1GK14mbymF1StHZnrcQ4" />
       </head>
-      <body className="min-h-screen flex flex-col bg-white text-gray-900">
+      <body className="min-h-screen flex flex-col bg-white text-gray-900 overflow-x-hidden">
         {/* Google Ads Tag */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17992871675"
