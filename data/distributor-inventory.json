@@ -1,0 +1,319 @@
+{
+  "asOfDate": "2026-04-24",
+  "source": "Power Distributors / Gregory Nielsen (BASCO)",
+  "lastUpdated": "2026-05-13",
+  "items": {
+    "5902204": {
+      "description": "300R, 42, B23, NA",
+      "today": 11,
+      "productionThisMonth": 0.7,
+      "endOfMonth": 11.7
+    },
+    "5902205": {
+      "description": "300R, 42, K22, NA",
+      "today": 3,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 3.0
+    },
+    "5902211": {
+      "description": "300S, 48, B23, NA",
+      "today": 5,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 5.0
+    },
+    "5902206": {
+      "description": "300S, 48, K22, NA",
+      "today": 8,
+      "productionThisMonth": 1.4,
+      "endOfMonth": 9.4
+    },
+    "5902212": {
+      "description": "300S, 52, B25, NA",
+      "today": 29,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 29.0
+    },
+    "5902101": {
+      "description": "500S, 48, B25, NA",
+      "today": 23,
+      "productionThisMonth": 56.0,
+      "endOfMonth": 79.0
+    },
+    "5902103": {
+      "description": "500S, 61, B25, NA",
+      "today": 2,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 2.0
+    },
+    "5902056": {
+      "description": "500S, 61, K24, NA",
+      "today": 0,
+      "productionThisMonth": 56.0,
+      "endOfMonth": 43.0
+    },
+    "1760266": {
+      "description": "BATTERY, 82V, 2AH, B&S, NA",
+      "today": 229,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 229.0
+    },
+    "5901895": {
+      "description": "F60, 36, K19, NA",
+      "today": 71,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 71.0
+    },
+    "5902012": {
+      "description": "FB1000, 3500, V18, NA",
+      "today": 101,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 101.0
+    },
+    "5902193": {
+      "description": "FB2000, 4500, V23, NA",
+      "today": 34,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 34.0
+    },
+    "5901737": {
+      "description": "FW15, 32, H10, NA",
+      "today": 40,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 40.0
+    },
+    "5901929": {
+      "description": "IS2600, 61, Y23, NA",
+      "today": 9,
+      "productionThisMonth": 2.8,
+      "endOfMonth": 11.8
+    },
+    "5902110": {
+      "description": "IS600, 48, B25, NA",
+      "today": 0,
+      "productionThisMonth": 52.5,
+      "endOfMonth": 29.5
+    },
+    "5901908": {
+      "description": "IS600, 48, K19, NA",
+      "today": 8,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 8.0
+    },
+    "5902109": {
+      "description": "IS600, 52, B25, NA",
+      "today": 0,
+      "productionThisMonth": 44.1,
+      "endOfMonth": 43.1
+    },
+    "5901911": {
+      "description": "IS600, 52, K23, NA",
+      "today": 0,
+      "productionThisMonth": 19.6,
+      "endOfMonth": 3.6
+    },
+    "5902162": {
+      "description": "IS6200, 72, C48, NA",
+      "today": 43,
+      "productionThisMonth": 10.5,
+      "endOfMonth": 53.5
+    },
+    "5902107": {
+      "description": "IS700, 52, B27, NA",
+      "today": 8,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 8.0
+    },
+    "5902061": {
+      "description": "IS700, 60, B27, NA",
+      "today": 35,
+      "productionThisMonth": 2.1,
+      "endOfMonth": 37.1
+    },
+    "5902159": {
+      "description": "ISX2200, 52, K30.5 E, NA",
+      "today": 11,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 11.0
+    },
+    "5902157": {
+      "description": "ISX2200, 52, V28 E OG, NA",
+      "today": 14,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 14.0
+    },
+    "5902078": {
+      "description": "ISX2200, 60, V28 E OG, NA",
+      "today": 58,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 58.0
+    },
+    "5902065": {
+      "description": "ISX3300, 60, K38.5 E, NA",
+      "today": 3,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 3.0
+    },
+    "5902160": {
+      "description": "ISX3300, 72, K38.5 E, NA",
+      "today": 0,
+      "productionThisMonth": 49.0,
+      "endOfMonth": 37.0
+    },
+    "5902154": {
+      "description": "ISX800, 52, B27, NA",
+      "today": 79,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 79.0
+    },
+    "5902172": {
+      "description": "ISX800, 60, B27 E OX, NA",
+      "today": 73,
+      "productionThisMonth": 0.7,
+      "endOfMonth": 73.7
+    },
+    "5902075": {
+      "description": "ISX800, 60, B27, NA",
+      "today": 93,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 93.0
+    },
+    "5902074": {
+      "description": "ISX800, 60, K26 E, NA",
+      "today": 27,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 27.0
+    },
+    "5902208": {
+      "description": "PATHFINDER, 100/12, H5.8, NA",
+      "today": 11,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 11.0
+    },
+    "5900632": {
+      "description": "PROCUT S, 61, DECK, NA",
+      "today": 127,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 127.0
+    },
+    "5902106": {
+      "description": "PROCUT S, POWER, B27, NA",
+      "today": 26,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 26.0
+    },
+    "5900533": {
+      "description": "PROCUT S, POWER, K24, NA",
+      "today": 101,
+      "productionThisMonth": 0.7,
+      "endOfMonth": 101.7
+    },
+    "5902000": {
+      "description": "ROVER XC, 200/0, V5, NA",
+      "today": 0,
+      "productionThisMonth": 3.5,
+      "endOfMonth": 3.5
+    },
+    "5901939": {
+      "description": "SRSZ1, 36, K19, NA",
+      "today": 26,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 26.0
+    },
+    "5901941": {
+      "description": "SRSZ1, 36, V23, NA",
+      "today": 77,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 77.0
+    },
+    "5901940": {
+      "description": "SRSZ1, 48, K22, NA",
+      "today": 13,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 13.0
+    },
+    "5901942": {
+      "description": "SRSZ1, 48, V23, NA",
+      "today": 17,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 17.0
+    },
+    "5902235": {
+      "description": "SRSZ2, 52, K30.5 E, NA",
+      "today": 30,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 30.0
+    },
+    "5902165": {
+      "description": "SRSZ2, 52, V28 E OG, NA",
+      "today": 128,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 128.0
+    },
+    "5902236": {
+      "description": "SRSZ2, 60, K30.5 E, NA",
+      "today": 37,
+      "productionThisMonth": 0.7,
+      "endOfMonth": 37.7
+    },
+    "5902070": {
+      "description": "SRSZ2, 60, V28 E OG, NA",
+      "today": 20,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 20.0
+    },
+    "5902168": {
+      "description": "SRSZ3X, 52, K27, NA",
+      "today": 12,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 12.0
+    },
+    "5902233": {
+      "description": "SRSZ3X, 52, K38.5 E, NA",
+      "today": 31,
+      "productionThisMonth": 32.2,
+      "endOfMonth": 63.2
+    },
+    "5902123": {
+      "description": "SRSZ3X, 52, V37 E OG, NA",
+      "today": 0,
+      "productionThisMonth": 11.2,
+      "endOfMonth": 11.2
+    },
+    "5902217": {
+      "description": "SRSZ3X, 52, V40 E OG, NA",
+      "today": 0,
+      "productionThisMonth": 51.8,
+      "endOfMonth": 35.8
+    },
+    "5902234": {
+      "description": "SRSZ3X, 60, K38.5 E, NA",
+      "today": 0,
+      "productionThisMonth": 66.5,
+      "endOfMonth": 59.5
+    },
+    "5902216": {
+      "description": "SRSZ3X, 60, V40 E OG, NA",
+      "today": 0,
+      "productionThisMonth": 31.5,
+      "endOfMonth": 28.5
+    },
+    "5902170": {
+      "description": "SRSZ3X, 72, V37 E OG, NA",
+      "today": 5,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 5.0
+    },
+    "5902215": {
+      "description": "SRSZ3X, 72, V40 E OG, NA",
+      "today": 60,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 60.0
+    },
+    "5902195": {
+      "description": "VENTURE X, 200/24, V18, NA",
+      "today": 1,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 1.0
+    }
+  }
+}

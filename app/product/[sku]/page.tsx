@@ -1,6 +1,7 @@
 import { products, getProductsBySku, type Product } from '@/lib/products';
 import { getProductImages, getFamilySlug } from '@/lib/productImages';
 import { getYoutubeReview } from '@/lib/productReviews';
+import { getAvailability, INVENTORY_AS_OF } from '@/lib/distributorInventory';
 import ProductReviews from '@/components/ProductReviews';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -251,15 +252,31 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                   <PriceBlock price={product.price} msrp={product.msrp} mode="detail" />
                 )}
 
-                {/* Stock + shipping callouts — Amazon-style clarity */}
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-4 text-sm">
-                  <span className="inline-flex items-center gap-1.5 text-green-400 font-semibold">
-                    <span aria-hidden>●</span> In Stock
-                  </span>
-                  <span className="text-gray-400">
-                    <span className="text-white font-semibold">FREE shipping</span> nationwide · no minimum
-                  </span>
-                </div>
+                {/* Stock + shipping callouts — driven by weekly Power Distributors snapshot */}
+                {(() => {
+                  const avail = getAvailability(product.sku);
+                  return (
+                    <div className="mt-4 text-sm">
+                      <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+                        {avail.tone === 'in-stock' ? (
+                          <span className="inline-flex items-center gap-1.5 text-green-400 font-semibold">
+                            <span aria-hidden>●</span> {avail.label}
+                          </span>
+                        ) : (
+                          <span className="inline-flex items-center gap-1.5 text-[#D4AF37] font-semibold">
+                            <span aria-hidden>●</span> Temporarily Out of Stock
+                          </span>
+                        )}
+                        <span className="text-gray-400">
+                          <span className="text-white font-semibold">FREE shipping</span> nationwide · no minimum
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-gray-500 mt-1">
+                        Inventory updated {new Date(INVENTORY_AS_OF).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                      </p>
+                    </div>
+                  );
+                })()}
               </div>
 
               {/* Section 2: 10-Year Suspension Warranty (if eligible) */}
