@@ -267,7 +267,7 @@ export const products: Product[] = [
       "Commercial-grade fabricated deck",
       "Tool-free deck height adjustment"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/300S/Features%20and%20Benefits/Premium%20Features.jpg",
+    "imageUrl": "/images/ferris/basco/5902207/5902207_FER_300S_FL_FINAL.jpg",
     "status": "IN_STOCK",
     "variants": [
       {
@@ -336,7 +336,7 @@ export const products: Product[] = [
       "Commercial-grade fabricated deck",
       "Tool-free deck height adjustment"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/300S/Features%20and%20Benefits/Premium%20Features.jpg",
+    "imageUrl": "/images/ferris/basco/5902207/5902207_FER_300S_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902144"
   },
@@ -359,7 +359,7 @@ export const products: Product[] = [
       "Commercial-grade fabricated deck",
       "Tool-free deck height adjustment"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/300S/Features%20and%20Benefits/Premium%20Features.jpg",
+    "imageUrl": "/images/ferris/basco/5902207/5902207_FER_300S_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902144"
   },
@@ -382,7 +382,7 @@ export const products: Product[] = [
       "52\" commercial-grade deck",
       "Tool-free deck height adjustment"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/300S/Features%20and%20Benefits/Premium%20Features.jpg",
+    "imageUrl": "/images/ferris/basco/5902207/5902207_FER_300S_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902144"
   },
@@ -512,7 +512,7 @@ export const products: Product[] = [
       "52\" fabricated deck",
       "Up to 8.5 mph ground speed"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/500/Product%20Images/FER_Products_500S.jpg",
+    "imageUrl": "/images/ferris/basco/5902101/5902101_FER_500S_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902101"
   },
@@ -535,7 +535,7 @@ export const products: Product[] = [
       "61\" wide-cut deck",
       "Up to 8.5 mph ground speed"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/500/Product%20Images/FER_Products_500S.jpg",
+    "imageUrl": "/images/ferris/basco/5902101/5902101_FER_500S_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902101"
   },
@@ -558,7 +558,7 @@ export const products: Product[] = [
       "61\" wide-cut deck",
       "Up to 8.5 mph ground speed"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/500/Product%20Images/FER_Products_500S.jpg",
+    "imageUrl": "/images/ferris/basco/5902101/5902101_FER_500S_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902101"
   },
@@ -619,7 +619,7 @@ export const products: Product[] = [
       "iCD™ cutting system",
       "48\" fabricated deck"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/IS600/Product%20Images/FER_PDP_IS600_Hero_FR.jpg",
+    "imageUrl": "/images/ferris/basco/5901908/5901908_FER_IS600Z_Studio_FL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "variants": [
       {
@@ -706,7 +706,7 @@ export const products: Product[] = [
       "iCD™ cutting system",
       "52\" fabricated deck"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/IS600/Product%20Images/FER_PDP_IS600_Hero_FR.jpg",
+    "imageUrl": "/images/ferris/basco/5901908/5901908_FER_IS600Z_Studio_FL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902110"
   },
@@ -729,7 +729,7 @@ export const products: Product[] = [
       "iCD™ cutting system",
       "52\" fabricated deck"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/IS600/Product%20Images/FER_PDP_IS600_Hero_FR.jpg",
+    "imageUrl": "/images/ferris/basco/5901908/5901908_FER_IS600Z_Studio_FL.jpg",
     "status": "IN_STOCK",
     "canonicalSku": "5902110"
   },
@@ -1005,7 +1005,7 @@ export const products: Product[] = [
       "52\" fabricated deck",
       "Up to 10 mph ground speed"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/ISX800/Product%20Images/FER_ISX800_FL-PDP.jpg",
+    "imageUrl": "/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg",
     "status": "AVAILABLE_TO_ORDER"
   },
   {
@@ -1029,7 +1029,7 @@ export const products: Product[] = [
       "60\" fabricated deck",
       "Up to 10 mph ground speed"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/ISX800/Product%20Images/FER_ISX800_FL-PDP.jpg",
+    "imageUrl": "/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg",
     "status": "AVAILABLE_TO_ORDER"
   },
   {
@@ -1053,7 +1053,7 @@ export const products: Product[] = [
       "60\" fabricated deck",
       "Extended oil change intervals"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/ISX800/Product%20Images/FER_ISX800_FL-PDP.jpg",
+    "imageUrl": "/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg",
     "status": "AVAILABLE_TO_ORDER"
   },
   {
@@ -1077,7 +1077,7 @@ export const products: Product[] = [
       "60\" fabricated deck",
       "Up to 10 mph ground speed"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/ISX800/Product%20Images/FER_ISX800_FL-PDP.jpg",
+    "imageUrl": "/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg",
     "status": "AVAILABLE_TO_ORDER"
   },
   {
@@ -1101,7 +1101,7 @@ export const products: Product[] = [
       "60\" fabricated deck",
       "Electronic Fuel Injection"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/ISX800/Product%20Images/FER_ISX800_FL-PDP.jpg",
+    "imageUrl": "/images/ferris/basco/5902154/5902154_FER_ISX800_F_Final.jpg",
     "status": "AVAILABLE_TO_ORDER"
   },
   {
@@ -1341,7 +1341,7 @@ export const products: Product[] = [
       "60\" fabricated deck",
       "Electronic Fuel Injection"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/ISX3300/Product%20Images/FER_3300_FR.jpeg",
+    "imageUrl": "/images/ferris/basco/5902064/5902064_FER_ISX3300_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "tag": "Top of the Line",
     "canonicalSku": "5902064"
@@ -1366,7 +1366,7 @@ export const products: Product[] = [
       "72\" wide-cut deck",
       "Oil Guard extended intervals"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/ISX3300/Product%20Images/FER_3300_FR.jpeg",
+    "imageUrl": "/images/ferris/basco/5902064/5902064_FER_ISX3300_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902064"
   },
@@ -1390,7 +1390,7 @@ export const products: Product[] = [
       "72\" wide-cut deck",
       "Electronic Fuel Injection"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/ISX3300/Product%20Images/FER_3300_FR.jpeg",
+    "imageUrl": "/images/ferris/basco/5902064/5902064_FER_ISX3300_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902064"
   },
@@ -1500,7 +1500,7 @@ export const products: Product[] = [
       "Commercial hydrostatic drive",
       "Low center of gravity"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z1/Product%20Images/FER_PDP_SRSZ1_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901940/5901940_FER_SRSZ1_Studio_FL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "variants": [
       {
@@ -1591,7 +1591,7 @@ export const products: Product[] = [
       "Commercial hydrostatic drive",
       "Operator comfort platform"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z1/Product%20Images/FER_PDP_SRSZ1_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901940/5901940_FER_SRSZ1_Studio_FL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5901941"
   },
@@ -1723,7 +1723,7 @@ export const products: Product[] = [
       "Heavy-duty commercial drive",
       "Extended oil change intervals"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z2/Product%20Images/FER_PDP_SRSZ2_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901948/5901948_FER_Z2_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5901948"
   },
@@ -1746,7 +1746,7 @@ export const products: Product[] = [
       "Heavy-duty commercial drive",
       "Proven Kawasaki reliability"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z2/Product%20Images/FER_PDP_SRSZ2_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901948/5901948_FER_Z2_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5901948"
   },
@@ -1801,7 +1801,7 @@ export const products: Product[] = [
       "Heavy-duty commercial drive",
       "Maximum productivity design"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z2/Product%20Images/FER_PDP_SRSZ2_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901948/5901948_FER_Z2_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5901948"
   },
@@ -1824,7 +1824,7 @@ export const products: Product[] = [
       "Heavy-duty commercial drive",
       "Up to 8 mph ground speed"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z2/Product%20Images/FER_PDP_SRSZ2_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901948/5901948_FER_Z2_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5901948"
   },
@@ -1849,7 +1849,7 @@ export const products: Product[] = [
       "Heavy-duty commercial drive",
       "High-capacity grass management"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z3/Product%20Images/FER_PDP_SRSZ3X_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901955/5901955_FER_Z3X_FL_FINAL.jpg",
     "status": "IN_STOCK",
     "variants": [
       {
@@ -1981,7 +1981,7 @@ export const products: Product[] = [
       "Heavy-duty commercial drive",
       "Electronic Fuel Injection"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z3/Product%20Images/FER_PDP_SRSZ3X_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901955/5901955_FER_Z3X_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902168"
   },
@@ -2036,7 +2036,7 @@ export const products: Product[] = [
       "Heavy-duty commercial drive",
       "Extended oil change intervals"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z3/Product%20Images/FER_PDP_SRSZ3X_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901955/5901955_FER_Z3X_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902168"
   },
@@ -2059,7 +2059,7 @@ export const products: Product[] = [
       "Heavy-duty commercial drive",
       "Electronic Fuel Injection"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z3/Product%20Images/FER_PDP_SRSZ3X_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901955/5901955_FER_Z3X_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902168"
   },
@@ -2082,7 +2082,7 @@ export const products: Product[] = [
       "Heavy-duty commercial drive",
       "Extended oil change intervals"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z3/Product%20Images/FER_PDP_SRSZ3X_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901955/5901955_FER_Z3X_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902168"
   },
@@ -2105,7 +2105,7 @@ export const products: Product[] = [
       "Heavy-duty commercial drive",
       "Extended oil change intervals"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z3/Product%20Images/FER_PDP_SRSZ3X_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901955/5901955_FER_Z3X_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902168"
   },
@@ -2128,7 +2128,7 @@ export const products: Product[] = [
       "Heavy-duty commercial drive",
       "Maximum stand-on productivity"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Stand-On%20Mowers/Z3/Product%20Images/FER_PDP_SRSZ3X_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901955/5901955_FER_Z3X_FL_FINAL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902168"
   },
@@ -2304,7 +2304,7 @@ export const products: Product[] = [
       "Dual-lever blade control",
       "Mulch / bag / side discharge"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "variants": [
       {
@@ -2382,7 +2382,7 @@ export const products: Product[] = [
       "Dual-lever blade control",
       "Mulch / bag / side discharge"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902014"
   },
@@ -2405,7 +2405,7 @@ export const products: Product[] = [
       "Dual-lever blade control",
       "Mulch / bag / side discharge"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902014"
   },
@@ -2428,7 +2428,7 @@ export const products: Product[] = [
       "Electronic Fuel Injection",
       "Extended oil change intervals"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "tag": "Commercial Grade",
     "canonicalSku": "5902014"
@@ -2487,7 +2487,7 @@ export const products: Product[] = [
       "Dual-lever blade control",
       "Mulch / bag / side discharge"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Walk%20Behind%20Mowers/FW45/Product%20Images/FER_PDP_FW45_Hero_FL.jpg",
+    "imageUrl": "/images/ferris/basco/5901893/5901893_FER_FW45_CC_Studio_FL.jpg",
     "status": "AVAILABLE_TO_ORDER",
     "canonicalSku": "5902014"
   },
@@ -2619,7 +2619,7 @@ export const products: Product[] = [
       "Over 1 acre dry / 2.2 acres liquid per fill",
       "Precision application system"
     ],
-    "imageUrl": "https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Spreader%20Sprayers/FS3200/Product%20Images/FER_VentureXC-FS3200_Updated.jpg",
+    "imageUrl": "/images/ferris/basco/5902195/5902195_FER_VentureX_FL_Final.jpg",
     "status": "AVAILABLE_TO_ORDER"
   },
   {
