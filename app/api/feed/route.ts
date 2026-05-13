@@ -50,9 +50,11 @@ export async function GET() {
       const imageUrl = images[0].startsWith('http')
         ? images[0]
         : `${SITE}${images[0]}`;
+      // Up to 3 additional product angles. Mix of local BASCO studio photos
+      // (prepended by getProductImages) and Ferris CDN feature shots.
       const additionalImages = images
-        .slice(1, 10)
-        .filter((img) => img.startsWith('http'))
+        .slice(1, 4)
+        .map((img) => (img.startsWith('http') ? img : `${SITE}${img}`))
         .map((img) => `    <g:additional_image_link>${escapeXml(img)}</g:additional_image_link>`)
         .join('\n');
 
