@@ -1,7 +1,7 @@
 import { products, getProductsBySku, type Product } from '@/lib/products';
 import { getProductImages, getFamilySlug } from '@/lib/productImages';
 import { getYoutubeReview } from '@/lib/productReviews';
-import { getAvailability, INVENTORY_AS_OF } from '@/lib/distributorInventory';
+import { getAvailability, getDistributorStock, INVENTORY_AS_OF } from '@/lib/distributorInventory';
 import ProductReviews from '@/components/ProductReviews';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -124,10 +124,15 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
         priceCurrency: 'USD',
         price: product.price,
         itemCondition: 'https://schema.org/NewCondition',
-        // Match feed policy — all products sellable (lot stock or drop-ship).
-        // Splitting JSON-LD into MadeToOrder while feed says in_stock triggers
-        // GMC "Product page unavailable" on every AVAILABLE_TO_ORDER variant.
-        availability: 'https://schema.org/InStock',
+        // Availability schema mirrors the visible badge + the GMC feed.
+        // today >= 1 at the distributor => InStock. Zero on hand => BackOrder
+        // (Google's structured-data value for "available to order but not yet
+        // shippable"). Keeps all three surfaces — site label, JSON-LD, feed —
+        // saying the same thing for every SKU.
+        availability:
+          (getDistributorStock(product.sku)?.today ?? 0) >= 1
+            ? 'https://schema.org/InStock'
+            : 'https://schema.org/BackOrder',
         hasMerchantReturnPolicy: {
           '@type': 'MerchantReturnPolicy',
           applicableCountry: 'US',

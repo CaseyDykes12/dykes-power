@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { products } from '@/lib/products';
 import { parts } from '@/lib/parts';
 import { getProductImages } from '@/lib/productImages';
+import { getDistributorStock } from '@/lib/distributorInventory';
 
 const SITE = 'https://www.dykespower.com';
 
@@ -21,12 +22,14 @@ function escapeXml(str: string): string {
     .replace(/'/g, '&apos;');
 }
 
-function mapAvailability(_status: string): string {
-  // All products are sellable — units on our Collins lot ship same/next day,
-  // factory-order units drop-ship from the Ferris distributor. Google's
-  // policy allows in_stock for reliably-fulfillable inventory regardless
-  // of physical location.
-  return 'in_stock';
+function mapAvailability(sku: string): 'in_stock' | 'backorder' {
+  // Drive availability off the weekly Power Distributors snapshot so the
+  // feed agrees with the visible badge on dykespower.com. SKUs with at
+  // least one unit on hand at the distributor today => in_stock. Zero on
+  // hand (or SKU not in this week's sheet) => backorder — Google's spec
+  // value for "available to order but not yet shippable today".
+  const stock = getDistributorStock(sku);
+  return stock && stock.today >= 1 ? 'in_stock' : 'backorder';
 }
 
 function mapCategory(category: string): string {
@@ -80,7 +83,7 @@ export async function GET() {
     <g:link>${SITE}/product/${escapeXml(p.sku)}</g:link>
     <g:image_link>${escapeXml(imageUrl)}</g:image_link>
 ${additionalImages}
-    <g:availability>${mapAvailability(p.status)}</g:availability>
+    <g:availability>${mapAvailability(p.sku)}</g:availability>
     <g:price>${p.price!.toFixed(2)} USD</g:price>
     <g:brand>Ferris</g:brand>
     <g:mpn>${escapeXml(p.sku)}</g:mpn>${sizeTag}
