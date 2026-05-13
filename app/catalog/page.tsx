@@ -26,7 +26,7 @@ export default function CatalogPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <CatalogClient products={getCatalogProducts()} categories={categories} />
       <div className="max-w-2xl mx-auto px-4 pb-16 pt-4">
-        <ProductLeadForm heading="Don't see the right fit? Get a real quote." />
+        <ProductLeadForm />
       </div>
     </>
   );

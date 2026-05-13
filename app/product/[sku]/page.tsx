@@ -260,22 +260,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                 </div>
               )}
 
-              {/* Section 3: Estimated payment teaser */}
-              {product.price && (
-                <div className="px-5 py-4 border-b border-gray-800">
-                  <p className="text-gray-500 text-xs uppercase tracking-widest mb-1">Estimated Payment</p>
-                  <div className="flex items-baseline gap-2 flex-wrap">
-                    <span className="text-3xl font-black text-white">
-                      ${Math.ceil((product.price * (0.049 / 12) * Math.pow(1 + 0.049 / 12, 72)) / (Math.pow(1 + 0.049 / 12, 72) - 1)).toLocaleString()}
-                      <span className="text-base font-semibold text-gray-400">/mo</span>
-                    </span>
-                    <span className="text-gray-500 text-sm">as low as 4.9% APR · 72 mo</span>
-                  </div>
-                  <p className="text-[#D4AF37] text-xs mt-1 font-semibold">For qualified credit</p>
-                </div>
-              )}
-
-              {/* Section 4: CTA stack — Cart → Pre-Approved → Financing → Talk */}
+              {/* Section 3: CTA stack — Cart → Pre-Approved → Financing → Talk */}
               <div className="p-5 space-y-3">
                 <AddToCartButton product={product} />
                 <Link
@@ -294,20 +279,6 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                   context={`${product.name} (SKU ${product.sku})`}
                   className="block w-full text-center bg-[#0a0a0a] border border-gray-700 text-white hover:bg-gray-900 hover:border-gray-600 font-bold py-3 px-6 rounded-lg transition-colors"
                 />
-
-                {product.price && product.price >= 5000 && (
-                  <div className="pt-3">
-                    <Link
-                      href={`/checkout/deposit?sku=${product.sku}`}
-                      className="block w-full text-center bg-transparent border border-gray-800 text-gray-400 hover:text-white hover:border-gray-600 text-sm py-2 px-6 rounded-lg transition-colors"
-                    >
-                      Reserve with $1,000 Deposit →
-                    </Link>
-                    <p className="text-xs text-gray-500 mt-1 text-center">
-                      Holds your machine. Balance due at pickup or delivery.
-                    </p>
-                  </div>
-                )}
               </div>
             </div>
 

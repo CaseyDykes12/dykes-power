@@ -1,19 +1,23 @@
-// SLE-style price presentation. Three modes:
-//   compact  — for catalog cards (small, single line + small Sale badge)
+// Amazon-style price presentation. Three modes:
+//   compact  — for catalog cards (small)
 //   detail   — for product detail page (large, prominent)
 //   variant  — for in-PDP variant selector (medium)
 //
-// Pattern matches sleequipment.com:
-//   - "-X%" red Sale badge (top-left)
-//   - "Sale price $X" (bold, primary)
-//   - "Regular price $Y" (strikethrough, secondary)
+// Order: MSRP -> Save $Y (% off) -> Our Price -> from $X/mo*
 //
 // Pricing displayed here is MAP-compliant. Manufacturer instant rebates are
-// already baked into the displayed Sale price where applicable; the underlying
+// already baked into the displayed price where applicable; the underlying
 // product name carries "(Instant Rebate Included)" so the rebate disclosure
 // rides along with every reference to that product.
 
 type Mode = 'compact' | 'detail' | 'variant';
+
+// 4.9% APR, 72 months — matches the financing copy site-wide.
+function monthlyPayment(price: number): number {
+  const rate = 0.049 / 12;
+  const n = 72;
+  return Math.ceil((price * rate * Math.pow(1 + rate, n)) / (Math.pow(1 + rate, n) - 1));
+}
 
 export default function PriceBlock({
   price,
@@ -36,28 +40,30 @@ export default function PriceBlock({
   }
 
   const showMsrp = msrp != null && msrp > price;
-  const pctOff = showMsrp ? Math.round(((msrp! - price) / msrp!) * 100) : 0;
+  const savings = showMsrp ? msrp! - price : 0;
+  const pctOff = showMsrp ? Math.round((savings / msrp!) * 100) : 0;
+  const monthly = monthlyPayment(price);
 
   if (mode === 'compact') {
     return (
       <div className="space-y-0.5">
         {showMsrp && (
-          <div className="flex items-center gap-2">
-            <span className="bg-red-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
-              -{pctOff}%
-            </span>
-            <span className="text-[10px] uppercase tracking-wider text-red-500 font-bold">Sale</span>
-          </div>
-        )}
-        <p className="font-bold text-lg text-white">
-          <span className="text-xs text-gray-400 font-normal mr-1">Sale price</span>
-          ${price.toLocaleString()}
-        </p>
-        {showMsrp && (
-          <p className="text-gray-500 text-xs line-through">
-            Regular price ${msrp!.toLocaleString()}
+          <p className="text-gray-500 text-[11px] line-through leading-tight">
+            MSRP ${msrp!.toLocaleString()}
           </p>
         )}
+        {showMsrp && (
+          <p className="text-red-500 text-[11px] font-bold leading-tight">
+            Save ${savings.toLocaleString()} ({pctOff}% off)
+          </p>
+        )}
+        <p className="font-bold text-lg text-white leading-tight">
+          <span className="text-[10px] text-gray-400 font-normal mr-1 uppercase tracking-wider">Our Price</span>
+          ${price.toLocaleString()}
+        </p>
+        <p className="text-gray-500 text-[11px] leading-tight">
+          from <span className="text-gray-300 font-semibold">${monthly}/mo</span>*
+        </p>
       </div>
     );
   }
@@ -66,24 +72,21 @@ export default function PriceBlock({
     return (
       <div>
         {showMsrp && (
-          <div className="flex items-center gap-2 mb-1">
-            <span className="bg-red-600 text-white text-[11px] font-bold px-2 py-0.5 rounded">
-              -{pctOff}%
-            </span>
-            <span className="text-[11px] uppercase tracking-wider text-red-500 font-bold">Sale</span>
-          </div>
-        )}
-        <div className="flex items-baseline gap-3 flex-wrap">
-          <p className="text-3xl font-black text-white">
-            <span className="text-xs text-gray-400 font-normal mr-2 align-baseline">Sale price</span>
-            ${price.toLocaleString()}
+          <p className="text-gray-500 text-sm line-through mb-0.5">
+            MSRP ${msrp!.toLocaleString()}
           </p>
-          {showMsrp && (
-            <p className="text-gray-500 text-sm line-through">
-              Regular price ${msrp!.toLocaleString()}
-            </p>
-          )}
-        </div>
+        )}
+        {showMsrp && (
+          <p className="text-red-500 text-sm font-bold mb-1">
+            Save ${savings.toLocaleString()} ({pctOff}% off)
+          </p>
+        )}
+        <p className="text-[10px] font-semibold text-[#C8C8C8] uppercase tracking-widest mb-0.5">Our Price</p>
+        <p className="text-3xl font-black text-white leading-tight">${price.toLocaleString()}</p>
+        <p className="text-gray-400 text-sm mt-1">
+          from <span className="text-white font-semibold">${monthly}/mo</span>
+          <span className="text-gray-500">*</span>
+        </p>
       </div>
     );
   }
@@ -92,21 +95,22 @@ export default function PriceBlock({
   return (
     <div>
       {showMsrp && (
-        <div className="flex items-center gap-2 mb-1">
-          <span className="bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded">
-            -{pctOff}%
-          </span>
-          <span className="text-xs uppercase tracking-wider text-red-500 font-bold">Sale</span>
-        </div>
-      )}
-      {showMsrp && (
         <p className="text-gray-500 text-base line-through mb-1">
-          Regular price ${msrp!.toLocaleString()}
+          MSRP ${msrp!.toLocaleString()}
         </p>
       )}
-      <p className="text-xs font-semibold text-[#C8C8C8] uppercase tracking-widest mb-1">Sale price</p>
-      <p className="text-4xl font-black text-white mb-1">${price.toLocaleString()}</p>
-      <p className="text-gray-500 text-sm">Cash or finance — your choice</p>
+      {showMsrp && (
+        <p className="text-red-500 text-sm font-bold mb-2">
+          Save ${savings.toLocaleString()} ({pctOff}% off)
+        </p>
+      )}
+      <p className="text-xs font-semibold text-[#C8C8C8] uppercase tracking-widest mb-1">Our Price</p>
+      <p className="text-4xl font-black text-white leading-tight mb-1">${price.toLocaleString()}</p>
+      <p className="text-gray-400 text-sm">
+        from <span className="text-white font-semibold">${monthly}/mo</span>
+        <span className="text-gray-500">*</span>
+        <span className="text-gray-500"> · 4.9% APR · 72 mo · qualified credit</span>
+      </p>
     </div>
   );
 }

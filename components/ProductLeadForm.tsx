@@ -10,20 +10,11 @@ type Props = {
 
 export default function ProductLeadForm({ product, heading, anchorId }: Props) {
   const interestLabel = product ? `${product.name} (SKU ${product.sku})` : '';
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    timing: '',
-    interest: '',
-    message: '',
-  });
+  const [form, setForm] = useState({ name: '', phone: '' });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -33,16 +24,11 @@ export default function ProductLeadForm({ product, heading, anchorId }: Props) {
     try {
       const payload = {
         name: form.name,
-        email: form.email,
+        email: '',
         phone: form.phone,
-        interest: product ? interestLabel : form.interest || 'Quick Quote',
+        interest: product ? interestLabel : 'Speak with a Representative',
         propertySize: '',
-        message: [
-          form.timing ? `When needed: ${form.timing}` : '',
-          form.message,
-        ]
-          .filter(Boolean)
-          .join('\n'),
+        message: '',
       };
       const res = await fetch('/api/lead', {
         method: 'POST',
@@ -52,10 +38,7 @@ export default function ProductLeadForm({ product, heading, anchorId }: Props) {
       if (res.ok) {
         setSubmitted(true);
         if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
-          (window as any).gtag('set', 'user_data', {
-            email: form.email,
-            phone_number: form.phone,
-          });
+          (window as any).gtag('set', 'user_data', { phone_number: form.phone });
           (window as any).gtag('event', 'conversion', {
             send_to: 'AW-17992871675/pNOLCL2li48cEPvd1YND',
           });
@@ -85,86 +68,35 @@ export default function ProductLeadForm({ product, heading, anchorId }: Props) {
     );
   }
 
-  const defaultHeading = product
-    ? 'Need to speak with a representative?'
-    : 'Need to speak with a representative?';
-  const ctaLabel = product ? 'Have Someone Contact Me' : 'Have Someone Contact Me';
-
   return (
     <div id={anchorId ?? 'quick-quote'} className="bg-[#111] border border-gray-800 rounded-xl p-5 mb-4 scroll-mt-24">
-      <p className="text-xs font-semibold text-[#C8C8C8] uppercase tracking-widest mb-1">
-        Talk to a Human
-      </p>
-      <h3 className="text-lg font-bold text-white mb-1">{heading ?? defaultHeading}</h3>
+      <h3 className="text-lg font-bold text-white mb-1">
+        {heading ?? 'Have additional questions or concerns? Want to speak with a Representative?'}
+      </h3>
       <p className="text-sm text-gray-400 mb-4">
-        Drop your info below and someone from our Collins shop will reach out shortly.
+        Input your contact info below and one of our representatives will reach out to you shortly.
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-3">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <input
-            required
-            name="name"
-            autoComplete="name"
-            value={form.name}
-            onChange={handleChange}
-            placeholder="Your name *"
-            className="w-full bg-black border border-gray-700 text-white rounded-lg px-3 py-2 text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
-          />
-          <input
-            type="tel"
-            inputMode="tel"
-            name="phone"
-            autoComplete="tel"
-            value={form.phone}
-            onChange={handleChange}
-            placeholder="Phone (optional)"
-            className="w-full bg-black border border-gray-700 text-white rounded-lg px-3 py-2 text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
-          />
-        </div>
-
         <input
           required
-          type="email"
-          inputMode="email"
-          name="email"
-          autoComplete="email"
-          value={form.email}
+          name="name"
+          autoComplete="name"
+          value={form.name}
           onChange={handleChange}
-          placeholder="Email *"
-          className="w-full bg-black border border-gray-700 text-white rounded-lg px-3 py-2 text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
+          placeholder="Name *"
+          className="w-full bg-black border border-gray-700 text-white rounded-lg px-3 py-3 text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
         />
-
-        {!product && (
-          <input
-            name="interest"
-            value={form.interest}
-            onChange={handleChange}
-            placeholder="What model or category are you looking at?"
-            className="w-full bg-black border border-gray-700 text-white rounded-lg px-3 py-2 text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
-          />
-        )}
-
-        <select
-          name="timing"
-          value={form.timing}
+        <input
+          required
+          type="tel"
+          inputMode="tel"
+          name="phone"
+          autoComplete="tel"
+          value={form.phone}
           onChange={handleChange}
-          className="w-full bg-black border border-gray-700 text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
-        >
-          <option value="">When do you need it?</option>
-          <option value="ASAP">ASAP</option>
-          <option value="Within 2 weeks">Within 2 weeks</option>
-          <option value="Within a month">Within a month</option>
-          <option value="Just researching">Just researching</option>
-        </select>
-
-        <textarea
-          name="message"
-          value={form.message}
-          onChange={handleChange}
-          rows={3}
-          placeholder="Questions, trade-in info, or anything else we should know..."
-          className="w-full bg-black border border-gray-700 text-white rounded-lg px-3 py-2 text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
+          placeholder="Phone Number *"
+          className="w-full bg-black border border-gray-700 text-white rounded-lg px-3 py-3 text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C8C8C8]"
         />
 
         <button
@@ -172,12 +104,8 @@ export default function ProductLeadForm({ product, heading, anchorId }: Props) {
           disabled={loading}
           className="btn-primary w-full py-3 text-base disabled:opacity-60"
         >
-          {loading ? 'Sending...' : ctaLabel}
+          {loading ? 'Sending…' : 'Submit'}
         </button>
-
-        <p className="text-xs text-gray-500 text-center">
-          No pressure, no spam. We'll reach out fast with real pricing.
-        </p>
       </form>
     </div>
   );

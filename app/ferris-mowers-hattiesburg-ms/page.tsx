@@ -297,7 +297,7 @@ export default function FerrisMowersHattiesburgPage() {
               Call (601) 909-5380
             </a>
           </div>
-          <ProductLeadForm heading="Prefer we call you? Get a real quote from Collins." />
+          <ProductLeadForm />
         </div>
       </section>
     </>
