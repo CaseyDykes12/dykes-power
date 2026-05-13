@@ -133,15 +133,38 @@ export interface YoutubeReview {
 }
 
 export const YOUTUBE_REVIEWS: Record<string, YoutubeReview> = {
+  // ── Entry zero turn ───────────────────────────────────────────────
   '300s': {
     videoId: '6sS33fFRjkM',
     title: 'Ferris 300S — 52" / 25HP Briggs Walk-Around Review',
     context: 'Independent reviewer goes through deck, controls, and ride quality.',
   },
+  '300r': {
+    videoId: '9UeQAcooBog',
+    title: 'Ferris 300R — Owner Review',
+    context: 'Independent owner walks through the 21.5HP Kawasaki configuration.',
+  },
+  '500s': {
+    videoId: 'hYytgo80Ppc',
+    title: 'Ferris 500S — 61" / 24HP Kawasaki Review',
+    context: 'Detailed review of deck construction, cut quality, and ride.',
+  },
+  'f60': {
+    videoId: 'S-aZy89_GlA',
+    title: 'Ferris F60Z — 36" Sit-Down Mower Owner Review',
+    context: 'Owner shares real-world impressions of the compact commercial zero-turn.',
+  },
+
+  // ── Commercial IS / ISX zero turn ─────────────────────────────────
   'is600': {
     videoId: 'CbwGXeKBENw',
     title: 'Ferris IS 600Z — Owner Demo & Ride Review',
     context: 'Working operator demonstrates how the suspension handles rough ground.',
+  },
+  'is700': {
+    videoId: 'aheOEcBEz4k',
+    title: 'Ferris IS 700Z — Are Ferris Mowers Really That Fast?',
+    context: 'Independent review focused on speed, productivity, and ride comfort.',
   },
   'isx800': {
     videoId: 'GJrv1QOidvQ',
@@ -158,16 +181,74 @@ export const YOUTUBE_REVIEWS: Record<string, YoutubeReview> = {
     title: 'Ferris ISX 3300 — 100-Hour Brutally Honest Review',
     context: 'Working operator gives an unfiltered review at the 100-hour mark.',
   },
+
+  // ── Diesel ────────────────────────────────────────────────────────
+  'is2600': {
+    videoId: '2_g3pqkJ5-o',
+    title: 'Ferris IS® 2600 Diesel — Walk-Around & Overview',
+    context: 'Independent walk-around of the diesel commercial zero turn.',
+  },
+  'is6200': {
+    videoId: 'LiX4A0shpxo',
+    title: 'Ferris IS 6200 Diesel — 72" / 48HP CAT Walk-Around',
+    context: 'Independent review of the flagship 72-inch diesel zero turn.',
+  },
+
+  // ── Stand-On (SRS) ────────────────────────────────────────────────
+  'srsz1': {
+    videoId: 'UmId2WFZXxw',
+    title: 'Ferris SRS Z1 — How Good Is It, and Is It Priced Right?',
+    context: 'Operator-focused review of the entry stand-on with soft-ride suspension.',
+  },
   'srsz2': {
     videoId: '6VPYf3WEnIw',
     title: 'Ferris SRS Z2 — One of the Best Mowers You Can Buy',
     context: 'Independent operator review focused on commercial productivity and ride.',
   },
+  'srsz3x': {
+    videoId: 'L8U_r4pMt9s',
+    title: 'Ferris SRS Z3X 60" — 100-Hour Honest Review',
+    context: 'Pros and cons on the 37HP Vanguard ETC stand-on at 100 hours.',
+  },
+
+  // ── Walk-Behind ───────────────────────────────────────────────────
+  'fw15': {
+    videoId: 'Qx5PnH1MgCU',
+    title: 'Ferris FW15 — Why I Sold My 32" Mower After 2 Years',
+    context: 'Long-term owner review of the FW15 hydro walk-behind.',
+  },
+  'fw25': {
+    videoId: '62whqpNZUec',
+    title: 'Ferris FW25 52" — Walk-Behind Owner Review',
+    context: 'Independent review at 42 hours of commercial use.',
+  },
+  'fw45': {
+    videoId: 'uyJauJhRnm8',
+    title: 'Ferris FW45 — 50-Hour Walk-Behind Review',
+    context: 'Owner walks through the 52" / 20.5HP Kawasaki commercial unit.',
+  },
+
+  // ── Blowers (Hurricane) ───────────────────────────────────────────
   'fb1000': {
     videoId: 'pnhCk92Zxlw',
     title: 'Ferris FB1000 — Is It Any Good? Backyard Beast?',
     context: 'Real-world test of the stand-on blower against typical fall debris.',
   },
+  'fb3000': {
+    videoId: 'Ld4XGKIZHLE',
+    title: 'Ferris FB3000 — Stand-On Blower Review',
+    context: 'Independent owner shows the FB3000 in action and covers honest pros/cons.',
+  },
+
+  // ── Ride-On Spreader/Sprayer ──────────────────────────────────────
+  'venturex': {
+    videoId: 'i3HpC4Cb67s',
+    title: 'Ferris Venture XC FS3200 — Spreader/Sprayer Review',
+    context: 'Working applicator covers productivity and feature highlights.',
+  },
+
+  // 300e (electric) intentionally omitted — too new for credible
+  // independent owner reviews; revisit once we find a real one.
 };
 
 /** Look up a curated YouTube review for a given family slug. */
