@@ -155,6 +155,7 @@ export async function GET() {
     <g:title>${escapeXml(title)}</g:title>
     <g:description>${escapeXml(buildDescription(p))}</g:description>
     <g:link>${SITE}/product/${escapeXml(p.sku)}</g:link>
+    <g:checkout_link_template>${SITE}/buy/${escapeXml(p.sku)}</g:checkout_link_template>
     <g:image_link>${escapeXml(imageUrl)}</g:image_link>
 ${additionalImages}
     <g:availability>${mapAvailability(p.sku)}</g:availability>
