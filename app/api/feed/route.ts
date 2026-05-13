@@ -1,22 +1,15 @@
 import { NextResponse } from 'next/server';
-import { existsSync } from 'fs';
-import { join } from 'path';
 import { products } from '@/lib/products';
 import { parts } from '@/lib/parts';
-import { COLLECTION_SYSTEMS, ACCESSORIES } from '@/lib/accessories';
 import { getProductImages } from '@/lib/productImages';
 
 const SITE = 'https://www.dykespower.com';
 
-// Resolve a /public/... path to the absolute filesystem path so we can verify
-// the file actually exists before claiming image_link in the feed. Items
-// whose local image is missing get filtered — Google MC reviewers fetch every
-// image_link and a 404 here counts as Misrepresentation.
-function localImageExists(webPath: string): boolean {
-  if (webPath.startsWith('http')) return true;
-  const clean = webPath.startsWith('/') ? webPath.slice(1) : webPath;
-  return existsSync(join(process.cwd(), 'public', clean));
-}
+// Accessories + Collection Systems are intentionally excluded from the feed
+// today: every accessory's image_link resolves to /images/accessories/*.jpg
+// but that folder is empty. Shipping 404 image_link triggers GMC
+// Misrepresentation. Restore the accessory block once real photos exist
+// at /public/images/accessories/.
 
 function escapeXml(str: string): string {
   return str
@@ -52,7 +45,6 @@ function mapCategory(category: string): string {
 }
 
 const PARTS_CATEGORY = 'Vehicles &amp; Parts &gt; Vehicle Parts &amp; Accessories &gt; Motor Vehicle Parts &gt; Lawn Mower Parts &amp; Accessories';
-const ACCESSORIES_CATEGORY = 'Home &amp; Garden &gt; Lawn &amp; Garden &gt; Outdoor Power Equipment &gt; Outdoor Power Equipment Accessories';
 
 export async function GET() {
   const items = products
@@ -119,29 +111,6 @@ ${additionalImages}
     })
     .join('\n');
 
-  const accessoryItems = [...COLLECTION_SYSTEMS, ...ACCESSORIES]
-    .filter((a) => a.price && a.price > 0)
-    .filter((a) => localImageExists(a.photo))
-    .map((a) => {
-      const imageUrl = a.photo.startsWith('http') ? a.photo : `${SITE}${a.photo}`;
-      return `  <item>
-    <g:id>ACC-${escapeXml(a.id)}</g:id>
-    <g:title>${escapeXml(`Ferris ${a.name}`)}</g:title>
-    <g:description>${escapeXml(a.description)}</g:description>
-    <g:link>${SITE}/accessories</g:link>
-    <g:image_link>${escapeXml(imageUrl)}</g:image_link>
-    <g:availability>in_stock</g:availability>
-    <g:price>${a.price!.toFixed(2)} USD</g:price>
-    <g:brand>Ferris</g:brand>
-    <g:mpn>${escapeXml(a.id)}</g:mpn>
-    <g:condition>new</g:condition>
-    <g:identifier_exists>true</g:identifier_exists>
-    <g:google_product_category>${ACCESSORIES_CATEGORY}</g:google_product_category>
-    <g:product_type>${escapeXml(a.category === 'collection' ? 'Collection Systems' : 'Accessories')}</g:product_type>
-  </item>`;
-    })
-    .join('\n');
-
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
 <channel>
@@ -150,7 +119,6 @@ ${additionalImages}
   <description>Authorized Ferris dealer in Collins, Mississippi. Zero-turn, stand-on, and walk-behind mowers.</description>
 ${items}
 ${partItems}
-${accessoryItems}
 </channel>
 </rss>`;
 
