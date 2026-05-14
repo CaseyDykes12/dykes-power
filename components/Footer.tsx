@@ -139,6 +139,33 @@ export default function Footer() {
         </p>
       </div>
 
+      {/* Compliance bar — dedicated, visually-distinct row for the policy
+          links Google's MC reviewer looks for. Standard footer pattern. */}
+      <nav
+        aria-label="Legal"
+        className="relative border-t border-gray-900 max-w-[1280px] mx-auto px-4 py-3 flex items-center justify-center flex-wrap gap-x-4 gap-y-1 text-xs"
+      >
+        <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+          Privacy Policy
+        </Link>
+        <span className="text-gray-700" aria-hidden>·</span>
+        <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+          Terms of Service
+        </Link>
+        <span className="text-gray-700" aria-hidden>·</span>
+        <Link href="/shipping-returns" className="text-gray-400 hover:text-white transition-colors">
+          Shipping & Returns
+        </Link>
+        <span className="text-gray-700" aria-hidden>·</span>
+        <Link href="/sms-terms" className="text-gray-400 hover:text-white transition-colors">
+          SMS Terms
+        </Link>
+        <span className="text-gray-700" aria-hidden>·</span>
+        <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
+          Contact Us
+        </Link>
+      </nav>
+
       {/* Payment methods */}
       <div className="relative border-t border-gray-900 max-w-[1280px] mx-auto px-4 py-4">
         <p className="text-[10px] uppercase tracking-widest text-gray-600 mb-2 text-center">We Accept</p>
