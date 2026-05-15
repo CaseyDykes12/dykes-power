@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { products, type Product } from '@/lib/products';
 import { parts } from '@/lib/parts';
 import { getProductImages } from '@/lib/productImages';
-import { getDistributorStock } from '@/lib/distributorInventory';
+import { getDistributorStock, getBackorderAvailabilityDate } from '@/lib/distributorInventory';
 import { getRichContent } from '@/lib/productRichContent';
 import { getFamilyTagline } from '@/lib/familyTaglines';
 
@@ -158,7 +158,11 @@ export async function GET() {
     <g:checkout_link_template>${SITE}/buy/${escapeXml(p.sku)}</g:checkout_link_template>
     <g:image_link>${escapeXml(imageUrl)}</g:image_link>
 ${additionalImages}
-    <g:availability>${mapAvailability(p.sku)}</g:availability>
+    <g:availability>${mapAvailability(p.sku)}</g:availability>${
+      mapAvailability(p.sku) === 'backorder'
+        ? `\n    <g:availability_date>${getBackorderAvailabilityDate()}</g:availability_date>`
+        : ''
+    }
     <g:price>${p.price!.toFixed(2)} USD</g:price>
     <g:brand>Ferris</g:brand>
     <g:mpn>${escapeXml(p.sku)}</g:mpn>${sizeTag}

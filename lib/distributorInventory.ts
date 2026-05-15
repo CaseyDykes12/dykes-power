@@ -22,6 +22,21 @@ const file = data as DistributorInventoryFile;
 /** Date the upstream inventory snapshot was generated (filename / sheet header). */
 export const INVENTORY_AS_OF: string = file.asOfDate;
 
+/**
+ * ISO 8601 date used as `availability_date` (feed) and `availabilityStarts`
+ * (JSON-LD) for items in backorder. Google REQUIRES this when availability
+ * is preorder/backorder. We default to end of next month at noon Central —
+ * a conservative ETA for distributor stock refresh. Refresh weekly when the
+ * Power Distributors inventory sheet updates.
+ */
+export function getBackorderAvailabilityDate(now: Date = new Date()): string {
+  const d = new Date(now.getFullYear(), now.getMonth() + 2, 0);
+  const yyyy = d.getFullYear();
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  return `${yyyy}-${mm}-${dd}T12:00:00-05:00`;
+}
+
 /** Look up a specific SKU's distributor availability. Null when the SKU isn't in the sheet. */
 export function getDistributorStock(sku: string): DistributorStock | null {
   return file.items[sku] ?? null;

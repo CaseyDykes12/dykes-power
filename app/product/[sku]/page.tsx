@@ -1,7 +1,12 @@
 import { products, getProductsBySku, type Product } from '@/lib/products';
 import { getProductImages, getFamilySlug } from '@/lib/productImages';
 import { getYoutubeReview } from '@/lib/productReviews';
-import { getAvailability, getDistributorStock, INVENTORY_AS_OF } from '@/lib/distributorInventory';
+import {
+  getAvailability,
+  getDistributorStock,
+  getBackorderAvailabilityDate,
+  INVENTORY_AS_OF,
+} from '@/lib/distributorInventory';
 import ProductReviews from '@/components/ProductReviews';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -133,6 +138,11 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
           (getDistributorStock(product.sku)?.today ?? 0) >= 1
             ? 'https://schema.org/InStock'
             : 'https://schema.org/BackOrder',
+        // Required by Google when availability is BackOrder: an ETA for when
+        // the product becomes available. Mirrors the feed's availability_date.
+        ...((getDistributorStock(product.sku)?.today ?? 0) < 1 && {
+          availabilityStarts: getBackorderAvailabilityDate(),
+        }),
         hasMerchantReturnPolicy: {
           '@type': 'MerchantReturnPolicy',
           applicableCountry: 'US',
