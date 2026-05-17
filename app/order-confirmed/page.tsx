@@ -2,11 +2,15 @@
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Suspense } from 'react';
+import GoogleCustomerReviews from '@/components/GoogleCustomerReviews';
 
 function OrderConfirmedContent() {
   const params = useSearchParams();
   const orderId = params.get('orderId');
   const mode = params.get('mode') ?? 'order';
+  const email = params.get('email') ?? '';
+  const country = params.get('country') ?? 'US';
+  const eta = params.get('eta') ?? '';
 
   const headline =
     mode === 'deposit'
@@ -50,6 +54,14 @@ function OrderConfirmedContent() {
           </Link>
         </div>
       </div>
+      {mode === 'order' && orderId && email && eta && (
+        <GoogleCustomerReviews
+          orderId={orderId}
+          email={email}
+          deliveryCountry={country}
+          estimatedDeliveryDate={eta}
+        />
+      )}
     </div>
   );
 }

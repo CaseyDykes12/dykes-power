@@ -142,7 +142,20 @@ export default function PayPalCheckout({
 
               clearCart();
               window.dispatchEvent(new Event('cart-updated'));
-              router.push(`/order-confirmed?orderId=${order.id ?? 'unknown'}&mode=${mode}`);
+
+              const etaDays = shipping.method === 'pickup' ? 3 : 10;
+              const eta = new Date();
+              eta.setDate(eta.getDate() + etaDays);
+              const etaIso = eta.toISOString().slice(0, 10);
+
+              const params = new URLSearchParams({
+                orderId: order.id ?? 'unknown',
+                mode,
+                email: customer.email,
+                country: 'US',
+                eta: etaIso,
+              });
+              router.push(`/order-confirmed?${params.toString()}`);
             } catch (err) {
               console.error('Order capture / save failed:', err);
               setError(

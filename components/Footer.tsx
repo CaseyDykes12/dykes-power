@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import GoogleCustomerReviewsBadge from './GoogleCustomerReviewsBadge';
 
 export default function Footer() {
   return (
@@ -189,6 +190,10 @@ export default function Footer() {
         <span>Proudly an Authorized Ferris<sup className="text-[0.6rem]">®</sup> Dealer. Participating in the &ldquo;Feels Like a Ferris&rdquo; national campaign.</span>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/ferris-logo.png" alt="Ferris" className="h-4 w-auto opacity-60" />
+      </div>
+
+      <div className="relative border-t border-gray-900 max-w-[1280px] mx-auto px-4 py-3 bg-white">
+        <GoogleCustomerReviewsBadge />
       </div>
     </footer>
   );
