@@ -75,6 +75,68 @@ const nextConfig: NextConfig = {
         destination: '/products/ride-on-spreader-sprayers',
         permanent: true,
       },
+      // Shopify-style legacy paths (Google MC + external backlinks).
+      // Surfaced 2026-05-17 by /pages/about-us 404 flagged in the MC review.
+      {
+        source: '/pages/about-us',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/pages/about',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/pages/contact',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/pages/contact-us',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/pages/privacy-policy',
+        destination: '/privacy',
+        permanent: true,
+      },
+      {
+        source: '/pages/terms-of-service',
+        destination: '/terms',
+        permanent: true,
+      },
+      {
+        source: '/pages/shipping',
+        destination: '/shipping-returns',
+        permanent: true,
+      },
+      {
+        source: '/pages/shipping-returns',
+        destination: '/shipping-returns',
+        permanent: true,
+      },
+      {
+        source: '/pages/warranty',
+        destination: '/warranty',
+        permanent: true,
+      },
+      {
+        source: '/pages/financing',
+        destination: '/financing',
+        permanent: true,
+      },
+      {
+        source: '/pages/service',
+        destination: '/service',
+        permanent: true,
+      },
+      {
+        source: '/pages/parts',
+        destination: '/parts',
+        permanent: true,
+      },
     ];
   },
   images: {

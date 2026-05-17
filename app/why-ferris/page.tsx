@@ -210,9 +210,12 @@ export default function WhyFerrisPage() {
             <p className="text-gray-400 text-sm mb-4">
               Enter your acreage and we&rsquo;ll show which Ferris deck size and model cuts it fastest — and how much time you save against your current mower.
             </p>
-            <Link href="/mow-calculator" className="inline-block bg-white text-black font-bold px-5 py-2 rounded-md hover:bg-[#C8C8C8] transition-colors text-sm">
-              Open Mow Calculator
-            </Link>
+            <a
+              href="sms:+16013362541?body=Hey%20Addison%20%E2%80%94%20can%20you%20help%20me%20figure%20out%20mow%20time%20for%20my%20property%3F"
+              className="inline-block bg-white text-black font-bold px-5 py-2 rounded-md hover:bg-[#C8C8C8] transition-colors text-sm"
+            >
+              Text Addison Your Acreage
+            </a>
           </div>
           <div className="bg-[#111] border border-gray-800 rounded-xl p-6">
             <h3 className="text-white font-bold mb-2 text-xl">Ferris ROI Calculator</h3>
