@@ -54,7 +54,7 @@ export default function PriceBlock({
         )}
         {showMsrp && (
           <p className="text-red-500 text-[11px] font-bold leading-tight">
-            Save ${savings.toLocaleString()} ({pctOff}% off)
+            Save ${savings.toLocaleString()} ({pctOff}% — Rebate)
           </p>
         )}
         <p className="font-bold text-lg text-white leading-tight">
@@ -78,7 +78,7 @@ export default function PriceBlock({
         )}
         {showMsrp && (
           <p className="text-red-500 text-sm font-bold mb-1">
-            Save ${savings.toLocaleString()} ({pctOff}% off)
+            Save ${savings.toLocaleString()} ({pctOff}% — Rebate)
           </p>
         )}
         <p className="text-[10px] font-semibold text-[#C8C8C8] uppercase tracking-widest mb-0.5">Our Price</p>
@@ -101,7 +101,7 @@ export default function PriceBlock({
       )}
       {showMsrp && (
         <p className="text-red-500 text-sm font-bold mb-2">
-          Save ${savings.toLocaleString()} ({pctOff}% off)
+          Save ${savings.toLocaleString()} ({pctOff}% — Rebate)
         </p>
       )}
       <p className="text-xs font-semibold text-[#C8C8C8] uppercase tracking-widest mb-1">Our Price</p>

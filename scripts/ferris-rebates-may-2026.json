@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "source": "Greg Nielsen / Basco — fwd by Brooks 2026-04-29 + 2026-05-01",
+    "period": "May 2026 (single-unit consumer rebate)",
+    "notes": [
+      "Multi-unit (2+ purchase) doubles the amount; we use single-unit for site display.",
+      "Models not listed have NO consumer rebate this month."
+    ]
+  },
+  "rebatesByFamily": {
+    "300R": 100,
+    "300S": 100,
+    "FW15": 100,
+    "500S": 150,
+    "IS 600": 150,
+    "IS 700": 150,
+    "ISX 800": 250,
+    "FW45": 300,
+    "ISX 2200": 375,
+    "SRS Z1": 250,
+    "SRS Z2": 375,
+    "SRS Z3X": 500,
+    "ISX 3300": 625
+  },
+  "noRebate": [
+    "300e",
+    "F60",
+    "IS 2600",
+    "IS 6200",
+    "FB1000",
+    "FB2000",
+    "FB3000",
+    "ProCut S",
+    "Pathfinder",
+    "Rover",
+    "Venture"
+  ]
+}

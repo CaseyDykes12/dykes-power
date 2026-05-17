@@ -1,0 +1,652 @@
+[
+  {
+    "sku": "5902204",
+    "msrp": 4949,
+    "map": 4499,
+    "model_family": "300R",
+    "deck": "42",
+    "engine": "B23",
+    "hp": null,
+    "raw": "5902204 300R 300, 42, B23, NA $4,949 $4,499 $4,049 $3,847 $3,806 $3,806"
+  },
+  {
+    "sku": "5902205",
+    "msrp": 5169,
+    "map": 4699,
+    "model_family": "300R",
+    "deck": "42",
+    "engine": "K21.5",
+    "hp": null,
+    "raw": "5902205 300R 300, 42, K21.5, NA $5,169 $4,699 $4,229 $4,018 $3,975 $3,975"
+  },
+  {
+    "sku": "5902211",
+    "msrp": 5719,
+    "map": 5199,
+    "model_family": "300S",
+    "deck": "48",
+    "engine": "B23",
+    "hp": null,
+    "raw": "5902211 300S 300S, 48, B23, NA $5,719 $5,199 $4,679 $4,445 $4,398 $4,398"
+  },
+  {
+    "sku": "5902206",
+    "msrp": 5829,
+    "map": 5299,
+    "model_family": "300S",
+    "deck": "48",
+    "engine": "K21.5",
+    "hp": null,
+    "raw": "5902206 300S 300S, 48, K21.5, NA $5,829 $5,299 $4,769 $4,531 $4,483 $4,483"
+  },
+  {
+    "sku": "5902212",
+    "msrp": 6159,
+    "map": 5599,
+    "model_family": "300S",
+    "deck": "52",
+    "engine": "B25",
+    "hp": null,
+    "raw": "5902212 300S 300S, 52, B25, NA $6,159 $5,599 $5,039 $4,787 $4,737 $4,737"
+  },
+  {
+    "sku": "5902207",
+    "msrp": 6269,
+    "map": 5699,
+    "model_family": "300S",
+    "deck": "52",
+    "engine": "K21.5",
+    "hp": null,
+    "raw": "5902207 300S 300S, 52, K21.5, NA $6,269 $5,699 $5,129 $4,873 $4,821 $4,821"
+  },
+  {
+    "sku": "5902101",
+    "msrp": 7478,
+    "map": 6799,
+    "model_family": "500S",
+    "deck": "48",
+    "engine": "B25",
+    "hp": null,
+    "raw": "5902101 500S 500S, 48, B25, NA $7,478 $6,799 $6,119 $5,813 $5,752 $5,752"
+  },
+  {
+    "sku": "5902102",
+    "msrp": 7588,
+    "map": 6899,
+    "model_family": "500S",
+    "deck": "52",
+    "engine": "B25",
+    "hp": null,
+    "raw": "5902102 500S 500S, 52, B25, NA $7,588 $6,899 $6,209 $5,898 $5,836 $5,836"
+  },
+  {
+    "sku": "5902103",
+    "msrp": 8084,
+    "map": 7349,
+    "model_family": "500S",
+    "deck": "61",
+    "engine": "B25",
+    "hp": null,
+    "raw": "5902103 500S 500S, 61, B25, NA $8,084 $7,349 $6,614 $6,283 $6,217 $6,217"
+  },
+  {
+    "sku": "5902056",
+    "msrp": 8304,
+    "map": 7549,
+    "model_family": "500S",
+    "deck": "61",
+    "engine": "K24",
+    "hp": null,
+    "raw": "5902056 500S 500S, 61, K24, NA $8,304 $7,549 $6,794 $6,455 $6,387 $6,387"
+  },
+  {
+    "sku": "5901908",
+    "msrp": 9294,
+    "map": 8449,
+    "model_family": "IS 600",
+    "deck": "48",
+    "engine": "K19",
+    "hp": null,
+    "raw": "5901908 IS\u00ae 600 IS600, 48, K19, NA $9,294 $8,449 $7,604 $7,224 $7,148 $7,148"
+  },
+  {
+    "sku": "5901911",
+    "msrp": 9624,
+    "map": 8749,
+    "model_family": "IS 600",
+    "deck": "52",
+    "engine": "K23",
+    "hp": null,
+    "raw": "5901911 IS\u00ae 600 IS600, 52, K23, NA $9,624 $8,749 $7,874 $7,480 $7,402 $7,402"
+  },
+  {
+    "sku": "5902110",
+    "msrp": 8689,
+    "map": 7899,
+    "model_family": "IS 600",
+    "deck": "48",
+    "engine": "B25",
+    "hp": null,
+    "raw": "5902110 IS\u00ae 600 IS600, 48, B25, NA $8,689 $7,899 $7,109 $6,754 $6,683 $6,683"
+  },
+  {
+    "sku": "5902109",
+    "msrp": 8909,
+    "map": 8099,
+    "model_family": "IS 600",
+    "deck": "52",
+    "engine": "B25",
+    "hp": null,
+    "raw": "5902109 IS\u00ae 600 IS600, 52, B25, NA $8,909 $8,099 $7,289 $6,925 $6,852 $6,852"
+  },
+  {
+    "sku": "5902107",
+    "msrp": 9954,
+    "map": 9049,
+    "model_family": "IS 700",
+    "deck": "52",
+    "engine": "B27",
+    "hp": null,
+    "raw": "5902107 IS\u00ae 700 IS700, 52, B27, NA $9,954 $9,049 $8,144 $7,737 $7,656 $7,656"
+  },
+  {
+    "sku": "5902061",
+    "msrp": 10449,
+    "map": 9499,
+    "model_family": "IS 700",
+    "deck": "60",
+    "engine": "B27",
+    "hp": null,
+    "raw": "5902061 IS\u00ae 700 IS700, 60, B27, NA $10,449 $9,499 $8,549 $8,122 $8,036 $8,036"
+  },
+  {
+    "sku": "5901929",
+    "msrp": 24419,
+    "map": 22199,
+    "model_family": "IS 2600",
+    "deck": "61",
+    "engine": "Y23",
+    "hp": null,
+    "raw": "5901929 IS2600, 61, Y23, NA $24,419 $22,199 $19,535 $18,363 $17,972 $17,581"
+  },
+  {
+    "sku": "5902162",
+    "msrp": 41854,
+    "map": 38049,
+    "model_family": "IS 6200",
+    "deck": "72",
+    "engine": "C48",
+    "hp": null,
+    "raw": "5902162 IS6200, 72, C48, NA $41,854 $38,049 $33,483 $31,474 $30,805 $30,135"
+  },
+  {
+    "sku": "5901895",
+    "msrp": 8249,
+    "map": 7499,
+    "model_family": "F60",
+    "deck": "36",
+    "engine": "K19",
+    "hp": null,
+    "raw": "5901895 F60 F60, 36, K19, NA $8,249 $7,499 $6,599 $6,203 $6,071 $5,939"
+  },
+  {
+    "sku": "5902075",
+    "msrp": 11989,
+    "map": 10899,
+    "model_family": "ISX 800",
+    "deck": "60",
+    "engine": "B27",
+    "hp": null,
+    "raw": "5902075 ISX\u2122\ufe0f 800 ISX800, 60, B27, NA $11,989 $10,899 $9,700 $9,118 $8,924 $8,730"
+  },
+  {
+    "sku": "5902073",
+    "msrp": 12648,
+    "map": 11499,
+    "model_family": "ISX 800",
+    "deck": "60",
+    "engine": "K24",
+    "hp": null,
+    "raw": "5902073 ISX\u2122\ufe0f 800 ISX800, 60, K24, NA $12,648 $11,499 $10,234 $9,620 $9,415 $9,210"
+  },
+  {
+    "sku": "5902074",
+    "msrp": 13143,
+    "map": 11949,
+    "model_family": "ISX 800",
+    "deck": "60",
+    "engine": null,
+    "hp": null,
+    "raw": "5902074 ISX\u2122\ufe0f 800 ISX800, 60, K26 E, NA $13,143 $11,949 $10,634 $9,996 $9,784 $9,571"
+  },
+  {
+    "sku": "5902172",
+    "msrp": 12374,
+    "map": 11249,
+    "model_family": "ISX 800",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5902172 ISX\u2122\ufe0f 800 $12,374 $11,249 $10,012 $9,411 $9,211 $9,011"
+  },
+  {
+    "sku": "5902154",
+    "msrp": 11769,
+    "map": 10699,
+    "model_family": "ISX 800",
+    "deck": "52",
+    "engine": "B27",
+    "hp": null,
+    "raw": "5902154 ISX\u2122\ufe0f 800 ISX800, 52, B27, NA $11,769 $10,699 $9,522 $8,951 $8,760 $8,570"
+  },
+  {
+    "sku": "5902155",
+    "msrp": 11989,
+    "map": 10899,
+    "model_family": "ISX 800",
+    "deck": "52",
+    "engine": "K24",
+    "hp": null,
+    "raw": "5902155 ISX\u2122\ufe0f 800 ISX800, 52, K24, NA $11,989 $10,899 $9,700 $9,118 $8,924 $8,730"
+  },
+  {
+    "sku": "5902078",
+    "msrp": 15949,
+    "map": 14499,
+    "model_family": "ISX 2200",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5902078 ISX\u2122\ufe0f 2200 $15,949 $14,499 $12,759 $11,993 $11,738 $11,483"
+  },
+  {
+    "sku": "5902157",
+    "msrp": 15069,
+    "map": 13699,
+    "model_family": "ISX 2200",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5902157 ISX\u2122\ufe0f 2200 $15,069 $13,699 $12,055 $11,332 $11,091 $10,850"
+  },
+  {
+    "sku": "5902159",
+    "msrp": 14794,
+    "map": 13449,
+    "model_family": "ISX 2200",
+    "deck": "52",
+    "engine": null,
+    "hp": null,
+    "raw": "5902159 ISX\u2122\ufe0f 2200 ISX2200, 52, K30.5 E, NA $14,794 $13,449 $11,835 $11,125 $10,888 $10,651"
+  },
+  {
+    "sku": "5902180",
+    "msrp": 15509,
+    "map": 14099,
+    "model_family": "ISX 2200",
+    "deck": "60",
+    "engine": null,
+    "hp": null,
+    "raw": "5902180 ISX\u2122\ufe0f 2200 ISX2200, 60, K30.5 E, NA $15,509 $14,099 $12,408 $11,663 $11,415 $11,167"
+  },
+  {
+    "sku": "5902065",
+    "msrp": 20514,
+    "map": 18649,
+    "model_family": "ISX 3300",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5902065 ISX\u2122\ufe0f 3300 $20,514 $18,649 $16,411 $15,426 $15,098 $14,770"
+  },
+  {
+    "sku": "5902064",
+    "msrp": 20129,
+    "map": 18299,
+    "model_family": "ISX 3300",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5902064 ISX\u2122\ufe0f 3300 $20,129 $18,299 $16,103 $15,137 $14,815 $14,493"
+  },
+  {
+    "sku": "5902160",
+    "msrp": 21284,
+    "map": 19349,
+    "model_family": "ISX 3300",
+    "deck": "72",
+    "engine": null,
+    "hp": null,
+    "raw": "5902160 ISX\u2122\ufe0f 3300 ISX3300, 72, K38.5 E, NA $21,284 $19,349 $17,028 $16,006 $15,665 $15,325"
+  },
+  {
+    "sku": "5902145",
+    "msrp": 20899,
+    "map": 18999,
+    "model_family": "ISX 3300",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5902145 ISX\u2122\ufe0f 3300 $20,899 $18,999 $16,719 $15,716 $15,382 $15,047"
+  },
+  {
+    "sku": "5900533",
+    "msrp": 11549,
+    "map": 10499,
+    "model_family": "ProCut S",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5900533 PROCUT S $11,549 $10,499 $9,239 $8,685 $8,500 $8,315"
+  },
+  {
+    "sku": "5902106",
+    "msrp": 10999,
+    "map": 9999,
+    "model_family": "ProCut S",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5902106 PROCUT S $10,999 $9,999 $8,799 $8,271 $8,095 $7,919"
+  },
+  {
+    "sku": "5900632",
+    "msrp": 3409,
+    "map": 3099,
+    "model_family": "ProCut S",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5900632 PROCUT S $3,409 $3,099 $2,727 $2,564 $2,509 $2,455"
+  },
+  {
+    "sku": "5901939",
+    "msrp": 10449,
+    "map": 9499,
+    "model_family": "SRS Z1",
+    "deck": "36",
+    "engine": "K19",
+    "hp": null,
+    "raw": "5901939 SRS\u2122\ufe0f Z1 SRSZ1, 36, K19, NA $10,449 $9,499 $8,359 $7,858 $7,691 $7,523"
+  },
+  {
+    "sku": "5901940",
+    "msrp": 11384,
+    "map": 10349,
+    "model_family": "SRS Z1",
+    "deck": "48",
+    "engine": null,
+    "hp": null,
+    "raw": "5901940 SRS\u2122\ufe0f Z1 SRSZ1, 48, K22, NA $11,384 $10,349 $9,107 $8,561 $8,379 $8,196"
+  },
+  {
+    "sku": "5901941",
+    "msrp": 10229,
+    "map": 9299,
+    "model_family": "SRS Z1",
+    "deck": "36",
+    "engine": "V23",
+    "hp": null,
+    "raw": "5901941 SRS\u2122\ufe0f Z1 SRSZ1, 36, V23, NA $10,229 $9,299 $8,184 $7,693 $7,529 $7,365"
+  },
+  {
+    "sku": "5901942",
+    "msrp": 11164,
+    "map": 10149,
+    "model_family": "SRS Z1",
+    "deck": "48",
+    "engine": "V23",
+    "hp": null,
+    "raw": "5901942 SRS\u2122\ufe0f Z1 SRSZ1, 48, V23, NA $11,164 $10,149 $8,931 $8,395 $8,216 $8,038"
+  },
+  {
+    "sku": "5902070",
+    "msrp": 13639,
+    "map": 12399,
+    "model_family": "SRS Z2",
+    "deck": "60",
+    "engine": null,
+    "hp": null,
+    "raw": "5902070 SRS\u2122\ufe0f Z2 SRSZ2, 60, V28 E OG, NA $13,639 $12,399 $10,911 $10,257 $10,038 $9,820"
+  },
+  {
+    "sku": "5902164",
+    "msrp": 12814,
+    "map": 11649,
+    "model_family": "SRS Z2",
+    "deck": "52",
+    "engine": null,
+    "hp": null,
+    "raw": "5902164 SRS\u2122\ufe0f Z2 SRSZ2, 52, K25.5, NA $12,814 $11,649 $10,251 $9,636 $9,431 $9,226"
+  },
+  {
+    "sku": "5902165",
+    "msrp": 13144,
+    "map": 11949,
+    "model_family": "SRS Z2",
+    "deck": "52",
+    "engine": null,
+    "hp": null,
+    "raw": "5902165 SRS\u2122\ufe0f Z2 SRSZ2, 52, V28 E OG, NA $13,144 $11,949 $10,515 $9,884 $9,674 $9,464"
+  },
+  {
+    "sku": "5902235",
+    "msrp": 13034,
+    "map": 11849,
+    "model_family": "SRS Z2",
+    "deck": "52",
+    "engine": null,
+    "hp": null,
+    "raw": "5902235 SRS\u2122\ufe0f Z2 SRSZ2, 52, K30.5 E, NA $13,034 $11,849 $10,427 $9,801 $9,593 $9,384"
+  },
+  {
+    "sku": "5902236",
+    "msrp": 13859,
+    "map": 12599,
+    "model_family": "SRS Z2",
+    "deck": "60",
+    "engine": null,
+    "hp": null,
+    "raw": "5902236 SRS\u2122\ufe0f Z2 SRSZ2, 60, K30.5 E, NA $13,859 $12,599 $11,087 $10,422 $10,200 $9,978"
+  },
+  {
+    "sku": "5902168",
+    "msrp": 14189,
+    "map": 12899,
+    "model_family": "SRS Z3X",
+    "deck": "52",
+    "engine": null,
+    "hp": null,
+    "raw": "5902168 SRS\u2122\ufe0f Z3X SRSZ3X, 52, K27, NA $14,189 $12,899 $11,351 $10,670 $10,443 $10,216"
+  },
+  {
+    "sku": "5902215",
+    "msrp": 17764,
+    "map": 16149,
+    "model_family": "SRS Z3X",
+    "deck": "72",
+    "engine": null,
+    "hp": null,
+    "raw": "5902215 SRS\u2122\ufe0f Z3X SRSZ3X, 72, V40 E OG, NA $17,764 $16,149 $14,211 $13,358 $13,074 $12,790"
+  },
+  {
+    "sku": "5902216",
+    "msrp": 16774,
+    "map": 15249,
+    "model_family": "SRS Z3X",
+    "deck": "60",
+    "engine": null,
+    "hp": null,
+    "raw": "5902216 SRS\u2122\ufe0f Z3X SRSZ3X, 60, V40 E OG, NA $16,774 $15,249 $13,419 $12,614 $12,346 $12,077"
+  },
+  {
+    "sku": "5902217",
+    "msrp": 15949,
+    "map": 14499,
+    "model_family": "SRS Z3X",
+    "deck": "52",
+    "engine": null,
+    "hp": null,
+    "raw": "5902217 SRS\u2122\ufe0f Z3X SRSZ3X, 52, V40 E OG, NA $15,949 $14,499 $12,759 $11,994 $11,738 $11,483"
+  },
+  {
+    "sku": "5902233",
+    "msrp": 15289,
+    "map": 13899,
+    "model_family": "SRS Z3X",
+    "deck": "52",
+    "engine": null,
+    "hp": null,
+    "raw": "5902233 SRS\u2122\ufe0f Z3X SRSZ3X, 52, K38.5 E, NA $15,289 $13,899 $12,231 $11,497 $11,253 $11,008"
+  },
+  {
+    "sku": "5902234",
+    "msrp": 16169,
+    "map": 14699,
+    "model_family": "SRS Z3X",
+    "deck": "60",
+    "engine": null,
+    "hp": null,
+    "raw": "5902234 SRS\u2122\ufe0f Z3X SRSZ3X, 60, K38.5 E, NA $16,169 $14,699 $12,935 $12,158 $11,900 $11,642"
+  },
+  {
+    "sku": "5901737",
+    "msrp": 4343,
+    "map": 3949,
+    "model_family": "FW15",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5901737 FW15 $4,343 $3,949 $3,475 $3,266 $3,197 $3,127"
+  },
+  {
+    "sku": "5901886",
+    "msrp": 8139,
+    "map": 7399,
+    "model_family": "FW25",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5901886 FW25 $8,139 $7,399 $6,511 $6,121 $5,990 $5,860"
+  },
+  {
+    "sku": "5901888",
+    "msrp": 8579,
+    "map": 7799,
+    "model_family": "FW25",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5901888 FW25 $8,579 $7,799 $6,864 $6,452 $6,314 $6,177"
+  },
+  {
+    "sku": "5901893",
+    "msrp": 11494,
+    "map": 10449,
+    "model_family": "FW45",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5901893 FW45 $11,494 $10,449 $9,195 $8,643 $8,460 $8,276"
+  },
+  {
+    "sku": "5902014",
+    "msrp": 10339,
+    "map": 9399,
+    "model_family": "FW45",
+    "deck": "48",
+    "engine": null,
+    "hp": null,
+    "raw": "5902014 FW45 FW45, 48, K21, NA $10,339 $9,399 $8,271 $7,775 $7,610 $7,444"
+  },
+  {
+    "sku": "5902015",
+    "msrp": 10723,
+    "map": 9749,
+    "model_family": "FW45",
+    "deck": "52",
+    "engine": null,
+    "hp": null,
+    "raw": "5902015 FW45 FW45, 52, K21, NA $10,723 $9,749 $8,579 $8,064 $7,892 $7,721"
+  },
+  {
+    "sku": "5902016",
+    "msrp": 11384,
+    "map": 10349,
+    "model_family": "FW45",
+    "deck": "61",
+    "engine": "K24",
+    "hp": null,
+    "raw": "5902016 FW45 FW45, 61, K24, NA $11,384 $10,349 $9,107 $8,561 $8,379 $8,196"
+  },
+  {
+    "sku": "5902012",
+    "msrp": 11329,
+    "map": 10299,
+    "model_family": "FB1000",
+    "deck": null,
+    "engine": "V18",
+    "hp": null,
+    "raw": "5902012 FB1000 FB1000, 3500, V18, NA $11,329 $10,299 $7,930 $7,930 $7,930 $7,930"
+  },
+  {
+    "sku": "5902193",
+    "msrp": 14519,
+    "map": 13199,
+    "model_family": "FB2000",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5902193 FB2000 $14,519 $13,199 $10,163 $10,163 $10,163 $10,163"
+  },
+  {
+    "sku": "5902194",
+    "msrp": 16335,
+    "map": 14850,
+    "model_family": "FB3000",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5902194 FB3000 $16,335 $14,850 $11,435 $11,435 $11,435 $11,435"
+  },
+  {
+    "sku": "5902199",
+    "msrp": 9073,
+    "map": 8249,
+    "model_family": "Rover XC",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5902199 Rover\u2122\ufe0f XC $9,073 $8,249 $6,681 $6,681 $6,681 $6,681"
+  },
+  {
+    "sku": "5902208",
+    "msrp": 11494,
+    "map": 10449,
+    "model_family": "Pathfinder",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5902208 $11,494 $10,449 $8,464 $8,464 $8,464 $8,464"
+  },
+  {
+    "sku": "5902209",
+    "msrp": 12374,
+    "map": 11249,
+    "model_family": "Pathfinder XC",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5902209 $12,374 $11,249 $9,112 $9,112 $9,112 $9,112"
+  },
+  {
+    "sku": "5902195",
+    "msrp": 18149,
+    "map": 16499,
+    "model_family": "Venture",
+    "deck": null,
+    "engine": null,
+    "hp": null,
+    "raw": "5902195 $18,149 $16,499 $13,364 $13,364 $13,364 $13,364"
+  }
+]

@@ -161,7 +161,7 @@ const serviceSchemas = [
   },
 ];
 
-const FEATURED_SKUS = ['5902101', '5902084', '5902159'];
+const FEATURED_SKUS = ['5902101', '5902154', '5902159'];
 
 export default function FerrisMowersHattiesburgPage() {
   const featured = products.filter((p) => FEATURED_SKUS.includes(p.sku));
@@ -249,7 +249,7 @@ export default function FerrisMowersHattiesburgPage() {
               <strong>Commercial landscaping crews</strong> — Companies working routes in Hattiesburg,
               Oak Grove, and the US-98 corridor need mowers that hold up to five- and six-day weeks
               in Mississippi heat. The{' '}
-              <Link href="/product/5902084">Ferris ISX 800</Link> (27 HP, ForeFront
+              <Link href="/product/5902154">Ferris ISX 800</Link> (27 HP, ForeFront
               suspension, 52–60&quot; iCD+ deck, from $10,149) is what most serious operations are
               running. Downtime is money — the ISX 800&apos;s independent suspension and
               commercial hydrostatics reduce both operator fatigue and service calls.

@@ -249,7 +249,7 @@ export default function FerrisMowersPetalPage() {
               accounts across Hattiesburg and Petal. Stand-on mowers from our{' '}
               <Link href="/catalog">lineup</Link> are what most trailer-based crews are running —
               compact, fast, and trailer-friendly. The{' '}
-              <Link href="/product/5902084">Ferris ISX 800</Link> (27 HP, ForeFront suspension,
+              <Link href="/product/5902154">Ferris ISX 800</Link> (27 HP, ForeFront suspension,
               52–60&quot; deck, from $10,149) is a proven commercial platform that holds up to
               daily use.
             </li>

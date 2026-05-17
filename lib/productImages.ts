@@ -480,7 +480,7 @@ const BASCO_IMAGES_BY_FAMILY: Record<string, string[]> = {
     `/images/ferris/basco/5901939/5901939_FER_SRSZ1_Studio_Tank.jpg`,
   ],
   'srsz2': [
-    `/images/ferris/basco/5901948/5901948_FER_Z2_FL_FINAL.jpg`,
+    `/images/ferris/basco/5902164/5902164_FER_Z2_FL_FINAL.jpg`,
     `/images/ferris/basco/5902165/5902165_FER_Z2_F_Final.jpg`,
     `/images/ferris/basco/5902165/5902165_FER_Z2_KL_Final.jpg`,
     `/images/ferris/basco/5902165/5902165_FER_Z2_KR_Final.jpg`,
@@ -510,7 +510,7 @@ const BASCO_IMAGES_BY_FAMILY: Record<string, string[]> = {
     `/images/ferris/basco/5901737/5901737_FER_FW15_PIVOTWHEELS.jpg`,
   ],
   'fw25': [
-    `/images/ferris/basco/5901887/5901887_FER_FW25_48-Std_Studio_FL.jpg`,
+    `/images/ferris/basco/5901888/5901888_FER_FW25_48-Std_Studio_FL.jpg`,
     `/images/ferris/basco/5901888/5901888_FER_FW25_48-CC_Studio_FL.jpg`,
     `/images/ferris/basco/5901888/5901888_FER_FW25_48-CC_Studio_FR.jpg`,
     `/images/ferris/basco/5901886/5901886_FER_FW25_36-CC_Studio_FL.jpg`,
