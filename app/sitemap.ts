@@ -32,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ferris-mowers-laurel-ms`, lastModified: now, priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${BASE}/locations/petal`, lastModified: new Date('2026-05-05'), priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${BASE}/locations/hattiesburg`, lastModified: new Date('2026-05-12'), priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: `${BASE}/locations/laurel`, lastModified: new Date('2026-05-19'), priority: 0.8, changeFrequency: 'monthly' as const },
   ];
 
   // Include every product variant in the sitemap. Each engine/deck SKU has
