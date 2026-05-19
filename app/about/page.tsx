@@ -5,13 +5,13 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'About Us | Dykes Motors Power Equipment — Collins, MS',
   description:
-    'Family built. Family backed. Dykes Motors Power Equipment is the only authorized Ferris dealer between Jackson and the Gulf — selling, servicing, and standing behind every machine from our Collins, Mississippi shop.',
+    'Family built. Family backed. Dykes Motors Power Equipment is an authorized Ferris dealer in Collins, Mississippi — selling, servicing, and standing behind every Ferris mower we put out the door.',
   alternates: { canonical: 'https://www.dykespower.com/about' },
 };
 
 const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': 'LocalBusiness',
   name: 'Dykes Motors Power Equipment',
   url: 'https://www.dykespower.com',
   logo: 'https://www.dykespower.com/df-logo.png',
@@ -28,7 +28,15 @@ const organizationSchema = {
     postalCode: '39428',
     addressCountry: 'US',
   },
-  sameAs: ['https://www.facebook.com/DykesMotor'],
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 31.6454,
+    longitude: -89.5548,
+  },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '09:00', closes: '18:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '09:00', closes: '14:00' },
+  ],  sameAs: ['https://www.facebook.com/DykesMotor', 'https://www.google.com/maps/place/Dykes+Motors+Power+Equipment/@31.6454,-89.5548'],
   parentOrganization: {
     '@type': 'AutoDealer',
     name: 'Dykes Motors',
