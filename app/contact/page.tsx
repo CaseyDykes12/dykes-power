@@ -189,10 +189,10 @@ export default function ContactPage() {
           <div className="bg-black text-white rounded-xl p-6">
             <h2 className="text-xl font-bold mb-4 text-[#C8C8C8]">Dykes Motors Power Equipment</h2>
             <div className="space-y-3 text-sm text-gray-300">
-              <p>📍 3069 Hwy 49, Collins, MS 39428</p>
-              <p>📞 Sales: <a href="tel:6019095380" className="text-[#C8C8C8]">(601) 909-5380</a></p>
-              <p>📞 Service &amp; Parts: <a href="tel:6013362541" className="text-[#C8C8C8]">(601) 336-2541</a></p>
-              <p>✉️ <a href="mailto:support@dykespower.com" className="text-[#C8C8C8]">support@dykespower.com</a></p>
+              <p>3069 Hwy 49, Collins, MS 39428</p>
+              <p>Sales: <a href="tel:6019095380" className="text-[#C8C8C8]">(601) 909-5380</a></p>
+              <p>Service &amp; Parts: <a href="tel:6013362541" className="text-[#C8C8C8]">(601) 336-2541</a></p>
+              <p><a href="mailto:support@dykespower.com" className="text-[#C8C8C8]">support@dykespower.com</a></p>
               <p>
                 <a
                   href="https://www.google.com/maps/dir/?api=1&destination=3069+Hwy+49+Collins+MS+39428"
