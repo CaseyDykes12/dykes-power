@@ -62,12 +62,9 @@ export default function StickyMobileCTA({ product }: { product: Product }) {
           </button>
         )
       ) : (
-        <a
-          href="tel:6019095380"
-          className="flex-[2] btn-primary text-sm py-3 rounded-lg text-center"
-        >
-          Call for Pricing
-        </a>
+        <div className="flex-[2] btn-primary text-sm py-3 rounded-lg text-center opacity-80 cursor-default">
+          Coming Soon
+        </div>
       )}
     </div>
   );

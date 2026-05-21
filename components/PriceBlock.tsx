@@ -31,11 +31,11 @@ export default function PriceBlock({
   if (!price) {
     return mode === 'detail' ? (
       <div>
-        <p className="text-2xl font-bold text-[#C8C8C8]">Contact us for pricing</p>
-        <p className="text-gray-500 text-sm mt-1">Call or message us for a real quote</p>
+        <p className="text-2xl font-bold text-[#C8C8C8]">Coming Soon</p>
+        <p className="text-gray-500 text-sm mt-1">Pricing announced shortly — check back</p>
       </div>
     ) : (
-      <p className="font-semibold text-[#C8C8C8]">Contact for price</p>
+      <p className="font-semibold text-[#C8C8C8]">Coming Soon</p>
     );
   }
 
