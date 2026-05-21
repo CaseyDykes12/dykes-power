@@ -209,10 +209,10 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
 
       {/* Main content */}
       <div className="max-w-[1280px] mx-auto px-4 py-10">
-        <div className="grid lg:grid-cols-2 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
 
           {/* ── Gallery ─────────────────────────────────────────────── */}
-          <div className="lg:sticky lg:top-24">
+          <div className="lg:sticky lg:top-24 min-w-0">
             <div className="relative">
               <ProductGallery
                 images={images}
@@ -240,7 +240,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
           </div>
 
           {/* ── Details ─────────────────────────────────────────────── */}
-          <div>
+          <div className="min-w-0">
             {/* Badges */}
             {product.tag && (
               <div className="flex flex-wrap gap-2 mb-4">
