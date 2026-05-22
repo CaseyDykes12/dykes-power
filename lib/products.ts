@@ -644,7 +644,7 @@ export const products: Product[] =  [
         "engine": "Kawasaki® FS691V",
         "horsepower": "25 hp",
         "deckSize": "52\"",
-        "price": 8599,
+        "price": 8749,
         "msrp": 9624,
         "status": "IN_STOCK"
       }
@@ -709,7 +709,7 @@ export const products: Product[] =  [
     "deckSizes": [
       "52\""
     ],
-    "price": 8599,
+    "price": 8749,
     "msrp": 9624,
     "description": "The IS 600 52\" features Ferris's patented independent suspension for a smooth, comfortable ride and consistent cut quality on uneven terrain.",
     "features": [
@@ -1689,7 +1689,7 @@ export const products: Product[] =  [
         "engine": "Vanguard® Big Block EFI w/ Oil Guard",
         "horsepower": "37 hp",
         "deckSize": "52\"",
-        "price": 13699,
+        "price": 13249,
         "msrp": 15069,
         "status": "AVAILABLE_TO_ORDER"
       },
@@ -1749,7 +1749,7 @@ export const products: Product[] =  [
     "deckSizes": [
       "52\""
     ],
-    "price": 13699,
+    "price": 13249,
     "msrp": 15069,
     "description": "The SRS Z3X 52\" with Vanguard Big Block EFI delivers maximum stand-on productivity — premium suspension, electronic fuel injection, and commercial-grade build quality.",
     "features": [
