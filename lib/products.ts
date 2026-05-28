@@ -880,8 +880,7 @@ export const products: Product[] =  [
         "msrp": 13143,
         "status": "AVAILABLE_TO_ORDER"
       }
-    ],
-    "canonicalSku": "5902084"
+    ]
   },
   {
     "sku": "5902155",
