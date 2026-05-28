@@ -5,7 +5,7 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'About Us | Dykes Motors Power Equipment — Collins, MS',
   description:
-    'Family built. Family backed. Dykes Motors Power Equipment is an authorized Ferris dealer in Collins, Mississippi — selling, servicing, and standing behind every Ferris mower we put out the door.',
+    'Family built. Family backed. Dykes Motors Power Equipment is a family-owned dealership in Collins, Mississippi — sales, service, parts, and financing for outdoor power equipment.',
   alternates: { canonical: 'https://www.dykespower.com/about' },
 };
 
@@ -16,7 +16,7 @@ const organizationSchema = {
   url: 'https://www.dykespower.com',
   logo: 'https://www.dykespower.com/df-logo.png',
   description:
-    'Authorized Ferris mower dealer in Collins, Mississippi. Family-owned and operated — sales, service, parts, and financing for commercial and residential mowers.',
+    'Family-owned outdoor power equipment dealership in Collins, Mississippi. Sales, service, parts, and financing.',
   foundingDate: '2025-09',
   telephone: '+16019095380',
   email: 'support@dykespower.com',
@@ -61,17 +61,6 @@ export default function AboutPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-dykes-gray-700">
-        <div className="absolute inset-0">
-          <Image
-            src="https://www.ferrismowers.com/hubfs/Website%20Migration%202025/Ferris/Images/Products/Zero%20Turn%20Mowers/ISX800/Product%20Images/FER_ISX800_FL-PDP.jpg"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover object-center opacity-30"
-            priority
-          />
-          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-dykes-black" />
-        </div>
         <div className="relative z-10 max-w-[1280px] mx-auto px-4 py-20 md:py-28">
           <p className="text-dykes-silver text-sm font-semibold tracking-widest uppercase mb-3">
             About Dykes Motors Power Equipment
@@ -84,20 +73,19 @@ export default function AboutPage() {
             <span className="text-dykes-gray-100">Family Backed.</span>
           </h1>
           <p className="text-dykes-gray-300 text-lg md:text-xl max-w-2xl leading-relaxed">
-            The only authorized Ferris dealer between Jackson and the Gulf. Sales, service, and parts —
-            all under one roof on Highway 49 in Collins.
+            Sales, service, and parts — all under one roof on Highway 49 in Collins.
           </p>
         </div>
       </section>
 
       {/* The story */}
       <section className="max-w-3xl mx-auto px-4 py-16 md:py-20">
-        <div className="border-l-2 border-ferris-yellow pl-5 mb-12">
+        <div className="border-l-2 border-dykes-silver pl-5 mb-12">
           <p className="text-dykes-gray-300 text-lg md:text-xl leading-relaxed">
             Dykes Motors Power Equipment is a division of Dykes Motors — a family-owned
             business at 3069 Hwy 49 in Collins, Mississippi. We opened the power-equipment side
-            in September 2025 to do one thing right: put commercial-grade Ferris mowers into the
-            hands of the people who actually work for a living on them.
+            in September 2025 to put commercial-grade outdoor power equipment into the
+            hands of the people who actually work for a living on it.
           </p>
         </div>
 
@@ -127,24 +115,6 @@ export default function AboutPage() {
         </div>
 
         <h2
-          className="text-3xl md:text-4xl font-bold text-white mb-4"
-          style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.02em' }}
-        >
-          Why we carry Ferris.
-        </h2>
-        <p className="text-dykes-gray-300 leading-relaxed mb-4">
-          When we picked the line to stand behind, we chose Ferris. Ferris invented the
-          suspension mower — independent shocks on all four corners — and nobody else comes
-          close. When you spend 40 hours a week on a machine, that matters. That&apos;s why
-          every commercial crew we sell to goes home on a Ferris.
-        </p>
-        <p className="text-dykes-gray-300 leading-relaxed mb-12">
-          From the residential 300 Series to the commercial ISX 3300 and the all-electric 300e,
-          Ferris builds mowers that last. We sell them. We service them. And we stand behind
-          every one of them.
-        </p>
-
-        <h2
           className="text-3xl md:text-4xl font-bold text-white mb-6"
           style={{ fontFamily: 'var(--font-bebas)', letterSpacing: '0.02em' }}
         >
@@ -155,8 +125,7 @@ export default function AboutPage() {
             <span className="text-dykes-silver font-bold shrink-0 mt-1">✓</span>
             <span>
               <span className="font-semibold text-white">Sales.</span>{' '}
-              The full Ferris lineup — zero-turn, stand-on, and walk-behind mowers, plus utility
-              trailers and accessories.
+              Commercial and residential mowers, tractors, powersports, utility trailers, and accessories.
             </span>
           </li>
           <li className="flex gap-3">
@@ -171,8 +140,7 @@ export default function AboutPage() {
             <span className="text-dykes-silver font-bold shrink-0 mt-1">✓</span>
             <span>
               <span className="font-semibold text-white">Genuine OEM parts.</span>{' '}
-              Ferris and Briggs &amp; Stratton stocked in-house. What&apos;s not on the shelf, we
-              get ordered fast.
+              Stocked in-house. What&apos;s not on the shelf, we get ordered fast.
             </span>
           </li>
           <li className="flex gap-3">
@@ -205,35 +173,24 @@ export default function AboutPage() {
           and a mower to maintain the property? We&apos;ve got you covered under one roof.
         </p>
 
-        {/* Authorized dealer badge + address */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <div className="bg-dykes-gray-900 border border-dykes-gray-700 rounded-xl p-6">
-            <p className="text-dykes-silver text-xs font-bold tracking-widest uppercase mb-3">
-              Authorized Ferris<sup className="text-[9px]">®</sup> Dealer
-            </p>
-            <p className="text-white font-semibold mb-1">Dykes Motors Power Equipment</p>
-            <p className="text-dykes-gray-300 text-sm">
-              Participating in the Feels Like a Ferris<sup className="text-[10px]">®</sup> national campaign.
-            </p>
-          </div>
-          <div className="bg-dykes-gray-900 border-l-2 border-ferris-yellow rounded-xl p-6">
-            <p className="text-white font-semibold mb-2">3069 Hwy 49, Collins, MS 39428</p>
-            <p className="text-dykes-gray-300 text-sm">
-              Sales:{' '}
-              <a href="tel:6019095380" className="text-white hover:text-dykes-silver transition-colors">
-                (601) 909-5380
-              </a>
-            </p>
-            <p className="text-dykes-gray-300 text-sm">
-              Service &amp; Parts:{' '}
-              <a href="tel:6013362541" className="text-white hover:text-dykes-silver transition-colors">
-                (601) 336-2541
-              </a>
-            </p>
-            <p className="text-dykes-gray-300 text-sm mt-3">
-              Mon–Fri 9–6 · Sat 9–2
-            </p>
-          </div>
+        {/* Address + hours */}
+        <div className="bg-dykes-gray-900 border-l-2 border-dykes-silver rounded-xl p-6 mb-12">
+          <p className="text-white font-semibold mb-2">3069 Hwy 49, Collins, MS 39428</p>
+          <p className="text-dykes-gray-300 text-sm">
+            Sales:{' '}
+            <a href="tel:6019095380" className="text-white hover:text-dykes-silver transition-colors">
+              (601) 909-5380
+            </a>
+          </p>
+          <p className="text-dykes-gray-300 text-sm">
+            Service &amp; Parts:{' '}
+            <a href="tel:6013362541" className="text-white hover:text-dykes-silver transition-colors">
+              (601) 336-2541
+            </a>
+          </p>
+          <p className="text-dykes-gray-300 text-sm mt-3">
+            Mon–Fri 9–6 · Sat 9–2
+          </p>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3">
