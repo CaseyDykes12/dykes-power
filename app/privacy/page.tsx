@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <section className="mb-10">
         <h2 className="text-xl font-bold mb-3">Who We Are</h2>
         <p className="text-gray-300">
-          Dykes Motors Power Equipment ("we," "us," or "our") operates dykespower.com. We are an authorized Ferris dealer located at 3069 Hwy 49, Collins, MS 39428. This Privacy Policy describes how we collect, use, and protect information you provide when you use our website.
+          Dykes Motors, LLC ("we," "us," or "our") operates dykespower.com and the Dykes Motors Power Equipment dealership located at 3069 Hwy 49, Collins, MS 39428. This Privacy Policy describes how we collect, use, and protect information you provide when you use our website.
         </p>
       </section>
 
@@ -51,6 +51,19 @@ export default function PrivacyPage() {
           <li>Comply with legal obligations</li>
           <li>Run targeted advertising (Google Ads, Meta/Facebook Ads)</li>
         </ul>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">SMS / Text Messaging</h2>
+        <p className="text-gray-300 mb-4">
+          If you provide your phone number and check the SMS consent box on our contact form, you agree to receive text messages from Dykes Motors related to your inquiry, product availability, service updates, and promotions.
+        </p>
+        <p className="text-gray-300 mb-4">
+          <strong className="text-white">Your phone number and SMS opt-in consent will never be sold or shared with third parties for their own marketing purposes.</strong>
+        </p>
+        <p className="text-gray-300">
+          You can opt out at any time by replying <strong className="text-white">STOP</strong> to any message. Reply <strong className="text-white">HELP</strong> for assistance. Message and data rates may apply. Message frequency varies. For full details see our <a href="/sms-terms" className="text-white underline">SMS Terms</a>.
+        </p>
       </section>
 
       <section className="mb-10">
