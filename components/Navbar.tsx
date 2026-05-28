@@ -3,10 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import CartIcon from './CartIcon';
 
-// Mega-menu structure — mirrors ferrismowers.com Products nav with dealer-only
-// additions (Trailers, Parts, Accessories). Each model links to its canonical
-// product page.
-const PRODUCT_MEGA_MENU: Array<{
+const FERRIS_MEGA_MENU: Array<{
   heading: string;
   href?: string;
   models?: Array<{ label: string; href: string }>;
@@ -73,18 +70,6 @@ const PRODUCT_MEGA_MENU: Array<{
       { label: 'Rover XC', href: '/product/5902199' },
     ],
   },
-  {
-    heading: 'Trailers',
-    href: '/trailers',
-  },
-  {
-    heading: 'Parts',
-    href: '/parts',
-  },
-  {
-    heading: 'Accessories',
-    href: '/accessories',
-  },
 ];
 
 export default function Navbar() {
@@ -114,28 +99,20 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-semibold whitespace-nowrap">
-          {/* Products — mega-menu with nested model flyouts */}
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-sm font-semibold whitespace-nowrap">
+          {/* Ferris — mega-menu */}
           <div className="relative group">
             <button className="flex items-center gap-1 hover:text-[#C8C8C8] transition-colors py-5" aria-haspopup="true">
-              Products
+              Ferris
               <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
             </button>
             <div className="absolute left-0 top-full mt-0 bg-black border border-gray-800 rounded-lg shadow-xl min-w-[270px] opacity-0 invisible group-hover:opacity-100 group-hover:visible focus-within:opacity-100 focus-within:visible transition-all duration-150 z-50 py-2">
-              {PRODUCT_MEGA_MENU.map((cat) => {
+              <Link href="/catalog" className="block px-4 py-2 text-[#C8C8C8] font-semibold hover:bg-gray-900 transition-colors border-b border-gray-800 mb-1">
+                View All Ferris
+              </Link>
+              {FERRIS_MEGA_MENU.map((cat) => {
                 const hasModels = cat.models && cat.models.length > 0;
-                if (!hasModels) {
-                  // Leaf link (Trailers, Parts, Accessories).
-                  return (
-                    <Link
-                      key={cat.heading}
-                      href={cat.href!}
-                      className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors"
-                    >
-                      {cat.heading}
-                    </Link>
-                  );
-                }
+                if (!hasModels) return null;
                 return (
                   <div key={cat.heading} className="relative group/sub">
                     {cat.href ? (
@@ -152,7 +129,6 @@ export default function Navbar() {
                         <svg className="w-3 h-3 ml-3 shrink-0 opacity-60" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
                       </div>
                     )}
-                    {/* Nested model flyout */}
                     <div className="absolute left-full top-0 ml-0 bg-black border border-gray-800 rounded-lg shadow-xl min-w-[280px] opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible focus-within:opacity-100 focus-within:visible transition-all duration-150 z-50 py-2">
                       {cat.href && (
                         <>
@@ -181,34 +157,19 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Why Ferris — dropdown */}
-          <div className="relative group">
-            <button className="flex items-center gap-1 hover:text-[#C8C8C8] transition-colors py-5" aria-haspopup="true">
-              Why Ferris
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
-            </button>
-            <div className="absolute left-0 top-full mt-0 bg-black border border-gray-800 rounded-lg shadow-xl min-w-[260px] opacity-0 invisible group-hover:opacity-100 group-hover:visible focus-within:opacity-100 focus-within:visible transition-all duration-150 z-50 py-2">
-              <Link href="/why-ferris" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors font-semibold">Feels Like a Ferris — Overview</Link>
-              <div className="border-t border-gray-800 my-1" />
-              <Link href="/why-ferris#suspension" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">10-Year Suspension Warranty</Link>
-              <Link href="/why-ferris#icd-cutting" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">iCD+ Cutting System</Link>
-              <Link href="/why-ferris#engines" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Vanguard EFI & ETC Engines</Link>
-              <Link href="/why-ferris#oil-guard" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Oil Guard Protection</Link>
-              <div className="border-t border-gray-800 my-1" />
-              <Link href="/why-ferris#calculators" className="block px-4 py-2 hover:bg-gray-900 hover:text-[#C8C8C8] transition-colors">Productivity & ROI Calculators</Link>
-            </div>
-          </div>
-
+          <Link href="https://www.dykesmotors.com" className="hover:text-[#C8C8C8] transition-colors">Vehicles</Link>
+          <Link href="/ls-tractors" className="hover:text-[#C8C8C8] transition-colors">LS Tractors</Link>
+          <Link href="/massimo-powersports" className="hover:text-[#C8C8C8] transition-colors">Massimo</Link>
           <Link href="/service" className="hover:text-[#C8C8C8] transition-colors">Service</Link>
-          <Link href="/financing" className="hover:text-[#C8C8C8] transition-colors">Financing</Link>
-          <Link href="/blog" className="hover:text-[#C8C8C8] transition-colors">Blog</Link>
+          <Link href="/parts" className="hover:text-[#C8C8C8] transition-colors">Parts</Link>
+          <Link href="/trailers" className="hover:text-[#C8C8C8] transition-colors">Trailers</Link>
           <Link href="/contact" className="hover:text-[#C8C8C8] transition-colors">Contact</Link>
+          <Link href="/about" className="hover:text-[#C8C8C8] transition-colors">About Us</Link>
         </nav>
 
         {/* Right side */}
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <CartIcon />
-          {/* Call button — visible on ALL sizes (mobile shows phone icon only, desktop shows full number) */}
           <a
             href="tel:6019095380"
             aria-label="Call Dykes Motors Power Equipment at (601) 909-5380"
@@ -220,7 +181,6 @@ export default function Navbar() {
             <span className="hidden lg:inline">Call (601) 909-5380</span>
             <span className="lg:hidden">Call</span>
           </a>
-          {/* Mobile / tablet menu button (hidden at lg+) */}
           <button
             className="lg:hidden text-white"
             onClick={() => setOpen(!open)}
@@ -237,43 +197,32 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile / tablet category strip — horizontal scroll, hidden at lg+ */}
+      {/* Mobile category strip */}
       <nav
         aria-label="Shop categories"
         className="lg:hidden border-t border-gray-800 overflow-x-auto no-scrollbar"
       >
         <div className="flex items-center gap-1 px-3 py-2 text-xs font-semibold whitespace-nowrap">
-          <Link href="/products/zero-turn-mowers" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Zero Turn</Link>
-          <Link href="/products/stand-on-mowers" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Stand-On</Link>
-          <Link href="/trailers" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Trailers</Link>
-          <Link href="/parts" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Parts</Link>
-          <Link href="/accessories" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Accessories</Link>
+          <Link href="/catalog" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Ferris</Link>
+          <Link href="https://www.dykesmotors.com" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Vehicles</Link>
+          <Link href="/ls-tractors" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">LS Tractors</Link>
+          <Link href="/massimo-powersports" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Massimo</Link>
           <Link href="/service" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Service</Link>
-          <Link href="/financing" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Financing</Link>
-          <Link href="/blog" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Blog</Link>
+          <Link href="/parts" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Parts</Link>
+          <Link href="/trailers" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Trailers</Link>
           <Link href="/contact" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Contact</Link>
-          <Link href="/why-ferris" className="px-3 py-1.5 rounded-full bg-[#C8C8C8]/10 hover:bg-[#C8C8C8]/20 text-[#C8C8C8] border border-[#C8C8C8]/30">Why Ferris</Link>
+          <Link href="/about" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">About Us</Link>
         </div>
       </nav>
 
-      {/* Mobile / tablet menu */}
+      {/* Mobile menu */}
       {open && (
         <div className="lg:hidden bg-black border-t border-gray-800 px-4 py-4 flex flex-col gap-3 text-sm font-semibold max-h-[85vh] overflow-y-auto">
-          <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mt-1">Products</p>
-          {PRODUCT_MEGA_MENU.map((cat) => {
+          {/* Ferris dropdown */}
+          <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mt-1">Ferris Mowers</p>
+          {FERRIS_MEGA_MENU.map((cat) => {
             const hasModels = cat.models && cat.models.length > 0;
-            if (!hasModels) {
-              return (
-                <Link
-                  key={cat.heading}
-                  href={cat.href!}
-                  onClick={() => setOpen(false)}
-                  className="hover:text-[#C8C8C8] pl-3"
-                >
-                  {cat.heading}
-                </Link>
-              );
-            }
+            if (!hasModels) return null;
             return (
               <details key={cat.heading} className="group pl-3">
                 <summary className="list-none cursor-pointer flex items-center justify-between hover:text-[#C8C8C8]">
@@ -306,11 +255,14 @@ export default function Navbar() {
           })}
 
           <div className="border-t border-gray-800 mt-1 pt-2" />
-          <Link href="/why-ferris" onClick={() => setOpen(false)} className="text-[#C8C8C8] font-bold">Why Ferris</Link>
+          <a href="https://www.dykesmotors.com" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Vehicles</a>
+          <Link href="/ls-tractors" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">LS Tractors</Link>
+          <Link href="/massimo-powersports" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Massimo Powersports</Link>
           <Link href="/service" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Service</Link>
-          <Link href="/financing" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Financing</Link>
-          <Link href="/blog" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Blog</Link>
+          <Link href="/parts" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Parts</Link>
+          <Link href="/trailers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Trailers</Link>
           <Link href="/contact" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Contact</Link>
+          <Link href="/about" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">About Us</Link>
           <a href="tel:6019095380" onClick={() => setOpen(false)} className="btn-primary text-center mt-2">Call (601) 909-5380</a>
         </div>
       )}

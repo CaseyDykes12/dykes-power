@@ -18,6 +18,7 @@ import ProductGallery from '@/components/ProductGallery';
 import FinancingOptions from '@/components/FinancingOptions';
 import VariantDeckSelector from '@/components/VariantDeckSelector';
 import PriceBlock from '@/components/PriceBlock';
+import FerrisRebateBanner from '@/components/FerrisRebateBanner';
 import ProductCard from '@/components/ProductCard';
 // ProductLeadForm import removed — replaced by SpeakWithRepButton + unified buy-box stack
 
@@ -183,6 +184,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
 
   return (
     <div className="bg-[#0f0f0f] min-h-screen pb-20 md:pb-0">
+      <FerrisRebateBanner />
       <StickyMobileCTA product={product} />
       <script
         type="application/ld+json"

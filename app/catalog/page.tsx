@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { getCatalogProducts, getAllCategories } from '@/lib/products';
 import CatalogClient from '@/components/CatalogClient';
 import ProductLeadForm from '@/components/ProductLeadForm';
+import FerrisRebateBanner from '@/components/FerrisRebateBanner';
 
 export const metadata: Metadata = {
   title: 'Ferris Equipment Catalog | Dykes Motors Power Equipment',
@@ -67,6 +68,7 @@ export default function CatalogPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      <FerrisRebateBanner />
       <CatalogClient products={catalogProducts} categories={categories} />
       <div className="max-w-2xl mx-auto px-4 pb-16 pt-4">
         <ProductLeadForm />
