@@ -1540,7 +1540,17 @@ export const products: Product[] =  [
       "Heavy-duty commercial drive",
       "Built for daily commercial use"
     ],
-    "imageUrl": "/images/ferris/basco/5901948/5901948_FER_Z2_FL_FINAL.jpg",
+    "imageUrl": "/images/ferris/basco/5902164/5902164_FER_Z2_FL_FINAL.jpg",
+    "images": [
+      "/images/ferris/basco/5902164/5902164_FER_Z2_FL_FINAL.jpg",
+      "/images/ferris/basco/5902165/5902165_FER_Z2_F_Final.jpg",
+      "/images/ferris/basco/5902165/5902165_FER_Z2_L_Final.jpg",
+      "/images/ferris/basco/5902165/5902165_FER_Z2_R_Final.jpg",
+      "/images/ferris/basco/5902165/5902165_FER_Z2_K_Final.jpg",
+      "/images/ferris/basco/5902165/5902165_FER_Z2_KL_Final.jpg",
+      "/images/ferris/basco/5902165/5902165_FER_Z2_KR_Final.jpg",
+      "/images/ferris/basco/5902165/5902165_FER_Z2_T_Final.jpg"
+    ],
     "status": "AVAILABLE_TO_ORDER",
     "variants": [
       {

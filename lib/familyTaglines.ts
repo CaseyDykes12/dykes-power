@@ -41,10 +41,16 @@ const FAMILIES: FamilyTagline[] = [
     tagline:
       'The F Series pairs essential commercial-grade components with a compact, sturdy frame to allow for easy maneuverability in tight spaces.',
   },
-  // R & S Series (300R, 300S, 500S). Skip 300e (electric, no catalog tagline).
+  // 500S Series — mid-range bridge between residential and full commercial.
+  {
+    match: (n) => n.includes('500s'),
+    tagline:
+      'The 500S Series bridges the gap between residential and full commercial with suspension comfort, a fabricated deck, and Dual Hydro-Gear® transaxles — more machine than entry-level, at a price that makes sense for serious homeowners and light commercial operators.',
+  },
+  // R & S Series (300R, 300S). Skip 300e (electric, no catalog tagline).
   {
     match: (n) =>
-      (n.includes('300r') || n.includes('300s') || n.includes('500s')) && !n.includes('300e'),
+      (n.includes('300r') || n.includes('300s')) && !n.includes('300e') && !n.includes('500s'),
     tagline:
       'The 300 series delivers power in a compact size. Designed for smaller lot lines or maneuvering around intricate landscaping, with suspension for a smooth operation.',
   },
