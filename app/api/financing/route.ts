@@ -13,13 +13,17 @@ export async function POST(req: NextRequest) {
   const fmt = (label: string, value: string | undefined) =>
     `${label.padEnd(28)} ${value || '—'}`;
 
+  // Mask SSN — only last 4 digits in email; full value stays server-side only
+  const maskSSN = (ssn: string | undefined) =>
+    ssn ? `XXX-XX-${ssn.replace(/\D/g, '').slice(-4)}` : '—';
+
   const prequalLabel = prequal === 'approved' ? 'PRE-QUALIFIED' : prequal === 'denied' ? 'DID NOT PRE-QUALIFY' : 'Unknown';
 
   const applicantBlock = `
 ${fmt('First Name:', applicant.firstName)}
 ${fmt('Last Name:', applicant.lastName)}
 ${fmt('Date of Birth:', applicant.dob)}
-${fmt('SSN:', applicant.ssn)}
+${fmt('SSN (last 4):', maskSSN(applicant.ssn))}
 ${fmt('Address:', applicant.address)}
 ${fmt('City / State / Zip:', `${applicant.city}, ${applicant.state} ${applicant.zip}`)}
 ${fmt('Years at Address:', applicant.yearsAtAddress)}
@@ -42,7 +46,7 @@ CO-APPLICANT
 ${fmt('First Name:', coApplicant.firstName)}
 ${fmt('Last Name:', coApplicant.lastName)}
 ${fmt('Date of Birth:', coApplicant.dob)}
-${fmt('SSN:', coApplicant.ssn)}
+${fmt('SSN (last 4):', maskSSN(coApplicant.ssn))}
 ${fmt('Address:', coApplicant.address)}
 ${fmt('City / State / Zip:', `${coApplicant.city}, ${coApplicant.state} ${coApplicant.zip}`)}
 ${fmt('Years at Address:', coApplicant.yearsAtAddress)}

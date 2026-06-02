@@ -215,12 +215,9 @@ Questions? Call (601) 909-5380.
       }),
     });
 
-    Promise.all([ownerPromise, customerPromise])
-      .then(async ([ownerRes, customerRes]) => {
-        if (!ownerRes.ok) console.error('Owner email failed:', await ownerRes.text());
-        if (!customerRes.ok) console.error('Customer email failed:', await customerRes.text());
-      })
-      .catch((err) => console.error('Order email send failed:', err));
+    const [ownerRes, customerRes] = await Promise.all([ownerPromise, customerPromise]);
+    if (!ownerRes.ok) console.error('Owner email failed:', await ownerRes.text());
+    if (!customerRes.ok) console.error('Customer email failed:', await customerRes.text());
   } else {
     console.log('ORDER RECEIVED (no email provider configured):\n', ownerEmail);
   }
