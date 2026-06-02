@@ -17,10 +17,10 @@ export default function AddAccessoryToCartButton({ item }: Props) {
   if (!item.price) {
     return (
       <a
-        href="tel:6019095380"
+        href="tel:6016415475"
         className="btn-outline w-full text-center text-xs py-2"
       >
-        Call: (601) 909-5380
+        Call: (601) 641-5475
       </a>
     );
   }

@@ -59,4 +59,4 @@ For golf course grounds, sports turf, and larger farm or timber properties in th
 
 Both are solid machines. The IS 700 is a strong commercial zero turn at a price that makes sense for moderate use. The ISX 2200 is a step up across the board — drive, suspension, cutting system, ground speed — and justifies the cost if your hours and terrain actually demand it.
 
-If you're not sure which fits your operation, come by 3069 Hwy 49 in Collins and we'll talk through the specifics. We stock the IS 700 60" and can order any ISX 2200 configuration. Financing is available through top national lenders — as low as 4.9% APR for qualified credit. [Browse both models in the catalog](/catalog) or reach out at (601) 909-5380.
+If you're not sure which fits your operation, come by 3069 Hwy 49 in Collins and we'll talk through the specifics. We stock the IS 700 60" and can order any ISX 2200 configuration. Financing is available through top national lenders — as low as 4.9% APR for qualified credit. [Browse both models in the catalog](/catalog) or reach out at (601) 641-5475.

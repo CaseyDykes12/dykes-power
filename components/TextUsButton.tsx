@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
-const PHONE_DISPLAY = '(601) 909-5380';
-const PHONE_HREF = '+16019095380';
+const PHONE_DISPLAY = '(601) 641-5475';
+const PHONE_HREF = '+16016415475';
 const PRESET_BODY = "Hi Dykes Motors Power Equipment, I'm looking at ";
 const SUPPRESS_PREFIXES = ['/cart', '/checkout', '/order-confirmed'];
 

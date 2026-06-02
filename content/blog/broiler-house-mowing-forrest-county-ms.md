@@ -49,6 +49,6 @@ Commercial mowers are built to be washed down. Steel decks, sealed bearings, and
 
 We're the closest authorized Ferris dealer to Forrest County — about 50 minutes north on Highway 49 in Collins. We cover sales, service, financing, and OEM parts for the full Ferris commercial lineup.
 
-If you're in Petal, Oak Grove, Purvis, or Hattiesburg, visit our [Petal-area page](/locations/petal) for directions and the models we see most often in your area. Or come by the shop at 3069 Hwy 49, Collins — sales at (601) 909-5380, parts and service at (601) 336-2541.
+If you're in Petal, Oak Grove, Purvis, or Hattiesburg, visit our [Petal-area page](/locations/petal) for directions and the models we see most often in your area. Or come by the shop at 3069 Hwy 49, Collins — sales at (601) 641-5475, parts and service at (601) 336-2541.
 
 **Browse the full lineup at [dykespower.com/catalog](/catalog) — or call before you make the drive and we'll tell you exactly what we have in stock.**

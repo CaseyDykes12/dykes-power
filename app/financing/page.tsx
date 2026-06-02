@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { products } from '@/lib/products';
+import QuickQualifyButton from '@/components/QuickQualifyButton';
 
 const US_STATES = [
   'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA',
@@ -105,7 +106,7 @@ export default function FinancingPage() {
       setPrequalResult(result);
       setSubmitted(true);
     } catch {
-      setError('Something went wrong. Please call us at (601) 909-5380.');
+      setError('Something went wrong. Please call us at (601) 641-5475.');
     } finally {
       setLoading(false);
     }
@@ -127,12 +128,13 @@ export default function FinancingPage() {
             )}
             <p className="text-gray-400 text-sm">
               Our finance team will contact you shortly to finalize your application and confirm your rate.
+              We&apos;ve also sent a confirmation to your email.
               Pre-qualification is not a guarantee of credit approval and is subject to verification.
             </p>
           </div>
           <p className="text-gray-400 mb-8">
             Questions? Call us at{' '}
-            <a href="tel:6019095380" className="text-[#C8C8C8] font-semibold">(601) 909-5380</a>
+            <a href="tel:6016415475" className="text-[#C8C8C8] font-semibold">(601) 641-5475</a>
             {' '}or email{' '}
             <a href="mailto:support@dykespower.com" className="text-[#C8C8C8] font-semibold">support@dykespower.com</a>
           </p>
@@ -158,7 +160,7 @@ export default function FinancingPage() {
         </div>
         <p className="text-gray-400 mb-8">
           Prefer to speak with someone now? Call{' '}
-          <a href="tel:6019095380" className="text-[#C8C8C8] font-semibold">(601) 909-5380</a>
+          <a href="tel:6016415475" className="text-[#C8C8C8] font-semibold">(601) 641-5475</a>
         </p>
         <a href="/catalog" className="btn-primary">Continue Browsing</a>
       </div>
@@ -177,20 +179,15 @@ export default function FinancingPage() {
         <span>No credit impact — pre-qualification uses a soft check only</span>
       </div>
 
-      {/* Tecobi quick-action buttons */}
+      {/* Quick-action buttons — route through our own system (email-first) */}
       <div className="flex flex-wrap gap-2 mb-6">
-        <button
-          type="button"
-          className="tecobi-quick-qualify-toggle text-sm font-semibold px-4 py-2 rounded-lg bg-[#D4AF37] text-black hover:bg-[#C8A830]"
-        >
-          Quick Qualify (30 seconds)
-        </button>
-        <button
-          type="button"
-          className="tecobi-full-credit-toggle text-sm font-semibold px-4 py-2 rounded-lg border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10"
+        <QuickQualifyButton context="Quick Qualify — Financing page" />
+        <a
+          href="#full-credit-app"
+          className="text-sm font-semibold px-4 py-2 rounded-lg border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10"
         >
           Full Credit App
-        </button>
+        </a>
       </div>
 
       <div className="bg-[#1a1a1a] border border-gray-800 rounded-xl p-6 mb-8">
@@ -217,7 +214,7 @@ export default function FinancingPage() {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-8">
+      <form id="full-credit-app" onSubmit={handleSubmit} className="space-y-8 scroll-mt-24">
 
         {/* Equipment */}
         <div className={sectionClass}>

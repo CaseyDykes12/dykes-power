@@ -35,6 +35,11 @@ Submitted: ${timestamp}
 
   const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
+  // Hold the Tecobi hand-off so the team gets the email first and a salesperson
+  // can call/text before Tecobi's bot starts texting the customer.
+  const TECOBI_DELAY_MINUTES = 15;
+  const tecobiScheduledAt = new Date(Date.now() + TECOBI_DELAY_MINUTES * 60_000).toISOString();
+
   if (!RESEND_API_KEY) {
     console.error('[LEAD-FAIL] RESEND_API_KEY is not set in Vercel environment. Lead captured above but email NOT sent.');
     return NextResponse.json(
@@ -76,6 +81,27 @@ Submitted: ${timestamp}
     const data = await res.json().catch(() => null);
     console.log('[LEAD-OK] Resend accepted, id:', data?.id ?? '(unknown)');
 
+    // Customer confirmation email — best-effort, only if they gave an email.
+    // Reassures the customer immediately without depending on Tecobi's text.
+    if (email) {
+      try {
+        const firstName = name.split(' ')[0] || 'there';
+        await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            from: 'Dykes Motors Power Equipment <leads@dykespower.com>',
+            to: [email],
+            subject: 'We got your message — Dykes Motors Power Equipment',
+            text: `Hi ${firstName},\n\nThanks for reaching out to Dykes Motors Power Equipment. We've got your information and a member of our team will be in touch shortly — during business hours we usually respond within 15 minutes (Mon–Fri 9–6, Sat 9–2 Central).\n\nNeed us sooner? Call or text us at (601) 641-5475.\n\n— Dykes Motors Power Equipment\n3069 Hwy 49, Collins, MS 39428\ndykespower.com`,
+          }),
+        });
+        console.log('[LEAD-CONFIRM-OK] customer confirmation sent');
+      } catch (confErr) {
+        console.error('[LEAD-CONFIRM-FAIL]', confErr instanceof Error ? confErr.message : String(confErr));
+      }
+    }
+
     // Fire an ADF XML lead to Tecobi (clientId 2692) for every lead, phone or not.
     // Phone is optional per ADF spec; Tecobi will follow up via email when phone is missing.
     const adfXml = buildAdfXml({ name, email, phone: phone || '', interest, propertySize, message });
@@ -90,6 +116,9 @@ Submitted: ${timestamp}
           from: 'leads@dykespower.com',
           to: ['adf_xml_2692@tecobirobot.com'],
           ...(email ? { reply_to: email } : {}),
+          // Delay the Tecobi hand-off so the team's email lands first and a
+          // salesperson can call/text before Tecobi's bot starts texting.
+          scheduled_at: tecobiScheduledAt,
           subject: `ADF Lead - ${name} - ${interest || 'Dykes Power'}`,
           text: adfXml,
         }),

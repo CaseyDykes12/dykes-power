@@ -46,4 +46,4 @@ OEM service parts and replacement blades are stocked at Dykes Motors in Collins.
 
 We're [about 25 minutes south of Magee on Hwy 49](/locations/magee) — take Hwy 49 South straight to 3069 Hwy 49, Collins, MS 39428. We carry the IS 700 and ISX 800 lines, stock OEM parts, and can walk through what deck size fits your specific property setup.
 
-Call (601) 909-5380 or [browse the full Ferris lineup online](/catalog).
+Call (601) 641-5475 or [browse the full Ferris lineup online](/catalog).

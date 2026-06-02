@@ -91,10 +91,10 @@ export default function HomePage() {
               Schedule a Demo →
             </Link>
             <a
-              href="tel:6019095380"
+              href="tel:6016415475"
               className="inline-block border-2 border-dykes-black text-dykes-black text-base md:text-lg font-bold px-8 py-3 md:py-4 rounded-md hover:bg-dykes-black hover:text-white transition-colors"
             >
-              Call (601) 909-5380
+              Call (601) 641-5475
             </a>
           </div>
         </div>
@@ -306,10 +306,10 @@ export default function HomePage() {
               Schedule My Demo
             </Link>
             <a
-              href="tel:6019095380"
+              href="tel:6016415475"
               className="inline-block border-2 border-white text-white text-lg font-bold px-10 py-4 rounded-md hover:bg-white hover:text-dykes-black transition-colors"
             >
-              Call Sales · (601) 909-5380
+              Call Sales · (601) 641-5475
             </a>
           </div>
           <p className="text-dykes-gray-500 text-sm mt-4">

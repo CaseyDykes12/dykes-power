@@ -3,24 +3,31 @@
 import { useEffect, useState } from 'react';
 
 interface Props {
-  /** Page-context string sent with the lead (auto-fills "Interest" field). */
+  /** Page-context string sent with the lead. */
   context?: string;
-  /** Tailwind class to style the trigger button. Defaults to outlined CTA style. */
+  /** Tailwind class for the trigger button. */
   className?: string;
-  /** Button label. Defaults to "Speak with a Representative". */
+  /** Button label. */
   label?: string;
 }
 
 const DEFAULT_BUTTON_CLASS =
-  'block w-full text-center font-bold py-3 px-6 rounded-lg border border-gray-700 text-white hover:bg-gray-900 transition-colors';
+  'text-sm font-semibold px-4 py-2 rounded-lg bg-[#D4AF37] text-black hover:bg-[#C8A830]';
 
-export default function SpeakWithRepButton({
-  context = 'General inquiry',
+/**
+ * Our own Quick Qualify flow. Replaces the Tecobi quick-qualify widget so every
+ * submission flows through /api/lead — emails the team immediately, emails the
+ * customer a confirmation, and hands to Tecobi on the standard delay.
+ *
+ * Phone is required (it's a callback); email is optional.
+ */
+export default function QuickQualifyButton({
+  context = 'Quick Qualify — Financing',
   className = DEFAULT_BUTTON_CLASS,
-  label = 'Speak with a Representative',
+  label = 'Quick Qualify (30 seconds)',
 }: Props) {
   const [open, setOpen] = useState(false);
-  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
+  const [form, setForm] = useState({ name: '', phone: '', email: '', interest: '' });
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
 
@@ -49,29 +56,26 @@ export default function SpeakWithRepButton({
           name: form.name,
           email: form.email,
           phone: form.phone,
-          interest: context,
+          interest: form.interest ? `${context}: ${form.interest}` : context,
           propertySize: '',
-          message: form.message,
+          message: 'Quick Qualify request from the financing flow.',
         }),
       });
       if (res.ok) {
         setDone(true);
         if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
-          (window as any).gtag('set', 'user_data', {
-            email: form.email,
-            phone_number: form.phone,
-          });
+          (window as any).gtag('set', 'user_data', { email: form.email, phone_number: form.phone });
           (window as any).gtag('event', 'conversion', {
             send_to: 'AW-17992871675/pNOLCL2li48cEPvd1YND',
           });
         }
       } else {
         alert(
-          "We got your info but our email pipeline hit a snag — please call (601) 641-5475 and we'll take care of it.",
+          "We got your info but our system hit a snag — please call or text (601) 641-5475 and we'll take care of you.",
         );
       }
     } catch {
-      alert("Something went wrong sending your message. Please call (601) 641-5475.");
+      alert('Something went wrong. Please call or text us at (601) 641-5475.');
     } finally {
       setSubmitting(false);
     }
@@ -79,22 +83,15 @@ export default function SpeakWithRepButton({
 
   const close = () => {
     setOpen(false);
-    // Defer state reset so modal exit anim doesn't show empty fields.
     setTimeout(() => {
       setDone(false);
-      setForm({ name: '', email: '', phone: '', message: '' });
+      setForm({ name: '', phone: '', email: '', interest: '' });
     }, 250);
   };
 
   return (
     <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className={className}
-        aria-haspopup="dialog"
-        aria-expanded={open}
-      >
+      <button type="button" onClick={() => setOpen(true)} className={className} aria-haspopup="dialog" aria-expanded={open}>
         {label}
       </button>
 
@@ -102,7 +99,7 @@ export default function SpeakWithRepButton({
         <div
           role="dialog"
           aria-modal="true"
-          aria-labelledby="speak-rep-title"
+          aria-labelledby="quick-qualify-title"
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm px-4 py-8 overflow-y-auto"
           onClick={close}
         >
@@ -111,49 +108,37 @@ export default function SpeakWithRepButton({
             className="bg-[#111] border border-gray-800 rounded-2xl p-6 md:p-8 max-w-md w-full text-white shadow-2xl"
           >
             <div className="flex items-start justify-between mb-1">
-              <h2 id="speak-rep-title" className="text-xl md:text-2xl font-bold">
-                {done ? 'Thanks — we got it.' : 'Talk to a real person.'}
+              <h2 id="quick-qualify-title" className="text-xl md:text-2xl font-bold">
+                {done ? 'Thanks — we got it.' : 'Quick Qualify for Financing'}
               </h2>
-              <button
-                type="button"
-                onClick={close}
-                aria-label="Close"
-                className="text-gray-400 hover:text-white text-2xl leading-none ml-3"
-              >
+              <button type="button" onClick={close} aria-label="Close" className="text-gray-400 hover:text-white text-2xl leading-none ml-3">
                 ×
               </button>
             </div>
 
             {done ? (
               <>
-                <p className="text-gray-300 mt-3 mb-5">
-                  A Dykes Motors representative will contact you shortly. During business
-                  hours we usually respond within 15 minutes. After hours, first thing the
-                  next morning.
+                <p className="text-gray-300 mt-3 mb-4">
+                  Our team will reach out shortly to walk you through your financing options.
+                  During business hours we usually respond within 15 minutes.
                 </p>
+                {form.email && (
+                  <p className="text-sm text-gray-400 mb-4">
+                    We&apos;ve sent a confirmation to <span className="text-white">{form.email}</span>.
+                  </p>
+                )}
                 <p className="text-xs text-gray-500 mb-5">
-                  Need it faster? Call or text us right now at{' '}
-                  <a
-                    href="tel:6016415475"
-                    className="text-[#C8C8C8] font-semibold"
-                  >
-                    (601) 641-5475
-                  </a>
-                  .
+                  Need it faster? Call or text us at{' '}
+                  <a href="tel:6016415475" className="text-[#C8C8C8] font-semibold">(601) 641-5475</a>.
                 </p>
-                <button
-                  type="button"
-                  onClick={close}
-                  className="w-full bg-[#C8C8C8] hover:bg-white text-black font-bold py-3 rounded-lg transition-colors"
-                >
+                <button type="button" onClick={close} className="w-full bg-[#C8C8C8] hover:bg-white text-black font-bold py-3 rounded-lg transition-colors">
                   Close
                 </button>
               </>
             ) : (
               <>
                 <p className="text-sm text-gray-400 mb-4">
-                  Real person responds within 15 minutes during business hours.
-                  After hours, first thing the next morning.
+                  Tell us how to reach you and what you&apos;re looking at. No credit impact — a real person follows up.
                 </p>
                 <form onSubmit={submit} className="space-y-3">
                   <input
@@ -182,43 +167,22 @@ export default function SpeakWithRepButton({
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     className="w-full bg-[#0a0a0a] border border-gray-700 focus:border-[#C8C8C8] rounded-lg px-3 py-2.5 text-white placeholder-gray-500 outline-none"
                   />
-                  <textarea
-                    name="message"
-                    rows={3}
-                    placeholder="What can we help with?"
-                    value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full bg-[#0a0a0a] border border-gray-700 focus:border-[#C8C8C8] rounded-lg px-3 py-2.5 text-white placeholder-gray-500 outline-none resize-y"
+                  <input
+                    type="text"
+                    name="interest"
+                    placeholder="Which mower are you interested in? (optional)"
+                    value={form.interest}
+                    onChange={(e) => setForm({ ...form, interest: e.target.value })}
+                    className="w-full bg-[#0a0a0a] border border-gray-700 focus:border-[#C8C8C8] rounded-lg px-3 py-2.5 text-white placeholder-gray-500 outline-none"
                   />
-                  <p className="text-xs text-gray-500 leading-snug">
-                    Looking at: <span className="text-gray-300">{context}</span>
-                  </p>
                   <button
                     type="submit"
                     disabled={submitting}
                     className="w-full bg-[#C8C8C8] hover:bg-white text-black font-bold py-3 rounded-lg disabled:opacity-60 transition-colors"
                   >
-                    {submitting ? 'Sending…' : 'Send Message'}
+                    {submitting ? 'Sending…' : 'Submit'}
                   </button>
                 </form>
-
-                <div className="mt-5 pt-5 border-t border-gray-800">
-                  <p className="text-xs text-gray-500 mb-3 text-center">Or reach us right now</p>
-                  <div className="grid grid-cols-2 gap-3">
-                    <a
-                      href="tel:6016415475"
-                      className="bg-[#0a0a0a] border border-gray-700 hover:border-[#C8C8C8] text-white font-semibold py-3 rounded-lg text-center transition-colors"
-                    >
-                      📞 Call
-                    </a>
-                    <a
-                      href="sms:+16016415475?body=Hi%20Dykes%20Motors%20Power%20Equipment%2C"
-                      className="bg-[#0a0a0a] border border-gray-700 hover:border-[#C8C8C8] text-white font-semibold py-3 rounded-lg text-center transition-colors"
-                    >
-                      💬 Text
-                    </a>
-                  </div>
-                </div>
               </>
             )}
           </div>

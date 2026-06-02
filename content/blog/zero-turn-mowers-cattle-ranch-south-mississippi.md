@@ -50,4 +50,4 @@ The [service department](/service) at Dykes is at 3069 Hwy 49 in Collins — (60
 
 ## If the Mowing Has Gotten Out of Hand
 
-If you're running cattle in Lincoln, Lawrence, or Copiah County and you're still fighting the fence lines and pond banks with something that's not up to the job, come see what we've got. Collins is about 45 minutes from Brookhaven on Hwy 84 and 49. Call (601) 909-5380, [browse the catalog](/catalog), or come by the lot and we'll put you on the right machine for what you've actually got.
+If you're running cattle in Lincoln, Lawrence, or Copiah County and you're still fighting the fence lines and pond banks with something that's not up to the job, come see what we've got. Collins is about 45 minutes from Brookhaven on Hwy 84 and 49. Call (601) 641-5475, [browse the catalog](/catalog), or come by the lot and we'll put you on the right machine for what you've actually got.

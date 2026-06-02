@@ -88,16 +88,16 @@ export default function AccessoriesPage() {
           Not sure what fits your mower?
         </h2>
         <p className="text-gray-300 mb-8 max-w-xl mx-auto">
-          Call us at <a href="tel:6019095380" className="text-white underline">(601) 909-5380</a>{' '}
+          Call us at <a href="tel:6016415475" className="text-white underline">(601) 641-5475</a>{' '}
           or stop by the shop in Collins. We will pull the parts book and tell you exactly what
           works on your machine.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
-            href="tel:6019095380"
+            href="tel:6016415475"
             className="bg-white text-dykes-black font-bold px-8 py-3 rounded-md hover:bg-dykes-gray-100 transition-colors"
           >
-            Call (601) 909-5380
+            Call (601) 641-5475
           </a>
           <Link
             href="/contact"

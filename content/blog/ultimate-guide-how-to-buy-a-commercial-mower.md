@@ -265,7 +265,7 @@ What to evaluate on a demo:
 
 **Maintenance access.** Can you see the deck edge for trim work? Is the fuel cap accessible? Are the service points — oil filter, air filter, belt access — somewhere you can reach without a struggle?
 
-Come by 3069 Hwy 49 in Collins and we'll put you on the machine. Call ahead at (601) 909-5380 and we'll have the right models out and ready.
+Come by 3069 Hwy 49 in Collins and we'll put you on the machine. Call ahead at (601) 641-5475 and we'll have the right models out and ready.
 
 ---
 
@@ -277,7 +277,7 @@ We do financing through top national lenders, with rates as low as 4.9% APR for 
 
 If you're in Hattiesburg, Laurel, Jackson, Brookhaven, or anywhere in the Pine Belt, we're worth the drive. And if you're farther out, we deliver anywhere in Mississippi — free freight, no trailer required on your end.
 
-**Sales:** (601) 909-5380  
+**Sales:** (601) 641-5475  
 **Service & Parts:** (601) 336-2541  
 Call or text: (601) 641-5475  
 
@@ -305,7 +305,7 @@ Usually yes for high-hour machines. EFI engines deliver 10–15% better fuel eco
 
 **Can I finance a commercial mower through Dykes Motors?**
 
-Yes. We work with top national lenders on equipment financing. Rates as low as 4.9% APR for qualified buyers, with terms typically 36–60 months. Visit [/financing](/financing) or call (601) 909-5380 to start the process.
+Yes. We work with top national lenders on equipment financing. Rates as low as 4.9% APR for qualified buyers, with terms typically 36–60 months. Visit [/financing](/financing) or call (601) 641-5475 to start the process.
 
 **Do you deliver?**
 
@@ -361,7 +361,7 @@ Oil Guard is a Vanguard system that extends engine oil change intervals from the
       "name": "Can I finance a commercial mower through Dykes Motors?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. We work with top national lenders on equipment financing. Rates as low as 4.9% APR for qualified buyers, with terms typically 36–60 months. Visit /financing or call (601) 909-5380 to start the process."
+        "text": "Yes. We work with top national lenders on equipment financing. Rates as low as 4.9% APR for qualified buyers, with terms typically 36–60 months. Visit /financing or call (601) 641-5475 to start the process."
       }
     },
     {
@@ -394,4 +394,4 @@ Oil Guard is a Vanguard system that extends engine oil change intervals from the
 
 ---
 
-**Ready to put the right machine to work? Browse the full Ferris commercial lineup at [dykespower.com/catalog](/catalog) — or call (601) 909-5380 and we'll walk you through the models that fit your operation.**
+**Ready to put the right machine to work? Browse the full Ferris commercial lineup at [dykespower.com/catalog](/catalog) — or call (601) 641-5475 and we'll walk you through the models that fit your operation.**

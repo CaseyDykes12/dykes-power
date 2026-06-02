@@ -53,6 +53,6 @@ More on what we do for Jones County operators: [Ferris dealer near Laurel, MS](/
 
 ## Ready to Spec the Right Machine
 
-If you're running accounts in Jones County and want to talk about what configuration fits your route — deck size, engine, whether a stand-on makes sense as a second unit — call **(601) 909-5380** or come by the shop. We can work through the numbers with you.
+If you're running accounts in Jones County and want to talk about what configuration fits your route — deck size, engine, whether a stand-on makes sense as a second unit — call **(601) 641-5475** or come by the shop. We can work through the numbers with you.
 
 [Browse the full commercial lineup →](/catalog)

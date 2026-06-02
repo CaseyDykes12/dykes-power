@@ -45,11 +45,11 @@ export default function ProductLeadForm({ product, heading, anchorId }: Props) {
         }
       } else {
         alert(
-          "We got your info, but our email system hit a snag. Please call us at (601) 909-5380 so we don't miss you — sorry about that."
+          "We got your info, but our email system hit a snag. Please call us at (601) 641-5475 so we don't miss you — sorry about that."
         );
       }
     } catch {
-      alert('Something went wrong. Please call us directly at (601) 909-5380.');
+      alert('Something went wrong. Please call us directly at (601) 641-5475.');
     } finally {
       setLoading(false);
     }
@@ -62,7 +62,7 @@ export default function ProductLeadForm({ product, heading, anchorId }: Props) {
         <h3 className="text-lg font-bold text-white mb-2">Got it — we'll reach out fast.</h3>
         <p className="text-sm text-gray-400">
           Someone from our Collins shop will contact you shortly. Need to talk now? Call{' '}
-          <a href="tel:6019095380" className="text-[#C8C8C8] font-semibold">(601) 909-5380</a>.
+          <a href="tel:6016415475" className="text-[#C8C8C8] font-semibold">(601) 641-5475</a>.
         </p>
       </div>
     );

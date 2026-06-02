@@ -53,4 +53,4 @@ Our [service department](/service) can set you up on a regular blade sharpening 
 
 If you're near [Taylorsville](/catalog) or down in Jones County around [Laurel](/ferris-mowers-laurel-ms) and you're still running a residential rider or an old tractor on your pad, a commercial stand-on or a properly sized zero turn will save you real time every cycle.
 
-Come by 3069 Hwy 49 in Collins or call us at **(601) 909-5380**. We'll walk through the equipment with you and figure out what fits your operation.
+Come by 3069 Hwy 49 in Collins or call us at **(601) 641-5475**. We'll walk through the equipment with you and figure out what fits your operation.

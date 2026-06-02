@@ -74,7 +74,7 @@ function buildDescription(p: Product): string {
       'Seminary, Mendenhall, Magee, Columbia, Brookhaven, and the Pine Belt ' +
       'region. Free nationwide shipping on every Ferris mower with no ' +
       'minimum. Financing available as low as 4.9% APR for qualified ' +
-      'credit. Order online at dykespower.com or call (601) 909-5380.',
+      'credit. Order online at dykespower.com or call (601) 641-5475.',
   );
 
   return parts.filter(Boolean).join(' ').replace(/\s+/g, ' ').trim();

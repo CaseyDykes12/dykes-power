@@ -71,4 +71,4 @@ We sell both to customers across South Mississippi — buyers from Laurel to Pre
 
 The IS 700 is a genuinely good commercial mower. The ISX 800 is better, in specific ways that matter if you're working it hard. If you're buying for occasional use or light commercial work, the IS 700 won't leave you wanting. If you're buying for a working crew or a serious operation, the ISX 800's drivetrain pays for itself.
 
-Come see both at 3069 Hwy 49, Collins, MS, or browse specs and pricing at [/catalog](/catalog). Questions? Call (601) 909-5380 or ask about [financing options](/financing) — we work with top national lenders.
+Come see both at 3069 Hwy 49, Collins, MS, or browse specs and pricing at [/catalog](/catalog). Questions? Call (601) 641-5475 or ask about [financing options](/financing) — we work with top national lenders.

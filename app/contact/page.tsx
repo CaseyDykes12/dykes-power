@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import QuickQualifyButton from '@/components/QuickQualifyButton';
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -39,11 +40,11 @@ export default function ContactPage() {
         }
       } else {
         alert(
-          "We got your info, but our email system hit a snag. Please call us at (601) 909-5380 so we don't miss you — sorry about that."
+          "We got your info, but our email system hit a snag. Please call us at (601) 641-5475 so we don't miss you — sorry about that."
         );
       }
     } catch {
-      alert('Something went wrong. Please call us directly at (601) 909-5380.');
+      alert('Something went wrong. Please call us directly at (601) 641-5475.');
     } finally {
       setLoading(false);
     }
@@ -56,7 +57,7 @@ export default function ContactPage() {
         <h1 className="text-3xl font-bold mb-3">We got your message!</h1>
         <p className="text-gray-600 mb-6">
           Someone from our team will reach out to you shortly. If you need to talk now,
-          call us at <a href="tel:6019095380" className="text-[#C8C8C8] font-semibold">(601) 909-5380</a>.
+          call us at <a href="tel:6016415475" className="text-[#C8C8C8] font-semibold">(601) 641-5475</a>.
         </p>
       </div>
     );
@@ -179,18 +180,17 @@ export default function ContactPage() {
           <div className="mt-8 pt-6 border-t border-gray-200">
             <p className="text-sm text-gray-500 mb-3">Prefer to text or chat?</p>
             <div className="flex flex-wrap gap-2">
-              <button
-                type="button"
-                className="tecobi-contact-us-toggle text-sm font-medium px-4 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-50"
+              <a
+                href="sms:+16016415475?body=Hi%20Dykes%20Motors%20Power%20Equipment%2C"
+                className="text-sm font-medium px-4 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-50"
               >
                 Text Us
-              </button>
-              <button
-                type="button"
-                className="tecobi-quick-qualify-toggle text-sm font-medium px-4 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-50"
-              >
-                Quick Qualify for Financing
-              </button>
+              </a>
+              <QuickQualifyButton
+                context="Quick Qualify — Contact page"
+                label="Quick Qualify for Financing"
+                className="text-sm font-medium px-4 py-2 rounded-lg border border-gray-300 bg-white hover:bg-gray-50 text-black"
+              />
             </div>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function ContactPage() {
             <h2 className="text-xl font-bold mb-4 text-[#C8C8C8]">Dykes Motors Power Equipment</h2>
             <div className="space-y-3 text-sm text-gray-300">
               <p>3069 Hwy 49, Collins, MS 39428</p>
-              <p>Sales: <a href="tel:6019095380" className="text-[#C8C8C8]">(601) 909-5380</a></p>
+              <p>Sales: <a href="tel:6016415475" className="text-[#C8C8C8]">(601) 641-5475</a></p>
               <p>Service &amp; Parts: <a href="tel:6013362541" className="text-[#C8C8C8]">(601) 336-2541</a></p>
               <p><a href="mailto:support@dykespower.com" className="text-[#C8C8C8]">support@dykespower.com</a></p>
               <p>

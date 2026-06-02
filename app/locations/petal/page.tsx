@@ -7,7 +7,7 @@ import ProductLeadForm from '@/components/ProductLeadForm';
 export const metadata: Metadata = {
   title: 'Ferris Mowers Near Petal, MS | Dykes Motors Power Equipment',
   description:
-    'Authorized Ferris mower dealer about 50 min north of Petal on Hwy 49 in Collins. Zero-turns, stand-ons, parts, service, financing. Call (601) 909-5380.',
+    'Authorized Ferris mower dealer about 50 min north of Petal on Hwy 49 in Collins. Zero-turns, stand-ons, parts, service, financing. Call (601) 641-5475.',
   alternates: { canonical: 'https://www.dykespower.com/locations/petal' },
   openGraph: {
     title: 'Ferris Mowers Near Petal, MS | Dykes Motors Power Equipment',
@@ -25,7 +25,7 @@ const geoSchema = {
   description:
     'Authorized Ferris mower dealer serving Petal, Hattiesburg, Oak Grove, and Forrest County. Located about 50 minutes north on Highway 49 in Collins, MS.',
   url: 'https://www.dykespower.com/locations/petal',
-  telephone: '+16019095380',
+  telephone: '+16016415475',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '3069 Hwy 49',
@@ -96,7 +96,7 @@ const PROVIDER = {
   '@type': 'LocalBusiness',
   name: 'Dykes Motors Power Equipment',
   url: 'https://www.dykespower.com',
-  telephone: '+16019095380',
+  telephone: '+16016415475',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '3069 Hwy 49',
@@ -192,10 +192,10 @@ export default function FerrisMowersPetalPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:6019095380"
+              href="tel:6016415475"
               className="btn-primary text-center text-base px-6 py-3 inline-block"
             >
-              Call (601) 909-5380
+              Call (601) 641-5475
             </a>
             <Link
               href="/catalog"
@@ -334,10 +334,10 @@ export default function FerrisMowersPetalPage() {
               right mower for your property without the runaround.
             </p>
             <a
-              href="tel:6019095380"
+              href="tel:6016415475"
               className="btn-primary text-center text-base px-8 py-3 inline-block"
             >
-              Call (601) 909-5380
+              Call (601) 641-5475
             </a>
           </div>
           <ProductLeadForm />

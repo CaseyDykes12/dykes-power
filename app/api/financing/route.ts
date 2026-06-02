@@ -85,6 +85,11 @@ Reply to this email or call the applicant directly to follow up.
 ========================================
   `.trim();
 
+  // Hold the Tecobi hand-off so the team gets the email first and can call/text
+  // before Tecobi's bot starts texting the applicant.
+  const TECOBI_DELAY_MINUTES = 15;
+  const tecobiScheduledAt = new Date(Date.now() + TECOBI_DELAY_MINUTES * 60_000).toISOString();
+
   if (RESEND_API_KEY) {
     const subject = `Financing App: ${applicant.firstName} ${applicant.lastName} — ${prequalLabel}`;
 
@@ -111,6 +116,26 @@ Reply to this email or call the applicant directly to follow up.
       return NextResponse.json({ success: false, error: 'email_send_failed' }, { status: 500 });
     }
 
+    // Customer confirmation email — best-effort. Reassures the applicant via email
+    // instead of relying on a text. Neutral wording (no approval guarantee).
+    if (applicant.email) {
+      try {
+        await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            from: 'Dykes Motors Power Equipment <financing@dykespower.com>',
+            to: [applicant.email],
+            subject: 'We received your financing request — Dykes Motors Power Equipment',
+            text: `Hi ${applicant.firstName},\n\nThanks for submitting your financing request with Dykes Motors Power Equipment. We've received your information and our finance team will review it and reach out shortly to go over your options.\n\nQuestions in the meantime? Call or text us at (601) 641-5475.\n\n— Dykes Motors Power Equipment\n3069 Hwy 49, Collins, MS 39428\ndykespower.com`,
+          }),
+        });
+        console.log('[FIN-CONFIRM-OK] applicant confirmation sent');
+      } catch (confErr) {
+        console.error('[FIN-CONFIRM-FAIL]', confErr instanceof Error ? confErr.message : String(confErr));
+      }
+    }
+
     // Also push to Tecobi as ADF XML (credit apps always include a phone)
     try {
       const adfXml = buildFinancingAdfXml({
@@ -125,7 +150,8 @@ Reply to this email or call the applicant directly to follow up.
         body: JSON.stringify({
           from: 'financing@dykespower.com',
           to: ['adf_xml_2692@tecobirobot.com'],
-          reply_to: applicant.email,
+          ...(applicant.email ? { reply_to: applicant.email } : {}),
+          scheduled_at: tecobiScheduledAt,
           subject: `ADF Lead - ${applicant.firstName} ${applicant.lastName} - Financing App`,
           text: adfXml,
         }),

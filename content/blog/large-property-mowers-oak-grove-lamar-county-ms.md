@@ -49,4 +49,4 @@ Dykes Motors Power Equipment in Collins is the closest authorized Ferris dealer 
 
 More to the point: it matters who services the machine. An authorized dealer carries OEM parts, does warranty work without pushback, and can turn around a service call in days rather than weeks. If your mower goes down in July, the last thing you want is a two-week shop queue at a place that services everything from chainsaws to riding tractors.
 
-See the full Ferris lineup at [our Hattiesburg area dealer page](/locations/hattiesburg) or browse the [catalog](/catalog). Financing is available as low as 4.9% APR for qualified credit — call (601) 909-5380 or [apply online](/financing).
+See the full Ferris lineup at [our Hattiesburg area dealer page](/locations/hattiesburg) or browse the [catalog](/catalog). Financing is available as low as 4.9% APR for qualified credit — call (601) 641-5475 or [apply online](/financing).

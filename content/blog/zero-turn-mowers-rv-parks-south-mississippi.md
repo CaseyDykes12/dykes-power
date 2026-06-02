@@ -43,6 +43,6 @@ Commercial mowers in RV park use are often run by one person. The owner. The pro
 
 We stock filters, belts, blades, and spindles for everything we sell. [Service](/service) is at 3069 Hwy 49, Collins, MS. When something goes down over a holiday weekend, you need a dealer who's actually reachable, not a 1-800 number with a three-week wait on parts.
 
-Financing is available on both models — rates as low as 4.9% APR for qualified buyers. [See financing options here](/financing), or call (601) 909-5380 to talk through what fits your operation.
+Financing is available on both models — rates as low as 4.9% APR for qualified buyers. [See financing options here](/financing), or call (601) 641-5475 to talk through what fits your operation.
 
 Browse current stock and pricing at [/catalog](/catalog).

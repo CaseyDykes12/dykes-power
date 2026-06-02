@@ -129,7 +129,7 @@ export default function WarrantyPage() {
             ))}
           </div>
           <p className="text-sm text-gray-500 mt-6">
-            From the 2026 Ferris Product Catalog. Full terms and conditions on file at our dealership — stop by or call (601) 909-5380.
+            From the 2026 Ferris Product Catalog. Full terms and conditions on file at our dealership — stop by or call (601) 641-5475.
           </p>
         </div>
       </section>
@@ -236,10 +236,10 @@ export default function WarrantyPage() {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
-            href="tel:6019095380"
+            href="tel:6016415475"
             className="bg-white text-dykes-black font-bold px-8 py-3 rounded-md hover:bg-dykes-gray-100 transition-colors"
           >
-            Call (601) 909-5380
+            Call (601) 641-5475
           </a>
           <Link
             href="/contact"

@@ -63,7 +63,7 @@ export default function ShippingReturnsPage() {
       <section className="mb-10">
         <p className="text-gray-300">
           Dykes Motors Power Equipment ships within the contiguous United States. Questions?
-          Call <a href="tel:6019095380" className="text-white underline">(601) 909-5380</a> for sales
+          Call <a href="tel:6016415475" className="text-white underline">(601) 641-5475</a> for sales
           or <a href="tel:6013362541" className="text-white underline">(601) 336-2541</a> for parts and service.
         </p>
       </section>
@@ -101,7 +101,7 @@ export default function ShippingReturnsPage() {
           </li>
           <li>
             <span className="font-semibold text-white">Local delivery:</span> Flat fee delivery within
-            50 miles of Collins, MS. Confirm coverage at <a href="tel:6019095380" className="text-white underline">(601) 909-5380</a>.
+            50 miles of Collins, MS. Confirm coverage at <a href="tel:6016415475" className="text-white underline">(601) 641-5475</a>.
           </li>
           <li>
             <span className="font-semibold text-white">Reserve a unit:</span> $1,000 deposit holds your
@@ -127,7 +127,7 @@ export default function ShippingReturnsPage() {
         </p>
         <p className="text-gray-300 mb-4">
           To start a return, contact us at{' '}
-          <a href="tel:6019095380" className="text-white underline">(601) 909-5380</a> or{' '}
+          <a href="tel:6016415475" className="text-white underline">(601) 641-5475</a> or{' '}
           <a href="mailto:support@dykespower.com" className="text-white underline">support@dykespower.com</a>.
           Returned items must be in original packaging with all included parts, manuals, and accessories.
         </p>
@@ -153,7 +153,7 @@ export default function ShippingReturnsPage() {
       <section>
         <h2 className="text-xl font-bold mb-3">Contact</h2>
         <ul className="space-y-1 text-gray-300">
-          <li>Sales: <a href="tel:6019095380" className="text-white underline">(601) 909-5380</a></li>
+          <li>Sales: <a href="tel:6016415475" className="text-white underline">(601) 641-5475</a></li>
           <li>Service &amp; Parts: <a href="tel:6013362541" className="text-white underline">(601) 336-2541</a></li>
           <li>Email: <a href="mailto:support@dykespower.com" className="text-white underline">support@dykespower.com</a></li>
           <li>Address: 3069 Hwy 49, Collins, MS 39428</li>

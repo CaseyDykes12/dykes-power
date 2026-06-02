@@ -71,7 +71,7 @@ export default function SupportPage() {
         {
           '@type': 'ContactPoint',
           contactType: 'sales',
-          telephone: '+1-601-909-5380',
+          telephone: '+1-601-641-5475',
           areaServed: 'US',
           availableLanguage: 'English',
         },
@@ -118,8 +118,8 @@ export default function SupportPage() {
             <p className="text-ferris-yellow font-bold text-xs tracking-widest uppercase mb-2">
               Sales
             </p>
-            <a href="tel:6019095380" className="text-2xl font-black text-white underline">
-              (601) 909-5380
+            <a href="tel:6016415475" className="text-2xl font-black text-white underline">
+              (601) 641-5475
             </a>
             <p className="text-sm text-gray-400 mt-2">Mon–Fri 9–6 · Sat 9–2</p>
           </div>

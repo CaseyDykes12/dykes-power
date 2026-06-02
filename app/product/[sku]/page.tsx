@@ -168,7 +168,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
         seller: {
           '@type': 'LocalBusiness',
           name: 'Dykes Motors Power Equipment',
-          telephone: '+16019095380',
+          telephone: '+16016415475',
           address: {
             '@type': 'PostalAddress',
             streetAddress: '3069 Hwy 49',
@@ -603,7 +603,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
             >
               ▶ Ferris YouTube Channel
             </a>
-            <a href="tel:6019095380" className="btn-primary text-sm px-6 py-2">
+            <a href="tel:6016415475" className="btn-primary text-sm px-6 py-2">
               Talk to Our Team
             </a>
           </div>

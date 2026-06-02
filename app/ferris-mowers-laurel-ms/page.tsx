@@ -7,7 +7,7 @@ import ProductLeadForm from '@/components/ProductLeadForm';
 export const metadata: Metadata = {
   title: 'Ferris Mowers Near Laurel, MS | Dykes Motors',
   description:
-    'Authorized Ferris mower dealer 20 min north of Laurel on Hwy 49. Zero-turns, stand-ons, parts, service, financing. Call (601) 909-5380.',
+    'Authorized Ferris mower dealer 20 min north of Laurel on Hwy 49. Zero-turns, stand-ons, parts, service, financing. Call (601) 641-5475.',
   alternates: { canonical: 'https://www.dykespower.com/ferris-mowers-laurel-ms' },
   openGraph: {
     title: 'Ferris Mowers Near Laurel, MS | Dykes Motors',
@@ -24,7 +24,7 @@ const geoSchema = {
   name: 'Dykes Motors Power Equipment',
   description: 'Authorized Ferris mower dealer serving Laurel, Ellisville, and Jones County. Located 20 minutes north on Highway 49 in Collins, MS.',
   url: 'https://www.dykespower.com/ferris-mowers-laurel-ms',
-  telephone: '+16019095380',
+  telephone: '+16016415475',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '3069 Hwy 49',
@@ -64,7 +64,7 @@ const PROVIDER = {
   '@type': 'LocalBusiness',
   name: 'Dykes Motors Power Equipment',
   url: 'https://www.dykespower.com',
-  telephone: '+16019095380',
+  telephone: '+16016415475',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '3069 Hwy 49',
@@ -151,10 +151,10 @@ export default function FerrisMowersLaurelPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:6019095380"
+              href="tel:6016415475"
               className="btn-primary text-center text-base px-6 py-3 inline-block"
             >
-              Call (601) 909-5380
+              Call (601) 641-5475
             </a>
             <Link
               href="/catalog"
@@ -276,10 +276,10 @@ export default function FerrisMowersLaurelPage() {
               ground — no pressure, no runaround.
             </p>
             <a
-              href="tel:6019095380"
+              href="tel:6016415475"
               className="btn-primary text-center text-base px-8 py-3 inline-block"
             >
-              Call (601) 909-5380
+              Call (601) 641-5475
             </a>
           </div>
           <ProductLeadForm />

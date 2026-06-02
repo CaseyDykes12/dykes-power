@@ -49,4 +49,4 @@ Most golf equipment decisions in this part of Mississippi land around Laurel, Co
 
 Freight from Collins to your course is free on new equipment. If you're comparing delivered cost against a dealer farther out, that's worth factoring in.
 
-Browse the full Ferris zero-turn lineup at [/catalog](/catalog) or come by 3069 Hwy 49, Collins, MS. Want to talk through what fits your course — deck count, terrain, hours per season — call (601) 909-5380.
+Browse the full Ferris zero-turn lineup at [/catalog](/catalog) or come by 3069 Hwy 49, Collins, MS. Want to talk through what fits your course — deck count, terrain, hours per season — call (601) 641-5475.

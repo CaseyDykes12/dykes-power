@@ -44,4 +44,4 @@ Keep the cash for fuel, labor, trailer payments, and the unexpected repairs that
 
 ---
 
-**Ready to spec the right machine for your route?** Browse the full Ferris commercial lineup at [/catalog](/catalog) or call (601) 909-5380. We're 45 minutes from Prentiss — easy drive from anywhere in Jefferson Davis or Covington County.
+**Ready to spec the right machine for your route?** Browse the full Ferris commercial lineup at [/catalog](/catalog) or call (601) 641-5475. We're 45 minutes from Prentiss — easy drive from anywhere in Jefferson Davis or Covington County.

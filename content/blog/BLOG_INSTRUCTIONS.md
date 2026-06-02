@@ -5,7 +5,7 @@ The content agent reads it on every run before writing anything. Update this fil
 
 ## About the Business
 Authorized Ferris mower dealership at 3069 Hwy 49, Collins, Mississippi 39428.
-Sales: (601) 909-5380 | Service & Parts: (601) 336-2541 | support@dykespower.com | dykespower.com
+Sales: (601) 641-5475 | Service & Parts: (601) 336-2541 | support@dykespower.com | dykespower.com
 
 We sell, service, finance, and stock parts for the full Ferris commercial line. The same shop also runs Dykes Motors (used cars/trucks) at the same address — relevant to commercial buyers who need a tow vehicle, but never the focus of dykespower.com content.
 
@@ -176,7 +176,7 @@ End with a CTA that fits the specific reader.
 - **Farmers / landscapers / turf managers** → /contact, phone, or "come by 3069 Hwy 49"
 - **General** → "come see us at 3069 Hwy 49, Collins, MS"
 
-Sales: (601) 641-5475 · Service Sales: (601) 909-5380 · Service & Parts: (601) 336-2541 · Text Addison: (601) 336-2541 Parts: (601) 336-2541
+Sales: (601) 641-5475 · Service Sales: (601) 641-5475 · Service & Parts: (601) 336-2541 · Text Addison: (601) 336-2541 Parts: (601) 336-2541
 
 ---
 

@@ -18,7 +18,7 @@ const organizationSchema = {
   description:
     'Family-owned outdoor power equipment dealership in Collins, Mississippi. Sales, service, parts, and financing.',
   foundingDate: '2025-09',
-  telephone: '+16019095380',
+  telephone: '+16016415475',
   email: 'support@dykespower.com',
   address: {
     '@type': 'PostalAddress',
@@ -178,8 +178,8 @@ export default function AboutPage() {
           <p className="text-white font-semibold mb-2">3069 Hwy 49, Collins, MS 39428</p>
           <p className="text-dykes-gray-300 text-sm">
             Sales:{' '}
-            <a href="tel:6019095380" className="text-white hover:text-dykes-silver transition-colors">
-              (601) 909-5380
+            <a href="tel:6016415475" className="text-white hover:text-dykes-silver transition-colors">
+              (601) 641-5475
             </a>
           </p>
           <p className="text-dykes-gray-300 text-sm">

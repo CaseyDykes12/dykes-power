@@ -60,7 +60,7 @@ export function getShippingOptions(cart: Cart, state?: string): ShippingOption[]
         description: 'We do not ship large equipment outside the contiguous United States.',
         price: 'quote',
         available: false,
-        notes: 'Pickup at Collins, MS or local delivery within 50 mi remains available. For other arrangements, call (601) 909-5380.',
+        notes: 'Pickup at Collins, MS or local delivery within 50 mi remains available. For other arrangements, call (601) 641-5475.',
       };
     } else {
       freight = {
