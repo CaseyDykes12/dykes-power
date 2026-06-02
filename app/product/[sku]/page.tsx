@@ -553,7 +553,7 @@ export default async function ProductPage({ params }: { params: Promise<{ sku: s
                     </table>
                   </div>
                   <p className="text-xs text-gray-500 mt-3">
-                    Specifications reflect Ferris factory data for this family. Variants (engine choice, deck size) may vary slightly — the exact spec sheet for your configuration is available at our Collins, MS location or by text to Addison at <a href="sms:+16013362541" className="text-[#C8C8C8] hover:text-white">(601) 336-2541</a>.
+                    Specifications reflect Ferris factory data for this family. Variants (engine choice, deck size) may vary slightly — the exact spec sheet for your configuration is available at our Collins, MS location or by text to our team at <a href="sms:+16016415475" className="text-[#C8C8C8] hover:text-white">(601) 641-5475</a>.
                   </p>
                 </div>
               )}

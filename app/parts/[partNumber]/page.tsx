@@ -142,14 +142,14 @@ export default async function PartDetailPage({ params }: { params: Promise<{ par
             <div className="mb-8">
               <AddPartToCartButton part={part} />
 
-              {/* Text Addison + install CTAs */}
+              {/* Text Our Team + install CTAs */}
               <div className="grid grid-cols-2 gap-2 mt-3">
                 <a
-                  href={`sms:+16013362541?body=${encodeURIComponent(`Hey Addison — question about part #${part.partNumber} (${part.name}).`)}`}
+                  href={`sms:+16016415475?body=${encodeURIComponent(`Hi, I have a question about part #${part.partNumber} (${part.name}).`)}`}
                   className="flex items-center justify-center gap-2 border border-gray-700 hover:border-[#C8C8C8] text-gray-300 hover:text-white text-sm py-2 rounded-md transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-                  Text Addison
+                  Text Our Team
                 </a>
                 <Link
                   href="/service"

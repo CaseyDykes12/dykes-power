@@ -105,7 +105,11 @@ Reply to this email or call the applicant directly to follow up.
       }),
     });
 
-    if (!result.ok) console.error('Financing email send failed:', await result.text());
+    if (!result.ok) {
+      const errText = await result.text().catch(() => '(no body)');
+      console.error('[FIN-FAIL] Resend returned', result.status, errText);
+      return NextResponse.json({ success: false, error: 'email_send_failed' }, { status: 500 });
+    }
 
     // Also push to Tecobi as ADF XML (credit apps always include a phone)
     try {
@@ -132,7 +136,8 @@ Reply to this email or call the applicant directly to follow up.
       console.error('[FIN-TECOBI-FAIL] threw:', e instanceof Error ? e.message : String(e));
     }
   } else {
-    console.log('FINANCING APPLICATION (no email provider):\n', emailBody);
+    console.error('[FIN-FAIL] RESEND_API_KEY not set — financing application lost:', applicant.firstName, applicant.lastName);
+    return NextResponse.json({ success: false, error: 'email_not_configured' }, { status: 500 });
   }
 
   return NextResponse.json({ success: true });

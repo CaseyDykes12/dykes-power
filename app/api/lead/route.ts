@@ -58,7 +58,7 @@ Submitted: ${timestamp}
           'Nathanpace@dykesmotors.com',
           'Justinpatterson@dykesmotors.com',
         ],
-        reply_to: email,
+        ...(email ? { reply_to: email } : {}),
         subject: `[DykesPower Lead] ${name} — ${interest || 'General Inquiry'}`,
         text: plainBody,
       }),

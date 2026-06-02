@@ -53,6 +53,6 @@ If you're mowing a 10-acre property in Simpson County twice a week from April th
 
 We stock carb and EFI configurations across the IS 700 and ISX 800 lines at 3069 Hwy 49 in Collins. You can [browse the full engine lineup in the catalog](/catalog) and filter by model and engine family.
 
-If you want to talk through the numbers for your specific operation — hours per year, fuel costs, how you're using the machine — call (601) 909-5380 or text Addison at (601) 336-2541. Coming from Magee or Mendenhall, it's a straight shot down Hwy 49, about 20 minutes.
+If you want to talk through the numbers for your specific operation — hours per year, fuel costs, how you're using the machine — call or text us at (601) 641-5475. Coming from Magee or Mendenhall, it's a straight shot down Hwy 49, about 20 minutes.
 
 Also worth reading: [why we carry Ferris over other commercial brands](/why-ferris), and what goes into a commercial engine warranty.

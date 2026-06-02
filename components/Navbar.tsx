@@ -158,8 +158,6 @@ export default function Navbar() {
           </div>
 
           <Link href="https://www.dykesmotors.com" className="hover:text-[#C8C8C8] transition-colors">Vehicles</Link>
-          <Link href="/ls-tractors" className="hover:text-[#C8C8C8] transition-colors">LS Tractors</Link>
-          <Link href="/massimo-powersports" className="hover:text-[#C8C8C8] transition-colors">Massimo</Link>
           <Link href="/service" className="hover:text-[#C8C8C8] transition-colors">Service</Link>
           <Link href="/parts" className="hover:text-[#C8C8C8] transition-colors">Parts</Link>
           <Link href="/trailers" className="hover:text-[#C8C8C8] transition-colors">Trailers</Link>
@@ -205,8 +203,6 @@ export default function Navbar() {
         <div className="flex items-center gap-1 px-3 py-2 text-xs font-semibold whitespace-nowrap">
           <Link href="/catalog" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Ferris</Link>
           <Link href="https://www.dykesmotors.com" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Vehicles</Link>
-          <Link href="/ls-tractors" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">LS Tractors</Link>
-          <Link href="/massimo-powersports" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Massimo</Link>
           <Link href="/service" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Service</Link>
           <Link href="/parts" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Parts</Link>
           <Link href="/trailers" className="px-3 py-1.5 rounded-full bg-gray-900 hover:bg-gray-800 text-white">Trailers</Link>
@@ -256,8 +252,6 @@ export default function Navbar() {
 
           <div className="border-t border-gray-800 mt-1 pt-2" />
           <a href="https://www.dykesmotors.com" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Vehicles</a>
-          <Link href="/ls-tractors" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">LS Tractors</Link>
-          <Link href="/massimo-powersports" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Massimo Powersports</Link>
           <Link href="/service" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Service</Link>
           <Link href="/parts" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Parts</Link>
           <Link href="/trailers" onClick={() => setOpen(false)} className="hover:text-[#C8C8C8]">Trailers</Link>

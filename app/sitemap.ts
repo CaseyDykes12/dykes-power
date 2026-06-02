@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/support`, lastModified: now, priority: 0.7, changeFrequency: 'monthly' as const },
     { url: `${BASE}/warranty`, lastModified: now, priority: 0.7, changeFrequency: 'monthly' as const },
     { url: `${BASE}/trailers`, lastModified: now, priority: 0.7, changeFrequency: 'weekly' as const },
+    { url: `${BASE}/accessories`, lastModified: now, priority: 0.7, changeFrequency: 'monthly' as const },
     { url: `${BASE}/shipping-returns`, lastModified: now, priority: 0.5, changeFrequency: 'yearly' as const },
     { url: `${BASE}/privacy`, lastModified: now, priority: 0.5, changeFrequency: 'yearly' as const },
     { url: `${BASE}/terms`, lastModified: now, priority: 0.5, changeFrequency: 'yearly' as const },

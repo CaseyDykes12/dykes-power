@@ -159,6 +159,17 @@ export default function ContactPage() {
               />
             </div>
 
+            <label className="flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="sms_consent"
+                className="mt-1 h-4 w-4 rounded border-gray-300 accent-black shrink-0"
+              />
+              <span className="text-xs text-gray-500 leading-relaxed">
+                I agree to receive text messages from Dykes Motors Power Equipment about my inquiry. Message frequency varies. Msg &amp; data rates may apply. Reply <strong>STOP</strong> to opt out, <strong>HELP</strong> for help.
+              </span>
+            </label>
+
             <button type="submit" disabled={loading} className="btn-primary w-full py-3 text-base">
               {loading ? 'Sending...' : 'Send My Request'}
             </button>

@@ -193,7 +193,7 @@ Questions? Call (601) 909-5380.
       },
       body: JSON.stringify({
         from: 'orders@dykespower.com',
-        to: 'Casey@dykesmotors.com',
+        to: ['Casey@dykesmotors.com', 'michaelbrooks@dykesmotors.com', 'Nathanpace@dykesmotors.com', 'Justinpatterson@dykesmotors.com'],
         reply_to: customer.email,
         subject: `${subjectPrefix} ${customer.name} — $${total.toFixed(2)}`,
         text: ownerEmail,
@@ -216,10 +216,16 @@ Questions? Call (601) 909-5380.
     });
 
     const [ownerRes, customerRes] = await Promise.all([ownerPromise, customerPromise]);
-    if (!ownerRes.ok) console.error('Owner email failed:', await ownerRes.text());
-    if (!customerRes.ok) console.error('Customer email failed:', await customerRes.text());
+    if (!ownerRes.ok) {
+      console.error('[ORDER-FAIL] Owner email failed:', ownerRes.status, await ownerRes.text().catch(() => ''));
+      return NextResponse.json({ success: false, error: 'owner_email_failed' }, { status: 500 });
+    }
+    if (!customerRes.ok) {
+      console.error('[ORDER-FAIL] Customer confirmation email failed:', customerRes.status, await customerRes.text().catch(() => ''));
+    }
   } else {
-    console.log('ORDER RECEIVED (no email provider configured):\n', ownerEmail);
+    console.error('[ORDER-FAIL] RESEND_API_KEY not set — order notification not sent for:', customer.name, total);
+    return NextResponse.json({ success: false, error: 'email_not_configured' }, { status: 500 });
   }
 
   return NextResponse.json({ success: true, paypalOrderId });

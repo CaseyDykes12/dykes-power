@@ -265,7 +265,7 @@ export default function FinancingPage() {
             </div>
             <div>
               <label className={labelClass}>Social Security Number *</label>
-              <input required name="ssn" value={applicant.ssn} onChange={fieldOf(applicant, setApplicant as never)} className={inputClass} placeholder="XXX-XX-XXXX" maxLength={11} />
+              <input required type="password" name="ssn" value={applicant.ssn} onChange={fieldOf(applicant, setApplicant as never)} className={inputClass} placeholder="XXX-XX-XXXX" maxLength={11} autoComplete="off" />
             </div>
           </div>
 
@@ -401,7 +401,7 @@ export default function FinancingPage() {
                 </div>
                 <div>
                   <label className={labelClass}>Social Security Number *</label>
-                  <input required name="ssn" value={coApplicant.ssn} onChange={fieldOf(coApplicant, setCoApplicant as never)} className={inputClass} placeholder="XXX-XX-XXXX" maxLength={11} />
+                  <input required type="password" name="ssn" value={coApplicant.ssn} onChange={fieldOf(coApplicant, setCoApplicant as never)} className={inputClass} placeholder="XXX-XX-XXXX" maxLength={11} autoComplete="off" />
                 </div>
               </div>
 
@@ -503,7 +503,7 @@ export default function FinancingPage() {
         {/* Consent + submit */}
         <div className={sectionClass}>
           <label className="flex items-start gap-3 cursor-pointer">
-            <input required type="checkbox" className="w-4 h-4 mt-0.5 accent-[#C8C8C8]" />
+            <input required type="checkbox" name="consent" className="w-4 h-4 mt-0.5 accent-[#C8C8C8]" />
             <span className="text-sm text-gray-300">
               I certify that the information provided is true and accurate, and I authorize
               Dykes Motors Power Equipment to review this application for financing pre-qualification

@@ -41,10 +41,10 @@ export default function WhyFerrisPage() {
               Shop the Lineup
             </Link>
             <a
-              href="sms:+16013362541?body=Hey%20Addison%20%E2%80%94%20I%27m%20on%20the%20Why%20Ferris%20page%20and%20have%20a%20question."
+              href="sms:+16016415475?body=Hi%2C%20I%27m%20on%20the%20Why%20Ferris%20page%20and%20have%20a%20question."
               className="border-2 border-white text-white font-semibold px-7 py-3 rounded-md hover:bg-white hover:text-black transition-colors"
             >
-              Text Addison a Question
+              Text Our Team
             </a>
           </div>
         </div>
@@ -211,22 +211,22 @@ export default function WhyFerrisPage() {
               Enter your acreage and we&rsquo;ll show which Ferris deck size and model cuts it fastest — and how much time you save against your current mower.
             </p>
             <a
-              href="sms:+16013362541?body=Hey%20Addison%20%E2%80%94%20can%20you%20help%20me%20figure%20out%20mow%20time%20for%20my%20property%3F"
+              href="sms:+16016415475?body=Hi%2C%20can%20you%20help%20me%20figure%20out%20mow%20time%20for%20my%20property%3F"
               className="inline-block bg-white text-black font-bold px-5 py-2 rounded-md hover:bg-[#C8C8C8] transition-colors text-sm"
             >
-              Text Addison Your Acreage
+              Text Our Team
             </a>
           </div>
           <div className="bg-[#111] border border-gray-800 rounded-xl p-6">
             <h3 className="text-white font-bold mb-2 text-xl">Ferris ROI Calculator</h3>
             <p className="text-gray-400 text-sm mb-4">
-              Ferris also publishes an official ROI and productivity tool on their dealer-support site. We&rsquo;re happy to walk you through it — text Addison and we&rsquo;ll build the numbers for your crew.
+              Ferris also publishes an official ROI and productivity tool on their dealer-support site. We&rsquo;re happy to walk you through it — text our team and we&rsquo;ll build the numbers for your crew.
             </p>
             <a
-              href="sms:+16013362541?body=Hey%20Addison%20%E2%80%94%20I%27d%20like%20help%20with%20the%20Ferris%20ROI%20calculator."
+              href="sms:+16016415475?body=Hi%2C%20I%27d%20like%20help%20with%20the%20Ferris%20ROI%20calculator."
               className="inline-block bg-white text-black font-bold px-5 py-2 rounded-md hover:bg-[#C8C8C8] transition-colors text-sm"
             >
-              Text Addison
+              Text Our Team
             </a>
           </div>
         </div>

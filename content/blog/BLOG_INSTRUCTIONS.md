@@ -176,7 +176,7 @@ End with a CTA that fits the specific reader.
 - **Farmers / landscapers / turf managers** → /contact, phone, or "come by 3069 Hwy 49"
 - **General** → "come see us at 3069 Hwy 49, Collins, MS"
 
-Sales: (601) 909-5380 · Service & Parts: (601) 336-2541 · Text Addison: (601) 336-2541
+Sales: (601) 641-5475 · Service Sales: (601) 909-5380 · Service & Parts: (601) 336-2541 · Text Addison: (601) 336-2541 Parts: (601) 336-2541
 
 ---
 
@@ -210,7 +210,7 @@ Hattiesburg, Laurel, Petal, Magee, Mendenhall, Taylorsville, Raleigh, Mt Olive, 
 4. **Who in {City} buys from us** — pick the 2–3 most relevant audiences from the list above (farmers, chicken farms, landscapers, large-property homeowners, etc.)
 5. **Featured Ferris models** — link to 3–4 product pages, with one-line "why this fits {City}" notes
 6. **Drive directions / map** — "From {City}, take {real route} to 3069 Hwy 49, Collins, MS"
-7. **CTAs** — phone, text Addison, /catalog, /financing
+7. **CTAs** — phone (641-5475), /catalog, /financing
 8. **Schema.org LocalBusiness JSON-LD** with `areaServed: { "@type": "City", "name": "{City}, MS" }` and the Collins address
 
 ### Landing-page hard rules

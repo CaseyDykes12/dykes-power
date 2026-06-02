@@ -279,7 +279,7 @@ If you're in Hattiesburg, Laurel, Jackson, Brookhaven, or anywhere in the Pine B
 
 **Sales:** (601) 909-5380  
 **Service & Parts:** (601) 336-2541  
-**Text Addison:** (601) 336-2541  
+Call or text: (601) 641-5475  
 
 Browse the full lineup at [/catalog](/catalog). Get the technology breakdown at [/why-ferris](/why-ferris). Finance your next machine at [/financing](/financing).
 

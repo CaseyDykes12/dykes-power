@@ -278,7 +278,7 @@ export default function FerrisMowersLaurelPage() {
             <strong>Service:</strong> Authorized Ferris warranty work and repairs through our{' '}
             <Link href="/service">service shop</Link>. Engine diagnostics, hydrostatic service,
             blade sharpening, seasonal tune-ups. Service line: <strong>(601) 336-2541</strong>.
-            Text Addison at the same number for faster turnaround on scheduling.
+            Text us at (601) 641-5475 for faster turnaround on scheduling.
           </p>
           <p>
             <strong>Parts:</strong> OEM Ferris parts on-site — blades, belts, spindles, filters,

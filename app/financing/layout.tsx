@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'Apply for Financing | Dykes Motors Power Equipment — Collins, MS',
   description:
     'Apply for mower financing at Dykes Motors Power Equipment in Collins, MS. Rates as low as 4.9% APR up to 84 months for qualified credit. Instant pre-qualification with no credit impact.',
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://www.dykespower.com/financing' },
   openGraph: {
     title: 'Apply for Financing | Dykes Motors Power Equipment',
