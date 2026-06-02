@@ -127,17 +127,17 @@ export default function SpeakWithRepButton({
             {done ? (
               <>
                 <p className="text-gray-300 mt-3 mb-5">
-                  Casey, Brooks, Justin, or Nathan will reach out shortly. During business
+                  A Dykes Motors representative will contact you shortly. During business
                   hours we usually respond within 15 minutes. After hours, first thing the
                   next morning.
                 </p>
                 <p className="text-xs text-gray-500 mb-5">
                   Need it faster? Call or text us right now at{' '}
                   <a
-                    href="tel:6019095380"
+                    href="tel:6016415475"
                     className="text-[#C8C8C8] font-semibold"
                   >
-                    (601) 909-5380
+                    (601) 641-5475
                   </a>
                   .
                 </p>

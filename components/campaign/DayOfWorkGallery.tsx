@@ -32,7 +32,7 @@ const SHOTS: Shot[] = [
   {
     src: '/images/ferris/campaign/lifestyle-confidence.webp',
     alt: 'Full Ferris lineup — zero-turn, stand-on, walk-behind',
-    caption: 'Financing as low as 4.9% →',
+    caption: 'Financing available →',
     href: '/financing',
   },
   {

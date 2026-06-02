@@ -28,17 +28,6 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Financing banner */}
-      <div className="bg-red-600 text-white text-center text-xs md:text-sm font-semibold tracking-widest uppercase py-3 px-4 flex flex-col sm:flex-row sm:items-center sm:justify-center gap-2 sm:gap-4">
-        <span>Financing as low as 4.9% APR up to 84 months for qualified credit</span>
-        <Link
-          href="/financing"
-          className="inline-block bg-white text-red-600 font-bold tracking-wider px-4 py-1.5 rounded-md hover:bg-gray-100 transition-colors"
-        >
-          Get Pre-Approved →
-        </Link>
-      </div>
-
       {/* 1. Hero */}
       <FerrisHero />
 
