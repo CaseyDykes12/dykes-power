@@ -88,8 +88,9 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold mb-1" htmlFor="contact-phone">Phone</label>
+                <label className="block text-sm font-semibold mb-1" htmlFor="contact-phone">Phone *</label>
                 <input
+                  required
                   id="contact-phone"
                   type="tel"
                   inputMode="tel"
@@ -104,9 +105,8 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold mb-1" htmlFor="contact-email">Email *</label>
+              <label className="block text-sm font-semibold mb-1" htmlFor="contact-email">Email</label>
               <input
-                required
                 id="contact-email"
                 type="email"
                 inputMode="email"

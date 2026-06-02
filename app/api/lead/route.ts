@@ -89,7 +89,7 @@ Submitted: ${timestamp}
         body: JSON.stringify({
           from: 'leads@dykespower.com',
           to: ['adf_xml_2692@tecobirobot.com'],
-          reply_to: email,
+          ...(email ? { reply_to: email } : {}),
           subject: `ADF Lead - ${name} - ${interest || 'Dykes Power'}`,
           text: adfXml,
         }),

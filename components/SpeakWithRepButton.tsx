@@ -166,20 +166,20 @@ export default function SpeakWithRepButton({
                     className="w-full bg-[#0a0a0a] border border-gray-700 focus:border-[#C8C8C8] rounded-lg px-3 py-2.5 text-white placeholder-gray-500 outline-none"
                   />
                   <input
-                    type="email"
-                    name="email"
+                    type="tel"
+                    name="phone"
                     required
-                    placeholder="Email"
-                    value={form.email}
-                    onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    placeholder="Phone"
+                    value={form.phone}
+                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
                     className="w-full bg-[#0a0a0a] border border-gray-700 focus:border-[#C8C8C8] rounded-lg px-3 py-2.5 text-white placeholder-gray-500 outline-none"
                   />
                   <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone (optional)"
-                    value={form.phone}
-                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                    type="email"
+                    name="email"
+                    placeholder="Email (optional)"
+                    value={form.email}
+                    onChange={(e) => setForm({ ...form, email: e.target.value })}
                     className="w-full bg-[#0a0a0a] border border-gray-700 focus:border-[#C8C8C8] rounded-lg px-3 py-2.5 text-white placeholder-gray-500 outline-none"
                   />
                   <textarea
