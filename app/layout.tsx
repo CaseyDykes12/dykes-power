@@ -193,16 +193,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="google-site-verification" content="qW0oAxSqngP7GBmf8rXxdZs1GK14mbymF1StHZnrcQ4" />
       </head>
       <body className="min-h-screen flex flex-col bg-white text-gray-900 overflow-x-hidden">
-        {/* Google Ads Tag */}
+        {/* Google Analytics 4 */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17992871675"
+          src="https://www.googletagmanager.com/gtag/js?id=G-JD9GT5W8VR"
           strategy="afterInteractive"
         />
-        <Script id="google-ads-init" strategy="afterInteractive">
+        <Script id="google-analytics-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+            gtag('config', 'G-JD9GT5W8VR');
             gtag('config', 'AW-17992871675');
           `}
         </Script>
