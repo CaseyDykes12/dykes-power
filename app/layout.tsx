@@ -5,7 +5,6 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SiteStickyCTA from '@/components/SiteStickyCTA';
-import TextUsButton from '@/components/TextUsButton';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' });
@@ -235,8 +234,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-1">{children}</main>
         <Footer />
         <SiteStickyCTA />
-        <TextUsButton />
-        {/* Tecobi SMS Widget (clientId 2692 — Dykes Motors) */}
+        {/* Tecobi SMS Widget (clientId 2692 — Dykes Motors) — the only chat/text widget */}
         <Script
           id="tecobi-widget-include"
           src="https://widget.tecobi.com/widget.js?clientId=2692"
