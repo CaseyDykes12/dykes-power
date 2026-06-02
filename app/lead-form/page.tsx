@@ -1,13 +1,56 @@
-import { Metadata } from 'next';
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'Contact Us | Dykes Motors Power Equipment',
-  description: 'Get in touch with Dykes Motors Power Equipment. Sales, service, parts, and financing inquiries.',
-  robots: { index: false, follow: false },
-};
-
 export default function LeadFormPage() {
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+    const fd = new FormData(e.currentTarget);
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: fd.get('name'),
+          email: fd.get('email') || '',
+          phone: fd.get('phone'),
+          interest: fd.get('interest') || 'General inquiry',
+          message: fd.get('message') || '',
+        }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError('Something went wrong. Please call us at (601) 641-5475.');
+      }
+    } catch {
+      setError('Something went wrong. Please call us at (601) 641-5475.');
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  if (submitted) {
+    return (
+      <div className="max-w-2xl mx-auto px-4 py-16 text-center">
+        <p className="text-4xl mb-4">✅</p>
+        <h1 className="text-2xl font-bold text-white mb-2">We got it — thank you.</h1>
+        <p className="text-gray-400">
+          Someone from Dykes Motors Power Equipment will reach out shortly.
+          Need us now? Call{' '}
+          <a href="tel:6016415475" className="text-[#C8C8C8] font-semibold">(601) 641-5475</a>.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="max-w-2xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold mb-2 text-white">Contact Us</h1>
@@ -15,7 +58,7 @@ export default function LeadFormPage() {
         Fill out the form below and a Dykes Motors representative will reach out to you shortly.
       </p>
 
-      <form className="space-y-6" action="#" method="POST">
+      <form className="space-y-6" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name" className="block text-sm font-semibold text-white mb-1">
             Full Name <span className="text-red-400">*</span>
@@ -67,14 +110,12 @@ export default function LeadFormPage() {
             className="w-full bg-[#1a1a1a] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#C8C8C8]"
           >
             <option value="">Select one...</option>
-            <option value="ferris-mower">Ferris Mower</option>
-            <option value="ls-tractor">LS Tractor</option>
-            <option value="massimo-powersports">Massimo Powersports</option>
-            <option value="trailer">Utility Trailer</option>
-            <option value="parts">Parts</option>
-            <option value="service">Service</option>
-            <option value="financing">Financing</option>
-            <option value="other">Other</option>
+            <option value="Ferris Mower">Ferris Mower</option>
+            <option value="Utility Trailer">Utility Trailer</option>
+            <option value="Parts">Parts</option>
+            <option value="Service">Service</option>
+            <option value="Financing">Financing</option>
+            <option value="Other">Other</option>
           </select>
         </div>
 
@@ -91,7 +132,6 @@ export default function LeadFormPage() {
           />
         </div>
 
-        {/* SMS Consent — required by TCR/10DLC */}
         <div className="bg-[#1a1a1a] border border-gray-700 rounded-lg p-4">
           <label className="flex items-start gap-3 cursor-pointer">
             <input
@@ -104,30 +144,28 @@ export default function LeadFormPage() {
               I agree to receive text messages from Dykes Motors at the phone number provided above. Message frequency varies. Message and data rates may apply. Reply{' '}
               <strong className="text-white">STOP</strong> to unsubscribe at any time. Reply{' '}
               <strong className="text-white">HELP</strong> for assistance. View our{' '}
-              <Link href="/sms-terms" className="underline text-white hover:text-[#C8C8C8]">
-                SMS Terms
-              </Link>{' '}
+              <Link href="/sms-terms" className="underline text-white hover:text-[#C8C8C8]">SMS Terms</Link>{' '}
               and{' '}
-              <Link href="/privacy" className="underline text-white hover:text-[#C8C8C8]">
-                Privacy Policy
-              </Link>
-              .
+              <Link href="/privacy" className="underline text-white hover:text-[#C8C8C8]">Privacy Policy</Link>.
             </span>
           </label>
         </div>
 
+        {error && <p className="text-red-400 text-sm">{error}</p>}
+
         <button
           type="submit"
-          className="btn-primary w-full text-center"
+          disabled={loading}
+          className="btn-primary w-full text-center disabled:opacity-60"
         >
-          Submit
+          {loading ? 'Sending…' : 'Submit'}
         </button>
       </form>
 
       <p className="text-gray-500 text-xs mt-8">
-        Dykes Motors, LLC · 3069 Hwy 49, Collins, MS 39428 ·{' '}
+        Dykes Motors Power Equipment · 3069 Hwy 49, Collins, MS 39428 ·{' '}
         <a href="tel:6016415475" className="underline hover:text-gray-300">(601) 641-5475</a> ·{' '}
-        <a href="mailto:info@dykesmotors.com" className="underline hover:text-gray-300">info@dykesmotors.com</a>
+        <a href="mailto:support@dykespower.com" className="underline hover:text-gray-300">support@dykespower.com</a>
       </p>
     </div>
   );
