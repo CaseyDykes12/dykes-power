@@ -31,7 +31,7 @@ const FERRIS_MEGA_MENU: Array<{
     href: '/products/stand-on-mowers',
     models: [
       { label: 'SRS™ Z1 Stand-On', href: '/product/5901941' },
-      { label: 'SRS™ Z2 Stand-On', href: '/product/5902164' },
+      { label: 'SRS™ Z2 Stand-On', href: '/product/5901948' },
       { label: 'SRS™ Z3X Stand-On', href: '/product/5902168' },
     ],
   },
