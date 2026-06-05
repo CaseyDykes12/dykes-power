@@ -1,7 +1,7 @@
 {
-  "asOfDate": "2026-04-24",
+  "asOfDate": "2026-06-05",
   "source": "Power Distributors / Gregory Nielsen (BASCO)",
-  "lastUpdated": "2026-05-13",
+  "lastUpdated": "2026-06-05",
   "items": {
     "5902204": {
       "description": "300R, 42, B23, NA",
@@ -27,11 +27,23 @@
       "productionThisMonth": 1.4,
       "endOfMonth": 9.4
     },
+    "5902207": {
+      "description": "300S, 52, K22, NA",
+      "today": 2,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 2.0
+    },
     "5902212": {
       "description": "300S, 52, B25, NA",
       "today": 29,
       "productionThisMonth": 0.0,
       "endOfMonth": 29.0
+    },
+    "5902144": {
+      "description": "300S Series (family — on lot)",
+      "today": 4,
+      "productionThisMonth": 0.0,
+      "endOfMonth": 4.0
     },
     "5902101": {
       "description": "500S, 48, B25, NA",
