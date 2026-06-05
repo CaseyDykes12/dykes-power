@@ -273,8 +273,9 @@ export default function ProductGallery({ images, alt, video }: Props) {
           </div>
 
           <div
-            className="w-full h-full flex items-center justify-center p-4 sm:p-12 overflow-auto"
+            className="w-full h-full flex items-center justify-center p-4 sm:p-12 overflow-auto cursor-default"
             style={{ touchAction: 'pinch-zoom' }}
+            onClick={() => setLightboxOpen(false)}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -312,7 +313,7 @@ export default function ProductGallery({ images, alt, video }: Props) {
           )}
 
           <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-xs text-white/60 text-center">
-            Pinch to zoom on mobile · double-click on desktop · Esc to close
+            Pinch to zoom on mobile · double-click on desktop · click outside or Esc to close
           </p>
         </div>
       )}
