@@ -885,7 +885,7 @@ export const products: Product[] =  [
   {
     "sku": "5902155",
     "name": "Ferris ISX™ 800 Series (Instant Rebate Included)",
-    "canonicalSku": "5902084",
+    "canonicalSku": "5902154",
     "category": "Zero Turn Mowers",
     "engine": "Kawasaki® FT730V",
     "horsepower": "24 hp",
@@ -909,7 +909,7 @@ export const products: Product[] =  [
   {
     "sku": "5902075",
     "name": "Ferris ISX™ 800 Series (Instant Rebate Included)",
-    "canonicalSku": "5902084",
+    "canonicalSku": "5902154",
     "category": "Zero Turn Mowers",
     "engine": "Briggs & Stratton® CXi",
     "horsepower": "27 hp",
@@ -933,7 +933,7 @@ export const products: Product[] =  [
   {
     "sku": "5902172",
     "name": "Ferris ISX™ 800 Series",
-    "canonicalSku": "5902084",
+    "canonicalSku": "5902154",
     "category": "Zero Turn Mowers",
     "engine": "Briggs & Stratton® CXi EFI-ETC w/ OilXtend™",
     "horsepower": "27 hp",
@@ -957,7 +957,7 @@ export const products: Product[] =  [
   {
     "sku": "5902073",
     "name": "Ferris ISX™ 800 Series",
-    "canonicalSku": "5902084",
+    "canonicalSku": "5902154",
     "category": "Zero Turn Mowers",
     "engine": "Kawasaki® FT730V",
     "horsepower": "24 hp",
@@ -981,7 +981,7 @@ export const products: Product[] =  [
   {
     "sku": "5902074",
     "name": "Ferris ISX™ 800 Series (Instant Rebate Included)",
-    "canonicalSku": "5902084",
+    "canonicalSku": "5902154",
     "category": "Zero Turn Mowers",
     "engine": "Kawasaki® FT730V EFI",
     "horsepower": "27 hp",
