@@ -137,6 +137,20 @@ const nextConfig: NextConfig = {
         destination: '/parts',
         permanent: true,
       },
+      // CUTOVER (2026-06-10): dykespower.com consolidated into
+      // dykesmotors.com/ferris-mowers. Every page 301s to its new home —
+      // the existing redirects above still normalize legacy paths first,
+      // then these catch-alls carry them across domains.
+      {
+        source: '/',
+        destination: 'https://dykesmotors.com/ferris-mowers',
+        permanent: true,
+      },
+      {
+        source: '/:path*',
+        destination: 'https://dykesmotors.com/ferris-mowers/:path*',
+        permanent: true,
+      },
     ];
   },
   images: {
