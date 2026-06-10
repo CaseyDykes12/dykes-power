@@ -192,9 +192,7 @@ export default function Footer() {
         <img src="/ferris-logo.png" alt="Ferris" className="h-4 w-auto opacity-60" />
       </div>
 
-      <div className="relative border-t border-gray-900 max-w-[1280px] mx-auto px-4 py-3 bg-white">
-        <GoogleCustomerReviewsBadge />
-      </div>
+      <GoogleCustomerReviewsBadge />
     </footer>
   );
 }
