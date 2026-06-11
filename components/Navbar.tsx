@@ -195,6 +195,15 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* All-brands strip */}
+      <div style={{ background: '#0a0a0a', borderBottom: '1px solid #1f1f1f', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 4, padding: '4px 16px', flexWrap: 'wrap' }}>
+        <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#ffffff', padding: '3px 10px', borderRadius: 999, background: '#1f1f1f', whiteSpace: 'nowrap' }}>Ferris Mowers</span>
+        <a href="https://www.dykesmotors.com/site/bobcat" target="_blank" rel="noopener noreferrer" style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#6b7280', padding: '3px 10px', borderRadius: 999, textDecoration: 'none', whiteSpace: 'nowrap' }}>Bobcat</a>
+        <Link href="/ls-tractors" style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#6b7280', padding: '3px 10px', borderRadius: 999, textDecoration: 'none', whiteSpace: 'nowrap' }}>LS Tractors</Link>
+        <Link href="/massimo-powersports" style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#6b7280', padding: '3px 10px', borderRadius: 999, textDecoration: 'none', whiteSpace: 'nowrap' }}>Massimo</Link>
+        <a href="https://www.dykesmotors.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#6b7280', padding: '3px 10px', borderRadius: 999, textDecoration: 'none', whiteSpace: 'nowrap' }}>Used Vehicles</a>
+      </div>
+
       {/* Mobile category strip */}
       <nav
         aria-label="Shop categories"
