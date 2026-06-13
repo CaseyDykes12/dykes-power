@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import { products, type Product } from '@/lib/products';
 import { parts } from '@/lib/parts';
 import { getProductImages } from '@/lib/productImages';
-import { getDistributorStock, getBackorderAvailabilityDate } from '@/lib/distributorInventory';
 import { getRichContent } from '@/lib/productRichContent';
 import { getFamilyTagline } from '@/lib/familyTaglines';
 
@@ -72,8 +71,7 @@ function buildDescription(p: Product): string {
     'Sold by Dykes Motors Power Equipment, your authorized Ferris dealer ' +
       'in Collins, Mississippi — serving Hattiesburg, Laurel, Petal, ' +
       'Seminary, Mendenhall, Magee, Columbia, Brookhaven, and the Pine Belt ' +
-      'region. Free nationwide shipping on every Ferris mower with no ' +
-      'minimum. Financing available as low as 4.9% APR for qualified ' +
+      'region. Financing available as low as 4.9% APR for qualified ' +
       'credit. Order online at dykespower.com or call (601) 641-5475.',
   );
 
@@ -96,14 +94,10 @@ function escapeXml(str: string): string {
     .replace(/'/g, '&apos;');
 }
 
-function mapAvailability(sku: string): 'in_stock' | 'backorder' {
-  // Drive availability off the weekly Power Distributors snapshot so the
-  // feed agrees with the visible badge on dykespower.com. SKUs with at
-  // least one unit on hand at the distributor today => in_stock. Zero on
-  // hand (or SKU not in this week's sheet) => backorder — Google's spec
-  // value for "available to order but not yet shippable today".
-  const stock = getDistributorStock(sku);
-  return stock && stock.today >= 1 ? 'in_stock' : 'backorder';
+function mapAvailability(_sku: string): 'in_stock' {
+  // Dealer has all units in stock. Distributor warehouse counts are not
+  // a reliable proxy for dealer inventory — always report in_stock.
+  return 'in_stock';
 }
 
 function mapCategory(category: string): string {
@@ -158,11 +152,7 @@ export async function GET() {
     <g:checkout_link_template>${SITE}/buy/${escapeXml(p.sku)}</g:checkout_link_template>
     <g:image_link>${escapeXml(imageUrl)}</g:image_link>
 ${additionalImages}
-    <g:availability>${mapAvailability(p.sku)}</g:availability>${
-      mapAvailability(p.sku) === 'backorder'
-        ? `\n    <g:availability_date>${getBackorderAvailabilityDate()}</g:availability_date>`
-        : ''
-    }
+    <g:availability>${mapAvailability(p.sku)}</g:availability>
     <g:price>${p.price!.toFixed(2)} USD</g:price>
     <g:brand>Ferris</g:brand>
     <g:mpn>${escapeXml(p.sku)}</g:mpn>${sizeTag}
