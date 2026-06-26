@@ -18,6 +18,71 @@ Not advertising. Not vague hype. Not the same five marketing phrases on every pa
 
 ---
 
+## Product Authority Standard
+
+Dykes Power should become a source people trust for Ferris mowers, mower service, mower parts, and commercial mowing decisions in Mississippi. Every post should prove we know the machines, not just that we sell them.
+
+Before writing, pick:
+
+1. **One primary page to build from** — `/catalog`, `/product/{SKU}`, `/why-ferris`, `/parts`, `/service`, `/financing`, or `/locations/{city}`.
+2. **One specific buyer question** the page does not fully answer yet.
+3. **One proof source** — product data from `lib/products.ts`, a real product page, a Ferris spec/warranty page, an engine manufacturer page, a service interval, or a real local use case.
+
+Use the Gear Patrol pattern Casey shared, adapted for our site:
+
+- Lead with what matters now: a model spotlight, a price/value angle, a seasonal need, a service issue, or a city/use-case question.
+- Show the product with a real image near the top.
+- Explain why the model matters, who it fits, and who should skip it.
+- Link back to the landing or product page so the blog strengthens the page that should rank.
+- Include enough specs that a commercial buyer can make a better decision: deck, engine, suspension, acres/hour, service reality, or financing angle.
+
+Never invent a discount, price, inventory status, warranty term, spec, or quote. If the product file or official source does not verify it, do not write it as fact.
+
+### What makes a Ferris post worth citing
+
+Each post needs at least two of these:
+
+- Specific model guidance: ISX 800 vs ISX 2200, SRS Z2 vs Z3X, deck width, engine choice.
+- Real working context: chicken house pads, turf routes, cemetery mowing, schools, cattle land, hunting property.
+- Practical maintenance detail: belts, blades, filters, Oil Guard, hydro service, tire wear, spindle checks.
+- Honest comparison to another machine class or brand, without trash-talking.
+- Local Mississippi conditions: heat, humidity, Bahia/Bermuda grass, soft ground, storm cleanup, long mowing season.
+- A "who should not buy this" paragraph.
+
+If the post could be published by any mower dealer in America without changing anything but the name, it is too generic.
+
+---
+
+## Backlinks, References, and Source Hygiene
+
+Internal links are not optional. Every post should include **3–5 useful internal backlinks**:
+
+- The primary landing, city, or product page it supports.
+- One related catalog/product page.
+- One support page such as `/parts`, `/service`, `/financing`, `/why-ferris`, or a related blog post.
+
+External references are allowed when they make a factual claim stronger. Use **1–3 references** only when needed.
+
+Good references:
+
+- Official Ferris product, warranty, suspension, or iCD pages.
+- Briggs & Stratton Vanguard, Kawasaki, or other engine manufacturer pages.
+- Operator manuals or maintenance schedules when available.
+- Mississippi State Extension or similar turf/ag references for grass, heat, or land-management claims.
+- Google Maps or official map data for real drive distances on city landing pages.
+
+Bad references:
+
+- Competitor dealer pages.
+- Affiliate review sites.
+- Forums as proof.
+- Random blogs repeating manufacturer copy.
+- Outbound links that pull the buyer away from Dykes Power without adding trust.
+
+Use references naturally in the sentence, or add a short `References` section at the bottom when a post uses several factual sources. Do not make the post sound academic. The counter-at-the-shop voice still wins.
+
+---
+
 ## Voice & Tone
 Write like a person who works at the dealership and knows the equipment firsthand.
 
@@ -48,6 +113,12 @@ Write like a person who works at the dealership and knows the equipment firsthan
 - AVOID `/images/ferris/lifestyle-landscaper-1.webp` (the stand-on-operator hero shot — owner rejected it twice).
 - Use real images from `/public/images/ferris/`.
 - Frontmatter `image` field required.
+- Every post includes **1–2 real product photos** in the body, beyond the frontmatter `image` field.
+- Markdown image syntax on its own line: `![Ferris ISX 800 zero turn mower](/images/ferris/...)`
+- Use ONLY image paths that exist in this repo. Pull them from product entries in `lib/products.ts`. For a path like `/images/ferris/isx800.webp`, verify it with `test -f public/images/ferris/isx800.webp` before committing.
+- Match the image to the model being discussed. Use the real model name in the alt text.
+- First image goes after the intro. Optional second image goes beside the model deep-dive section.
+- Never use stock photos, third-party hotlinks, competitor images, or the DF logo as a post image.
 
 ---
 
@@ -147,15 +218,16 @@ Use subheadings naturally — not as a rigid template. 3–5 H2 sections is typi
 ---
 
 ## Internal Linking
-Every post must link to at least one of:
+Every post must link to at least three internal pages when natural:
 - `/catalog` (browse/buy)
 - `/why-ferris` (tech)
 - `/parts` (parts)
 - `/service` (service)
 - A specific product page like `/product/ISX800` (when discussing a model)
 - A specific `/locations/{city}` page (when relevant to a regional reader)
+- A related blog post when it helps the reader keep learning
 
-Markdown link format: `[anchor text](/path)`. Don't link to dykesmotors.com or external Ferris pages from blog body.
+Markdown link format: `[anchor text](/path)`. Do not link to competitor dealers, marketplaces, or external Ferris sellers from the blog body. External references are allowed only under the source-hygiene rules above.
 
 When a `/locations/{city}` page exists for a city the post mentions, link to it.
 
@@ -199,6 +271,8 @@ Filename: `lowercase-hyphenated-slug.md` (no special characters).
 ## Landing Pages (`/locations/{city}/page.tsx`)
 
 A landing page is the SEO anchor for a specific Mississippi city. Built once per city, then referenced by future blog posts.
+
+Treat landing pages as pillars and blog posts as spokes. The Tuesday page should target the bottom-funnel city query. The Wednesday companion blog should answer one narrower question for that same city and link back to the landing page with natural anchor text, like "Ferris mower dealer near Laurel" or "Ferris service near Magee."
 
 ### Cities planned (build one per Tuesday, oldest unbuilt first)
 Hattiesburg, Laurel, Petal, Magee, Mendenhall, Taylorsville, Raleigh, Mt Olive, Prentiss, Bassfield, Monticello, Columbia, Seminary, Sumrall, Brooklyn, Brookhaven, Poplarville, Jackson, Gulfport, Biloxi, Meridian, Vicksburg, Tupelo, Pascagoula, Starkville, Columbus, Natchez
