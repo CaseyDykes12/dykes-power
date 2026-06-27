@@ -1,0 +1,747 @@
+{
+  "app/about/page.tsx": {
+    "mtime": 1781617119.018392,
+    "ast_hash": "b42df6faa193df13a6fbd12089e77990",
+    "semantic_hash": "b42df6faa193df13a6fbd12089e77990"
+  },
+  "app/accessories/page.tsx": {
+    "mtime": 1781617119.018392,
+    "ast_hash": "4c472cfc9967aa7d943b00aae4d8d463",
+    "semantic_hash": "4c472cfc9967aa7d943b00aae4d8d463"
+  },
+  "app/api/feed/route.ts": {
+    "mtime": 1781630365.2730212,
+    "ast_hash": "3ac3ac34dbaa3882381472e73e2499fc",
+    "semantic_hash": "3ac3ac34dbaa3882381472e73e2499fc"
+  },
+  "app/api/financing/route.ts": {
+    "mtime": 1781617119.0193923,
+    "ast_hash": "f0c5a018c1f19a61f29a9c680bd6d75b",
+    "semantic_hash": "f0c5a018c1f19a61f29a9c680bd6d75b"
+  },
+  "app/api/lead/route.ts": {
+    "mtime": 1781617119.0193923,
+    "ast_hash": "0601c57e7ab60bf9c0592caf96cef9b6",
+    "semantic_hash": "0601c57e7ab60bf9c0592caf96cef9b6"
+  },
+  "app/api/local-feed/route.ts": {
+    "mtime": 1781617119.0193923,
+    "ast_hash": "5421a53a9e26a2a28446fc5d4bed29fd",
+    "semantic_hash": "5421a53a9e26a2a28446fc5d4bed29fd"
+  },
+  "app/api/order/route.ts": {
+    "mtime": 1781617119.0193923,
+    "ast_hash": "fa383ff7f8ff10b9cb20c15a958c6eb7",
+    "semantic_hash": "fa383ff7f8ff10b9cb20c15a958c6eb7"
+  },
+  "app/blog/[slug]/page.tsx": {
+    "mtime": 1781617119.0203922,
+    "ast_hash": "7d69de1f43e26f3106b8af0f8e82ec62",
+    "semantic_hash": "7d69de1f43e26f3106b8af0f8e82ec62"
+  },
+  "app/blog/page.tsx": {
+    "mtime": 1781617119.0203922,
+    "ast_hash": "2e26f7b5a7ca547a701bf7a57cd08399",
+    "semantic_hash": "2e26f7b5a7ca547a701bf7a57cd08399"
+  },
+  "app/buy/[sku]/BuyRedirect.tsx": {
+    "mtime": 1781617119.0203922,
+    "ast_hash": "4e9767108aa96cc6d4e106b3e037e3ef",
+    "semantic_hash": "4e9767108aa96cc6d4e106b3e037e3ef"
+  },
+  "app/buy/[sku]/page.tsx": {
+    "mtime": 1781617119.0203922,
+    "ast_hash": "9aee68c93f9a7431e4da6c9f71a82074",
+    "semantic_hash": "9aee68c93f9a7431e4da6c9f71a82074"
+  },
+  "app/cart/layout.tsx": {
+    "mtime": 1781617119.0203922,
+    "ast_hash": "bd6732701667168389eb41f64b3088ff",
+    "semantic_hash": "bd6732701667168389eb41f64b3088ff"
+  },
+  "app/cart/page.tsx": {
+    "mtime": 1781617119.0203922,
+    "ast_hash": "4bf2dbe47c35f3ad0d75234a9b0f55ce",
+    "semantic_hash": "4bf2dbe47c35f3ad0d75234a9b0f55ce"
+  },
+  "app/catalog/page.tsx": {
+    "mtime": 1781617119.0203922,
+    "ast_hash": "a9cf5b25b9f57c5af1f552a08da999ca",
+    "semantic_hash": "a9cf5b25b9f57c5af1f552a08da999ca"
+  },
+  "app/checkout/deposit/page.tsx": {
+    "mtime": 1781617119.021392,
+    "ast_hash": "3269c93a71066812d1b959e591c52d85",
+    "semantic_hash": "3269c93a71066812d1b959e591c52d85"
+  },
+  "app/checkout/layout.tsx": {
+    "mtime": 1781617119.021392,
+    "ast_hash": "5011a689338c3e042884a6a1d5930396",
+    "semantic_hash": "5011a689338c3e042884a6a1d5930396"
+  },
+  "app/checkout/page.tsx": {
+    "mtime": 1781617119.021392,
+    "ast_hash": "2caeeea6d285ce2d5400b472c68635ec",
+    "semantic_hash": "2caeeea6d285ce2d5400b472c68635ec"
+  },
+  "app/contact/layout.tsx": {
+    "mtime": 1781617119.021392,
+    "ast_hash": "b1c6dcbdbbe3acdc507e20b6ab075cb9",
+    "semantic_hash": "b1c6dcbdbbe3acdc507e20b6ab075cb9"
+  },
+  "app/contact/page.tsx": {
+    "mtime": 1781617119.021392,
+    "ast_hash": "f2a896a8a7b8426450f76bf5d435cb28",
+    "semantic_hash": "f2a896a8a7b8426450f76bf5d435cb28"
+  },
+  "app/ferris-mowers-hattiesburg-ms/page.tsx": {
+    "mtime": 1781617119.022392,
+    "ast_hash": "9dc4f5645f388ce5e3f5c6d81e504b8c",
+    "semantic_hash": "9dc4f5645f388ce5e3f5c6d81e504b8c"
+  },
+  "app/ferris-mowers-laurel-ms/page.tsx": {
+    "mtime": 1781617119.022392,
+    "ast_hash": "6d6123de0f2c33651752746c8e9d1a11",
+    "semantic_hash": "6d6123de0f2c33651752746c8e9d1a11"
+  },
+  "app/financing/layout.tsx": {
+    "mtime": 1781617119.022392,
+    "ast_hash": "d0732cc5cd59b6b6bd610eb92984b841",
+    "semantic_hash": "d0732cc5cd59b6b6bd610eb92984b841"
+  },
+  "app/financing/page.tsx": {
+    "mtime": 1781617119.022392,
+    "ast_hash": "d4eb07421bded7edadbac7fc214a7fec",
+    "semantic_hash": "d4eb07421bded7edadbac7fc214a7fec"
+  },
+  "app/layout.tsx": {
+    "mtime": 1781617119.0233922,
+    "ast_hash": "deb3785b6aab8ee3256623b60b6e6a86",
+    "semantic_hash": "deb3785b6aab8ee3256623b60b6e6a86"
+  },
+  "app/lead-form/page.tsx": {
+    "mtime": 1781617119.0233922,
+    "ast_hash": "02181669ebc5552555874ae205121e0b",
+    "semantic_hash": "02181669ebc5552555874ae205121e0b"
+  },
+  "app/locations/hattiesburg/page.tsx": {
+    "mtime": 1781617119.0233922,
+    "ast_hash": "de878b343fe7b04697fb2d764e08c411",
+    "semantic_hash": "de878b343fe7b04697fb2d764e08c411"
+  },
+  "app/locations/laurel/page.tsx": {
+    "mtime": 1781617119.0243921,
+    "ast_hash": "2d82fcce20b8b4eedbab726ad4b016ff",
+    "semantic_hash": "2d82fcce20b8b4eedbab726ad4b016ff"
+  },
+  "app/locations/magee/page.tsx": {
+    "mtime": 1781617119.0243921,
+    "ast_hash": "8c31d64d7c0d7d6e7e308dacbe6d6fbe",
+    "semantic_hash": "8c31d64d7c0d7d6e7e308dacbe6d6fbe"
+  },
+  "app/locations/mendenhall/page.tsx": {
+    "mtime": 1781617119.0243921,
+    "ast_hash": "743ae72b9663659766036ecb1ffd195a",
+    "semantic_hash": "743ae72b9663659766036ecb1ffd195a"
+  },
+  "app/locations/petal/page.tsx": {
+    "mtime": 1781617119.025392,
+    "ast_hash": "d84524c52e37e1924344e08319a994b8",
+    "semantic_hash": "d84524c52e37e1924344e08319a994b8"
+  },
+  "app/ls-tractors/page.tsx": {
+    "mtime": 1781617119.025392,
+    "ast_hash": "b6530df59bb910947a441722c7939234",
+    "semantic_hash": "b6530df59bb910947a441722c7939234"
+  },
+  "app/massimo-powersports/page.tsx": {
+    "mtime": 1781617119.025392,
+    "ast_hash": "571517ec9c92131f9aa2aec7b6c347df",
+    "semantic_hash": "571517ec9c92131f9aa2aec7b6c347df"
+  },
+  "app/not-found.tsx": {
+    "mtime": 1781617119.025392,
+    "ast_hash": "bd1ee1b7ad17d94b7d702808b80cd221",
+    "semantic_hash": "bd1ee1b7ad17d94b7d702808b80cd221"
+  },
+  "app/order-confirmed/layout.tsx": {
+    "mtime": 1781617119.025392,
+    "ast_hash": "6d51bd393deaa39e7ad208c3b68b4b61",
+    "semantic_hash": "6d51bd393deaa39e7ad208c3b68b4b61"
+  },
+  "app/order-confirmed/page.tsx": {
+    "mtime": 1781617119.025392,
+    "ast_hash": "8fb79500c400b635b27dd040c547f5c1",
+    "semantic_hash": "8fb79500c400b635b27dd040c547f5c1"
+  },
+  "app/page.tsx": {
+    "mtime": 1781617119.025392,
+    "ast_hash": "52ada7d0e3f18f9aec5cc688d28d352e",
+    "semantic_hash": "52ada7d0e3f18f9aec5cc688d28d352e"
+  },
+  "app/parts/[partNumber]/page.tsx": {
+    "mtime": 1781617119.026392,
+    "ast_hash": "3945baae9d983501bda2d7abba63dfa1",
+    "semantic_hash": "3945baae9d983501bda2d7abba63dfa1"
+  },
+  "app/parts/layout.tsx": {
+    "mtime": 1781617119.026392,
+    "ast_hash": "f2b908c8c63d074eadfd3172b2d64571",
+    "semantic_hash": "f2b908c8c63d074eadfd3172b2d64571"
+  },
+  "app/parts/page.tsx": {
+    "mtime": 1781617119.026392,
+    "ast_hash": "009e14f9764e53f99700deb44039e7c7",
+    "semantic_hash": "009e14f9764e53f99700deb44039e7c7"
+  },
+  "app/privacy/page.tsx": {
+    "mtime": 1781617119.026392,
+    "ast_hash": "daeb04ca5efe9e89f40cc35db47a10cd",
+    "semantic_hash": "daeb04ca5efe9e89f40cc35db47a10cd"
+  },
+  "app/product/[sku]/page.tsx": {
+    "mtime": 1781617119.0273921,
+    "ast_hash": "f3fb4afb4448ef0752ee6746e326a70c",
+    "semantic_hash": "f3fb4afb4448ef0752ee6746e326a70c"
+  },
+  "app/products/[category]/page.tsx": {
+    "mtime": 1781617119.0273921,
+    "ast_hash": "cb542858edec5c4cf0a0c58c89ab541e",
+    "semantic_hash": "cb542858edec5c4cf0a0c58c89ab541e"
+  },
+  "app/quiz/page.tsx": {
+    "mtime": 1781617119.0273921,
+    "ast_hash": "dca7d53ccb5812dea5c47aefd67310f3",
+    "semantic_hash": "dca7d53ccb5812dea5c47aefd67310f3"
+  },
+  "app/robots.ts": {
+    "mtime": 1781617119.0273921,
+    "ast_hash": "8059d9bff05e8d8c5179fd282a98cd23",
+    "semantic_hash": "8059d9bff05e8d8c5179fd282a98cd23"
+  },
+  "app/service/page.tsx": {
+    "mtime": 1781617119.028392,
+    "ast_hash": "153110ae21c1db3d652a6d0dfc6103b1",
+    "semantic_hash": "153110ae21c1db3d652a6d0dfc6103b1"
+  },
+  "app/shipping-returns/page.tsx": {
+    "mtime": 1781617119.028392,
+    "ast_hash": "5ad4993bc396ef64524dca5bf1f43bc0",
+    "semantic_hash": "5ad4993bc396ef64524dca5bf1f43bc0"
+  },
+  "app/sitemap.ts": {
+    "mtime": 1781617119.028392,
+    "ast_hash": "8dd365ea47f85e1b24e6c236ca2df522",
+    "semantic_hash": "8dd365ea47f85e1b24e6c236ca2df522"
+  },
+  "app/sms-terms/page.tsx": {
+    "mtime": 1781617119.028392,
+    "ast_hash": "da0a9df0389f50a7e973a5fb03a1f292",
+    "semantic_hash": "da0a9df0389f50a7e973a5fb03a1f292"
+  },
+  "app/support/page.tsx": {
+    "mtime": 1781617119.028392,
+    "ast_hash": "6481dfa1ee6d3800fc28fd4c687e37d0",
+    "semantic_hash": "6481dfa1ee6d3800fc28fd4c687e37d0"
+  },
+  "app/terms/page.tsx": {
+    "mtime": 1781617119.029392,
+    "ast_hash": "7627522b836757745921b2de5cfed6bb",
+    "semantic_hash": "7627522b836757745921b2de5cfed6bb"
+  },
+  "app/trailers/page.tsx": {
+    "mtime": 1781617119.029392,
+    "ast_hash": "eaabdaec84fc31c87af023bfffb5fd70",
+    "semantic_hash": "eaabdaec84fc31c87af023bfffb5fd70"
+  },
+  "app/warranty/page.tsx": {
+    "mtime": 1781617119.029392,
+    "ast_hash": "33e940d3c060a1b0711eaf5bdc3dd268",
+    "semantic_hash": "33e940d3c060a1b0711eaf5bdc3dd268"
+  },
+  "app/why-ferris/page.tsx": {
+    "mtime": 1781617119.030392,
+    "ast_hash": "37606ee3a820b66fa3b61a7212e88831",
+    "semantic_hash": "37606ee3a820b66fa3b61a7212e88831"
+  },
+  "components/AccessoryCard.tsx": {
+    "mtime": 1781617119.030392,
+    "ast_hash": "ce91cfcdbb63598e850b6df25392d551",
+    "semantic_hash": "ce91cfcdbb63598e850b6df25392d551"
+  },
+  "components/AddAccessoryToCartButton.tsx": {
+    "mtime": 1781617119.030392,
+    "ast_hash": "ce030f78649075d18aedd64774690e7a",
+    "semantic_hash": "ce030f78649075d18aedd64774690e7a"
+  },
+  "components/AddPartToCartButton.tsx": {
+    "mtime": 1781617119.030392,
+    "ast_hash": "435e3692df7010ad5d0d62e9f927bcf0",
+    "semantic_hash": "435e3692df7010ad5d0d62e9f927bcf0"
+  },
+  "components/AddToCartButton.tsx": {
+    "mtime": 1781617119.030392,
+    "ast_hash": "476d0ddbb2ca45e0a49e70cb1c83771b",
+    "semantic_hash": "476d0ddbb2ca45e0a49e70cb1c83771b"
+  },
+  "components/BuildYourFerris.tsx": {
+    "mtime": 1781617119.030392,
+    "ast_hash": "4ec7d9560098f7c0a3ad504cc2e6379d",
+    "semantic_hash": "4ec7d9560098f7c0a3ad504cc2e6379d"
+  },
+  "components/CartIcon.tsx": {
+    "mtime": 1781617119.030392,
+    "ast_hash": "e2303eedd357feaf0426f6fb0de9854e",
+    "semantic_hash": "e2303eedd357feaf0426f6fb0de9854e"
+  },
+  "components/CatalogClient.tsx": {
+    "mtime": 1781617119.030392,
+    "ast_hash": "364305e3bd8ca7ff45797e73d332aeab",
+    "semantic_hash": "364305e3bd8ca7ff45797e73d332aeab"
+  },
+  "components/CategoryBrowser.tsx": {
+    "mtime": 1781617119.030392,
+    "ast_hash": "e5d6f48c4dc3d4b3970298578e1c9f96",
+    "semantic_hash": "e5d6f48c4dc3d4b3970298578e1c9f96"
+  },
+  "components/FeaturedSeries.tsx": {
+    "mtime": 1781617119.030392,
+    "ast_hash": "214d59285d515e1f19567b545c6a8b43",
+    "semantic_hash": "214d59285d515e1f19567b545c6a8b43"
+  },
+  "components/FerrisRebateBanner.tsx": {
+    "mtime": 1781617119.031392,
+    "ast_hash": "6645c0aae73c36c75d2a71c0e56ac6af",
+    "semantic_hash": "6645c0aae73c36c75d2a71c0e56ac6af"
+  },
+  "components/FinancingOptions.tsx": {
+    "mtime": 1781617119.031392,
+    "ast_hash": "683e3a43356148fbd482d40e603153b7",
+    "semantic_hash": "683e3a43356148fbd482d40e603153b7"
+  },
+  "components/Footer.tsx": {
+    "mtime": 1781617119.031392,
+    "ast_hash": "543e3cf16aeeb6a9a7263226614defe8",
+    "semantic_hash": "543e3cf16aeeb6a9a7263226614defe8"
+  },
+  "components/GoogleCustomerReviews.tsx": {
+    "mtime": 1781617119.031392,
+    "ast_hash": "cb1512055a97fc535e480fc5aa7fabe5",
+    "semantic_hash": "cb1512055a97fc535e480fc5aa7fabe5"
+  },
+  "components/GoogleCustomerReviewsBadge.tsx": {
+    "mtime": 1781617119.031392,
+    "ast_hash": "7d305ed601a34d2db67acb027cba454a",
+    "semantic_hash": "7d305ed601a34d2db67acb027cba454a"
+  },
+  "components/HomeAboutTeam.tsx": {
+    "mtime": 1781617119.031392,
+    "ast_hash": "631311316d24e058f22b09d56b265402",
+    "semantic_hash": "631311316d24e058f22b09d56b265402"
+  },
+  "components/HomepageStickyCTA.tsx": {
+    "mtime": 1781617119.032392,
+    "ast_hash": "632809b8c6276e2bf73d929f7757ad63",
+    "semantic_hash": "632809b8c6276e2bf73d929f7757ad63"
+  },
+  "components/MowCalculator.tsx": {
+    "mtime": 1781617119.032392,
+    "ast_hash": "83b1c3b0e592616b2bbf9e54c778057f",
+    "semantic_hash": "83b1c3b0e592616b2bbf9e54c778057f"
+  },
+  "components/Navbar.tsx": {
+    "mtime": 1781617119.032392,
+    "ast_hash": "458403a5907d5cfade424d2a00f6e700",
+    "semantic_hash": "458403a5907d5cfade424d2a00f6e700"
+  },
+  "components/PayPalCheckout.tsx": {
+    "mtime": 1781617119.032392,
+    "ast_hash": "f1d98f65d75c5b48bd96c0e5b9f9b3d0",
+    "semantic_hash": "f1d98f65d75c5b48bd96c0e5b9f9b3d0"
+  },
+  "components/PriceBlock.tsx": {
+    "mtime": 1781617119.032392,
+    "ast_hash": "8fb980a91da91ddedb778a23bd80d3fd",
+    "semantic_hash": "8fb980a91da91ddedb778a23bd80d3fd"
+  },
+  "components/ProductCard.tsx": {
+    "mtime": 1781617119.033392,
+    "ast_hash": "e5ca5f8c5056f3a5ee96cc9fda9b45c3",
+    "semantic_hash": "e5ca5f8c5056f3a5ee96cc9fda9b45c3"
+  },
+  "components/ProductGallery.tsx": {
+    "mtime": 1781617119.033392,
+    "ast_hash": "2850ac4f089142bedd29a187a4586d6c",
+    "semantic_hash": "2850ac4f089142bedd29a187a4586d6c"
+  },
+  "components/ProductImage.tsx": {
+    "mtime": 1781617119.033392,
+    "ast_hash": "9714c56f4e95f318fe069e020ff7f113",
+    "semantic_hash": "9714c56f4e95f318fe069e020ff7f113"
+  },
+  "components/ProductLeadForm.tsx": {
+    "mtime": 1781617119.033392,
+    "ast_hash": "4d3ab828ab25d1013b9f73be076bd79d",
+    "semantic_hash": "4d3ab828ab25d1013b9f73be076bd79d"
+  },
+  "components/ProductReviews.tsx": {
+    "mtime": 1781617119.033392,
+    "ast_hash": "50c1bc01debfa9c07bbabfb350f878f2",
+    "semantic_hash": "50c1bc01debfa9c07bbabfb350f878f2"
+  },
+  "components/ProductVideo.tsx": {
+    "mtime": 1781617119.033392,
+    "ast_hash": "d5d6d74220f3a891b1f03c62e4086e56",
+    "semantic_hash": "d5d6d74220f3a891b1f03c62e4086e56"
+  },
+  "components/QuickQualifyButton.tsx": {
+    "mtime": 1781617119.033392,
+    "ast_hash": "a57392c643120276834fc65ebe646364",
+    "semantic_hash": "a57392c643120276834fc65ebe646364"
+  },
+  "components/SiteStickyCTA.tsx": {
+    "mtime": 1781617119.033392,
+    "ast_hash": "65d4dd22f760b3d85c7869bb62531000",
+    "semantic_hash": "65d4dd22f760b3d85c7869bb62531000"
+  },
+  "components/SpeakWithRepButton.tsx": {
+    "mtime": 1781617119.034392,
+    "ast_hash": "d91d783f5f248d43af6a6d3e82072959",
+    "semantic_hash": "d91d783f5f248d43af6a6d3e82072959"
+  },
+  "components/StickyMobileCTA.tsx": {
+    "mtime": 1781617119.034392,
+    "ast_hash": "3cf71b4cd94e018c617cdb74909042be",
+    "semantic_hash": "3cf71b4cd94e018c617cdb74909042be"
+  },
+  "components/SuspensionWarrantyBadge.tsx": {
+    "mtime": 1781617119.034392,
+    "ast_hash": "3b8506bc7aad24aa2b10139b39d1817e",
+    "semantic_hash": "3b8506bc7aad24aa2b10139b39d1817e"
+  },
+  "components/TextUsButton.tsx": {
+    "mtime": 1781617119.034392,
+    "ast_hash": "37e76c6445b7212cdb3e601fc228ffb9",
+    "semantic_hash": "37e76c6445b7212cdb3e601fc228ffb9"
+  },
+  "components/VariantDeckSelector.tsx": {
+    "mtime": 1781617119.034392,
+    "ast_hash": "ee703da4bc67fc3af2937e7f65aa2df5",
+    "semantic_hash": "ee703da4bc67fc3af2937e7f65aa2df5"
+  },
+  "components/campaign/DayOfWorkGallery.tsx": {
+    "mtime": 1781617119.034392,
+    "ast_hash": "b824818b9b83197508a6ebb747feb817",
+    "semantic_hash": "b824818b9b83197508a6ebb747feb817"
+  },
+  "components/campaign/DealerStory.tsx": {
+    "mtime": 1781617119.034392,
+    "ast_hash": "fc06b687dc9e9a0cd8feee16ff3fa063",
+    "semantic_hash": "fc06b687dc9e9a0cd8feee16ff3fa063"
+  },
+  "components/campaign/FerrisHero.tsx": {
+    "mtime": 1781617119.034392,
+    "ast_hash": "042d62e59f897251c51f01f2af71d0e0",
+    "semantic_hash": "042d62e59f897251c51f01f2af71d0e0"
+  },
+  "components/campaign/StatTile.tsx": {
+    "mtime": 1781617119.034392,
+    "ast_hash": "fc2c3cb4a235ef4e8a05ad006d19175b",
+    "semantic_hash": "fc2c3cb4a235ef4e8a05ad006d19175b"
+  },
+  "components/campaign/WatchTheFilm.tsx": {
+    "mtime": 1781617119.034392,
+    "ast_hash": "fb1a846b7d4363b234f0a3c860112c37",
+    "semantic_hash": "fb1a846b7d4363b234f0a3c860112c37"
+  },
+  "components/campaign/WhyWeCarryFerris.tsx": {
+    "mtime": 1781617119.034392,
+    "ast_hash": "3361c41d0b52d840fccae701b080ddc9",
+    "semantic_hash": "3361c41d0b52d840fccae701b080ddc9"
+  },
+  "data/distributor-inventory.json": {
+    "mtime": 1781617119.040392,
+    "ast_hash": "c10bbb18804c361ee576f6aac6e54a8c",
+    "semantic_hash": "c10bbb18804c361ee576f6aac6e54a8c"
+  },
+  "eslint.config.mjs": {
+    "mtime": 1781617119.1933906,
+    "ast_hash": "dfa1f5f6a7037bf39dc510f30b180002",
+    "semantic_hash": "dfa1f5f6a7037bf39dc510f30b180002"
+  },
+  "lib/accessories.ts": {
+    "mtime": 1781617119.1933906,
+    "ast_hash": "4163c335e456e194e9c6e54e34b6d5ee",
+    "semantic_hash": "4163c335e456e194e9c6e54e34b6d5ee"
+  },
+  "lib/blog.ts": {
+    "mtime": 1781617119.1933906,
+    "ast_hash": "291e3921c701fba34c2afc6dd9fb4146",
+    "semantic_hash": "291e3921c701fba34c2afc6dd9fb4146"
+  },
+  "lib/cart.ts": {
+    "mtime": 1781617119.1933906,
+    "ast_hash": "b7951085dc3f80ba5264c8dda6064061",
+    "semantic_hash": "b7951085dc3f80ba5264c8dda6064061"
+  },
+  "lib/categories.ts": {
+    "mtime": 1781617119.1933906,
+    "ast_hash": "d921e05c3257c76b372a975d19c8c4b4",
+    "semantic_hash": "d921e05c3257c76b372a975d19c8c4b4"
+  },
+  "lib/checkout.ts": {
+    "mtime": 1781617119.1933906,
+    "ast_hash": "5c025697c27a0a18474383e18b4d3df7",
+    "semantic_hash": "5c025697c27a0a18474383e18b4d3df7"
+  },
+  "lib/distributorInventory.ts": {
+    "mtime": 1781617119.1933906,
+    "ast_hash": "01129e71db028cc53f753ddf7916c07c",
+    "semantic_hash": "01129e71db028cc53f753ddf7916c07c"
+  },
+  "lib/familyTaglines.ts": {
+    "mtime": 1781617119.1943905,
+    "ast_hash": "679947bc4e2d0908f3a26f9b250a0e38",
+    "semantic_hash": "679947bc4e2d0908f3a26f9b250a0e38"
+  },
+  "lib/mow-calculator/ferris-specs.ts": {
+    "mtime": 1781617119.1943905,
+    "ast_hash": "513c279b0e695016bf1099b85f203359",
+    "semantic_hash": "513c279b0e695016bf1099b85f203359"
+  },
+  "lib/parts.ts": {
+    "mtime": 1781617119.1943905,
+    "ast_hash": "b92b9ed0e5682a60bcfdcbc78cf76389",
+    "semantic_hash": "b92b9ed0e5682a60bcfdcbc78cf76389"
+  },
+  "lib/productImages.ts": {
+    "mtime": 1781617119.1943905,
+    "ast_hash": "216b8b77e30bb6928c2f7cadafe7bf11",
+    "semantic_hash": "216b8b77e30bb6928c2f7cadafe7bf11"
+  },
+  "lib/productReviews.ts": {
+    "mtime": 1781617119.1943905,
+    "ast_hash": "800d33e1ba17776d6ff6d785e7d17a58",
+    "semantic_hash": "800d33e1ba17776d6ff6d785e7d17a58"
+  },
+  "lib/productRichContent.ts": {
+    "mtime": 1781617119.1943905,
+    "ast_hash": "2524dbad5a1b446d115396e0724e8a68",
+    "semantic_hash": "2524dbad5a1b446d115396e0724e8a68"
+  },
+  "lib/products.ts": {
+    "mtime": 1781617119.1953905,
+    "ast_hash": "355d83a7a787603f5787e33f5fe25fca",
+    "semantic_hash": "355d83a7a787603f5787e33f5fe25fca"
+  },
+  "next.config.ts": {
+    "mtime": 1781617119.1953905,
+    "ast_hash": "66b655eb76cbb0ff3408ad67a5c49e6b",
+    "semantic_hash": "66b655eb76cbb0ff3408ad67a5c49e6b"
+  },
+  "package.json": {
+    "mtime": 1781617119.1963906,
+    "ast_hash": "7ded0b4956a2eaf5cff5af6e9a2822fe",
+    "semantic_hash": "7ded0b4956a2eaf5cff5af6e9a2822fe"
+  },
+  "postcss.config.mjs": {
+    "mtime": 1781617119.1963906,
+    "ast_hash": "239f3ebf717465dc636818a1a619398d",
+    "semantic_hash": "239f3ebf717465dc636818a1a619398d"
+  },
+  "scripts/apply-pricing-update.mjs": {
+    "mtime": 1781617121.2743719,
+    "ast_hash": "cdb127628c89e6c30c0938901f6287b5",
+    "semantic_hash": "cdb127628c89e6c30c0938901f6287b5"
+  },
+  "scripts/audit-canonicals.mjs": {
+    "mtime": 1781617121.2743719,
+    "ast_hash": "2fb72070974d9e47ed20eff4c76d3eac",
+    "semantic_hash": "2fb72070974d9e47ed20eff4c76d3eac"
+  },
+  "scripts/audit-pricing-vs-source.mjs": {
+    "mtime": 1781617121.2743719,
+    "ast_hash": "c4ff8c37a78b9d6e909c4db48f4206f0",
+    "semantic_hash": "c4ff8c37a78b9d6e909c4db48f4206f0"
+  },
+  "scripts/audit-rebates.mjs": {
+    "mtime": 1781617121.2743719,
+    "ast_hash": "4b3b7c1a0e341e1f13f4d5ad86015bb1",
+    "semantic_hash": "4b3b7c1a0e341e1f13f4d5ad86015bb1"
+  },
+  "scripts/basco-assets-page1.json": {
+    "mtime": 1781617121.2743719,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": "d751713988987e9331980363e24189ce"
+  },
+  "scripts/basco-assets-page4.json": {
+    "mtime": 1781617121.2743719,
+    "ast_hash": "5eac402a4dd430eec85c4de017600955",
+    "semantic_hash": "5eac402a4dd430eec85c4de017600955"
+  },
+  "scripts/basco-assets.json": {
+    "mtime": 1781617121.2753718,
+    "ast_hash": "1a35ef3c37dde1c1d4149c859ffe9d00",
+    "semantic_hash": "1a35ef3c37dde1c1d4149c859ffe9d00"
+  },
+  "scripts/basco-download-results.json": {
+    "mtime": 1781617121.2753718,
+    "ast_hash": "45105e2b9bb68ca80bc319264e69ca1f",
+    "semantic_hash": "45105e2b9bb68ca80bc319264e69ca1f"
+  },
+  "scripts/basco-download.mjs": {
+    "mtime": 1781617121.2753718,
+    "ast_hash": "64b71ca06144bdc185a243f31b600910",
+    "semantic_hash": "64b71ca06144bdc185a243f31b600910"
+  },
+  "scripts/basco-grouped.json": {
+    "mtime": 1781617121.276372,
+    "ast_hash": "26ae55b8f87d6c5fb706b850cc1e3953",
+    "semantic_hash": "26ae55b8f87d6c5fb706b850cc1e3953"
+  },
+  "scripts/basco-product-mapping.json": {
+    "mtime": 1781617121.276372,
+    "ast_hash": "54c9046093e02e84fdc272081150b25f",
+    "semantic_hash": "54c9046093e02e84fdc272081150b25f"
+  },
+  "scripts/basco-urls.json": {
+    "mtime": 1781617121.276372,
+    "ast_hash": "a2d99a3949d048bc324e3d7f1e113750",
+    "semantic_hash": "a2d99a3949d048bc324e3d7f1e113750"
+  },
+  "scripts/build-favicon.mjs": {
+    "mtime": 1781617121.276372,
+    "ast_hash": "c4c3eef3cc95345e071e2e4d33d77b5a",
+    "semantic_hash": "c4c3eef3cc95345e071e2e4d33d77b5a"
+  },
+  "scripts/build-parts.mjs": {
+    "mtime": 1781617121.276372,
+    "ast_hash": "5cb2420826327877ab2e8ddd02165884",
+    "semantic_hash": "5cb2420826327877ab2e8ddd02165884"
+  },
+  "scripts/build-sku-mapping.mjs": {
+    "mtime": 1781617121.277372,
+    "ast_hash": "d1a4330b119e7f076ab304fe97e58ab9",
+    "semantic_hash": "d1a4330b119e7f076ab304fe97e58ab9"
+  },
+  "scripts/check-dupe-skus.py": {
+    "mtime": 1781617121.277372,
+    "ast_hash": "7c5da3b1056636705efe468fef9db2c5",
+    "semantic_hash": "7c5da3b1056636705efe468fef9db2c5"
+  },
+  "scripts/consolidate-products.mjs": {
+    "mtime": 1781617121.277372,
+    "ast_hash": "010d8f3daa3c74e2e1ae767f72e644a2",
+    "semantic_hash": "010d8f3daa3c74e2e1ae767f72e644a2"
+  },
+  "scripts/consolidate.mjs": {
+    "mtime": 1781617121.277372,
+    "ast_hash": "7847b008de2c2e81ff03dce5c2c9aa98",
+    "semantic_hash": "7847b008de2c2e81ff03dce5c2c9aa98"
+  },
+  "scripts/ferris-consolidated.json": {
+    "mtime": 1781617121.277372,
+    "ast_hash": "48818de15f2b08638f2fee9b02354509",
+    "semantic_hash": "48818de15f2b08638f2fee9b02354509"
+  },
+  "scripts/ferris-prices-2026-clean.json": {
+    "mtime": 1781617121.277372,
+    "ast_hash": "baa173d3750d69941bffa03956b4c951",
+    "semantic_hash": "baa173d3750d69941bffa03956b4c951"
+  },
+  "scripts/ferris-pricing-parsed.json": {
+    "mtime": 1781617121.277372,
+    "ast_hash": "75cf2f8c7f0ac7463dfdb277e8c87693",
+    "semantic_hash": "75cf2f8c7f0ac7463dfdb277e8c87693"
+  },
+  "scripts/ferris-rebates-may-2026.json": {
+    "mtime": 1781617121.2793717,
+    "ast_hash": "df4872a9a2d410502830eabe64ec02f5",
+    "semantic_hash": "df4872a9a2d410502830eabe64ec02f5"
+  },
+  "scripts/import-distributor-inventory.py": {
+    "mtime": 1781617121.2793717,
+    "ast_hash": "ad167d7d8806124645689c4c2d3e5cc4",
+    "semantic_hash": "ad167d7d8806124645689c4c2d3e5cc4"
+  },
+  "scripts/parse-ferris-prices.py": {
+    "mtime": 1781617121.2793717,
+    "ast_hash": "16fe7f47069bbe7ce1771e3703ce6686",
+    "semantic_hash": "16fe7f47069bbe7ce1771e3703ce6686"
+  },
+  "scripts/parse-pricing.mjs": {
+    "mtime": 1781617121.2793717,
+    "ast_hash": "727f6cec8196ef68cb95e75022a00458",
+    "semantic_hash": "727f6cec8196ef68cb95e75022a00458"
+  },
+  "scripts/process-campaign-assets.mjs": {
+    "mtime": 1781617121.2793717,
+    "ast_hash": "36d715eb03505a8dd17473f891e03e88",
+    "semantic_hash": "36d715eb03505a8dd17473f891e03e88"
+  },
+  "scripts/pull-sle-batch2.mjs": {
+    "mtime": 1781617121.280372,
+    "ast_hash": "8b8cc9bb2a309c6b0f92478a76365e27",
+    "semantic_hash": "8b8cc9bb2a309c6b0f92478a76365e27"
+  },
+  "scripts/rewrite-products.mjs": {
+    "mtime": 1781617121.280372,
+    "ast_hash": "13d36ebc6565959061015b01be9462eb",
+    "semantic_hash": "13d36ebc6565959061015b01be9462eb"
+  },
+  "scripts/sync-sle-batch2.mjs": {
+    "mtime": 1781617121.280372,
+    "ast_hash": "85bd2b3fcad93cab4bf7850ee104933b",
+    "semantic_hash": "85bd2b3fcad93cab4bf7850ee104933b"
+  },
+  "scripts/sync-sle-prices.mjs": {
+    "mtime": 1781617121.280372,
+    "ast_hash": "ae70633fa52a2201cb6fa855ca29b65f",
+    "semantic_hash": "ae70633fa52a2201cb6fa855ca29b65f"
+  },
+  "scripts/wire-basco-images.mjs": {
+    "mtime": 1781617121.280372,
+    "ast_hash": "76a1917036e0c61e8a7358dbe7f25d7d",
+    "semantic_hash": "76a1917036e0c61e8a7358dbe7f25d7d"
+  },
+  "tsconfig.json": {
+    "mtime": 1781617121.280372,
+    "ast_hash": "02fc19ad21338c2ab820a70136310db4",
+    "semantic_hash": "02fc19ad21338c2ab820a70136310db4"
+  },
+  "public/videos/ferris/campaign/dealer-30s-portrait.mp4": {
+    "mtime": 1781617121.145373,
+    "ast_hash": "ca0034643f96a2b0ad6be76ec08ac97b",
+    "semantic_hash": "ca0034643f96a2b0ad6be76ec08ac97b"
+  },
+  "public/videos/ferris/campaign/dealer-30s.mp4": {
+    "mtime": 1781617121.1873727,
+    "ast_hash": "4d1c75df61352a40803c127a39831890",
+    "semantic_hash": "4d1c75df61352a40803c127a39831890"
+  },
+  "public/videos/ferris/campaign/hero-15s.mp4": {
+    "mtime": 1781617121.2093725,
+    "ast_hash": "a8a1cc2ee2926347d3394028dde789df",
+    "semantic_hash": "a8a1cc2ee2926347d3394028dde789df"
+  },
+  "public/videos/ferris/campaign/landscaper-15s-portrait.mp4": {
+    "mtime": 1781617121.2243724,
+    "ast_hash": "0eeb25dbc6bbdd4d6fb369ecc49f1351",
+    "semantic_hash": "0eeb25dbc6bbdd4d6fb369ecc49f1351"
+  },
+  "public/videos/ferris/campaign/landscaper-15s-portrait.webm": {
+    "mtime": 1781617121.245372,
+    "ast_hash": "684945e7df16af08428d11023ced01c7",
+    "semantic_hash": "684945e7df16af08428d11023ced01c7"
+  },
+  "public/videos/ferris/campaign/landscaper-15s.mp4": {
+    "mtime": 1781617121.261372,
+    "ast_hash": "1e8ad09483fc4e1dc7954801a9ebc36d",
+    "semantic_hash": "1e8ad09483fc4e1dc7954801a9ebc36d"
+  },
+  "public/videos/ferris/campaign/landscaper-15s.webm": {
+    "mtime": 1781617121.273372,
+    "ast_hash": "eaf18b545f83233fc7d4fa54938b4044",
+    "semantic_hash": "eaf18b545f83233fc7d4fa54938b4044"
+  }
+}
